@@ -1,0 +1,2043 @@
+GAS LISTING /tmp/ccfHquIA.s 			page 1
+
+
+   1               		.file	"pcint0.cpp"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.text
+   8               	.Ltext0:
+   9               		.cfi_sections	.debug_frame
+  10               		.file 1 "funsape/peripheral/pcint0.cpp"
+  11               		.section	.text._ZN6Pcint0C2Ev,"ax",@progbits
+  12               	.global	_ZN6Pcint0C2Ev
+  14               	_ZN6Pcint0C2Ev:
+  15               	.LVL0:
+  16               	.LFB136:
+   1:funsape/peripheral/pcint0.cpp **** //!
+   2:funsape/peripheral/pcint0.cpp **** //! ****************************************************************************
+   3:funsape/peripheral/pcint0.cpp **** //! @file           pcint0.cpp
+   4:funsape/peripheral/pcint0.cpp **** //! @author         Leandro Schwarz (bladabuska+funsapeavr8lib@gmail.com)
+   5:funsape/peripheral/pcint0.cpp **** //! @brief          Pin Change Interrupt 0 PCINT0 peripheral control.
+   6:funsape/peripheral/pcint0.cpp **** //! @details        This file provides peripheral control for the PCINT0
+   7:funsape/peripheral/pcint0.cpp **** //!                     peripheral control for the FunSAPE++ AVR8 Library.
+   8:funsape/peripheral/pcint0.cpp **** //! @date           2026-04-03
+   9:funsape/peripheral/pcint0.cpp **** //! @version        26.04
+  10:funsape/peripheral/pcint0.cpp **** //! @copyright      MIT License
+  11:funsape/peripheral/pcint0.cpp **** //! @note           No notes at this time.
+  12:funsape/peripheral/pcint0.cpp **** //! @todo           No items in todo list yet.
+  13:funsape/peripheral/pcint0.cpp **** //! @bug            No bugs detected yet.
+  14:funsape/peripheral/pcint0.cpp **** //! ****************************************************************************
+  15:funsape/peripheral/pcint0.cpp **** //! @attention
+  16:funsape/peripheral/pcint0.cpp **** //!
+  17:funsape/peripheral/pcint0.cpp **** //! MIT License
+  18:funsape/peripheral/pcint0.cpp **** //!
+  19:funsape/peripheral/pcint0.cpp **** //! Copyright (c) 2026 Leandro Schwarz
+  20:funsape/peripheral/pcint0.cpp **** //!
+  21:funsape/peripheral/pcint0.cpp **** //! Permission is hereby granted, free of charge, to any person obtaining a copy
+  22:funsape/peripheral/pcint0.cpp **** //!     of this software and associated documentation files (the "Software"), to
+  23:funsape/peripheral/pcint0.cpp **** //!     deal in the Software without restriction, including without limitation
+  24:funsape/peripheral/pcint0.cpp **** //!     the rights to use, copy, modify, merge, publish, distribute, sublicense,
+  25:funsape/peripheral/pcint0.cpp **** //!     and/or sell copies of the Software, and to permit persons to whom the
+  26:funsape/peripheral/pcint0.cpp **** //!     Software is furnished to do so, subject to the following conditions:
+  27:funsape/peripheral/pcint0.cpp **** //!
+  28:funsape/peripheral/pcint0.cpp **** //! The above copyright notice and this permission notice shall be included in
+  29:funsape/peripheral/pcint0.cpp **** //!     all copies or substantial portions of the Software.
+  30:funsape/peripheral/pcint0.cpp **** //!
+  31:funsape/peripheral/pcint0.cpp **** //! THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  32:funsape/peripheral/pcint0.cpp **** //!     IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  33:funsape/peripheral/pcint0.cpp **** //!     FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+  34:funsape/peripheral/pcint0.cpp **** //!     THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+  35:funsape/peripheral/pcint0.cpp **** //!     OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+  36:funsape/peripheral/pcint0.cpp **** //!     ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+  37:funsape/peripheral/pcint0.cpp **** //!     OTHER DEALINGS IN THE SOFTWARE.
+  38:funsape/peripheral/pcint0.cpp **** //!
+  39:funsape/peripheral/pcint0.cpp **** //! ****************************************************************************
+  40:funsape/peripheral/pcint0.cpp **** //!
+  41:funsape/peripheral/pcint0.cpp **** 
+  42:funsape/peripheral/pcint0.cpp **** // =============================================================================
+GAS LISTING /tmp/ccfHquIA.s 			page 2
+
+
+  43:funsape/peripheral/pcint0.cpp **** // System file dependencies
+  44:funsape/peripheral/pcint0.cpp **** // =============================================================================
+  45:funsape/peripheral/pcint0.cpp **** 
+  46:funsape/peripheral/pcint0.cpp **** #include "pcint0.hpp"
+  47:funsape/peripheral/pcint0.cpp **** #if !defined(__PCINT0_HPP)
+  48:funsape/peripheral/pcint0.cpp **** #    error Error 1 - Header file (pcint0.hpp) is missing or corrupted!
+  49:funsape/peripheral/pcint0.cpp **** #elif __PCINT0_HPP != 2604
+  50:funsape/peripheral/pcint0.cpp **** #    error Error 6 - Build mismatch between header file (pcint0.hpp) and source file (pcint0.cpp)!
+  51:funsape/peripheral/pcint0.cpp **** #endif
+  52:funsape/peripheral/pcint0.cpp **** 
+  53:funsape/peripheral/pcint0.cpp **** // =============================================================================
+  54:funsape/peripheral/pcint0.cpp **** // File exclusive - Constants
+  55:funsape/peripheral/pcint0.cpp **** // =============================================================================
+  56:funsape/peripheral/pcint0.cpp **** 
+  57:funsape/peripheral/pcint0.cpp **** // NONE
+  58:funsape/peripheral/pcint0.cpp **** 
+  59:funsape/peripheral/pcint0.cpp **** // =============================================================================
+  60:funsape/peripheral/pcint0.cpp **** // File exclusive - New data types
+  61:funsape/peripheral/pcint0.cpp **** // =============================================================================
+  62:funsape/peripheral/pcint0.cpp **** 
+  63:funsape/peripheral/pcint0.cpp **** // NONE
+  64:funsape/peripheral/pcint0.cpp **** 
+  65:funsape/peripheral/pcint0.cpp **** // =============================================================================
+  66:funsape/peripheral/pcint0.cpp **** // File exclusive - Macro-functions
+  67:funsape/peripheral/pcint0.cpp **** // =============================================================================
+  68:funsape/peripheral/pcint0.cpp **** 
+  69:funsape/peripheral/pcint0.cpp **** // NONE
+  70:funsape/peripheral/pcint0.cpp **** 
+  71:funsape/peripheral/pcint0.cpp **** // =============================================================================
+  72:funsape/peripheral/pcint0.cpp **** // Global variables
+  73:funsape/peripheral/pcint0.cpp **** // =============================================================================
+  74:funsape/peripheral/pcint0.cpp **** 
+  75:funsape/peripheral/pcint0.cpp **** Pcint0 Pcint0::_instance;
+  76:funsape/peripheral/pcint0.cpp **** 
+  77:funsape/peripheral/pcint0.cpp **** // =============================================================================
+  78:funsape/peripheral/pcint0.cpp **** // Static functions declarations
+  79:funsape/peripheral/pcint0.cpp **** // =============================================================================
+  80:funsape/peripheral/pcint0.cpp **** 
+  81:funsape/peripheral/pcint0.cpp **** // NONE
+  82:funsape/peripheral/pcint0.cpp **** 
+  83:funsape/peripheral/pcint0.cpp **** // =============================================================================
+  84:funsape/peripheral/pcint0.cpp **** // Public function definitions
+  85:funsape/peripheral/pcint0.cpp **** // =============================================================================
+  86:funsape/peripheral/pcint0.cpp **** 
+  87:funsape/peripheral/pcint0.cpp **** // NONE
+  88:funsape/peripheral/pcint0.cpp **** 
+  89:funsape/peripheral/pcint0.cpp **** // =============================================================================
+  90:funsape/peripheral/pcint0.cpp **** // Class constructors
+  91:funsape/peripheral/pcint0.cpp **** // =============================================================================
+  92:funsape/peripheral/pcint0.cpp **** 
+  93:funsape/peripheral/pcint0.cpp **** Pcint0::Pcint0() :
+  17               		.loc 1 93 1 view -0
+  18               		.cfi_startproc
+  19               	/* prologue: function */
+  20               	/* frame size = 0 */
+  21               	/* stack size = 0 */
+  22               	.L__stack_usage = 0
+GAS LISTING /tmp/ccfHquIA.s 			page 3
+
+
+  23               		.loc 1 93 1 is_stmt 0 view .LVU1
+  24 0000 FC01      		movw r30,r24
+  25               	.LBB18:
+  94:funsape/peripheral/pcint0.cpp ****     _isInitialized(false),
+  26               		.loc 1 94 5 view .LVU2
+  27 0002 8081      		ld r24,Z
+  28               	.LVL1:
+  29               		.loc 1 94 5 view .LVU3
+  30 0004 8E7F      		andi r24,lo8(~(1<<0))
+  31 0006 8083      		st Z,r24
+  95:funsape/peripheral/pcint0.cpp ****     _lastError(Error::NONE),
+  32               		.loc 1 95 5 view .LVU4
+  33 0008 1282      		std Z+2,__zero_reg__
+  34 000a 1182      		std Z+1,__zero_reg__
+  96:funsape/peripheral/pcint0.cpp ****     _enabledPins((Pcint0::Pin)0)
+  35               		.loc 1 96 5 view .LVU5
+  36 000c 1382      		std Z+3,__zero_reg__
+  97:funsape/peripheral/pcint0.cpp **** {
+  98:funsape/peripheral/pcint0.cpp ****     // Mark passage for debugging purpose
+  99:funsape/peripheral/pcint0.cpp ****     debugMark(PSTR("Pcint0::Pcint0(void)"), Debug::CodeIndex::PCINT0_MODULE);
+  37               		.loc 1 99 5 is_stmt 1 view .LVU6
+ 100:funsape/peripheral/pcint0.cpp **** 
+ 101:funsape/peripheral/pcint0.cpp ****     // Returns successfully
+ 102:funsape/peripheral/pcint0.cpp ****     this->_lastError = Error::NONE;
+  38               		.loc 1 102 5 view .LVU7
+ 103:funsape/peripheral/pcint0.cpp ****     debugMessage(Error::NONE, Debug::CodeIndex::PCINT0_MODULE);
+  39               		.loc 1 103 5 view .LVU8
+ 104:funsape/peripheral/pcint0.cpp ****     return;
+  40               		.loc 1 104 5 view .LVU9
+  41               	/* epilogue start */
+  42               	.LBE18:
+ 105:funsape/peripheral/pcint0.cpp **** }
+  43               		.loc 1 105 1 is_stmt 0 view .LVU10
+  44 000e 0895      		ret
+  45               		.cfi_endproc
+  46               	.LFE136:
+  48               	.global	_ZN6Pcint0C1Ev
+  49               		.set	_ZN6Pcint0C1Ev,_ZN6Pcint0C2Ev
+  50               		.section	.text._Z41__static_initialization_and_destruction_0v,"ax",@progbits
+  52               	_Z41__static_initialization_and_destruction_0v:
+  53               	.LFB147:
+ 106:funsape/peripheral/pcint0.cpp **** 
+ 107:funsape/peripheral/pcint0.cpp **** Pcint0::~Pcint0()
+ 108:funsape/peripheral/pcint0.cpp **** {
+ 109:funsape/peripheral/pcint0.cpp ****     // Mark passage for debugging purpose
+ 110:funsape/peripheral/pcint0.cpp ****     debugMark(PSTR("Pcint0::~Pcint0(void)"), Debug::CodeIndex::PCINT0_MODULE);
+ 111:funsape/peripheral/pcint0.cpp **** 
+ 112:funsape/peripheral/pcint0.cpp ****     // Returns successfully
+ 113:funsape/peripheral/pcint0.cpp ****     debugMessage(Error::NONE, Debug::CodeIndex::PCINT0_MODULE);
+ 114:funsape/peripheral/pcint0.cpp ****     return;
+ 115:funsape/peripheral/pcint0.cpp **** }
+ 116:funsape/peripheral/pcint0.cpp **** 
+ 117:funsape/peripheral/pcint0.cpp **** // =============================================================================
+ 118:funsape/peripheral/pcint0.cpp **** // Class own methods - Public
+ 119:funsape/peripheral/pcint0.cpp **** // =============================================================================
+ 120:funsape/peripheral/pcint0.cpp **** 
+ 121:funsape/peripheral/pcint0.cpp **** //     ///////////////////     CONTROL AND STATUS     ///////////////////     //
+GAS LISTING /tmp/ccfHquIA.s 			page 4
+
+
+ 122:funsape/peripheral/pcint0.cpp **** 
+ 123:funsape/peripheral/pcint0.cpp **** bool_t Pcint0::disablePins(const Pcint0::Pin disablePins_p)
+ 124:funsape/peripheral/pcint0.cpp **** {
+ 125:funsape/peripheral/pcint0.cpp ****     // Mark passage for debugging purpose
+ 126:funsape/peripheral/pcint0.cpp ****     debugMark(PSTR("Pcint0::disablePins(const Pcint0::Pin)"), Debug::CodeIndex::PCINT0_MODULE);
+ 127:funsape/peripheral/pcint0.cpp **** 
+ 128:funsape/peripheral/pcint0.cpp ****     // Local variables
+ 129:funsape/peripheral/pcint0.cpp ****     uint8_t auxPcmsk0   = MCU_PCINT0_SELECTION_REG;
+ 130:funsape/peripheral/pcint0.cpp ****     uint8_t aux8        = (uint8_t)this->_enabledPins;
+ 131:funsape/peripheral/pcint0.cpp **** 
+ 132:funsape/peripheral/pcint0.cpp ****     // Configure mode
+ 133:funsape/peripheral/pcint0.cpp ****     clrMaskOffset(auxPcmsk0, MCU_PCINT0_SELECTION_BIT_MASK, MCU_PCINT0_SELECTION_BIT_POS);
+ 134:funsape/peripheral/pcint0.cpp ****     clrMask(aux8, (uint8_t)disablePins_p);
+ 135:funsape/peripheral/pcint0.cpp ****     setMaskOffset(auxPcmsk0, aux8, MCU_PCINT0_SELECTION_BIT_POS);
+ 136:funsape/peripheral/pcint0.cpp **** 
+ 137:funsape/peripheral/pcint0.cpp ****     // Update registers
+ 138:funsape/peripheral/pcint0.cpp ****     MCU_PCINT0_SELECTION_REG            = auxPcmsk0;
+ 139:funsape/peripheral/pcint0.cpp **** 
+ 140:funsape/peripheral/pcint0.cpp ****     // Update class members
+ 141:funsape/peripheral/pcint0.cpp ****     this->_enabledPins  = (Pcint0::Pin)aux8;
+ 142:funsape/peripheral/pcint0.cpp **** 
+ 143:funsape/peripheral/pcint0.cpp ****     // Returns successfully
+ 144:funsape/peripheral/pcint0.cpp ****     this->_lastError = Error::NONE;
+ 145:funsape/peripheral/pcint0.cpp ****     debugMessage(Error::NONE, Debug::CodeIndex::PCINT0_MODULE);
+ 146:funsape/peripheral/pcint0.cpp ****     return true;
+ 147:funsape/peripheral/pcint0.cpp **** }
+ 148:funsape/peripheral/pcint0.cpp **** 
+ 149:funsape/peripheral/pcint0.cpp **** bool_t Pcint0::enablePins(const Pcint0::Pin enablePins_p)
+ 150:funsape/peripheral/pcint0.cpp **** {
+ 151:funsape/peripheral/pcint0.cpp ****     // Mark passage for debugging purpose
+ 152:funsape/peripheral/pcint0.cpp ****     debugMark(PSTR("Pcint0::enablePins(Pcint0::Pin)"), Debug::CodeIndex::PCINT0_MODULE);
+ 153:funsape/peripheral/pcint0.cpp **** 
+ 154:funsape/peripheral/pcint0.cpp ****     // Local variables
+ 155:funsape/peripheral/pcint0.cpp ****     uint8_t auxPcmsk0   = MCU_PCINT0_SELECTION_REG;
+ 156:funsape/peripheral/pcint0.cpp ****     uint8_t aux8        = (uint8_t)this->_enabledPins;
+ 157:funsape/peripheral/pcint0.cpp **** 
+ 158:funsape/peripheral/pcint0.cpp ****     // Configure mode
+ 159:funsape/peripheral/pcint0.cpp ****     clrMaskOffset(auxPcmsk0, MCU_PCINT0_SELECTION_BIT_MASK, MCU_PCINT0_SELECTION_BIT_POS);
+ 160:funsape/peripheral/pcint0.cpp ****     setMask(aux8, (uint8_t)enablePins_p);
+ 161:funsape/peripheral/pcint0.cpp ****     setMaskOffset(auxPcmsk0, aux8, MCU_PCINT0_SELECTION_BIT_POS);
+ 162:funsape/peripheral/pcint0.cpp **** 
+ 163:funsape/peripheral/pcint0.cpp ****     // Update registers
+ 164:funsape/peripheral/pcint0.cpp ****     MCU_PCINT0_SELECTION_REG            = auxPcmsk0;
+ 165:funsape/peripheral/pcint0.cpp **** 
+ 166:funsape/peripheral/pcint0.cpp ****     // Update class members
+ 167:funsape/peripheral/pcint0.cpp ****     this->_enabledPins  = (Pcint0::Pin)aux8;
+ 168:funsape/peripheral/pcint0.cpp **** 
+ 169:funsape/peripheral/pcint0.cpp ****     // Returns successfully
+ 170:funsape/peripheral/pcint0.cpp ****     this->_lastError = Error::NONE;
+ 171:funsape/peripheral/pcint0.cpp ****     debugMessage(Error::NONE, Debug::CodeIndex::PCINT0_MODULE);
+ 172:funsape/peripheral/pcint0.cpp ****     return true;
+ 173:funsape/peripheral/pcint0.cpp **** }
+ 174:funsape/peripheral/pcint0.cpp **** 
+ 175:funsape/peripheral/pcint0.cpp **** bool_t Pcint0::init(const Pcint0::Pin enablePins_p)
+ 176:funsape/peripheral/pcint0.cpp **** {
+ 177:funsape/peripheral/pcint0.cpp ****     // Mark passage for debugging purpose
+ 178:funsape/peripheral/pcint0.cpp ****     debugMark(PSTR("Pcint0::init(const Pcint0::Pin)"), Debug::CodeIndex::PCINT0_MODULE);
+GAS LISTING /tmp/ccfHquIA.s 			page 5
+
+
+ 179:funsape/peripheral/pcint0.cpp **** 
+ 180:funsape/peripheral/pcint0.cpp ****     // Local variables
+ 181:funsape/peripheral/pcint0.cpp ****     uint8_t auxPcmsk0       = MCU_PCINT0_SELECTION_REG;
+ 182:funsape/peripheral/pcint0.cpp **** 
+ 183:funsape/peripheral/pcint0.cpp ****     // Configure mode
+ 184:funsape/peripheral/pcint0.cpp ****     clrMaskOffset(auxPcmsk0, MCU_PCINT0_SELECTION_BIT_MASK, MCU_PCINT0_SELECTION_BIT_POS);
+ 185:funsape/peripheral/pcint0.cpp ****     setMaskOffset(auxPcmsk0, ((uint8_t)enablePins_p), MCU_PCINT0_SELECTION_BIT_POS);
+ 186:funsape/peripheral/pcint0.cpp **** 
+ 187:funsape/peripheral/pcint0.cpp ****     // Update registers
+ 188:funsape/peripheral/pcint0.cpp ****     MCU_PCINT0_SELECTION_REG            = auxPcmsk0;
+ 189:funsape/peripheral/pcint0.cpp **** 
+ 190:funsape/peripheral/pcint0.cpp ****     // Update class members
+ 191:funsape/peripheral/pcint0.cpp ****     this->_enabledPins      = enablePins_p;
+ 192:funsape/peripheral/pcint0.cpp ****     this->_isInitialized    = true;
+ 193:funsape/peripheral/pcint0.cpp **** 
+ 194:funsape/peripheral/pcint0.cpp ****     // Returns successfully
+ 195:funsape/peripheral/pcint0.cpp ****     this->_lastError = Error::NONE;
+ 196:funsape/peripheral/pcint0.cpp ****     debugMessage(Error::NONE, Debug::CodeIndex::PCINT0_MODULE);
+ 197:funsape/peripheral/pcint0.cpp ****     return true;
+ 198:funsape/peripheral/pcint0.cpp **** }
+ 199:funsape/peripheral/pcint0.cpp **** 
+ 200:funsape/peripheral/pcint0.cpp **** bool_t Pcint0::setPinMode(const Pcint0::Pin pinList_p, const PinMode pinMode_p)
+ 201:funsape/peripheral/pcint0.cpp **** {
+ 202:funsape/peripheral/pcint0.cpp ****     // Mark passage for debugging purpose
+ 203:funsape/peripheral/pcint0.cpp ****     debugMark(PSTR("Pcint0::setPinMode(const Pcint0::Pin, const PinMode)"), Debug::CodeIndex::PCINT
+ 204:funsape/peripheral/pcint0.cpp **** 
+ 205:funsape/peripheral/pcint0.cpp ****     // Local variables
+ 206:funsape/peripheral/pcint0.cpp ****     uint8_t auxPinMask      = 0;
+ 207:funsape/peripheral/pcint0.cpp **** 
+ 208:funsape/peripheral/pcint0.cpp ****     // Pin mask generation
+ 209:funsape/peripheral/pcint0.cpp **** #if defined(MCU_PCINT0_PIN_0_EXISTS)
+ 210:funsape/peripheral/pcint0.cpp ****     if((bool_t)(pinList_p & Pcint0::Pin::PIN_PCINT0)) {
+ 211:funsape/peripheral/pcint0.cpp ****         auxPinMask |= (1 << MCU_PCINT0_GPIO_PCINT0_BIT);
+ 212:funsape/peripheral/pcint0.cpp ****     }
+ 213:funsape/peripheral/pcint0.cpp **** #endif
+ 214:funsape/peripheral/pcint0.cpp **** #if defined(MCU_PCINT0_PIN_1_EXISTS)
+ 215:funsape/peripheral/pcint0.cpp ****     if((bool_t)(pinList_p & Pcint0::Pin::PIN_PCINT1)) {
+ 216:funsape/peripheral/pcint0.cpp ****         auxPinMask |= (1 << MCU_PCINT0_GPIO_PCINT1_BIT);
+ 217:funsape/peripheral/pcint0.cpp ****     }
+ 218:funsape/peripheral/pcint0.cpp **** #endif
+ 219:funsape/peripheral/pcint0.cpp **** #if defined(MCU_PCINT0_PIN_2_EXISTS)
+ 220:funsape/peripheral/pcint0.cpp ****     if((bool_t)(pinList_p & Pcint0::Pin::PIN_PCINT2)) {
+ 221:funsape/peripheral/pcint0.cpp ****         auxPinMask |= (1 << MCU_PCINT0_GPIO_PCINT2_BIT);
+ 222:funsape/peripheral/pcint0.cpp ****     }
+ 223:funsape/peripheral/pcint0.cpp **** #endif
+ 224:funsape/peripheral/pcint0.cpp **** #if defined(MCU_PCINT0_PIN_3_EXISTS)
+ 225:funsape/peripheral/pcint0.cpp ****     if((bool_t)(pinList_p & Pcint0::Pin::PIN_PCINT3)) {
+ 226:funsape/peripheral/pcint0.cpp ****         auxPinMask |= (1 << MCU_PCINT0_GPIO_PCINT3_BIT);
+ 227:funsape/peripheral/pcint0.cpp ****     }
+ 228:funsape/peripheral/pcint0.cpp **** #endif
+ 229:funsape/peripheral/pcint0.cpp **** #if defined(MCU_PCINT0_PIN_4_EXISTS)
+ 230:funsape/peripheral/pcint0.cpp ****     if((bool_t)(pinList_p & Pcint0::Pin::PIN_PCINT4)) {
+ 231:funsape/peripheral/pcint0.cpp ****         auxPinMask |= (1 << MCU_PCINT0_GPIO_PCINT4_BIT);
+ 232:funsape/peripheral/pcint0.cpp ****     }
+ 233:funsape/peripheral/pcint0.cpp **** #endif
+ 234:funsape/peripheral/pcint0.cpp **** #if defined(MCU_PCINT0_PIN_5_EXISTS)
+ 235:funsape/peripheral/pcint0.cpp ****     if((bool_t)(pinList_p & Pcint0::Pin::PIN_PCINT5)) {
+GAS LISTING /tmp/ccfHquIA.s 			page 6
+
+
+ 236:funsape/peripheral/pcint0.cpp ****         auxPinMask |= (1 << MCU_PCINT0_GPIO_PCINT5_BIT);
+ 237:funsape/peripheral/pcint0.cpp ****     }
+ 238:funsape/peripheral/pcint0.cpp **** #endif
+ 239:funsape/peripheral/pcint0.cpp **** #if defined(MCU_PCINT0_PIN_6_EXISTS)
+ 240:funsape/peripheral/pcint0.cpp ****     if((bool_t)(pinList_p & Pcint0::Pin::PIN_PCINT6)) {
+ 241:funsape/peripheral/pcint0.cpp ****         auxPinMask |= (1 << MCU_PCINT0_GPIO_PCINT6_BIT);
+ 242:funsape/peripheral/pcint0.cpp ****     }
+ 243:funsape/peripheral/pcint0.cpp **** #endif
+ 244:funsape/peripheral/pcint0.cpp **** #if defined(MCU_PCINT0_PIN_7_EXISTS)
+ 245:funsape/peripheral/pcint0.cpp ****     if((bool_t)(pinList_p & Pcint0::Pin::PIN_PCINT7)) {
+ 246:funsape/peripheral/pcint0.cpp ****         auxPinMask |= (1 << MCU_PCINT0_GPIO_PCINT7_BIT);
+ 247:funsape/peripheral/pcint0.cpp ****     }
+ 248:funsape/peripheral/pcint0.cpp **** #endif
+ 249:funsape/peripheral/pcint0.cpp **** 
+ 250:funsape/peripheral/pcint0.cpp ****     // Configure pin
+ 251:funsape/peripheral/pcint0.cpp ****     if(auxPinMask) {
+ 252:funsape/peripheral/pcint0.cpp ****         switch(pinMode_p) {
+ 253:funsape/peripheral/pcint0.cpp ****         case PinMode::INPUT_FLOATING:
+ 254:funsape/peripheral/pcint0.cpp ****             clrMask(MCU_PCINT0_GPIO_REG_DIR, auxPinMask);
+ 255:funsape/peripheral/pcint0.cpp ****             clrMask(MCU_PCINT0_GPIO_REG_OUT, auxPinMask);
+ 256:funsape/peripheral/pcint0.cpp ****             break;
+ 257:funsape/peripheral/pcint0.cpp ****         case PinMode::INPUT_PULLED_UP:
+ 258:funsape/peripheral/pcint0.cpp ****             clrMask(MCU_PCINT0_GPIO_REG_DIR, auxPinMask);
+ 259:funsape/peripheral/pcint0.cpp ****             setMask(MCU_PCINT0_GPIO_REG_OUT, auxPinMask);
+ 260:funsape/peripheral/pcint0.cpp ****             break;
+ 261:funsape/peripheral/pcint0.cpp ****         case PinMode::OUTPUT_PUSH_PULL:
+ 262:funsape/peripheral/pcint0.cpp ****             setMask(MCU_PCINT0_GPIO_REG_DIR, auxPinMask);
+ 263:funsape/peripheral/pcint0.cpp ****             break;
+ 264:funsape/peripheral/pcint0.cpp ****         }
+ 265:funsape/peripheral/pcint0.cpp ****     }
+ 266:funsape/peripheral/pcint0.cpp **** 
+ 267:funsape/peripheral/pcint0.cpp ****     // Returns successfully
+ 268:funsape/peripheral/pcint0.cpp ****     this->_lastError = Error::NONE;
+ 269:funsape/peripheral/pcint0.cpp ****     debugMessage(Error::NONE, Debug::CodeIndex::PCINT0_MODULE);
+ 270:funsape/peripheral/pcint0.cpp ****     return true;
+ 271:funsape/peripheral/pcint0.cpp **** }
+ 272:funsape/peripheral/pcint0.cpp **** 
+ 273:funsape/peripheral/pcint0.cpp **** // =============================================================================
+ 274:funsape/peripheral/pcint0.cpp **** // Class own methods - Private
+ 275:funsape/peripheral/pcint0.cpp **** // =============================================================================
+ 276:funsape/peripheral/pcint0.cpp **** 
+ 277:funsape/peripheral/pcint0.cpp **** // NONE
+ 278:funsape/peripheral/pcint0.cpp **** 
+ 279:funsape/peripheral/pcint0.cpp **** // =============================================================================
+ 280:funsape/peripheral/pcint0.cpp **** // Class own methods - Protected
+ 281:funsape/peripheral/pcint0.cpp **** // =============================================================================
+ 282:funsape/peripheral/pcint0.cpp **** 
+ 283:funsape/peripheral/pcint0.cpp **** // NONE
+ 284:funsape/peripheral/pcint0.cpp **** 
+ 285:funsape/peripheral/pcint0.cpp **** // =============================================================================
+ 286:funsape/peripheral/pcint0.cpp **** // Static functions definitions
+ 287:funsape/peripheral/pcint0.cpp **** // =============================================================================
+ 288:funsape/peripheral/pcint0.cpp **** 
+ 289:funsape/peripheral/pcint0.cpp **** // NONE
+ 290:funsape/peripheral/pcint0.cpp **** 
+ 291:funsape/peripheral/pcint0.cpp **** // =============================================================================
+ 292:funsape/peripheral/pcint0.cpp **** // Interrupt callback functions
+GAS LISTING /tmp/ccfHquIA.s 			page 7
+
+
+ 293:funsape/peripheral/pcint0.cpp **** // =============================================================================
+ 294:funsape/peripheral/pcint0.cpp **** 
+ 295:funsape/peripheral/pcint0.cpp **** void weakened pcint0InterruptCallback(void)
+ 296:funsape/peripheral/pcint0.cpp **** {
+ 297:funsape/peripheral/pcint0.cpp ****     return;
+ 298:funsape/peripheral/pcint0.cpp **** }
+ 299:funsape/peripheral/pcint0.cpp **** 
+ 300:funsape/peripheral/pcint0.cpp **** // =============================================================================
+ 301:funsape/peripheral/pcint0.cpp **** // Interrupt handlers
+ 302:funsape/peripheral/pcint0.cpp **** // =============================================================================
+ 303:funsape/peripheral/pcint0.cpp **** 
+ 304:funsape/peripheral/pcint0.cpp **** //!
+ 305:funsape/peripheral/pcint0.cpp **** //! @cond
+ 306:funsape/peripheral/pcint0.cpp **** //!
+ 307:funsape/peripheral/pcint0.cpp **** 
+ 308:funsape/peripheral/pcint0.cpp **** ISR(PCINT0_vect)
+ 309:funsape/peripheral/pcint0.cpp **** {
+ 310:funsape/peripheral/pcint0.cpp ****     pcint0InterruptCallback();
+ 311:funsape/peripheral/pcint0.cpp **** }
+  54               		.loc 1 311 1 is_stmt 1 view -0
+  55               		.cfi_startproc
+  56               	/* prologue: function */
+  57               	/* frame size = 0 */
+  58               	/* stack size = 0 */
+  59               	.L__stack_usage = 0
+  75:funsape/peripheral/pcint0.cpp **** 
+  60               		.loc 1 75 16 is_stmt 0 view .LVU12
+  61 0000 80E0      		ldi r24,lo8(_ZN6Pcint09_instanceE)
+  62 0002 90E0      		ldi r25,hi8(_ZN6Pcint09_instanceE)
+  63 0004 0E94 0000 		call _ZN6Pcint0C1Ev
+  64               	.LVL2:
+  65               	/* epilogue start */
+  66               		.loc 1 311 1 view .LVU13
+  67 0008 0895      		ret
+  68               		.cfi_endproc
+  69               	.LFE147:
+  71               		.section	.text._ZN6Pcint0D2Ev,"ax",@progbits
+  72               	.global	_ZN6Pcint0D2Ev
+  74               	_ZN6Pcint0D2Ev:
+  75               	.LVL3:
+  76               	.LFB139:
+ 107:funsape/peripheral/pcint0.cpp **** {
+  77               		.loc 1 107 1 is_stmt 1 view -0
+  78               		.cfi_startproc
+  79               	/* prologue: function */
+  80               	/* frame size = 0 */
+  81               	/* stack size = 0 */
+  82               	.L__stack_usage = 0
+  83               	.LBB19:
+ 110:funsape/peripheral/pcint0.cpp **** 
+  84               		.loc 1 110 5 view .LVU15
+ 113:funsape/peripheral/pcint0.cpp ****     return;
+  85               		.loc 1 113 5 view .LVU16
+ 114:funsape/peripheral/pcint0.cpp **** }
+  86               		.loc 1 114 5 view .LVU17
+  87               	/* epilogue start */
+  88               	.LBE19:
+GAS LISTING /tmp/ccfHquIA.s 			page 8
+
+
+ 115:funsape/peripheral/pcint0.cpp **** 
+  89               		.loc 1 115 1 is_stmt 0 view .LVU18
+  90 0000 0895      		ret
+  91               		.cfi_endproc
+  92               	.LFE139:
+  94               	.global	_ZN6Pcint0D1Ev
+  95               		.set	_ZN6Pcint0D1Ev,_ZN6Pcint0D2Ev
+  96               		.section	.text._ZN6Pcint011disablePinsENS_3PinE,"ax",@progbits
+  97               	.global	_ZN6Pcint011disablePinsENS_3PinE
+  99               	_ZN6Pcint011disablePinsENS_3PinE:
+ 100               	.LVL4:
+ 101               	.LFB141:
+ 124:funsape/peripheral/pcint0.cpp ****     // Mark passage for debugging purpose
+ 102               		.loc 1 124 1 is_stmt 1 view -0
+ 103               		.cfi_startproc
+ 104               	/* prologue: function */
+ 105               	/* frame size = 0 */
+ 106               	/* stack size = 0 */
+ 107               	.L__stack_usage = 0
+ 124:funsape/peripheral/pcint0.cpp ****     // Mark passage for debugging purpose
+ 108               		.loc 1 124 1 is_stmt 0 view .LVU20
+ 109 0000 FC01      		movw r30,r24
+ 126:funsape/peripheral/pcint0.cpp **** 
+ 110               		.loc 1 126 5 is_stmt 1 view .LVU21
+ 129:funsape/peripheral/pcint0.cpp ****     uint8_t aux8        = (uint8_t)this->_enabledPins;
+ 111               		.loc 1 129 5 view .LVU22
+ 129:funsape/peripheral/pcint0.cpp ****     uint8_t aux8        = (uint8_t)this->_enabledPins;
+ 112               		.loc 1 129 27 is_stmt 0 view .LVU23
+ 113 0002 ABE6      		ldi r26,lo8(107)
+ 114 0004 B0E0      		ldi r27,0
+ 115 0006 8C91      		ld r24,X
+ 116               	.LVL5:
+ 130:funsape/peripheral/pcint0.cpp **** 
+ 117               		.loc 1 130 5 is_stmt 1 view .LVU24
+ 130:funsape/peripheral/pcint0.cpp **** 
+ 118               		.loc 1 130 42 is_stmt 0 view .LVU25
+ 119 0008 8381      		ldd r24,Z+3
+ 120               	.LVL6:
+ 133:funsape/peripheral/pcint0.cpp ****     clrMask(aux8, (uint8_t)disablePins_p);
+ 121               		.loc 1 133 5 is_stmt 1 view .LVU26
+ 133:funsape/peripheral/pcint0.cpp ****     clrMask(aux8, (uint8_t)disablePins_p);
+ 122               		.loc 1 133 5 view .LVU27
+ 134:funsape/peripheral/pcint0.cpp ****     setMaskOffset(auxPcmsk0, aux8, MCU_PCINT0_SELECTION_BIT_POS);
+ 123               		.loc 1 134 5 view .LVU28
+ 134:funsape/peripheral/pcint0.cpp ****     setMaskOffset(auxPcmsk0, aux8, MCU_PCINT0_SELECTION_BIT_POS);
+ 124               		.loc 1 134 5 view .LVU29
+ 125 000a 6095      		com r22
+ 126               	.LVL7:
+ 134:funsape/peripheral/pcint0.cpp ****     setMaskOffset(auxPcmsk0, aux8, MCU_PCINT0_SELECTION_BIT_POS);
+ 127               		.loc 1 134 5 is_stmt 0 view .LVU30
+ 128 000c 6823      		and r22,r24
+ 129               	.LVL8:
+ 134:funsape/peripheral/pcint0.cpp ****     setMaskOffset(auxPcmsk0, aux8, MCU_PCINT0_SELECTION_BIT_POS);
+ 130               		.loc 1 134 5 is_stmt 1 view .LVU31
+ 135:funsape/peripheral/pcint0.cpp **** 
+ 131               		.loc 1 135 5 view .LVU32
+ 135:funsape/peripheral/pcint0.cpp **** 
+GAS LISTING /tmp/ccfHquIA.s 			page 9
+
+
+ 132               		.loc 1 135 5 view .LVU33
+ 138:funsape/peripheral/pcint0.cpp **** 
+ 133               		.loc 1 138 5 view .LVU34
+ 138:funsape/peripheral/pcint0.cpp **** 
+ 134               		.loc 1 138 41 is_stmt 0 view .LVU35
+ 135 000e 6C93      		st X,r22
+ 141:funsape/peripheral/pcint0.cpp **** 
+ 136               		.loc 1 141 5 is_stmt 1 view .LVU36
+ 141:funsape/peripheral/pcint0.cpp **** 
+ 137               		.loc 1 141 25 is_stmt 0 view .LVU37
+ 138 0010 6383      		std Z+3,r22
+ 144:funsape/peripheral/pcint0.cpp ****     debugMessage(Error::NONE, Debug::CodeIndex::PCINT0_MODULE);
+ 139               		.loc 1 144 5 is_stmt 1 view .LVU38
+ 144:funsape/peripheral/pcint0.cpp ****     debugMessage(Error::NONE, Debug::CodeIndex::PCINT0_MODULE);
+ 140               		.loc 1 144 22 is_stmt 0 view .LVU39
+ 141 0012 1282      		std Z+2,__zero_reg__
+ 142 0014 1182      		std Z+1,__zero_reg__
+ 145:funsape/peripheral/pcint0.cpp ****     return true;
+ 143               		.loc 1 145 5 is_stmt 1 view .LVU40
+ 146:funsape/peripheral/pcint0.cpp **** }
+ 144               		.loc 1 146 5 view .LVU41
+ 147:funsape/peripheral/pcint0.cpp **** 
+ 145               		.loc 1 147 1 is_stmt 0 view .LVU42
+ 146 0016 81E0      		ldi r24,lo8(1)
+ 147               	/* epilogue start */
+ 148 0018 0895      		ret
+ 149               		.cfi_endproc
+ 150               	.LFE141:
+ 152               		.section	.text._ZN6Pcint010enablePinsENS_3PinE,"ax",@progbits
+ 153               	.global	_ZN6Pcint010enablePinsENS_3PinE
+ 155               	_ZN6Pcint010enablePinsENS_3PinE:
+ 156               	.LVL9:
+ 157               	.LFB142:
+ 150:funsape/peripheral/pcint0.cpp ****     // Mark passage for debugging purpose
+ 158               		.loc 1 150 1 is_stmt 1 view -0
+ 159               		.cfi_startproc
+ 160               	/* prologue: function */
+ 161               	/* frame size = 0 */
+ 162               	/* stack size = 0 */
+ 163               	.L__stack_usage = 0
+ 150:funsape/peripheral/pcint0.cpp ****     // Mark passage for debugging purpose
+ 164               		.loc 1 150 1 is_stmt 0 view .LVU44
+ 165 0000 FC01      		movw r30,r24
+ 152:funsape/peripheral/pcint0.cpp **** 
+ 166               		.loc 1 152 5 is_stmt 1 view .LVU45
+ 155:funsape/peripheral/pcint0.cpp ****     uint8_t aux8        = (uint8_t)this->_enabledPins;
+ 167               		.loc 1 155 5 view .LVU46
+ 155:funsape/peripheral/pcint0.cpp ****     uint8_t aux8        = (uint8_t)this->_enabledPins;
+ 168               		.loc 1 155 27 is_stmt 0 view .LVU47
+ 169 0002 ABE6      		ldi r26,lo8(107)
+ 170 0004 B0E0      		ldi r27,0
+ 171 0006 8C91      		ld r24,X
+ 172               	.LVL10:
+ 156:funsape/peripheral/pcint0.cpp **** 
+ 173               		.loc 1 156 5 is_stmt 1 view .LVU48
+ 156:funsape/peripheral/pcint0.cpp **** 
+ 174               		.loc 1 156 42 is_stmt 0 view .LVU49
+GAS LISTING /tmp/ccfHquIA.s 			page 10
+
+
+ 175 0008 9381      		ldd r25,Z+3
+ 176               	.LVL11:
+ 159:funsape/peripheral/pcint0.cpp ****     setMask(aux8, (uint8_t)enablePins_p);
+ 177               		.loc 1 159 5 is_stmt 1 view .LVU50
+ 159:funsape/peripheral/pcint0.cpp ****     setMask(aux8, (uint8_t)enablePins_p);
+ 178               		.loc 1 159 5 view .LVU51
+ 160:funsape/peripheral/pcint0.cpp ****     setMaskOffset(auxPcmsk0, aux8, MCU_PCINT0_SELECTION_BIT_POS);
+ 179               		.loc 1 160 5 view .LVU52
+ 160:funsape/peripheral/pcint0.cpp ****     setMaskOffset(auxPcmsk0, aux8, MCU_PCINT0_SELECTION_BIT_POS);
+ 180               		.loc 1 160 5 view .LVU53
+ 181 000a 692B      		or r22,r25
+ 182               	.LVL12:
+ 160:funsape/peripheral/pcint0.cpp ****     setMaskOffset(auxPcmsk0, aux8, MCU_PCINT0_SELECTION_BIT_POS);
+ 183               		.loc 1 160 5 view .LVU54
+ 161:funsape/peripheral/pcint0.cpp **** 
+ 184               		.loc 1 161 5 view .LVU55
+ 161:funsape/peripheral/pcint0.cpp **** 
+ 185               		.loc 1 161 5 view .LVU56
+ 164:funsape/peripheral/pcint0.cpp **** 
+ 186               		.loc 1 164 5 view .LVU57
+ 164:funsape/peripheral/pcint0.cpp **** 
+ 187               		.loc 1 164 41 is_stmt 0 view .LVU58
+ 188 000c 6C93      		st X,r22
+ 167:funsape/peripheral/pcint0.cpp **** 
+ 189               		.loc 1 167 5 is_stmt 1 view .LVU59
+ 167:funsape/peripheral/pcint0.cpp **** 
+ 190               		.loc 1 167 25 is_stmt 0 view .LVU60
+ 191 000e 6383      		std Z+3,r22
+ 170:funsape/peripheral/pcint0.cpp ****     debugMessage(Error::NONE, Debug::CodeIndex::PCINT0_MODULE);
+ 192               		.loc 1 170 5 is_stmt 1 view .LVU61
+ 170:funsape/peripheral/pcint0.cpp ****     debugMessage(Error::NONE, Debug::CodeIndex::PCINT0_MODULE);
+ 193               		.loc 1 170 22 is_stmt 0 view .LVU62
+ 194 0010 1282      		std Z+2,__zero_reg__
+ 195 0012 1182      		std Z+1,__zero_reg__
+ 171:funsape/peripheral/pcint0.cpp ****     return true;
+ 196               		.loc 1 171 5 is_stmt 1 view .LVU63
+ 172:funsape/peripheral/pcint0.cpp **** }
+ 197               		.loc 1 172 5 view .LVU64
+ 173:funsape/peripheral/pcint0.cpp **** 
+ 198               		.loc 1 173 1 is_stmt 0 view .LVU65
+ 199 0014 81E0      		ldi r24,lo8(1)
+ 200               	/* epilogue start */
+ 201 0016 0895      		ret
+ 202               		.cfi_endproc
+ 203               	.LFE142:
+ 205               		.section	.text._ZN6Pcint04initENS_3PinE,"ax",@progbits
+ 206               	.global	_ZN6Pcint04initENS_3PinE
+ 208               	_ZN6Pcint04initENS_3PinE:
+ 209               	.LVL13:
+ 210               	.LFB143:
+ 176:funsape/peripheral/pcint0.cpp ****     // Mark passage for debugging purpose
+ 211               		.loc 1 176 1 is_stmt 1 view -0
+ 212               		.cfi_startproc
+ 213               	/* prologue: function */
+ 214               	/* frame size = 0 */
+ 215               	/* stack size = 0 */
+ 216               	.L__stack_usage = 0
+GAS LISTING /tmp/ccfHquIA.s 			page 11
+
+
+ 176:funsape/peripheral/pcint0.cpp ****     // Mark passage for debugging purpose
+ 217               		.loc 1 176 1 is_stmt 0 view .LVU67
+ 218 0000 FC01      		movw r30,r24
+ 178:funsape/peripheral/pcint0.cpp **** 
+ 219               		.loc 1 178 5 is_stmt 1 view .LVU68
+ 181:funsape/peripheral/pcint0.cpp **** 
+ 220               		.loc 1 181 5 view .LVU69
+ 181:funsape/peripheral/pcint0.cpp **** 
+ 221               		.loc 1 181 31 is_stmt 0 view .LVU70
+ 222 0002 ABE6      		ldi r26,lo8(107)
+ 223 0004 B0E0      		ldi r27,0
+ 224 0006 8C91      		ld r24,X
+ 225               	.LVL14:
+ 184:funsape/peripheral/pcint0.cpp ****     setMaskOffset(auxPcmsk0, ((uint8_t)enablePins_p), MCU_PCINT0_SELECTION_BIT_POS);
+ 226               		.loc 1 184 5 is_stmt 1 view .LVU71
+ 184:funsape/peripheral/pcint0.cpp ****     setMaskOffset(auxPcmsk0, ((uint8_t)enablePins_p), MCU_PCINT0_SELECTION_BIT_POS);
+ 227               		.loc 1 184 5 view .LVU72
+ 185:funsape/peripheral/pcint0.cpp **** 
+ 228               		.loc 1 185 5 view .LVU73
+ 185:funsape/peripheral/pcint0.cpp **** 
+ 229               		.loc 1 185 5 view .LVU74
+ 188:funsape/peripheral/pcint0.cpp **** 
+ 230               		.loc 1 188 5 view .LVU75
+ 188:funsape/peripheral/pcint0.cpp **** 
+ 231               		.loc 1 188 41 is_stmt 0 view .LVU76
+ 232 0008 6C93      		st X,r22
+ 191:funsape/peripheral/pcint0.cpp ****     this->_isInitialized    = true;
+ 233               		.loc 1 191 5 is_stmt 1 view .LVU77
+ 191:funsape/peripheral/pcint0.cpp ****     this->_isInitialized    = true;
+ 234               		.loc 1 191 29 is_stmt 0 view .LVU78
+ 235 000a 6383      		std Z+3,r22
+ 192:funsape/peripheral/pcint0.cpp **** 
+ 236               		.loc 1 192 5 is_stmt 1 view .LVU79
+ 192:funsape/peripheral/pcint0.cpp **** 
+ 237               		.loc 1 192 29 is_stmt 0 view .LVU80
+ 238 000c 8081      		ld r24,Z
+ 239 000e 8160      		ori r24,lo8(1<<0)
+ 240 0010 8083      		st Z,r24
+ 195:funsape/peripheral/pcint0.cpp ****     debugMessage(Error::NONE, Debug::CodeIndex::PCINT0_MODULE);
+ 241               		.loc 1 195 5 is_stmt 1 view .LVU81
+ 195:funsape/peripheral/pcint0.cpp ****     debugMessage(Error::NONE, Debug::CodeIndex::PCINT0_MODULE);
+ 242               		.loc 1 195 22 is_stmt 0 view .LVU82
+ 243 0012 1282      		std Z+2,__zero_reg__
+ 244 0014 1182      		std Z+1,__zero_reg__
+ 196:funsape/peripheral/pcint0.cpp ****     return true;
+ 245               		.loc 1 196 5 is_stmt 1 view .LVU83
+ 197:funsape/peripheral/pcint0.cpp **** }
+ 246               		.loc 1 197 5 view .LVU84
+ 198:funsape/peripheral/pcint0.cpp **** 
+ 247               		.loc 1 198 1 is_stmt 0 view .LVU85
+ 248 0016 81E0      		ldi r24,lo8(1)
+ 249               	/* epilogue start */
+ 250 0018 0895      		ret
+ 251               		.cfi_endproc
+ 252               	.LFE143:
+ 254               		.section	.text._ZN6Pcint010setPinModeENS_3PinE7PinMode,"ax",@progbits
+ 255               	.global	_ZN6Pcint010setPinModeENS_3PinE7PinMode
+GAS LISTING /tmp/ccfHquIA.s 			page 12
+
+
+ 257               	_ZN6Pcint010setPinModeENS_3PinE7PinMode:
+ 258               	.LVL15:
+ 259               	.LFB144:
+ 201:funsape/peripheral/pcint0.cpp ****     // Mark passage for debugging purpose
+ 260               		.loc 1 201 1 is_stmt 1 view -0
+ 261               		.cfi_startproc
+ 262               	/* prologue: function */
+ 263               	/* frame size = 0 */
+ 264               	/* stack size = 0 */
+ 265               	.L__stack_usage = 0
+ 201:funsape/peripheral/pcint0.cpp ****     // Mark passage for debugging purpose
+ 266               		.loc 1 201 1 is_stmt 0 view .LVU87
+ 267 0000 FC01      		movw r30,r24
+ 203:funsape/peripheral/pcint0.cpp **** 
+ 268               		.loc 1 203 5 is_stmt 1 view .LVU88
+ 206:funsape/peripheral/pcint0.cpp **** 
+ 269               		.loc 1 206 5 view .LVU89
+ 270               	.LVL16:
+ 210:funsape/peripheral/pcint0.cpp ****         auxPinMask |= (1 << MCU_PCINT0_GPIO_PCINT0_BIT);
+ 271               		.loc 1 210 5 view .LVU90
+ 272               	.LBB20:
+ 273               	.LBI20:
+ 274               		.file 2 "funsape/peripheral/pcint0.hpp"
+   1:funsape/peripheral/pcint0.hpp **** //!
+   2:funsape/peripheral/pcint0.hpp **** //! ****************************************************************************
+   3:funsape/peripheral/pcint0.hpp **** //! @file           pcint0.hpp
+   4:funsape/peripheral/pcint0.hpp **** //! @author         Leandro Schwarz (bladabuska+funsapeavr8lib@gmail.com)
+   5:funsape/peripheral/pcint0.hpp **** //! @brief          Pin Change Interrupt 0 PCINT0 peripheral control.
+   6:funsape/peripheral/pcint0.hpp **** //! @details        This file provides peripheral control for the PCINT0
+   7:funsape/peripheral/pcint0.hpp **** //!                     peripheral control for the FunSAPE++ AVR8 Library.
+   8:funsape/peripheral/pcint0.hpp **** //! @date           2026-04-03
+   9:funsape/peripheral/pcint0.hpp **** //! @version        26.04
+  10:funsape/peripheral/pcint0.hpp **** //! @copyright      MIT License
+  11:funsape/peripheral/pcint0.hpp **** //! @note           No notes at this time.
+  12:funsape/peripheral/pcint0.hpp **** //! @todo           No items in todo list yet.
+  13:funsape/peripheral/pcint0.hpp **** //! @bug            No bugs detected yet.
+  14:funsape/peripheral/pcint0.hpp **** //! ****************************************************************************
+  15:funsape/peripheral/pcint0.hpp **** //! @attention
+  16:funsape/peripheral/pcint0.hpp **** //!
+  17:funsape/peripheral/pcint0.hpp **** //! MIT License
+  18:funsape/peripheral/pcint0.hpp **** //!
+  19:funsape/peripheral/pcint0.hpp **** //! Copyright (c) 2026 Leandro Schwarz
+  20:funsape/peripheral/pcint0.hpp **** //!
+  21:funsape/peripheral/pcint0.hpp **** //! Permission is hereby granted, free of charge, to any person obtaining a copy
+  22:funsape/peripheral/pcint0.hpp **** //!     of this software and associated documentation files (the "Software"), to
+  23:funsape/peripheral/pcint0.hpp **** //!     deal in the Software without restriction, including without limitation
+  24:funsape/peripheral/pcint0.hpp **** //!     the rights to use, copy, modify, merge, publish, distribute, sublicense,
+  25:funsape/peripheral/pcint0.hpp **** //!     and/or sell copies of the Software, and to permit persons to whom the
+  26:funsape/peripheral/pcint0.hpp **** //!     Software is furnished to do so, subject to the following conditions:
+  27:funsape/peripheral/pcint0.hpp **** //!
+  28:funsape/peripheral/pcint0.hpp **** //! The above copyright notice and this permission notice shall be included in
+  29:funsape/peripheral/pcint0.hpp **** //!     all copies or substantial portions of the Software.
+  30:funsape/peripheral/pcint0.hpp **** //!
+  31:funsape/peripheral/pcint0.hpp **** //! THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  32:funsape/peripheral/pcint0.hpp **** //!     IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  33:funsape/peripheral/pcint0.hpp **** //!     FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+  34:funsape/peripheral/pcint0.hpp **** //!     THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+GAS LISTING /tmp/ccfHquIA.s 			page 13
+
+
+  35:funsape/peripheral/pcint0.hpp **** //!     OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+  36:funsape/peripheral/pcint0.hpp **** //!     ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+  37:funsape/peripheral/pcint0.hpp **** //!     OTHER DEALINGS IN THE SOFTWARE.
+  38:funsape/peripheral/pcint0.hpp **** //!
+  39:funsape/peripheral/pcint0.hpp **** //! ****************************************************************************
+  40:funsape/peripheral/pcint0.hpp **** //!
+  41:funsape/peripheral/pcint0.hpp **** 
+  42:funsape/peripheral/pcint0.hpp **** // =============================================================================
+  43:funsape/peripheral/pcint0.hpp **** // Include guard (START)
+  44:funsape/peripheral/pcint0.hpp **** // =============================================================================
+  45:funsape/peripheral/pcint0.hpp **** 
+  46:funsape/peripheral/pcint0.hpp **** #ifndef __PCINT0_HPP
+  47:funsape/peripheral/pcint0.hpp **** #define __PCINT0_HPP                    2604
+  48:funsape/peripheral/pcint0.hpp **** 
+  49:funsape/peripheral/pcint0.hpp **** // =============================================================================
+  50:funsape/peripheral/pcint0.hpp **** // Dependencies
+  51:funsape/peripheral/pcint0.hpp **** // =============================================================================
+  52:funsape/peripheral/pcint0.hpp **** 
+  53:funsape/peripheral/pcint0.hpp **** //     /////////////////     GLOBAL DEFINITIONS FILE    /////////////////     //
+  54:funsape/peripheral/pcint0.hpp **** 
+  55:funsape/peripheral/pcint0.hpp **** #include "../globalDefines.hpp"
+  56:funsape/peripheral/pcint0.hpp **** #if !defined(__GLOBAL_DEFINES_HPP)
+  57:funsape/peripheral/pcint0.hpp **** #   error [pcint0.hpp] Error 1 - Header file (globalDefines.hpp) is missing or corrupted!
+  58:funsape/peripheral/pcint0.hpp **** #elif __GLOBAL_DEFINES_HPP != __PCINT0_HPP
+  59:funsape/peripheral/pcint0.hpp **** #   error [pcint0.hpp] Error 2 - Build mismatch between file (pcint0.hpp) and global definitions fi
+  60:funsape/peripheral/pcint0.hpp **** #endif
+  61:funsape/peripheral/pcint0.hpp **** 
+  62:funsape/peripheral/pcint0.hpp **** //     //////////////////     LIBRARY DEPENDENCIES     //////////////////     //
+  63:funsape/peripheral/pcint0.hpp **** 
+  64:funsape/peripheral/pcint0.hpp **** #include "../util/debug.hpp"
+  65:funsape/peripheral/pcint0.hpp **** #if !defined(__DEBUG_HPP)
+  66:funsape/peripheral/pcint0.hpp **** #   error [pcint0.hpp] Error 1 - Header file (debug.hpp) is missing or corrupted!
+  67:funsape/peripheral/pcint0.hpp **** #elif __DEBUG_HPP != __PCINT0_HPP
+  68:funsape/peripheral/pcint0.hpp **** #   error [pcint0.hpp] Error 5 - Build mismatch between file (pcint0.hpp) and library dependency (d
+  69:funsape/peripheral/pcint0.hpp **** #endif
+  70:funsape/peripheral/pcint0.hpp **** 
+  71:funsape/peripheral/pcint0.hpp **** //     ///////////////////     STANDARD C LIBRARY     ///////////////////     //
+  72:funsape/peripheral/pcint0.hpp **** 
+  73:funsape/peripheral/pcint0.hpp **** // NONE
+  74:funsape/peripheral/pcint0.hpp **** 
+  75:funsape/peripheral/pcint0.hpp **** //     ////////////////////    AVR LIBRARY FILES     ////////////////////     //
+  76:funsape/peripheral/pcint0.hpp **** 
+  77:funsape/peripheral/pcint0.hpp **** // NONE
+  78:funsape/peripheral/pcint0.hpp **** 
+  79:funsape/peripheral/pcint0.hpp **** // =============================================================================
+  80:funsape/peripheral/pcint0.hpp **** // Checks peripheral existance
+  81:funsape/peripheral/pcint0.hpp **** // =============================================================================
+  82:funsape/peripheral/pcint0.hpp **** 
+  83:funsape/peripheral/pcint0.hpp **** #if !defined(MCU_PCINT0_PERIPHERAL_EXISTS)
+  84:funsape/peripheral/pcint0.hpp **** #   error [pcint0.hpp] Error X - Peripheral PCINT0 is not avalilable in selected device!
+  85:funsape/peripheral/pcint0.hpp **** #endif
+  86:funsape/peripheral/pcint0.hpp **** 
+  87:funsape/peripheral/pcint0.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  88:funsape/peripheral/pcint0.hpp **** // Doxygen: Start main group "Peripherals"
+  89:funsape/peripheral/pcint0.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  90:funsape/peripheral/pcint0.hpp **** 
+  91:funsape/peripheral/pcint0.hpp **** //!
+GAS LISTING /tmp/ccfHquIA.s 			page 14
+
+
+  92:funsape/peripheral/pcint0.hpp **** //! @addtogroup     Peripherals
+  93:funsape/peripheral/pcint0.hpp **** //! @brief          Microcontroller peripherals.
+  94:funsape/peripheral/pcint0.hpp **** //! @{
+  95:funsape/peripheral/pcint0.hpp **** //!
+  96:funsape/peripheral/pcint0.hpp **** 
+  97:funsape/peripheral/pcint0.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  98:funsape/peripheral/pcint0.hpp **** // Doxygen: Start subgroup "Pcint0" in "Peripherals"
+  99:funsape/peripheral/pcint0.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 100:funsape/peripheral/pcint0.hpp **** 
+ 101:funsape/peripheral/pcint0.hpp **** //!
+ 102:funsape/peripheral/pcint0.hpp **** //! @addtogroup     Pcint0
+ 103:funsape/peripheral/pcint0.hpp **** //! @brief          Pin Change Interrupt 0 (PCINT0) controller module.
+ 104:funsape/peripheral/pcint0.hpp **** //! @{
+ 105:funsape/peripheral/pcint0.hpp **** //!
+ 106:funsape/peripheral/pcint0.hpp **** 
+ 107:funsape/peripheral/pcint0.hpp **** // =============================================================================
+ 108:funsape/peripheral/pcint0.hpp **** // Undefining previous definitions
+ 109:funsape/peripheral/pcint0.hpp **** // =============================================================================
+ 110:funsape/peripheral/pcint0.hpp **** 
+ 111:funsape/peripheral/pcint0.hpp **** // NONE
+ 112:funsape/peripheral/pcint0.hpp **** 
+ 113:funsape/peripheral/pcint0.hpp **** // =============================================================================
+ 114:funsape/peripheral/pcint0.hpp **** // Constant definitions
+ 115:funsape/peripheral/pcint0.hpp **** // =============================================================================
+ 116:funsape/peripheral/pcint0.hpp **** 
+ 117:funsape/peripheral/pcint0.hpp **** // NONE
+ 118:funsape/peripheral/pcint0.hpp **** 
+ 119:funsape/peripheral/pcint0.hpp **** // =============================================================================
+ 120:funsape/peripheral/pcint0.hpp **** // New data types
+ 121:funsape/peripheral/pcint0.hpp **** // =============================================================================
+ 122:funsape/peripheral/pcint0.hpp **** 
+ 123:funsape/peripheral/pcint0.hpp **** // NONE
+ 124:funsape/peripheral/pcint0.hpp **** 
+ 125:funsape/peripheral/pcint0.hpp **** // =============================================================================
+ 126:funsape/peripheral/pcint0.hpp **** // Interrupt callback functions declarations
+ 127:funsape/peripheral/pcint0.hpp **** // =============================================================================
+ 128:funsape/peripheral/pcint0.hpp **** 
+ 129:funsape/peripheral/pcint0.hpp **** //!
+ 130:funsape/peripheral/pcint0.hpp **** //! @brief          PCINT0 interrupt callback function.
+ 131:funsape/peripheral/pcint0.hpp **** //! @details        This function is called when the PCINT0 interrupt is treated.
+ 132:funsape/peripheral/pcint0.hpp **** //!                     It is a weak function that can be overwritten by user
+ 133:funsape/peripheral/pcint0.hpp **** //!                     code.
+ 134:funsape/peripheral/pcint0.hpp **** //!
+ 135:funsape/peripheral/pcint0.hpp **** void pcint0InterruptCallback(void);
+ 136:funsape/peripheral/pcint0.hpp **** 
+ 137:funsape/peripheral/pcint0.hpp **** // =============================================================================
+ 138:funsape/peripheral/pcint0.hpp **** // Public functions declarations
+ 139:funsape/peripheral/pcint0.hpp **** // =============================================================================
+ 140:funsape/peripheral/pcint0.hpp **** 
+ 141:funsape/peripheral/pcint0.hpp **** // NONE
+ 142:funsape/peripheral/pcint0.hpp **** 
+ 143:funsape/peripheral/pcint0.hpp **** // =============================================================================
+ 144:funsape/peripheral/pcint0.hpp **** // Classes
+ 145:funsape/peripheral/pcint0.hpp **** // =============================================================================
+ 146:funsape/peripheral/pcint0.hpp **** 
+ 147:funsape/peripheral/pcint0.hpp **** //!
+ 148:funsape/peripheral/pcint0.hpp **** //! @brief          Pcint0 class
+GAS LISTING /tmp/ccfHquIA.s 			page 15
+
+
+ 149:funsape/peripheral/pcint0.hpp **** //! @details        This class manages the Pin Change Interrupt 0 (PCINT0)
+ 150:funsape/peripheral/pcint0.hpp **** //!                     peripheral.
+ 151:funsape/peripheral/pcint0.hpp **** //! @attention      The @ref pcint0 instance of this class is already defined as
+ 152:funsape/peripheral/pcint0.hpp **** //!                     a singleton global object.
+ 153:funsape/peripheral/pcint0.hpp **** //!
+ 154:funsape/peripheral/pcint0.hpp **** class Pcint0
+ 155:funsape/peripheral/pcint0.hpp **** {
+ 156:funsape/peripheral/pcint0.hpp ****     // -------------------------------------------------------------------------
+ 157:funsape/peripheral/pcint0.hpp ****     // New data types ----------------------------------------------------------
+ 158:funsape/peripheral/pcint0.hpp **** 
+ 159:funsape/peripheral/pcint0.hpp **** public:
+ 160:funsape/peripheral/pcint0.hpp ****     //!
+ 161:funsape/peripheral/pcint0.hpp ****     //! @enum       Pin
+ 162:funsape/peripheral/pcint0.hpp ****     //! @brief      Trigger Mode Pins enumeration.
+ 163:funsape/peripheral/pcint0.hpp ****     //! @details    Trigger Mode Pins associated with PCINT0.
+ 164:funsape/peripheral/pcint0.hpp ****     //! @warning    The value associate with the symbolic names may change
+ 165:funsape/peripheral/pcint0.hpp ****     //!                 between builds and might not reflect the register/bits
+ 166:funsape/peripheral/pcint0.hpp ****     //!                 real values. In order to ensure compatibility between
+ 167:funsape/peripheral/pcint0.hpp ****     //!                 builds, always refer to the SYMBOLIC NAME, instead of
+ 168:funsape/peripheral/pcint0.hpp ****     //!                 its VALUE.
+ 169:funsape/peripheral/pcint0.hpp ****     //!
+ 170:funsape/peripheral/pcint0.hpp ****     enum class Pin : uint8_t {
+ 171:funsape/peripheral/pcint0.hpp **** #if defined(MCU_PCINT0_PIN_0_EXISTS)
+ 172:funsape/peripheral/pcint0.hpp ****         PIN_PCINT0          = (1 << 0), //!< Enables trigger by PCINT0 pin.
+ 173:funsape/peripheral/pcint0.hpp **** #endif
+ 174:funsape/peripheral/pcint0.hpp **** #if defined(MCU_PCINT0_PIN_1_EXISTS)
+ 175:funsape/peripheral/pcint0.hpp ****         PIN_PCINT1          = (1 << 1), //!< Enables trigger by PCINT1 pin.
+ 176:funsape/peripheral/pcint0.hpp **** #endif
+ 177:funsape/peripheral/pcint0.hpp **** #if defined(MCU_PCINT0_PIN_2_EXISTS)
+ 178:funsape/peripheral/pcint0.hpp ****         PIN_PCINT2          = (1 << 2), //!< Enables trigger by PCINT2 pin.
+ 179:funsape/peripheral/pcint0.hpp **** #endif
+ 180:funsape/peripheral/pcint0.hpp **** #if defined(MCU_PCINT0_PIN_3_EXISTS)
+ 181:funsape/peripheral/pcint0.hpp ****         PIN_PCINT3          = (1 << 3), //!< Enables trigger by PCINT3 pin.
+ 182:funsape/peripheral/pcint0.hpp **** #endif
+ 183:funsape/peripheral/pcint0.hpp **** #if defined(MCU_PCINT0_PIN_4_EXISTS)
+ 184:funsape/peripheral/pcint0.hpp ****         PIN_PCINT4          = (1 << 4), //!< Enables trigger by PCINT4 pin.
+ 185:funsape/peripheral/pcint0.hpp **** #endif
+ 186:funsape/peripheral/pcint0.hpp **** #if defined(MCU_PCINT0_PIN_5_EXISTS)
+ 187:funsape/peripheral/pcint0.hpp ****         PIN_PCINT5          = (1 << 5), //!< Enables trigger by PCINT5 pin.
+ 188:funsape/peripheral/pcint0.hpp **** #endif
+ 189:funsape/peripheral/pcint0.hpp **** #if defined(MCU_PCINT0_PIN_6_EXISTS)
+ 190:funsape/peripheral/pcint0.hpp ****         PIN_PCINT6          = (1 << 6), //!< Enables trigger by PCINT6 pin.
+ 191:funsape/peripheral/pcint0.hpp **** #endif
+ 192:funsape/peripheral/pcint0.hpp **** #if defined(MCU_PCINT0_PIN_7_EXISTS)
+ 193:funsape/peripheral/pcint0.hpp ****         PIN_PCINT7          = (1 << 7), //!< Enables trigger by PCINT7 pin.
+ 194:funsape/peripheral/pcint0.hpp **** #endif
+ 195:funsape/peripheral/pcint0.hpp ****     };
+ 196:funsape/peripheral/pcint0.hpp **** 
+ 197:funsape/peripheral/pcint0.hpp **** private:
+ 198:funsape/peripheral/pcint0.hpp ****     // NONE
+ 199:funsape/peripheral/pcint0.hpp **** 
+ 200:funsape/peripheral/pcint0.hpp **** protected:
+ 201:funsape/peripheral/pcint0.hpp ****     // NONE
+ 202:funsape/peripheral/pcint0.hpp **** 
+ 203:funsape/peripheral/pcint0.hpp ****     // -------------------------------------------------------------------------
+ 204:funsape/peripheral/pcint0.hpp ****     // Constructors ------------------------------------------------------------
+ 205:funsape/peripheral/pcint0.hpp **** 
+GAS LISTING /tmp/ccfHquIA.s 			page 16
+
+
+ 206:funsape/peripheral/pcint0.hpp **** public:
+ 207:funsape/peripheral/pcint0.hpp ****     //!
+ 208:funsape/peripheral/pcint0.hpp ****     //! @brief      Pcint0 class destructor.
+ 209:funsape/peripheral/pcint0.hpp ****     //! @details    Destroys a Pcint0 object.
+ 210:funsape/peripheral/pcint0.hpp ****     //!
+ 211:funsape/peripheral/pcint0.hpp ****     ~Pcint0(
+ 212:funsape/peripheral/pcint0.hpp ****             void
+ 213:funsape/peripheral/pcint0.hpp ****     );
+ 214:funsape/peripheral/pcint0.hpp **** 
+ 215:funsape/peripheral/pcint0.hpp **** private:
+ 216:funsape/peripheral/pcint0.hpp ****     //!
+ 217:funsape/peripheral/pcint0.hpp ****     //! @brief      Pcint0 class constructor.
+ 218:funsape/peripheral/pcint0.hpp ****     //! @details    Creates a Pcint0 object. The object is loaded with the
+ 219:funsape/peripheral/pcint0.hpp ****     //!                 default register values (no pins enabled). The object
+ 220:funsape/peripheral/pcint0.hpp ****     //!                 still must be initialized before use
+ 221:funsape/peripheral/pcint0.hpp ****     //! @see        init(const Pcint0::Pin enablePins_p).
+ 222:funsape/peripheral/pcint0.hpp ****     //! @par Error codes:
+ 223:funsape/peripheral/pcint0.hpp ****     //!
+ 224:funsape/peripheral/pcint0.hpp ****     //! | Error code       | Meaning                           |
+ 225:funsape/peripheral/pcint0.hpp ****     //! |: ----------------|: ---------------------------------|
+ 226:funsape/peripheral/pcint0.hpp ****     //! | @ref Error::NONE | Success. No errors were detected. |
+ 227:funsape/peripheral/pcint0.hpp ****     //!
+ 228:funsape/peripheral/pcint0.hpp ****     Pcint0(
+ 229:funsape/peripheral/pcint0.hpp ****             void
+ 230:funsape/peripheral/pcint0.hpp ****     );
+ 231:funsape/peripheral/pcint0.hpp **** 
+ 232:funsape/peripheral/pcint0.hpp ****     //!
+ 233:funsape/peripheral/pcint0.hpp ****     //! @brief      Copy constructor (deleted).
+ 234:funsape/peripheral/pcint0.hpp ****     //! @details    Deleted to prevent cloning the Singleton instance.
+ 235:funsape/peripheral/pcint0.hpp ****     //!
+ 236:funsape/peripheral/pcint0.hpp ****     Pcint0(
+ 237:funsape/peripheral/pcint0.hpp ****             const Pcint0 &
+ 238:funsape/peripheral/pcint0.hpp ****     ) = delete;
+ 239:funsape/peripheral/pcint0.hpp **** 
+ 240:funsape/peripheral/pcint0.hpp ****     //!
+ 241:funsape/peripheral/pcint0.hpp ****     //! @brief      Copy assignment operator (deleted).
+ 242:funsape/peripheral/pcint0.hpp ****     //! @details    Deleted to prevent assignment of the Singleton instance.
+ 243:funsape/peripheral/pcint0.hpp ****     //!
+ 244:funsape/peripheral/pcint0.hpp ****     Pcint0 &operator=(
+ 245:funsape/peripheral/pcint0.hpp ****             const Pcint0 &
+ 246:funsape/peripheral/pcint0.hpp ****     ) = delete;
+ 247:funsape/peripheral/pcint0.hpp **** 
+ 248:funsape/peripheral/pcint0.hpp **** protected:
+ 249:funsape/peripheral/pcint0.hpp ****     // NONE
+ 250:funsape/peripheral/pcint0.hpp **** 
+ 251:funsape/peripheral/pcint0.hpp ****     // -------------------------------------------------------------------------
+ 252:funsape/peripheral/pcint0.hpp ****     // Methods - Inherited methods ---------------------------------------------
+ 253:funsape/peripheral/pcint0.hpp **** 
+ 254:funsape/peripheral/pcint0.hpp **** public:
+ 255:funsape/peripheral/pcint0.hpp ****     // NONE
+ 256:funsape/peripheral/pcint0.hpp **** 
+ 257:funsape/peripheral/pcint0.hpp **** protected:
+ 258:funsape/peripheral/pcint0.hpp ****     // NONE
+ 259:funsape/peripheral/pcint0.hpp **** 
+ 260:funsape/peripheral/pcint0.hpp ****     // -------------------------------------------------------------------------
+ 261:funsape/peripheral/pcint0.hpp ****     // Methods - class own methods ---------------------------------------------
+ 262:funsape/peripheral/pcint0.hpp **** 
+GAS LISTING /tmp/ccfHquIA.s 			page 17
+
+
+ 263:funsape/peripheral/pcint0.hpp **** public:
+ 264:funsape/peripheral/pcint0.hpp ****     //     ///////////////////    SINGLETON ACCESS    ///////////////////     //
+ 265:funsape/peripheral/pcint0.hpp **** 
+ 266:funsape/peripheral/pcint0.hpp ****     //!
+ 267:funsape/peripheral/pcint0.hpp ****     //! @brief      Returns the Singleton instance.
+ 268:funsape/peripheral/pcint0.hpp ****     //! @details    Provides global access to the single instance of the Pcint0
+ 269:funsape/peripheral/pcint0.hpp ****     //!                 class. This method is tightly inlined to ensure
+ 270:funsape/peripheral/pcint0.hpp ****     //!                 zero-overhead during execution.
+ 271:funsape/peripheral/pcint0.hpp ****     //! @return     Reference to the single Pcint0 instance.
+ 272:funsape/peripheral/pcint0.hpp ****     //!
+ 273:funsape/peripheral/pcint0.hpp ****     static inlined Pcint0 &getInstance(
+ 274:funsape/peripheral/pcint0.hpp ****             void
+ 275:funsape/peripheral/pcint0.hpp ****     );
+ 276:funsape/peripheral/pcint0.hpp **** 
+ 277:funsape/peripheral/pcint0.hpp ****     //     /////////////////     CONTROL AND STATUS     /////////////////     //
+ 278:funsape/peripheral/pcint0.hpp **** 
+ 279:funsape/peripheral/pcint0.hpp ****     //!
+ 280:funsape/peripheral/pcint0.hpp ****     //! @brief      Disables edge detection on pins.
+ 281:funsape/peripheral/pcint0.hpp ****     //! @details    Disables edge detection on pins to trigger the interrupt
+ 282:funsape/peripheral/pcint0.hpp ****     //!                 when a logical change event is detected.
+ 283:funsape/peripheral/pcint0.hpp ****     //! @param[in]  disablePins_p       Disable interrupt pins. Multiple pins
+ 284:funsape/peripheral/pcint0.hpp ****     //!                                     can be disabled at the same time by
+ 285:funsape/peripheral/pcint0.hpp ****     //!                                     using bitwise-OR (|) operations.
+ 286:funsape/peripheral/pcint0.hpp ****     //! @retval     true                if success.
+ 287:funsape/peripheral/pcint0.hpp ****     //! @retval     false               if an error occurred. Retrieve the error
+ 288:funsape/peripheral/pcint0.hpp ****     //!                                     by calling
+ 289:funsape/peripheral/pcint0.hpp ****     //!                                 @ref Pcint0::getLastError().
+ 290:funsape/peripheral/pcint0.hpp ****     //! @par Error codes:
+ 291:funsape/peripheral/pcint0.hpp ****     //!
+ 292:funsape/peripheral/pcint0.hpp ****     //! | Error code       | Meaning                          |
+ 293:funsape/peripheral/pcint0.hpp ****     //! |:-----------------|:---------------------------------|
+ 294:funsape/peripheral/pcint0.hpp ****     //! | @ref Error::NONE | Success. No erros were detected. |
+ 295:funsape/peripheral/pcint0.hpp ****     //!
+ 296:funsape/peripheral/pcint0.hpp ****     bool_t disablePins(
+ 297:funsape/peripheral/pcint0.hpp ****             const Pcint0::Pin disablePins_p
+ 298:funsape/peripheral/pcint0.hpp ****     );
+ 299:funsape/peripheral/pcint0.hpp **** 
+ 300:funsape/peripheral/pcint0.hpp ****     //!
+ 301:funsape/peripheral/pcint0.hpp ****     //! @brief      Enables edge detection on pins.
+ 302:funsape/peripheral/pcint0.hpp ****     //! @details    Configure pins that trigger the interrupt when a logical
+ 303:funsape/peripheral/pcint0.hpp ****     //!                 change event is detected.
+ 304:funsape/peripheral/pcint0.hpp ****     //! @param[in]  enablePins_p        Enable interrupt pins. Multiple pins can
+ 305:funsape/peripheral/pcint0.hpp ****     //!                                     be enabled at the same time by using
+ 306:funsape/peripheral/pcint0.hpp ****     //!                                     bitwise-OR (|) operations.
+ 307:funsape/peripheral/pcint0.hpp ****     //! @retval     true                if success.
+ 308:funsape/peripheral/pcint0.hpp ****     //! @retval     false               if an error occurred. Retrieve the error
+ 309:funsape/peripheral/pcint0.hpp ****     //!                                     by calling
+ 310:funsape/peripheral/pcint0.hpp ****     //!                                     @ref Pcint0::getLastError().
+ 311:funsape/peripheral/pcint0.hpp ****     //! @par Error codes:
+ 312:funsape/peripheral/pcint0.hpp ****     //!
+ 313:funsape/peripheral/pcint0.hpp ****     //! | Error code       | Meaning                          |
+ 314:funsape/peripheral/pcint0.hpp ****     //! |:-----------------|:---------------------------------|
+ 315:funsape/peripheral/pcint0.hpp ****     //! | @ref Error::NONE | Success. No erros were detected. |
+ 316:funsape/peripheral/pcint0.hpp ****     //!
+ 317:funsape/peripheral/pcint0.hpp ****     bool_t enablePins(
+ 318:funsape/peripheral/pcint0.hpp ****             const Pcint0::Pin enablePins_p
+ 319:funsape/peripheral/pcint0.hpp ****     );
+GAS LISTING /tmp/ccfHquIA.s 			page 18
+
+
+ 320:funsape/peripheral/pcint0.hpp **** 
+ 321:funsape/peripheral/pcint0.hpp ****     //!
+ 322:funsape/peripheral/pcint0.hpp ****     //! @brief      Returns the last error.
+ 323:funsape/peripheral/pcint0.hpp ****     //! @details    Returns the last error.
+ 324:funsape/peripheral/pcint0.hpp ****     //! @return     @ref Error          Error status of the last operation.
+ 325:funsape/peripheral/pcint0.hpp ****     //!
+ 326:funsape/peripheral/pcint0.hpp ****     Error inlined getLastError(
+ 327:funsape/peripheral/pcint0.hpp ****             void
+ 328:funsape/peripheral/pcint0.hpp ****     ) const;
+ 329:funsape/peripheral/pcint0.hpp **** 
+ 330:funsape/peripheral/pcint0.hpp ****     //!
+ 331:funsape/peripheral/pcint0.hpp ****     //! @brief      Initializes the Pcint0 module.
+ 332:funsape/peripheral/pcint0.hpp ****     //! @details    Initializes the PCINT0 module. The function also enables the
+ 333:funsape/peripheral/pcint0.hpp ****     //!                 pins that trigger the interrupt. The default parameter
+ 334:funsape/peripheral/pcint0.hpp ****     //!                 has no pins enabled.
+ 335:funsape/peripheral/pcint0.hpp ****     //! @param[in]  enablePins_p        Enable interrupt pins. Multiples pins
+ 336:funsape/peripheral/pcint0.hpp ****     //!                                     can be enabled at the same time by
+ 337:funsape/peripheral/pcint0.hpp ****     //!                                     using bitwise-OR (|) operations.
+ 338:funsape/peripheral/pcint0.hpp ****     //! @retval     true                if success.
+ 339:funsape/peripheral/pcint0.hpp ****     //! @retval     false               if an error occurred. Retrieve the error
+ 340:funsape/peripheral/pcint0.hpp ****     //!                                     by calling
+ 341:funsape/peripheral/pcint0.hpp ****     //!                                     @ref Pcint0::getLastError().
+ 342:funsape/peripheral/pcint0.hpp ****     //! @par Error codes:
+ 343:funsape/peripheral/pcint0.hpp ****     //!
+ 344:funsape/peripheral/pcint0.hpp ****     //! | Error code                    | Meaning                              |
+ 345:funsape/peripheral/pcint0.hpp ****     //! |:------------------------------|:-------------------------------------|
+ 346:funsape/peripheral/pcint0.hpp ****     //! | @ref Error::NONE              | Success. No erros were detected.     |
+ 347:funsape/peripheral/pcint0.hpp ****     //!
+ 348:funsape/peripheral/pcint0.hpp ****     bool_t init(
+ 349:funsape/peripheral/pcint0.hpp ****             const Pcint0::Pin enablePins_p = (Pcint0::Pin)0
+ 350:funsape/peripheral/pcint0.hpp ****     );
+ 351:funsape/peripheral/pcint0.hpp **** 
+ 352:funsape/peripheral/pcint0.hpp ****     //!
+ 353:funsape/peripheral/pcint0.hpp ****     //! @brief      Sets the @c PCINT0 pin operation mode.
+ 354:funsape/peripheral/pcint0.hpp ****     //! @details    This function sets the @c PCINT0 GPIO pin operation mode to
+ 355:funsape/peripheral/pcint0.hpp ****     //!                 the given @a mode_p.
+ 356:funsape/peripheral/pcint0.hpp ****     //! @param[in]  pinList_p           List of pins to be configured. Multiple
+ 357:funsape/peripheral/pcint0.hpp ****     //!                                     pins can be configured at the same
+ 358:funsape/peripheral/pcint0.hpp ****     //!                                     time by using bitwise-OR operations.
+ 359:funsape/peripheral/pcint0.hpp ****     //! @param[in]  mode_p              @ref Pcint0::PinMode operation mode.
+ 360:funsape/peripheral/pcint0.hpp ****     //! @retval     true                if success.
+ 361:funsape/peripheral/pcint0.hpp ****     //! @retval     false               if an error occurred. Retrieve the error
+ 362:funsape/peripheral/pcint0.hpp ****     //!                                     by calling
+ 363:funsape/peripheral/pcint0.hpp ****     //!                                     @ref Pcint0::getLastError().
+ 364:funsape/peripheral/pcint0.hpp ****     //! @par Error codes:
+ 365:funsape/peripheral/pcint0.hpp ****     //!
+ 366:funsape/peripheral/pcint0.hpp ****     //! | Error code       | Meaning                          |
+ 367:funsape/peripheral/pcint0.hpp ****     //! |:-----------------|:---------------------------------|
+ 368:funsape/peripheral/pcint0.hpp ****     //! | @ref Error::NONE | Success. No erros were detected. |
+ 369:funsape/peripheral/pcint0.hpp ****     //!
+ 370:funsape/peripheral/pcint0.hpp ****     bool_t setPinMode(
+ 371:funsape/peripheral/pcint0.hpp ****             const Pcint0::Pin pinList_p,
+ 372:funsape/peripheral/pcint0.hpp ****             const PinMode mode_p
+ 373:funsape/peripheral/pcint0.hpp ****     );
+ 374:funsape/peripheral/pcint0.hpp **** 
+ 375:funsape/peripheral/pcint0.hpp ****     //     //////////////////////    INTERRUPT     //////////////////////     //
+ 376:funsape/peripheral/pcint0.hpp **** 
+GAS LISTING /tmp/ccfHquIA.s 			page 19
+
+
+ 377:funsape/peripheral/pcint0.hpp ****     //!
+ 378:funsape/peripheral/pcint0.hpp ****     //! @brief      Activates interrupt.
+ 379:funsape/peripheral/pcint0.hpp ****     //! @details    Activates interrupt. If an interrupt request is pending, an
+ 380:funsape/peripheral/pcint0.hpp ****     //!                 interrupt will be triggered when activated. In most
+ 381:funsape/peripheral/pcint0.hpp ****     //!                 applications, it is recommended to ignore an old
+ 382:funsape/peripheral/pcint0.hpp ****     //!                 interrupt request prior to activate the interrupt. This
+ 383:funsape/peripheral/pcint0.hpp ****     //!                 can be done by calling
+ 384:funsape/peripheral/pcint0.hpp ****     //!                 @ref Pcint0::clearInterruptRequest() immediately before
+ 385:funsape/peripheral/pcint0.hpp ****     //!                 activating the interrupt.
+ 386:funsape/peripheral/pcint0.hpp ****     //!
+ 387:funsape/peripheral/pcint0.hpp ****     void inlined activateInterrupt(
+ 388:funsape/peripheral/pcint0.hpp ****             void
+ 389:funsape/peripheral/pcint0.hpp ****     ) const;
+ 390:funsape/peripheral/pcint0.hpp **** 
+ 391:funsape/peripheral/pcint0.hpp ****     //!
+ 392:funsape/peripheral/pcint0.hpp ****     //! @brief      Clears interrupt flag.
+ 393:funsape/peripheral/pcint0.hpp ****     //! @details    Clears interrupt flag, dismissing any pending interrupt
+ 394:funsape/peripheral/pcint0.hpp ****     //!                 request.
+ 395:funsape/peripheral/pcint0.hpp ****     //!
+ 396:funsape/peripheral/pcint0.hpp ****     void inlined clearInterruptRequest(
+ 397:funsape/peripheral/pcint0.hpp ****             void
+ 398:funsape/peripheral/pcint0.hpp ****     ) const;
+ 399:funsape/peripheral/pcint0.hpp **** 
+ 400:funsape/peripheral/pcint0.hpp ****     //!
+ 401:funsape/peripheral/pcint0.hpp ****     //! @brief      Deactivates interrupt.
+ 402:funsape/peripheral/pcint0.hpp ****     //! @details    Deactivates interrupt. This function does not clears any
+ 403:funsape/peripheral/pcint0.hpp ****     //!                 pending interrupt request.
+ 404:funsape/peripheral/pcint0.hpp ****     //!
+ 405:funsape/peripheral/pcint0.hpp ****     void inlined deactivateInterrupt(
+ 406:funsape/peripheral/pcint0.hpp ****             void
+ 407:funsape/peripheral/pcint0.hpp ****     ) const;
+ 408:funsape/peripheral/pcint0.hpp **** 
+ 409:funsape/peripheral/pcint0.hpp **** private:
+ 410:funsape/peripheral/pcint0.hpp ****     // NONE
+ 411:funsape/peripheral/pcint0.hpp **** 
+ 412:funsape/peripheral/pcint0.hpp **** protected:
+ 413:funsape/peripheral/pcint0.hpp ****     // NONE
+ 414:funsape/peripheral/pcint0.hpp **** 
+ 415:funsape/peripheral/pcint0.hpp ****     // -------------------------------------------------------------------------
+ 416:funsape/peripheral/pcint0.hpp ****     // Properties --------------------------------------------------------------
+ 417:funsape/peripheral/pcint0.hpp **** 
+ 418:funsape/peripheral/pcint0.hpp **** private:
+ 419:funsape/peripheral/pcint0.hpp ****     //     /////////////////    SINGLETON INSTANCE     //////////////////     //
+ 420:funsape/peripheral/pcint0.hpp ****     static Pcint0   _instance;                  //|< Static private instance
+ 421:funsape/peripheral/pcint0.hpp **** 
+ 422:funsape/peripheral/pcint0.hpp ****     //     /////////////////    CONTROL AND STATUS     //////////////////     //
+ 423:funsape/peripheral/pcint0.hpp ****     bool_t          _isInitialized      : 1;    //!< Initialization flag.
+ 424:funsape/peripheral/pcint0.hpp ****     Error           _lastError;                 //!< Last error.
+ 425:funsape/peripheral/pcint0.hpp **** 
+ 426:funsape/peripheral/pcint0.hpp ****     //     ////////////////////   CONFIGURATION     /////////////////////     //
+ 427:funsape/peripheral/pcint0.hpp ****     Pcint0::Pin     _enabledPins;               //!< Sense mode trigger.
+ 428:funsape/peripheral/pcint0.hpp **** 
+ 429:funsape/peripheral/pcint0.hpp **** protected:
+ 430:funsape/peripheral/pcint0.hpp ****     // NONE
+ 431:funsape/peripheral/pcint0.hpp **** 
+ 432:funsape/peripheral/pcint0.hpp **** }; // class Pcint0
+ 433:funsape/peripheral/pcint0.hpp **** 
+GAS LISTING /tmp/ccfHquIA.s 			page 20
+
+
+ 434:funsape/peripheral/pcint0.hpp **** // =============================================================================
+ 435:funsape/peripheral/pcint0.hpp **** // Inlined class functions
+ 436:funsape/peripheral/pcint0.hpp **** // =============================================================================
+ 437:funsape/peripheral/pcint0.hpp **** 
+ 438:funsape/peripheral/pcint0.hpp **** //!
+ 439:funsape/peripheral/pcint0.hpp **** //! @cond
+ 440:funsape/peripheral/pcint0.hpp **** //!
+ 441:funsape/peripheral/pcint0.hpp **** 
+ 442:funsape/peripheral/pcint0.hpp **** //     /////////////////////    SINGLETON ACCESS    /////////////////////     //
+ 443:funsape/peripheral/pcint0.hpp **** 
+ 444:funsape/peripheral/pcint0.hpp **** Pcint0 inlined &Pcint0::getInstance(void)
+ 445:funsape/peripheral/pcint0.hpp **** {
+ 446:funsape/peripheral/pcint0.hpp ****     return Pcint0::_instance;
+ 447:funsape/peripheral/pcint0.hpp **** }
+ 448:funsape/peripheral/pcint0.hpp **** 
+ 449:funsape/peripheral/pcint0.hpp **** //     /////////////////     CONTROL AND STATUS     /////////////////     //
+ 450:funsape/peripheral/pcint0.hpp **** 
+ 451:funsape/peripheral/pcint0.hpp **** Error inlined Pcint0::getLastError(void) const
+ 452:funsape/peripheral/pcint0.hpp **** {
+ 453:funsape/peripheral/pcint0.hpp ****     // Returns last error
+ 454:funsape/peripheral/pcint0.hpp ****     return this->_lastError;
+ 455:funsape/peripheral/pcint0.hpp **** }
+ 456:funsape/peripheral/pcint0.hpp **** 
+ 457:funsape/peripheral/pcint0.hpp **** //     ////////////////////////    INTERRUPT     ////////////////////////     //
+ 458:funsape/peripheral/pcint0.hpp **** 
+ 459:funsape/peripheral/pcint0.hpp **** void inlined Pcint0::activateInterrupt(void) const
+ 460:funsape/peripheral/pcint0.hpp **** {
+ 461:funsape/peripheral/pcint0.hpp ****     setBit(MCU_PCINT0_ENABLE_REG, MCU_PCINT0_ENABLE_BIT_POS);
+ 462:funsape/peripheral/pcint0.hpp ****     return;
+ 463:funsape/peripheral/pcint0.hpp **** }
+ 464:funsape/peripheral/pcint0.hpp **** 
+ 465:funsape/peripheral/pcint0.hpp **** void inlined Pcint0::clearInterruptRequest(void) const
+ 466:funsape/peripheral/pcint0.hpp **** {
+ 467:funsape/peripheral/pcint0.hpp ****     setBit(MCU_PCINT0_FLAG_REG, MCU_PCINT0_FLAG_BIT);
+ 468:funsape/peripheral/pcint0.hpp ****     return;
+ 469:funsape/peripheral/pcint0.hpp **** }
+ 470:funsape/peripheral/pcint0.hpp **** 
+ 471:funsape/peripheral/pcint0.hpp **** void inlined Pcint0::deactivateInterrupt(void) const
+ 472:funsape/peripheral/pcint0.hpp **** {
+ 473:funsape/peripheral/pcint0.hpp ****     clrBit(MCU_PCINT0_ENABLE_REG, MCU_PCINT0_ENABLE_BIT_POS);
+ 474:funsape/peripheral/pcint0.hpp ****     return;
+ 475:funsape/peripheral/pcint0.hpp **** }
+ 476:funsape/peripheral/pcint0.hpp **** 
+ 477:funsape/peripheral/pcint0.hpp **** //     //////////////////     OPERATOR OVERLOADING     //////////////////     //
+ 478:funsape/peripheral/pcint0.hpp **** 
+ 479:funsape/peripheral/pcint0.hpp **** Pcint0::Pin inlined operator|(Pcint0::Pin a, Pcint0::Pin b)
+ 480:funsape/peripheral/pcint0.hpp **** {
+ 481:funsape/peripheral/pcint0.hpp ****     return static_cast<Pcint0::Pin>(static_cast<uint8_t>(a) | static_cast<uint8_t>(b));
+ 482:funsape/peripheral/pcint0.hpp **** }
+ 483:funsape/peripheral/pcint0.hpp **** 
+ 484:funsape/peripheral/pcint0.hpp **** Pcint0::Pin inlined &operator|=(Pcint0::Pin &a, Pcint0::Pin b)
+ 485:funsape/peripheral/pcint0.hpp **** {
+ 486:funsape/peripheral/pcint0.hpp ****     return a = static_cast<Pcint0::Pin>(static_cast<uint8_t>(a) | static_cast<uint8_t>(b));
+ 487:funsape/peripheral/pcint0.hpp **** }
+ 488:funsape/peripheral/pcint0.hpp **** 
+ 489:funsape/peripheral/pcint0.hpp **** Pcint0::Pin inlined operator&(Pcint0::Pin a, Pcint0::Pin b)
+ 275               		.loc 2 489 21 view .LVU91
+GAS LISTING /tmp/ccfHquIA.s 			page 21
+
+
+ 276               	.LBB21:
+ 490:funsape/peripheral/pcint0.hpp **** {
+ 491:funsape/peripheral/pcint0.hpp ****     return static_cast<Pcint0::Pin>(static_cast<uint8_t>(a) & static_cast<uint8_t>(b));
+ 277               		.loc 2 491 5 view .LVU92
+ 278               		.loc 2 491 86 is_stmt 0 view .LVU93
+ 279 0002 962F      		mov r25,r22
+ 280 0004 9170      		andi r25,1<<0
+ 281               	.LVL17:
+ 282               		.loc 2 491 86 view .LVU94
+ 283               	.LBE21:
+ 284               	.LBE20:
+ 215:funsape/peripheral/pcint0.cpp ****         auxPinMask |= (1 << MCU_PCINT0_GPIO_PCINT1_BIT);
+ 285               		.loc 1 215 5 is_stmt 1 view .LVU95
+ 286               	.LBB22:
+ 287               	.LBI22:
+ 489:funsape/peripheral/pcint0.hpp **** {
+ 288               		.loc 2 489 21 view .LVU96
+ 289               	.LBB23:
+ 290               		.loc 2 491 5 view .LVU97
+ 291               		.loc 2 491 5 is_stmt 0 view .LVU98
+ 292               	.LBE23:
+ 293               	.LBE22:
+ 215:funsape/peripheral/pcint0.cpp ****         auxPinMask |= (1 << MCU_PCINT0_GPIO_PCINT1_BIT);
+ 294               		.loc 1 215 5 discriminator 1 view .LVU99
+ 295 0006 61FD      		sbrc r22,1
+ 216:funsape/peripheral/pcint0.cpp ****     }
+ 296               		.loc 1 216 9 is_stmt 1 view .LVU100
+ 216:funsape/peripheral/pcint0.cpp ****     }
+ 297               		.loc 1 216 20 is_stmt 0 view .LVU101
+ 298 0008 9260      		ori r25,lo8(2)
+ 299               	.LVL18:
+ 300               	.L8:
+ 220:funsape/peripheral/pcint0.cpp ****         auxPinMask |= (1 << MCU_PCINT0_GPIO_PCINT2_BIT);
+ 301               		.loc 1 220 5 is_stmt 1 view .LVU102
+ 302               	.LBB24:
+ 303               	.LBI24:
+ 489:funsape/peripheral/pcint0.hpp **** {
+ 304               		.loc 2 489 21 view .LVU103
+ 305               	.LBB25:
+ 306               		.loc 2 491 5 view .LVU104
+ 307               		.loc 2 491 5 is_stmt 0 view .LVU105
+ 308               	.LBE25:
+ 309               	.LBE24:
+ 220:funsape/peripheral/pcint0.cpp ****         auxPinMask |= (1 << MCU_PCINT0_GPIO_PCINT2_BIT);
+ 310               		.loc 1 220 5 discriminator 1 view .LVU106
+ 311 000a 62FD      		sbrc r22,2
+ 221:funsape/peripheral/pcint0.cpp ****     }
+ 312               		.loc 1 221 9 is_stmt 1 view .LVU107
+ 221:funsape/peripheral/pcint0.cpp ****     }
+ 313               		.loc 1 221 20 is_stmt 0 view .LVU108
+ 314 000c 9460      		ori r25,lo8(4)
+ 315               	.LVL19:
+ 316               	.L9:
+ 225:funsape/peripheral/pcint0.cpp ****         auxPinMask |= (1 << MCU_PCINT0_GPIO_PCINT3_BIT);
+ 317               		.loc 1 225 5 is_stmt 1 view .LVU109
+ 318               	.LBB26:
+ 319               	.LBI26:
+GAS LISTING /tmp/ccfHquIA.s 			page 22
+
+
+ 489:funsape/peripheral/pcint0.hpp **** {
+ 320               		.loc 2 489 21 view .LVU110
+ 321               	.LBB27:
+ 322               		.loc 2 491 5 view .LVU111
+ 323               		.loc 2 491 5 is_stmt 0 view .LVU112
+ 324               	.LBE27:
+ 325               	.LBE26:
+ 225:funsape/peripheral/pcint0.cpp ****         auxPinMask |= (1 << MCU_PCINT0_GPIO_PCINT3_BIT);
+ 326               		.loc 1 225 5 discriminator 1 view .LVU113
+ 327 000e 63FD      		sbrc r22,3
+ 226:funsape/peripheral/pcint0.cpp ****     }
+ 328               		.loc 1 226 9 is_stmt 1 view .LVU114
+ 226:funsape/peripheral/pcint0.cpp ****     }
+ 329               		.loc 1 226 20 is_stmt 0 view .LVU115
+ 330 0010 9860      		ori r25,lo8(8)
+ 331               	.LVL20:
+ 332               	.L10:
+ 230:funsape/peripheral/pcint0.cpp ****         auxPinMask |= (1 << MCU_PCINT0_GPIO_PCINT4_BIT);
+ 333               		.loc 1 230 5 is_stmt 1 view .LVU116
+ 334               	.LBB28:
+ 335               	.LBI28:
+ 489:funsape/peripheral/pcint0.hpp **** {
+ 336               		.loc 2 489 21 view .LVU117
+ 337               	.LBB29:
+ 338               		.loc 2 491 5 view .LVU118
+ 339               		.loc 2 491 5 is_stmt 0 view .LVU119
+ 340               	.LBE29:
+ 341               	.LBE28:
+ 230:funsape/peripheral/pcint0.cpp ****         auxPinMask |= (1 << MCU_PCINT0_GPIO_PCINT4_BIT);
+ 342               		.loc 1 230 5 discriminator 1 view .LVU120
+ 343 0012 64FD      		sbrc r22,4
+ 231:funsape/peripheral/pcint0.cpp ****     }
+ 344               		.loc 1 231 9 is_stmt 1 view .LVU121
+ 231:funsape/peripheral/pcint0.cpp ****     }
+ 345               		.loc 1 231 20 is_stmt 0 view .LVU122
+ 346 0014 9061      		ori r25,lo8(16)
+ 347               	.LVL21:
+ 348               	.L11:
+ 235:funsape/peripheral/pcint0.cpp ****         auxPinMask |= (1 << MCU_PCINT0_GPIO_PCINT5_BIT);
+ 349               		.loc 1 235 5 is_stmt 1 view .LVU123
+ 350               	.LBB30:
+ 351               	.LBI30:
+ 489:funsape/peripheral/pcint0.hpp **** {
+ 352               		.loc 2 489 21 view .LVU124
+ 353               	.LBB31:
+ 354               		.loc 2 491 5 view .LVU125
+ 355               		.loc 2 491 5 is_stmt 0 view .LVU126
+ 356               	.LBE31:
+ 357               	.LBE30:
+ 235:funsape/peripheral/pcint0.cpp ****         auxPinMask |= (1 << MCU_PCINT0_GPIO_PCINT5_BIT);
+ 358               		.loc 1 235 5 discriminator 1 view .LVU127
+ 359 0016 65FD      		sbrc r22,5
+ 236:funsape/peripheral/pcint0.cpp ****     }
+ 360               		.loc 1 236 9 is_stmt 1 view .LVU128
+ 236:funsape/peripheral/pcint0.cpp ****     }
+ 361               		.loc 1 236 20 is_stmt 0 view .LVU129
+ 362 0018 9062      		ori r25,lo8(32)
+GAS LISTING /tmp/ccfHquIA.s 			page 23
+
+
+ 363               	.LVL22:
+ 364               	.L12:
+ 240:funsape/peripheral/pcint0.cpp ****         auxPinMask |= (1 << MCU_PCINT0_GPIO_PCINT6_BIT);
+ 365               		.loc 1 240 5 is_stmt 1 view .LVU130
+ 366               	.LBB32:
+ 367               	.LBI32:
+ 489:funsape/peripheral/pcint0.hpp **** {
+ 368               		.loc 2 489 21 view .LVU131
+ 369               	.LBB33:
+ 370               		.loc 2 491 5 view .LVU132
+ 371               		.loc 2 491 5 is_stmt 0 view .LVU133
+ 372               	.LBE33:
+ 373               	.LBE32:
+ 240:funsape/peripheral/pcint0.cpp ****         auxPinMask |= (1 << MCU_PCINT0_GPIO_PCINT6_BIT);
+ 374               		.loc 1 240 5 discriminator 1 view .LVU134
+ 375 001a 66FD      		sbrc r22,6
+ 241:funsape/peripheral/pcint0.cpp ****     }
+ 376               		.loc 1 241 9 is_stmt 1 view .LVU135
+ 241:funsape/peripheral/pcint0.cpp ****     }
+ 377               		.loc 1 241 20 is_stmt 0 view .LVU136
+ 378 001c 9064      		ori r25,lo8(64)
+ 379               	.LVL23:
+ 380               	.L13:
+ 245:funsape/peripheral/pcint0.cpp ****         auxPinMask |= (1 << MCU_PCINT0_GPIO_PCINT7_BIT);
+ 381               		.loc 1 245 5 is_stmt 1 view .LVU137
+ 245:funsape/peripheral/pcint0.cpp ****         auxPinMask |= (1 << MCU_PCINT0_GPIO_PCINT7_BIT);
+ 382               		.loc 1 245 5 is_stmt 0 discriminator 1 view .LVU138
+ 383 001e 6030      		cpi r22,lo8(0)
+ 384 0020 04F0      		brlt .L19
+ 251:funsape/peripheral/pcint0.cpp ****         switch(pinMode_p) {
+ 385               		.loc 1 251 5 is_stmt 1 view .LVU139
+ 386 0022 9111      		cpse r25,__zero_reg__
+ 387 0024 00C0      		rjmp .L15
+ 388               	.LVL24:
+ 389               	.L16:
+ 268:funsape/peripheral/pcint0.cpp ****     debugMessage(Error::NONE, Debug::CodeIndex::PCINT0_MODULE);
+ 390               		.loc 1 268 5 view .LVU140
+ 268:funsape/peripheral/pcint0.cpp ****     debugMessage(Error::NONE, Debug::CodeIndex::PCINT0_MODULE);
+ 391               		.loc 1 268 22 is_stmt 0 view .LVU141
+ 392 0026 1282      		std Z+2,__zero_reg__
+ 393 0028 1182      		std Z+1,__zero_reg__
+ 269:funsape/peripheral/pcint0.cpp ****     return true;
+ 394               		.loc 1 269 5 is_stmt 1 view .LVU142
+ 270:funsape/peripheral/pcint0.cpp **** }
+ 395               		.loc 1 270 5 view .LVU143
+ 271:funsape/peripheral/pcint0.cpp **** 
+ 396               		.loc 1 271 1 is_stmt 0 view .LVU144
+ 397 002a 81E0      		ldi r24,lo8(1)
+ 398               	/* epilogue start */
+ 399 002c 0895      		ret
+ 400               	.LVL25:
+ 401               	.L19:
+ 246:funsape/peripheral/pcint0.cpp ****     }
+ 402               		.loc 1 246 9 is_stmt 1 view .LVU145
+ 246:funsape/peripheral/pcint0.cpp ****     }
+ 403               		.loc 1 246 20 is_stmt 0 view .LVU146
+ 404 002e 9068      		ori r25,lo8(-128)
+GAS LISTING /tmp/ccfHquIA.s 			page 24
+
+
+ 405               	.LVL26:
+ 251:funsape/peripheral/pcint0.cpp ****         switch(pinMode_p) {
+ 406               		.loc 1 251 5 is_stmt 1 view .LVU147
+ 407               	.L15:
+ 252:funsape/peripheral/pcint0.cpp ****         case PinMode::INPUT_FLOATING:
+ 408               		.loc 1 252 9 view .LVU148
+ 409 0030 4130      		cpi r20,lo8(1)
+ 410 0032 01F0      		breq .L17
+ 411 0034 4230      		cpi r20,lo8(2)
+ 412 0036 01F0      		breq .L18
+ 413 0038 4111      		cpse r20,__zero_reg__
+ 414 003a 00C0      		rjmp .L16
+ 253:funsape/peripheral/pcint0.cpp ****             clrMask(MCU_PCINT0_GPIO_REG_DIR, auxPinMask);
+ 415               		.loc 1 253 9 view .LVU149
+ 254:funsape/peripheral/pcint0.cpp ****             clrMask(MCU_PCINT0_GPIO_REG_OUT, auxPinMask);
+ 416               		.loc 1 254 13 view .LVU150
+ 254:funsape/peripheral/pcint0.cpp ****             clrMask(MCU_PCINT0_GPIO_REG_OUT, auxPinMask);
+ 417               		.loc 1 254 13 view .LVU151
+ 418 003c 84B1      		in r24,0x4
+ 419               	.LVL27:
+ 254:funsape/peripheral/pcint0.cpp ****             clrMask(MCU_PCINT0_GPIO_REG_OUT, auxPinMask);
+ 420               		.loc 1 254 13 is_stmt 0 view .LVU152
+ 421 003e 9095      		com r25
+ 422               	.LVL28:
+ 254:funsape/peripheral/pcint0.cpp ****             clrMask(MCU_PCINT0_GPIO_REG_OUT, auxPinMask);
+ 423               		.loc 1 254 13 view .LVU153
+ 424 0040 8923      		and r24,r25
+ 425 0042 84B9      		out 0x4,r24
+ 254:funsape/peripheral/pcint0.cpp ****             clrMask(MCU_PCINT0_GPIO_REG_OUT, auxPinMask);
+ 426               		.loc 1 254 13 is_stmt 1 view .LVU154
+ 255:funsape/peripheral/pcint0.cpp ****             break;
+ 427               		.loc 1 255 13 view .LVU155
+ 255:funsape/peripheral/pcint0.cpp ****             break;
+ 428               		.loc 1 255 13 view .LVU156
+ 429 0044 85B1      		in r24,0x5
+ 430 0046 8923      		and r24,r25
+ 431 0048 85B9      		out 0x5,r24
+ 255:funsape/peripheral/pcint0.cpp ****             break;
+ 432               		.loc 1 255 13 view .LVU157
+ 256:funsape/peripheral/pcint0.cpp ****         case PinMode::INPUT_PULLED_UP:
+ 433               		.loc 1 256 13 view .LVU158
+ 434 004a 00C0      		rjmp .L16
+ 435               	.LVL29:
+ 436               	.L17:
+ 257:funsape/peripheral/pcint0.cpp ****             clrMask(MCU_PCINT0_GPIO_REG_DIR, auxPinMask);
+ 437               		.loc 1 257 9 view .LVU159
+ 258:funsape/peripheral/pcint0.cpp ****             setMask(MCU_PCINT0_GPIO_REG_OUT, auxPinMask);
+ 438               		.loc 1 258 13 view .LVU160
+ 258:funsape/peripheral/pcint0.cpp ****             setMask(MCU_PCINT0_GPIO_REG_OUT, auxPinMask);
+ 439               		.loc 1 258 13 view .LVU161
+ 440 004c 24B1      		in r18,0x4
+ 441 004e 892F      		mov r24,r25
+ 442               	.LVL30:
+ 258:funsape/peripheral/pcint0.cpp ****             setMask(MCU_PCINT0_GPIO_REG_OUT, auxPinMask);
+ 443               		.loc 1 258 13 is_stmt 0 view .LVU162
+ 444 0050 8095      		com r24
+ 445 0052 8223      		and r24,r18
+GAS LISTING /tmp/ccfHquIA.s 			page 25
+
+
+ 446 0054 84B9      		out 0x4,r24
+ 258:funsape/peripheral/pcint0.cpp ****             setMask(MCU_PCINT0_GPIO_REG_OUT, auxPinMask);
+ 447               		.loc 1 258 13 is_stmt 1 view .LVU163
+ 259:funsape/peripheral/pcint0.cpp ****             break;
+ 448               		.loc 1 259 13 view .LVU164
+ 259:funsape/peripheral/pcint0.cpp ****             break;
+ 449               		.loc 1 259 13 view .LVU165
+ 450 0056 85B1      		in r24,0x5
+ 451 0058 892B      		or r24,r25
+ 452 005a 85B9      		out 0x5,r24
+ 259:funsape/peripheral/pcint0.cpp ****             break;
+ 453               		.loc 1 259 13 view .LVU166
+ 260:funsape/peripheral/pcint0.cpp ****         case PinMode::OUTPUT_PUSH_PULL:
+ 454               		.loc 1 260 13 view .LVU167
+ 455 005c 00C0      		rjmp .L16
+ 456               	.LVL31:
+ 457               	.L18:
+ 261:funsape/peripheral/pcint0.cpp ****             setMask(MCU_PCINT0_GPIO_REG_DIR, auxPinMask);
+ 458               		.loc 1 261 9 view .LVU168
+ 262:funsape/peripheral/pcint0.cpp ****             break;
+ 459               		.loc 1 262 13 view .LVU169
+ 262:funsape/peripheral/pcint0.cpp ****             break;
+ 460               		.loc 1 262 13 view .LVU170
+ 461 005e 84B1      		in r24,0x4
+ 462               	.LVL32:
+ 262:funsape/peripheral/pcint0.cpp ****             break;
+ 463               		.loc 1 262 13 is_stmt 0 view .LVU171
+ 464 0060 892B      		or r24,r25
+ 465 0062 84B9      		out 0x4,r24
+ 262:funsape/peripheral/pcint0.cpp ****             break;
+ 466               		.loc 1 262 13 is_stmt 1 view .LVU172
+ 263:funsape/peripheral/pcint0.cpp ****         }
+ 467               		.loc 1 263 13 view .LVU173
+ 468 0064 00C0      		rjmp .L16
+ 469               		.cfi_endproc
+ 470               	.LFE144:
+ 472               		.section	.text._Z23pcint0InterruptCallbackv,"ax",@progbits
+ 473               		.weak	_Z23pcint0InterruptCallbackv
+ 475               	_Z23pcint0InterruptCallbackv:
+ 476               	.LFB145:
+ 296:funsape/peripheral/pcint0.cpp ****     return;
+ 477               		.loc 1 296 1 view -0
+ 478               		.cfi_startproc
+ 479               	/* prologue: function */
+ 480               	/* frame size = 0 */
+ 481               	/* stack size = 0 */
+ 482               	.L__stack_usage = 0
+ 297:funsape/peripheral/pcint0.cpp **** }
+ 483               		.loc 1 297 5 view .LVU175
+ 484               	/* epilogue start */
+ 298:funsape/peripheral/pcint0.cpp **** 
+ 485               		.loc 1 298 1 is_stmt 0 view .LVU176
+ 486 0000 0895      		ret
+ 487               		.cfi_endproc
+ 488               	.LFE145:
+ 490               		.section	.text.__vector_3,"ax",@progbits
+ 491               	.global	__vector_3
+GAS LISTING /tmp/ccfHquIA.s 			page 26
+
+
+ 493               	__vector_3:
+ 494               	.LFB146:
+ 309:funsape/peripheral/pcint0.cpp ****     pcint0InterruptCallback();
+ 495               		.loc 1 309 1 is_stmt 1 view -0
+ 496               		.cfi_startproc
+ 497 0000 1F92      		push r1
+ 498               	.LCFI0:
+ 499               		.cfi_def_cfa_offset 3
+ 500               		.cfi_offset 1, -2
+ 501 0002 0F92      		push r0
+ 502               	.LCFI1:
+ 503               		.cfi_def_cfa_offset 4
+ 504               		.cfi_offset 0, -3
+ 505 0004 0FB6      		in r0,__SREG__
+ 506 0006 0F92      		push r0
+ 507 0008 1124      		clr __zero_reg__
+ 508 000a 2F93      		push r18
+ 509               	.LCFI2:
+ 510               		.cfi_def_cfa_offset 5
+ 511               		.cfi_offset 18, -4
+ 512 000c 3F93      		push r19
+ 513               	.LCFI3:
+ 514               		.cfi_def_cfa_offset 6
+ 515               		.cfi_offset 19, -5
+ 516 000e 4F93      		push r20
+ 517               	.LCFI4:
+ 518               		.cfi_def_cfa_offset 7
+ 519               		.cfi_offset 20, -6
+ 520 0010 5F93      		push r21
+ 521               	.LCFI5:
+ 522               		.cfi_def_cfa_offset 8
+ 523               		.cfi_offset 21, -7
+ 524 0012 6F93      		push r22
+ 525               	.LCFI6:
+ 526               		.cfi_def_cfa_offset 9
+ 527               		.cfi_offset 22, -8
+ 528 0014 7F93      		push r23
+ 529               	.LCFI7:
+ 530               		.cfi_def_cfa_offset 10
+ 531               		.cfi_offset 23, -9
+ 532 0016 8F93      		push r24
+ 533               	.LCFI8:
+ 534               		.cfi_def_cfa_offset 11
+ 535               		.cfi_offset 24, -10
+ 536 0018 9F93      		push r25
+ 537               	.LCFI9:
+ 538               		.cfi_def_cfa_offset 12
+ 539               		.cfi_offset 25, -11
+ 540 001a AF93      		push r26
+ 541               	.LCFI10:
+ 542               		.cfi_def_cfa_offset 13
+ 543               		.cfi_offset 26, -12
+ 544 001c BF93      		push r27
+ 545               	.LCFI11:
+ 546               		.cfi_def_cfa_offset 14
+ 547               		.cfi_offset 27, -13
+ 548 001e EF93      		push r30
+GAS LISTING /tmp/ccfHquIA.s 			page 27
+
+
+ 549               	.LCFI12:
+ 550               		.cfi_def_cfa_offset 15
+ 551               		.cfi_offset 30, -14
+ 552 0020 FF93      		push r31
+ 553               	.LCFI13:
+ 554               		.cfi_def_cfa_offset 16
+ 555               		.cfi_offset 31, -15
+ 556               	/* prologue: Signal */
+ 557               	/* frame size = 0 */
+ 558               	/* stack size = 15 */
+ 559               	.L__stack_usage = 15
+ 310:funsape/peripheral/pcint0.cpp **** }
+ 560               		.loc 1 310 5 view .LVU178
+ 310:funsape/peripheral/pcint0.cpp **** }
+ 561               		.loc 1 310 28 is_stmt 0 view .LVU179
+ 562 0022 0E94 0000 		call _Z23pcint0InterruptCallbackv
+ 563               	.LVL33:
+ 564               	/* epilogue start */
+ 565               		.loc 1 311 1 view .LVU180
+ 566 0026 FF91      		pop r31
+ 567 0028 EF91      		pop r30
+ 568 002a BF91      		pop r27
+ 569 002c AF91      		pop r26
+ 570 002e 9F91      		pop r25
+ 571 0030 8F91      		pop r24
+ 572 0032 7F91      		pop r23
+ 573 0034 6F91      		pop r22
+ 574 0036 5F91      		pop r21
+ 575 0038 4F91      		pop r20
+ 576 003a 3F91      		pop r19
+ 577 003c 2F91      		pop r18
+ 578 003e 0F90      		pop r0
+ 579 0040 0FBE      		out __SREG__,r0
+ 580 0042 0F90      		pop r0
+ 581 0044 1F90      		pop r1
+ 582 0046 1895      		reti
+ 583               		.cfi_endproc
+ 584               	.LFE146:
+ 586               		.section	.text._GLOBAL__sub_I__ZN6Pcint09_instanceE,"ax",@progbits
+ 588               	_GLOBAL__sub_I__ZN6Pcint09_instanceE:
+ 589               	.LFB149:
+ 590               		.loc 1 311 1 is_stmt 1 view -0
+ 591               		.cfi_startproc
+ 592               	/* prologue: function */
+ 593               	/* frame size = 0 */
+ 594               	/* stack size = 0 */
+ 595               	.L__stack_usage = 0
+ 596               		.loc 1 311 1 is_stmt 0 view .LVU182
+ 597 0000 0E94 0000 		call _Z41__static_initialization_and_destruction_0v
+ 598               	.LVL34:
+ 599               	/* epilogue start */
+ 600 0004 0895      		ret
+ 601               		.cfi_endproc
+ 602               	.LFE149:
+ 604               		.global __do_global_ctors
+ 605               		.section .ctors,"a",@progbits
+ 606               		.p2align	1
+GAS LISTING /tmp/ccfHquIA.s 			page 28
+
+
+ 607 0000 0000      		.word	gs(_GLOBAL__sub_I__ZN6Pcint09_instanceE)
+ 608               	.global	_ZN6Pcint09_instanceE
+ 609               		.section	.bss._ZN6Pcint09_instanceE,"aw",@nobits
+ 612               	_ZN6Pcint09_instanceE:
+ 613 0000 0000 0000 		.zero	4
+ 614               		.text
+ 615               	.Letext0:
+ 616               		.file 3 "/usr/avr/include/stdint.h"
+ 617               		.file 4 "funsape/peripheral/../config/atmega328p.hpp"
+ 618               		.file 5 "funsape/peripheral/../globalDefines.hpp"
+GAS LISTING /tmp/ccfHquIA.s 			page 29
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 pcint0.cpp
+     /tmp/ccfHquIA.s:2      *ABS*:0000003e __SP_H__
+     /tmp/ccfHquIA.s:3      *ABS*:0000003d __SP_L__
+     /tmp/ccfHquIA.s:4      *ABS*:0000003f __SREG__
+     /tmp/ccfHquIA.s:5      *ABS*:00000000 __tmp_reg__
+     /tmp/ccfHquIA.s:6      *ABS*:00000001 __zero_reg__
+     /tmp/ccfHquIA.s:14     .text._ZN6Pcint0C2Ev:00000000 _ZN6Pcint0C2Ev
+     /tmp/ccfHquIA.s:17     .text._ZN6Pcint0C2Ev:00000000 .Loc.0
+     /tmp/ccfHquIA.s:18     .text._ZN6Pcint0C2Ev:00000000 L0
+     /tmp/ccfHquIA.s:23     .text._ZN6Pcint0C2Ev:00000000 .Loc.1
+     /tmp/ccfHquIA.s:26     .text._ZN6Pcint0C2Ev:00000002 .Loc.2
+     /tmp/ccfHquIA.s:29     .text._ZN6Pcint0C2Ev:00000004 .Loc.3
+     /tmp/ccfHquIA.s:32     .text._ZN6Pcint0C2Ev:00000008 .Loc.4
+     /tmp/ccfHquIA.s:35     .text._ZN6Pcint0C2Ev:0000000c .Loc.5
+     /tmp/ccfHquIA.s:37     .text._ZN6Pcint0C2Ev:0000000e .Loc.6
+     /tmp/ccfHquIA.s:38     .text._ZN6Pcint0C2Ev:0000000e .Loc.7
+     /tmp/ccfHquIA.s:39     .text._ZN6Pcint0C2Ev:0000000e .Loc.8
+     /tmp/ccfHquIA.s:40     .text._ZN6Pcint0C2Ev:0000000e .Loc.9
+     /tmp/ccfHquIA.s:43     .text._ZN6Pcint0C2Ev:0000000e .Loc.10
+     /tmp/ccfHquIA.s:45     .text._ZN6Pcint0C2Ev:00000010 L0
+     /tmp/ccfHquIA.s:14     .text._ZN6Pcint0C2Ev:00000000 _ZN6Pcint0C1Ev
+     /tmp/ccfHquIA.s:52     .text._Z41__static_initialization_and_destruction_0v:00000000 _Z41__static_initialization_and_destruction_0v
+     /tmp/ccfHquIA.s:54     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.11
+     /tmp/ccfHquIA.s:55     .text._Z41__static_initialization_and_destruction_0v:00000000 L0
+     /tmp/ccfHquIA.s:60     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.12
+     /tmp/ccfHquIA.s:612    .bss._ZN6Pcint09_instanceE:00000000 _ZN6Pcint09_instanceE
+     /tmp/ccfHquIA.s:66     .text._Z41__static_initialization_and_destruction_0v:00000008 .Loc.13
+     /tmp/ccfHquIA.s:68     .text._Z41__static_initialization_and_destruction_0v:0000000a L0
+     /tmp/ccfHquIA.s:74     .text._ZN6Pcint0D2Ev:00000000 _ZN6Pcint0D2Ev
+     /tmp/ccfHquIA.s:77     .text._ZN6Pcint0D2Ev:00000000 .Loc.14
+     /tmp/ccfHquIA.s:78     .text._ZN6Pcint0D2Ev:00000000 L0
+     /tmp/ccfHquIA.s:84     .text._ZN6Pcint0D2Ev:00000000 .Loc.15
+     /tmp/ccfHquIA.s:85     .text._ZN6Pcint0D2Ev:00000000 .Loc.16
+     /tmp/ccfHquIA.s:86     .text._ZN6Pcint0D2Ev:00000000 .Loc.17
+     /tmp/ccfHquIA.s:89     .text._ZN6Pcint0D2Ev:00000000 .Loc.18
+     /tmp/ccfHquIA.s:91     .text._ZN6Pcint0D2Ev:00000002 L0
+     /tmp/ccfHquIA.s:74     .text._ZN6Pcint0D2Ev:00000000 _ZN6Pcint0D1Ev
+     /tmp/ccfHquIA.s:99     .text._ZN6Pcint011disablePinsENS_3PinE:00000000 _ZN6Pcint011disablePinsENS_3PinE
+     /tmp/ccfHquIA.s:102    .text._ZN6Pcint011disablePinsENS_3PinE:00000000 .Loc.19
+     /tmp/ccfHquIA.s:103    .text._ZN6Pcint011disablePinsENS_3PinE:00000000 L0
+     /tmp/ccfHquIA.s:108    .text._ZN6Pcint011disablePinsENS_3PinE:00000000 .Loc.20
+     /tmp/ccfHquIA.s:110    .text._ZN6Pcint011disablePinsENS_3PinE:00000002 .Loc.21
+     /tmp/ccfHquIA.s:111    .text._ZN6Pcint011disablePinsENS_3PinE:00000002 .Loc.22
+     /tmp/ccfHquIA.s:112    .text._ZN6Pcint011disablePinsENS_3PinE:00000002 .Loc.23
+     /tmp/ccfHquIA.s:117    .text._ZN6Pcint011disablePinsENS_3PinE:00000008 .Loc.24
+     /tmp/ccfHquIA.s:118    .text._ZN6Pcint011disablePinsENS_3PinE:00000008 .Loc.25
+     /tmp/ccfHquIA.s:121    .text._ZN6Pcint011disablePinsENS_3PinE:0000000a .Loc.26
+     /tmp/ccfHquIA.s:122    .text._ZN6Pcint011disablePinsENS_3PinE:0000000a .Loc.27
+     /tmp/ccfHquIA.s:123    .text._ZN6Pcint011disablePinsENS_3PinE:0000000a .Loc.28
+     /tmp/ccfHquIA.s:124    .text._ZN6Pcint011disablePinsENS_3PinE:0000000a .Loc.29
+     /tmp/ccfHquIA.s:127    .text._ZN6Pcint011disablePinsENS_3PinE:0000000c .Loc.30
+     /tmp/ccfHquIA.s:130    .text._ZN6Pcint011disablePinsENS_3PinE:0000000e .Loc.31
+     /tmp/ccfHquIA.s:131    .text._ZN6Pcint011disablePinsENS_3PinE:0000000e .Loc.32
+     /tmp/ccfHquIA.s:132    .text._ZN6Pcint011disablePinsENS_3PinE:0000000e .Loc.33
+     /tmp/ccfHquIA.s:133    .text._ZN6Pcint011disablePinsENS_3PinE:0000000e .Loc.34
+     /tmp/ccfHquIA.s:134    .text._ZN6Pcint011disablePinsENS_3PinE:0000000e .Loc.35
+GAS LISTING /tmp/ccfHquIA.s 			page 30
+
+
+     /tmp/ccfHquIA.s:136    .text._ZN6Pcint011disablePinsENS_3PinE:00000010 .Loc.36
+     /tmp/ccfHquIA.s:137    .text._ZN6Pcint011disablePinsENS_3PinE:00000010 .Loc.37
+     /tmp/ccfHquIA.s:139    .text._ZN6Pcint011disablePinsENS_3PinE:00000012 .Loc.38
+     /tmp/ccfHquIA.s:140    .text._ZN6Pcint011disablePinsENS_3PinE:00000012 .Loc.39
+     /tmp/ccfHquIA.s:143    .text._ZN6Pcint011disablePinsENS_3PinE:00000016 .Loc.40
+     /tmp/ccfHquIA.s:144    .text._ZN6Pcint011disablePinsENS_3PinE:00000016 .Loc.41
+     /tmp/ccfHquIA.s:145    .text._ZN6Pcint011disablePinsENS_3PinE:00000016 .Loc.42
+     /tmp/ccfHquIA.s:149    .text._ZN6Pcint011disablePinsENS_3PinE:0000001a L0
+     /tmp/ccfHquIA.s:155    .text._ZN6Pcint010enablePinsENS_3PinE:00000000 _ZN6Pcint010enablePinsENS_3PinE
+     /tmp/ccfHquIA.s:158    .text._ZN6Pcint010enablePinsENS_3PinE:00000000 .Loc.43
+     /tmp/ccfHquIA.s:159    .text._ZN6Pcint010enablePinsENS_3PinE:00000000 L0
+     /tmp/ccfHquIA.s:164    .text._ZN6Pcint010enablePinsENS_3PinE:00000000 .Loc.44
+     /tmp/ccfHquIA.s:166    .text._ZN6Pcint010enablePinsENS_3PinE:00000002 .Loc.45
+     /tmp/ccfHquIA.s:167    .text._ZN6Pcint010enablePinsENS_3PinE:00000002 .Loc.46
+     /tmp/ccfHquIA.s:168    .text._ZN6Pcint010enablePinsENS_3PinE:00000002 .Loc.47
+     /tmp/ccfHquIA.s:173    .text._ZN6Pcint010enablePinsENS_3PinE:00000008 .Loc.48
+     /tmp/ccfHquIA.s:174    .text._ZN6Pcint010enablePinsENS_3PinE:00000008 .Loc.49
+     /tmp/ccfHquIA.s:177    .text._ZN6Pcint010enablePinsENS_3PinE:0000000a .Loc.50
+     /tmp/ccfHquIA.s:178    .text._ZN6Pcint010enablePinsENS_3PinE:0000000a .Loc.51
+     /tmp/ccfHquIA.s:179    .text._ZN6Pcint010enablePinsENS_3PinE:0000000a .Loc.52
+     /tmp/ccfHquIA.s:180    .text._ZN6Pcint010enablePinsENS_3PinE:0000000a .Loc.53
+     /tmp/ccfHquIA.s:183    .text._ZN6Pcint010enablePinsENS_3PinE:0000000c .Loc.54
+     /tmp/ccfHquIA.s:184    .text._ZN6Pcint010enablePinsENS_3PinE:0000000c .Loc.55
+     /tmp/ccfHquIA.s:185    .text._ZN6Pcint010enablePinsENS_3PinE:0000000c .Loc.56
+     /tmp/ccfHquIA.s:186    .text._ZN6Pcint010enablePinsENS_3PinE:0000000c .Loc.57
+     /tmp/ccfHquIA.s:187    .text._ZN6Pcint010enablePinsENS_3PinE:0000000c .Loc.58
+     /tmp/ccfHquIA.s:189    .text._ZN6Pcint010enablePinsENS_3PinE:0000000e .Loc.59
+     /tmp/ccfHquIA.s:190    .text._ZN6Pcint010enablePinsENS_3PinE:0000000e .Loc.60
+     /tmp/ccfHquIA.s:192    .text._ZN6Pcint010enablePinsENS_3PinE:00000010 .Loc.61
+     /tmp/ccfHquIA.s:193    .text._ZN6Pcint010enablePinsENS_3PinE:00000010 .Loc.62
+     /tmp/ccfHquIA.s:196    .text._ZN6Pcint010enablePinsENS_3PinE:00000014 .Loc.63
+     /tmp/ccfHquIA.s:197    .text._ZN6Pcint010enablePinsENS_3PinE:00000014 .Loc.64
+     /tmp/ccfHquIA.s:198    .text._ZN6Pcint010enablePinsENS_3PinE:00000014 .Loc.65
+     /tmp/ccfHquIA.s:202    .text._ZN6Pcint010enablePinsENS_3PinE:00000018 L0
+     /tmp/ccfHquIA.s:208    .text._ZN6Pcint04initENS_3PinE:00000000 _ZN6Pcint04initENS_3PinE
+     /tmp/ccfHquIA.s:211    .text._ZN6Pcint04initENS_3PinE:00000000 .Loc.66
+     /tmp/ccfHquIA.s:212    .text._ZN6Pcint04initENS_3PinE:00000000 L0
+     /tmp/ccfHquIA.s:217    .text._ZN6Pcint04initENS_3PinE:00000000 .Loc.67
+     /tmp/ccfHquIA.s:219    .text._ZN6Pcint04initENS_3PinE:00000002 .Loc.68
+     /tmp/ccfHquIA.s:220    .text._ZN6Pcint04initENS_3PinE:00000002 .Loc.69
+     /tmp/ccfHquIA.s:221    .text._ZN6Pcint04initENS_3PinE:00000002 .Loc.70
+     /tmp/ccfHquIA.s:226    .text._ZN6Pcint04initENS_3PinE:00000008 .Loc.71
+     /tmp/ccfHquIA.s:227    .text._ZN6Pcint04initENS_3PinE:00000008 .Loc.72
+     /tmp/ccfHquIA.s:228    .text._ZN6Pcint04initENS_3PinE:00000008 .Loc.73
+     /tmp/ccfHquIA.s:229    .text._ZN6Pcint04initENS_3PinE:00000008 .Loc.74
+     /tmp/ccfHquIA.s:230    .text._ZN6Pcint04initENS_3PinE:00000008 .Loc.75
+     /tmp/ccfHquIA.s:231    .text._ZN6Pcint04initENS_3PinE:00000008 .Loc.76
+     /tmp/ccfHquIA.s:233    .text._ZN6Pcint04initENS_3PinE:0000000a .Loc.77
+     /tmp/ccfHquIA.s:234    .text._ZN6Pcint04initENS_3PinE:0000000a .Loc.78
+     /tmp/ccfHquIA.s:236    .text._ZN6Pcint04initENS_3PinE:0000000c .Loc.79
+     /tmp/ccfHquIA.s:237    .text._ZN6Pcint04initENS_3PinE:0000000c .Loc.80
+     /tmp/ccfHquIA.s:241    .text._ZN6Pcint04initENS_3PinE:00000012 .Loc.81
+     /tmp/ccfHquIA.s:242    .text._ZN6Pcint04initENS_3PinE:00000012 .Loc.82
+     /tmp/ccfHquIA.s:245    .text._ZN6Pcint04initENS_3PinE:00000016 .Loc.83
+     /tmp/ccfHquIA.s:246    .text._ZN6Pcint04initENS_3PinE:00000016 .Loc.84
+     /tmp/ccfHquIA.s:247    .text._ZN6Pcint04initENS_3PinE:00000016 .Loc.85
+     /tmp/ccfHquIA.s:251    .text._ZN6Pcint04initENS_3PinE:0000001a L0
+GAS LISTING /tmp/ccfHquIA.s 			page 31
+
+
+     /tmp/ccfHquIA.s:257    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000000 _ZN6Pcint010setPinModeENS_3PinE7PinMode
+     /tmp/ccfHquIA.s:260    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000000 .Loc.86
+     /tmp/ccfHquIA.s:261    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000000 L0
+     /tmp/ccfHquIA.s:266    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000000 .Loc.87
+     /tmp/ccfHquIA.s:268    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .Loc.88
+     /tmp/ccfHquIA.s:269    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .Loc.89
+     /tmp/ccfHquIA.s:271    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .Loc.90
+     /tmp/ccfHquIA.s:275    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .Loc.91
+     /tmp/ccfHquIA.s:277    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .Loc.92
+     /tmp/ccfHquIA.s:278    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .Loc.93
+     /tmp/ccfHquIA.s:282    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .Loc.94
+     /tmp/ccfHquIA.s:285    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .Loc.95
+     /tmp/ccfHquIA.s:288    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .Loc.96
+     /tmp/ccfHquIA.s:290    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .Loc.97
+     /tmp/ccfHquIA.s:291    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .Loc.98
+     /tmp/ccfHquIA.s:294    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .Loc.99
+     /tmp/ccfHquIA.s:296    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000008 .Loc.100
+     /tmp/ccfHquIA.s:297    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000008 .Loc.101
+     /tmp/ccfHquIA.s:301    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .Loc.102
+     /tmp/ccfHquIA.s:304    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .Loc.103
+     /tmp/ccfHquIA.s:306    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .Loc.104
+     /tmp/ccfHquIA.s:307    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .Loc.105
+     /tmp/ccfHquIA.s:310    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .Loc.106
+     /tmp/ccfHquIA.s:312    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000c .Loc.107
+     /tmp/ccfHquIA.s:313    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000c .Loc.108
+     /tmp/ccfHquIA.s:317    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .Loc.109
+     /tmp/ccfHquIA.s:320    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .Loc.110
+     /tmp/ccfHquIA.s:322    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .Loc.111
+     /tmp/ccfHquIA.s:323    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .Loc.112
+     /tmp/ccfHquIA.s:326    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .Loc.113
+     /tmp/ccfHquIA.s:328    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000010 .Loc.114
+     /tmp/ccfHquIA.s:329    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000010 .Loc.115
+     /tmp/ccfHquIA.s:333    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .Loc.116
+     /tmp/ccfHquIA.s:336    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .Loc.117
+     /tmp/ccfHquIA.s:338    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .Loc.118
+     /tmp/ccfHquIA.s:339    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .Loc.119
+     /tmp/ccfHquIA.s:342    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .Loc.120
+     /tmp/ccfHquIA.s:344    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000014 .Loc.121
+     /tmp/ccfHquIA.s:345    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000014 .Loc.122
+     /tmp/ccfHquIA.s:349    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .Loc.123
+     /tmp/ccfHquIA.s:352    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .Loc.124
+     /tmp/ccfHquIA.s:354    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .Loc.125
+     /tmp/ccfHquIA.s:355    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .Loc.126
+     /tmp/ccfHquIA.s:358    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .Loc.127
+     /tmp/ccfHquIA.s:360    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000018 .Loc.128
+     /tmp/ccfHquIA.s:361    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000018 .Loc.129
+     /tmp/ccfHquIA.s:365    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .Loc.130
+     /tmp/ccfHquIA.s:368    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .Loc.131
+     /tmp/ccfHquIA.s:370    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .Loc.132
+     /tmp/ccfHquIA.s:371    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .Loc.133
+     /tmp/ccfHquIA.s:374    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .Loc.134
+     /tmp/ccfHquIA.s:376    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001c .Loc.135
+     /tmp/ccfHquIA.s:377    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001c .Loc.136
+     /tmp/ccfHquIA.s:381    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001e .Loc.137
+     /tmp/ccfHquIA.s:382    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001e .Loc.138
+     /tmp/ccfHquIA.s:385    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000022 .Loc.139
+     /tmp/ccfHquIA.s:390    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000026 .Loc.140
+GAS LISTING /tmp/ccfHquIA.s 			page 32
+
+
+     /tmp/ccfHquIA.s:391    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000026 .Loc.141
+     /tmp/ccfHquIA.s:394    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000002a .Loc.142
+     /tmp/ccfHquIA.s:395    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000002a .Loc.143
+     /tmp/ccfHquIA.s:396    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000002a .Loc.144
+     /tmp/ccfHquIA.s:402    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000002e .Loc.145
+     /tmp/ccfHquIA.s:403    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000002e .Loc.146
+     /tmp/ccfHquIA.s:406    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000030 .Loc.147
+     /tmp/ccfHquIA.s:408    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000030 .Loc.148
+     /tmp/ccfHquIA.s:415    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000003c .Loc.149
+     /tmp/ccfHquIA.s:416    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000003c .Loc.150
+     /tmp/ccfHquIA.s:417    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000003c .Loc.151
+     /tmp/ccfHquIA.s:420    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000003e .Loc.152
+     /tmp/ccfHquIA.s:423    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000040 .Loc.153
+     /tmp/ccfHquIA.s:426    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000044 .Loc.154
+     /tmp/ccfHquIA.s:427    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000044 .Loc.155
+     /tmp/ccfHquIA.s:428    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000044 .Loc.156
+     /tmp/ccfHquIA.s:432    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000004a .Loc.157
+     /tmp/ccfHquIA.s:433    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000004a .Loc.158
+     /tmp/ccfHquIA.s:437    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000004c .Loc.159
+     /tmp/ccfHquIA.s:438    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000004c .Loc.160
+     /tmp/ccfHquIA.s:439    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000004c .Loc.161
+     /tmp/ccfHquIA.s:443    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000050 .Loc.162
+     /tmp/ccfHquIA.s:447    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000056 .Loc.163
+     /tmp/ccfHquIA.s:448    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000056 .Loc.164
+     /tmp/ccfHquIA.s:449    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000056 .Loc.165
+     /tmp/ccfHquIA.s:453    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000005c .Loc.166
+     /tmp/ccfHquIA.s:454    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000005c .Loc.167
+     /tmp/ccfHquIA.s:458    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000005e .Loc.168
+     /tmp/ccfHquIA.s:459    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000005e .Loc.169
+     /tmp/ccfHquIA.s:460    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000005e .Loc.170
+     /tmp/ccfHquIA.s:463    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000060 .Loc.171
+     /tmp/ccfHquIA.s:466    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000064 .Loc.172
+     /tmp/ccfHquIA.s:467    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000064 .Loc.173
+     /tmp/ccfHquIA.s:469    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000066 L0
+     /tmp/ccfHquIA.s:475    .text._Z23pcint0InterruptCallbackv:00000000 _Z23pcint0InterruptCallbackv
+     /tmp/ccfHquIA.s:477    .text._Z23pcint0InterruptCallbackv:00000000 .Loc.174
+     /tmp/ccfHquIA.s:478    .text._Z23pcint0InterruptCallbackv:00000000 L0
+     /tmp/ccfHquIA.s:483    .text._Z23pcint0InterruptCallbackv:00000000 .Loc.175
+     /tmp/ccfHquIA.s:485    .text._Z23pcint0InterruptCallbackv:00000000 .Loc.176
+     /tmp/ccfHquIA.s:487    .text._Z23pcint0InterruptCallbackv:00000002 L0
+     /tmp/ccfHquIA.s:493    .text.__vector_3:00000000 __vector_3
+     /tmp/ccfHquIA.s:495    .text.__vector_3:00000000 .Loc.177
+     /tmp/ccfHquIA.s:496    .text.__vector_3:00000000 L0
+     /tmp/ccfHquIA.s:560    .text.__vector_3:00000022 .Loc.178
+     /tmp/ccfHquIA.s:561    .text.__vector_3:00000022 .Loc.179
+     /tmp/ccfHquIA.s:565    .text.__vector_3:00000026 .Loc.180
+     /tmp/ccfHquIA.s:583    .text.__vector_3:00000048 L0
+     /tmp/ccfHquIA.s:588    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000000 _GLOBAL__sub_I__ZN6Pcint09_instanceE
+     /tmp/ccfHquIA.s:590    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000000 .Loc.181
+     /tmp/ccfHquIA.s:591    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000000 L0
+     /tmp/ccfHquIA.s:596    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000000 .Loc.182
+     /tmp/ccfHquIA.s:601    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000006 L0
+     /tmp/ccfHquIA.s:50     .text._ZN6Pcint0C2Ev:00000010 L0
+     /tmp/ccfHquIA.s:71     .text._Z41__static_initialization_and_destruction_0v:0000000a L0
+     /tmp/ccfHquIA.s:96     .text._ZN6Pcint0D2Ev:00000002 L0
+     /tmp/ccfHquIA.s:152    .text._ZN6Pcint011disablePinsENS_3PinE:0000001a L0
+     /tmp/ccfHquIA.s:205    .text._ZN6Pcint010enablePinsENS_3PinE:00000018 L0
+GAS LISTING /tmp/ccfHquIA.s 			page 33
+
+
+     /tmp/ccfHquIA.s:254    .text._ZN6Pcint04initENS_3PinE:0000001a L0
+     /tmp/ccfHquIA.s:472    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000066 L0
+     /tmp/ccfHquIA.s:490    .text._Z23pcint0InterruptCallbackv:00000002 L0
+     /tmp/ccfHquIA.s:586    .text.__vector_3:00000048 L0
+     /tmp/ccfHquIA.s:605    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000006 L0
+                     .debug_frame:00000000 L0
+     /tmp/ccfHquIA.s:401    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000002e .L19
+     /tmp/ccfHquIA.s:407    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000030 .L15
+     /tmp/ccfHquIA.s:436    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000004c .L17
+     /tmp/ccfHquIA.s:457    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000005e .L18
+     /tmp/ccfHquIA.s:389    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000026 .L16
+     /tmp/ccfHquIA.s:1734   .debug_abbrev:00000000 .Ldebug_abbrev0
+     /tmp/ccfHquIA.s:3222   .debug_ranges:00000000 .Ldebug_ranges0
+     /tmp/ccfHquIA.s:3246   .debug_line:00000000 .Ldebug_line0
+     /tmp/ccfHquIA.s:589    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000000 .LFB149
+     /tmp/ccfHquIA.s:602    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000006 .LFE149
+     /tmp/ccfHquIA.s:598    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000004 .LVL34
+     /tmp/ccfHquIA.s:53     .text._Z41__static_initialization_and_destruction_0v:00000000 .LFB147
+     /tmp/ccfHquIA.s:69     .text._Z41__static_initialization_and_destruction_0v:0000000a .LFE147
+     /tmp/ccfHquIA.s:64     .text._Z41__static_initialization_and_destruction_0v:00000008 .LVL2
+     /tmp/ccfHquIA.s:494    .text.__vector_3:00000000 .LFB146
+     /tmp/ccfHquIA.s:584    .text.__vector_3:00000048 .LFE146
+     /tmp/ccfHquIA.s:2580   .debug_loc:00000000 .LLST27
+     /tmp/ccfHquIA.s:563    .text.__vector_3:00000026 .LVL33
+     /tmp/ccfHquIA.s:476    .text._Z23pcint0InterruptCallbackv:00000000 .LFB145
+     /tmp/ccfHquIA.s:488    .text._Z23pcint0InterruptCallbackv:00000002 .LFE145
+     /tmp/ccfHquIA.s:259    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000000 .LFB144
+     /tmp/ccfHquIA.s:470    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000066 .LFE144
+     /tmp/ccfHquIA.s:2690   .debug_loc:000000db .LLST11
+     /tmp/ccfHquIA.s:2673   .debug_loc:000000cb .LVUS11
+     /tmp/ccfHquIA.s:2776   .debug_loc:0000016d .LLST12
+     /tmp/ccfHquIA.s:2765   .debug_loc:00000163 .LVUS12
+     /tmp/ccfHquIA.s:273    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .LBI20
+     /tmp/ccfHquIA.s:272    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .LBB20
+     /tmp/ccfHquIA.s:284    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .LBE20
+     /tmp/ccfHquIA.s:2806   .debug_loc:000001b2 .LLST13
+     /tmp/ccfHquIA.s:2803   .debug_loc:000001b0 .LVUS13
+     /tmp/ccfHquIA.s:2816   .debug_loc:000001c7 .LLST14
+     /tmp/ccfHquIA.s:2813   .debug_loc:000001c5 .LVUS14
+     /tmp/ccfHquIA.s:287    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .LBI22
+     /tmp/ccfHquIA.s:286    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .LBB22
+     /tmp/ccfHquIA.s:293    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .LBE22
+     /tmp/ccfHquIA.s:2827   .debug_loc:000001dd .LLST15
+     /tmp/ccfHquIA.s:2824   .debug_loc:000001db .LVUS15
+     /tmp/ccfHquIA.s:2837   .debug_loc:000001f2 .LLST16
+     /tmp/ccfHquIA.s:2834   .debug_loc:000001f0 .LVUS16
+     /tmp/ccfHquIA.s:303    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .LBI24
+     /tmp/ccfHquIA.s:302    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .LBB24
+     /tmp/ccfHquIA.s:309    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .LBE24
+     /tmp/ccfHquIA.s:2848   .debug_loc:00000208 .LLST17
+     /tmp/ccfHquIA.s:2845   .debug_loc:00000206 .LVUS17
+     /tmp/ccfHquIA.s:2858   .debug_loc:0000021d .LLST18
+     /tmp/ccfHquIA.s:2855   .debug_loc:0000021b .LVUS18
+     /tmp/ccfHquIA.s:319    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .LBI26
+     /tmp/ccfHquIA.s:318    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .LBB26
+     /tmp/ccfHquIA.s:325    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .LBE26
+     /tmp/ccfHquIA.s:2869   .debug_loc:00000233 .LLST19
+GAS LISTING /tmp/ccfHquIA.s 			page 34
+
+
+     /tmp/ccfHquIA.s:2866   .debug_loc:00000231 .LVUS19
+     /tmp/ccfHquIA.s:2879   .debug_loc:00000248 .LLST20
+     /tmp/ccfHquIA.s:2876   .debug_loc:00000246 .LVUS20
+     /tmp/ccfHquIA.s:335    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .LBI28
+     /tmp/ccfHquIA.s:334    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .LBB28
+     /tmp/ccfHquIA.s:341    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .LBE28
+     /tmp/ccfHquIA.s:2890   .debug_loc:0000025e .LLST21
+     /tmp/ccfHquIA.s:2887   .debug_loc:0000025c .LVUS21
+     /tmp/ccfHquIA.s:2900   .debug_loc:00000273 .LLST22
+     /tmp/ccfHquIA.s:2897   .debug_loc:00000271 .LVUS22
+     /tmp/ccfHquIA.s:351    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .LBI30
+     /tmp/ccfHquIA.s:350    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .LBB30
+     /tmp/ccfHquIA.s:357    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .LBE30
+     /tmp/ccfHquIA.s:2911   .debug_loc:00000289 .LLST23
+     /tmp/ccfHquIA.s:2908   .debug_loc:00000287 .LVUS23
+     /tmp/ccfHquIA.s:2921   .debug_loc:0000029e .LLST24
+     /tmp/ccfHquIA.s:2918   .debug_loc:0000029c .LVUS24
+     /tmp/ccfHquIA.s:367    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .LBI32
+     /tmp/ccfHquIA.s:366    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .LBB32
+     /tmp/ccfHquIA.s:373    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .LBE32
+     /tmp/ccfHquIA.s:2933   .debug_loc:000002b5 .LLST25
+     /tmp/ccfHquIA.s:2930   .debug_loc:000002b3 .LVUS25
+     /tmp/ccfHquIA.s:2943   .debug_loc:000002ca .LLST26
+     /tmp/ccfHquIA.s:2940   .debug_loc:000002c8 .LVUS26
+     /tmp/ccfHquIA.s:210    .text._ZN6Pcint04initENS_3PinE:00000000 .LFB143
+     /tmp/ccfHquIA.s:252    .text._ZN6Pcint04initENS_3PinE:0000001a .LFE143
+     /tmp/ccfHquIA.s:2957   .debug_loc:000002e3 .LLST9
+     /tmp/ccfHquIA.s:2952   .debug_loc:000002df .LVUS9
+     /tmp/ccfHquIA.s:2981   .debug_loc:0000030d .LLST10
+     /tmp/ccfHquIA.s:2978   .debug_loc:0000030b .LVUS10
+     /tmp/ccfHquIA.s:157    .text._ZN6Pcint010enablePinsENS_3PinE:00000000 .LFB142
+     /tmp/ccfHquIA.s:203    .text._ZN6Pcint010enablePinsENS_3PinE:00000018 .LFE142
+     /tmp/ccfHquIA.s:2993   .debug_loc:00000324 .LLST5
+     /tmp/ccfHquIA.s:2988   .debug_loc:00000320 .LVUS5
+     /tmp/ccfHquIA.s:3019   .debug_loc:00000350 .LLST6
+     /tmp/ccfHquIA.s:3014   .debug_loc:0000034c .LVUS6
+     /tmp/ccfHquIA.s:3044   .debug_loc:0000037b .LLST7
+     /tmp/ccfHquIA.s:3039   .debug_loc:00000377 .LVUS7
+     /tmp/ccfHquIA.s:3061   .debug_loc:0000039e .LLST8
+     /tmp/ccfHquIA.s:3056   .debug_loc:0000039a .LVUS8
+     /tmp/ccfHquIA.s:101    .text._ZN6Pcint011disablePinsENS_3PinE:00000000 .LFB141
+     /tmp/ccfHquIA.s:150    .text._ZN6Pcint011disablePinsENS_3PinE:0000001a .LFE141
+     /tmp/ccfHquIA.s:3077   .debug_loc:000003c0 .LLST1
+     /tmp/ccfHquIA.s:3072   .debug_loc:000003bc .LVUS1
+     /tmp/ccfHquIA.s:3105   .debug_loc:000003ee .LLST2
+     /tmp/ccfHquIA.s:3098   .debug_loc:000003e8 .LVUS2
+     /tmp/ccfHquIA.s:3137   .debug_loc:00000427 .LLST3
+     /tmp/ccfHquIA.s:3132   .debug_loc:00000423 .LVUS3
+     /tmp/ccfHquIA.s:3154   .debug_loc:0000044a .LLST4
+     /tmp/ccfHquIA.s:3149   .debug_loc:00000446 .LVUS4
+     /tmp/ccfHquIA.s:76     .text._ZN6Pcint0D2Ev:00000000 .LFB139
+     /tmp/ccfHquIA.s:92     .text._ZN6Pcint0D2Ev:00000002 .LFE139
+     /tmp/ccfHquIA.s:16     .text._ZN6Pcint0C2Ev:00000000 .LFB136
+     /tmp/ccfHquIA.s:46     .text._ZN6Pcint0C2Ev:00000010 .LFE136
+     /tmp/ccfHquIA.s:3170   .debug_loc:0000046c .LLST0
+     /tmp/ccfHquIA.s:3165   .debug_loc:00000468 .LVUS0
+     /tmp/ccfHquIA.s:498    .text.__vector_3:00000002 .LCFI0
+GAS LISTING /tmp/ccfHquIA.s 			page 35
+
+
+     /tmp/ccfHquIA.s:502    .text.__vector_3:00000004 .LCFI1
+     /tmp/ccfHquIA.s:509    .text.__vector_3:0000000c .LCFI2
+     /tmp/ccfHquIA.s:513    .text.__vector_3:0000000e .LCFI3
+     /tmp/ccfHquIA.s:517    .text.__vector_3:00000010 .LCFI4
+     /tmp/ccfHquIA.s:521    .text.__vector_3:00000012 .LCFI5
+     /tmp/ccfHquIA.s:525    .text.__vector_3:00000014 .LCFI6
+     /tmp/ccfHquIA.s:529    .text.__vector_3:00000016 .LCFI7
+     /tmp/ccfHquIA.s:533    .text.__vector_3:00000018 .LCFI8
+     /tmp/ccfHquIA.s:537    .text.__vector_3:0000001a .LCFI9
+     /tmp/ccfHquIA.s:541    .text.__vector_3:0000001c .LCFI10
+     /tmp/ccfHquIA.s:545    .text.__vector_3:0000001e .LCFI11
+     /tmp/ccfHquIA.s:549    .text.__vector_3:00000020 .LCFI12
+     /tmp/ccfHquIA.s:553    .text.__vector_3:00000022 .LCFI13
+     /tmp/ccfHquIA.s:258    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000000 .LVL15
+     /tmp/ccfHquIA.s:388    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000026 .LVL24
+     /tmp/ccfHquIA.s:400    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000002e .LVL25
+     /tmp/ccfHquIA.s:419    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000003e .LVL27
+     /tmp/ccfHquIA.s:435    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000004c .LVL29
+     /tmp/ccfHquIA.s:442    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000050 .LVL30
+     /tmp/ccfHquIA.s:456    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000005e .LVL31
+     /tmp/ccfHquIA.s:462    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000060 .LVL32
+     /tmp/ccfHquIA.s:270    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .LVL16
+     /tmp/ccfHquIA.s:281    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .LVL17
+     /tmp/ccfHquIA.s:422    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000040 .LVL28
+     /tmp/ccfHquIA.s:299    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .LVL18
+     /tmp/ccfHquIA.s:315    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .LVL19
+     /tmp/ccfHquIA.s:331    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .LVL20
+     /tmp/ccfHquIA.s:347    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .LVL21
+     /tmp/ccfHquIA.s:363    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .LVL22
+     /tmp/ccfHquIA.s:209    .text._ZN6Pcint04initENS_3PinE:00000000 .LVL13
+     /tmp/ccfHquIA.s:225    .text._ZN6Pcint04initENS_3PinE:00000008 .LVL14
+     /tmp/ccfHquIA.s:156    .text._ZN6Pcint010enablePinsENS_3PinE:00000000 .LVL9
+     /tmp/ccfHquIA.s:172    .text._ZN6Pcint010enablePinsENS_3PinE:00000008 .LVL10
+     /tmp/ccfHquIA.s:182    .text._ZN6Pcint010enablePinsENS_3PinE:0000000c .LVL12
+     /tmp/ccfHquIA.s:176    .text._ZN6Pcint010enablePinsENS_3PinE:0000000a .LVL11
+     /tmp/ccfHquIA.s:100    .text._ZN6Pcint011disablePinsENS_3PinE:00000000 .LVL4
+     /tmp/ccfHquIA.s:116    .text._ZN6Pcint011disablePinsENS_3PinE:00000008 .LVL5
+     /tmp/ccfHquIA.s:126    .text._ZN6Pcint011disablePinsENS_3PinE:0000000c .LVL7
+     /tmp/ccfHquIA.s:129    .text._ZN6Pcint011disablePinsENS_3PinE:0000000e .LVL8
+     /tmp/ccfHquIA.s:120    .text._ZN6Pcint011disablePinsENS_3PinE:0000000a .LVL6
+     /tmp/ccfHquIA.s:15     .text._ZN6Pcint0C2Ev:00000000 .LVL0
+     /tmp/ccfHquIA.s:28     .text._ZN6Pcint0C2Ev:00000004 .LVL1
+     /tmp/ccfHquIA.s:620    .debug_info:00000000 .Ldebug_info0
+
+UNDEFINED SYMBOLS
+__do_global_ctors
+__do_clear_bss

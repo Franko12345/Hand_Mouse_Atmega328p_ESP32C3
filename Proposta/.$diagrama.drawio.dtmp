@@ -1,0 +1,76 @@
+<mxfile host="Electron" agent="Gemini">
+  <diagram id="fsm-luva-mouse" name="Máquina de Estados - Luva Mouse">
+    <mxGraphModel dx="1160" dy="683" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="state_dis" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=center;" value="DESABILITADO&#xa;(DIS)&#xa;&#xa;Rastreamento suspenso&#xa;Sem envio de dados" vertex="1">
+          <mxGeometry height="140" width="140" x="340" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="state_mouse" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;align=center;" value="MODO MOUSE&#xa;(MOU)&#xa;&#xa;Calcula X/Y do MPU&#xa;Envia via SPI p/ ESP32" vertex="1">
+          <mxGeometry height="140" width="140" x="140" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="state_scroll" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;align=center;" value="MODO SCROLL&#xa;(SCR)&#xa;&#xa;Mapeia Rolagem Vertical&#xa;Envia via SPI p/ ESP32" vertex="1">
+          <mxGeometry height="140" width="140" x="540" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="t_dis_mou" edge="1" parent="1" source="state_dis" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.714;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;labelBackgroundColor=none;" target="state_mouse" value="Botão Enable Toggle&lt;br&gt;(PCINT)">
+          <mxGeometry height="50" relative="1" width="50" x="-0.0815" y="-20" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="240" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t_mou_dis" edge="1" parent="1" source="state_mouse" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0.714;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=0.93;entryDx=0;entryDy=0;strokeWidth=2;labelBackgroundColor=none;" target="state_dis" value="Botão Enable Toggle&lt;br&gt;(PCINT)">
+          <mxGeometry height="50" relative="1" width="50" x="0.1237" y="-56" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="310" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t_mou_scr" edge="1" parent="1" source="state_mouse" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0.976;exitY=0.686;exitDx=0;exitDy=0;entryX=0.022;entryY=0.702;entryDx=0;entryDy=0;strokeWidth=2;labelBackgroundColor=none;exitPerimeter=0;entryPerimeter=0;" target="state_scroll" value="Posição vertical do MPU">
+          <mxGeometry height="50" relative="1" width="50" x="0.0118" y="20" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="410" y="450" />
+            </Array>
+            <mxPoint x="280.00000000000114" y="430" as="sourcePoint" />
+            <mxPoint x="539.9999999999989" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t_scr_mou" edge="1" parent="1" source="state_scroll" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;labelBackgroundColor=none;exitX=0;exitY=0;exitDx=0;exitDy=0;" target="state_mouse" value="Posição não vertical do MPU">
+          <mxGeometry height="50" relative="1" width="50" x="0.0145" y="20" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="410" y="350" />
+            </Array>
+            <mxPoint x="616.4572657709687" y="363.47220096684873" as="sourcePoint" />
+            <mxPoint x="260.0027342290266" y="363.4722009668642" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t_scr_dis" edge="1" parent="1" source="state_scroll" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0.286;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=0.93;entryDx=0;entryDy=0;strokeWidth=2;labelBackgroundColor=none;" target="state_dis" value="Botão Enable Toggle&lt;br&gt;(PCINT)">
+          <mxGeometry height="50" relative="1" width="50" x="0.1237" y="56" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="510" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t_init" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;" target="state_dis" value="Inicialização">
+          <mxGeometry height="50" relative="1" width="50" as="geometry" />
+        </mxCell>
+        <mxCell id="CKD8geRPfstYgsoHrKYq-2" edge="1" parent="1" source="state_dis" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0.987;exitY=0.703;exitDx=0;exitDy=0;strokeWidth=2;labelBackgroundColor=none;exitPerimeter=0;entryX=0.679;entryY=0.047;entryDx=0;entryDy=0;entryPerimeter=0;" target="state_scroll" value="Botão Enable Toggle&lt;br&gt;(PCINT)">
+          <mxGeometry height="50" relative="1" width="50" x="0.1772" y="44" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="565" y="179" />
+            </Array>
+            <mxPoint x="638" y="285" as="sourcePoint" />
+            <mxPoint x="590" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

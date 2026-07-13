@@ -1,0 +1,79 @@
+<mxfile host="app.diagrams.net" modified="2026-07-07T12:00:00.000Z" agent="Gemini" version="21.0.0" type="device">
+  <diagram id="fsm-luva-mouse" name="Máquina de Estados - Luva Mouse">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <mxCell id="state_dis" value="DESABILITADO&#xa;(DIS)&#xa;&#xa;Rastreamento suspenso&#xa;Sem envio de dados" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="340" y="60" width="140" height="140" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="state_mouse" value="MODO MOUSE&#xa;(MOU)&#xa;&#xa;Calcula X/Y do MPU&#xa;Envia via SPI p/ ESP32" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="140" y="340" width="140" height="140" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="state_scroll" value="MODO SCROLL&#xa;(SCR)&#xa;&#xa;Mapeia Rolagem Vertical&#xa;Envia via SPI p/ ESP32" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="540" y="340" width="140" height="140" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="t_dis_mou" value="Botão Ativar&#xa;(PCINT)" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.714;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;labelBackgroundColor=none;" edge="1" parent="1" source="state_dis" target="state_mouse">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="390" />
+            <mxPoint x="440" y="340" />
+            <Array as="points">
+              <mxPoint x="240" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="t_mou_dis" value="Botão Desativar&#xa;(PCINT)" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0.714;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=0.93;entryDx=0;entryDy=0;strokeWidth=2;labelBackgroundColor=none;" edge="1" parent="1" source="state_mouse" target="state_dis">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="390" />
+            <mxPoint x="440" y="340" />
+            <Array as="points">
+              <mxPoint x="310" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="t_mou_scr" value="Gesto Rápido ou Botão Alternar" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;labelBackgroundColor=none;" edge="1" parent="1" source="state_mouse" target="state_scroll">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="390" />
+            <mxPoint x="440" y="340" />
+            <Array as="points">
+              <mxPoint x="410" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="t_scr_mou" value="Gesto de Retorno / Botão" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0.35;exitY=0.05;exitDx=0;exitDy=0;entryX=0.65;entryY=0.05;entryDx=0;entryDy=0;strokeWidth=2;labelBackgroundColor=none;" edge="1" parent="1" source="state_scroll" target="state_mouse">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="530" y="370" />
+            <mxPoint x="290" y="370" />
+            <Array as="points">
+              <mxPoint x="410" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="t_scr_dis" value="Botão Desativar" style="curved=1;endArrow=classic;html=1;rounded=0;exitX=0.286;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=0.93;entryDx=0;entryDy=0;strokeWidth=2;labelBackgroundColor=none;" edge="1" parent="1" source="state_scroll" target="state_dis">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="390" />
+            <mxPoint x="440" y="340" />
+            <Array as="points">
+              <mxPoint x="510" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="t_init" value="Inicialização" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;" edge="1" parent="1" target="state_dis">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="410" y="10" />
+            <mxPoint x="440" y="120" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

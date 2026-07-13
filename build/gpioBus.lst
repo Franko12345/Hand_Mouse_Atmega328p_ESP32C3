@@ -1,0 +1,1083 @@
+GAS LISTING /tmp/cczahLR6.s 			page 1
+
+
+   1               		.file	"gpioBus.cpp"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.text
+   8               	.Ltext0:
+   9               		.cfi_sections	.debug_frame
+  10               		.file 1 "funsape/peripheral/gpioBus.cpp"
+  11               		.section	.text._ZN7GpioBusC2Ev,"ax",@progbits
+  12               	.global	_ZN7GpioBusC2Ev
+  14               	_ZN7GpioBusC2Ev:
+  15               	.LVL0:
+  16               	.LFB143:
+   1:funsape/peripheral/gpioBus.cpp **** //!
+   2:funsape/peripheral/gpioBus.cpp **** //! ****************************************************************************
+   3:funsape/peripheral/gpioBus.cpp **** //! @file           gpioBus.cpp
+   4:funsape/peripheral/gpioBus.cpp **** //! @author         Leandro Schwarz (bladabuska+funsapeavr8lib@gmail.com)
+   5:funsape/peripheral/gpioBus.cpp **** //! @brief          GPIO bus peripheral control.
+   6:funsape/peripheral/gpioBus.cpp **** //! @details        This file provides driver interface with the GPIO module to
+   7:funsape/peripheral/gpioBus.cpp **** //!                     multiple sequential pins for the FunSAPE++ AVR8
+   8:funsape/peripheral/gpioBus.cpp **** //!                     Library.
+   9:funsape/peripheral/gpioBus.cpp **** //! @date           2026-04-01
+  10:funsape/peripheral/gpioBus.cpp **** //! @version        26.04
+  11:funsape/peripheral/gpioBus.cpp **** //! @copyright      MIT License
+  12:funsape/peripheral/gpioBus.cpp **** //! @note           No notes at this time.
+  13:funsape/peripheral/gpioBus.cpp **** //! @todo           No items in todo list yet.
+  14:funsape/peripheral/gpioBus.cpp **** //! @warning        When the user calls GpioBus::clr(), GpioBus::cpl(),
+  15:funsape/peripheral/gpioBus.cpp **** //!                     GpioBus::set(), GpioBus::low(), GpioBus::high(),
+  16:funsape/peripheral/gpioBus.cpp **** //!                     GpioBus::toggle() or GpioBus::write() and the bus is in
+  17:funsape/peripheral/gpioBus.cpp **** //!                     PinMode::INPUT_FLOATING mode or in
+  18:funsape/peripheral/gpioBus.cpp **** //!                     PinMode::INPUT_PULLED_UP mode, the mode is changed which
+  19:funsape/peripheral/gpioBus.cpp **** //!                     could lead to some undefined behavior.
+  20:funsape/peripheral/gpioBus.cpp **** //! ****************************************************************************
+  21:funsape/peripheral/gpioBus.cpp **** //! @attention
+  22:funsape/peripheral/gpioBus.cpp **** //!
+  23:funsape/peripheral/gpioBus.cpp **** //! MIT License
+  24:funsape/peripheral/gpioBus.cpp **** //!
+  25:funsape/peripheral/gpioBus.cpp **** //! Copyright (c) 2026 Leandro Schwarz
+  26:funsape/peripheral/gpioBus.cpp **** //!
+  27:funsape/peripheral/gpioBus.cpp **** //! Permission is hereby granted, free of charge, to any person obtaining a copy
+  28:funsape/peripheral/gpioBus.cpp **** //!     of this software and associated documentation files (the "Software"), to
+  29:funsape/peripheral/gpioBus.cpp **** //!     deal in the Software without restriction, including without limitation
+  30:funsape/peripheral/gpioBus.cpp **** //!     the rights to use, copy, modify, merge, publish, distribute, sublicense,
+  31:funsape/peripheral/gpioBus.cpp **** //!     and/or sell copies of the Software, and to permit persons to whom the
+  32:funsape/peripheral/gpioBus.cpp **** //!     Software is furnished to do so, subject to the following conditions:
+  33:funsape/peripheral/gpioBus.cpp **** //!
+  34:funsape/peripheral/gpioBus.cpp **** //! The above copyright notice and this permission notice shall be included in
+  35:funsape/peripheral/gpioBus.cpp **** //!     all copies or substantial portions of the Software.
+  36:funsape/peripheral/gpioBus.cpp **** //!
+  37:funsape/peripheral/gpioBus.cpp **** //! THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  38:funsape/peripheral/gpioBus.cpp **** //!     IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  39:funsape/peripheral/gpioBus.cpp **** //!     FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+  40:funsape/peripheral/gpioBus.cpp **** //!     THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+  41:funsape/peripheral/gpioBus.cpp **** //!     OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+  42:funsape/peripheral/gpioBus.cpp **** //!     ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+GAS LISTING /tmp/cczahLR6.s 			page 2
+
+
+  43:funsape/peripheral/gpioBus.cpp **** //!     OTHER DEALINGS IN THE SOFTWARE.
+  44:funsape/peripheral/gpioBus.cpp **** //!
+  45:funsape/peripheral/gpioBus.cpp **** //! ****************************************************************************
+  46:funsape/peripheral/gpioBus.cpp **** //!
+  47:funsape/peripheral/gpioBus.cpp **** 
+  48:funsape/peripheral/gpioBus.cpp **** // =============================================================================
+  49:funsape/peripheral/gpioBus.cpp **** // System file dependencies
+  50:funsape/peripheral/gpioBus.cpp **** // =============================================================================
+  51:funsape/peripheral/gpioBus.cpp **** 
+  52:funsape/peripheral/gpioBus.cpp **** #include "gpioBus.hpp"
+  53:funsape/peripheral/gpioBus.cpp **** #if !defined(__GPIO_BUS_HPP)
+  54:funsape/peripheral/gpioBus.cpp **** #    error Error 1 - Header file (gpioBus.hpp) is missing or corrupted!
+  55:funsape/peripheral/gpioBus.cpp **** #elif __GPIO_BUS_HPP != 2604
+  56:funsape/peripheral/gpioBus.cpp **** #    error Error 6 - Build mismatch between header file (gpioBus.hpp) and source file (gpioBus.cpp)
+  57:funsape/peripheral/gpioBus.cpp **** #endif
+  58:funsape/peripheral/gpioBus.cpp **** 
+  59:funsape/peripheral/gpioBus.cpp **** // =============================================================================
+  60:funsape/peripheral/gpioBus.cpp **** // File exclusive - Constants
+  61:funsape/peripheral/gpioBus.cpp **** // =============================================================================
+  62:funsape/peripheral/gpioBus.cpp **** 
+  63:funsape/peripheral/gpioBus.cpp **** // NONE
+  64:funsape/peripheral/gpioBus.cpp **** 
+  65:funsape/peripheral/gpioBus.cpp **** // =============================================================================
+  66:funsape/peripheral/gpioBus.cpp **** // File exclusive - New data types
+  67:funsape/peripheral/gpioBus.cpp **** // =============================================================================
+  68:funsape/peripheral/gpioBus.cpp **** 
+  69:funsape/peripheral/gpioBus.cpp **** // NONE
+  70:funsape/peripheral/gpioBus.cpp **** 
+  71:funsape/peripheral/gpioBus.cpp **** // =============================================================================
+  72:funsape/peripheral/gpioBus.cpp **** // File exclusive - Macro-functions
+  73:funsape/peripheral/gpioBus.cpp **** // =============================================================================
+  74:funsape/peripheral/gpioBus.cpp **** 
+  75:funsape/peripheral/gpioBus.cpp **** // NONE
+  76:funsape/peripheral/gpioBus.cpp **** 
+  77:funsape/peripheral/gpioBus.cpp **** // =============================================================================
+  78:funsape/peripheral/gpioBus.cpp **** // Global variables
+  79:funsape/peripheral/gpioBus.cpp **** // =============================================================================
+  80:funsape/peripheral/gpioBus.cpp **** 
+  81:funsape/peripheral/gpioBus.cpp **** // NONE
+  82:funsape/peripheral/gpioBus.cpp **** 
+  83:funsape/peripheral/gpioBus.cpp **** // =============================================================================
+  84:funsape/peripheral/gpioBus.cpp **** // Static functions declarations
+  85:funsape/peripheral/gpioBus.cpp **** // =============================================================================
+  86:funsape/peripheral/gpioBus.cpp **** 
+  87:funsape/peripheral/gpioBus.cpp **** // NONE
+  88:funsape/peripheral/gpioBus.cpp **** 
+  89:funsape/peripheral/gpioBus.cpp **** // =============================================================================
+  90:funsape/peripheral/gpioBus.cpp **** // Public function definitions
+  91:funsape/peripheral/gpioBus.cpp **** // =============================================================================
+  92:funsape/peripheral/gpioBus.cpp **** 
+  93:funsape/peripheral/gpioBus.cpp **** // NONE
+  94:funsape/peripheral/gpioBus.cpp **** 
+  95:funsape/peripheral/gpioBus.cpp **** // =============================================================================
+  96:funsape/peripheral/gpioBus.cpp **** // Class constructors
+  97:funsape/peripheral/gpioBus.cpp **** // =============================================================================
+  98:funsape/peripheral/gpioBus.cpp **** 
+  99:funsape/peripheral/gpioBus.cpp **** GpioBus::GpioBus(
+GAS LISTING /tmp/cczahLR6.s 			page 3
+
+
+  17               		.loc 1 99 1 view -0
+  18               		.cfi_startproc
+  19               	/* prologue: function */
+  20               	/* frame size = 0 */
+  21               	/* stack size = 0 */
+  22               	.L__stack_usage = 0
+  23               		.loc 1 99 1 is_stmt 0 view .LVU1
+  24 0000 FC01      		movw r30,r24
+  25               	.LBB2:
+ 100:funsape/peripheral/gpioBus.cpp ****         void
+ 101:funsape/peripheral/gpioBus.cpp **** ) :
+ 102:funsape/peripheral/gpioBus.cpp ****     _regDir(nullptr),
+  26               		.loc 1 102 5 view .LVU2
+  27 0002 1182      		std Z+1,__zero_reg__
+  28 0004 1082      		st Z,__zero_reg__
+ 103:funsape/peripheral/gpioBus.cpp ****     _regOut(nullptr),
+  29               		.loc 1 103 5 view .LVU3
+  30 0006 1382      		std Z+3,__zero_reg__
+  31 0008 1282      		std Z+2,__zero_reg__
+ 104:funsape/peripheral/gpioBus.cpp ****     _regIn(nullptr),
+  32               		.loc 1 104 5 view .LVU4
+  33 000a 1582      		std Z+5,__zero_reg__
+  34 000c 1482      		std Z+4,__zero_reg__
+ 105:funsape/peripheral/gpioBus.cpp ****     _pinMask(0x00),
+  35               		.loc 1 105 5 view .LVU5
+  36 000e 1682      		std Z+6,__zero_reg__
+ 106:funsape/peripheral/gpioBus.cpp ****     _pinIndex(0),
+  37               		.loc 1 106 5 view .LVU6
+  38 0010 1782      		std Z+7,__zero_reg__
+ 107:funsape/peripheral/gpioBus.cpp ****     _busSize(0),
+  39               		.loc 1 107 5 view .LVU7
+  40 0012 8085      		ldd r24,Z+8
+  41               	.LVL1:
+  42               		.loc 1 107 5 view .LVU8
+  43 0014 807F      		andi r24,lo8(-16)
+  44 0016 8087      		std Z+8,r24
+ 108:funsape/peripheral/gpioBus.cpp ****     _isInitialized(false),
+  45               		.loc 1 108 5 view .LVU9
+  46 0018 8F7E      		andi r24,lo8(~(1<<4))
+  47 001a 8087      		std Z+8,r24
+ 109:funsape/peripheral/gpioBus.cpp ****     _lastError(Error::NONE)
+  48               		.loc 1 109 5 view .LVU10
+  49 001c 1286      		std Z+10,__zero_reg__
+  50 001e 1186      		std Z+9,__zero_reg__
+ 110:funsape/peripheral/gpioBus.cpp **** {
+ 111:funsape/peripheral/gpioBus.cpp ****     // Mark passage for debugging purpose
+ 112:funsape/peripheral/gpioBus.cpp ****     debugMark(PSTR("GpioBus::GpioBus(void)"), Debug::CodeIndex::GPIO_BUS_MODULE);
+  51               		.loc 1 112 5 is_stmt 1 view .LVU11
+ 113:funsape/peripheral/gpioBus.cpp **** 
+ 114:funsape/peripheral/gpioBus.cpp ****     // Returns successfully
+ 115:funsape/peripheral/gpioBus.cpp ****     debugMessage(Error::NONE, Debug::CodeIndex::GPIO_BUS_MODULE);
+  52               		.loc 1 115 5 view .LVU12
+ 116:funsape/peripheral/gpioBus.cpp ****     return;
+  53               		.loc 1 116 5 view .LVU13
+  54               	/* epilogue start */
+  55               	.LBE2:
+ 117:funsape/peripheral/gpioBus.cpp **** }
+GAS LISTING /tmp/cczahLR6.s 			page 4
+
+
+  56               		.loc 1 117 1 is_stmt 0 view .LVU14
+  57 0020 0895      		ret
+  58               		.cfi_endproc
+  59               	.LFE143:
+  61               	.global	_ZN7GpioBusC1Ev
+  62               		.set	_ZN7GpioBusC1Ev,_ZN7GpioBusC2Ev
+  63               		.section	.text._ZN7GpioBusD2Ev,"ax",@progbits
+  64               	.global	_ZN7GpioBusD2Ev
+  66               	_ZN7GpioBusD2Ev:
+  67               	.LVL2:
+  68               	.LFB146:
+ 118:funsape/peripheral/gpioBus.cpp **** 
+ 119:funsape/peripheral/gpioBus.cpp **** GpioBus::~GpioBus(void)
+  69               		.loc 1 119 1 is_stmt 1 view -0
+  70               		.cfi_startproc
+  71               	/* prologue: function */
+  72               	/* frame size = 0 */
+  73               	/* stack size = 0 */
+  74               	.L__stack_usage = 0
+  75               	.LBB3:
+ 120:funsape/peripheral/gpioBus.cpp **** {
+ 121:funsape/peripheral/gpioBus.cpp ****     // Mark passage for debugging purpose
+ 122:funsape/peripheral/gpioBus.cpp ****     debugMark(PSTR("GpioBus::~GpioBus(void)"), Debug::CodeIndex::GPIO_BUS_MODULE);
+  76               		.loc 1 122 5 view .LVU16
+ 123:funsape/peripheral/gpioBus.cpp **** 
+ 124:funsape/peripheral/gpioBus.cpp ****     // Returns successfully
+ 125:funsape/peripheral/gpioBus.cpp ****     return;
+  77               		.loc 1 125 5 view .LVU17
+  78               	/* epilogue start */
+  79               	.LBE3:
+ 126:funsape/peripheral/gpioBus.cpp **** }
+  80               		.loc 1 126 1 is_stmt 0 view .LVU18
+  81 0000 0895      		ret
+  82               		.cfi_endproc
+  83               	.LFE146:
+  85               	.global	_ZN7GpioBusD1Ev
+  86               		.set	_ZN7GpioBusD1Ev,_ZN7GpioBusD2Ev
+  87               		.section	.text._ZN7GpioBus4initEPVh8PinIndexh,"ax",@progbits
+  88               	.global	_ZN7GpioBus4initEPVh8PinIndexh
+  90               	_ZN7GpioBus4initEPVh8PinIndexh:
+  91               	.LVL3:
+  92               	.LFB148:
+ 127:funsape/peripheral/gpioBus.cpp **** 
+ 128:funsape/peripheral/gpioBus.cpp **** // =============================================================================
+ 129:funsape/peripheral/gpioBus.cpp **** // Class own methods - Public
+ 130:funsape/peripheral/gpioBus.cpp **** // =============================================================================
+ 131:funsape/peripheral/gpioBus.cpp **** 
+ 132:funsape/peripheral/gpioBus.cpp **** //     ///////////////////     CONTROL AND STATUS     ///////////////////     //
+ 133:funsape/peripheral/gpioBus.cpp **** 
+ 134:funsape/peripheral/gpioBus.cpp **** bool_t GpioBus::init(ioRegAddress_t gpioPortAddress_p, const PinIndex gpioBusIndex_p, cuint8_t gpio
+ 135:funsape/peripheral/gpioBus.cpp **** {
+  93               		.loc 1 135 1 is_stmt 1 view -0
+  94               		.cfi_startproc
+  95               		.loc 1 135 1 is_stmt 0 view .LVU20
+  96 0000 CF93      		push r28
+  97               	.LCFI0:
+  98               		.cfi_def_cfa_offset 3
+GAS LISTING /tmp/cczahLR6.s 			page 5
+
+
+  99               		.cfi_offset 28, -2
+ 100 0002 DF93      		push r29
+ 101               	.LCFI1:
+ 102               		.cfi_def_cfa_offset 4
+ 103               		.cfi_offset 29, -3
+ 104               	/* prologue: function */
+ 105               	/* frame size = 0 */
+ 106               	/* stack size = 2 */
+ 107               	.L__stack_usage = 2
+ 108 0004 FC01      		movw r30,r24
+ 109 0006 522F      		mov r21,r18
+ 136:funsape/peripheral/gpioBus.cpp ****     // Mark passage for debugging purpose
+ 137:funsape/peripheral/gpioBus.cpp ****     debugMark(PSTR("GpioBus::init(ioRegAddress_t, const PinIndex, cuint8_t)"), Debug::CodeIndex::GP
+ 110               		.loc 1 137 5 is_stmt 1 view .LVU21
+ 138:funsape/peripheral/gpioBus.cpp **** 
+ 139:funsape/peripheral/gpioBus.cpp ****     // CHECK FOR ERROR - port address invalid
+ 140:funsape/peripheral/gpioBus.cpp ****     if(!isGpioAddressValid(gpioPortAddress_p)) {
+ 111               		.loc 1 140 5 view .LVU22
+ 112               		.loc 1 140 9 is_stmt 0 view .LVU23
+ 113 0008 CB01      		movw r24,r22
+ 114               	.LVL4:
+ 115               		.loc 1 140 9 view .LVU24
+ 116 000a 8397      		sbiw r24,35
+ 117               		.loc 1 140 5 view .LVU25
+ 118 000c 0997      		sbiw r24,9
+ 119 000e 00F0      		brlo .+2
+ 120 0010 00C0      		rjmp .L9
+ 141:funsape/peripheral/gpioBus.cpp ****         // Returns error
+ 142:funsape/peripheral/gpioBus.cpp ****         this->_lastError = Error::GPIO_PORT_INVALID;
+ 143:funsape/peripheral/gpioBus.cpp ****         debugMessage(Error::GPIO_PORT_INVALID, Debug::CodeIndex::GPIO_BUS_MODULE);
+ 144:funsape/peripheral/gpioBus.cpp ****         return false;
+ 145:funsape/peripheral/gpioBus.cpp ****     }
+ 146:funsape/peripheral/gpioBus.cpp ****     // CHECK FOR ERROR - bus size invalid
+ 147:funsape/peripheral/gpioBus.cpp ****     if((gpioBusSize_p == 0) || (gpioBusSize_p > 8)) {
+ 121               		.loc 1 147 5 is_stmt 1 view .LVU26
+ 122               		.loc 1 147 29 is_stmt 0 view .LVU27
+ 123 0012 822F      		mov r24,r18
+ 124 0014 8150      		subi r24,lo8(-(-1))
+ 125               		.loc 1 147 5 view .LVU28
+ 126 0016 8830      		cpi r24,lo8(8)
+ 127 0018 00F0      		brlo .+2
+ 128 001a 00C0      		rjmp .L10
+ 148:funsape/peripheral/gpioBus.cpp ****         // Returns error
+ 149:funsape/peripheral/gpioBus.cpp ****         this->_lastError = Error::GPIO_BUS_SIZE_INVALID;
+ 150:funsape/peripheral/gpioBus.cpp ****         debugMessage(Error::GPIO_BUS_SIZE_INVALID, Debug::CodeIndex::GPIO_BUS_MODULE);
+ 151:funsape/peripheral/gpioBus.cpp ****         return false;
+ 152:funsape/peripheral/gpioBus.cpp ****     }
+ 153:funsape/peripheral/gpioBus.cpp ****     // CHECK FOR ERROR - bus out of boundaries
+ 154:funsape/peripheral/gpioBus.cpp ****     if(((uint8_t)gpioBusIndex_p + gpioBusSize_p) > 8) {
+ 129               		.loc 1 154 5 is_stmt 1 view .LVU29
+ 130               		.loc 1 154 33 is_stmt 0 view .LVU30
+ 131 001c 842F      		mov r24,r20
+ 132 001e 820F      		add r24,r18
+ 133 0020 9927      		clr r25
+ 134 0022 991F      		rol r25
+ 135               		.loc 1 154 5 view .LVU31
+ 136 0024 0997      		sbiw r24,9
+GAS LISTING /tmp/cczahLR6.s 			page 6
+
+
+ 137 0026 04F0      		brlt .+2
+ 138 0028 00C0      		rjmp .L11
+ 155:funsape/peripheral/gpioBus.cpp ****         // Returns error
+ 156:funsape/peripheral/gpioBus.cpp ****         this->_lastError = Error::GPIO_PIN_OUT_OF_BOUNDARIES;
+ 157:funsape/peripheral/gpioBus.cpp ****         debugMessage(Error::GPIO_PIN_OUT_OF_BOUNDARIES, Debug::CodeIndex::GPIO_BUS_MODULE);
+ 158:funsape/peripheral/gpioBus.cpp ****         return false;
+ 159:funsape/peripheral/gpioBus.cpp ****     }
+ 160:funsape/peripheral/gpioBus.cpp **** 
+ 161:funsape/peripheral/gpioBus.cpp ****     // Local variables
+ 162:funsape/peripheral/gpioBus.cpp ****     uint8_t auxPinMask = (((1 << gpioBusSize_p) - 1) << (uint8_t)gpioBusIndex_p);
+ 139               		.loc 1 162 5 is_stmt 1 view .LVU32
+ 140               		.loc 1 162 31 is_stmt 0 view .LVU33
+ 141 002a 81E0      		ldi r24,lo8(1)
+ 142 002c 90E0      		ldi r25,0
+ 143 002e 00C0      		rjmp 2f
+ 144               		1:
+ 145 0030 880F      		lsl r24
+ 146 0032 991F      		rol r25
+ 147               		2:
+ 148 0034 2A95      		dec r18
+ 149 0036 02F4      		brpl 1b
+ 150               		.loc 1 162 49 view .LVU34
+ 151 0038 0197      		sbiw r24,1
+ 152               		.loc 1 162 54 view .LVU35
+ 153 003a 042E      		mov r0,r20
+ 154 003c 00C0      		rjmp 2f
+ 155               		1:
+ 156 003e 880F      		lsl r24
+ 157 0040 991F      		rol r25
+ 158               		2:
+ 159 0042 0A94      		dec r0
+ 160 0044 02F4      		brpl 1b
+ 161 0046 EC01      		movw r28,r24
+ 162               	.LVL5:
+ 163:funsape/peripheral/gpioBus.cpp **** 
+ 164:funsape/peripheral/gpioBus.cpp ****     // Update data members
+ 165:funsape/peripheral/gpioBus.cpp ****     this->_regDir                       = getGpioDdrAddress(gpioPortAddress_p);
+ 163               		.loc 1 165 5 is_stmt 1 view .LVU36
+ 164               		.loc 1 165 43 is_stmt 0 view .LVU37
+ 165 0048 9B01      		movw r18,r22
+ 166               	.LVL6:
+ 167               		.loc 1 165 43 view .LVU38
+ 168 004a 2052      		subi r18,32
+ 169 004c 3040      		sbci r19,0
+ 170 004e ABEA      		ldi r26,lo8(-85)
+ 171 0050 BAEA      		ldi r27,lo8(-86)
+ 172 0052 0E94 0000 		call __umulhisi3
+ 173               	.LVL7:
+ 174               		.loc 1 165 43 view .LVU39
+ 175 0056 DC01      		movw r26,r24
+ 176 0058 B695      		lsr r27
+ 177 005a A795      		ror r26
+ 178 005c 8E7F      		andi r24,254
+ 179 005e A80F      		add r26,r24
+ 180 0060 B91F      		adc r27,r25
+ 181 0062 CD01      		movw r24,r26
+ 182 0064 8196      		adiw r24,33
+GAS LISTING /tmp/cczahLR6.s 			page 7
+
+
+ 183               		.loc 1 165 41 view .LVU40
+ 184 0066 9183      		std Z+1,r25
+ 185 0068 8083      		st Z,r24
+ 166:funsape/peripheral/gpioBus.cpp ****     this->_regOut                       = getGpioPortAddress(gpioPortAddress_p);
+ 186               		.loc 1 166 5 is_stmt 1 view .LVU41
+ 187               		.loc 1 166 43 is_stmt 0 view .LVU42
+ 188 006a 0196      		adiw r24,1
+ 189               		.loc 1 166 41 view .LVU43
+ 190 006c 9383      		std Z+3,r25
+ 191 006e 8283      		std Z+2,r24
+ 167:funsape/peripheral/gpioBus.cpp ****     this->_regIn                        = getGpioPinAddress(gpioPortAddress_p);
+ 192               		.loc 1 167 5 is_stmt 1 view .LVU44
+ 193               		.loc 1 167 43 is_stmt 0 view .LVU45
+ 194 0070 0297      		sbiw r24,2
+ 195               		.loc 1 167 41 view .LVU46
+ 196 0072 9583      		std Z+5,r25
+ 197 0074 8483      		std Z+4,r24
+ 168:funsape/peripheral/gpioBus.cpp ****     this->_pinMask                      = (ioPinMask_t)auxPinMask;
+ 198               		.loc 1 168 5 is_stmt 1 view .LVU47
+ 199               		.loc 1 168 41 is_stmt 0 view .LVU48
+ 200 0076 C683      		std Z+6,r28
+ 169:funsape/peripheral/gpioBus.cpp ****     this->_pinIndex                     = (ioPinIndex_t)gpioBusIndex_p;
+ 201               		.loc 1 169 5 is_stmt 1 view .LVU49
+ 202               		.loc 1 169 41 is_stmt 0 view .LVU50
+ 203 0078 4783      		std Z+7,r20
+ 170:funsape/peripheral/gpioBus.cpp ****     this->_isInitialized                = true;
+ 204               		.loc 1 170 5 is_stmt 1 view .LVU51
+ 205               		.loc 1 170 41 is_stmt 0 view .LVU52
+ 206 007a 8085      		ldd r24,Z+8
+ 207 007c 8061      		ori r24,lo8(1<<4)
+ 208 007e 8087      		std Z+8,r24
+ 171:funsape/peripheral/gpioBus.cpp ****     this->_busSize                      = gpioBusSize_p;
+ 209               		.loc 1 171 5 is_stmt 1 view .LVU53
+ 210               		.loc 1 171 43 is_stmt 0 view .LVU54
+ 211 0080 5F70      		andi r21,lo8(15)
+ 212               	.LVL8:
+ 213               		.loc 1 171 41 view .LVU55
+ 214 0082 807F      		andi r24,lo8(-16)
+ 215 0084 852B      		or r24,r21
+ 216 0086 8087      		std Z+8,r24
+ 172:funsape/peripheral/gpioBus.cpp **** 
+ 173:funsape/peripheral/gpioBus.cpp ****     // Configure pins as input floating
+ 174:funsape/peripheral/gpioBus.cpp ****     clrMask(*(this->_regDir), (uint8_t)this->_pinMask);
+ 217               		.loc 1 174 5 is_stmt 1 view .LVU56
+ 218               		.loc 1 174 5 view .LVU57
+ 219 0088 9196      		adiw r26,33
+ 220 008a 9C91      		ld r25,X
+ 221 008c 8C2F      		mov r24,r28
+ 222 008e 8095      		com r24
+ 223 0090 8923      		and r24,r25
+ 224 0092 8C93      		st X,r24
+ 225               		.loc 1 174 5 view .LVU58
+ 175:funsape/peripheral/gpioBus.cpp ****     clrMask(*(this->_regOut), (uint8_t)this->_pinMask);
+ 226               		.loc 1 175 5 view .LVU59
+ 227               		.loc 1 175 5 view .LVU60
+ 228 0094 A281      		ldd r26,Z+2
+ 229 0096 B381      		ldd r27,Z+3
+GAS LISTING /tmp/cczahLR6.s 			page 8
+
+
+ 230 0098 9C91      		ld r25,X
+ 231 009a 8681      		ldd r24,Z+6
+ 232 009c 8095      		com r24
+ 233 009e 8923      		and r24,r25
+ 234 00a0 8C93      		st X,r24
+ 235               		.loc 1 175 5 view .LVU61
+ 176:funsape/peripheral/gpioBus.cpp **** 
+ 177:funsape/peripheral/gpioBus.cpp ****     // Returns successfully
+ 178:funsape/peripheral/gpioBus.cpp ****     this->_lastError = Error::NONE;
+ 236               		.loc 1 178 5 view .LVU62
+ 237               		.loc 1 178 22 is_stmt 0 view .LVU63
+ 238 00a2 1286      		std Z+10,__zero_reg__
+ 239 00a4 1186      		std Z+9,__zero_reg__
+ 179:funsape/peripheral/gpioBus.cpp ****     debugMessage(Error::NONE, Debug::CodeIndex::GPIO_BUS_MODULE);
+ 240               		.loc 1 179 5 is_stmt 1 view .LVU64
+ 180:funsape/peripheral/gpioBus.cpp ****     return true;
+ 241               		.loc 1 180 5 view .LVU65
+ 242               		.loc 1 180 12 is_stmt 0 view .LVU66
+ 243 00a6 81E0      		ldi r24,lo8(1)
+ 244 00a8 00C0      		rjmp .L3
+ 245               	.LVL9:
+ 246               	.L9:
+ 142:funsape/peripheral/gpioBus.cpp ****         debugMessage(Error::GPIO_PORT_INVALID, Debug::CodeIndex::GPIO_BUS_MODULE);
+ 247               		.loc 1 142 9 is_stmt 1 view .LVU67
+ 142:funsape/peripheral/gpioBus.cpp ****         debugMessage(Error::GPIO_PORT_INVALID, Debug::CodeIndex::GPIO_BUS_MODULE);
+ 248               		.loc 1 142 26 is_stmt 0 view .LVU68
+ 249 00aa 84E8      		ldi r24,lo8(-124)
+ 250 00ac 90E0      		ldi r25,0
+ 251 00ae 9287      		std Z+10,r25
+ 252 00b0 8187      		std Z+9,r24
+ 143:funsape/peripheral/gpioBus.cpp ****         return false;
+ 253               		.loc 1 143 9 is_stmt 1 view .LVU69
+ 144:funsape/peripheral/gpioBus.cpp ****     }
+ 254               		.loc 1 144 9 view .LVU70
+ 255               	.L7:
+ 144:funsape/peripheral/gpioBus.cpp ****     }
+ 256               		.loc 1 144 16 is_stmt 0 view .LVU71
+ 257 00b2 80E0      		ldi r24,0
+ 258               	.LVL10:
+ 259               	.L3:
+ 260               	/* epilogue start */
+ 181:funsape/peripheral/gpioBus.cpp **** }
+ 261               		.loc 1 181 1 view .LVU72
+ 262 00b4 DF91      		pop r29
+ 263 00b6 CF91      		pop r28
+ 264 00b8 0895      		ret
+ 265               	.LVL11:
+ 266               	.L10:
+ 149:funsape/peripheral/gpioBus.cpp ****         debugMessage(Error::GPIO_BUS_SIZE_INVALID, Debug::CodeIndex::GPIO_BUS_MODULE);
+ 267               		.loc 1 149 9 is_stmt 1 view .LVU73
+ 149:funsape/peripheral/gpioBus.cpp ****         debugMessage(Error::GPIO_BUS_SIZE_INVALID, Debug::CodeIndex::GPIO_BUS_MODULE);
+ 268               		.loc 1 149 26 is_stmt 0 view .LVU74
+ 269 00ba 81E8      		ldi r24,lo8(-127)
+ 270 00bc 90E0      		ldi r25,0
+ 271 00be 9287      		std Z+10,r25
+ 272 00c0 8187      		std Z+9,r24
+ 150:funsape/peripheral/gpioBus.cpp ****         return false;
+GAS LISTING /tmp/cczahLR6.s 			page 9
+
+
+ 273               		.loc 1 150 9 is_stmt 1 view .LVU75
+ 151:funsape/peripheral/gpioBus.cpp ****     }
+ 274               		.loc 1 151 9 view .LVU76
+ 151:funsape/peripheral/gpioBus.cpp ****     }
+ 275               		.loc 1 151 16 is_stmt 0 view .LVU77
+ 276 00c2 00C0      		rjmp .L7
+ 277               	.L11:
+ 156:funsape/peripheral/gpioBus.cpp ****         debugMessage(Error::GPIO_PIN_OUT_OF_BOUNDARIES, Debug::CodeIndex::GPIO_BUS_MODULE);
+ 278               		.loc 1 156 9 is_stmt 1 view .LVU78
+ 156:funsape/peripheral/gpioBus.cpp ****         debugMessage(Error::GPIO_PIN_OUT_OF_BOUNDARIES, Debug::CodeIndex::GPIO_BUS_MODULE);
+ 279               		.loc 1 156 26 is_stmt 0 view .LVU79
+ 280 00c4 83E8      		ldi r24,lo8(-125)
+ 281 00c6 90E0      		ldi r25,0
+ 282 00c8 9287      		std Z+10,r25
+ 283 00ca 8187      		std Z+9,r24
+ 157:funsape/peripheral/gpioBus.cpp ****         return false;
+ 284               		.loc 1 157 9 is_stmt 1 view .LVU80
+ 158:funsape/peripheral/gpioBus.cpp ****     }
+ 285               		.loc 1 158 9 view .LVU81
+ 158:funsape/peripheral/gpioBus.cpp ****     }
+ 286               		.loc 1 158 16 is_stmt 0 view .LVU82
+ 287 00cc 00C0      		rjmp .L7
+ 288               		.cfi_endproc
+ 289               	.LFE148:
+ 291               		.section	.text._ZN7GpioBus7setModeE7PinMode,"ax",@progbits
+ 292               	.global	_ZN7GpioBus7setModeE7PinMode
+ 294               	_ZN7GpioBus7setModeE7PinMode:
+ 295               	.LVL12:
+ 296               	.LFB149:
+ 182:funsape/peripheral/gpioBus.cpp **** 
+ 183:funsape/peripheral/gpioBus.cpp **** //     ///////////////////    PIN RELATED METHODS     ///////////////////     //
+ 184:funsape/peripheral/gpioBus.cpp **** 
+ 185:funsape/peripheral/gpioBus.cpp **** bool_t GpioBus::setMode(const PinMode mode_p)
+ 186:funsape/peripheral/gpioBus.cpp **** {
+ 297               		.loc 1 186 1 is_stmt 1 view -0
+ 298               		.cfi_startproc
+ 299               	/* prologue: function */
+ 300               	/* frame size = 0 */
+ 301               	/* stack size = 0 */
+ 302               	.L__stack_usage = 0
+ 303               		.loc 1 186 1 is_stmt 0 view .LVU84
+ 304 0000 FC01      		movw r30,r24
+ 187:funsape/peripheral/gpioBus.cpp ****     // Mark passage for debugging purpose
+ 188:funsape/peripheral/gpioBus.cpp ****     debugMark(PSTR("GpioBus::setMode(const PinMode)"), Debug::CodeIndex::GPIO_BUS_MODULE);
+ 305               		.loc 1 188 5 is_stmt 1 view .LVU85
+ 189:funsape/peripheral/gpioBus.cpp **** 
+ 190:funsape/peripheral/gpioBus.cpp ****     // Checks initialization
+ 191:funsape/peripheral/gpioBus.cpp ****     if(!this->_isInitialized) {
+ 306               		.loc 1 191 5 view .LVU86
+ 307               		.loc 1 191 15 is_stmt 0 view .LVU87
+ 308 0002 9085      		ldd r25,Z+8
+ 309 0004 94FB      		bst r25,4
+ 310 0006 8827      		clr r24
+ 311 0008 80F9      		bld r24,0
+ 312               	.LVL13:
+ 313               		.loc 1 191 5 view .LVU88
+ 314 000a 94FF      		sbrs r25,4
+GAS LISTING /tmp/cczahLR6.s 			page 10
+
+
+ 315 000c 00C0      		rjmp .L18
+ 192:funsape/peripheral/gpioBus.cpp ****         // Returns error
+ 193:funsape/peripheral/gpioBus.cpp ****         this->_lastError = Error::NOT_INITIALIZED;
+ 194:funsape/peripheral/gpioBus.cpp ****         debugMessage(Error::NOT_INITIALIZED, Debug::CodeIndex::GPIO_BUS_MODULE);
+ 195:funsape/peripheral/gpioBus.cpp ****         return false;
+ 196:funsape/peripheral/gpioBus.cpp ****     }
+ 197:funsape/peripheral/gpioBus.cpp **** 
+ 198:funsape/peripheral/gpioBus.cpp ****     // Configure pin
+ 199:funsape/peripheral/gpioBus.cpp ****     switch(mode_p) {
+ 316               		.loc 1 199 5 is_stmt 1 view .LVU89
+ 317 000e 6130      		cpi r22,lo8(1)
+ 318 0010 01F0      		breq .L15
+ 319 0012 6230      		cpi r22,lo8(2)
+ 320 0014 01F0      		breq .L16
+ 321 0016 6111      		cpse r22,__zero_reg__
+ 322 0018 00C0      		rjmp .L17
+ 200:funsape/peripheral/gpioBus.cpp ****     case PinMode::INPUT_FLOATING:
+ 323               		.loc 1 200 5 view .LVU90
+ 201:funsape/peripheral/gpioBus.cpp ****         clrMask(*(this->_regDir), (uint8_t)this->_pinMask);
+ 324               		.loc 1 201 9 view .LVU91
+ 325               		.loc 1 201 9 view .LVU92
+ 326 001a A081      		ld r26,Z
+ 327 001c B181      		ldd r27,Z+1
+ 328 001e 2C91      		ld r18,X
+ 329 0020 9681      		ldd r25,Z+6
+ 330 0022 9095      		com r25
+ 331 0024 9223      		and r25,r18
+ 332 0026 9C93      		st X,r25
+ 333               		.loc 1 201 9 view .LVU93
+ 202:funsape/peripheral/gpioBus.cpp ****         clrMask(*(this->_regOut), (uint8_t)this->_pinMask);
+ 334               		.loc 1 202 9 view .LVU94
+ 335               		.loc 1 202 9 view .LVU95
+ 336 0028 A281      		ldd r26,Z+2
+ 337 002a B381      		ldd r27,Z+3
+ 338 002c 2C91      		ld r18,X
+ 339 002e 9681      		ldd r25,Z+6
+ 340 0030 9095      		com r25
+ 341 0032 9223      		and r25,r18
+ 342 0034 9C93      		st X,r25
+ 343               		.loc 1 202 9 view .LVU96
+ 203:funsape/peripheral/gpioBus.cpp ****         break;
+ 344               		.loc 1 203 9 view .LVU97
+ 345               	.L17:
+ 204:funsape/peripheral/gpioBus.cpp ****     case PinMode::INPUT_PULLED_UP:
+ 205:funsape/peripheral/gpioBus.cpp ****         clrMask(*(this->_regDir), (uint8_t)this->_pinMask);
+ 206:funsape/peripheral/gpioBus.cpp ****         setMask(*(this->_regOut), (uint8_t)this->_pinMask);
+ 207:funsape/peripheral/gpioBus.cpp ****         break;
+ 208:funsape/peripheral/gpioBus.cpp ****     case PinMode::OUTPUT_PUSH_PULL:
+ 209:funsape/peripheral/gpioBus.cpp ****         setMask(*(this->_regDir), (uint8_t)this->_pinMask);
+ 210:funsape/peripheral/gpioBus.cpp ****         break;
+ 211:funsape/peripheral/gpioBus.cpp ****     }
+ 212:funsape/peripheral/gpioBus.cpp **** 
+ 213:funsape/peripheral/gpioBus.cpp ****     // Returns successfully
+ 214:funsape/peripheral/gpioBus.cpp ****     this->_lastError = Error::NONE;
+ 346               		.loc 1 214 5 view .LVU98
+ 347               		.loc 1 214 22 is_stmt 0 view .LVU99
+ 348 0036 1286      		std Z+10,__zero_reg__
+GAS LISTING /tmp/cczahLR6.s 			page 11
+
+
+ 349 0038 1186      		std Z+9,__zero_reg__
+ 215:funsape/peripheral/gpioBus.cpp ****     debugMessage(Error::NONE, Debug::CodeIndex::GPIO_BUS_MODULE);
+ 350               		.loc 1 215 5 is_stmt 1 view .LVU100
+ 216:funsape/peripheral/gpioBus.cpp ****     return true;
+ 351               		.loc 1 216 5 view .LVU101
+ 352               	/* epilogue start */
+ 217:funsape/peripheral/gpioBus.cpp **** }
+ 353               		.loc 1 217 1 is_stmt 0 view .LVU102
+ 354 003a 0895      		ret
+ 355               	.L18:
+ 193:funsape/peripheral/gpioBus.cpp ****         debugMessage(Error::NOT_INITIALIZED, Debug::CodeIndex::GPIO_BUS_MODULE);
+ 356               		.loc 1 193 9 is_stmt 1 view .LVU103
+ 193:funsape/peripheral/gpioBus.cpp ****         debugMessage(Error::NOT_INITIALIZED, Debug::CodeIndex::GPIO_BUS_MODULE);
+ 357               		.loc 1 193 26 is_stmt 0 view .LVU104
+ 358 003c 26E0      		ldi r18,lo8(6)
+ 359 003e 30E0      		ldi r19,0
+ 360 0040 3287      		std Z+10,r19
+ 361 0042 2187      		std Z+9,r18
+ 194:funsape/peripheral/gpioBus.cpp ****         return false;
+ 362               		.loc 1 194 9 is_stmt 1 view .LVU105
+ 195:funsape/peripheral/gpioBus.cpp ****     }
+ 363               		.loc 1 195 9 view .LVU106
+ 195:funsape/peripheral/gpioBus.cpp ****     }
+ 364               		.loc 1 195 16 is_stmt 0 view .LVU107
+ 365 0044 0895      		ret
+ 366               	.L15:
+ 204:funsape/peripheral/gpioBus.cpp ****         clrMask(*(this->_regDir), (uint8_t)this->_pinMask);
+ 367               		.loc 1 204 5 is_stmt 1 view .LVU108
+ 205:funsape/peripheral/gpioBus.cpp ****         setMask(*(this->_regOut), (uint8_t)this->_pinMask);
+ 368               		.loc 1 205 9 view .LVU109
+ 205:funsape/peripheral/gpioBus.cpp ****         setMask(*(this->_regOut), (uint8_t)this->_pinMask);
+ 369               		.loc 1 205 9 view .LVU110
+ 370 0046 A081      		ld r26,Z
+ 371 0048 B181      		ldd r27,Z+1
+ 372 004a 2C91      		ld r18,X
+ 373 004c 9681      		ldd r25,Z+6
+ 374 004e 9095      		com r25
+ 375 0050 9223      		and r25,r18
+ 376 0052 9C93      		st X,r25
+ 205:funsape/peripheral/gpioBus.cpp ****         setMask(*(this->_regOut), (uint8_t)this->_pinMask);
+ 377               		.loc 1 205 9 view .LVU111
+ 206:funsape/peripheral/gpioBus.cpp ****         break;
+ 378               		.loc 1 206 9 view .LVU112
+ 206:funsape/peripheral/gpioBus.cpp ****         break;
+ 379               		.loc 1 206 9 view .LVU113
+ 380 0054 A281      		ldd r26,Z+2
+ 381 0056 B381      		ldd r27,Z+3
+ 382 0058 9C91      		ld r25,X
+ 383 005a 2681      		ldd r18,Z+6
+ 384 005c 922B      		or r25,r18
+ 385 005e 9C93      		st X,r25
+ 206:funsape/peripheral/gpioBus.cpp ****         break;
+ 386               		.loc 1 206 9 view .LVU114
+ 207:funsape/peripheral/gpioBus.cpp ****     case PinMode::OUTPUT_PUSH_PULL:
+ 387               		.loc 1 207 9 view .LVU115
+ 388 0060 00C0      		rjmp .L17
+ 389               	.L16:
+GAS LISTING /tmp/cczahLR6.s 			page 12
+
+
+ 208:funsape/peripheral/gpioBus.cpp ****         setMask(*(this->_regDir), (uint8_t)this->_pinMask);
+ 390               		.loc 1 208 5 view .LVU116
+ 209:funsape/peripheral/gpioBus.cpp ****         break;
+ 391               		.loc 1 209 9 view .LVU117
+ 209:funsape/peripheral/gpioBus.cpp ****         break;
+ 392               		.loc 1 209 9 view .LVU118
+ 393 0062 A081      		ld r26,Z
+ 394 0064 B181      		ldd r27,Z+1
+ 395 0066 9C91      		ld r25,X
+ 396 0068 2681      		ldd r18,Z+6
+ 397 006a 922B      		or r25,r18
+ 398 006c 9C93      		st X,r25
+ 209:funsape/peripheral/gpioBus.cpp ****         break;
+ 399               		.loc 1 209 9 view .LVU119
+ 210:funsape/peripheral/gpioBus.cpp ****     }
+ 400               		.loc 1 210 9 view .LVU120
+ 401 006e 00C0      		rjmp .L17
+ 402               		.cfi_endproc
+ 403               	.LFE149:
+ 405               		.section	.text._ZN7GpioBus5writeEh,"ax",@progbits
+ 406               	.global	_ZN7GpioBus5writeEh
+ 408               	_ZN7GpioBus5writeEh:
+ 409               	.LVL14:
+ 410               	.LFB150:
+ 218:funsape/peripheral/gpioBus.cpp **** 
+ 219:funsape/peripheral/gpioBus.cpp **** bool_t GpioBus::write(cuint8_t data_p)
+ 220:funsape/peripheral/gpioBus.cpp **** {
+ 411               		.loc 1 220 1 view -0
+ 412               		.cfi_startproc
+ 413               	/* prologue: function */
+ 414               	/* frame size = 0 */
+ 415               	/* stack size = 0 */
+ 416               	.L__stack_usage = 0
+ 417               		.loc 1 220 1 is_stmt 0 view .LVU122
+ 418 0000 FC01      		movw r30,r24
+ 221:funsape/peripheral/gpioBus.cpp ****     // Mark passage for debugging purpose
+ 222:funsape/peripheral/gpioBus.cpp ****     debugMark(PSTR("GpioBus::write(cuint8_t)"), Debug::CodeIndex::GPIO_BUS_MODULE);
+ 419               		.loc 1 222 5 is_stmt 1 view .LVU123
+ 223:funsape/peripheral/gpioBus.cpp **** 
+ 224:funsape/peripheral/gpioBus.cpp ****     // Local variables
+ 225:funsape/peripheral/gpioBus.cpp ****     uint8_t aux8 = 0;
+ 420               		.loc 1 225 5 view .LVU124
+ 421               	.LVL15:
+ 226:funsape/peripheral/gpioBus.cpp **** 
+ 227:funsape/peripheral/gpioBus.cpp ****     // CHECKS FOR ERRORS - not initialized
+ 228:funsape/peripheral/gpioBus.cpp ****     if(!this->_isInitialized) {
+ 422               		.loc 1 228 5 view .LVU125
+ 423               		.loc 1 228 15 is_stmt 0 view .LVU126
+ 424 0002 9085      		ldd r25,Z+8
+ 425 0004 94FB      		bst r25,4
+ 426 0006 8827      		clr r24
+ 427 0008 80F9      		bld r24,0
+ 428               	.LVL16:
+ 429               		.loc 1 228 5 view .LVU127
+ 430 000a 94FF      		sbrs r25,4
+ 431 000c 00C0      		rjmp .L22
+ 229:funsape/peripheral/gpioBus.cpp ****         // Returns error
+GAS LISTING /tmp/cczahLR6.s 			page 13
+
+
+ 230:funsape/peripheral/gpioBus.cpp ****         this->_lastError = Error::NOT_INITIALIZED;
+ 231:funsape/peripheral/gpioBus.cpp ****         debugMessage(Error::NOT_INITIALIZED, Debug::CodeIndex::GPIO_BUS_MODULE);
+ 232:funsape/peripheral/gpioBus.cpp ****         return false;
+ 233:funsape/peripheral/gpioBus.cpp ****     }
+ 234:funsape/peripheral/gpioBus.cpp **** 
+ 235:funsape/peripheral/gpioBus.cpp ****     aux8 = *(this->_regOut);
+ 432               		.loc 1 235 5 is_stmt 1 view .LVU128
+ 433               		.loc 1 235 20 is_stmt 0 view .LVU129
+ 434 000e A281      		ldd r26,Z+2
+ 435 0010 B381      		ldd r27,Z+3
+ 436               		.loc 1 235 12 view .LVU130
+ 437 0012 9C91      		ld r25,X
+ 438               	.LVL17:
+ 236:funsape/peripheral/gpioBus.cpp ****     clrMask(aux8, (uint8_t)(this->_pinMask));
+ 439               		.loc 1 236 5 is_stmt 1 view .LVU131
+ 440               		.loc 1 236 5 view .LVU132
+ 441 0014 2681      		ldd r18,Z+6
+ 442               	.LVL18:
+ 443               		.loc 1 236 5 view .LVU133
+ 237:funsape/peripheral/gpioBus.cpp ****     aux8 |= ((data_p << (uint8_t)this->_pinIndex) & (uint8_t)(this->_pinMask));
+ 444               		.loc 1 237 5 view .LVU134
+ 445               		.loc 1 237 15 is_stmt 0 view .LVU135
+ 446 0016 70E0      		ldi r23,0
+ 447               		.loc 1 237 40 view .LVU136
+ 448 0018 3781      		ldd r19,Z+7
+ 449               		.loc 1 237 22 view .LVU137
+ 450 001a 00C0      		rjmp 2f
+ 451               		1:
+ 452 001c 660F      		lsl r22
+ 453 001e 771F      		rol r23
+ 454               		2:
+ 455 0020 3A95      		dec r19
+ 456 0022 02F4      		brpl 1b
+ 457               	.LVL19:
+ 458               		.loc 1 237 10 view .LVU138
+ 459 0024 6927      		eor r22,r25
+ 460 0026 6223      		and r22,r18
+ 461 0028 6927      		eor r22,r25
+ 462               	.LVL20:
+ 238:funsape/peripheral/gpioBus.cpp ****     *(this->_regOut) = aux8;
+ 463               		.loc 1 238 5 is_stmt 1 view .LVU139
+ 464               		.loc 1 238 22 is_stmt 0 view .LVU140
+ 465 002a 6C93      		st X,r22
+ 239:funsape/peripheral/gpioBus.cpp **** 
+ 240:funsape/peripheral/gpioBus.cpp ****     // Returns successfully
+ 241:funsape/peripheral/gpioBus.cpp ****     this->_lastError = Error::NONE;
+ 466               		.loc 1 241 5 is_stmt 1 view .LVU141
+ 467               		.loc 1 241 22 is_stmt 0 view .LVU142
+ 468 002c 1286      		std Z+10,__zero_reg__
+ 469 002e 1186      		std Z+9,__zero_reg__
+ 242:funsape/peripheral/gpioBus.cpp ****     debugMessage(Error::NONE, Debug::CodeIndex::GPIO_BUS_MODULE);
+ 470               		.loc 1 242 5 is_stmt 1 view .LVU143
+ 243:funsape/peripheral/gpioBus.cpp ****     return true;
+ 471               		.loc 1 243 5 view .LVU144
+ 472               	/* epilogue start */
+ 244:funsape/peripheral/gpioBus.cpp **** }
+ 473               		.loc 1 244 1 is_stmt 0 view .LVU145
+GAS LISTING /tmp/cczahLR6.s 			page 14
+
+
+ 474 0030 0895      		ret
+ 475               	.LVL21:
+ 476               	.L22:
+ 230:funsape/peripheral/gpioBus.cpp ****         debugMessage(Error::NOT_INITIALIZED, Debug::CodeIndex::GPIO_BUS_MODULE);
+ 477               		.loc 1 230 9 is_stmt 1 view .LVU146
+ 230:funsape/peripheral/gpioBus.cpp ****         debugMessage(Error::NOT_INITIALIZED, Debug::CodeIndex::GPIO_BUS_MODULE);
+ 478               		.loc 1 230 26 is_stmt 0 view .LVU147
+ 479 0032 26E0      		ldi r18,lo8(6)
+ 480 0034 30E0      		ldi r19,0
+ 481 0036 3287      		std Z+10,r19
+ 482 0038 2187      		std Z+9,r18
+ 231:funsape/peripheral/gpioBus.cpp ****         return false;
+ 483               		.loc 1 231 9 is_stmt 1 view .LVU148
+ 232:funsape/peripheral/gpioBus.cpp ****     }
+ 484               		.loc 1 232 9 view .LVU149
+ 232:funsape/peripheral/gpioBus.cpp ****     }
+ 485               		.loc 1 232 16 is_stmt 0 view .LVU150
+ 486 003a 0895      		ret
+ 487               		.cfi_endproc
+ 488               	.LFE150:
+ 490               		.text
+ 491               	.Letext0:
+ 492               		.file 2 "/usr/avr/include/stdint.h"
+ 493               		.file 3 "funsape/peripheral/../config/atmega328p.hpp"
+ 494               		.file 4 "funsape/peripheral/../globalDefines.hpp"
+ 495               		.file 5 "funsape/peripheral/gpioBus.hpp"
+GAS LISTING /tmp/cczahLR6.s 			page 15
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 gpioBus.cpp
+     /tmp/cczahLR6.s:2      *ABS*:0000003e __SP_H__
+     /tmp/cczahLR6.s:3      *ABS*:0000003d __SP_L__
+     /tmp/cczahLR6.s:4      *ABS*:0000003f __SREG__
+     /tmp/cczahLR6.s:5      *ABS*:00000000 __tmp_reg__
+     /tmp/cczahLR6.s:6      *ABS*:00000001 __zero_reg__
+     /tmp/cczahLR6.s:14     .text._ZN7GpioBusC2Ev:00000000 _ZN7GpioBusC2Ev
+     /tmp/cczahLR6.s:17     .text._ZN7GpioBusC2Ev:00000000 .Loc.0
+     /tmp/cczahLR6.s:18     .text._ZN7GpioBusC2Ev:00000000 L0
+     /tmp/cczahLR6.s:23     .text._ZN7GpioBusC2Ev:00000000 .Loc.1
+     /tmp/cczahLR6.s:26     .text._ZN7GpioBusC2Ev:00000002 .Loc.2
+     /tmp/cczahLR6.s:29     .text._ZN7GpioBusC2Ev:00000006 .Loc.3
+     /tmp/cczahLR6.s:32     .text._ZN7GpioBusC2Ev:0000000a .Loc.4
+     /tmp/cczahLR6.s:35     .text._ZN7GpioBusC2Ev:0000000e .Loc.5
+     /tmp/cczahLR6.s:37     .text._ZN7GpioBusC2Ev:00000010 .Loc.6
+     /tmp/cczahLR6.s:39     .text._ZN7GpioBusC2Ev:00000012 .Loc.7
+     /tmp/cczahLR6.s:42     .text._ZN7GpioBusC2Ev:00000014 .Loc.8
+     /tmp/cczahLR6.s:45     .text._ZN7GpioBusC2Ev:00000018 .Loc.9
+     /tmp/cczahLR6.s:48     .text._ZN7GpioBusC2Ev:0000001c .Loc.10
+     /tmp/cczahLR6.s:51     .text._ZN7GpioBusC2Ev:00000020 .Loc.11
+     /tmp/cczahLR6.s:52     .text._ZN7GpioBusC2Ev:00000020 .Loc.12
+     /tmp/cczahLR6.s:53     .text._ZN7GpioBusC2Ev:00000020 .Loc.13
+     /tmp/cczahLR6.s:56     .text._ZN7GpioBusC2Ev:00000020 .Loc.14
+     /tmp/cczahLR6.s:58     .text._ZN7GpioBusC2Ev:00000022 L0
+     /tmp/cczahLR6.s:14     .text._ZN7GpioBusC2Ev:00000000 _ZN7GpioBusC1Ev
+     /tmp/cczahLR6.s:66     .text._ZN7GpioBusD2Ev:00000000 _ZN7GpioBusD2Ev
+     /tmp/cczahLR6.s:69     .text._ZN7GpioBusD2Ev:00000000 .Loc.15
+     /tmp/cczahLR6.s:70     .text._ZN7GpioBusD2Ev:00000000 L0
+     /tmp/cczahLR6.s:76     .text._ZN7GpioBusD2Ev:00000000 .Loc.16
+     /tmp/cczahLR6.s:77     .text._ZN7GpioBusD2Ev:00000000 .Loc.17
+     /tmp/cczahLR6.s:80     .text._ZN7GpioBusD2Ev:00000000 .Loc.18
+     /tmp/cczahLR6.s:82     .text._ZN7GpioBusD2Ev:00000002 L0
+     /tmp/cczahLR6.s:66     .text._ZN7GpioBusD2Ev:00000000 _ZN7GpioBusD1Ev
+     /tmp/cczahLR6.s:90     .text._ZN7GpioBus4initEPVh8PinIndexh:00000000 _ZN7GpioBus4initEPVh8PinIndexh
+     /tmp/cczahLR6.s:93     .text._ZN7GpioBus4initEPVh8PinIndexh:00000000 .Loc.19
+     /tmp/cczahLR6.s:94     .text._ZN7GpioBus4initEPVh8PinIndexh:00000000 L0
+     /tmp/cczahLR6.s:95     .text._ZN7GpioBus4initEPVh8PinIndexh:00000000 .Loc.20
+     /tmp/cczahLR6.s:110    .text._ZN7GpioBus4initEPVh8PinIndexh:00000008 .Loc.21
+     /tmp/cczahLR6.s:111    .text._ZN7GpioBus4initEPVh8PinIndexh:00000008 .Loc.22
+     /tmp/cczahLR6.s:112    .text._ZN7GpioBus4initEPVh8PinIndexh:00000008 .Loc.23
+     /tmp/cczahLR6.s:115    .text._ZN7GpioBus4initEPVh8PinIndexh:0000000a .Loc.24
+     /tmp/cczahLR6.s:117    .text._ZN7GpioBus4initEPVh8PinIndexh:0000000c .Loc.25
+     /tmp/cczahLR6.s:119    .text._ZN7GpioBus4initEPVh8PinIndexh:00000010 L0
+     /tmp/cczahLR6.s:121    .text._ZN7GpioBus4initEPVh8PinIndexh:00000012 .Loc.26
+     /tmp/cczahLR6.s:122    .text._ZN7GpioBus4initEPVh8PinIndexh:00000012 .Loc.27
+     /tmp/cczahLR6.s:125    .text._ZN7GpioBus4initEPVh8PinIndexh:00000016 .Loc.28
+     /tmp/cczahLR6.s:127    .text._ZN7GpioBus4initEPVh8PinIndexh:0000001a L0
+     /tmp/cczahLR6.s:129    .text._ZN7GpioBus4initEPVh8PinIndexh:0000001c .Loc.29
+     /tmp/cczahLR6.s:130    .text._ZN7GpioBus4initEPVh8PinIndexh:0000001c .Loc.30
+     /tmp/cczahLR6.s:135    .text._ZN7GpioBus4initEPVh8PinIndexh:00000024 .Loc.31
+     /tmp/cczahLR6.s:137    .text._ZN7GpioBus4initEPVh8PinIndexh:00000028 L0
+     /tmp/cczahLR6.s:139    .text._ZN7GpioBus4initEPVh8PinIndexh:0000002a .Loc.32
+     /tmp/cczahLR6.s:140    .text._ZN7GpioBus4initEPVh8PinIndexh:0000002a .Loc.33
+     /tmp/cczahLR6.s:150    .text._ZN7GpioBus4initEPVh8PinIndexh:00000038 .Loc.34
+     /tmp/cczahLR6.s:152    .text._ZN7GpioBus4initEPVh8PinIndexh:0000003a .Loc.35
+     /tmp/cczahLR6.s:163    .text._ZN7GpioBus4initEPVh8PinIndexh:00000048 .Loc.36
+GAS LISTING /tmp/cczahLR6.s 			page 16
+
+
+     /tmp/cczahLR6.s:164    .text._ZN7GpioBus4initEPVh8PinIndexh:00000048 .Loc.37
+     /tmp/cczahLR6.s:167    .text._ZN7GpioBus4initEPVh8PinIndexh:0000004a .Loc.38
+     /tmp/cczahLR6.s:174    .text._ZN7GpioBus4initEPVh8PinIndexh:00000056 .Loc.39
+     /tmp/cczahLR6.s:183    .text._ZN7GpioBus4initEPVh8PinIndexh:00000066 .Loc.40
+     /tmp/cczahLR6.s:186    .text._ZN7GpioBus4initEPVh8PinIndexh:0000006a .Loc.41
+     /tmp/cczahLR6.s:187    .text._ZN7GpioBus4initEPVh8PinIndexh:0000006a .Loc.42
+     /tmp/cczahLR6.s:189    .text._ZN7GpioBus4initEPVh8PinIndexh:0000006c .Loc.43
+     /tmp/cczahLR6.s:192    .text._ZN7GpioBus4initEPVh8PinIndexh:00000070 .Loc.44
+     /tmp/cczahLR6.s:193    .text._ZN7GpioBus4initEPVh8PinIndexh:00000070 .Loc.45
+     /tmp/cczahLR6.s:195    .text._ZN7GpioBus4initEPVh8PinIndexh:00000072 .Loc.46
+     /tmp/cczahLR6.s:198    .text._ZN7GpioBus4initEPVh8PinIndexh:00000076 .Loc.47
+     /tmp/cczahLR6.s:199    .text._ZN7GpioBus4initEPVh8PinIndexh:00000076 .Loc.48
+     /tmp/cczahLR6.s:201    .text._ZN7GpioBus4initEPVh8PinIndexh:00000078 .Loc.49
+     /tmp/cczahLR6.s:202    .text._ZN7GpioBus4initEPVh8PinIndexh:00000078 .Loc.50
+     /tmp/cczahLR6.s:204    .text._ZN7GpioBus4initEPVh8PinIndexh:0000007a .Loc.51
+     /tmp/cczahLR6.s:205    .text._ZN7GpioBus4initEPVh8PinIndexh:0000007a .Loc.52
+     /tmp/cczahLR6.s:209    .text._ZN7GpioBus4initEPVh8PinIndexh:00000080 .Loc.53
+     /tmp/cczahLR6.s:210    .text._ZN7GpioBus4initEPVh8PinIndexh:00000080 .Loc.54
+     /tmp/cczahLR6.s:213    .text._ZN7GpioBus4initEPVh8PinIndexh:00000082 .Loc.55
+     /tmp/cczahLR6.s:217    .text._ZN7GpioBus4initEPVh8PinIndexh:00000088 .Loc.56
+     /tmp/cczahLR6.s:218    .text._ZN7GpioBus4initEPVh8PinIndexh:00000088 .Loc.57
+     /tmp/cczahLR6.s:225    .text._ZN7GpioBus4initEPVh8PinIndexh:00000094 .Loc.58
+     /tmp/cczahLR6.s:226    .text._ZN7GpioBus4initEPVh8PinIndexh:00000094 .Loc.59
+     /tmp/cczahLR6.s:227    .text._ZN7GpioBus4initEPVh8PinIndexh:00000094 .Loc.60
+     /tmp/cczahLR6.s:235    .text._ZN7GpioBus4initEPVh8PinIndexh:000000a2 .Loc.61
+     /tmp/cczahLR6.s:236    .text._ZN7GpioBus4initEPVh8PinIndexh:000000a2 .Loc.62
+     /tmp/cczahLR6.s:237    .text._ZN7GpioBus4initEPVh8PinIndexh:000000a2 .Loc.63
+     /tmp/cczahLR6.s:240    .text._ZN7GpioBus4initEPVh8PinIndexh:000000a6 .Loc.64
+     /tmp/cczahLR6.s:241    .text._ZN7GpioBus4initEPVh8PinIndexh:000000a6 .Loc.65
+     /tmp/cczahLR6.s:242    .text._ZN7GpioBus4initEPVh8PinIndexh:000000a6 .Loc.66
+     /tmp/cczahLR6.s:247    .text._ZN7GpioBus4initEPVh8PinIndexh:000000aa .Loc.67
+     /tmp/cczahLR6.s:248    .text._ZN7GpioBus4initEPVh8PinIndexh:000000aa .Loc.68
+     /tmp/cczahLR6.s:253    .text._ZN7GpioBus4initEPVh8PinIndexh:000000b2 .Loc.69
+     /tmp/cczahLR6.s:254    .text._ZN7GpioBus4initEPVh8PinIndexh:000000b2 .Loc.70
+     /tmp/cczahLR6.s:256    .text._ZN7GpioBus4initEPVh8PinIndexh:000000b2 .Loc.71
+     /tmp/cczahLR6.s:261    .text._ZN7GpioBus4initEPVh8PinIndexh:000000b4 .Loc.72
+     /tmp/cczahLR6.s:267    .text._ZN7GpioBus4initEPVh8PinIndexh:000000ba .Loc.73
+     /tmp/cczahLR6.s:268    .text._ZN7GpioBus4initEPVh8PinIndexh:000000ba .Loc.74
+     /tmp/cczahLR6.s:273    .text._ZN7GpioBus4initEPVh8PinIndexh:000000c2 .Loc.75
+     /tmp/cczahLR6.s:274    .text._ZN7GpioBus4initEPVh8PinIndexh:000000c2 .Loc.76
+     /tmp/cczahLR6.s:275    .text._ZN7GpioBus4initEPVh8PinIndexh:000000c2 .Loc.77
+     /tmp/cczahLR6.s:278    .text._ZN7GpioBus4initEPVh8PinIndexh:000000c4 .Loc.78
+     /tmp/cczahLR6.s:279    .text._ZN7GpioBus4initEPVh8PinIndexh:000000c4 .Loc.79
+     /tmp/cczahLR6.s:284    .text._ZN7GpioBus4initEPVh8PinIndexh:000000cc .Loc.80
+     /tmp/cczahLR6.s:285    .text._ZN7GpioBus4initEPVh8PinIndexh:000000cc .Loc.81
+     /tmp/cczahLR6.s:286    .text._ZN7GpioBus4initEPVh8PinIndexh:000000cc .Loc.82
+     /tmp/cczahLR6.s:288    .text._ZN7GpioBus4initEPVh8PinIndexh:000000ce L0
+     /tmp/cczahLR6.s:294    .text._ZN7GpioBus7setModeE7PinMode:00000000 _ZN7GpioBus7setModeE7PinMode
+     /tmp/cczahLR6.s:297    .text._ZN7GpioBus7setModeE7PinMode:00000000 .Loc.83
+     /tmp/cczahLR6.s:298    .text._ZN7GpioBus7setModeE7PinMode:00000000 L0
+     /tmp/cczahLR6.s:303    .text._ZN7GpioBus7setModeE7PinMode:00000000 .Loc.84
+     /tmp/cczahLR6.s:305    .text._ZN7GpioBus7setModeE7PinMode:00000002 .Loc.85
+     /tmp/cczahLR6.s:306    .text._ZN7GpioBus7setModeE7PinMode:00000002 .Loc.86
+     /tmp/cczahLR6.s:307    .text._ZN7GpioBus7setModeE7PinMode:00000002 .Loc.87
+     /tmp/cczahLR6.s:313    .text._ZN7GpioBus7setModeE7PinMode:0000000a .Loc.88
+     /tmp/cczahLR6.s:316    .text._ZN7GpioBus7setModeE7PinMode:0000000e .Loc.89
+     /tmp/cczahLR6.s:323    .text._ZN7GpioBus7setModeE7PinMode:0000001a .Loc.90
+GAS LISTING /tmp/cczahLR6.s 			page 17
+
+
+     /tmp/cczahLR6.s:324    .text._ZN7GpioBus7setModeE7PinMode:0000001a .Loc.91
+     /tmp/cczahLR6.s:325    .text._ZN7GpioBus7setModeE7PinMode:0000001a .Loc.92
+     /tmp/cczahLR6.s:333    .text._ZN7GpioBus7setModeE7PinMode:00000028 .Loc.93
+     /tmp/cczahLR6.s:334    .text._ZN7GpioBus7setModeE7PinMode:00000028 .Loc.94
+     /tmp/cczahLR6.s:335    .text._ZN7GpioBus7setModeE7PinMode:00000028 .Loc.95
+     /tmp/cczahLR6.s:343    .text._ZN7GpioBus7setModeE7PinMode:00000036 .Loc.96
+     /tmp/cczahLR6.s:344    .text._ZN7GpioBus7setModeE7PinMode:00000036 .Loc.97
+     /tmp/cczahLR6.s:346    .text._ZN7GpioBus7setModeE7PinMode:00000036 .Loc.98
+     /tmp/cczahLR6.s:347    .text._ZN7GpioBus7setModeE7PinMode:00000036 .Loc.99
+     /tmp/cczahLR6.s:350    .text._ZN7GpioBus7setModeE7PinMode:0000003a .Loc.100
+     /tmp/cczahLR6.s:351    .text._ZN7GpioBus7setModeE7PinMode:0000003a .Loc.101
+     /tmp/cczahLR6.s:353    .text._ZN7GpioBus7setModeE7PinMode:0000003a .Loc.102
+     /tmp/cczahLR6.s:356    .text._ZN7GpioBus7setModeE7PinMode:0000003c .Loc.103
+     /tmp/cczahLR6.s:357    .text._ZN7GpioBus7setModeE7PinMode:0000003c .Loc.104
+     /tmp/cczahLR6.s:362    .text._ZN7GpioBus7setModeE7PinMode:00000044 .Loc.105
+     /tmp/cczahLR6.s:363    .text._ZN7GpioBus7setModeE7PinMode:00000044 .Loc.106
+     /tmp/cczahLR6.s:364    .text._ZN7GpioBus7setModeE7PinMode:00000044 .Loc.107
+     /tmp/cczahLR6.s:367    .text._ZN7GpioBus7setModeE7PinMode:00000046 .Loc.108
+     /tmp/cczahLR6.s:368    .text._ZN7GpioBus7setModeE7PinMode:00000046 .Loc.109
+     /tmp/cczahLR6.s:369    .text._ZN7GpioBus7setModeE7PinMode:00000046 .Loc.110
+     /tmp/cczahLR6.s:377    .text._ZN7GpioBus7setModeE7PinMode:00000054 .Loc.111
+     /tmp/cczahLR6.s:378    .text._ZN7GpioBus7setModeE7PinMode:00000054 .Loc.112
+     /tmp/cczahLR6.s:379    .text._ZN7GpioBus7setModeE7PinMode:00000054 .Loc.113
+     /tmp/cczahLR6.s:386    .text._ZN7GpioBus7setModeE7PinMode:00000060 .Loc.114
+     /tmp/cczahLR6.s:387    .text._ZN7GpioBus7setModeE7PinMode:00000060 .Loc.115
+     /tmp/cczahLR6.s:390    .text._ZN7GpioBus7setModeE7PinMode:00000062 .Loc.116
+     /tmp/cczahLR6.s:391    .text._ZN7GpioBus7setModeE7PinMode:00000062 .Loc.117
+     /tmp/cczahLR6.s:392    .text._ZN7GpioBus7setModeE7PinMode:00000062 .Loc.118
+     /tmp/cczahLR6.s:399    .text._ZN7GpioBus7setModeE7PinMode:0000006e .Loc.119
+     /tmp/cczahLR6.s:400    .text._ZN7GpioBus7setModeE7PinMode:0000006e .Loc.120
+     /tmp/cczahLR6.s:402    .text._ZN7GpioBus7setModeE7PinMode:00000070 L0
+     /tmp/cczahLR6.s:408    .text._ZN7GpioBus5writeEh:00000000 _ZN7GpioBus5writeEh
+     /tmp/cczahLR6.s:411    .text._ZN7GpioBus5writeEh:00000000 .Loc.121
+     /tmp/cczahLR6.s:412    .text._ZN7GpioBus5writeEh:00000000 L0
+     /tmp/cczahLR6.s:417    .text._ZN7GpioBus5writeEh:00000000 .Loc.122
+     /tmp/cczahLR6.s:419    .text._ZN7GpioBus5writeEh:00000002 .Loc.123
+     /tmp/cczahLR6.s:420    .text._ZN7GpioBus5writeEh:00000002 .Loc.124
+     /tmp/cczahLR6.s:422    .text._ZN7GpioBus5writeEh:00000002 .Loc.125
+     /tmp/cczahLR6.s:423    .text._ZN7GpioBus5writeEh:00000002 .Loc.126
+     /tmp/cczahLR6.s:429    .text._ZN7GpioBus5writeEh:0000000a .Loc.127
+     /tmp/cczahLR6.s:432    .text._ZN7GpioBus5writeEh:0000000e .Loc.128
+     /tmp/cczahLR6.s:433    .text._ZN7GpioBus5writeEh:0000000e .Loc.129
+     /tmp/cczahLR6.s:436    .text._ZN7GpioBus5writeEh:00000012 .Loc.130
+     /tmp/cczahLR6.s:439    .text._ZN7GpioBus5writeEh:00000014 .Loc.131
+     /tmp/cczahLR6.s:440    .text._ZN7GpioBus5writeEh:00000014 .Loc.132
+     /tmp/cczahLR6.s:443    .text._ZN7GpioBus5writeEh:00000016 .Loc.133
+     /tmp/cczahLR6.s:444    .text._ZN7GpioBus5writeEh:00000016 .Loc.134
+     /tmp/cczahLR6.s:445    .text._ZN7GpioBus5writeEh:00000016 .Loc.135
+     /tmp/cczahLR6.s:447    .text._ZN7GpioBus5writeEh:00000018 .Loc.136
+     /tmp/cczahLR6.s:449    .text._ZN7GpioBus5writeEh:0000001a .Loc.137
+     /tmp/cczahLR6.s:458    .text._ZN7GpioBus5writeEh:00000024 .Loc.138
+     /tmp/cczahLR6.s:463    .text._ZN7GpioBus5writeEh:0000002a .Loc.139
+     /tmp/cczahLR6.s:464    .text._ZN7GpioBus5writeEh:0000002a .Loc.140
+     /tmp/cczahLR6.s:466    .text._ZN7GpioBus5writeEh:0000002c .Loc.141
+     /tmp/cczahLR6.s:467    .text._ZN7GpioBus5writeEh:0000002c .Loc.142
+     /tmp/cczahLR6.s:470    .text._ZN7GpioBus5writeEh:00000030 .Loc.143
+     /tmp/cczahLR6.s:471    .text._ZN7GpioBus5writeEh:00000030 .Loc.144
+GAS LISTING /tmp/cczahLR6.s 			page 18
+
+
+     /tmp/cczahLR6.s:473    .text._ZN7GpioBus5writeEh:00000030 .Loc.145
+     /tmp/cczahLR6.s:477    .text._ZN7GpioBus5writeEh:00000032 .Loc.146
+     /tmp/cczahLR6.s:478    .text._ZN7GpioBus5writeEh:00000032 .Loc.147
+     /tmp/cczahLR6.s:483    .text._ZN7GpioBus5writeEh:0000003a .Loc.148
+     /tmp/cczahLR6.s:484    .text._ZN7GpioBus5writeEh:0000003a .Loc.149
+     /tmp/cczahLR6.s:485    .text._ZN7GpioBus5writeEh:0000003a .Loc.150
+     /tmp/cczahLR6.s:487    .text._ZN7GpioBus5writeEh:0000003c L0
+     /tmp/cczahLR6.s:63     .text._ZN7GpioBusC2Ev:00000022 L0
+     /tmp/cczahLR6.s:87     .text._ZN7GpioBusD2Ev:00000002 L0
+     /tmp/cczahLR6.s:291    .text._ZN7GpioBus4initEPVh8PinIndexh:000000ce L0
+     /tmp/cczahLR6.s:405    .text._ZN7GpioBus7setModeE7PinMode:00000070 L0
+     /tmp/cczahLR6.s:490    .text._ZN7GpioBus5writeEh:0000003c L0
+                     .debug_frame:00000000 L0
+     /tmp/cczahLR6.s:246    .text._ZN7GpioBus4initEPVh8PinIndexh:000000aa .L9
+     /tmp/cczahLR6.s:266    .text._ZN7GpioBus4initEPVh8PinIndexh:000000ba .L10
+     /tmp/cczahLR6.s:277    .text._ZN7GpioBus4initEPVh8PinIndexh:000000c4 .L11
+     /tmp/cczahLR6.s:147    .text._ZN7GpioBus4initEPVh8PinIndexh:00000034 .L21
+     /tmp/cczahLR6.s:144    .text._ZN7GpioBus4initEPVh8PinIndexh:00000030 .L11
+     /tmp/cczahLR6.s:158    .text._ZN7GpioBus4initEPVh8PinIndexh:00000042 .L22
+     /tmp/cczahLR6.s:155    .text._ZN7GpioBus4initEPVh8PinIndexh:0000003e .L12
+     /tmp/cczahLR6.s:259    .text._ZN7GpioBus4initEPVh8PinIndexh:000000b4 .L3
+     /tmp/cczahLR6.s:255    .text._ZN7GpioBus4initEPVh8PinIndexh:000000b2 .L7
+     /tmp/cczahLR6.s:355    .text._ZN7GpioBus7setModeE7PinMode:0000003c .L18
+     /tmp/cczahLR6.s:366    .text._ZN7GpioBus7setModeE7PinMode:00000046 .L15
+     /tmp/cczahLR6.s:389    .text._ZN7GpioBus7setModeE7PinMode:00000062 .L16
+     /tmp/cczahLR6.s:345    .text._ZN7GpioBus7setModeE7PinMode:00000036 .L17
+     /tmp/cczahLR6.s:476    .text._ZN7GpioBus5writeEh:00000032 .L22
+     /tmp/cczahLR6.s:454    .text._ZN7GpioBus5writeEh:00000020 .L23
+     /tmp/cczahLR6.s:451    .text._ZN7GpioBus5writeEh:0000001c .L13
+     /tmp/cczahLR6.s:1507   .debug_abbrev:00000000 .Ldebug_abbrev0
+     /tmp/cczahLR6.s:2452   .debug_ranges:00000000 .Ldebug_ranges0
+     /tmp/cczahLR6.s:2466   .debug_line:00000000 .Ldebug_line0
+     /tmp/cczahLR6.s:410    .text._ZN7GpioBus5writeEh:00000000 .LFB150
+     /tmp/cczahLR6.s:488    .text._ZN7GpioBus5writeEh:0000003c .LFE150
+     /tmp/cczahLR6.s:2104   .debug_loc:00000004 .LLST7
+     /tmp/cczahLR6.s:2099   .debug_loc:00000000 .LVUS7
+     /tmp/cczahLR6.s:2132   .debug_loc:00000032 .LLST8
+     /tmp/cczahLR6.s:2125   .debug_loc:0000002c .LVUS8
+     /tmp/cczahLR6.s:2167   .debug_loc:0000006e .LLST9
+     /tmp/cczahLR6.s:2156   .debug_loc:00000064 .LVUS9
+     /tmp/cczahLR6.s:296    .text._ZN7GpioBus7setModeE7PinMode:00000000 .LFB149
+     /tmp/cczahLR6.s:403    .text._ZN7GpioBus7setModeE7PinMode:00000070 .LFE149
+     /tmp/cczahLR6.s:2203   .debug_loc:000000b9 .LLST6
+     /tmp/cczahLR6.s:2198   .debug_loc:000000b5 .LVUS6
+     /tmp/cczahLR6.s:92     .text._ZN7GpioBus4initEPVh8PinIndexh:00000000 .LFB148
+     /tmp/cczahLR6.s:289    .text._ZN7GpioBus4initEPVh8PinIndexh:000000ce .LFE148
+     /tmp/cczahLR6.s:2224   .debug_loc:000000e1 .LLST1
+     /tmp/cczahLR6.s:2250   .debug_loc:00000114 .LLST2
+     /tmp/cczahLR6.s:2245   .debug_loc:00000110 .LVUS2
+     /tmp/cczahLR6.s:2282   .debug_loc:00000146 .LLST3
+     /tmp/cczahLR6.s:2271   .debug_loc:0000013c .LVUS3
+     /tmp/cczahLR6.s:2344   .debug_loc:000001ab .LLST4
+     /tmp/cczahLR6.s:2331   .debug_loc:0000019f .LVUS4
+     /tmp/cczahLR6.s:2394   .debug_loc:0000020b .LLST5
+     /tmp/cczahLR6.s:2389   .debug_loc:00000207 .LVUS5
+     /tmp/cczahLR6.s:68     .text._ZN7GpioBusD2Ev:00000000 .LFB146
+     /tmp/cczahLR6.s:83     .text._ZN7GpioBusD2Ev:00000002 .LFE146
+GAS LISTING /tmp/cczahLR6.s 			page 19
+
+
+     /tmp/cczahLR6.s:16     .text._ZN7GpioBusC2Ev:00000000 .LFB143
+     /tmp/cczahLR6.s:59     .text._ZN7GpioBusC2Ev:00000022 .LFE143
+     /tmp/cczahLR6.s:2410   .debug_loc:0000022d .LLST0
+     /tmp/cczahLR6.s:2405   .debug_loc:00000229 .LVUS0
+     /tmp/cczahLR6.s:409    .text._ZN7GpioBus5writeEh:00000000 .LVL14
+     /tmp/cczahLR6.s:428    .text._ZN7GpioBus5writeEh:0000000a .LVL16
+     /tmp/cczahLR6.s:457    .text._ZN7GpioBus5writeEh:00000024 .LVL19
+     /tmp/cczahLR6.s:475    .text._ZN7GpioBus5writeEh:00000032 .LVL21
+     /tmp/cczahLR6.s:421    .text._ZN7GpioBus5writeEh:00000002 .LVL15
+     /tmp/cczahLR6.s:438    .text._ZN7GpioBus5writeEh:00000014 .LVL17
+     /tmp/cczahLR6.s:442    .text._ZN7GpioBus5writeEh:00000016 .LVL18
+     /tmp/cczahLR6.s:462    .text._ZN7GpioBus5writeEh:0000002a .LVL20
+     /tmp/cczahLR6.s:295    .text._ZN7GpioBus7setModeE7PinMode:00000000 .LVL12
+     /tmp/cczahLR6.s:312    .text._ZN7GpioBus7setModeE7PinMode:0000000a .LVL13
+     /tmp/cczahLR6.s:97     .text._ZN7GpioBus4initEPVh8PinIndexh:00000002 .LCFI0
+     /tmp/cczahLR6.s:101    .text._ZN7GpioBus4initEPVh8PinIndexh:00000004 .LCFI1
+     /tmp/cczahLR6.s:91     .text._ZN7GpioBus4initEPVh8PinIndexh:00000000 .LVL3
+     /tmp/cczahLR6.s:114    .text._ZN7GpioBus4initEPVh8PinIndexh:0000000a .LVL4
+     /tmp/cczahLR6.s:173    .text._ZN7GpioBus4initEPVh8PinIndexh:00000056 .LVL7
+     /tmp/cczahLR6.s:245    .text._ZN7GpioBus4initEPVh8PinIndexh:000000aa .LVL9
+     /tmp/cczahLR6.s:258    .text._ZN7GpioBus4initEPVh8PinIndexh:000000b4 .LVL10
+     /tmp/cczahLR6.s:265    .text._ZN7GpioBus4initEPVh8PinIndexh:000000ba .LVL11
+     /tmp/cczahLR6.s:166    .text._ZN7GpioBus4initEPVh8PinIndexh:0000004a .LVL6
+     /tmp/cczahLR6.s:212    .text._ZN7GpioBus4initEPVh8PinIndexh:00000082 .LVL8
+     /tmp/cczahLR6.s:162    .text._ZN7GpioBus4initEPVh8PinIndexh:00000048 .LVL5
+     /tmp/cczahLR6.s:15     .text._ZN7GpioBusC2Ev:00000000 .LVL0
+     /tmp/cczahLR6.s:41     .text._ZN7GpioBusC2Ev:00000014 .LVL1
+     /tmp/cczahLR6.s:497    .debug_info:00000000 .Ldebug_info0
+
+UNDEFINED SYMBOLS
+__umulhisi3
