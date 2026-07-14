@@ -1,4 +1,4 @@
-GAS LISTING /tmp/cczahLR6.s 			page 1
+GAS LISTING /tmp/ccTctqsO.s 			page 1
 
 
    1               		.file	"gpioBus.cpp"
@@ -15,7 +15,7 @@ GAS LISTING /tmp/cczahLR6.s 			page 1
   12               	.global	_ZN7GpioBusC2Ev
   14               	_ZN7GpioBusC2Ev:
   15               	.LVL0:
-  16               	.LFB143:
+  16               	.LFB144:
    1:funsape/peripheral/gpioBus.cpp **** //!
    2:funsape/peripheral/gpioBus.cpp **** //! ****************************************************************************
    3:funsape/peripheral/gpioBus.cpp **** //! @file           gpioBus.cpp
@@ -58,7 +58,7 @@ GAS LISTING /tmp/cczahLR6.s 			page 1
   40:funsape/peripheral/gpioBus.cpp **** //!     THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
   41:funsape/peripheral/gpioBus.cpp **** //!     OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
   42:funsape/peripheral/gpioBus.cpp **** //!     ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-GAS LISTING /tmp/cczahLR6.s 			page 2
+GAS LISTING /tmp/ccTctqsO.s 			page 2
 
 
   43:funsape/peripheral/gpioBus.cpp **** //!     OTHER DEALINGS IN THE SOFTWARE.
@@ -118,7 +118,7 @@ GAS LISTING /tmp/cczahLR6.s 			page 1
   97:funsape/peripheral/gpioBus.cpp **** // =============================================================================
   98:funsape/peripheral/gpioBus.cpp **** 
   99:funsape/peripheral/gpioBus.cpp **** GpioBus::GpioBus(
-GAS LISTING /tmp/cczahLR6.s 			page 3
+GAS LISTING /tmp/ccTctqsO.s 			page 3
 
 
   17               		.loc 1 99 1 view -0
@@ -178,20 +178,20 @@ GAS LISTING /tmp/cczahLR6.s 			page 1
   54               	/* epilogue start */
   55               	.LBE2:
  117:funsape/peripheral/gpioBus.cpp **** }
-GAS LISTING /tmp/cczahLR6.s 			page 4
+GAS LISTING /tmp/ccTctqsO.s 			page 4
 
 
   56               		.loc 1 117 1 is_stmt 0 view .LVU14
   57 0020 0895      		ret
   58               		.cfi_endproc
-  59               	.LFE143:
+  59               	.LFE144:
   61               	.global	_ZN7GpioBusC1Ev
   62               		.set	_ZN7GpioBusC1Ev,_ZN7GpioBusC2Ev
   63               		.section	.text._ZN7GpioBusD2Ev,"ax",@progbits
   64               	.global	_ZN7GpioBusD2Ev
   66               	_ZN7GpioBusD2Ev:
   67               	.LVL2:
-  68               	.LFB146:
+  68               	.LFB147:
  118:funsape/peripheral/gpioBus.cpp **** 
  119:funsape/peripheral/gpioBus.cpp **** GpioBus::~GpioBus(void)
   69               		.loc 1 119 1 is_stmt 1 view -0
@@ -215,14 +215,14 @@ GAS LISTING /tmp/cczahLR6.s 			page 1
   80               		.loc 1 126 1 is_stmt 0 view .LVU18
   81 0000 0895      		ret
   82               		.cfi_endproc
-  83               	.LFE146:
+  83               	.LFE147:
   85               	.global	_ZN7GpioBusD1Ev
   86               		.set	_ZN7GpioBusD1Ev,_ZN7GpioBusD2Ev
   87               		.section	.text._ZN7GpioBus4initEPVh8PinIndexh,"ax",@progbits
   88               	.global	_ZN7GpioBus4initEPVh8PinIndexh
   90               	_ZN7GpioBus4initEPVh8PinIndexh:
   91               	.LVL3:
-  92               	.LFB148:
+  92               	.LFB149:
  127:funsape/peripheral/gpioBus.cpp **** 
  128:funsape/peripheral/gpioBus.cpp **** // =============================================================================
  129:funsape/peripheral/gpioBus.cpp **** // Class own methods - Public
@@ -238,7 +238,7 @@ GAS LISTING /tmp/cczahLR6.s 			page 1
   96 0000 CF93      		push r28
   97               	.LCFI0:
   98               		.cfi_def_cfa_offset 3
-GAS LISTING /tmp/cczahLR6.s 			page 5
+GAS LISTING /tmp/ccTctqsO.s 			page 5
 
 
   99               		.cfi_offset 28, -2
@@ -298,7 +298,7 @@ GAS LISTING /tmp/cczahLR6.s 			page 1
  134 0022 991F      		rol r25
  135               		.loc 1 154 5 view .LVU31
  136 0024 0997      		sbiw r24,9
-GAS LISTING /tmp/cczahLR6.s 			page 6
+GAS LISTING /tmp/ccTctqsO.s 			page 6
 
 
  137 0026 04F0      		brlt .+2
@@ -358,7 +358,7 @@ GAS LISTING /tmp/cczahLR6.s 			page 1
  180 0060 B91F      		adc r27,r25
  181 0062 CD01      		movw r24,r26
  182 0064 8196      		adiw r24,33
-GAS LISTING /tmp/cczahLR6.s 			page 7
+GAS LISTING /tmp/ccTctqsO.s 			page 7
 
 
  183               		.loc 1 165 41 view .LVU40
@@ -418,7 +418,7 @@ GAS LISTING /tmp/cczahLR6.s 			page 1
  227               		.loc 1 175 5 view .LVU60
  228 0094 A281      		ldd r26,Z+2
  229 0096 B381      		ldd r27,Z+3
-GAS LISTING /tmp/cczahLR6.s 			page 8
+GAS LISTING /tmp/ccTctqsO.s 			page 8
 
 
  230 0098 9C91      		ld r25,X
@@ -478,7 +478,7 @@ GAS LISTING /tmp/cczahLR6.s 			page 1
  271 00be 9287      		std Z+10,r25
  272 00c0 8187      		std Z+9,r24
  150:funsape/peripheral/gpioBus.cpp ****         return false;
-GAS LISTING /tmp/cczahLR6.s 			page 9
+GAS LISTING /tmp/ccTctqsO.s 			page 9
 
 
  273               		.loc 1 150 9 is_stmt 1 view .LVU75
@@ -504,12 +504,12 @@ GAS LISTING /tmp/cczahLR6.s 			page 1
  286               		.loc 1 158 16 is_stmt 0 view .LVU82
  287 00cc 00C0      		rjmp .L7
  288               		.cfi_endproc
- 289               	.LFE148:
+ 289               	.LFE149:
  291               		.section	.text._ZN7GpioBus7setModeE7PinMode,"ax",@progbits
  292               	.global	_ZN7GpioBus7setModeE7PinMode
  294               	_ZN7GpioBus7setModeE7PinMode:
  295               	.LVL12:
- 296               	.LFB149:
+ 296               	.LFB150:
  182:funsape/peripheral/gpioBus.cpp **** 
  183:funsape/peripheral/gpioBus.cpp **** //     ///////////////////    PIN RELATED METHODS     ///////////////////     //
  184:funsape/peripheral/gpioBus.cpp **** 
@@ -538,7 +538,7 @@ GAS LISTING /tmp/cczahLR6.s 			page 1
  312               	.LVL13:
  313               		.loc 1 191 5 view .LVU88
  314 000a 94FF      		sbrs r25,4
-GAS LISTING /tmp/cczahLR6.s 			page 10
+GAS LISTING /tmp/ccTctqsO.s 			page 10
 
 
  315 000c 00C0      		rjmp .L18
@@ -598,7 +598,7 @@ GAS LISTING /tmp/cczahLR6.s 			page 1
  346               		.loc 1 214 5 view .LVU98
  347               		.loc 1 214 22 is_stmt 0 view .LVU99
  348 0036 1286      		std Z+10,__zero_reg__
-GAS LISTING /tmp/cczahLR6.s 			page 11
+GAS LISTING /tmp/ccTctqsO.s 			page 11
 
 
  349 0038 1186      		std Z+9,__zero_reg__
@@ -658,7 +658,7 @@ GAS LISTING /tmp/cczahLR6.s 			page 1
  387               		.loc 1 207 9 view .LVU115
  388 0060 00C0      		rjmp .L17
  389               	.L16:
-GAS LISTING /tmp/cczahLR6.s 			page 12
+GAS LISTING /tmp/ccTctqsO.s 			page 12
 
 
  208:funsape/peripheral/gpioBus.cpp ****         setMask(*(this->_regDir), (uint8_t)this->_pinMask);
@@ -679,12 +679,12 @@ GAS LISTING /tmp/cczahLR6.s 			page 1
  400               		.loc 1 210 9 view .LVU120
  401 006e 00C0      		rjmp .L17
  402               		.cfi_endproc
- 403               	.LFE149:
+ 403               	.LFE150:
  405               		.section	.text._ZN7GpioBus5writeEh,"ax",@progbits
  406               	.global	_ZN7GpioBus5writeEh
  408               	_ZN7GpioBus5writeEh:
  409               	.LVL14:
- 410               	.LFB150:
+ 410               	.LFB151:
  218:funsape/peripheral/gpioBus.cpp **** 
  219:funsape/peripheral/gpioBus.cpp **** bool_t GpioBus::write(cuint8_t data_p)
  220:funsape/peripheral/gpioBus.cpp **** {
@@ -718,7 +718,7 @@ GAS LISTING /tmp/cczahLR6.s 			page 1
  430 000a 94FF      		sbrs r25,4
  431 000c 00C0      		rjmp .L22
  229:funsape/peripheral/gpioBus.cpp ****         // Returns error
-GAS LISTING /tmp/cczahLR6.s 			page 13
+GAS LISTING /tmp/ccTctqsO.s 			page 13
 
 
  230:funsape/peripheral/gpioBus.cpp ****         this->_lastError = Error::NOT_INITIALIZED;
@@ -778,7 +778,7 @@ GAS LISTING /tmp/cczahLR6.s 			page 1
  472               	/* epilogue start */
  244:funsape/peripheral/gpioBus.cpp **** }
  473               		.loc 1 244 1 is_stmt 0 view .LVU145
-GAS LISTING /tmp/cczahLR6.s 			page 14
+GAS LISTING /tmp/ccTctqsO.s 			page 14
 
 
  474 0030 0895      		ret
@@ -800,284 +800,284 @@ GAS LISTING /tmp/cczahLR6.s 			page 1
  485               		.loc 1 232 16 is_stmt 0 view .LVU150
  486 003a 0895      		ret
  487               		.cfi_endproc
- 488               	.LFE150:
+ 488               	.LFE151:
  490               		.text
  491               	.Letext0:
  492               		.file 2 "/usr/avr/include/stdint.h"
  493               		.file 3 "funsape/peripheral/../config/atmega328p.hpp"
  494               		.file 4 "funsape/peripheral/../globalDefines.hpp"
  495               		.file 5 "funsape/peripheral/gpioBus.hpp"
-GAS LISTING /tmp/cczahLR6.s 			page 15
+GAS LISTING /tmp/ccTctqsO.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 gpioBus.cpp
-     /tmp/cczahLR6.s:2      *ABS*:0000003e __SP_H__
-     /tmp/cczahLR6.s:3      *ABS*:0000003d __SP_L__
-     /tmp/cczahLR6.s:4      *ABS*:0000003f __SREG__
-     /tmp/cczahLR6.s:5      *ABS*:00000000 __tmp_reg__
-     /tmp/cczahLR6.s:6      *ABS*:00000001 __zero_reg__
-     /tmp/cczahLR6.s:14     .text._ZN7GpioBusC2Ev:00000000 _ZN7GpioBusC2Ev
-     /tmp/cczahLR6.s:17     .text._ZN7GpioBusC2Ev:00000000 .Loc.0
-     /tmp/cczahLR6.s:18     .text._ZN7GpioBusC2Ev:00000000 L0
-     /tmp/cczahLR6.s:23     .text._ZN7GpioBusC2Ev:00000000 .Loc.1
-     /tmp/cczahLR6.s:26     .text._ZN7GpioBusC2Ev:00000002 .Loc.2
-     /tmp/cczahLR6.s:29     .text._ZN7GpioBusC2Ev:00000006 .Loc.3
-     /tmp/cczahLR6.s:32     .text._ZN7GpioBusC2Ev:0000000a .Loc.4
-     /tmp/cczahLR6.s:35     .text._ZN7GpioBusC2Ev:0000000e .Loc.5
-     /tmp/cczahLR6.s:37     .text._ZN7GpioBusC2Ev:00000010 .Loc.6
-     /tmp/cczahLR6.s:39     .text._ZN7GpioBusC2Ev:00000012 .Loc.7
-     /tmp/cczahLR6.s:42     .text._ZN7GpioBusC2Ev:00000014 .Loc.8
-     /tmp/cczahLR6.s:45     .text._ZN7GpioBusC2Ev:00000018 .Loc.9
-     /tmp/cczahLR6.s:48     .text._ZN7GpioBusC2Ev:0000001c .Loc.10
-     /tmp/cczahLR6.s:51     .text._ZN7GpioBusC2Ev:00000020 .Loc.11
-     /tmp/cczahLR6.s:52     .text._ZN7GpioBusC2Ev:00000020 .Loc.12
-     /tmp/cczahLR6.s:53     .text._ZN7GpioBusC2Ev:00000020 .Loc.13
-     /tmp/cczahLR6.s:56     .text._ZN7GpioBusC2Ev:00000020 .Loc.14
-     /tmp/cczahLR6.s:58     .text._ZN7GpioBusC2Ev:00000022 L0
-     /tmp/cczahLR6.s:14     .text._ZN7GpioBusC2Ev:00000000 _ZN7GpioBusC1Ev
-     /tmp/cczahLR6.s:66     .text._ZN7GpioBusD2Ev:00000000 _ZN7GpioBusD2Ev
-     /tmp/cczahLR6.s:69     .text._ZN7GpioBusD2Ev:00000000 .Loc.15
-     /tmp/cczahLR6.s:70     .text._ZN7GpioBusD2Ev:00000000 L0
-     /tmp/cczahLR6.s:76     .text._ZN7GpioBusD2Ev:00000000 .Loc.16
-     /tmp/cczahLR6.s:77     .text._ZN7GpioBusD2Ev:00000000 .Loc.17
-     /tmp/cczahLR6.s:80     .text._ZN7GpioBusD2Ev:00000000 .Loc.18
-     /tmp/cczahLR6.s:82     .text._ZN7GpioBusD2Ev:00000002 L0
-     /tmp/cczahLR6.s:66     .text._ZN7GpioBusD2Ev:00000000 _ZN7GpioBusD1Ev
-     /tmp/cczahLR6.s:90     .text._ZN7GpioBus4initEPVh8PinIndexh:00000000 _ZN7GpioBus4initEPVh8PinIndexh
-     /tmp/cczahLR6.s:93     .text._ZN7GpioBus4initEPVh8PinIndexh:00000000 .Loc.19
-     /tmp/cczahLR6.s:94     .text._ZN7GpioBus4initEPVh8PinIndexh:00000000 L0
-     /tmp/cczahLR6.s:95     .text._ZN7GpioBus4initEPVh8PinIndexh:00000000 .Loc.20
-     /tmp/cczahLR6.s:110    .text._ZN7GpioBus4initEPVh8PinIndexh:00000008 .Loc.21
-     /tmp/cczahLR6.s:111    .text._ZN7GpioBus4initEPVh8PinIndexh:00000008 .Loc.22
-     /tmp/cczahLR6.s:112    .text._ZN7GpioBus4initEPVh8PinIndexh:00000008 .Loc.23
-     /tmp/cczahLR6.s:115    .text._ZN7GpioBus4initEPVh8PinIndexh:0000000a .Loc.24
-     /tmp/cczahLR6.s:117    .text._ZN7GpioBus4initEPVh8PinIndexh:0000000c .Loc.25
-     /tmp/cczahLR6.s:119    .text._ZN7GpioBus4initEPVh8PinIndexh:00000010 L0
-     /tmp/cczahLR6.s:121    .text._ZN7GpioBus4initEPVh8PinIndexh:00000012 .Loc.26
-     /tmp/cczahLR6.s:122    .text._ZN7GpioBus4initEPVh8PinIndexh:00000012 .Loc.27
-     /tmp/cczahLR6.s:125    .text._ZN7GpioBus4initEPVh8PinIndexh:00000016 .Loc.28
-     /tmp/cczahLR6.s:127    .text._ZN7GpioBus4initEPVh8PinIndexh:0000001a L0
-     /tmp/cczahLR6.s:129    .text._ZN7GpioBus4initEPVh8PinIndexh:0000001c .Loc.29
-     /tmp/cczahLR6.s:130    .text._ZN7GpioBus4initEPVh8PinIndexh:0000001c .Loc.30
-     /tmp/cczahLR6.s:135    .text._ZN7GpioBus4initEPVh8PinIndexh:00000024 .Loc.31
-     /tmp/cczahLR6.s:137    .text._ZN7GpioBus4initEPVh8PinIndexh:00000028 L0
-     /tmp/cczahLR6.s:139    .text._ZN7GpioBus4initEPVh8PinIndexh:0000002a .Loc.32
-     /tmp/cczahLR6.s:140    .text._ZN7GpioBus4initEPVh8PinIndexh:0000002a .Loc.33
-     /tmp/cczahLR6.s:150    .text._ZN7GpioBus4initEPVh8PinIndexh:00000038 .Loc.34
-     /tmp/cczahLR6.s:152    .text._ZN7GpioBus4initEPVh8PinIndexh:0000003a .Loc.35
-     /tmp/cczahLR6.s:163    .text._ZN7GpioBus4initEPVh8PinIndexh:00000048 .Loc.36
-GAS LISTING /tmp/cczahLR6.s 			page 16
+     /tmp/ccTctqsO.s:2      *ABS*:0000003e __SP_H__
+     /tmp/ccTctqsO.s:3      *ABS*:0000003d __SP_L__
+     /tmp/ccTctqsO.s:4      *ABS*:0000003f __SREG__
+     /tmp/ccTctqsO.s:5      *ABS*:00000000 __tmp_reg__
+     /tmp/ccTctqsO.s:6      *ABS*:00000001 __zero_reg__
+     /tmp/ccTctqsO.s:14     .text._ZN7GpioBusC2Ev:00000000 _ZN7GpioBusC2Ev
+     /tmp/ccTctqsO.s:17     .text._ZN7GpioBusC2Ev:00000000 .Loc.0
+     /tmp/ccTctqsO.s:18     .text._ZN7GpioBusC2Ev:00000000 L0
+     /tmp/ccTctqsO.s:23     .text._ZN7GpioBusC2Ev:00000000 .Loc.1
+     /tmp/ccTctqsO.s:26     .text._ZN7GpioBusC2Ev:00000002 .Loc.2
+     /tmp/ccTctqsO.s:29     .text._ZN7GpioBusC2Ev:00000006 .Loc.3
+     /tmp/ccTctqsO.s:32     .text._ZN7GpioBusC2Ev:0000000a .Loc.4
+     /tmp/ccTctqsO.s:35     .text._ZN7GpioBusC2Ev:0000000e .Loc.5
+     /tmp/ccTctqsO.s:37     .text._ZN7GpioBusC2Ev:00000010 .Loc.6
+     /tmp/ccTctqsO.s:39     .text._ZN7GpioBusC2Ev:00000012 .Loc.7
+     /tmp/ccTctqsO.s:42     .text._ZN7GpioBusC2Ev:00000014 .Loc.8
+     /tmp/ccTctqsO.s:45     .text._ZN7GpioBusC2Ev:00000018 .Loc.9
+     /tmp/ccTctqsO.s:48     .text._ZN7GpioBusC2Ev:0000001c .Loc.10
+     /tmp/ccTctqsO.s:51     .text._ZN7GpioBusC2Ev:00000020 .Loc.11
+     /tmp/ccTctqsO.s:52     .text._ZN7GpioBusC2Ev:00000020 .Loc.12
+     /tmp/ccTctqsO.s:53     .text._ZN7GpioBusC2Ev:00000020 .Loc.13
+     /tmp/ccTctqsO.s:56     .text._ZN7GpioBusC2Ev:00000020 .Loc.14
+     /tmp/ccTctqsO.s:58     .text._ZN7GpioBusC2Ev:00000022 L0
+     /tmp/ccTctqsO.s:14     .text._ZN7GpioBusC2Ev:00000000 _ZN7GpioBusC1Ev
+     /tmp/ccTctqsO.s:66     .text._ZN7GpioBusD2Ev:00000000 _ZN7GpioBusD2Ev
+     /tmp/ccTctqsO.s:69     .text._ZN7GpioBusD2Ev:00000000 .Loc.15
+     /tmp/ccTctqsO.s:70     .text._ZN7GpioBusD2Ev:00000000 L0
+     /tmp/ccTctqsO.s:76     .text._ZN7GpioBusD2Ev:00000000 .Loc.16
+     /tmp/ccTctqsO.s:77     .text._ZN7GpioBusD2Ev:00000000 .Loc.17
+     /tmp/ccTctqsO.s:80     .text._ZN7GpioBusD2Ev:00000000 .Loc.18
+     /tmp/ccTctqsO.s:82     .text._ZN7GpioBusD2Ev:00000002 L0
+     /tmp/ccTctqsO.s:66     .text._ZN7GpioBusD2Ev:00000000 _ZN7GpioBusD1Ev
+     /tmp/ccTctqsO.s:90     .text._ZN7GpioBus4initEPVh8PinIndexh:00000000 _ZN7GpioBus4initEPVh8PinIndexh
+     /tmp/ccTctqsO.s:93     .text._ZN7GpioBus4initEPVh8PinIndexh:00000000 .Loc.19
+     /tmp/ccTctqsO.s:94     .text._ZN7GpioBus4initEPVh8PinIndexh:00000000 L0
+     /tmp/ccTctqsO.s:95     .text._ZN7GpioBus4initEPVh8PinIndexh:00000000 .Loc.20
+     /tmp/ccTctqsO.s:110    .text._ZN7GpioBus4initEPVh8PinIndexh:00000008 .Loc.21
+     /tmp/ccTctqsO.s:111    .text._ZN7GpioBus4initEPVh8PinIndexh:00000008 .Loc.22
+     /tmp/ccTctqsO.s:112    .text._ZN7GpioBus4initEPVh8PinIndexh:00000008 .Loc.23
+     /tmp/ccTctqsO.s:115    .text._ZN7GpioBus4initEPVh8PinIndexh:0000000a .Loc.24
+     /tmp/ccTctqsO.s:117    .text._ZN7GpioBus4initEPVh8PinIndexh:0000000c .Loc.25
+     /tmp/ccTctqsO.s:119    .text._ZN7GpioBus4initEPVh8PinIndexh:00000010 L0
+     /tmp/ccTctqsO.s:121    .text._ZN7GpioBus4initEPVh8PinIndexh:00000012 .Loc.26
+     /tmp/ccTctqsO.s:122    .text._ZN7GpioBus4initEPVh8PinIndexh:00000012 .Loc.27
+     /tmp/ccTctqsO.s:125    .text._ZN7GpioBus4initEPVh8PinIndexh:00000016 .Loc.28
+     /tmp/ccTctqsO.s:127    .text._ZN7GpioBus4initEPVh8PinIndexh:0000001a L0
+     /tmp/ccTctqsO.s:129    .text._ZN7GpioBus4initEPVh8PinIndexh:0000001c .Loc.29
+     /tmp/ccTctqsO.s:130    .text._ZN7GpioBus4initEPVh8PinIndexh:0000001c .Loc.30
+     /tmp/ccTctqsO.s:135    .text._ZN7GpioBus4initEPVh8PinIndexh:00000024 .Loc.31
+     /tmp/ccTctqsO.s:137    .text._ZN7GpioBus4initEPVh8PinIndexh:00000028 L0
+     /tmp/ccTctqsO.s:139    .text._ZN7GpioBus4initEPVh8PinIndexh:0000002a .Loc.32
+     /tmp/ccTctqsO.s:140    .text._ZN7GpioBus4initEPVh8PinIndexh:0000002a .Loc.33
+     /tmp/ccTctqsO.s:150    .text._ZN7GpioBus4initEPVh8PinIndexh:00000038 .Loc.34
+     /tmp/ccTctqsO.s:152    .text._ZN7GpioBus4initEPVh8PinIndexh:0000003a .Loc.35
+     /tmp/ccTctqsO.s:163    .text._ZN7GpioBus4initEPVh8PinIndexh:00000048 .Loc.36
+GAS LISTING /tmp/ccTctqsO.s 			page 16
 
 
-     /tmp/cczahLR6.s:164    .text._ZN7GpioBus4initEPVh8PinIndexh:00000048 .Loc.37
-     /tmp/cczahLR6.s:167    .text._ZN7GpioBus4initEPVh8PinIndexh:0000004a .Loc.38
-     /tmp/cczahLR6.s:174    .text._ZN7GpioBus4initEPVh8PinIndexh:00000056 .Loc.39
-     /tmp/cczahLR6.s:183    .text._ZN7GpioBus4initEPVh8PinIndexh:00000066 .Loc.40
-     /tmp/cczahLR6.s:186    .text._ZN7GpioBus4initEPVh8PinIndexh:0000006a .Loc.41
-     /tmp/cczahLR6.s:187    .text._ZN7GpioBus4initEPVh8PinIndexh:0000006a .Loc.42
-     /tmp/cczahLR6.s:189    .text._ZN7GpioBus4initEPVh8PinIndexh:0000006c .Loc.43
-     /tmp/cczahLR6.s:192    .text._ZN7GpioBus4initEPVh8PinIndexh:00000070 .Loc.44
-     /tmp/cczahLR6.s:193    .text._ZN7GpioBus4initEPVh8PinIndexh:00000070 .Loc.45
-     /tmp/cczahLR6.s:195    .text._ZN7GpioBus4initEPVh8PinIndexh:00000072 .Loc.46
-     /tmp/cczahLR6.s:198    .text._ZN7GpioBus4initEPVh8PinIndexh:00000076 .Loc.47
-     /tmp/cczahLR6.s:199    .text._ZN7GpioBus4initEPVh8PinIndexh:00000076 .Loc.48
-     /tmp/cczahLR6.s:201    .text._ZN7GpioBus4initEPVh8PinIndexh:00000078 .Loc.49
-     /tmp/cczahLR6.s:202    .text._ZN7GpioBus4initEPVh8PinIndexh:00000078 .Loc.50
-     /tmp/cczahLR6.s:204    .text._ZN7GpioBus4initEPVh8PinIndexh:0000007a .Loc.51
-     /tmp/cczahLR6.s:205    .text._ZN7GpioBus4initEPVh8PinIndexh:0000007a .Loc.52
-     /tmp/cczahLR6.s:209    .text._ZN7GpioBus4initEPVh8PinIndexh:00000080 .Loc.53
-     /tmp/cczahLR6.s:210    .text._ZN7GpioBus4initEPVh8PinIndexh:00000080 .Loc.54
-     /tmp/cczahLR6.s:213    .text._ZN7GpioBus4initEPVh8PinIndexh:00000082 .Loc.55
-     /tmp/cczahLR6.s:217    .text._ZN7GpioBus4initEPVh8PinIndexh:00000088 .Loc.56
-     /tmp/cczahLR6.s:218    .text._ZN7GpioBus4initEPVh8PinIndexh:00000088 .Loc.57
-     /tmp/cczahLR6.s:225    .text._ZN7GpioBus4initEPVh8PinIndexh:00000094 .Loc.58
-     /tmp/cczahLR6.s:226    .text._ZN7GpioBus4initEPVh8PinIndexh:00000094 .Loc.59
-     /tmp/cczahLR6.s:227    .text._ZN7GpioBus4initEPVh8PinIndexh:00000094 .Loc.60
-     /tmp/cczahLR6.s:235    .text._ZN7GpioBus4initEPVh8PinIndexh:000000a2 .Loc.61
-     /tmp/cczahLR6.s:236    .text._ZN7GpioBus4initEPVh8PinIndexh:000000a2 .Loc.62
-     /tmp/cczahLR6.s:237    .text._ZN7GpioBus4initEPVh8PinIndexh:000000a2 .Loc.63
-     /tmp/cczahLR6.s:240    .text._ZN7GpioBus4initEPVh8PinIndexh:000000a6 .Loc.64
-     /tmp/cczahLR6.s:241    .text._ZN7GpioBus4initEPVh8PinIndexh:000000a6 .Loc.65
-     /tmp/cczahLR6.s:242    .text._ZN7GpioBus4initEPVh8PinIndexh:000000a6 .Loc.66
-     /tmp/cczahLR6.s:247    .text._ZN7GpioBus4initEPVh8PinIndexh:000000aa .Loc.67
-     /tmp/cczahLR6.s:248    .text._ZN7GpioBus4initEPVh8PinIndexh:000000aa .Loc.68
-     /tmp/cczahLR6.s:253    .text._ZN7GpioBus4initEPVh8PinIndexh:000000b2 .Loc.69
-     /tmp/cczahLR6.s:254    .text._ZN7GpioBus4initEPVh8PinIndexh:000000b2 .Loc.70
-     /tmp/cczahLR6.s:256    .text._ZN7GpioBus4initEPVh8PinIndexh:000000b2 .Loc.71
-     /tmp/cczahLR6.s:261    .text._ZN7GpioBus4initEPVh8PinIndexh:000000b4 .Loc.72
-     /tmp/cczahLR6.s:267    .text._ZN7GpioBus4initEPVh8PinIndexh:000000ba .Loc.73
-     /tmp/cczahLR6.s:268    .text._ZN7GpioBus4initEPVh8PinIndexh:000000ba .Loc.74
-     /tmp/cczahLR6.s:273    .text._ZN7GpioBus4initEPVh8PinIndexh:000000c2 .Loc.75
-     /tmp/cczahLR6.s:274    .text._ZN7GpioBus4initEPVh8PinIndexh:000000c2 .Loc.76
-     /tmp/cczahLR6.s:275    .text._ZN7GpioBus4initEPVh8PinIndexh:000000c2 .Loc.77
-     /tmp/cczahLR6.s:278    .text._ZN7GpioBus4initEPVh8PinIndexh:000000c4 .Loc.78
-     /tmp/cczahLR6.s:279    .text._ZN7GpioBus4initEPVh8PinIndexh:000000c4 .Loc.79
-     /tmp/cczahLR6.s:284    .text._ZN7GpioBus4initEPVh8PinIndexh:000000cc .Loc.80
-     /tmp/cczahLR6.s:285    .text._ZN7GpioBus4initEPVh8PinIndexh:000000cc .Loc.81
-     /tmp/cczahLR6.s:286    .text._ZN7GpioBus4initEPVh8PinIndexh:000000cc .Loc.82
-     /tmp/cczahLR6.s:288    .text._ZN7GpioBus4initEPVh8PinIndexh:000000ce L0
-     /tmp/cczahLR6.s:294    .text._ZN7GpioBus7setModeE7PinMode:00000000 _ZN7GpioBus7setModeE7PinMode
-     /tmp/cczahLR6.s:297    .text._ZN7GpioBus7setModeE7PinMode:00000000 .Loc.83
-     /tmp/cczahLR6.s:298    .text._ZN7GpioBus7setModeE7PinMode:00000000 L0
-     /tmp/cczahLR6.s:303    .text._ZN7GpioBus7setModeE7PinMode:00000000 .Loc.84
-     /tmp/cczahLR6.s:305    .text._ZN7GpioBus7setModeE7PinMode:00000002 .Loc.85
-     /tmp/cczahLR6.s:306    .text._ZN7GpioBus7setModeE7PinMode:00000002 .Loc.86
-     /tmp/cczahLR6.s:307    .text._ZN7GpioBus7setModeE7PinMode:00000002 .Loc.87
-     /tmp/cczahLR6.s:313    .text._ZN7GpioBus7setModeE7PinMode:0000000a .Loc.88
-     /tmp/cczahLR6.s:316    .text._ZN7GpioBus7setModeE7PinMode:0000000e .Loc.89
-     /tmp/cczahLR6.s:323    .text._ZN7GpioBus7setModeE7PinMode:0000001a .Loc.90
-GAS LISTING /tmp/cczahLR6.s 			page 17
+     /tmp/ccTctqsO.s:164    .text._ZN7GpioBus4initEPVh8PinIndexh:00000048 .Loc.37
+     /tmp/ccTctqsO.s:167    .text._ZN7GpioBus4initEPVh8PinIndexh:0000004a .Loc.38
+     /tmp/ccTctqsO.s:174    .text._ZN7GpioBus4initEPVh8PinIndexh:00000056 .Loc.39
+     /tmp/ccTctqsO.s:183    .text._ZN7GpioBus4initEPVh8PinIndexh:00000066 .Loc.40
+     /tmp/ccTctqsO.s:186    .text._ZN7GpioBus4initEPVh8PinIndexh:0000006a .Loc.41
+     /tmp/ccTctqsO.s:187    .text._ZN7GpioBus4initEPVh8PinIndexh:0000006a .Loc.42
+     /tmp/ccTctqsO.s:189    .text._ZN7GpioBus4initEPVh8PinIndexh:0000006c .Loc.43
+     /tmp/ccTctqsO.s:192    .text._ZN7GpioBus4initEPVh8PinIndexh:00000070 .Loc.44
+     /tmp/ccTctqsO.s:193    .text._ZN7GpioBus4initEPVh8PinIndexh:00000070 .Loc.45
+     /tmp/ccTctqsO.s:195    .text._ZN7GpioBus4initEPVh8PinIndexh:00000072 .Loc.46
+     /tmp/ccTctqsO.s:198    .text._ZN7GpioBus4initEPVh8PinIndexh:00000076 .Loc.47
+     /tmp/ccTctqsO.s:199    .text._ZN7GpioBus4initEPVh8PinIndexh:00000076 .Loc.48
+     /tmp/ccTctqsO.s:201    .text._ZN7GpioBus4initEPVh8PinIndexh:00000078 .Loc.49
+     /tmp/ccTctqsO.s:202    .text._ZN7GpioBus4initEPVh8PinIndexh:00000078 .Loc.50
+     /tmp/ccTctqsO.s:204    .text._ZN7GpioBus4initEPVh8PinIndexh:0000007a .Loc.51
+     /tmp/ccTctqsO.s:205    .text._ZN7GpioBus4initEPVh8PinIndexh:0000007a .Loc.52
+     /tmp/ccTctqsO.s:209    .text._ZN7GpioBus4initEPVh8PinIndexh:00000080 .Loc.53
+     /tmp/ccTctqsO.s:210    .text._ZN7GpioBus4initEPVh8PinIndexh:00000080 .Loc.54
+     /tmp/ccTctqsO.s:213    .text._ZN7GpioBus4initEPVh8PinIndexh:00000082 .Loc.55
+     /tmp/ccTctqsO.s:217    .text._ZN7GpioBus4initEPVh8PinIndexh:00000088 .Loc.56
+     /tmp/ccTctqsO.s:218    .text._ZN7GpioBus4initEPVh8PinIndexh:00000088 .Loc.57
+     /tmp/ccTctqsO.s:225    .text._ZN7GpioBus4initEPVh8PinIndexh:00000094 .Loc.58
+     /tmp/ccTctqsO.s:226    .text._ZN7GpioBus4initEPVh8PinIndexh:00000094 .Loc.59
+     /tmp/ccTctqsO.s:227    .text._ZN7GpioBus4initEPVh8PinIndexh:00000094 .Loc.60
+     /tmp/ccTctqsO.s:235    .text._ZN7GpioBus4initEPVh8PinIndexh:000000a2 .Loc.61
+     /tmp/ccTctqsO.s:236    .text._ZN7GpioBus4initEPVh8PinIndexh:000000a2 .Loc.62
+     /tmp/ccTctqsO.s:237    .text._ZN7GpioBus4initEPVh8PinIndexh:000000a2 .Loc.63
+     /tmp/ccTctqsO.s:240    .text._ZN7GpioBus4initEPVh8PinIndexh:000000a6 .Loc.64
+     /tmp/ccTctqsO.s:241    .text._ZN7GpioBus4initEPVh8PinIndexh:000000a6 .Loc.65
+     /tmp/ccTctqsO.s:242    .text._ZN7GpioBus4initEPVh8PinIndexh:000000a6 .Loc.66
+     /tmp/ccTctqsO.s:247    .text._ZN7GpioBus4initEPVh8PinIndexh:000000aa .Loc.67
+     /tmp/ccTctqsO.s:248    .text._ZN7GpioBus4initEPVh8PinIndexh:000000aa .Loc.68
+     /tmp/ccTctqsO.s:253    .text._ZN7GpioBus4initEPVh8PinIndexh:000000b2 .Loc.69
+     /tmp/ccTctqsO.s:254    .text._ZN7GpioBus4initEPVh8PinIndexh:000000b2 .Loc.70
+     /tmp/ccTctqsO.s:256    .text._ZN7GpioBus4initEPVh8PinIndexh:000000b2 .Loc.71
+     /tmp/ccTctqsO.s:261    .text._ZN7GpioBus4initEPVh8PinIndexh:000000b4 .Loc.72
+     /tmp/ccTctqsO.s:267    .text._ZN7GpioBus4initEPVh8PinIndexh:000000ba .Loc.73
+     /tmp/ccTctqsO.s:268    .text._ZN7GpioBus4initEPVh8PinIndexh:000000ba .Loc.74
+     /tmp/ccTctqsO.s:273    .text._ZN7GpioBus4initEPVh8PinIndexh:000000c2 .Loc.75
+     /tmp/ccTctqsO.s:274    .text._ZN7GpioBus4initEPVh8PinIndexh:000000c2 .Loc.76
+     /tmp/ccTctqsO.s:275    .text._ZN7GpioBus4initEPVh8PinIndexh:000000c2 .Loc.77
+     /tmp/ccTctqsO.s:278    .text._ZN7GpioBus4initEPVh8PinIndexh:000000c4 .Loc.78
+     /tmp/ccTctqsO.s:279    .text._ZN7GpioBus4initEPVh8PinIndexh:000000c4 .Loc.79
+     /tmp/ccTctqsO.s:284    .text._ZN7GpioBus4initEPVh8PinIndexh:000000cc .Loc.80
+     /tmp/ccTctqsO.s:285    .text._ZN7GpioBus4initEPVh8PinIndexh:000000cc .Loc.81
+     /tmp/ccTctqsO.s:286    .text._ZN7GpioBus4initEPVh8PinIndexh:000000cc .Loc.82
+     /tmp/ccTctqsO.s:288    .text._ZN7GpioBus4initEPVh8PinIndexh:000000ce L0
+     /tmp/ccTctqsO.s:294    .text._ZN7GpioBus7setModeE7PinMode:00000000 _ZN7GpioBus7setModeE7PinMode
+     /tmp/ccTctqsO.s:297    .text._ZN7GpioBus7setModeE7PinMode:00000000 .Loc.83
+     /tmp/ccTctqsO.s:298    .text._ZN7GpioBus7setModeE7PinMode:00000000 L0
+     /tmp/ccTctqsO.s:303    .text._ZN7GpioBus7setModeE7PinMode:00000000 .Loc.84
+     /tmp/ccTctqsO.s:305    .text._ZN7GpioBus7setModeE7PinMode:00000002 .Loc.85
+     /tmp/ccTctqsO.s:306    .text._ZN7GpioBus7setModeE7PinMode:00000002 .Loc.86
+     /tmp/ccTctqsO.s:307    .text._ZN7GpioBus7setModeE7PinMode:00000002 .Loc.87
+     /tmp/ccTctqsO.s:313    .text._ZN7GpioBus7setModeE7PinMode:0000000a .Loc.88
+     /tmp/ccTctqsO.s:316    .text._ZN7GpioBus7setModeE7PinMode:0000000e .Loc.89
+     /tmp/ccTctqsO.s:323    .text._ZN7GpioBus7setModeE7PinMode:0000001a .Loc.90
+GAS LISTING /tmp/ccTctqsO.s 			page 17
 
 
-     /tmp/cczahLR6.s:324    .text._ZN7GpioBus7setModeE7PinMode:0000001a .Loc.91
-     /tmp/cczahLR6.s:325    .text._ZN7GpioBus7setModeE7PinMode:0000001a .Loc.92
-     /tmp/cczahLR6.s:333    .text._ZN7GpioBus7setModeE7PinMode:00000028 .Loc.93
-     /tmp/cczahLR6.s:334    .text._ZN7GpioBus7setModeE7PinMode:00000028 .Loc.94
-     /tmp/cczahLR6.s:335    .text._ZN7GpioBus7setModeE7PinMode:00000028 .Loc.95
-     /tmp/cczahLR6.s:343    .text._ZN7GpioBus7setModeE7PinMode:00000036 .Loc.96
-     /tmp/cczahLR6.s:344    .text._ZN7GpioBus7setModeE7PinMode:00000036 .Loc.97
-     /tmp/cczahLR6.s:346    .text._ZN7GpioBus7setModeE7PinMode:00000036 .Loc.98
-     /tmp/cczahLR6.s:347    .text._ZN7GpioBus7setModeE7PinMode:00000036 .Loc.99
-     /tmp/cczahLR6.s:350    .text._ZN7GpioBus7setModeE7PinMode:0000003a .Loc.100
-     /tmp/cczahLR6.s:351    .text._ZN7GpioBus7setModeE7PinMode:0000003a .Loc.101
-     /tmp/cczahLR6.s:353    .text._ZN7GpioBus7setModeE7PinMode:0000003a .Loc.102
-     /tmp/cczahLR6.s:356    .text._ZN7GpioBus7setModeE7PinMode:0000003c .Loc.103
-     /tmp/cczahLR6.s:357    .text._ZN7GpioBus7setModeE7PinMode:0000003c .Loc.104
-     /tmp/cczahLR6.s:362    .text._ZN7GpioBus7setModeE7PinMode:00000044 .Loc.105
-     /tmp/cczahLR6.s:363    .text._ZN7GpioBus7setModeE7PinMode:00000044 .Loc.106
-     /tmp/cczahLR6.s:364    .text._ZN7GpioBus7setModeE7PinMode:00000044 .Loc.107
-     /tmp/cczahLR6.s:367    .text._ZN7GpioBus7setModeE7PinMode:00000046 .Loc.108
-     /tmp/cczahLR6.s:368    .text._ZN7GpioBus7setModeE7PinMode:00000046 .Loc.109
-     /tmp/cczahLR6.s:369    .text._ZN7GpioBus7setModeE7PinMode:00000046 .Loc.110
-     /tmp/cczahLR6.s:377    .text._ZN7GpioBus7setModeE7PinMode:00000054 .Loc.111
-     /tmp/cczahLR6.s:378    .text._ZN7GpioBus7setModeE7PinMode:00000054 .Loc.112
-     /tmp/cczahLR6.s:379    .text._ZN7GpioBus7setModeE7PinMode:00000054 .Loc.113
-     /tmp/cczahLR6.s:386    .text._ZN7GpioBus7setModeE7PinMode:00000060 .Loc.114
-     /tmp/cczahLR6.s:387    .text._ZN7GpioBus7setModeE7PinMode:00000060 .Loc.115
-     /tmp/cczahLR6.s:390    .text._ZN7GpioBus7setModeE7PinMode:00000062 .Loc.116
-     /tmp/cczahLR6.s:391    .text._ZN7GpioBus7setModeE7PinMode:00000062 .Loc.117
-     /tmp/cczahLR6.s:392    .text._ZN7GpioBus7setModeE7PinMode:00000062 .Loc.118
-     /tmp/cczahLR6.s:399    .text._ZN7GpioBus7setModeE7PinMode:0000006e .Loc.119
-     /tmp/cczahLR6.s:400    .text._ZN7GpioBus7setModeE7PinMode:0000006e .Loc.120
-     /tmp/cczahLR6.s:402    .text._ZN7GpioBus7setModeE7PinMode:00000070 L0
-     /tmp/cczahLR6.s:408    .text._ZN7GpioBus5writeEh:00000000 _ZN7GpioBus5writeEh
-     /tmp/cczahLR6.s:411    .text._ZN7GpioBus5writeEh:00000000 .Loc.121
-     /tmp/cczahLR6.s:412    .text._ZN7GpioBus5writeEh:00000000 L0
-     /tmp/cczahLR6.s:417    .text._ZN7GpioBus5writeEh:00000000 .Loc.122
-     /tmp/cczahLR6.s:419    .text._ZN7GpioBus5writeEh:00000002 .Loc.123
-     /tmp/cczahLR6.s:420    .text._ZN7GpioBus5writeEh:00000002 .Loc.124
-     /tmp/cczahLR6.s:422    .text._ZN7GpioBus5writeEh:00000002 .Loc.125
-     /tmp/cczahLR6.s:423    .text._ZN7GpioBus5writeEh:00000002 .Loc.126
-     /tmp/cczahLR6.s:429    .text._ZN7GpioBus5writeEh:0000000a .Loc.127
-     /tmp/cczahLR6.s:432    .text._ZN7GpioBus5writeEh:0000000e .Loc.128
-     /tmp/cczahLR6.s:433    .text._ZN7GpioBus5writeEh:0000000e .Loc.129
-     /tmp/cczahLR6.s:436    .text._ZN7GpioBus5writeEh:00000012 .Loc.130
-     /tmp/cczahLR6.s:439    .text._ZN7GpioBus5writeEh:00000014 .Loc.131
-     /tmp/cczahLR6.s:440    .text._ZN7GpioBus5writeEh:00000014 .Loc.132
-     /tmp/cczahLR6.s:443    .text._ZN7GpioBus5writeEh:00000016 .Loc.133
-     /tmp/cczahLR6.s:444    .text._ZN7GpioBus5writeEh:00000016 .Loc.134
-     /tmp/cczahLR6.s:445    .text._ZN7GpioBus5writeEh:00000016 .Loc.135
-     /tmp/cczahLR6.s:447    .text._ZN7GpioBus5writeEh:00000018 .Loc.136
-     /tmp/cczahLR6.s:449    .text._ZN7GpioBus5writeEh:0000001a .Loc.137
-     /tmp/cczahLR6.s:458    .text._ZN7GpioBus5writeEh:00000024 .Loc.138
-     /tmp/cczahLR6.s:463    .text._ZN7GpioBus5writeEh:0000002a .Loc.139
-     /tmp/cczahLR6.s:464    .text._ZN7GpioBus5writeEh:0000002a .Loc.140
-     /tmp/cczahLR6.s:466    .text._ZN7GpioBus5writeEh:0000002c .Loc.141
-     /tmp/cczahLR6.s:467    .text._ZN7GpioBus5writeEh:0000002c .Loc.142
-     /tmp/cczahLR6.s:470    .text._ZN7GpioBus5writeEh:00000030 .Loc.143
-     /tmp/cczahLR6.s:471    .text._ZN7GpioBus5writeEh:00000030 .Loc.144
-GAS LISTING /tmp/cczahLR6.s 			page 18
+     /tmp/ccTctqsO.s:324    .text._ZN7GpioBus7setModeE7PinMode:0000001a .Loc.91
+     /tmp/ccTctqsO.s:325    .text._ZN7GpioBus7setModeE7PinMode:0000001a .Loc.92
+     /tmp/ccTctqsO.s:333    .text._ZN7GpioBus7setModeE7PinMode:00000028 .Loc.93
+     /tmp/ccTctqsO.s:334    .text._ZN7GpioBus7setModeE7PinMode:00000028 .Loc.94
+     /tmp/ccTctqsO.s:335    .text._ZN7GpioBus7setModeE7PinMode:00000028 .Loc.95
+     /tmp/ccTctqsO.s:343    .text._ZN7GpioBus7setModeE7PinMode:00000036 .Loc.96
+     /tmp/ccTctqsO.s:344    .text._ZN7GpioBus7setModeE7PinMode:00000036 .Loc.97
+     /tmp/ccTctqsO.s:346    .text._ZN7GpioBus7setModeE7PinMode:00000036 .Loc.98
+     /tmp/ccTctqsO.s:347    .text._ZN7GpioBus7setModeE7PinMode:00000036 .Loc.99
+     /tmp/ccTctqsO.s:350    .text._ZN7GpioBus7setModeE7PinMode:0000003a .Loc.100
+     /tmp/ccTctqsO.s:351    .text._ZN7GpioBus7setModeE7PinMode:0000003a .Loc.101
+     /tmp/ccTctqsO.s:353    .text._ZN7GpioBus7setModeE7PinMode:0000003a .Loc.102
+     /tmp/ccTctqsO.s:356    .text._ZN7GpioBus7setModeE7PinMode:0000003c .Loc.103
+     /tmp/ccTctqsO.s:357    .text._ZN7GpioBus7setModeE7PinMode:0000003c .Loc.104
+     /tmp/ccTctqsO.s:362    .text._ZN7GpioBus7setModeE7PinMode:00000044 .Loc.105
+     /tmp/ccTctqsO.s:363    .text._ZN7GpioBus7setModeE7PinMode:00000044 .Loc.106
+     /tmp/ccTctqsO.s:364    .text._ZN7GpioBus7setModeE7PinMode:00000044 .Loc.107
+     /tmp/ccTctqsO.s:367    .text._ZN7GpioBus7setModeE7PinMode:00000046 .Loc.108
+     /tmp/ccTctqsO.s:368    .text._ZN7GpioBus7setModeE7PinMode:00000046 .Loc.109
+     /tmp/ccTctqsO.s:369    .text._ZN7GpioBus7setModeE7PinMode:00000046 .Loc.110
+     /tmp/ccTctqsO.s:377    .text._ZN7GpioBus7setModeE7PinMode:00000054 .Loc.111
+     /tmp/ccTctqsO.s:378    .text._ZN7GpioBus7setModeE7PinMode:00000054 .Loc.112
+     /tmp/ccTctqsO.s:379    .text._ZN7GpioBus7setModeE7PinMode:00000054 .Loc.113
+     /tmp/ccTctqsO.s:386    .text._ZN7GpioBus7setModeE7PinMode:00000060 .Loc.114
+     /tmp/ccTctqsO.s:387    .text._ZN7GpioBus7setModeE7PinMode:00000060 .Loc.115
+     /tmp/ccTctqsO.s:390    .text._ZN7GpioBus7setModeE7PinMode:00000062 .Loc.116
+     /tmp/ccTctqsO.s:391    .text._ZN7GpioBus7setModeE7PinMode:00000062 .Loc.117
+     /tmp/ccTctqsO.s:392    .text._ZN7GpioBus7setModeE7PinMode:00000062 .Loc.118
+     /tmp/ccTctqsO.s:399    .text._ZN7GpioBus7setModeE7PinMode:0000006e .Loc.119
+     /tmp/ccTctqsO.s:400    .text._ZN7GpioBus7setModeE7PinMode:0000006e .Loc.120
+     /tmp/ccTctqsO.s:402    .text._ZN7GpioBus7setModeE7PinMode:00000070 L0
+     /tmp/ccTctqsO.s:408    .text._ZN7GpioBus5writeEh:00000000 _ZN7GpioBus5writeEh
+     /tmp/ccTctqsO.s:411    .text._ZN7GpioBus5writeEh:00000000 .Loc.121
+     /tmp/ccTctqsO.s:412    .text._ZN7GpioBus5writeEh:00000000 L0
+     /tmp/ccTctqsO.s:417    .text._ZN7GpioBus5writeEh:00000000 .Loc.122
+     /tmp/ccTctqsO.s:419    .text._ZN7GpioBus5writeEh:00000002 .Loc.123
+     /tmp/ccTctqsO.s:420    .text._ZN7GpioBus5writeEh:00000002 .Loc.124
+     /tmp/ccTctqsO.s:422    .text._ZN7GpioBus5writeEh:00000002 .Loc.125
+     /tmp/ccTctqsO.s:423    .text._ZN7GpioBus5writeEh:00000002 .Loc.126
+     /tmp/ccTctqsO.s:429    .text._ZN7GpioBus5writeEh:0000000a .Loc.127
+     /tmp/ccTctqsO.s:432    .text._ZN7GpioBus5writeEh:0000000e .Loc.128
+     /tmp/ccTctqsO.s:433    .text._ZN7GpioBus5writeEh:0000000e .Loc.129
+     /tmp/ccTctqsO.s:436    .text._ZN7GpioBus5writeEh:00000012 .Loc.130
+     /tmp/ccTctqsO.s:439    .text._ZN7GpioBus5writeEh:00000014 .Loc.131
+     /tmp/ccTctqsO.s:440    .text._ZN7GpioBus5writeEh:00000014 .Loc.132
+     /tmp/ccTctqsO.s:443    .text._ZN7GpioBus5writeEh:00000016 .Loc.133
+     /tmp/ccTctqsO.s:444    .text._ZN7GpioBus5writeEh:00000016 .Loc.134
+     /tmp/ccTctqsO.s:445    .text._ZN7GpioBus5writeEh:00000016 .Loc.135
+     /tmp/ccTctqsO.s:447    .text._ZN7GpioBus5writeEh:00000018 .Loc.136
+     /tmp/ccTctqsO.s:449    .text._ZN7GpioBus5writeEh:0000001a .Loc.137
+     /tmp/ccTctqsO.s:458    .text._ZN7GpioBus5writeEh:00000024 .Loc.138
+     /tmp/ccTctqsO.s:463    .text._ZN7GpioBus5writeEh:0000002a .Loc.139
+     /tmp/ccTctqsO.s:464    .text._ZN7GpioBus5writeEh:0000002a .Loc.140
+     /tmp/ccTctqsO.s:466    .text._ZN7GpioBus5writeEh:0000002c .Loc.141
+     /tmp/ccTctqsO.s:467    .text._ZN7GpioBus5writeEh:0000002c .Loc.142
+     /tmp/ccTctqsO.s:470    .text._ZN7GpioBus5writeEh:00000030 .Loc.143
+     /tmp/ccTctqsO.s:471    .text._ZN7GpioBus5writeEh:00000030 .Loc.144
+GAS LISTING /tmp/ccTctqsO.s 			page 18
 
 
-     /tmp/cczahLR6.s:473    .text._ZN7GpioBus5writeEh:00000030 .Loc.145
-     /tmp/cczahLR6.s:477    .text._ZN7GpioBus5writeEh:00000032 .Loc.146
-     /tmp/cczahLR6.s:478    .text._ZN7GpioBus5writeEh:00000032 .Loc.147
-     /tmp/cczahLR6.s:483    .text._ZN7GpioBus5writeEh:0000003a .Loc.148
-     /tmp/cczahLR6.s:484    .text._ZN7GpioBus5writeEh:0000003a .Loc.149
-     /tmp/cczahLR6.s:485    .text._ZN7GpioBus5writeEh:0000003a .Loc.150
-     /tmp/cczahLR6.s:487    .text._ZN7GpioBus5writeEh:0000003c L0
-     /tmp/cczahLR6.s:63     .text._ZN7GpioBusC2Ev:00000022 L0
-     /tmp/cczahLR6.s:87     .text._ZN7GpioBusD2Ev:00000002 L0
-     /tmp/cczahLR6.s:291    .text._ZN7GpioBus4initEPVh8PinIndexh:000000ce L0
-     /tmp/cczahLR6.s:405    .text._ZN7GpioBus7setModeE7PinMode:00000070 L0
-     /tmp/cczahLR6.s:490    .text._ZN7GpioBus5writeEh:0000003c L0
+     /tmp/ccTctqsO.s:473    .text._ZN7GpioBus5writeEh:00000030 .Loc.145
+     /tmp/ccTctqsO.s:477    .text._ZN7GpioBus5writeEh:00000032 .Loc.146
+     /tmp/ccTctqsO.s:478    .text._ZN7GpioBus5writeEh:00000032 .Loc.147
+     /tmp/ccTctqsO.s:483    .text._ZN7GpioBus5writeEh:0000003a .Loc.148
+     /tmp/ccTctqsO.s:484    .text._ZN7GpioBus5writeEh:0000003a .Loc.149
+     /tmp/ccTctqsO.s:485    .text._ZN7GpioBus5writeEh:0000003a .Loc.150
+     /tmp/ccTctqsO.s:487    .text._ZN7GpioBus5writeEh:0000003c L0
+     /tmp/ccTctqsO.s:63     .text._ZN7GpioBusC2Ev:00000022 L0
+     /tmp/ccTctqsO.s:87     .text._ZN7GpioBusD2Ev:00000002 L0
+     /tmp/ccTctqsO.s:291    .text._ZN7GpioBus4initEPVh8PinIndexh:000000ce L0
+     /tmp/ccTctqsO.s:405    .text._ZN7GpioBus7setModeE7PinMode:00000070 L0
+     /tmp/ccTctqsO.s:490    .text._ZN7GpioBus5writeEh:0000003c L0
                      .debug_frame:00000000 L0
-     /tmp/cczahLR6.s:246    .text._ZN7GpioBus4initEPVh8PinIndexh:000000aa .L9
-     /tmp/cczahLR6.s:266    .text._ZN7GpioBus4initEPVh8PinIndexh:000000ba .L10
-     /tmp/cczahLR6.s:277    .text._ZN7GpioBus4initEPVh8PinIndexh:000000c4 .L11
-     /tmp/cczahLR6.s:147    .text._ZN7GpioBus4initEPVh8PinIndexh:00000034 .L21
-     /tmp/cczahLR6.s:144    .text._ZN7GpioBus4initEPVh8PinIndexh:00000030 .L11
-     /tmp/cczahLR6.s:158    .text._ZN7GpioBus4initEPVh8PinIndexh:00000042 .L22
-     /tmp/cczahLR6.s:155    .text._ZN7GpioBus4initEPVh8PinIndexh:0000003e .L12
-     /tmp/cczahLR6.s:259    .text._ZN7GpioBus4initEPVh8PinIndexh:000000b4 .L3
-     /tmp/cczahLR6.s:255    .text._ZN7GpioBus4initEPVh8PinIndexh:000000b2 .L7
-     /tmp/cczahLR6.s:355    .text._ZN7GpioBus7setModeE7PinMode:0000003c .L18
-     /tmp/cczahLR6.s:366    .text._ZN7GpioBus7setModeE7PinMode:00000046 .L15
-     /tmp/cczahLR6.s:389    .text._ZN7GpioBus7setModeE7PinMode:00000062 .L16
-     /tmp/cczahLR6.s:345    .text._ZN7GpioBus7setModeE7PinMode:00000036 .L17
-     /tmp/cczahLR6.s:476    .text._ZN7GpioBus5writeEh:00000032 .L22
-     /tmp/cczahLR6.s:454    .text._ZN7GpioBus5writeEh:00000020 .L23
-     /tmp/cczahLR6.s:451    .text._ZN7GpioBus5writeEh:0000001c .L13
-     /tmp/cczahLR6.s:1507   .debug_abbrev:00000000 .Ldebug_abbrev0
-     /tmp/cczahLR6.s:2452   .debug_ranges:00000000 .Ldebug_ranges0
-     /tmp/cczahLR6.s:2466   .debug_line:00000000 .Ldebug_line0
-     /tmp/cczahLR6.s:410    .text._ZN7GpioBus5writeEh:00000000 .LFB150
-     /tmp/cczahLR6.s:488    .text._ZN7GpioBus5writeEh:0000003c .LFE150
-     /tmp/cczahLR6.s:2104   .debug_loc:00000004 .LLST7
-     /tmp/cczahLR6.s:2099   .debug_loc:00000000 .LVUS7
-     /tmp/cczahLR6.s:2132   .debug_loc:00000032 .LLST8
-     /tmp/cczahLR6.s:2125   .debug_loc:0000002c .LVUS8
-     /tmp/cczahLR6.s:2167   .debug_loc:0000006e .LLST9
-     /tmp/cczahLR6.s:2156   .debug_loc:00000064 .LVUS9
-     /tmp/cczahLR6.s:296    .text._ZN7GpioBus7setModeE7PinMode:00000000 .LFB149
-     /tmp/cczahLR6.s:403    .text._ZN7GpioBus7setModeE7PinMode:00000070 .LFE149
-     /tmp/cczahLR6.s:2203   .debug_loc:000000b9 .LLST6
-     /tmp/cczahLR6.s:2198   .debug_loc:000000b5 .LVUS6
-     /tmp/cczahLR6.s:92     .text._ZN7GpioBus4initEPVh8PinIndexh:00000000 .LFB148
-     /tmp/cczahLR6.s:289    .text._ZN7GpioBus4initEPVh8PinIndexh:000000ce .LFE148
-     /tmp/cczahLR6.s:2224   .debug_loc:000000e1 .LLST1
-     /tmp/cczahLR6.s:2250   .debug_loc:00000114 .LLST2
-     /tmp/cczahLR6.s:2245   .debug_loc:00000110 .LVUS2
-     /tmp/cczahLR6.s:2282   .debug_loc:00000146 .LLST3
-     /tmp/cczahLR6.s:2271   .debug_loc:0000013c .LVUS3
-     /tmp/cczahLR6.s:2344   .debug_loc:000001ab .LLST4
-     /tmp/cczahLR6.s:2331   .debug_loc:0000019f .LVUS4
-     /tmp/cczahLR6.s:2394   .debug_loc:0000020b .LLST5
-     /tmp/cczahLR6.s:2389   .debug_loc:00000207 .LVUS5
-     /tmp/cczahLR6.s:68     .text._ZN7GpioBusD2Ev:00000000 .LFB146
-     /tmp/cczahLR6.s:83     .text._ZN7GpioBusD2Ev:00000002 .LFE146
-GAS LISTING /tmp/cczahLR6.s 			page 19
+     /tmp/ccTctqsO.s:246    .text._ZN7GpioBus4initEPVh8PinIndexh:000000aa .L9
+     /tmp/ccTctqsO.s:266    .text._ZN7GpioBus4initEPVh8PinIndexh:000000ba .L10
+     /tmp/ccTctqsO.s:277    .text._ZN7GpioBus4initEPVh8PinIndexh:000000c4 .L11
+     /tmp/ccTctqsO.s:147    .text._ZN7GpioBus4initEPVh8PinIndexh:00000034 .L21
+     /tmp/ccTctqsO.s:144    .text._ZN7GpioBus4initEPVh8PinIndexh:00000030 .L11
+     /tmp/ccTctqsO.s:158    .text._ZN7GpioBus4initEPVh8PinIndexh:00000042 .L22
+     /tmp/ccTctqsO.s:155    .text._ZN7GpioBus4initEPVh8PinIndexh:0000003e .L12
+     /tmp/ccTctqsO.s:259    .text._ZN7GpioBus4initEPVh8PinIndexh:000000b4 .L3
+     /tmp/ccTctqsO.s:255    .text._ZN7GpioBus4initEPVh8PinIndexh:000000b2 .L7
+     /tmp/ccTctqsO.s:355    .text._ZN7GpioBus7setModeE7PinMode:0000003c .L18
+     /tmp/ccTctqsO.s:366    .text._ZN7GpioBus7setModeE7PinMode:00000046 .L15
+     /tmp/ccTctqsO.s:389    .text._ZN7GpioBus7setModeE7PinMode:00000062 .L16
+     /tmp/ccTctqsO.s:345    .text._ZN7GpioBus7setModeE7PinMode:00000036 .L17
+     /tmp/ccTctqsO.s:476    .text._ZN7GpioBus5writeEh:00000032 .L22
+     /tmp/ccTctqsO.s:454    .text._ZN7GpioBus5writeEh:00000020 .L23
+     /tmp/ccTctqsO.s:451    .text._ZN7GpioBus5writeEh:0000001c .L13
+     /tmp/ccTctqsO.s:1507   .debug_abbrev:00000000 .Ldebug_abbrev0
+     /tmp/ccTctqsO.s:2452   .debug_ranges:00000000 .Ldebug_ranges0
+     /tmp/ccTctqsO.s:2466   .debug_line:00000000 .Ldebug_line0
+     /tmp/ccTctqsO.s:410    .text._ZN7GpioBus5writeEh:00000000 .LFB151
+     /tmp/ccTctqsO.s:488    .text._ZN7GpioBus5writeEh:0000003c .LFE151
+     /tmp/ccTctqsO.s:2104   .debug_loc:00000004 .LLST7
+     /tmp/ccTctqsO.s:2099   .debug_loc:00000000 .LVUS7
+     /tmp/ccTctqsO.s:2132   .debug_loc:00000032 .LLST8
+     /tmp/ccTctqsO.s:2125   .debug_loc:0000002c .LVUS8
+     /tmp/ccTctqsO.s:2167   .debug_loc:0000006e .LLST9
+     /tmp/ccTctqsO.s:2156   .debug_loc:00000064 .LVUS9
+     /tmp/ccTctqsO.s:296    .text._ZN7GpioBus7setModeE7PinMode:00000000 .LFB150
+     /tmp/ccTctqsO.s:403    .text._ZN7GpioBus7setModeE7PinMode:00000070 .LFE150
+     /tmp/ccTctqsO.s:2203   .debug_loc:000000b9 .LLST6
+     /tmp/ccTctqsO.s:2198   .debug_loc:000000b5 .LVUS6
+     /tmp/ccTctqsO.s:92     .text._ZN7GpioBus4initEPVh8PinIndexh:00000000 .LFB149
+     /tmp/ccTctqsO.s:289    .text._ZN7GpioBus4initEPVh8PinIndexh:000000ce .LFE149
+     /tmp/ccTctqsO.s:2224   .debug_loc:000000e1 .LLST1
+     /tmp/ccTctqsO.s:2250   .debug_loc:00000114 .LLST2
+     /tmp/ccTctqsO.s:2245   .debug_loc:00000110 .LVUS2
+     /tmp/ccTctqsO.s:2282   .debug_loc:00000146 .LLST3
+     /tmp/ccTctqsO.s:2271   .debug_loc:0000013c .LVUS3
+     /tmp/ccTctqsO.s:2344   .debug_loc:000001ab .LLST4
+     /tmp/ccTctqsO.s:2331   .debug_loc:0000019f .LVUS4
+     /tmp/ccTctqsO.s:2394   .debug_loc:0000020b .LLST5
+     /tmp/ccTctqsO.s:2389   .debug_loc:00000207 .LVUS5
+     /tmp/ccTctqsO.s:68     .text._ZN7GpioBusD2Ev:00000000 .LFB147
+     /tmp/ccTctqsO.s:83     .text._ZN7GpioBusD2Ev:00000002 .LFE147
+GAS LISTING /tmp/ccTctqsO.s 			page 19
 
 
-     /tmp/cczahLR6.s:16     .text._ZN7GpioBusC2Ev:00000000 .LFB143
-     /tmp/cczahLR6.s:59     .text._ZN7GpioBusC2Ev:00000022 .LFE143
-     /tmp/cczahLR6.s:2410   .debug_loc:0000022d .LLST0
-     /tmp/cczahLR6.s:2405   .debug_loc:00000229 .LVUS0
-     /tmp/cczahLR6.s:409    .text._ZN7GpioBus5writeEh:00000000 .LVL14
-     /tmp/cczahLR6.s:428    .text._ZN7GpioBus5writeEh:0000000a .LVL16
-     /tmp/cczahLR6.s:457    .text._ZN7GpioBus5writeEh:00000024 .LVL19
-     /tmp/cczahLR6.s:475    .text._ZN7GpioBus5writeEh:00000032 .LVL21
-     /tmp/cczahLR6.s:421    .text._ZN7GpioBus5writeEh:00000002 .LVL15
-     /tmp/cczahLR6.s:438    .text._ZN7GpioBus5writeEh:00000014 .LVL17
-     /tmp/cczahLR6.s:442    .text._ZN7GpioBus5writeEh:00000016 .LVL18
-     /tmp/cczahLR6.s:462    .text._ZN7GpioBus5writeEh:0000002a .LVL20
-     /tmp/cczahLR6.s:295    .text._ZN7GpioBus7setModeE7PinMode:00000000 .LVL12
-     /tmp/cczahLR6.s:312    .text._ZN7GpioBus7setModeE7PinMode:0000000a .LVL13
-     /tmp/cczahLR6.s:97     .text._ZN7GpioBus4initEPVh8PinIndexh:00000002 .LCFI0
-     /tmp/cczahLR6.s:101    .text._ZN7GpioBus4initEPVh8PinIndexh:00000004 .LCFI1
-     /tmp/cczahLR6.s:91     .text._ZN7GpioBus4initEPVh8PinIndexh:00000000 .LVL3
-     /tmp/cczahLR6.s:114    .text._ZN7GpioBus4initEPVh8PinIndexh:0000000a .LVL4
-     /tmp/cczahLR6.s:173    .text._ZN7GpioBus4initEPVh8PinIndexh:00000056 .LVL7
-     /tmp/cczahLR6.s:245    .text._ZN7GpioBus4initEPVh8PinIndexh:000000aa .LVL9
-     /tmp/cczahLR6.s:258    .text._ZN7GpioBus4initEPVh8PinIndexh:000000b4 .LVL10
-     /tmp/cczahLR6.s:265    .text._ZN7GpioBus4initEPVh8PinIndexh:000000ba .LVL11
-     /tmp/cczahLR6.s:166    .text._ZN7GpioBus4initEPVh8PinIndexh:0000004a .LVL6
-     /tmp/cczahLR6.s:212    .text._ZN7GpioBus4initEPVh8PinIndexh:00000082 .LVL8
-     /tmp/cczahLR6.s:162    .text._ZN7GpioBus4initEPVh8PinIndexh:00000048 .LVL5
-     /tmp/cczahLR6.s:15     .text._ZN7GpioBusC2Ev:00000000 .LVL0
-     /tmp/cczahLR6.s:41     .text._ZN7GpioBusC2Ev:00000014 .LVL1
-     /tmp/cczahLR6.s:497    .debug_info:00000000 .Ldebug_info0
+     /tmp/ccTctqsO.s:16     .text._ZN7GpioBusC2Ev:00000000 .LFB144
+     /tmp/ccTctqsO.s:59     .text._ZN7GpioBusC2Ev:00000022 .LFE144
+     /tmp/ccTctqsO.s:2410   .debug_loc:0000022d .LLST0
+     /tmp/ccTctqsO.s:2405   .debug_loc:00000229 .LVUS0
+     /tmp/ccTctqsO.s:409    .text._ZN7GpioBus5writeEh:00000000 .LVL14
+     /tmp/ccTctqsO.s:428    .text._ZN7GpioBus5writeEh:0000000a .LVL16
+     /tmp/ccTctqsO.s:457    .text._ZN7GpioBus5writeEh:00000024 .LVL19
+     /tmp/ccTctqsO.s:475    .text._ZN7GpioBus5writeEh:00000032 .LVL21
+     /tmp/ccTctqsO.s:421    .text._ZN7GpioBus5writeEh:00000002 .LVL15
+     /tmp/ccTctqsO.s:438    .text._ZN7GpioBus5writeEh:00000014 .LVL17
+     /tmp/ccTctqsO.s:442    .text._ZN7GpioBus5writeEh:00000016 .LVL18
+     /tmp/ccTctqsO.s:462    .text._ZN7GpioBus5writeEh:0000002a .LVL20
+     /tmp/ccTctqsO.s:295    .text._ZN7GpioBus7setModeE7PinMode:00000000 .LVL12
+     /tmp/ccTctqsO.s:312    .text._ZN7GpioBus7setModeE7PinMode:0000000a .LVL13
+     /tmp/ccTctqsO.s:97     .text._ZN7GpioBus4initEPVh8PinIndexh:00000002 .LCFI0
+     /tmp/ccTctqsO.s:101    .text._ZN7GpioBus4initEPVh8PinIndexh:00000004 .LCFI1
+     /tmp/ccTctqsO.s:91     .text._ZN7GpioBus4initEPVh8PinIndexh:00000000 .LVL3
+     /tmp/ccTctqsO.s:114    .text._ZN7GpioBus4initEPVh8PinIndexh:0000000a .LVL4
+     /tmp/ccTctqsO.s:173    .text._ZN7GpioBus4initEPVh8PinIndexh:00000056 .LVL7
+     /tmp/ccTctqsO.s:245    .text._ZN7GpioBus4initEPVh8PinIndexh:000000aa .LVL9
+     /tmp/ccTctqsO.s:258    .text._ZN7GpioBus4initEPVh8PinIndexh:000000b4 .LVL10
+     /tmp/ccTctqsO.s:265    .text._ZN7GpioBus4initEPVh8PinIndexh:000000ba .LVL11
+     /tmp/ccTctqsO.s:166    .text._ZN7GpioBus4initEPVh8PinIndexh:0000004a .LVL6
+     /tmp/ccTctqsO.s:212    .text._ZN7GpioBus4initEPVh8PinIndexh:00000082 .LVL8
+     /tmp/ccTctqsO.s:162    .text._ZN7GpioBus4initEPVh8PinIndexh:00000048 .LVL5
+     /tmp/ccTctqsO.s:15     .text._ZN7GpioBusC2Ev:00000000 .LVL0
+     /tmp/ccTctqsO.s:41     .text._ZN7GpioBusC2Ev:00000014 .LVL1
+     /tmp/ccTctqsO.s:497    .debug_info:00000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 __umulhisi3

@@ -10,17 +10,24 @@
 
 #include "funsape/peripheral/usart0.hpp"
 
+#include "funsape/peripheral/twi.hpp"
+#include "funsape/device/ssd1306.hpp"
+
 //Macro definitions ------------------------------------------------------------
 
 #define defineBit(var, pos, value) ((uint8_t)((var & (1 << pos)) ? (var & (~((!((bool_t)value)) << pos)) ) : (var | (bool_t)value << pos)))
 #define MSB(x) ((uint8_t)((x >> 8) & 0xFF))
 #define LSB(x) ((uint8_t)(x & 0xFF))
 #define ABS(x) ((x>0) ? (x) : (-x))
+#define MAX(a,b) ((a>b) ? (a) : (b))
+#define MIN(a,b) ((b>a) ? (a) : (b))
+#define SIGN(a) ((a>0) ? (1) : ((a<0) ? (-1) : (0)))
+
 #define ENABLE_BUTTON 1
 #define LEFT_BUTTON 4
 #define RIGHT_BUTTON 2
 
-#define PACKET_SIZE 10
+#define PACKET_SIZE 16
 
 //Data structure declarations --------------------------------------------------
 
@@ -39,11 +46,15 @@ enum BT_STATE{
 //Function prototype definition ------------------------------------------------
 
 uint32_t get_millis();
+uint32_t micros();
 uint8_t spi_writeRead(uint8_t data);
 void transcieve_packets(uint8_t *packet, uint8_t *recv_packet, size_t len);
-void format_packet(uint16_t x, uint16_t y, uint8_t buttons, int16_t scroll, OP_MODE mode, uint8_t *packet);
-void convert_recieved(int16_t *roll, int16_t *pitch, \
-     int16_t *yaw, BT_STATE *state, uint8_t *packet);
+
+void format_packet(uint16_t x, uint16_t y, uint8_t buttons, \
+    int16_t scroll, OP_MODE mode, uint8_t *packet);
+
+void convert_recieved(int32_t *roll, int32_t *pitch, \
+    int32_t *yaw, int16_t *accel_x, BT_STATE *state, uint8_t *packet);
 
 // GLOBAL VARIABLE DECLARATIONS ================================================
 
@@ -52,8 +63,13 @@ GpioPin led;
 GpioBus buttons;
 GpioPin slave_select_esp;
 
+//OLED Display -----------------------------------------------------------------
+Ssd1306 display;
+volatile bool update_display_flag = false;
+volatile bool clear_display_flag = false;
+
 //Timer counter ----------------------------------------------------------------
-volatile uint32_t timer_millis = 0;
+volatile uint32_t timer1_overflows = 0;
 
 //Button and debounce variables ------------------------------------------------
 volatile bool_t button_pending_change = false;
@@ -65,6 +81,8 @@ volatile bool spi_flag = false;
 
 //STATE
 OP_MODE current_state = IDLE_MODE;
+
+
 
 int main(){
     
@@ -112,20 +130,20 @@ int main(){
 
     // Config Timer 0 --- 1ms --------------------------------------------------
     {
-    timer0.init(Timer0::Mode::CTC_OCRA, //Colocamos quantos ciclos pra chegar na interrupção
-            Timer0::ClockSource::PRESCALER_64);//Velocidade que e dividida a cpu
-    timer0.setCompareAValue(249); //Fala quantos ticks precisam para chegar a 10ms
+    timer0.init(Timer0::Mode::NORMAL, //Colocamos quantos ciclos pra chegar na interrupção
+            Timer0::ClockSource::PRESCALER_1024);//Velocidade que e dividida a cpu
+    timer0.setCompareAValue(155); //Fala quantos ticks precisam para chegar a 10ms
     timer0.clearCompareAInterruptRequest(); //Limpar o pre interrupt
     timer0.activateCompareAInterrupt();
     }
 
     // Config Timer 1 --- 5ms -------------------------------------------------
     {
-    timer1.init(Timer1::Mode::CTC_OCRA, //Colocamos quantos ciclos pra chegar na interrupção
-            Timer1::ClockSource::PRESCALER_64);//Velocidade que e dividida a cpu
-    timer1.setCompareAValue(1250*4); // 50ms
-    timer1.clearCompareAInterruptRequest(); //Limpar o pre interrupt
-    timer1.activateCompareAInterrupt();
+    timer1.init(Timer1::Mode::NORMAL, //Colocamos quantos ciclos pra chegar na interrupção
+            Timer1::ClockSource::PRESCALER_8);//Velocidade que e dividida a cpu
+    // timer1.setCompareAValue(1250*4); // 50ms
+    timer1.clearOverflowInterruptRequest(); //Limpar o pre interrupt
+    timer1.activateOverflowInterrupt();
     }
     
     // Config Uart --- Debug ---------------------------------------------------
@@ -141,15 +159,37 @@ int main(){
     // Set enable interrupts ---------------------------------------------------
     sei();
 
+    // Config OLED SSD1306 --- Display I2C -------------------------------------
+    // (TWI a 400kHz, buffer de 64 bytes; interrupcoes ja habilitadas com sei())
+    {
+    twi.init(400000, 64);
+    display.init(&twi);                 // 128x64, endereco 0x3C por padrao
+
+    display.setUpsideDown(true);
+    display.clearScreen();
+    
+    // display.drawRect(0, 5, 128, 3);     // contorno cobrindo 3 paginas
+    // display.fillRect(4, 6, 40, 1, true);// barra solida
+    }
+
+
+
     // Local variable declarations ---------------------------------------------
-    uint16_t x {0}, y {32000};
-    uint8_t packet[10];
-    uint8_t recv_packet[10];
-    int16_t pitch {0}, roll {0}, yaw {0};
+    uint16_t x {0}, y {0};
+    uint8_t packet[PACKET_SIZE], recv_packet[PACKET_SIZE];
+    int32_t pitch {0}, roll {0}, yaw {0};
+    int16_t accel_x {0};
+    float scroll_accumulator {0};
+
+
     BT_STATE state = BT_DISCONNECTED;
     uint8_t last_debounced_buttons = 0;
 
-    uint8_t scroll_count = 0;
+    uint8_t idle_count = 0;
+
+    uint32_t last_timestamp = {0};
+
+    uint32_t last_mouse_button_pressed {0};
 
     printf("Inicializando Atmega\n");
 
@@ -160,7 +200,7 @@ int main(){
             
             uint32_t current_milis = get_millis();
             for(uint8_t i = 0; i < 3; i++)
-                if((current_milis - button_last_changed[i]) > 25){
+                if((current_milis - button_last_changed[i]) > 15){
                     debounced_buttons = defineBit(debounced_buttons, i, !(bool)(button_data & (1 << i)));
                 }else{
                     button_pending_change = true;
@@ -168,46 +208,107 @@ int main(){
         }
 
         if(((debounced_buttons ^ last_debounced_buttons) & ENABLE_BUTTON) && (debounced_buttons & ENABLE_BUTTON)){
-            current_state = (current_state == IDLE_MODE) ? SCROLL_MODE : IDLE_MODE;
+            current_state = (current_state == IDLE_MODE) ? CURSOR_MODE : IDLE_MODE;
+        }
+        if(((debounced_buttons ^ last_debounced_buttons) & (RIGHT_BUTTON | LEFT_BUTTON)) && (debounced_buttons & (RIGHT_BUTTON | LEFT_BUTTON))){
+            last_mouse_button_pressed = get_millis();
+        }
+
+        // printf("State: %s", (current_state == IDLE_MODE) ? "IDLE" : ((current_state == CURSOR_MODE) ? "CURSOR" : "SCROLL"));
+        if(update_display_flag){
+            display.clearScreen();
+            display.setCursor(0, 7);
+            display.setTextSize(1);
+            char formatted_state[22];
+            sprintf_P(formatted_state, PSTR("State: %S|BLE: %S"), 
+                (current_state == IDLE_MODE) ? PSTR("IDLE") : 
+                (current_state == CURSOR_MODE) ? PSTR("CURSOR") : PSTR("SCROLL"),
+                (state == BT_CONNECTED) ? PSTR("OK") : PSTR("NO"));
+            display.print(formatted_state);
+            
+            int8_t bar_roll = MIN(MAX((roll/1410), -63), 63);
+            display.fillRect(63+MIN(0, bar_roll), 0, (cuint8_t)ABS(bar_roll), 1, true);                    
+            display.setCursor(0, 7);
+            
+            int8_t bar_pitch = MIN(MAX((pitch/1410), -63), 63);
+            display.fillRect(63+MIN(0, bar_pitch), 1, (cuint8_t)ABS(bar_pitch), 1, true);                    
+            
+            int8_t bar_yaw = MIN(MAX((yaw/1410), -63), 63);
+            display.fillRect(63+MIN(0, bar_yaw), 2, (cuint8_t)ABS(bar_yaw), 1, true);                    
+
+            update_display_flag = false;
         }
 
         switch (current_state){
             case IDLE_MODE:
-
-                break;
-            case CURSOR_MODE:
-                x = (yaw+450)*36;
-                y = (-roll-1700)*82;
-
                 if(spi_flag){
-                        format_packet(x, y, debounced_buttons, 0, current_state, packet);
+                    spi_flag=false;
+                    idle_count++;
+                    if(idle_count >= 5){
+                        
+                        idle_count = 0;
+                        format_packet(x, y, 0, 0, current_state, packet);
                         transcieve_packets(packet, recv_packet, PACKET_SIZE);
-                        convert_recieved(&roll, &pitch, &yaw, &state, recv_packet);
+                        convert_recieved(&roll, &pitch, &yaw, &accel_x, &state, recv_packet);
                         spi_flag = false;
             
-                        // printf("State: %u  Pitch: %i.%u  Roll: %i.%u  Yaw: %i.%u SENDING: X: %u  Y: %u\r\n", state, pitch/10, ABS(pitch%10), roll/10, ABS(roll%10), yaw/10, ABS(yaw%10), x, y);
-                        // printf("Buttons: %u %u %u\r\n", (bool_t)(debounced_buttons&(1<<0)), (bool_t)(debounced_buttons&(1<<1)), (bool_t)(debounced_buttons&(1<<2)));
-                }
-                    
-                break;
-            case SCROLL_MODE:
-                if(spi_flag){
-                    scroll_count++;
-                    // printf("Scroll count: %u\r\n", scroll_count);
-                    if(scroll_count >= 10){
-                        scroll_count = 0;
-                        int16_t scroll = (-roll-1700)/20;
-
-                        format_packet(0, 0, debounced_buttons, scroll, current_state, packet);
-                        transcieve_packets(packet, recv_packet, PACKET_SIZE);
-                        convert_recieved(&roll, &pitch, &yaw, &state, recv_packet);
-                        spi_flag = false;
-            
-                        printf("State: %u  Pitch: %i.%u  Roll: %i.%u  Yaw: %i.%u SENDING: SCROLL: %i\r\n", state, pitch/10, ABS(pitch%10), roll/10, ABS(roll%10), yaw/10, ABS(yaw%10), scroll);
+                        // printf("State: %u  Pitch: %i.%u  Roll: %i.%u  Yaw: %i.%u SENDING: SCROLL: %i\r\n", state, pitch/10, ABS(pitch%10), roll/10, ABS(roll%10), yaw/10, ABS(yaw%10), scroll);
                         // printf("Buttons: %u %u %u\r\n", (bool_t)(debounced_buttons&(1<<0)), (bool_t)(debounced_buttons&(1<<1)), (bool_t)(debounced_buttons&(1<<2)));
                     }
                 }
+                break;
+            case CURSOR_MODE:
+                if (pitch > 60000){current_state = SCROLL_MODE; break;}
 
+                {
+
+                    if(get_millis() - last_mouse_button_pressed > 50){
+                        int32_t raw_x = ((int32_t)roll*4096)/10000;
+                        int32_t raw_y = ((int32_t)pitch*6553)/10000;
+                        
+                        x = (int16_t)MAX(MIN(raw_x, 32767), 0);
+                        y = 32767 - (int16_t)MAX(MIN(raw_y, 32767), 0);
+
+                    }
+
+                    if(spi_flag){
+                            format_packet(x, y, debounced_buttons, 0, current_state, packet);
+                            transcieve_packets(packet, recv_packet, PACKET_SIZE);
+                            convert_recieved(&roll, &pitch, &yaw, &accel_x, &state, recv_packet);
+                            spi_flag = false;
+                
+                            // printf("State: %u  Pitch: %li  Roll: %li  Yaw: %li SENDING: X: %u  Y: %u\r\n", state, pitch, roll, yaw, x, y);
+                            // printf("Buttons: %u %u %u\r\n", (bool_t)(debounced_buttons&(1<<0)), (bool_t)(debounced_buttons&(1<<1)), (bool_t)(debounced_buttons&(1<<2)));
+                    }
+                }        
+                break;
+            case SCROLL_MODE:
+                if (pitch < 60000){current_state = CURSOR_MODE; break;}
+
+                {
+                    uint16_t dt = (micros() - last_timestamp);
+                    int16_t delta = (1000 - accel_x);
+                    if(ABS(delta) < 20) delta = 0;
+
+                    
+                    scroll_accumulator += (((float)(delta*(int16_t)dt))/1000000.0f);
+                    
+                    last_timestamp = micros();
+                    
+                    if(spi_flag){
+                        int8_t scroll_packet = SIGN(delta)*MIN(ABS(scroll_accumulator), 1);
+                        format_packet(x, y, debounced_buttons, scroll_packet, current_state, packet);
+                        transcieve_packets(packet, recv_packet, PACKET_SIZE);
+                        convert_recieved(&roll, &pitch, &yaw, &accel_x, &state, recv_packet);
+                        
+                        printf("State: %u  Pitch: %li  Roll: %li  Yaw: %li Accel_x: %d.%u Delta: %d SENDING: SCROLL: %d\r\n", state, pitch, roll, yaw, accel_x/10, ABS(accel_x%10), delta, scroll_packet);
+                        // printf("Buttons: %u %u %u\r\n", (bool_t)(debounced_buttons&(1<<0)), (bool_t)(debounced_buttons&(1<<1)), (bool_t)(debounced_buttons&(1<<2)));
+
+                        scroll_accumulator -= scroll_accumulator/10;
+
+                        spi_flag=false;
+                    }
+                }
                 break;
             default:
                 ;
@@ -251,24 +352,24 @@ void format_packet(uint16_t x, uint16_t y, uint8_t buttons, int16_t scroll, OP_M
   packet[7] = (scroll >> 8) & 0xFF;
   packet[8] = scroll & 0xFF;
   packet[9] = 0;
+  packet[10] = 0;
+  packet[11] = 0;
+  packet[12] = 0;
+  packet[13] = 0;
+  packet[14] = 0;
+  packet[15] = 0;
 }
 
-void convert_recieved(int16_t *roll, int16_t *pitch, int16_t *yaw, BT_STATE *state, uint8_t *packet){
-  if(packet[3] != 0x68) return;
+void convert_recieved(int32_t *roll, int32_t *pitch, int32_t *yaw, int16_t *accel_x, BT_STATE *state, uint8_t *packet){
+  if(packet[0] != 0x68) return;
 
-  *state = (BT_STATE)packet[0];
-  *pitch = (packet[1] << 8) + packet[2];
-  *roll = (packet[4] << 8) + packet[5];
-  *yaw = (packet[6] << 8) + packet[7];
+  *state = (BT_STATE)packet[1];
+  *pitch = ((uint32_t)packet[2] << 24) + ((uint32_t)packet[3] << 16) + ((uint32_t)packet[4] << 8) + (uint32_t)packet[5];
+  *roll = ((uint32_t)packet[6] << 24) + ((uint32_t)packet[7] << 16) + ((uint32_t)packet[8] << 8) + (uint32_t)packet[9];
+  *yaw = ((uint32_t)packet[10] << 24) + ((uint32_t)packet[11] << 16) + ((uint32_t)packet[12] << 8) + (uint32_t)packet[13];
+  *accel_x = (packet[14] << 8) + packet[15];
 }
 
-uint32_t get_millis() {
-    uint32_t m;
-    cli(); // Desativa interrupções temporariamente para leitura atômica
-    m = timer_millis;
-    sei(); // Reativa interrupções
-    return m;
-}
 
 void pcint1InterruptCallback(void){
     uint8_t button_data = buttons.read();
@@ -282,13 +383,70 @@ void pcint1InterruptCallback(void){
 
 }
 
-void timer1CompareACallback(void){
+void timer1OverflowCallback(void){
     //A cada 50ms
-    spi_flag = true;    
+    timer1_overflows++;
+}
+
+uint32_t micros() {
+    uint32_t overflows;
+    uint16_t ticks;
+
+    // Disable interrupts briefly to ensure atomic read of 16-bit register and 32-bit counter
+    cli();
+    overflows = timer1_overflows;
+    ticks = timer1.getCounterValue();;
     
+    // Check if an overflow just occurred but hasn't been handled yet
+    if ((TIFR1 & (1 << TOV1)) && (ticks < 65535)) {
+        overflows++;
+        ticks = timer1.getCounterValue(); // Re-read to guarantee accurate timing
+    }
+    sei();
+
+    // Each overflow is 65536 ticks. Each tick is 0.5 microseconds.
+    // Total microseconds = (overflows * 65536 * 0.5) + (ticks * 0.5)
+    return (overflows * 32768) + (ticks >> 1);
+}
+
+uint32_t get_millis() {
+    uint32_t overflows;
+    uint16_t ticks;
+
+    cli();
+    overflows = timer1_overflows;
+    ticks = timer1.getCounterValue();
+    if ((TIFR1 & (1 << TOV1)) && (ticks < 65535)) {
+        overflows++;
+        ticks = timer1.getCounterValue();
+    }
+    sei();
+
+    // Em vez de calcular microssegundos, calculamos direto o milissegundo aproximado.
+    // 32768 / 1024 = 32 (Exato!) -> overflows * 32
+    // ticks / 2048 -> equivale a ticks >> 11
+    return (overflows * 32) + (ticks >> 11);
 }
 
 void timer0CompareACallback(void){
-    //A cada 1 ms
-    timer_millis++;
+    //A cada 10 ms
+    static uint8_t counter_spi = 0;
+    static uint8_t counter_display = 0;
+    static uint8_t counter_clear_display = 0;
+
+    counter_spi++;
+    if(counter_spi == 1){
+        spi_flag = true;    
+        counter_spi = 0;
+    }
+
+    if(counter_display++ == 10){
+        update_display_flag = true;
+        counter_display = 0;
+    }
+
+    if(counter_clear_display++ == 50){
+        clear_display_flag = true;
+        counter_clear_display = 0;
+    }
 }

@@ -1,0 +1,61 @@
+//!
+//! \file           example.cpp_
+//! \brief          Exemplo minimo: mostrar texto no OLED SSD1306 (I2C) com a FunSAPE
+//! \details        Mostra um texto por alguns segundos e depois troca o texto,
+//!                     repetindo indefinidamente.
+//!
+//!                 Ligacao no ATmega328p: SDA = A4/PC4, SCL = A5/PC5 (com pull-ups
+//!                     no barramento). Endereco I2C padrao do modulo: 0x3C.
+//!
+//!                 Obs.: o nome termina em ".cpp_" de proposito para NAO entrar no
+//!                     build (o Makefile compila todo "*.cpp"). Para usar, renomeie
+//!                     para "example.cpp" e garanta que exista apenas um main() no
+//!                     projeto (ex.: mova/renomeie o main.cpp atual).
+//!
+
+#define F_CPU 16000000UL
+
+#include "funsape/globalDefines.hpp"
+#include "funsape/peripheral/twi.hpp"
+#include "funsape/device/ssd1306.hpp"
+
+// Objeto global do display
+Ssd1306 display;
+
+int main(void)
+{
+    // Configura o barramento I2C (TWI) a 400 kHz com buffer de 64 bytes
+    twi.init(400000, 64);
+
+    // O TWI e' orientado a interrupcao -> habilita interrupcoes globais
+    sei();
+
+    // Inicializa o OLED 128x64 no endereco 0x3C (padrao)
+    display.init(&twi);
+
+    while(true) {
+        // --- Primeiro texto ---
+        display.clearScreen();
+        display.setTextSize(1);
+        display.setCursor(0, 0);
+        display.print("Ola, mundo!");
+        display.setTextSize(2);
+        display.setCursor(0, 2);
+        display.print("FunSAPE");
+
+        delayMs(2000);              // mantem na tela por 2 segundos
+
+        // --- Segundo texto ---
+        display.clearScreen();
+        display.setTextSize(1);
+        display.setCursor(0, 0);
+        display.print("Texto mudou :)");
+        display.setTextSize(2);
+        display.setCursor(0, 3);
+        display.print("SSD1306");
+
+        delayMs(2000);              // mantem na tela por 2 segundos
+    }
+
+    return 0;
+}

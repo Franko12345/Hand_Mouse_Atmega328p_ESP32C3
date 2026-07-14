@@ -1,4 +1,4 @@
-GAS LISTING /tmp/ccOTZ7bf.s 			page 1
+GAS LISTING /tmp/ccG6pUK6.s 			page 1
 
 
    1               		.file	"timer0.cpp"
@@ -15,7 +15,7 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
   12               	.global	_ZN6Timer0C2Ev
   14               	_ZN6Timer0C2Ev:
   15               	.LVL0:
-  16               	.LFB145:
+  16               	.LFB146:
    1:funsape/peripheral/timer0.cpp **** //!
    2:funsape/peripheral/timer0.cpp **** //! ****************************************************************************
    3:funsape/peripheral/timer0.cpp **** //! @file           timer0.cpp
@@ -58,7 +58,7 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
   40:funsape/peripheral/timer0.cpp **** //!
   41:funsape/peripheral/timer0.cpp **** 
   42:funsape/peripheral/timer0.cpp **** // =============================================================================
-GAS LISTING /tmp/ccOTZ7bf.s 			page 2
+GAS LISTING /tmp/ccG6pUK6.s 			page 2
 
 
   43:funsape/peripheral/timer0.cpp **** // System file dependencies
@@ -118,7 +118,7 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
   20               	/* frame size = 0 */
   21               	/* stack size = 0 */
   22               	.L__stack_usage = 0
-GAS LISTING /tmp/ccOTZ7bf.s 			page 3
+GAS LISTING /tmp/ccG6pUK6.s 			page 3
 
 
   23               		.loc 1 93 1 is_stmt 0 view .LVU1
@@ -159,12 +159,12 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
   45               		.loc 1 106 1 is_stmt 0 view .LVU11
   46 0010 0895      		ret
   47               		.cfi_endproc
-  48               	.LFE145:
+  48               	.LFE146:
   50               	.global	_ZN6Timer0C1Ev
   51               		.set	_ZN6Timer0C1Ev,_ZN6Timer0C2Ev
   52               		.section	.text._Z41__static_initialization_and_destruction_0v,"ax",@progbits
   54               	_Z41__static_initialization_and_destruction_0v:
-  55               	.LFB160:
+  55               	.LFB161:
  107:funsape/peripheral/timer0.cpp **** 
  108:funsape/peripheral/timer0.cpp **** Timer0::~Timer0()
  109:funsape/peripheral/timer0.cpp **** {
@@ -178,7 +178,7 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  117:funsape/peripheral/timer0.cpp **** 
  118:funsape/peripheral/timer0.cpp **** // =============================================================================
  119:funsape/peripheral/timer0.cpp **** // Class own methods - Public
-GAS LISTING /tmp/ccOTZ7bf.s 			page 4
+GAS LISTING /tmp/ccG6pUK6.s 			page 4
 
 
  120:funsape/peripheral/timer0.cpp **** // =============================================================================
@@ -238,7 +238,7 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  174:funsape/peripheral/timer0.cpp ****     // Update class members
  175:funsape/peripheral/timer0.cpp ****     this->_clockSource      = clockSource_p;
  176:funsape/peripheral/timer0.cpp **** 
-GAS LISTING /tmp/ccOTZ7bf.s 			page 5
+GAS LISTING /tmp/ccG6pUK6.s 			page 5
 
 
  177:funsape/peripheral/timer0.cpp ****     // Returns successfully
@@ -298,7 +298,7 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  231:funsape/peripheral/timer0.cpp ****     // Returns successfully
  232:funsape/peripheral/timer0.cpp ****     this->_lastError = Error::NONE;
  233:funsape/peripheral/timer0.cpp ****     debugMessage(Error::NONE, Debug::CodeIndex::TIMER0_MODULE);
-GAS LISTING /tmp/ccOTZ7bf.s 			page 6
+GAS LISTING /tmp/ccG6pUK6.s 			page 6
 
 
  234:funsape/peripheral/timer0.cpp ****     return true;
@@ -358,7 +358,7 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  288:funsape/peripheral/timer0.cpp **** {
  289:funsape/peripheral/timer0.cpp ****     timer0CompareBCallback();
  290:funsape/peripheral/timer0.cpp **** }
-GAS LISTING /tmp/ccOTZ7bf.s 			page 7
+GAS LISTING /tmp/ccG6pUK6.s 			page 7
 
 
  291:funsape/peripheral/timer0.cpp **** 
@@ -382,12 +382,12 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
   68               		.loc 1 295 1 view .LVU14
   69 0008 0895      		ret
   70               		.cfi_endproc
-  71               	.LFE160:
+  71               	.LFE161:
   73               		.section	.text._ZN6Timer0D2Ev,"ax",@progbits
   74               	.global	_ZN6Timer0D2Ev
   76               	_ZN6Timer0D2Ev:
   77               	.LVL3:
-  78               	.LFB148:
+  78               	.LFB149:
  108:funsape/peripheral/timer0.cpp **** {
   79               		.loc 1 108 1 is_stmt 1 view -0
   80               		.cfi_startproc
@@ -408,17 +408,17 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
   91               		.loc 1 116 1 is_stmt 0 view .LVU19
   92 0000 0895      		ret
   93               		.cfi_endproc
-  94               	.LFE148:
+  94               	.LFE149:
   96               	.global	_ZN6Timer0D1Ev
   97               		.set	_ZN6Timer0D1Ev,_ZN6Timer0D2Ev
   98               		.section	.text._ZN6Timer04initENS_4ModeENS_11ClockSourceE,"ax",@progbits
   99               	.global	_ZN6Timer04initENS_4ModeENS_11ClockSourceE
  101               	_ZN6Timer04initENS_4ModeENS_11ClockSourceE:
  102               	.LVL4:
- 103               	.LFB150:
+ 103               	.LFB151:
  125:funsape/peripheral/timer0.cpp ****     // Mark passage for debugging purpose
  104               		.loc 1 125 1 is_stmt 1 view -0
-GAS LISTING /tmp/ccOTZ7bf.s 			page 8
+GAS LISTING /tmp/ccG6pUK6.s 			page 8
 
 
  105               		.cfi_startproc
@@ -478,7 +478,7 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  141               		.loc 1 138 5 is_stmt 1 view .LVU38
  139:funsape/peripheral/timer0.cpp ****     // Configure clock source
  142               		.loc 1 139 5 view .LVU39
-GAS LISTING /tmp/ccOTZ7bf.s 			page 9
+GAS LISTING /tmp/ccG6pUK6.s 			page 9
 
 
  139:funsape/peripheral/timer0.cpp ****     // Configure clock source
@@ -538,7 +538,7 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  151:funsape/peripheral/timer0.cpp **** 
  179               		.loc 1 151 29 view .LVU58
  180 002c 8160      		ori r24,lo8(1<<0)
-GAS LISTING /tmp/ccOTZ7bf.s 			page 10
+GAS LISTING /tmp/ccG6pUK6.s 			page 10
 
 
  181 002e 8083      		st Z,r24
@@ -558,12 +558,12 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  190               	/* epilogue start */
  191 0036 0895      		ret
  192               		.cfi_endproc
- 193               	.LFE150:
+ 193               	.LFE151:
  195               		.section	.text._ZN6Timer014setClockSourceENS_11ClockSourceE,"ax",@progbits
  196               	.global	_ZN6Timer014setClockSourceENS_11ClockSourceE
  198               	_ZN6Timer014setClockSourceENS_11ClockSourceE:
  199               	.LVL15:
- 200               	.LFB151:
+ 200               	.LFB152:
  160:funsape/peripheral/timer0.cpp ****     // Mark passage for debugging purpose
  201               		.loc 1 160 1 is_stmt 1 view -0
  202               		.cfi_startproc
@@ -598,7 +598,7 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  222               	.LVL18:
  169:funsape/peripheral/timer0.cpp **** 
  223               		.loc 1 169 5 is_stmt 0 view .LVU74
-GAS LISTING /tmp/ccOTZ7bf.s 			page 11
+GAS LISTING /tmp/ccG6pUK6.s 			page 11
 
 
  224 0008 862B      		or r24,r22
@@ -634,12 +634,12 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  243               		.loc 1 181 1 view .LVU85
  244 0014 0895      		ret
  245               		.cfi_endproc
- 246               	.LFE151:
+ 246               	.LFE152:
  248               		.section	.text._ZN6Timer07setModeENS_4ModeE,"ax",@progbits
  249               	.global	_ZN6Timer07setModeENS_4ModeE
  251               	_ZN6Timer07setModeENS_4ModeE:
  252               	.LVL21:
- 253               	.LFB152:
+ 253               	.LFB153:
  184:funsape/peripheral/timer0.cpp ****     // Mark passage for debugging purpose
  254               		.loc 1 184 1 is_stmt 1 view -0
  255               		.cfi_startproc
@@ -658,7 +658,7 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  264               		.loc 1 189 25 is_stmt 0 view .LVU90
  265 0002 94B5      		in r25,0x24
  266               	.LVL22:
-GAS LISTING /tmp/ccOTZ7bf.s 			page 12
+GAS LISTING /tmp/ccG6pUK6.s 			page 12
 
 
  190:funsape/peripheral/timer0.cpp ****     uint8_t aux8 = 0;
@@ -718,7 +718,7 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  303 001e 24BD      		out 0x24,r18
  202:funsape/peripheral/timer0.cpp **** 
  304               		.loc 1 202 5 is_stmt 1 view .LVU109
-GAS LISTING /tmp/ccOTZ7bf.s 			page 13
+GAS LISTING /tmp/ccG6pUK6.s 			page 13
 
 
  202:funsape/peripheral/timer0.cpp **** 
@@ -748,12 +748,12 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  320               		.loc 1 211 1 view .LVU118
  321 002a 0895      		ret
  322               		.cfi_endproc
- 323               	.LFE152:
+ 323               	.LFE153:
  325               		.section	.text._ZN6Timer013setOutputModeENS_10OutputModeES0_,"ax",@progbits
  326               	.global	_ZN6Timer013setOutputModeENS_10OutputModeES0_
  328               	_ZN6Timer013setOutputModeENS_10OutputModeES0_:
  329               	.LVL29:
- 330               	.LFB153:
+ 330               	.LFB154:
  214:funsape/peripheral/timer0.cpp ****     // Mark passage for debugging purpose
  331               		.loc 1 214 1 is_stmt 1 view -0
  332               		.cfi_startproc
@@ -778,7 +778,7 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  345               		.loc 1 223 5 view .LVU125
  346 0004 9F73      		andi r25,lo8(63)
  347               	.LVL31:
-GAS LISTING /tmp/ccOTZ7bf.s 			page 14
+GAS LISTING /tmp/ccG6pUK6.s 			page 14
 
 
  223:funsape/peripheral/timer0.cpp ****     setMaskOffset(auxTccr0A, ((uint8_t)compA_p), MCU_TIMER0_OUTPUT_A_MODE_BIT_POS);
@@ -838,7 +838,7 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  383               		.loc 1 235 1 is_stmt 0 view .LVU144
  384 001e 81E0      		ldi r24,lo8(1)
  385               	.LVL37:
-GAS LISTING /tmp/ccOTZ7bf.s 			page 15
+GAS LISTING /tmp/ccG6pUK6.s 			page 15
 
 
  386               	/* epilogue start */
@@ -846,11 +846,11 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  387               		.loc 1 235 1 view .LVU145
  388 0020 0895      		ret
  389               		.cfi_endproc
- 390               	.LFE153:
+ 390               	.LFE154:
  392               		.section	.text._Z22timer0CompareACallbackv,"ax",@progbits
  393               		.weak	_Z22timer0CompareACallbackv
  395               	_Z22timer0CompareACallbackv:
- 396               	.LFB154:
+ 396               	.LFB155:
  260:funsape/peripheral/timer0.cpp ****     return;
  397               		.loc 1 260 1 is_stmt 1 view -0
  398               		.cfi_startproc
@@ -865,11 +865,11 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  405               		.loc 1 262 1 is_stmt 0 view .LVU148
  406 0000 0895      		ret
  407               		.cfi_endproc
- 408               	.LFE154:
+ 408               	.LFE155:
  410               		.section	.text._Z22timer0CompareBCallbackv,"ax",@progbits
  411               		.weak	_Z22timer0CompareBCallbackv
  413               	_Z22timer0CompareBCallbackv:
- 414               	.LFB155:
+ 414               	.LFB156:
  265:funsape/peripheral/timer0.cpp ****     return;
  415               		.loc 1 265 1 is_stmt 1 view -0
  416               		.cfi_startproc
@@ -884,11 +884,11 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  423               		.loc 1 267 1 is_stmt 0 view .LVU151
  424 0000 0895      		ret
  425               		.cfi_endproc
- 426               	.LFE155:
+ 426               	.LFE156:
  428               		.section	.text._Z22timer0OverflowCallbackv,"ax",@progbits
  429               		.weak	_Z22timer0OverflowCallbackv
  431               	_Z22timer0OverflowCallbackv:
- 432               	.LFB156:
+ 432               	.LFB157:
  270:funsape/peripheral/timer0.cpp ****     return;
  433               		.loc 1 270 1 is_stmt 1 view -0
  434               		.cfi_startproc
@@ -898,7 +898,7 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  438               	.L__stack_usage = 0
  271:funsape/peripheral/timer0.cpp **** }
  439               		.loc 1 271 5 view .LVU153
-GAS LISTING /tmp/ccOTZ7bf.s 			page 16
+GAS LISTING /tmp/ccG6pUK6.s 			page 16
 
 
  440               	/* epilogue start */
@@ -906,11 +906,11 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  441               		.loc 1 272 1 is_stmt 0 view .LVU154
  442 0000 0895      		ret
  443               		.cfi_endproc
- 444               	.LFE156:
+ 444               	.LFE157:
  446               		.section	.text.__vector_14,"ax",@progbits
  447               	.global	__vector_14
  449               	__vector_14:
- 450               	.LFB157:
+ 450               	.LFB158:
  283:funsape/peripheral/timer0.cpp ****     timer0CompareACallback();
  451               		.loc 1 283 1 is_stmt 1 view -0
  452               		.cfi_startproc
@@ -958,7 +958,7 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  494               		.cfi_def_cfa_offset 12
  495               		.cfi_offset 25, -11
  496 001a AF93      		push r26
-GAS LISTING /tmp/ccOTZ7bf.s 			page 17
+GAS LISTING /tmp/ccG6pUK6.s 			page 17
 
 
  497               	.LCFI10:
@@ -1007,18 +1007,18 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  537 0044 1F90      		pop r1
  538 0046 1895      		reti
  539               		.cfi_endproc
- 540               	.LFE157:
+ 540               	.LFE158:
  542               		.section	.text.__vector_15,"ax",@progbits
  543               	.global	__vector_15
  545               	__vector_15:
- 546               	.LFB158:
+ 546               	.LFB159:
  288:funsape/peripheral/timer0.cpp ****     timer0CompareBCallback();
  547               		.loc 1 288 1 is_stmt 1 view -0
  548               		.cfi_startproc
  549 0000 1F92      		push r1
  550               	.LCFI14:
  551               		.cfi_def_cfa_offset 3
-GAS LISTING /tmp/ccOTZ7bf.s 			page 18
+GAS LISTING /tmp/ccG6pUK6.s 			page 18
 
 
  552               		.cfi_offset 1, -2
@@ -1078,7 +1078,7 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  606               		.cfi_def_cfa_offset 16
  607               		.cfi_offset 31, -15
  608               	/* prologue: Signal */
-GAS LISTING /tmp/ccOTZ7bf.s 			page 19
+GAS LISTING /tmp/ccG6pUK6.s 			page 19
 
 
  609               	/* frame size = 0 */
@@ -1111,11 +1111,11 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  633 0044 1F90      		pop r1
  634 0046 1895      		reti
  635               		.cfi_endproc
- 636               	.LFE158:
+ 636               	.LFE159:
  638               		.section	.text.__vector_16,"ax",@progbits
  639               	.global	__vector_16
  641               	__vector_16:
- 642               	.LFB159:
+ 642               	.LFB160:
  293:funsape/peripheral/timer0.cpp ****     timer0OverflowCallback();
  643               		.loc 1 293 1 is_stmt 1 view -0
  644               		.cfi_startproc
@@ -1138,7 +1138,7 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  661               	.LCFI31:
  662               		.cfi_def_cfa_offset 6
  663               		.cfi_offset 19, -5
-GAS LISTING /tmp/ccOTZ7bf.s 			page 20
+GAS LISTING /tmp/ccG6pUK6.s 			page 20
 
 
  664 000e 4F93      		push r20
@@ -1198,7 +1198,7 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  716 002a BF91      		pop r27
  717 002c AF91      		pop r26
  718 002e 9F91      		pop r25
-GAS LISTING /tmp/ccOTZ7bf.s 			page 21
+GAS LISTING /tmp/ccG6pUK6.s 			page 21
 
 
  719 0030 8F91      		pop r24
@@ -1214,10 +1214,10 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  729 0044 1F90      		pop r1
  730 0046 1895      		reti
  731               		.cfi_endproc
- 732               	.LFE159:
+ 732               	.LFE160:
  734               		.section	.text._GLOBAL__sub_I__ZN6Timer09_instanceE,"ax",@progbits
  736               	_GLOBAL__sub_I__ZN6Timer09_instanceE:
- 737               	.LFB162:
+ 737               	.LFB163:
  738               		.loc 1 295 1 is_stmt 1 view -0
  739               		.cfi_startproc
  740               	/* prologue: function */
@@ -1230,7 +1230,7 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  747               	/* epilogue start */
  748 0004 0895      		ret
  749               		.cfi_endproc
- 750               	.LFE162:
+ 750               	.LFE163:
  752               		.global __do_global_ctors
  753               		.section .ctors,"a",@progbits
  754               		.p2align	1
@@ -1246,402 +1246,402 @@ GAS LISTING /tmp/ccOTZ7bf.s 			page 1
  765               		.file 3 "funsape/peripheral/../config/atmega328p.hpp"
  766               		.file 4 "funsape/peripheral/../globalDefines.hpp"
  767               		.file 5 "funsape/peripheral/timer0.hpp"
-GAS LISTING /tmp/ccOTZ7bf.s 			page 22
+GAS LISTING /tmp/ccG6pUK6.s 			page 22
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 timer0.cpp
-     /tmp/ccOTZ7bf.s:2      *ABS*:0000003e __SP_H__
-     /tmp/ccOTZ7bf.s:3      *ABS*:0000003d __SP_L__
-     /tmp/ccOTZ7bf.s:4      *ABS*:0000003f __SREG__
-     /tmp/ccOTZ7bf.s:5      *ABS*:00000000 __tmp_reg__
-     /tmp/ccOTZ7bf.s:6      *ABS*:00000001 __zero_reg__
-     /tmp/ccOTZ7bf.s:14     .text._ZN6Timer0C2Ev:00000000 _ZN6Timer0C2Ev
-     /tmp/ccOTZ7bf.s:17     .text._ZN6Timer0C2Ev:00000000 .Loc.0
-     /tmp/ccOTZ7bf.s:18     .text._ZN6Timer0C2Ev:00000000 L0
-     /tmp/ccOTZ7bf.s:23     .text._ZN6Timer0C2Ev:00000000 .Loc.1
-     /tmp/ccOTZ7bf.s:26     .text._ZN6Timer0C2Ev:00000002 .Loc.2
-     /tmp/ccOTZ7bf.s:29     .text._ZN6Timer0C2Ev:00000004 .Loc.3
-     /tmp/ccOTZ7bf.s:32     .text._ZN6Timer0C2Ev:00000008 .Loc.4
-     /tmp/ccOTZ7bf.s:35     .text._ZN6Timer0C2Ev:0000000c .Loc.5
-     /tmp/ccOTZ7bf.s:37     .text._ZN6Timer0C2Ev:0000000e .Loc.6
-     /tmp/ccOTZ7bf.s:39     .text._ZN6Timer0C2Ev:00000010 .Loc.7
-     /tmp/ccOTZ7bf.s:40     .text._ZN6Timer0C2Ev:00000010 .Loc.8
-     /tmp/ccOTZ7bf.s:41     .text._ZN6Timer0C2Ev:00000010 .Loc.9
-     /tmp/ccOTZ7bf.s:42     .text._ZN6Timer0C2Ev:00000010 .Loc.10
-     /tmp/ccOTZ7bf.s:45     .text._ZN6Timer0C2Ev:00000010 .Loc.11
-     /tmp/ccOTZ7bf.s:47     .text._ZN6Timer0C2Ev:00000012 L0
-     /tmp/ccOTZ7bf.s:14     .text._ZN6Timer0C2Ev:00000000 _ZN6Timer0C1Ev
-     /tmp/ccOTZ7bf.s:54     .text._Z41__static_initialization_and_destruction_0v:00000000 _Z41__static_initialization_and_destruction_0v
-     /tmp/ccOTZ7bf.s:56     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.12
-     /tmp/ccOTZ7bf.s:57     .text._Z41__static_initialization_and_destruction_0v:00000000 L0
-     /tmp/ccOTZ7bf.s:62     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.13
-     /tmp/ccOTZ7bf.s:760    .bss._ZN6Timer09_instanceE:00000000 _ZN6Timer09_instanceE
-     /tmp/ccOTZ7bf.s:68     .text._Z41__static_initialization_and_destruction_0v:00000008 .Loc.14
-     /tmp/ccOTZ7bf.s:70     .text._Z41__static_initialization_and_destruction_0v:0000000a L0
-     /tmp/ccOTZ7bf.s:76     .text._ZN6Timer0D2Ev:00000000 _ZN6Timer0D2Ev
-     /tmp/ccOTZ7bf.s:79     .text._ZN6Timer0D2Ev:00000000 .Loc.15
-     /tmp/ccOTZ7bf.s:80     .text._ZN6Timer0D2Ev:00000000 L0
-     /tmp/ccOTZ7bf.s:86     .text._ZN6Timer0D2Ev:00000000 .Loc.16
-     /tmp/ccOTZ7bf.s:87     .text._ZN6Timer0D2Ev:00000000 .Loc.17
-     /tmp/ccOTZ7bf.s:88     .text._ZN6Timer0D2Ev:00000000 .Loc.18
-     /tmp/ccOTZ7bf.s:91     .text._ZN6Timer0D2Ev:00000000 .Loc.19
-     /tmp/ccOTZ7bf.s:93     .text._ZN6Timer0D2Ev:00000002 L0
-     /tmp/ccOTZ7bf.s:76     .text._ZN6Timer0D2Ev:00000000 _ZN6Timer0D1Ev
-     /tmp/ccOTZ7bf.s:101    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000000 _ZN6Timer04initENS_4ModeENS_11ClockSourceE
-     /tmp/ccOTZ7bf.s:104    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000000 .Loc.20
-     /tmp/ccOTZ7bf.s:105    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000000 L0
-     /tmp/ccOTZ7bf.s:110    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000000 .Loc.21
-     /tmp/ccOTZ7bf.s:112    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000002 .Loc.22
-     /tmp/ccOTZ7bf.s:113    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000002 .Loc.23
-     /tmp/ccOTZ7bf.s:114    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000002 .Loc.24
-     /tmp/ccOTZ7bf.s:117    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000004 .Loc.25
-     /tmp/ccOTZ7bf.s:118    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000004 .Loc.26
-     /tmp/ccOTZ7bf.s:121    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000006 .Loc.27
-     /tmp/ccOTZ7bf.s:122    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000006 .Loc.28
-     /tmp/ccOTZ7bf.s:123    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000006 .Loc.29
-     /tmp/ccOTZ7bf.s:124    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000006 .Loc.30
-     /tmp/ccOTZ7bf.s:127    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000008 .Loc.31
-     /tmp/ccOTZ7bf.s:128    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000008 .Loc.32
-     /tmp/ccOTZ7bf.s:129    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000008 .Loc.33
-     /tmp/ccOTZ7bf.s:132    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000000a .Loc.34
-     /tmp/ccOTZ7bf.s:133    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000000a .Loc.35
-GAS LISTING /tmp/ccOTZ7bf.s 			page 23
+     /tmp/ccG6pUK6.s:2      *ABS*:0000003e __SP_H__
+     /tmp/ccG6pUK6.s:3      *ABS*:0000003d __SP_L__
+     /tmp/ccG6pUK6.s:4      *ABS*:0000003f __SREG__
+     /tmp/ccG6pUK6.s:5      *ABS*:00000000 __tmp_reg__
+     /tmp/ccG6pUK6.s:6      *ABS*:00000001 __zero_reg__
+     /tmp/ccG6pUK6.s:14     .text._ZN6Timer0C2Ev:00000000 _ZN6Timer0C2Ev
+     /tmp/ccG6pUK6.s:17     .text._ZN6Timer0C2Ev:00000000 .Loc.0
+     /tmp/ccG6pUK6.s:18     .text._ZN6Timer0C2Ev:00000000 L0
+     /tmp/ccG6pUK6.s:23     .text._ZN6Timer0C2Ev:00000000 .Loc.1
+     /tmp/ccG6pUK6.s:26     .text._ZN6Timer0C2Ev:00000002 .Loc.2
+     /tmp/ccG6pUK6.s:29     .text._ZN6Timer0C2Ev:00000004 .Loc.3
+     /tmp/ccG6pUK6.s:32     .text._ZN6Timer0C2Ev:00000008 .Loc.4
+     /tmp/ccG6pUK6.s:35     .text._ZN6Timer0C2Ev:0000000c .Loc.5
+     /tmp/ccG6pUK6.s:37     .text._ZN6Timer0C2Ev:0000000e .Loc.6
+     /tmp/ccG6pUK6.s:39     .text._ZN6Timer0C2Ev:00000010 .Loc.7
+     /tmp/ccG6pUK6.s:40     .text._ZN6Timer0C2Ev:00000010 .Loc.8
+     /tmp/ccG6pUK6.s:41     .text._ZN6Timer0C2Ev:00000010 .Loc.9
+     /tmp/ccG6pUK6.s:42     .text._ZN6Timer0C2Ev:00000010 .Loc.10
+     /tmp/ccG6pUK6.s:45     .text._ZN6Timer0C2Ev:00000010 .Loc.11
+     /tmp/ccG6pUK6.s:47     .text._ZN6Timer0C2Ev:00000012 L0
+     /tmp/ccG6pUK6.s:14     .text._ZN6Timer0C2Ev:00000000 _ZN6Timer0C1Ev
+     /tmp/ccG6pUK6.s:54     .text._Z41__static_initialization_and_destruction_0v:00000000 _Z41__static_initialization_and_destruction_0v
+     /tmp/ccG6pUK6.s:56     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.12
+     /tmp/ccG6pUK6.s:57     .text._Z41__static_initialization_and_destruction_0v:00000000 L0
+     /tmp/ccG6pUK6.s:62     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.13
+     /tmp/ccG6pUK6.s:760    .bss._ZN6Timer09_instanceE:00000000 _ZN6Timer09_instanceE
+     /tmp/ccG6pUK6.s:68     .text._Z41__static_initialization_and_destruction_0v:00000008 .Loc.14
+     /tmp/ccG6pUK6.s:70     .text._Z41__static_initialization_and_destruction_0v:0000000a L0
+     /tmp/ccG6pUK6.s:76     .text._ZN6Timer0D2Ev:00000000 _ZN6Timer0D2Ev
+     /tmp/ccG6pUK6.s:79     .text._ZN6Timer0D2Ev:00000000 .Loc.15
+     /tmp/ccG6pUK6.s:80     .text._ZN6Timer0D2Ev:00000000 L0
+     /tmp/ccG6pUK6.s:86     .text._ZN6Timer0D2Ev:00000000 .Loc.16
+     /tmp/ccG6pUK6.s:87     .text._ZN6Timer0D2Ev:00000000 .Loc.17
+     /tmp/ccG6pUK6.s:88     .text._ZN6Timer0D2Ev:00000000 .Loc.18
+     /tmp/ccG6pUK6.s:91     .text._ZN6Timer0D2Ev:00000000 .Loc.19
+     /tmp/ccG6pUK6.s:93     .text._ZN6Timer0D2Ev:00000002 L0
+     /tmp/ccG6pUK6.s:76     .text._ZN6Timer0D2Ev:00000000 _ZN6Timer0D1Ev
+     /tmp/ccG6pUK6.s:101    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000000 _ZN6Timer04initENS_4ModeENS_11ClockSourceE
+     /tmp/ccG6pUK6.s:104    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000000 .Loc.20
+     /tmp/ccG6pUK6.s:105    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000000 L0
+     /tmp/ccG6pUK6.s:110    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000000 .Loc.21
+     /tmp/ccG6pUK6.s:112    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000002 .Loc.22
+     /tmp/ccG6pUK6.s:113    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000002 .Loc.23
+     /tmp/ccG6pUK6.s:114    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000002 .Loc.24
+     /tmp/ccG6pUK6.s:117    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000004 .Loc.25
+     /tmp/ccG6pUK6.s:118    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000004 .Loc.26
+     /tmp/ccG6pUK6.s:121    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000006 .Loc.27
+     /tmp/ccG6pUK6.s:122    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000006 .Loc.28
+     /tmp/ccG6pUK6.s:123    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000006 .Loc.29
+     /tmp/ccG6pUK6.s:124    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000006 .Loc.30
+     /tmp/ccG6pUK6.s:127    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000008 .Loc.31
+     /tmp/ccG6pUK6.s:128    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000008 .Loc.32
+     /tmp/ccG6pUK6.s:129    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000008 .Loc.33
+     /tmp/ccG6pUK6.s:132    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000000a .Loc.34
+     /tmp/ccG6pUK6.s:133    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000000a .Loc.35
+GAS LISTING /tmp/ccG6pUK6.s 			page 23
 
 
-     /tmp/ccOTZ7bf.s:134    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000000a .Loc.36
-     /tmp/ccOTZ7bf.s:137    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000000c .Loc.37
-     /tmp/ccOTZ7bf.s:141    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000010 .Loc.38
-     /tmp/ccOTZ7bf.s:142    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000010 .Loc.39
-     /tmp/ccOTZ7bf.s:143    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000010 .Loc.40
-     /tmp/ccOTZ7bf.s:152    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000001e .Loc.41
-     /tmp/ccOTZ7bf.s:153    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000001e .Loc.42
-     /tmp/ccOTZ7bf.s:154    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000001e .Loc.43
-     /tmp/ccOTZ7bf.s:157    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000020 .Loc.44
-     /tmp/ccOTZ7bf.s:158    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000020 .Loc.45
-     /tmp/ccOTZ7bf.s:159    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000020 .Loc.46
-     /tmp/ccOTZ7bf.s:162    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000022 .Loc.47
-     /tmp/ccOTZ7bf.s:163    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000022 .Loc.48
-     /tmp/ccOTZ7bf.s:164    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000022 .Loc.49
-     /tmp/ccOTZ7bf.s:166    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000024 .Loc.50
-     /tmp/ccOTZ7bf.s:167    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000024 .Loc.51
-     /tmp/ccOTZ7bf.s:169    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000026 .Loc.52
-     /tmp/ccOTZ7bf.s:170    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000026 .Loc.53
-     /tmp/ccOTZ7bf.s:172    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000028 .Loc.54
-     /tmp/ccOTZ7bf.s:173    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000028 .Loc.55
-     /tmp/ccOTZ7bf.s:175    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000002a .Loc.56
-     /tmp/ccOTZ7bf.s:176    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000002a .Loc.57
-     /tmp/ccOTZ7bf.s:179    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000002c .Loc.58
-     /tmp/ccOTZ7bf.s:182    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000030 .Loc.59
-     /tmp/ccOTZ7bf.s:183    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000030 .Loc.60
-     /tmp/ccOTZ7bf.s:186    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000034 .Loc.61
-     /tmp/ccOTZ7bf.s:187    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000034 .Loc.62
-     /tmp/ccOTZ7bf.s:188    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000034 .Loc.63
-     /tmp/ccOTZ7bf.s:192    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000038 L0
-     /tmp/ccOTZ7bf.s:198    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000000 _ZN6Timer014setClockSourceENS_11ClockSourceE
-     /tmp/ccOTZ7bf.s:201    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000000 .Loc.64
-     /tmp/ccOTZ7bf.s:202    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000000 L0
-     /tmp/ccOTZ7bf.s:207    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000000 .Loc.65
-     /tmp/ccOTZ7bf.s:209    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000002 .Loc.66
-     /tmp/ccOTZ7bf.s:210    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000002 .Loc.67
-     /tmp/ccOTZ7bf.s:211    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000002 .Loc.68
-     /tmp/ccOTZ7bf.s:214    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000004 .Loc.69
-     /tmp/ccOTZ7bf.s:215    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000004 .Loc.70
-     /tmp/ccOTZ7bf.s:218    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000006 .Loc.71
-     /tmp/ccOTZ7bf.s:219    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000006 .Loc.72
-     /tmp/ccOTZ7bf.s:220    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000006 .Loc.73
-     /tmp/ccOTZ7bf.s:223    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000008 .Loc.74
-     /tmp/ccOTZ7bf.s:226    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:0000000a .Loc.75
-     /tmp/ccOTZ7bf.s:227    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:0000000a .Loc.76
-     /tmp/ccOTZ7bf.s:228    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:0000000a .Loc.77
-     /tmp/ccOTZ7bf.s:230    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:0000000c .Loc.78
-     /tmp/ccOTZ7bf.s:231    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:0000000c .Loc.79
-     /tmp/ccOTZ7bf.s:233    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:0000000e .Loc.80
-     /tmp/ccOTZ7bf.s:234    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:0000000e .Loc.81
-     /tmp/ccOTZ7bf.s:237    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000012 .Loc.82
-     /tmp/ccOTZ7bf.s:238    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000012 .Loc.83
-     /tmp/ccOTZ7bf.s:239    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000012 .Loc.84
-     /tmp/ccOTZ7bf.s:243    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000014 .Loc.85
-     /tmp/ccOTZ7bf.s:245    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000016 L0
-     /tmp/ccOTZ7bf.s:251    .text._ZN6Timer07setModeENS_4ModeE:00000000 _ZN6Timer07setModeENS_4ModeE
-     /tmp/ccOTZ7bf.s:254    .text._ZN6Timer07setModeENS_4ModeE:00000000 .Loc.86
-     /tmp/ccOTZ7bf.s:255    .text._ZN6Timer07setModeENS_4ModeE:00000000 L0
-GAS LISTING /tmp/ccOTZ7bf.s 			page 24
+     /tmp/ccG6pUK6.s:134    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000000a .Loc.36
+     /tmp/ccG6pUK6.s:137    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000000c .Loc.37
+     /tmp/ccG6pUK6.s:141    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000010 .Loc.38
+     /tmp/ccG6pUK6.s:142    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000010 .Loc.39
+     /tmp/ccG6pUK6.s:143    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000010 .Loc.40
+     /tmp/ccG6pUK6.s:152    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000001e .Loc.41
+     /tmp/ccG6pUK6.s:153    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000001e .Loc.42
+     /tmp/ccG6pUK6.s:154    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000001e .Loc.43
+     /tmp/ccG6pUK6.s:157    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000020 .Loc.44
+     /tmp/ccG6pUK6.s:158    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000020 .Loc.45
+     /tmp/ccG6pUK6.s:159    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000020 .Loc.46
+     /tmp/ccG6pUK6.s:162    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000022 .Loc.47
+     /tmp/ccG6pUK6.s:163    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000022 .Loc.48
+     /tmp/ccG6pUK6.s:164    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000022 .Loc.49
+     /tmp/ccG6pUK6.s:166    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000024 .Loc.50
+     /tmp/ccG6pUK6.s:167    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000024 .Loc.51
+     /tmp/ccG6pUK6.s:169    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000026 .Loc.52
+     /tmp/ccG6pUK6.s:170    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000026 .Loc.53
+     /tmp/ccG6pUK6.s:172    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000028 .Loc.54
+     /tmp/ccG6pUK6.s:173    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000028 .Loc.55
+     /tmp/ccG6pUK6.s:175    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000002a .Loc.56
+     /tmp/ccG6pUK6.s:176    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000002a .Loc.57
+     /tmp/ccG6pUK6.s:179    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000002c .Loc.58
+     /tmp/ccG6pUK6.s:182    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000030 .Loc.59
+     /tmp/ccG6pUK6.s:183    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000030 .Loc.60
+     /tmp/ccG6pUK6.s:186    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000034 .Loc.61
+     /tmp/ccG6pUK6.s:187    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000034 .Loc.62
+     /tmp/ccG6pUK6.s:188    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000034 .Loc.63
+     /tmp/ccG6pUK6.s:192    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000038 L0
+     /tmp/ccG6pUK6.s:198    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000000 _ZN6Timer014setClockSourceENS_11ClockSourceE
+     /tmp/ccG6pUK6.s:201    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000000 .Loc.64
+     /tmp/ccG6pUK6.s:202    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000000 L0
+     /tmp/ccG6pUK6.s:207    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000000 .Loc.65
+     /tmp/ccG6pUK6.s:209    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000002 .Loc.66
+     /tmp/ccG6pUK6.s:210    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000002 .Loc.67
+     /tmp/ccG6pUK6.s:211    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000002 .Loc.68
+     /tmp/ccG6pUK6.s:214    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000004 .Loc.69
+     /tmp/ccG6pUK6.s:215    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000004 .Loc.70
+     /tmp/ccG6pUK6.s:218    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000006 .Loc.71
+     /tmp/ccG6pUK6.s:219    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000006 .Loc.72
+     /tmp/ccG6pUK6.s:220    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000006 .Loc.73
+     /tmp/ccG6pUK6.s:223    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000008 .Loc.74
+     /tmp/ccG6pUK6.s:226    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:0000000a .Loc.75
+     /tmp/ccG6pUK6.s:227    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:0000000a .Loc.76
+     /tmp/ccG6pUK6.s:228    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:0000000a .Loc.77
+     /tmp/ccG6pUK6.s:230    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:0000000c .Loc.78
+     /tmp/ccG6pUK6.s:231    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:0000000c .Loc.79
+     /tmp/ccG6pUK6.s:233    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:0000000e .Loc.80
+     /tmp/ccG6pUK6.s:234    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:0000000e .Loc.81
+     /tmp/ccG6pUK6.s:237    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000012 .Loc.82
+     /tmp/ccG6pUK6.s:238    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000012 .Loc.83
+     /tmp/ccG6pUK6.s:239    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000012 .Loc.84
+     /tmp/ccG6pUK6.s:243    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000014 .Loc.85
+     /tmp/ccG6pUK6.s:245    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000016 L0
+     /tmp/ccG6pUK6.s:251    .text._ZN6Timer07setModeENS_4ModeE:00000000 _ZN6Timer07setModeENS_4ModeE
+     /tmp/ccG6pUK6.s:254    .text._ZN6Timer07setModeENS_4ModeE:00000000 .Loc.86
+     /tmp/ccG6pUK6.s:255    .text._ZN6Timer07setModeENS_4ModeE:00000000 L0
+GAS LISTING /tmp/ccG6pUK6.s 			page 24
 
 
-     /tmp/ccOTZ7bf.s:260    .text._ZN6Timer07setModeENS_4ModeE:00000000 .Loc.87
-     /tmp/ccOTZ7bf.s:262    .text._ZN6Timer07setModeENS_4ModeE:00000002 .Loc.88
-     /tmp/ccOTZ7bf.s:263    .text._ZN6Timer07setModeENS_4ModeE:00000002 .Loc.89
-     /tmp/ccOTZ7bf.s:264    .text._ZN6Timer07setModeENS_4ModeE:00000002 .Loc.90
-     /tmp/ccOTZ7bf.s:267    .text._ZN6Timer07setModeENS_4ModeE:00000004 .Loc.91
-     /tmp/ccOTZ7bf.s:268    .text._ZN6Timer07setModeENS_4ModeE:00000004 .Loc.92
-     /tmp/ccOTZ7bf.s:271    .text._ZN6Timer07setModeENS_4ModeE:00000006 .Loc.93
-     /tmp/ccOTZ7bf.s:272    .text._ZN6Timer07setModeENS_4ModeE:00000006 .Loc.94
-     /tmp/ccOTZ7bf.s:273    .text._ZN6Timer07setModeENS_4ModeE:00000006 .Loc.95
-     /tmp/ccOTZ7bf.s:274    .text._ZN6Timer07setModeENS_4ModeE:00000006 .Loc.96
-     /tmp/ccOTZ7bf.s:277    .text._ZN6Timer07setModeENS_4ModeE:00000008 .Loc.97
-     /tmp/ccOTZ7bf.s:278    .text._ZN6Timer07setModeENS_4ModeE:00000008 .Loc.98
-     /tmp/ccOTZ7bf.s:279    .text._ZN6Timer07setModeENS_4ModeE:00000008 .Loc.99
-     /tmp/ccOTZ7bf.s:282    .text._ZN6Timer07setModeENS_4ModeE:0000000a .Loc.100
-     /tmp/ccOTZ7bf.s:283    .text._ZN6Timer07setModeENS_4ModeE:0000000a .Loc.101
-     /tmp/ccOTZ7bf.s:284    .text._ZN6Timer07setModeENS_4ModeE:0000000a .Loc.102
-     /tmp/ccOTZ7bf.s:289    .text._ZN6Timer07setModeENS_4ModeE:00000010 .Loc.103
-     /tmp/ccOTZ7bf.s:290    .text._ZN6Timer07setModeENS_4ModeE:00000010 .Loc.104
-     /tmp/ccOTZ7bf.s:291    .text._ZN6Timer07setModeENS_4ModeE:00000010 .Loc.105
-     /tmp/ccOTZ7bf.s:300    .text._ZN6Timer07setModeENS_4ModeE:0000001e .Loc.106
-     /tmp/ccOTZ7bf.s:301    .text._ZN6Timer07setModeENS_4ModeE:0000001e .Loc.107
-     /tmp/ccOTZ7bf.s:302    .text._ZN6Timer07setModeENS_4ModeE:0000001e .Loc.108
-     /tmp/ccOTZ7bf.s:304    .text._ZN6Timer07setModeENS_4ModeE:00000020 .Loc.109
-     /tmp/ccOTZ7bf.s:305    .text._ZN6Timer07setModeENS_4ModeE:00000020 .Loc.110
-     /tmp/ccOTZ7bf.s:307    .text._ZN6Timer07setModeENS_4ModeE:00000022 .Loc.111
-     /tmp/ccOTZ7bf.s:308    .text._ZN6Timer07setModeENS_4ModeE:00000022 .Loc.112
-     /tmp/ccOTZ7bf.s:310    .text._ZN6Timer07setModeENS_4ModeE:00000024 .Loc.113
-     /tmp/ccOTZ7bf.s:311    .text._ZN6Timer07setModeENS_4ModeE:00000024 .Loc.114
-     /tmp/ccOTZ7bf.s:314    .text._ZN6Timer07setModeENS_4ModeE:00000028 .Loc.115
-     /tmp/ccOTZ7bf.s:315    .text._ZN6Timer07setModeENS_4ModeE:00000028 .Loc.116
-     /tmp/ccOTZ7bf.s:316    .text._ZN6Timer07setModeENS_4ModeE:00000028 .Loc.117
-     /tmp/ccOTZ7bf.s:320    .text._ZN6Timer07setModeENS_4ModeE:0000002a .Loc.118
-     /tmp/ccOTZ7bf.s:322    .text._ZN6Timer07setModeENS_4ModeE:0000002c L0
-     /tmp/ccOTZ7bf.s:328    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000000 _ZN6Timer013setOutputModeENS_10OutputModeES0_
-     /tmp/ccOTZ7bf.s:331    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000000 .Loc.119
-     /tmp/ccOTZ7bf.s:332    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000000 L0
-     /tmp/ccOTZ7bf.s:337    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000000 .Loc.120
-     /tmp/ccOTZ7bf.s:339    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000002 .Loc.121
-     /tmp/ccOTZ7bf.s:340    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000002 .Loc.122
-     /tmp/ccOTZ7bf.s:341    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000002 .Loc.123
-     /tmp/ccOTZ7bf.s:344    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000004 .Loc.124
-     /tmp/ccOTZ7bf.s:345    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000004 .Loc.125
-     /tmp/ccOTZ7bf.s:348    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000006 .Loc.126
-     /tmp/ccOTZ7bf.s:349    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000006 .Loc.127
-     /tmp/ccOTZ7bf.s:350    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000006 .Loc.128
-     /tmp/ccOTZ7bf.s:353    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000008 .Loc.129
-     /tmp/ccOTZ7bf.s:359    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000010 .Loc.130
-     /tmp/ccOTZ7bf.s:360    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000010 .Loc.131
-     /tmp/ccOTZ7bf.s:361    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000010 .Loc.132
-     /tmp/ccOTZ7bf.s:364    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000012 .Loc.133
-     /tmp/ccOTZ7bf.s:365    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000012 .Loc.134
-     /tmp/ccOTZ7bf.s:366    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000012 .Loc.135
-     /tmp/ccOTZ7bf.s:369    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000014 .Loc.136
-     /tmp/ccOTZ7bf.s:373    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000018 .Loc.137
-     /tmp/ccOTZ7bf.s:374    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000018 .Loc.138
-     /tmp/ccOTZ7bf.s:375    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000018 .Loc.139
-     /tmp/ccOTZ7bf.s:377    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:0000001a .Loc.140
-GAS LISTING /tmp/ccOTZ7bf.s 			page 25
+     /tmp/ccG6pUK6.s:260    .text._ZN6Timer07setModeENS_4ModeE:00000000 .Loc.87
+     /tmp/ccG6pUK6.s:262    .text._ZN6Timer07setModeENS_4ModeE:00000002 .Loc.88
+     /tmp/ccG6pUK6.s:263    .text._ZN6Timer07setModeENS_4ModeE:00000002 .Loc.89
+     /tmp/ccG6pUK6.s:264    .text._ZN6Timer07setModeENS_4ModeE:00000002 .Loc.90
+     /tmp/ccG6pUK6.s:267    .text._ZN6Timer07setModeENS_4ModeE:00000004 .Loc.91
+     /tmp/ccG6pUK6.s:268    .text._ZN6Timer07setModeENS_4ModeE:00000004 .Loc.92
+     /tmp/ccG6pUK6.s:271    .text._ZN6Timer07setModeENS_4ModeE:00000006 .Loc.93
+     /tmp/ccG6pUK6.s:272    .text._ZN6Timer07setModeENS_4ModeE:00000006 .Loc.94
+     /tmp/ccG6pUK6.s:273    .text._ZN6Timer07setModeENS_4ModeE:00000006 .Loc.95
+     /tmp/ccG6pUK6.s:274    .text._ZN6Timer07setModeENS_4ModeE:00000006 .Loc.96
+     /tmp/ccG6pUK6.s:277    .text._ZN6Timer07setModeENS_4ModeE:00000008 .Loc.97
+     /tmp/ccG6pUK6.s:278    .text._ZN6Timer07setModeENS_4ModeE:00000008 .Loc.98
+     /tmp/ccG6pUK6.s:279    .text._ZN6Timer07setModeENS_4ModeE:00000008 .Loc.99
+     /tmp/ccG6pUK6.s:282    .text._ZN6Timer07setModeENS_4ModeE:0000000a .Loc.100
+     /tmp/ccG6pUK6.s:283    .text._ZN6Timer07setModeENS_4ModeE:0000000a .Loc.101
+     /tmp/ccG6pUK6.s:284    .text._ZN6Timer07setModeENS_4ModeE:0000000a .Loc.102
+     /tmp/ccG6pUK6.s:289    .text._ZN6Timer07setModeENS_4ModeE:00000010 .Loc.103
+     /tmp/ccG6pUK6.s:290    .text._ZN6Timer07setModeENS_4ModeE:00000010 .Loc.104
+     /tmp/ccG6pUK6.s:291    .text._ZN6Timer07setModeENS_4ModeE:00000010 .Loc.105
+     /tmp/ccG6pUK6.s:300    .text._ZN6Timer07setModeENS_4ModeE:0000001e .Loc.106
+     /tmp/ccG6pUK6.s:301    .text._ZN6Timer07setModeENS_4ModeE:0000001e .Loc.107
+     /tmp/ccG6pUK6.s:302    .text._ZN6Timer07setModeENS_4ModeE:0000001e .Loc.108
+     /tmp/ccG6pUK6.s:304    .text._ZN6Timer07setModeENS_4ModeE:00000020 .Loc.109
+     /tmp/ccG6pUK6.s:305    .text._ZN6Timer07setModeENS_4ModeE:00000020 .Loc.110
+     /tmp/ccG6pUK6.s:307    .text._ZN6Timer07setModeENS_4ModeE:00000022 .Loc.111
+     /tmp/ccG6pUK6.s:308    .text._ZN6Timer07setModeENS_4ModeE:00000022 .Loc.112
+     /tmp/ccG6pUK6.s:310    .text._ZN6Timer07setModeENS_4ModeE:00000024 .Loc.113
+     /tmp/ccG6pUK6.s:311    .text._ZN6Timer07setModeENS_4ModeE:00000024 .Loc.114
+     /tmp/ccG6pUK6.s:314    .text._ZN6Timer07setModeENS_4ModeE:00000028 .Loc.115
+     /tmp/ccG6pUK6.s:315    .text._ZN6Timer07setModeENS_4ModeE:00000028 .Loc.116
+     /tmp/ccG6pUK6.s:316    .text._ZN6Timer07setModeENS_4ModeE:00000028 .Loc.117
+     /tmp/ccG6pUK6.s:320    .text._ZN6Timer07setModeENS_4ModeE:0000002a .Loc.118
+     /tmp/ccG6pUK6.s:322    .text._ZN6Timer07setModeENS_4ModeE:0000002c L0
+     /tmp/ccG6pUK6.s:328    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000000 _ZN6Timer013setOutputModeENS_10OutputModeES0_
+     /tmp/ccG6pUK6.s:331    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000000 .Loc.119
+     /tmp/ccG6pUK6.s:332    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000000 L0
+     /tmp/ccG6pUK6.s:337    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000000 .Loc.120
+     /tmp/ccG6pUK6.s:339    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000002 .Loc.121
+     /tmp/ccG6pUK6.s:340    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000002 .Loc.122
+     /tmp/ccG6pUK6.s:341    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000002 .Loc.123
+     /tmp/ccG6pUK6.s:344    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000004 .Loc.124
+     /tmp/ccG6pUK6.s:345    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000004 .Loc.125
+     /tmp/ccG6pUK6.s:348    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000006 .Loc.126
+     /tmp/ccG6pUK6.s:349    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000006 .Loc.127
+     /tmp/ccG6pUK6.s:350    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000006 .Loc.128
+     /tmp/ccG6pUK6.s:353    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000008 .Loc.129
+     /tmp/ccG6pUK6.s:359    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000010 .Loc.130
+     /tmp/ccG6pUK6.s:360    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000010 .Loc.131
+     /tmp/ccG6pUK6.s:361    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000010 .Loc.132
+     /tmp/ccG6pUK6.s:364    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000012 .Loc.133
+     /tmp/ccG6pUK6.s:365    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000012 .Loc.134
+     /tmp/ccG6pUK6.s:366    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000012 .Loc.135
+     /tmp/ccG6pUK6.s:369    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000014 .Loc.136
+     /tmp/ccG6pUK6.s:373    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000018 .Loc.137
+     /tmp/ccG6pUK6.s:374    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000018 .Loc.138
+     /tmp/ccG6pUK6.s:375    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000018 .Loc.139
+     /tmp/ccG6pUK6.s:377    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:0000001a .Loc.140
+GAS LISTING /tmp/ccG6pUK6.s 			page 25
 
 
-     /tmp/ccOTZ7bf.s:378    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:0000001a .Loc.141
-     /tmp/ccOTZ7bf.s:381    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:0000001e .Loc.142
-     /tmp/ccOTZ7bf.s:382    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:0000001e .Loc.143
-     /tmp/ccOTZ7bf.s:383    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:0000001e .Loc.144
-     /tmp/ccOTZ7bf.s:387    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000020 .Loc.145
-     /tmp/ccOTZ7bf.s:389    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000022 L0
-     /tmp/ccOTZ7bf.s:395    .text._Z22timer0CompareACallbackv:00000000 _Z22timer0CompareACallbackv
-     /tmp/ccOTZ7bf.s:397    .text._Z22timer0CompareACallbackv:00000000 .Loc.146
-     /tmp/ccOTZ7bf.s:398    .text._Z22timer0CompareACallbackv:00000000 L0
-     /tmp/ccOTZ7bf.s:403    .text._Z22timer0CompareACallbackv:00000000 .Loc.147
-     /tmp/ccOTZ7bf.s:405    .text._Z22timer0CompareACallbackv:00000000 .Loc.148
-     /tmp/ccOTZ7bf.s:407    .text._Z22timer0CompareACallbackv:00000002 L0
-     /tmp/ccOTZ7bf.s:413    .text._Z22timer0CompareBCallbackv:00000000 _Z22timer0CompareBCallbackv
-     /tmp/ccOTZ7bf.s:415    .text._Z22timer0CompareBCallbackv:00000000 .Loc.149
-     /tmp/ccOTZ7bf.s:416    .text._Z22timer0CompareBCallbackv:00000000 L0
-     /tmp/ccOTZ7bf.s:421    .text._Z22timer0CompareBCallbackv:00000000 .Loc.150
-     /tmp/ccOTZ7bf.s:423    .text._Z22timer0CompareBCallbackv:00000000 .Loc.151
-     /tmp/ccOTZ7bf.s:425    .text._Z22timer0CompareBCallbackv:00000002 L0
-     /tmp/ccOTZ7bf.s:431    .text._Z22timer0OverflowCallbackv:00000000 _Z22timer0OverflowCallbackv
-     /tmp/ccOTZ7bf.s:433    .text._Z22timer0OverflowCallbackv:00000000 .Loc.152
-     /tmp/ccOTZ7bf.s:434    .text._Z22timer0OverflowCallbackv:00000000 L0
-     /tmp/ccOTZ7bf.s:439    .text._Z22timer0OverflowCallbackv:00000000 .Loc.153
-     /tmp/ccOTZ7bf.s:441    .text._Z22timer0OverflowCallbackv:00000000 .Loc.154
-     /tmp/ccOTZ7bf.s:443    .text._Z22timer0OverflowCallbackv:00000002 L0
-     /tmp/ccOTZ7bf.s:449    .text.__vector_14:00000000 __vector_14
-     /tmp/ccOTZ7bf.s:451    .text.__vector_14:00000000 .Loc.155
-     /tmp/ccOTZ7bf.s:452    .text.__vector_14:00000000 L0
-     /tmp/ccOTZ7bf.s:516    .text.__vector_14:00000022 .Loc.156
-     /tmp/ccOTZ7bf.s:517    .text.__vector_14:00000022 .Loc.157
-     /tmp/ccOTZ7bf.s:521    .text.__vector_14:00000026 .Loc.158
-     /tmp/ccOTZ7bf.s:539    .text.__vector_14:00000048 L0
-     /tmp/ccOTZ7bf.s:545    .text.__vector_15:00000000 __vector_15
-     /tmp/ccOTZ7bf.s:547    .text.__vector_15:00000000 .Loc.159
-     /tmp/ccOTZ7bf.s:548    .text.__vector_15:00000000 L0
-     /tmp/ccOTZ7bf.s:612    .text.__vector_15:00000022 .Loc.160
-     /tmp/ccOTZ7bf.s:613    .text.__vector_15:00000022 .Loc.161
-     /tmp/ccOTZ7bf.s:617    .text.__vector_15:00000026 .Loc.162
-     /tmp/ccOTZ7bf.s:635    .text.__vector_15:00000048 L0
-     /tmp/ccOTZ7bf.s:641    .text.__vector_16:00000000 __vector_16
-     /tmp/ccOTZ7bf.s:643    .text.__vector_16:00000000 .Loc.163
-     /tmp/ccOTZ7bf.s:644    .text.__vector_16:00000000 L0
-     /tmp/ccOTZ7bf.s:708    .text.__vector_16:00000022 .Loc.164
-     /tmp/ccOTZ7bf.s:709    .text.__vector_16:00000022 .Loc.165
-     /tmp/ccOTZ7bf.s:713    .text.__vector_16:00000026 .Loc.166
-     /tmp/ccOTZ7bf.s:731    .text.__vector_16:00000048 L0
-     /tmp/ccOTZ7bf.s:736    .text._GLOBAL__sub_I__ZN6Timer09_instanceE:00000000 _GLOBAL__sub_I__ZN6Timer09_instanceE
-     /tmp/ccOTZ7bf.s:738    .text._GLOBAL__sub_I__ZN6Timer09_instanceE:00000000 .Loc.167
-     /tmp/ccOTZ7bf.s:739    .text._GLOBAL__sub_I__ZN6Timer09_instanceE:00000000 L0
-     /tmp/ccOTZ7bf.s:744    .text._GLOBAL__sub_I__ZN6Timer09_instanceE:00000000 .Loc.168
-     /tmp/ccOTZ7bf.s:749    .text._GLOBAL__sub_I__ZN6Timer09_instanceE:00000006 L0
-     /tmp/ccOTZ7bf.s:52     .text._ZN6Timer0C2Ev:00000012 L0
-     /tmp/ccOTZ7bf.s:73     .text._Z41__static_initialization_and_destruction_0v:0000000a L0
-     /tmp/ccOTZ7bf.s:98     .text._ZN6Timer0D2Ev:00000002 L0
-     /tmp/ccOTZ7bf.s:195    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000038 L0
-     /tmp/ccOTZ7bf.s:248    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000016 L0
-     /tmp/ccOTZ7bf.s:325    .text._ZN6Timer07setModeENS_4ModeE:0000002c L0
-     /tmp/ccOTZ7bf.s:392    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000022 L0
-GAS LISTING /tmp/ccOTZ7bf.s 			page 26
+     /tmp/ccG6pUK6.s:378    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:0000001a .Loc.141
+     /tmp/ccG6pUK6.s:381    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:0000001e .Loc.142
+     /tmp/ccG6pUK6.s:382    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:0000001e .Loc.143
+     /tmp/ccG6pUK6.s:383    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:0000001e .Loc.144
+     /tmp/ccG6pUK6.s:387    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000020 .Loc.145
+     /tmp/ccG6pUK6.s:389    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000022 L0
+     /tmp/ccG6pUK6.s:395    .text._Z22timer0CompareACallbackv:00000000 _Z22timer0CompareACallbackv
+     /tmp/ccG6pUK6.s:397    .text._Z22timer0CompareACallbackv:00000000 .Loc.146
+     /tmp/ccG6pUK6.s:398    .text._Z22timer0CompareACallbackv:00000000 L0
+     /tmp/ccG6pUK6.s:403    .text._Z22timer0CompareACallbackv:00000000 .Loc.147
+     /tmp/ccG6pUK6.s:405    .text._Z22timer0CompareACallbackv:00000000 .Loc.148
+     /tmp/ccG6pUK6.s:407    .text._Z22timer0CompareACallbackv:00000002 L0
+     /tmp/ccG6pUK6.s:413    .text._Z22timer0CompareBCallbackv:00000000 _Z22timer0CompareBCallbackv
+     /tmp/ccG6pUK6.s:415    .text._Z22timer0CompareBCallbackv:00000000 .Loc.149
+     /tmp/ccG6pUK6.s:416    .text._Z22timer0CompareBCallbackv:00000000 L0
+     /tmp/ccG6pUK6.s:421    .text._Z22timer0CompareBCallbackv:00000000 .Loc.150
+     /tmp/ccG6pUK6.s:423    .text._Z22timer0CompareBCallbackv:00000000 .Loc.151
+     /tmp/ccG6pUK6.s:425    .text._Z22timer0CompareBCallbackv:00000002 L0
+     /tmp/ccG6pUK6.s:431    .text._Z22timer0OverflowCallbackv:00000000 _Z22timer0OverflowCallbackv
+     /tmp/ccG6pUK6.s:433    .text._Z22timer0OverflowCallbackv:00000000 .Loc.152
+     /tmp/ccG6pUK6.s:434    .text._Z22timer0OverflowCallbackv:00000000 L0
+     /tmp/ccG6pUK6.s:439    .text._Z22timer0OverflowCallbackv:00000000 .Loc.153
+     /tmp/ccG6pUK6.s:441    .text._Z22timer0OverflowCallbackv:00000000 .Loc.154
+     /tmp/ccG6pUK6.s:443    .text._Z22timer0OverflowCallbackv:00000002 L0
+     /tmp/ccG6pUK6.s:449    .text.__vector_14:00000000 __vector_14
+     /tmp/ccG6pUK6.s:451    .text.__vector_14:00000000 .Loc.155
+     /tmp/ccG6pUK6.s:452    .text.__vector_14:00000000 L0
+     /tmp/ccG6pUK6.s:516    .text.__vector_14:00000022 .Loc.156
+     /tmp/ccG6pUK6.s:517    .text.__vector_14:00000022 .Loc.157
+     /tmp/ccG6pUK6.s:521    .text.__vector_14:00000026 .Loc.158
+     /tmp/ccG6pUK6.s:539    .text.__vector_14:00000048 L0
+     /tmp/ccG6pUK6.s:545    .text.__vector_15:00000000 __vector_15
+     /tmp/ccG6pUK6.s:547    .text.__vector_15:00000000 .Loc.159
+     /tmp/ccG6pUK6.s:548    .text.__vector_15:00000000 L0
+     /tmp/ccG6pUK6.s:612    .text.__vector_15:00000022 .Loc.160
+     /tmp/ccG6pUK6.s:613    .text.__vector_15:00000022 .Loc.161
+     /tmp/ccG6pUK6.s:617    .text.__vector_15:00000026 .Loc.162
+     /tmp/ccG6pUK6.s:635    .text.__vector_15:00000048 L0
+     /tmp/ccG6pUK6.s:641    .text.__vector_16:00000000 __vector_16
+     /tmp/ccG6pUK6.s:643    .text.__vector_16:00000000 .Loc.163
+     /tmp/ccG6pUK6.s:644    .text.__vector_16:00000000 L0
+     /tmp/ccG6pUK6.s:708    .text.__vector_16:00000022 .Loc.164
+     /tmp/ccG6pUK6.s:709    .text.__vector_16:00000022 .Loc.165
+     /tmp/ccG6pUK6.s:713    .text.__vector_16:00000026 .Loc.166
+     /tmp/ccG6pUK6.s:731    .text.__vector_16:00000048 L0
+     /tmp/ccG6pUK6.s:736    .text._GLOBAL__sub_I__ZN6Timer09_instanceE:00000000 _GLOBAL__sub_I__ZN6Timer09_instanceE
+     /tmp/ccG6pUK6.s:738    .text._GLOBAL__sub_I__ZN6Timer09_instanceE:00000000 .Loc.167
+     /tmp/ccG6pUK6.s:739    .text._GLOBAL__sub_I__ZN6Timer09_instanceE:00000000 L0
+     /tmp/ccG6pUK6.s:744    .text._GLOBAL__sub_I__ZN6Timer09_instanceE:00000000 .Loc.168
+     /tmp/ccG6pUK6.s:749    .text._GLOBAL__sub_I__ZN6Timer09_instanceE:00000006 L0
+     /tmp/ccG6pUK6.s:52     .text._ZN6Timer0C2Ev:00000012 L0
+     /tmp/ccG6pUK6.s:73     .text._Z41__static_initialization_and_destruction_0v:0000000a L0
+     /tmp/ccG6pUK6.s:98     .text._ZN6Timer0D2Ev:00000002 L0
+     /tmp/ccG6pUK6.s:195    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000038 L0
+     /tmp/ccG6pUK6.s:248    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000016 L0
+     /tmp/ccG6pUK6.s:325    .text._ZN6Timer07setModeENS_4ModeE:0000002c L0
+     /tmp/ccG6pUK6.s:392    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000022 L0
+GAS LISTING /tmp/ccG6pUK6.s 			page 26
 
 
-     /tmp/ccOTZ7bf.s:410    .text._Z22timer0CompareACallbackv:00000002 L0
-     /tmp/ccOTZ7bf.s:428    .text._Z22timer0CompareBCallbackv:00000002 L0
-     /tmp/ccOTZ7bf.s:446    .text._Z22timer0OverflowCallbackv:00000002 L0
-     /tmp/ccOTZ7bf.s:542    .text.__vector_14:00000048 L0
-     /tmp/ccOTZ7bf.s:638    .text.__vector_15:00000048 L0
-     /tmp/ccOTZ7bf.s:734    .text.__vector_16:00000048 L0
-     /tmp/ccOTZ7bf.s:753    .text._GLOBAL__sub_I__ZN6Timer09_instanceE:00000006 L0
+     /tmp/ccG6pUK6.s:410    .text._Z22timer0CompareACallbackv:00000002 L0
+     /tmp/ccG6pUK6.s:428    .text._Z22timer0CompareBCallbackv:00000002 L0
+     /tmp/ccG6pUK6.s:446    .text._Z22timer0OverflowCallbackv:00000002 L0
+     /tmp/ccG6pUK6.s:542    .text.__vector_14:00000048 L0
+     /tmp/ccG6pUK6.s:638    .text.__vector_15:00000048 L0
+     /tmp/ccG6pUK6.s:734    .text.__vector_16:00000048 L0
+     /tmp/ccG6pUK6.s:753    .text._GLOBAL__sub_I__ZN6Timer09_instanceE:00000006 L0
                      .debug_frame:00000000 L0
-     /tmp/ccOTZ7bf.s:2067   .debug_abbrev:00000000 .Ldebug_abbrev0
-     /tmp/ccOTZ7bf.s:3483   .debug_ranges:00000000 .Ldebug_ranges0
-     /tmp/ccOTZ7bf.s:3515   .debug_line:00000000 .Ldebug_line0
-     /tmp/ccOTZ7bf.s:737    .text._GLOBAL__sub_I__ZN6Timer09_instanceE:00000000 .LFB162
-     /tmp/ccOTZ7bf.s:750    .text._GLOBAL__sub_I__ZN6Timer09_instanceE:00000006 .LFE162
-     /tmp/ccOTZ7bf.s:746    .text._GLOBAL__sub_I__ZN6Timer09_instanceE:00000004 .LVL41
-     /tmp/ccOTZ7bf.s:55     .text._Z41__static_initialization_and_destruction_0v:00000000 .LFB160
-     /tmp/ccOTZ7bf.s:71     .text._Z41__static_initialization_and_destruction_0v:0000000a .LFE160
-     /tmp/ccOTZ7bf.s:66     .text._Z41__static_initialization_and_destruction_0v:00000008 .LVL2
-     /tmp/ccOTZ7bf.s:642    .text.__vector_16:00000000 .LFB159
-     /tmp/ccOTZ7bf.s:732    .text.__vector_16:00000048 .LFE159
-     /tmp/ccOTZ7bf.s:2852   .debug_loc:00000000 .LLST17
-     /tmp/ccOTZ7bf.s:711    .text.__vector_16:00000026 .LVL40
-     /tmp/ccOTZ7bf.s:546    .text.__vector_15:00000000 .LFB158
-     /tmp/ccOTZ7bf.s:636    .text.__vector_15:00000048 .LFE158
-     /tmp/ccOTZ7bf.s:2945   .debug_loc:000000cb .LLST16
-     /tmp/ccOTZ7bf.s:615    .text.__vector_15:00000026 .LVL39
-     /tmp/ccOTZ7bf.s:450    .text.__vector_14:00000000 .LFB157
-     /tmp/ccOTZ7bf.s:540    .text.__vector_14:00000048 .LFE157
-     /tmp/ccOTZ7bf.s:3038   .debug_loc:00000196 .LLST15
-     /tmp/ccOTZ7bf.s:519    .text.__vector_14:00000026 .LVL38
-     /tmp/ccOTZ7bf.s:432    .text._Z22timer0OverflowCallbackv:00000000 .LFB156
-     /tmp/ccOTZ7bf.s:444    .text._Z22timer0OverflowCallbackv:00000002 .LFE156
-     /tmp/ccOTZ7bf.s:414    .text._Z22timer0CompareBCallbackv:00000000 .LFB155
-     /tmp/ccOTZ7bf.s:426    .text._Z22timer0CompareBCallbackv:00000002 .LFE155
-     /tmp/ccOTZ7bf.s:396    .text._Z22timer0CompareACallbackv:00000000 .LFB154
-     /tmp/ccOTZ7bf.s:408    .text._Z22timer0CompareACallbackv:00000002 .LFE154
-     /tmp/ccOTZ7bf.s:330    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000000 .LFB153
-     /tmp/ccOTZ7bf.s:390    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000022 .LFE153
-     /tmp/ccOTZ7bf.s:3136   .debug_loc:00000265 .LLST11
-     /tmp/ccOTZ7bf.s:3131   .debug_loc:00000261 .LVUS11
-     /tmp/ccOTZ7bf.s:3162   .debug_loc:00000291 .LLST12
-     /tmp/ccOTZ7bf.s:3157   .debug_loc:0000028d .LVUS12
-     /tmp/ccOTZ7bf.s:3187   .debug_loc:000002bc .LLST13
-     /tmp/ccOTZ7bf.s:3182   .debug_loc:000002b8 .LVUS13
-     /tmp/ccOTZ7bf.s:3214   .debug_loc:000002e9 .LLST14
-     /tmp/ccOTZ7bf.s:3207   .debug_loc:000002e3 .LVUS14
-     /tmp/ccOTZ7bf.s:253    .text._ZN6Timer07setModeENS_4ModeE:00000000 .LFB152
-     /tmp/ccOTZ7bf.s:323    .text._ZN6Timer07setModeENS_4ModeE:0000002c .LFE152
-     /tmp/ccOTZ7bf.s:3234   .debug_loc:00000316 .LLST7
-     /tmp/ccOTZ7bf.s:3229   .debug_loc:00000312 .LVUS7
-     /tmp/ccOTZ7bf.s:3260   .debug_loc:00000342 .LLST8
-     /tmp/ccOTZ7bf.s:3255   .debug_loc:0000033e .LVUS8
-     /tmp/ccOTZ7bf.s:3276   .debug_loc:00000364 .LLST9
-     /tmp/ccOTZ7bf.s:3271   .debug_loc:00000360 .LVUS9
-     /tmp/ccOTZ7bf.s:3290   .debug_loc:00000384 .LLST10
-     /tmp/ccOTZ7bf.s:3287   .debug_loc:00000382 .LVUS10
-     /tmp/ccOTZ7bf.s:200    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000000 .LFB151
-     /tmp/ccOTZ7bf.s:246    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000016 .LFE151
-GAS LISTING /tmp/ccOTZ7bf.s 			page 27
+     /tmp/ccG6pUK6.s:2067   .debug_abbrev:00000000 .Ldebug_abbrev0
+     /tmp/ccG6pUK6.s:3483   .debug_ranges:00000000 .Ldebug_ranges0
+     /tmp/ccG6pUK6.s:3515   .debug_line:00000000 .Ldebug_line0
+     /tmp/ccG6pUK6.s:737    .text._GLOBAL__sub_I__ZN6Timer09_instanceE:00000000 .LFB163
+     /tmp/ccG6pUK6.s:750    .text._GLOBAL__sub_I__ZN6Timer09_instanceE:00000006 .LFE163
+     /tmp/ccG6pUK6.s:746    .text._GLOBAL__sub_I__ZN6Timer09_instanceE:00000004 .LVL41
+     /tmp/ccG6pUK6.s:55     .text._Z41__static_initialization_and_destruction_0v:00000000 .LFB161
+     /tmp/ccG6pUK6.s:71     .text._Z41__static_initialization_and_destruction_0v:0000000a .LFE161
+     /tmp/ccG6pUK6.s:66     .text._Z41__static_initialization_and_destruction_0v:00000008 .LVL2
+     /tmp/ccG6pUK6.s:642    .text.__vector_16:00000000 .LFB160
+     /tmp/ccG6pUK6.s:732    .text.__vector_16:00000048 .LFE160
+     /tmp/ccG6pUK6.s:2852   .debug_loc:00000000 .LLST17
+     /tmp/ccG6pUK6.s:711    .text.__vector_16:00000026 .LVL40
+     /tmp/ccG6pUK6.s:546    .text.__vector_15:00000000 .LFB159
+     /tmp/ccG6pUK6.s:636    .text.__vector_15:00000048 .LFE159
+     /tmp/ccG6pUK6.s:2945   .debug_loc:000000cb .LLST16
+     /tmp/ccG6pUK6.s:615    .text.__vector_15:00000026 .LVL39
+     /tmp/ccG6pUK6.s:450    .text.__vector_14:00000000 .LFB158
+     /tmp/ccG6pUK6.s:540    .text.__vector_14:00000048 .LFE158
+     /tmp/ccG6pUK6.s:3038   .debug_loc:00000196 .LLST15
+     /tmp/ccG6pUK6.s:519    .text.__vector_14:00000026 .LVL38
+     /tmp/ccG6pUK6.s:432    .text._Z22timer0OverflowCallbackv:00000000 .LFB157
+     /tmp/ccG6pUK6.s:444    .text._Z22timer0OverflowCallbackv:00000002 .LFE157
+     /tmp/ccG6pUK6.s:414    .text._Z22timer0CompareBCallbackv:00000000 .LFB156
+     /tmp/ccG6pUK6.s:426    .text._Z22timer0CompareBCallbackv:00000002 .LFE156
+     /tmp/ccG6pUK6.s:396    .text._Z22timer0CompareACallbackv:00000000 .LFB155
+     /tmp/ccG6pUK6.s:408    .text._Z22timer0CompareACallbackv:00000002 .LFE155
+     /tmp/ccG6pUK6.s:330    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000000 .LFB154
+     /tmp/ccG6pUK6.s:390    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000022 .LFE154
+     /tmp/ccG6pUK6.s:3136   .debug_loc:00000265 .LLST11
+     /tmp/ccG6pUK6.s:3131   .debug_loc:00000261 .LVUS11
+     /tmp/ccG6pUK6.s:3162   .debug_loc:00000291 .LLST12
+     /tmp/ccG6pUK6.s:3157   .debug_loc:0000028d .LVUS12
+     /tmp/ccG6pUK6.s:3187   .debug_loc:000002bc .LLST13
+     /tmp/ccG6pUK6.s:3182   .debug_loc:000002b8 .LVUS13
+     /tmp/ccG6pUK6.s:3214   .debug_loc:000002e9 .LLST14
+     /tmp/ccG6pUK6.s:3207   .debug_loc:000002e3 .LVUS14
+     /tmp/ccG6pUK6.s:253    .text._ZN6Timer07setModeENS_4ModeE:00000000 .LFB153
+     /tmp/ccG6pUK6.s:323    .text._ZN6Timer07setModeENS_4ModeE:0000002c .LFE153
+     /tmp/ccG6pUK6.s:3234   .debug_loc:00000316 .LLST7
+     /tmp/ccG6pUK6.s:3229   .debug_loc:00000312 .LVUS7
+     /tmp/ccG6pUK6.s:3260   .debug_loc:00000342 .LLST8
+     /tmp/ccG6pUK6.s:3255   .debug_loc:0000033e .LVUS8
+     /tmp/ccG6pUK6.s:3276   .debug_loc:00000364 .LLST9
+     /tmp/ccG6pUK6.s:3271   .debug_loc:00000360 .LVUS9
+     /tmp/ccG6pUK6.s:3290   .debug_loc:00000384 .LLST10
+     /tmp/ccG6pUK6.s:3287   .debug_loc:00000382 .LVUS10
+     /tmp/ccG6pUK6.s:200    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000000 .LFB152
+     /tmp/ccG6pUK6.s:246    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000016 .LFE152
+GAS LISTING /tmp/ccG6pUK6.s 			page 27
 
 
-     /tmp/ccOTZ7bf.s:3302   .debug_loc:0000039b .LLST5
-     /tmp/ccOTZ7bf.s:3297   .debug_loc:00000397 .LVUS5
-     /tmp/ccOTZ7bf.s:3330   .debug_loc:000003c9 .LLST6
-     /tmp/ccOTZ7bf.s:3323   .debug_loc:000003c3 .LVUS6
-     /tmp/ccOTZ7bf.s:103    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000000 .LFB150
-     /tmp/ccOTZ7bf.s:193    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000038 .LFE150
-     /tmp/ccOTZ7bf.s:3355   .debug_loc:000003fb .LLST1
-     /tmp/ccOTZ7bf.s:3350   .debug_loc:000003f7 .LVUS1
-     /tmp/ccOTZ7bf.s:3381   .debug_loc:00000427 .LLST2
-     /tmp/ccOTZ7bf.s:3376   .debug_loc:00000423 .LVUS2
-     /tmp/ccOTZ7bf.s:3397   .debug_loc:00000449 .LLST3
-     /tmp/ccOTZ7bf.s:3392   .debug_loc:00000445 .LVUS3
-     /tmp/ccOTZ7bf.s:3411   .debug_loc:00000469 .LLST4
-     /tmp/ccOTZ7bf.s:3408   .debug_loc:00000467 .LVUS4
-     /tmp/ccOTZ7bf.s:78     .text._ZN6Timer0D2Ev:00000000 .LFB148
-     /tmp/ccOTZ7bf.s:94     .text._ZN6Timer0D2Ev:00000002 .LFE148
-     /tmp/ccOTZ7bf.s:16     .text._ZN6Timer0C2Ev:00000000 .LFB145
-     /tmp/ccOTZ7bf.s:48     .text._ZN6Timer0C2Ev:00000012 .LFE145
-     /tmp/ccOTZ7bf.s:3423   .debug_loc:00000480 .LLST0
-     /tmp/ccOTZ7bf.s:3418   .debug_loc:0000047c .LVUS0
-     /tmp/ccOTZ7bf.s:646    .text.__vector_16:00000002 .LCFI28
-     /tmp/ccOTZ7bf.s:650    .text.__vector_16:00000004 .LCFI29
-     /tmp/ccOTZ7bf.s:657    .text.__vector_16:0000000c .LCFI30
-     /tmp/ccOTZ7bf.s:661    .text.__vector_16:0000000e .LCFI31
-     /tmp/ccOTZ7bf.s:665    .text.__vector_16:00000010 .LCFI32
-     /tmp/ccOTZ7bf.s:669    .text.__vector_16:00000012 .LCFI33
-     /tmp/ccOTZ7bf.s:673    .text.__vector_16:00000014 .LCFI34
-     /tmp/ccOTZ7bf.s:677    .text.__vector_16:00000016 .LCFI35
-     /tmp/ccOTZ7bf.s:681    .text.__vector_16:00000018 .LCFI36
-     /tmp/ccOTZ7bf.s:685    .text.__vector_16:0000001a .LCFI37
-     /tmp/ccOTZ7bf.s:689    .text.__vector_16:0000001c .LCFI38
-     /tmp/ccOTZ7bf.s:693    .text.__vector_16:0000001e .LCFI39
-     /tmp/ccOTZ7bf.s:697    .text.__vector_16:00000020 .LCFI40
-     /tmp/ccOTZ7bf.s:701    .text.__vector_16:00000022 .LCFI41
-     /tmp/ccOTZ7bf.s:550    .text.__vector_15:00000002 .LCFI14
-     /tmp/ccOTZ7bf.s:554    .text.__vector_15:00000004 .LCFI15
-     /tmp/ccOTZ7bf.s:561    .text.__vector_15:0000000c .LCFI16
-     /tmp/ccOTZ7bf.s:565    .text.__vector_15:0000000e .LCFI17
-     /tmp/ccOTZ7bf.s:569    .text.__vector_15:00000010 .LCFI18
-     /tmp/ccOTZ7bf.s:573    .text.__vector_15:00000012 .LCFI19
-     /tmp/ccOTZ7bf.s:577    .text.__vector_15:00000014 .LCFI20
-     /tmp/ccOTZ7bf.s:581    .text.__vector_15:00000016 .LCFI21
-     /tmp/ccOTZ7bf.s:585    .text.__vector_15:00000018 .LCFI22
-     /tmp/ccOTZ7bf.s:589    .text.__vector_15:0000001a .LCFI23
-     /tmp/ccOTZ7bf.s:593    .text.__vector_15:0000001c .LCFI24
-     /tmp/ccOTZ7bf.s:597    .text.__vector_15:0000001e .LCFI25
-     /tmp/ccOTZ7bf.s:601    .text.__vector_15:00000020 .LCFI26
-     /tmp/ccOTZ7bf.s:605    .text.__vector_15:00000022 .LCFI27
-     /tmp/ccOTZ7bf.s:454    .text.__vector_14:00000002 .LCFI0
-     /tmp/ccOTZ7bf.s:458    .text.__vector_14:00000004 .LCFI1
-     /tmp/ccOTZ7bf.s:465    .text.__vector_14:0000000c .LCFI2
-     /tmp/ccOTZ7bf.s:469    .text.__vector_14:0000000e .LCFI3
-     /tmp/ccOTZ7bf.s:473    .text.__vector_14:00000010 .LCFI4
-     /tmp/ccOTZ7bf.s:477    .text.__vector_14:00000012 .LCFI5
-     /tmp/ccOTZ7bf.s:481    .text.__vector_14:00000014 .LCFI6
-     /tmp/ccOTZ7bf.s:485    .text.__vector_14:00000016 .LCFI7
-     /tmp/ccOTZ7bf.s:489    .text.__vector_14:00000018 .LCFI8
-GAS LISTING /tmp/ccOTZ7bf.s 			page 28
+     /tmp/ccG6pUK6.s:3302   .debug_loc:0000039b .LLST5
+     /tmp/ccG6pUK6.s:3297   .debug_loc:00000397 .LVUS5
+     /tmp/ccG6pUK6.s:3330   .debug_loc:000003c9 .LLST6
+     /tmp/ccG6pUK6.s:3323   .debug_loc:000003c3 .LVUS6
+     /tmp/ccG6pUK6.s:103    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000000 .LFB151
+     /tmp/ccG6pUK6.s:193    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000038 .LFE151
+     /tmp/ccG6pUK6.s:3355   .debug_loc:000003fb .LLST1
+     /tmp/ccG6pUK6.s:3350   .debug_loc:000003f7 .LVUS1
+     /tmp/ccG6pUK6.s:3381   .debug_loc:00000427 .LLST2
+     /tmp/ccG6pUK6.s:3376   .debug_loc:00000423 .LVUS2
+     /tmp/ccG6pUK6.s:3397   .debug_loc:00000449 .LLST3
+     /tmp/ccG6pUK6.s:3392   .debug_loc:00000445 .LVUS3
+     /tmp/ccG6pUK6.s:3411   .debug_loc:00000469 .LLST4
+     /tmp/ccG6pUK6.s:3408   .debug_loc:00000467 .LVUS4
+     /tmp/ccG6pUK6.s:78     .text._ZN6Timer0D2Ev:00000000 .LFB149
+     /tmp/ccG6pUK6.s:94     .text._ZN6Timer0D2Ev:00000002 .LFE149
+     /tmp/ccG6pUK6.s:16     .text._ZN6Timer0C2Ev:00000000 .LFB146
+     /tmp/ccG6pUK6.s:48     .text._ZN6Timer0C2Ev:00000012 .LFE146
+     /tmp/ccG6pUK6.s:3423   .debug_loc:00000480 .LLST0
+     /tmp/ccG6pUK6.s:3418   .debug_loc:0000047c .LVUS0
+     /tmp/ccG6pUK6.s:646    .text.__vector_16:00000002 .LCFI28
+     /tmp/ccG6pUK6.s:650    .text.__vector_16:00000004 .LCFI29
+     /tmp/ccG6pUK6.s:657    .text.__vector_16:0000000c .LCFI30
+     /tmp/ccG6pUK6.s:661    .text.__vector_16:0000000e .LCFI31
+     /tmp/ccG6pUK6.s:665    .text.__vector_16:00000010 .LCFI32
+     /tmp/ccG6pUK6.s:669    .text.__vector_16:00000012 .LCFI33
+     /tmp/ccG6pUK6.s:673    .text.__vector_16:00000014 .LCFI34
+     /tmp/ccG6pUK6.s:677    .text.__vector_16:00000016 .LCFI35
+     /tmp/ccG6pUK6.s:681    .text.__vector_16:00000018 .LCFI36
+     /tmp/ccG6pUK6.s:685    .text.__vector_16:0000001a .LCFI37
+     /tmp/ccG6pUK6.s:689    .text.__vector_16:0000001c .LCFI38
+     /tmp/ccG6pUK6.s:693    .text.__vector_16:0000001e .LCFI39
+     /tmp/ccG6pUK6.s:697    .text.__vector_16:00000020 .LCFI40
+     /tmp/ccG6pUK6.s:701    .text.__vector_16:00000022 .LCFI41
+     /tmp/ccG6pUK6.s:550    .text.__vector_15:00000002 .LCFI14
+     /tmp/ccG6pUK6.s:554    .text.__vector_15:00000004 .LCFI15
+     /tmp/ccG6pUK6.s:561    .text.__vector_15:0000000c .LCFI16
+     /tmp/ccG6pUK6.s:565    .text.__vector_15:0000000e .LCFI17
+     /tmp/ccG6pUK6.s:569    .text.__vector_15:00000010 .LCFI18
+     /tmp/ccG6pUK6.s:573    .text.__vector_15:00000012 .LCFI19
+     /tmp/ccG6pUK6.s:577    .text.__vector_15:00000014 .LCFI20
+     /tmp/ccG6pUK6.s:581    .text.__vector_15:00000016 .LCFI21
+     /tmp/ccG6pUK6.s:585    .text.__vector_15:00000018 .LCFI22
+     /tmp/ccG6pUK6.s:589    .text.__vector_15:0000001a .LCFI23
+     /tmp/ccG6pUK6.s:593    .text.__vector_15:0000001c .LCFI24
+     /tmp/ccG6pUK6.s:597    .text.__vector_15:0000001e .LCFI25
+     /tmp/ccG6pUK6.s:601    .text.__vector_15:00000020 .LCFI26
+     /tmp/ccG6pUK6.s:605    .text.__vector_15:00000022 .LCFI27
+     /tmp/ccG6pUK6.s:454    .text.__vector_14:00000002 .LCFI0
+     /tmp/ccG6pUK6.s:458    .text.__vector_14:00000004 .LCFI1
+     /tmp/ccG6pUK6.s:465    .text.__vector_14:0000000c .LCFI2
+     /tmp/ccG6pUK6.s:469    .text.__vector_14:0000000e .LCFI3
+     /tmp/ccG6pUK6.s:473    .text.__vector_14:00000010 .LCFI4
+     /tmp/ccG6pUK6.s:477    .text.__vector_14:00000012 .LCFI5
+     /tmp/ccG6pUK6.s:481    .text.__vector_14:00000014 .LCFI6
+     /tmp/ccG6pUK6.s:485    .text.__vector_14:00000016 .LCFI7
+     /tmp/ccG6pUK6.s:489    .text.__vector_14:00000018 .LCFI8
+GAS LISTING /tmp/ccG6pUK6.s 			page 28
 
 
-     /tmp/ccOTZ7bf.s:493    .text.__vector_14:0000001a .LCFI9
-     /tmp/ccOTZ7bf.s:497    .text.__vector_14:0000001c .LCFI10
-     /tmp/ccOTZ7bf.s:501    .text.__vector_14:0000001e .LCFI11
-     /tmp/ccOTZ7bf.s:505    .text.__vector_14:00000020 .LCFI12
-     /tmp/ccOTZ7bf.s:509    .text.__vector_14:00000022 .LCFI13
-     /tmp/ccOTZ7bf.s:329    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000000 .LVL29
-     /tmp/ccOTZ7bf.s:385    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000020 .LVL37
-     /tmp/ccOTZ7bf.s:352    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000008 .LVL32
-     /tmp/ccOTZ7bf.s:368    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000014 .LVL35
-     /tmp/ccOTZ7bf.s:343    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000004 .LVL30
-     /tmp/ccOTZ7bf.s:358    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000010 .LVL33
-     /tmp/ccOTZ7bf.s:372    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000018 .LVL36
-     /tmp/ccOTZ7bf.s:252    .text._ZN6Timer07setModeENS_4ModeE:00000000 .LVL21
-     /tmp/ccOTZ7bf.s:318    .text._ZN6Timer07setModeENS_4ModeE:0000002a .LVL28
-     /tmp/ccOTZ7bf.s:266    .text._ZN6Timer07setModeENS_4ModeE:00000004 .LVL22
-     /tmp/ccOTZ7bf.s:288    .text._ZN6Timer07setModeENS_4ModeE:00000010 .LVL26
-     /tmp/ccOTZ7bf.s:270    .text._ZN6Timer07setModeENS_4ModeE:00000006 .LVL23
-     /tmp/ccOTZ7bf.s:299    .text._ZN6Timer07setModeENS_4ModeE:0000001e .LVL27
-     /tmp/ccOTZ7bf.s:199    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000000 .LVL15
-     /tmp/ccOTZ7bf.s:222    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000008 .LVL18
-     /tmp/ccOTZ7bf.s:213    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000004 .LVL16
-     /tmp/ccOTZ7bf.s:225    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:0000000a .LVL19
-     /tmp/ccOTZ7bf.s:241    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000014 .LVL20
-     /tmp/ccOTZ7bf.s:102    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000000 .LVL4
-     /tmp/ccOTZ7bf.s:136    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000000c .LVL9
-     /tmp/ccOTZ7bf.s:116    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000004 .LVL5
-     /tmp/ccOTZ7bf.s:140    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000010 .LVL10
-     /tmp/ccOTZ7bf.s:178    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000002c .LVL14
-     /tmp/ccOTZ7bf.s:120    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000006 .LVL6
-     /tmp/ccOTZ7bf.s:151    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000001e .LVL11
-     /tmp/ccOTZ7bf.s:15     .text._ZN6Timer0C2Ev:00000000 .LVL0
-     /tmp/ccOTZ7bf.s:28     .text._ZN6Timer0C2Ev:00000004 .LVL1
-     /tmp/ccOTZ7bf.s:769    .debug_info:00000000 .Ldebug_info0
+     /tmp/ccG6pUK6.s:493    .text.__vector_14:0000001a .LCFI9
+     /tmp/ccG6pUK6.s:497    .text.__vector_14:0000001c .LCFI10
+     /tmp/ccG6pUK6.s:501    .text.__vector_14:0000001e .LCFI11
+     /tmp/ccG6pUK6.s:505    .text.__vector_14:00000020 .LCFI12
+     /tmp/ccG6pUK6.s:509    .text.__vector_14:00000022 .LCFI13
+     /tmp/ccG6pUK6.s:329    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000000 .LVL29
+     /tmp/ccG6pUK6.s:385    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000020 .LVL37
+     /tmp/ccG6pUK6.s:352    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000008 .LVL32
+     /tmp/ccG6pUK6.s:368    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000014 .LVL35
+     /tmp/ccG6pUK6.s:343    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000004 .LVL30
+     /tmp/ccG6pUK6.s:358    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000010 .LVL33
+     /tmp/ccG6pUK6.s:372    .text._ZN6Timer013setOutputModeENS_10OutputModeES0_:00000018 .LVL36
+     /tmp/ccG6pUK6.s:252    .text._ZN6Timer07setModeENS_4ModeE:00000000 .LVL21
+     /tmp/ccG6pUK6.s:318    .text._ZN6Timer07setModeENS_4ModeE:0000002a .LVL28
+     /tmp/ccG6pUK6.s:266    .text._ZN6Timer07setModeENS_4ModeE:00000004 .LVL22
+     /tmp/ccG6pUK6.s:288    .text._ZN6Timer07setModeENS_4ModeE:00000010 .LVL26
+     /tmp/ccG6pUK6.s:270    .text._ZN6Timer07setModeENS_4ModeE:00000006 .LVL23
+     /tmp/ccG6pUK6.s:299    .text._ZN6Timer07setModeENS_4ModeE:0000001e .LVL27
+     /tmp/ccG6pUK6.s:199    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000000 .LVL15
+     /tmp/ccG6pUK6.s:222    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000008 .LVL18
+     /tmp/ccG6pUK6.s:213    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000004 .LVL16
+     /tmp/ccG6pUK6.s:225    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:0000000a .LVL19
+     /tmp/ccG6pUK6.s:241    .text._ZN6Timer014setClockSourceENS_11ClockSourceE:00000014 .LVL20
+     /tmp/ccG6pUK6.s:102    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000000 .LVL4
+     /tmp/ccG6pUK6.s:136    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000000c .LVL9
+     /tmp/ccG6pUK6.s:116    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000004 .LVL5
+     /tmp/ccG6pUK6.s:140    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000010 .LVL10
+     /tmp/ccG6pUK6.s:178    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000002c .LVL14
+     /tmp/ccG6pUK6.s:120    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:00000006 .LVL6
+     /tmp/ccG6pUK6.s:151    .text._ZN6Timer04initENS_4ModeENS_11ClockSourceE:0000001e .LVL11
+     /tmp/ccG6pUK6.s:15     .text._ZN6Timer0C2Ev:00000000 .LVL0
+     /tmp/ccG6pUK6.s:28     .text._ZN6Timer0C2Ev:00000004 .LVL1
+     /tmp/ccG6pUK6.s:769    .debug_info:00000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 __do_global_ctors

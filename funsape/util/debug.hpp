@@ -191,10 +191,11 @@ public:
         STEPPER_MODULE                          = 28,
         TM1637_MODULE                           = 29,
         MPU9250_MODULE                          = 30,
+        SSD1306_MODULE                          = 31,
     };
 
 private:
-    static cuint8_t constCodeIndexLast          = 30;
+    static cuint8_t constCodeIndexLast          = 31;
     static cuint16_t constTimeOutDefault        = 30;
 
 protected:
@@ -377,6 +378,9 @@ public:
             cbool_t enable_p
     );
     void inlined debugSn74595(
+            cbool_t enable_p
+    );
+    void inlined debugSsd1306(
             cbool_t enable_p
     );
     void inlined debugStepper(
@@ -580,6 +584,11 @@ void inlined Debug::debugSevenSegmentsMuxDisplay(cbool_t enable_p)
 void inlined Debug::debugSn74595(cbool_t enable_p)
 {
     this->_list[(uint8_t)Debug::CodeIndex::SN74595_MODULE] = enable_p;
+}
+
+void inlined Debug::debugSsd1306(cbool_t enable_p)
+{
+    this->_list[(uint8_t)Debug::CodeIndex::SSD1306_MODULE] = enable_p;
 }
 
 void inlined Debug::debugStepper(cbool_t enable_p)

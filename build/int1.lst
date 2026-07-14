@@ -1,4 +1,4 @@
-GAS LISTING /tmp/cctmB0Ow.s 			page 1
+GAS LISTING /tmp/ccjfECZQ.s 			page 1
 
 
    1               		.file	"int1.cpp"
@@ -15,7 +15,7 @@ GAS LISTING /tmp/cctmB0Ow.s 			page 1
   12               	.global	_ZN4Int1C2Ev
   14               	_ZN4Int1C2Ev:
   15               	.LVL0:
-  16               	.LFB132:
+  16               	.LFB133:
    1:funsape/peripheral/int1.cpp **** //!
    2:funsape/peripheral/int1.cpp **** //! ****************************************************************************
    3:funsape/peripheral/int1.cpp **** //! @file           int1.cpp
@@ -58,7 +58,7 @@ GAS LISTING /tmp/cctmB0Ow.s 			page 1
   40:funsape/peripheral/int1.cpp **** //!
   41:funsape/peripheral/int1.cpp **** 
   42:funsape/peripheral/int1.cpp **** // =============================================================================
-GAS LISTING /tmp/cctmB0Ow.s 			page 2
+GAS LISTING /tmp/ccjfECZQ.s 			page 2
 
 
   43:funsape/peripheral/int1.cpp **** // System file dependencies
@@ -118,7 +118,7 @@ GAS LISTING /tmp/cctmB0Ow.s 			page 1
   20               	/* frame size = 0 */
   21               	/* stack size = 0 */
   22               	.L__stack_usage = 0
-GAS LISTING /tmp/cctmB0Ow.s 			page 3
+GAS LISTING /tmp/ccjfECZQ.s 			page 3
 
 
   23               		.loc 1 93 1 is_stmt 0 view .LVU1
@@ -156,12 +156,12 @@ GAS LISTING /tmp/cctmB0Ow.s 			page 1
   43               		.loc 1 105 1 is_stmt 0 view .LVU10
   44 000e 0895      		ret
   45               		.cfi_endproc
-  46               	.LFE132:
+  46               	.LFE133:
   48               	.global	_ZN4Int1C1Ev
   49               		.set	_ZN4Int1C1Ev,_ZN4Int1C2Ev
   50               		.section	.text._Z41__static_initialization_and_destruction_0v,"ax",@progbits
   52               	_Z41__static_initialization_and_destruction_0v:
-  53               	.LFB142:
+  53               	.LFB143:
  106:funsape/peripheral/int1.cpp **** 
  107:funsape/peripheral/int1.cpp **** Int1::~Int1()
  108:funsape/peripheral/int1.cpp **** {
@@ -178,7 +178,7 @@ GAS LISTING /tmp/cctmB0Ow.s 			page 1
  119:funsape/peripheral/int1.cpp **** // =============================================================================
  120:funsape/peripheral/int1.cpp **** 
  121:funsape/peripheral/int1.cpp **** //     ///////////////////     CONTROL AND STATUS     ///////////////////     //
-GAS LISTING /tmp/cctmB0Ow.s 			page 4
+GAS LISTING /tmp/ccjfECZQ.s 			page 4
 
 
  122:funsape/peripheral/int1.cpp **** 
@@ -238,7 +238,7 @@ GAS LISTING /tmp/cctmB0Ow.s 			page 1
  176:funsape/peripheral/int1.cpp ****     // Mark passage for debugging purpose
  177:funsape/peripheral/int1.cpp ****     debugMark(PSTR("Int1::setSenseMode(const Int1::SenseMode)"), Debug::CodeIndex::INT1_MODULE);
  178:funsape/peripheral/int1.cpp **** 
-GAS LISTING /tmp/cctmB0Ow.s 			page 5
+GAS LISTING /tmp/ccjfECZQ.s 			page 5
 
 
  179:funsape/peripheral/int1.cpp ****     // Local variables
@@ -298,7 +298,7 @@ GAS LISTING /tmp/cctmB0Ow.s 			page 1
  233:funsape/peripheral/int1.cpp **** ISR(INT1_vect)
  234:funsape/peripheral/int1.cpp **** {
  235:funsape/peripheral/int1.cpp ****     int1InterruptCallback();
-GAS LISTING /tmp/cctmB0Ow.s 			page 6
+GAS LISTING /tmp/ccjfECZQ.s 			page 6
 
 
  236:funsape/peripheral/int1.cpp **** }
@@ -318,12 +318,12 @@ GAS LISTING /tmp/cctmB0Ow.s 			page 1
   66               		.loc 1 236 1 view .LVU13
   67 0008 0895      		ret
   68               		.cfi_endproc
-  69               	.LFE142:
+  69               	.LFE143:
   71               		.section	.text._ZN4Int1D2Ev,"ax",@progbits
   72               	.global	_ZN4Int1D2Ev
   74               	_ZN4Int1D2Ev:
   75               	.LVL3:
-  76               	.LFB135:
+  76               	.LFB136:
  107:funsape/peripheral/int1.cpp **** {
   77               		.loc 1 107 1 is_stmt 1 view -0
   78               		.cfi_startproc
@@ -344,21 +344,21 @@ GAS LISTING /tmp/cctmB0Ow.s 			page 1
   89               		.loc 1 115 1 is_stmt 0 view .LVU18
   90 0000 0895      		ret
   91               		.cfi_endproc
-  92               	.LFE135:
+  92               	.LFE136:
   94               	.global	_ZN4Int1D1Ev
   95               		.set	_ZN4Int1D1Ev,_ZN4Int1D2Ev
   96               		.section	.text._ZN4Int14initENS_9SenseModeE,"ax",@progbits
   97               	.global	_ZN4Int14initENS_9SenseModeE
   99               	_ZN4Int14initENS_9SenseModeE:
  100               	.LVL4:
- 101               	.LFB137:
+ 101               	.LFB138:
  124:funsape/peripheral/int1.cpp ****     // Mark passage for debugging purpose
  102               		.loc 1 124 1 is_stmt 1 view -0
  103               		.cfi_startproc
  104               	/* prologue: function */
  105               	/* frame size = 0 */
  106               	/* stack size = 0 */
-GAS LISTING /tmp/cctmB0Ow.s 			page 7
+GAS LISTING /tmp/ccjfECZQ.s 			page 7
 
 
  107               	.L__stack_usage = 0
@@ -418,7 +418,7 @@ GAS LISTING /tmp/cctmB0Ow.s 			page 1
  143 0018 8160      		ori r24,lo8(1<<0)
  144 001a 8083      		st Z,r24
  143:funsape/peripheral/int1.cpp ****     debugMessage(Error::NONE, Debug::CodeIndex::INT1_MODULE);
-GAS LISTING /tmp/cctmB0Ow.s 			page 8
+GAS LISTING /tmp/ccjfECZQ.s 			page 8
 
 
  145               		.loc 1 143 5 is_stmt 1 view .LVU38
@@ -436,12 +436,12 @@ GAS LISTING /tmp/cctmB0Ow.s 			page 1
  153               	/* epilogue start */
  154 0022 0895      		ret
  155               		.cfi_endproc
- 156               	.LFE137:
+ 156               	.LFE138:
  158               		.section	.text._ZN4Int110setPinModeE7PinMode,"ax",@progbits
  159               	.global	_ZN4Int110setPinModeE7PinMode
  161               	_ZN4Int110setPinModeE7PinMode:
  162               	.LVL10:
- 163               	.LFB138:
+ 163               	.LFB139:
  149:funsape/peripheral/int1.cpp ****     // Mark passage for debugging purpose
  164               		.loc 1 149 1 is_stmt 1 view -0
  165               		.cfi_startproc
@@ -478,7 +478,7 @@ GAS LISTING /tmp/cctmB0Ow.s 			page 1
  188 0014 277F      		andi r18,lo8(-9)
  189 0016 2BB9      		out 0xb,r18
  157:funsape/peripheral/int1.cpp ****         break;
-GAS LISTING /tmp/cctmB0Ow.s 			page 9
+GAS LISTING /tmp/ccjfECZQ.s 			page 9
 
 
  190               		.loc 1 157 9 view .LVU52
@@ -538,7 +538,7 @@ GAS LISTING /tmp/cctmB0Ow.s 			page 1
  226               		.loc 1 164 9 view .LVU70
  227 0030 2AB1      		in r18,0xa
  228 0032 2860      		ori r18,lo8(8)
-GAS LISTING /tmp/cctmB0Ow.s 			page 10
+GAS LISTING /tmp/ccjfECZQ.s 			page 10
 
 
  229 0034 2AB9      		out 0xa,r18
@@ -548,12 +548,12 @@ GAS LISTING /tmp/cctmB0Ow.s 			page 1
  231               		.loc 1 165 9 view .LVU72
  232 0036 00C0      		rjmp .L8
  233               		.cfi_endproc
- 234               	.LFE138:
+ 234               	.LFE139:
  236               		.section	.text._ZN4Int112setSenseModeENS_9SenseModeE,"ax",@progbits
  237               	.global	_ZN4Int112setSenseModeENS_9SenseModeE
  239               	_ZN4Int112setSenseModeENS_9SenseModeE:
  240               	.LVL13:
- 241               	.LFB139:
+ 241               	.LFB140:
  175:funsape/peripheral/int1.cpp ****     // Mark passage for debugging purpose
  242               		.loc 1 175 1 view -0
  243               		.cfi_startproc
@@ -598,7 +598,7 @@ GAS LISTING /tmp/cctmB0Ow.s 			page 1
  187:funsape/peripheral/int1.cpp **** 
  271               		.loc 1 187 23 is_stmt 0 view .LVU85
  272 0012 9C93      		st X,r25
-GAS LISTING /tmp/cctmB0Ow.s 			page 11
+GAS LISTING /tmp/ccjfECZQ.s 			page 11
 
 
  190:funsape/peripheral/int1.cpp **** 
@@ -625,11 +625,11 @@ GAS LISTING /tmp/cctmB0Ow.s 			page 1
  286               		.loc 1 196 1 view .LVU93
  287 001c 0895      		ret
  288               		.cfi_endproc
- 289               	.LFE139:
+ 289               	.LFE140:
  291               		.section	.text._Z21int1InterruptCallbackv,"ax",@progbits
  292               		.weak	_Z21int1InterruptCallbackv
  294               	_Z21int1InterruptCallbackv:
- 295               	.LFB140:
+ 295               	.LFB141:
  221:funsape/peripheral/int1.cpp ****     return;
  296               		.loc 1 221 1 is_stmt 1 view -0
  297               		.cfi_startproc
@@ -644,11 +644,11 @@ GAS LISTING /tmp/cctmB0Ow.s 			page 1
  304               		.loc 1 223 1 is_stmt 0 view .LVU96
  305 0000 0895      		ret
  306               		.cfi_endproc
- 307               	.LFE140:
+ 307               	.LFE141:
  309               		.section	.text.__vector_2,"ax",@progbits
  310               	.global	__vector_2
  312               	__vector_2:
- 313               	.LFB141:
+ 313               	.LFB142:
  234:funsape/peripheral/int1.cpp ****     int1InterruptCallback();
  314               		.loc 1 234 1 is_stmt 1 view -0
  315               		.cfi_startproc
@@ -658,7 +658,7 @@ GAS LISTING /tmp/cctmB0Ow.s 			page 1
  319               		.cfi_offset 1, -2
  320 0002 0F92      		push r0
  321               	.LCFI1:
-GAS LISTING /tmp/cctmB0Ow.s 			page 12
+GAS LISTING /tmp/ccjfECZQ.s 			page 12
 
 
  322               		.cfi_def_cfa_offset 4
@@ -718,7 +718,7 @@ GAS LISTING /tmp/cctmB0Ow.s 			page 1
  376               	/* frame size = 0 */
  377               	/* stack size = 15 */
  378               	.L__stack_usage = 15
-GAS LISTING /tmp/cctmB0Ow.s 			page 13
+GAS LISTING /tmp/ccjfECZQ.s 			page 13
 
 
  235:funsape/peripheral/int1.cpp **** }
@@ -747,10 +747,10 @@ GAS LISTING /tmp/cctmB0Ow.s 			page 1
  400 0044 1F90      		pop r1
  401 0046 1895      		reti
  402               		.cfi_endproc
- 403               	.LFE141:
+ 403               	.LFE142:
  405               		.section	.text._GLOBAL__sub_I__ZN4Int19_instanceE,"ax",@progbits
  407               	_GLOBAL__sub_I__ZN4Int19_instanceE:
- 408               	.LFB144:
+ 408               	.LFB145:
  409               		.loc 1 236 1 is_stmt 1 view -0
  410               		.cfi_startproc
  411               	/* prologue: function */
@@ -763,7 +763,7 @@ GAS LISTING /tmp/cctmB0Ow.s 			page 1
  418               	/* epilogue start */
  419 0004 0895      		ret
  420               		.cfi_endproc
- 421               	.LFE144:
+ 421               	.LFE145:
  423               		.global __do_global_ctors
  424               		.section .ctors,"a",@progbits
  425               		.p2align	1
@@ -778,240 +778,240 @@ GAS LISTING /tmp/cctmB0Ow.s 			page 1
  436               		.file 3 "funsape/peripheral/../config/atmega328p.hpp"
  437               		.file 4 "funsape/peripheral/../globalDefines.hpp"
  438               		.file 5 "funsape/peripheral/int1.hpp"
-GAS LISTING /tmp/cctmB0Ow.s 			page 14
+GAS LISTING /tmp/ccjfECZQ.s 			page 14
 
 
-GAS LISTING /tmp/cctmB0Ow.s 			page 15
+GAS LISTING /tmp/ccjfECZQ.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 int1.cpp
-     /tmp/cctmB0Ow.s:2      *ABS*:0000003e __SP_H__
-     /tmp/cctmB0Ow.s:3      *ABS*:0000003d __SP_L__
-     /tmp/cctmB0Ow.s:4      *ABS*:0000003f __SREG__
-     /tmp/cctmB0Ow.s:5      *ABS*:00000000 __tmp_reg__
-     /tmp/cctmB0Ow.s:6      *ABS*:00000001 __zero_reg__
-     /tmp/cctmB0Ow.s:14     .text._ZN4Int1C2Ev:00000000 _ZN4Int1C2Ev
-     /tmp/cctmB0Ow.s:17     .text._ZN4Int1C2Ev:00000000 .Loc.0
-     /tmp/cctmB0Ow.s:18     .text._ZN4Int1C2Ev:00000000 L0
-     /tmp/cctmB0Ow.s:23     .text._ZN4Int1C2Ev:00000000 .Loc.1
-     /tmp/cctmB0Ow.s:26     .text._ZN4Int1C2Ev:00000002 .Loc.2
-     /tmp/cctmB0Ow.s:29     .text._ZN4Int1C2Ev:00000004 .Loc.3
-     /tmp/cctmB0Ow.s:32     .text._ZN4Int1C2Ev:00000008 .Loc.4
-     /tmp/cctmB0Ow.s:35     .text._ZN4Int1C2Ev:0000000c .Loc.5
-     /tmp/cctmB0Ow.s:37     .text._ZN4Int1C2Ev:0000000e .Loc.6
-     /tmp/cctmB0Ow.s:38     .text._ZN4Int1C2Ev:0000000e .Loc.7
-     /tmp/cctmB0Ow.s:39     .text._ZN4Int1C2Ev:0000000e .Loc.8
-     /tmp/cctmB0Ow.s:40     .text._ZN4Int1C2Ev:0000000e .Loc.9
-     /tmp/cctmB0Ow.s:43     .text._ZN4Int1C2Ev:0000000e .Loc.10
-     /tmp/cctmB0Ow.s:45     .text._ZN4Int1C2Ev:00000010 L0
-     /tmp/cctmB0Ow.s:14     .text._ZN4Int1C2Ev:00000000 _ZN4Int1C1Ev
-     /tmp/cctmB0Ow.s:52     .text._Z41__static_initialization_and_destruction_0v:00000000 _Z41__static_initialization_and_destruction_0v
-     /tmp/cctmB0Ow.s:54     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.11
-     /tmp/cctmB0Ow.s:55     .text._Z41__static_initialization_and_destruction_0v:00000000 L0
-     /tmp/cctmB0Ow.s:60     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.12
-     /tmp/cctmB0Ow.s:431    .bss._ZN4Int19_instanceE:00000000 _ZN4Int19_instanceE
-     /tmp/cctmB0Ow.s:66     .text._Z41__static_initialization_and_destruction_0v:00000008 .Loc.13
-     /tmp/cctmB0Ow.s:68     .text._Z41__static_initialization_and_destruction_0v:0000000a L0
-     /tmp/cctmB0Ow.s:74     .text._ZN4Int1D2Ev:00000000 _ZN4Int1D2Ev
-     /tmp/cctmB0Ow.s:77     .text._ZN4Int1D2Ev:00000000 .Loc.14
-     /tmp/cctmB0Ow.s:78     .text._ZN4Int1D2Ev:00000000 L0
-     /tmp/cctmB0Ow.s:84     .text._ZN4Int1D2Ev:00000000 .Loc.15
-     /tmp/cctmB0Ow.s:85     .text._ZN4Int1D2Ev:00000000 .Loc.16
-     /tmp/cctmB0Ow.s:86     .text._ZN4Int1D2Ev:00000000 .Loc.17
-     /tmp/cctmB0Ow.s:89     .text._ZN4Int1D2Ev:00000000 .Loc.18
-     /tmp/cctmB0Ow.s:91     .text._ZN4Int1D2Ev:00000002 L0
-     /tmp/cctmB0Ow.s:74     .text._ZN4Int1D2Ev:00000000 _ZN4Int1D1Ev
-     /tmp/cctmB0Ow.s:99     .text._ZN4Int14initENS_9SenseModeE:00000000 _ZN4Int14initENS_9SenseModeE
-     /tmp/cctmB0Ow.s:102    .text._ZN4Int14initENS_9SenseModeE:00000000 .Loc.19
-     /tmp/cctmB0Ow.s:103    .text._ZN4Int14initENS_9SenseModeE:00000000 L0
-     /tmp/cctmB0Ow.s:108    .text._ZN4Int14initENS_9SenseModeE:00000000 .Loc.20
-     /tmp/cctmB0Ow.s:110    .text._ZN4Int14initENS_9SenseModeE:00000002 .Loc.21
-     /tmp/cctmB0Ow.s:111    .text._ZN4Int14initENS_9SenseModeE:00000002 .Loc.22
-     /tmp/cctmB0Ow.s:112    .text._ZN4Int14initENS_9SenseModeE:00000002 .Loc.23
-     /tmp/cctmB0Ow.s:117    .text._ZN4Int14initENS_9SenseModeE:00000008 .Loc.24
-     /tmp/cctmB0Ow.s:118    .text._ZN4Int14initENS_9SenseModeE:00000008 .Loc.25
-     /tmp/cctmB0Ow.s:121    .text._ZN4Int14initENS_9SenseModeE:0000000a .Loc.26
-     /tmp/cctmB0Ow.s:122    .text._ZN4Int14initENS_9SenseModeE:0000000a .Loc.27
-     /tmp/cctmB0Ow.s:123    .text._ZN4Int14initENS_9SenseModeE:0000000a .Loc.28
-     /tmp/cctmB0Ow.s:126    .text._ZN4Int14initENS_9SenseModeE:0000000c .Loc.29
-     /tmp/cctmB0Ow.s:131    .text._ZN4Int14initENS_9SenseModeE:00000012 .Loc.30
-     /tmp/cctmB0Ow.s:132    .text._ZN4Int14initENS_9SenseModeE:00000012 .Loc.31
-     /tmp/cctmB0Ow.s:133    .text._ZN4Int14initENS_9SenseModeE:00000012 .Loc.32
-     /tmp/cctmB0Ow.s:135    .text._ZN4Int14initENS_9SenseModeE:00000014 .Loc.33
-     /tmp/cctmB0Ow.s:136    .text._ZN4Int14initENS_9SenseModeE:00000014 .Loc.34
-     /tmp/cctmB0Ow.s:138    .text._ZN4Int14initENS_9SenseModeE:00000016 .Loc.35
-GAS LISTING /tmp/cctmB0Ow.s 			page 16
+     /tmp/ccjfECZQ.s:2      *ABS*:0000003e __SP_H__
+     /tmp/ccjfECZQ.s:3      *ABS*:0000003d __SP_L__
+     /tmp/ccjfECZQ.s:4      *ABS*:0000003f __SREG__
+     /tmp/ccjfECZQ.s:5      *ABS*:00000000 __tmp_reg__
+     /tmp/ccjfECZQ.s:6      *ABS*:00000001 __zero_reg__
+     /tmp/ccjfECZQ.s:14     .text._ZN4Int1C2Ev:00000000 _ZN4Int1C2Ev
+     /tmp/ccjfECZQ.s:17     .text._ZN4Int1C2Ev:00000000 .Loc.0
+     /tmp/ccjfECZQ.s:18     .text._ZN4Int1C2Ev:00000000 L0
+     /tmp/ccjfECZQ.s:23     .text._ZN4Int1C2Ev:00000000 .Loc.1
+     /tmp/ccjfECZQ.s:26     .text._ZN4Int1C2Ev:00000002 .Loc.2
+     /tmp/ccjfECZQ.s:29     .text._ZN4Int1C2Ev:00000004 .Loc.3
+     /tmp/ccjfECZQ.s:32     .text._ZN4Int1C2Ev:00000008 .Loc.4
+     /tmp/ccjfECZQ.s:35     .text._ZN4Int1C2Ev:0000000c .Loc.5
+     /tmp/ccjfECZQ.s:37     .text._ZN4Int1C2Ev:0000000e .Loc.6
+     /tmp/ccjfECZQ.s:38     .text._ZN4Int1C2Ev:0000000e .Loc.7
+     /tmp/ccjfECZQ.s:39     .text._ZN4Int1C2Ev:0000000e .Loc.8
+     /tmp/ccjfECZQ.s:40     .text._ZN4Int1C2Ev:0000000e .Loc.9
+     /tmp/ccjfECZQ.s:43     .text._ZN4Int1C2Ev:0000000e .Loc.10
+     /tmp/ccjfECZQ.s:45     .text._ZN4Int1C2Ev:00000010 L0
+     /tmp/ccjfECZQ.s:14     .text._ZN4Int1C2Ev:00000000 _ZN4Int1C1Ev
+     /tmp/ccjfECZQ.s:52     .text._Z41__static_initialization_and_destruction_0v:00000000 _Z41__static_initialization_and_destruction_0v
+     /tmp/ccjfECZQ.s:54     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.11
+     /tmp/ccjfECZQ.s:55     .text._Z41__static_initialization_and_destruction_0v:00000000 L0
+     /tmp/ccjfECZQ.s:60     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.12
+     /tmp/ccjfECZQ.s:431    .bss._ZN4Int19_instanceE:00000000 _ZN4Int19_instanceE
+     /tmp/ccjfECZQ.s:66     .text._Z41__static_initialization_and_destruction_0v:00000008 .Loc.13
+     /tmp/ccjfECZQ.s:68     .text._Z41__static_initialization_and_destruction_0v:0000000a L0
+     /tmp/ccjfECZQ.s:74     .text._ZN4Int1D2Ev:00000000 _ZN4Int1D2Ev
+     /tmp/ccjfECZQ.s:77     .text._ZN4Int1D2Ev:00000000 .Loc.14
+     /tmp/ccjfECZQ.s:78     .text._ZN4Int1D2Ev:00000000 L0
+     /tmp/ccjfECZQ.s:84     .text._ZN4Int1D2Ev:00000000 .Loc.15
+     /tmp/ccjfECZQ.s:85     .text._ZN4Int1D2Ev:00000000 .Loc.16
+     /tmp/ccjfECZQ.s:86     .text._ZN4Int1D2Ev:00000000 .Loc.17
+     /tmp/ccjfECZQ.s:89     .text._ZN4Int1D2Ev:00000000 .Loc.18
+     /tmp/ccjfECZQ.s:91     .text._ZN4Int1D2Ev:00000002 L0
+     /tmp/ccjfECZQ.s:74     .text._ZN4Int1D2Ev:00000000 _ZN4Int1D1Ev
+     /tmp/ccjfECZQ.s:99     .text._ZN4Int14initENS_9SenseModeE:00000000 _ZN4Int14initENS_9SenseModeE
+     /tmp/ccjfECZQ.s:102    .text._ZN4Int14initENS_9SenseModeE:00000000 .Loc.19
+     /tmp/ccjfECZQ.s:103    .text._ZN4Int14initENS_9SenseModeE:00000000 L0
+     /tmp/ccjfECZQ.s:108    .text._ZN4Int14initENS_9SenseModeE:00000000 .Loc.20
+     /tmp/ccjfECZQ.s:110    .text._ZN4Int14initENS_9SenseModeE:00000002 .Loc.21
+     /tmp/ccjfECZQ.s:111    .text._ZN4Int14initENS_9SenseModeE:00000002 .Loc.22
+     /tmp/ccjfECZQ.s:112    .text._ZN4Int14initENS_9SenseModeE:00000002 .Loc.23
+     /tmp/ccjfECZQ.s:117    .text._ZN4Int14initENS_9SenseModeE:00000008 .Loc.24
+     /tmp/ccjfECZQ.s:118    .text._ZN4Int14initENS_9SenseModeE:00000008 .Loc.25
+     /tmp/ccjfECZQ.s:121    .text._ZN4Int14initENS_9SenseModeE:0000000a .Loc.26
+     /tmp/ccjfECZQ.s:122    .text._ZN4Int14initENS_9SenseModeE:0000000a .Loc.27
+     /tmp/ccjfECZQ.s:123    .text._ZN4Int14initENS_9SenseModeE:0000000a .Loc.28
+     /tmp/ccjfECZQ.s:126    .text._ZN4Int14initENS_9SenseModeE:0000000c .Loc.29
+     /tmp/ccjfECZQ.s:131    .text._ZN4Int14initENS_9SenseModeE:00000012 .Loc.30
+     /tmp/ccjfECZQ.s:132    .text._ZN4Int14initENS_9SenseModeE:00000012 .Loc.31
+     /tmp/ccjfECZQ.s:133    .text._ZN4Int14initENS_9SenseModeE:00000012 .Loc.32
+     /tmp/ccjfECZQ.s:135    .text._ZN4Int14initENS_9SenseModeE:00000014 .Loc.33
+     /tmp/ccjfECZQ.s:136    .text._ZN4Int14initENS_9SenseModeE:00000014 .Loc.34
+     /tmp/ccjfECZQ.s:138    .text._ZN4Int14initENS_9SenseModeE:00000016 .Loc.35
+GAS LISTING /tmp/ccjfECZQ.s 			page 16
 
 
-     /tmp/cctmB0Ow.s:139    .text._ZN4Int14initENS_9SenseModeE:00000016 .Loc.36
-     /tmp/cctmB0Ow.s:142    .text._ZN4Int14initENS_9SenseModeE:00000018 .Loc.37
-     /tmp/cctmB0Ow.s:145    .text._ZN4Int14initENS_9SenseModeE:0000001c .Loc.38
-     /tmp/cctmB0Ow.s:146    .text._ZN4Int14initENS_9SenseModeE:0000001c .Loc.39
-     /tmp/cctmB0Ow.s:149    .text._ZN4Int14initENS_9SenseModeE:00000020 .Loc.40
-     /tmp/cctmB0Ow.s:150    .text._ZN4Int14initENS_9SenseModeE:00000020 .Loc.41
-     /tmp/cctmB0Ow.s:151    .text._ZN4Int14initENS_9SenseModeE:00000020 .Loc.42
-     /tmp/cctmB0Ow.s:155    .text._ZN4Int14initENS_9SenseModeE:00000024 L0
-     /tmp/cctmB0Ow.s:161    .text._ZN4Int110setPinModeE7PinMode:00000000 _ZN4Int110setPinModeE7PinMode
-     /tmp/cctmB0Ow.s:164    .text._ZN4Int110setPinModeE7PinMode:00000000 .Loc.43
-     /tmp/cctmB0Ow.s:165    .text._ZN4Int110setPinModeE7PinMode:00000000 L0
-     /tmp/cctmB0Ow.s:170    .text._ZN4Int110setPinModeE7PinMode:00000000 .Loc.44
-     /tmp/cctmB0Ow.s:171    .text._ZN4Int110setPinModeE7PinMode:00000000 .Loc.45
-     /tmp/cctmB0Ow.s:178    .text._ZN4Int110setPinModeE7PinMode:0000000c .Loc.46
-     /tmp/cctmB0Ow.s:179    .text._ZN4Int110setPinModeE7PinMode:0000000c .Loc.47
-     /tmp/cctmB0Ow.s:180    .text._ZN4Int110setPinModeE7PinMode:0000000c .Loc.48
-     /tmp/cctmB0Ow.s:184    .text._ZN4Int110setPinModeE7PinMode:00000012 .Loc.49
-     /tmp/cctmB0Ow.s:185    .text._ZN4Int110setPinModeE7PinMode:00000012 .Loc.50
-     /tmp/cctmB0Ow.s:186    .text._ZN4Int110setPinModeE7PinMode:00000012 .Loc.51
-     /tmp/cctmB0Ow.s:190    .text._ZN4Int110setPinModeE7PinMode:00000018 .Loc.52
-     /tmp/cctmB0Ow.s:191    .text._ZN4Int110setPinModeE7PinMode:00000018 .Loc.53
-     /tmp/cctmB0Ow.s:193    .text._ZN4Int110setPinModeE7PinMode:00000018 .Loc.54
-     /tmp/cctmB0Ow.s:194    .text._ZN4Int110setPinModeE7PinMode:00000018 .Loc.55
-     /tmp/cctmB0Ow.s:198    .text._ZN4Int110setPinModeE7PinMode:0000001e .Loc.56
-     /tmp/cctmB0Ow.s:199    .text._ZN4Int110setPinModeE7PinMode:0000001e .Loc.57
-     /tmp/cctmB0Ow.s:200    .text._ZN4Int110setPinModeE7PinMode:0000001e .Loc.58
-     /tmp/cctmB0Ow.s:204    .text._ZN4Int110setPinModeE7PinMode:00000020 .Loc.59
-     /tmp/cctmB0Ow.s:208    .text._ZN4Int110setPinModeE7PinMode:00000022 .Loc.60
-     /tmp/cctmB0Ow.s:209    .text._ZN4Int110setPinModeE7PinMode:00000022 .Loc.61
-     /tmp/cctmB0Ow.s:210    .text._ZN4Int110setPinModeE7PinMode:00000022 .Loc.62
-     /tmp/cctmB0Ow.s:214    .text._ZN4Int110setPinModeE7PinMode:00000028 .Loc.63
-     /tmp/cctmB0Ow.s:215    .text._ZN4Int110setPinModeE7PinMode:00000028 .Loc.64
-     /tmp/cctmB0Ow.s:216    .text._ZN4Int110setPinModeE7PinMode:00000028 .Loc.65
-     /tmp/cctmB0Ow.s:220    .text._ZN4Int110setPinModeE7PinMode:0000002e .Loc.66
-     /tmp/cctmB0Ow.s:221    .text._ZN4Int110setPinModeE7PinMode:0000002e .Loc.67
-     /tmp/cctmB0Ow.s:224    .text._ZN4Int110setPinModeE7PinMode:00000030 .Loc.68
-     /tmp/cctmB0Ow.s:225    .text._ZN4Int110setPinModeE7PinMode:00000030 .Loc.69
-     /tmp/cctmB0Ow.s:226    .text._ZN4Int110setPinModeE7PinMode:00000030 .Loc.70
-     /tmp/cctmB0Ow.s:230    .text._ZN4Int110setPinModeE7PinMode:00000036 .Loc.71
-     /tmp/cctmB0Ow.s:231    .text._ZN4Int110setPinModeE7PinMode:00000036 .Loc.72
-     /tmp/cctmB0Ow.s:233    .text._ZN4Int110setPinModeE7PinMode:00000038 L0
-     /tmp/cctmB0Ow.s:239    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000000 _ZN4Int112setSenseModeENS_9SenseModeE
-     /tmp/cctmB0Ow.s:242    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000000 .Loc.73
-     /tmp/cctmB0Ow.s:243    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000000 L0
-     /tmp/cctmB0Ow.s:248    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000000 .Loc.74
-     /tmp/cctmB0Ow.s:250    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000002 .Loc.75
-     /tmp/cctmB0Ow.s:251    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000002 .Loc.76
-     /tmp/cctmB0Ow.s:252    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000002 .Loc.77
-     /tmp/cctmB0Ow.s:257    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000008 .Loc.78
-     /tmp/cctmB0Ow.s:258    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000008 .Loc.79
-     /tmp/cctmB0Ow.s:261    .text._ZN4Int112setSenseModeENS_9SenseModeE:0000000a .Loc.80
-     /tmp/cctmB0Ow.s:262    .text._ZN4Int112setSenseModeENS_9SenseModeE:0000000a .Loc.81
-     /tmp/cctmB0Ow.s:263    .text._ZN4Int112setSenseModeENS_9SenseModeE:0000000a .Loc.82
-     /tmp/cctmB0Ow.s:269    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000012 .Loc.83
-     /tmp/cctmB0Ow.s:270    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000012 .Loc.84
-     /tmp/cctmB0Ow.s:271    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000012 .Loc.85
-     /tmp/cctmB0Ow.s:273    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000014 .Loc.86
-GAS LISTING /tmp/cctmB0Ow.s 			page 17
+     /tmp/ccjfECZQ.s:139    .text._ZN4Int14initENS_9SenseModeE:00000016 .Loc.36
+     /tmp/ccjfECZQ.s:142    .text._ZN4Int14initENS_9SenseModeE:00000018 .Loc.37
+     /tmp/ccjfECZQ.s:145    .text._ZN4Int14initENS_9SenseModeE:0000001c .Loc.38
+     /tmp/ccjfECZQ.s:146    .text._ZN4Int14initENS_9SenseModeE:0000001c .Loc.39
+     /tmp/ccjfECZQ.s:149    .text._ZN4Int14initENS_9SenseModeE:00000020 .Loc.40
+     /tmp/ccjfECZQ.s:150    .text._ZN4Int14initENS_9SenseModeE:00000020 .Loc.41
+     /tmp/ccjfECZQ.s:151    .text._ZN4Int14initENS_9SenseModeE:00000020 .Loc.42
+     /tmp/ccjfECZQ.s:155    .text._ZN4Int14initENS_9SenseModeE:00000024 L0
+     /tmp/ccjfECZQ.s:161    .text._ZN4Int110setPinModeE7PinMode:00000000 _ZN4Int110setPinModeE7PinMode
+     /tmp/ccjfECZQ.s:164    .text._ZN4Int110setPinModeE7PinMode:00000000 .Loc.43
+     /tmp/ccjfECZQ.s:165    .text._ZN4Int110setPinModeE7PinMode:00000000 L0
+     /tmp/ccjfECZQ.s:170    .text._ZN4Int110setPinModeE7PinMode:00000000 .Loc.44
+     /tmp/ccjfECZQ.s:171    .text._ZN4Int110setPinModeE7PinMode:00000000 .Loc.45
+     /tmp/ccjfECZQ.s:178    .text._ZN4Int110setPinModeE7PinMode:0000000c .Loc.46
+     /tmp/ccjfECZQ.s:179    .text._ZN4Int110setPinModeE7PinMode:0000000c .Loc.47
+     /tmp/ccjfECZQ.s:180    .text._ZN4Int110setPinModeE7PinMode:0000000c .Loc.48
+     /tmp/ccjfECZQ.s:184    .text._ZN4Int110setPinModeE7PinMode:00000012 .Loc.49
+     /tmp/ccjfECZQ.s:185    .text._ZN4Int110setPinModeE7PinMode:00000012 .Loc.50
+     /tmp/ccjfECZQ.s:186    .text._ZN4Int110setPinModeE7PinMode:00000012 .Loc.51
+     /tmp/ccjfECZQ.s:190    .text._ZN4Int110setPinModeE7PinMode:00000018 .Loc.52
+     /tmp/ccjfECZQ.s:191    .text._ZN4Int110setPinModeE7PinMode:00000018 .Loc.53
+     /tmp/ccjfECZQ.s:193    .text._ZN4Int110setPinModeE7PinMode:00000018 .Loc.54
+     /tmp/ccjfECZQ.s:194    .text._ZN4Int110setPinModeE7PinMode:00000018 .Loc.55
+     /tmp/ccjfECZQ.s:198    .text._ZN4Int110setPinModeE7PinMode:0000001e .Loc.56
+     /tmp/ccjfECZQ.s:199    .text._ZN4Int110setPinModeE7PinMode:0000001e .Loc.57
+     /tmp/ccjfECZQ.s:200    .text._ZN4Int110setPinModeE7PinMode:0000001e .Loc.58
+     /tmp/ccjfECZQ.s:204    .text._ZN4Int110setPinModeE7PinMode:00000020 .Loc.59
+     /tmp/ccjfECZQ.s:208    .text._ZN4Int110setPinModeE7PinMode:00000022 .Loc.60
+     /tmp/ccjfECZQ.s:209    .text._ZN4Int110setPinModeE7PinMode:00000022 .Loc.61
+     /tmp/ccjfECZQ.s:210    .text._ZN4Int110setPinModeE7PinMode:00000022 .Loc.62
+     /tmp/ccjfECZQ.s:214    .text._ZN4Int110setPinModeE7PinMode:00000028 .Loc.63
+     /tmp/ccjfECZQ.s:215    .text._ZN4Int110setPinModeE7PinMode:00000028 .Loc.64
+     /tmp/ccjfECZQ.s:216    .text._ZN4Int110setPinModeE7PinMode:00000028 .Loc.65
+     /tmp/ccjfECZQ.s:220    .text._ZN4Int110setPinModeE7PinMode:0000002e .Loc.66
+     /tmp/ccjfECZQ.s:221    .text._ZN4Int110setPinModeE7PinMode:0000002e .Loc.67
+     /tmp/ccjfECZQ.s:224    .text._ZN4Int110setPinModeE7PinMode:00000030 .Loc.68
+     /tmp/ccjfECZQ.s:225    .text._ZN4Int110setPinModeE7PinMode:00000030 .Loc.69
+     /tmp/ccjfECZQ.s:226    .text._ZN4Int110setPinModeE7PinMode:00000030 .Loc.70
+     /tmp/ccjfECZQ.s:230    .text._ZN4Int110setPinModeE7PinMode:00000036 .Loc.71
+     /tmp/ccjfECZQ.s:231    .text._ZN4Int110setPinModeE7PinMode:00000036 .Loc.72
+     /tmp/ccjfECZQ.s:233    .text._ZN4Int110setPinModeE7PinMode:00000038 L0
+     /tmp/ccjfECZQ.s:239    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000000 _ZN4Int112setSenseModeENS_9SenseModeE
+     /tmp/ccjfECZQ.s:242    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000000 .Loc.73
+     /tmp/ccjfECZQ.s:243    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000000 L0
+     /tmp/ccjfECZQ.s:248    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000000 .Loc.74
+     /tmp/ccjfECZQ.s:250    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000002 .Loc.75
+     /tmp/ccjfECZQ.s:251    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000002 .Loc.76
+     /tmp/ccjfECZQ.s:252    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000002 .Loc.77
+     /tmp/ccjfECZQ.s:257    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000008 .Loc.78
+     /tmp/ccjfECZQ.s:258    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000008 .Loc.79
+     /tmp/ccjfECZQ.s:261    .text._ZN4Int112setSenseModeENS_9SenseModeE:0000000a .Loc.80
+     /tmp/ccjfECZQ.s:262    .text._ZN4Int112setSenseModeENS_9SenseModeE:0000000a .Loc.81
+     /tmp/ccjfECZQ.s:263    .text._ZN4Int112setSenseModeENS_9SenseModeE:0000000a .Loc.82
+     /tmp/ccjfECZQ.s:269    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000012 .Loc.83
+     /tmp/ccjfECZQ.s:270    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000012 .Loc.84
+     /tmp/ccjfECZQ.s:271    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000012 .Loc.85
+     /tmp/ccjfECZQ.s:273    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000014 .Loc.86
+GAS LISTING /tmp/ccjfECZQ.s 			page 17
 
 
-     /tmp/cctmB0Ow.s:274    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000014 .Loc.87
-     /tmp/cctmB0Ow.s:276    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000016 .Loc.88
-     /tmp/cctmB0Ow.s:277    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000016 .Loc.89
-     /tmp/cctmB0Ow.s:280    .text._ZN4Int112setSenseModeENS_9SenseModeE:0000001a .Loc.90
-     /tmp/cctmB0Ow.s:281    .text._ZN4Int112setSenseModeENS_9SenseModeE:0000001a .Loc.91
-     /tmp/cctmB0Ow.s:282    .text._ZN4Int112setSenseModeENS_9SenseModeE:0000001a .Loc.92
-     /tmp/cctmB0Ow.s:286    .text._ZN4Int112setSenseModeENS_9SenseModeE:0000001c .Loc.93
-     /tmp/cctmB0Ow.s:288    .text._ZN4Int112setSenseModeENS_9SenseModeE:0000001e L0
-     /tmp/cctmB0Ow.s:294    .text._Z21int1InterruptCallbackv:00000000 _Z21int1InterruptCallbackv
-     /tmp/cctmB0Ow.s:296    .text._Z21int1InterruptCallbackv:00000000 .Loc.94
-     /tmp/cctmB0Ow.s:297    .text._Z21int1InterruptCallbackv:00000000 L0
-     /tmp/cctmB0Ow.s:302    .text._Z21int1InterruptCallbackv:00000000 .Loc.95
-     /tmp/cctmB0Ow.s:304    .text._Z21int1InterruptCallbackv:00000000 .Loc.96
-     /tmp/cctmB0Ow.s:306    .text._Z21int1InterruptCallbackv:00000002 L0
-     /tmp/cctmB0Ow.s:312    .text.__vector_2:00000000 __vector_2
-     /tmp/cctmB0Ow.s:314    .text.__vector_2:00000000 .Loc.97
-     /tmp/cctmB0Ow.s:315    .text.__vector_2:00000000 L0
-     /tmp/cctmB0Ow.s:379    .text.__vector_2:00000022 .Loc.98
-     /tmp/cctmB0Ow.s:380    .text.__vector_2:00000022 .Loc.99
-     /tmp/cctmB0Ow.s:384    .text.__vector_2:00000026 .Loc.100
-     /tmp/cctmB0Ow.s:402    .text.__vector_2:00000048 L0
-     /tmp/cctmB0Ow.s:407    .text._GLOBAL__sub_I__ZN4Int19_instanceE:00000000 _GLOBAL__sub_I__ZN4Int19_instanceE
-     /tmp/cctmB0Ow.s:409    .text._GLOBAL__sub_I__ZN4Int19_instanceE:00000000 .Loc.101
-     /tmp/cctmB0Ow.s:410    .text._GLOBAL__sub_I__ZN4Int19_instanceE:00000000 L0
-     /tmp/cctmB0Ow.s:415    .text._GLOBAL__sub_I__ZN4Int19_instanceE:00000000 .Loc.102
-     /tmp/cctmB0Ow.s:420    .text._GLOBAL__sub_I__ZN4Int19_instanceE:00000006 L0
-     /tmp/cctmB0Ow.s:50     .text._ZN4Int1C2Ev:00000010 L0
-     /tmp/cctmB0Ow.s:71     .text._Z41__static_initialization_and_destruction_0v:0000000a L0
-     /tmp/cctmB0Ow.s:96     .text._ZN4Int1D2Ev:00000002 L0
-     /tmp/cctmB0Ow.s:158    .text._ZN4Int14initENS_9SenseModeE:00000024 L0
-     /tmp/cctmB0Ow.s:236    .text._ZN4Int110setPinModeE7PinMode:00000038 L0
-     /tmp/cctmB0Ow.s:291    .text._ZN4Int112setSenseModeENS_9SenseModeE:0000001e L0
-     /tmp/cctmB0Ow.s:309    .text._Z21int1InterruptCallbackv:00000002 L0
-     /tmp/cctmB0Ow.s:405    .text.__vector_2:00000048 L0
-     /tmp/cctmB0Ow.s:424    .text._GLOBAL__sub_I__ZN4Int19_instanceE:00000006 L0
+     /tmp/ccjfECZQ.s:274    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000014 .Loc.87
+     /tmp/ccjfECZQ.s:276    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000016 .Loc.88
+     /tmp/ccjfECZQ.s:277    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000016 .Loc.89
+     /tmp/ccjfECZQ.s:280    .text._ZN4Int112setSenseModeENS_9SenseModeE:0000001a .Loc.90
+     /tmp/ccjfECZQ.s:281    .text._ZN4Int112setSenseModeENS_9SenseModeE:0000001a .Loc.91
+     /tmp/ccjfECZQ.s:282    .text._ZN4Int112setSenseModeENS_9SenseModeE:0000001a .Loc.92
+     /tmp/ccjfECZQ.s:286    .text._ZN4Int112setSenseModeENS_9SenseModeE:0000001c .Loc.93
+     /tmp/ccjfECZQ.s:288    .text._ZN4Int112setSenseModeENS_9SenseModeE:0000001e L0
+     /tmp/ccjfECZQ.s:294    .text._Z21int1InterruptCallbackv:00000000 _Z21int1InterruptCallbackv
+     /tmp/ccjfECZQ.s:296    .text._Z21int1InterruptCallbackv:00000000 .Loc.94
+     /tmp/ccjfECZQ.s:297    .text._Z21int1InterruptCallbackv:00000000 L0
+     /tmp/ccjfECZQ.s:302    .text._Z21int1InterruptCallbackv:00000000 .Loc.95
+     /tmp/ccjfECZQ.s:304    .text._Z21int1InterruptCallbackv:00000000 .Loc.96
+     /tmp/ccjfECZQ.s:306    .text._Z21int1InterruptCallbackv:00000002 L0
+     /tmp/ccjfECZQ.s:312    .text.__vector_2:00000000 __vector_2
+     /tmp/ccjfECZQ.s:314    .text.__vector_2:00000000 .Loc.97
+     /tmp/ccjfECZQ.s:315    .text.__vector_2:00000000 L0
+     /tmp/ccjfECZQ.s:379    .text.__vector_2:00000022 .Loc.98
+     /tmp/ccjfECZQ.s:380    .text.__vector_2:00000022 .Loc.99
+     /tmp/ccjfECZQ.s:384    .text.__vector_2:00000026 .Loc.100
+     /tmp/ccjfECZQ.s:402    .text.__vector_2:00000048 L0
+     /tmp/ccjfECZQ.s:407    .text._GLOBAL__sub_I__ZN4Int19_instanceE:00000000 _GLOBAL__sub_I__ZN4Int19_instanceE
+     /tmp/ccjfECZQ.s:409    .text._GLOBAL__sub_I__ZN4Int19_instanceE:00000000 .Loc.101
+     /tmp/ccjfECZQ.s:410    .text._GLOBAL__sub_I__ZN4Int19_instanceE:00000000 L0
+     /tmp/ccjfECZQ.s:415    .text._GLOBAL__sub_I__ZN4Int19_instanceE:00000000 .Loc.102
+     /tmp/ccjfECZQ.s:420    .text._GLOBAL__sub_I__ZN4Int19_instanceE:00000006 L0
+     /tmp/ccjfECZQ.s:50     .text._ZN4Int1C2Ev:00000010 L0
+     /tmp/ccjfECZQ.s:71     .text._Z41__static_initialization_and_destruction_0v:0000000a L0
+     /tmp/ccjfECZQ.s:96     .text._ZN4Int1D2Ev:00000002 L0
+     /tmp/ccjfECZQ.s:158    .text._ZN4Int14initENS_9SenseModeE:00000024 L0
+     /tmp/ccjfECZQ.s:236    .text._ZN4Int110setPinModeE7PinMode:00000038 L0
+     /tmp/ccjfECZQ.s:291    .text._ZN4Int112setSenseModeENS_9SenseModeE:0000001e L0
+     /tmp/ccjfECZQ.s:309    .text._Z21int1InterruptCallbackv:00000002 L0
+     /tmp/ccjfECZQ.s:405    .text.__vector_2:00000048 L0
+     /tmp/ccjfECZQ.s:424    .text._GLOBAL__sub_I__ZN4Int19_instanceE:00000006 L0
                      .debug_frame:00000000 L0
-     /tmp/cctmB0Ow.s:207    .text._ZN4Int110setPinModeE7PinMode:00000022 .L6
-     /tmp/cctmB0Ow.s:223    .text._ZN4Int110setPinModeE7PinMode:00000030 .L7
-     /tmp/cctmB0Ow.s:192    .text._ZN4Int110setPinModeE7PinMode:00000018 .L8
-     /tmp/cctmB0Ow.s:1299   .debug_abbrev:00000000 .Ldebug_abbrev0
-     /tmp/cctmB0Ow.s:2347   .debug_ranges:00000000 .Ldebug_ranges0
-     /tmp/cctmB0Ow.s:2369   .debug_line:00000000 .Ldebug_line0
-     /tmp/cctmB0Ow.s:408    .text._GLOBAL__sub_I__ZN4Int19_instanceE:00000000 .LFB144
-     /tmp/cctmB0Ow.s:421    .text._GLOBAL__sub_I__ZN4Int19_instanceE:00000006 .LFE144
-     /tmp/cctmB0Ow.s:417    .text._GLOBAL__sub_I__ZN4Int19_instanceE:00000004 .LVL19
-     /tmp/cctmB0Ow.s:53     .text._Z41__static_initialization_and_destruction_0v:00000000 .LFB142
-     /tmp/cctmB0Ow.s:69     .text._Z41__static_initialization_and_destruction_0v:0000000a .LFE142
-     /tmp/cctmB0Ow.s:64     .text._Z41__static_initialization_and_destruction_0v:00000008 .LVL2
-     /tmp/cctmB0Ow.s:313    .text.__vector_2:00000000 .LFB141
-     /tmp/cctmB0Ow.s:403    .text.__vector_2:00000048 .LFE141
-     /tmp/cctmB0Ow.s:2065   .debug_loc:00000000 .LLST6
-     /tmp/cctmB0Ow.s:382    .text.__vector_2:00000026 .LVL18
-     /tmp/cctmB0Ow.s:295    .text._Z21int1InterruptCallbackv:00000000 .LFB140
-     /tmp/cctmB0Ow.s:307    .text._Z21int1InterruptCallbackv:00000002 .LFE140
-     /tmp/cctmB0Ow.s:241    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000000 .LFB139
-     /tmp/cctmB0Ow.s:289    .text._ZN4Int112setSenseModeENS_9SenseModeE:0000001e .LFE139
-     /tmp/cctmB0Ow.s:2163   .debug_loc:000000cf .LLST4
-GAS LISTING /tmp/cctmB0Ow.s 			page 18
+     /tmp/ccjfECZQ.s:207    .text._ZN4Int110setPinModeE7PinMode:00000022 .L6
+     /tmp/ccjfECZQ.s:223    .text._ZN4Int110setPinModeE7PinMode:00000030 .L7
+     /tmp/ccjfECZQ.s:192    .text._ZN4Int110setPinModeE7PinMode:00000018 .L8
+     /tmp/ccjfECZQ.s:1299   .debug_abbrev:00000000 .Ldebug_abbrev0
+     /tmp/ccjfECZQ.s:2347   .debug_ranges:00000000 .Ldebug_ranges0
+     /tmp/ccjfECZQ.s:2369   .debug_line:00000000 .Ldebug_line0
+     /tmp/ccjfECZQ.s:408    .text._GLOBAL__sub_I__ZN4Int19_instanceE:00000000 .LFB145
+     /tmp/ccjfECZQ.s:421    .text._GLOBAL__sub_I__ZN4Int19_instanceE:00000006 .LFE145
+     /tmp/ccjfECZQ.s:417    .text._GLOBAL__sub_I__ZN4Int19_instanceE:00000004 .LVL19
+     /tmp/ccjfECZQ.s:53     .text._Z41__static_initialization_and_destruction_0v:00000000 .LFB143
+     /tmp/ccjfECZQ.s:69     .text._Z41__static_initialization_and_destruction_0v:0000000a .LFE143
+     /tmp/ccjfECZQ.s:64     .text._Z41__static_initialization_and_destruction_0v:00000008 .LVL2
+     /tmp/ccjfECZQ.s:313    .text.__vector_2:00000000 .LFB142
+     /tmp/ccjfECZQ.s:403    .text.__vector_2:00000048 .LFE142
+     /tmp/ccjfECZQ.s:2065   .debug_loc:00000000 .LLST6
+     /tmp/ccjfECZQ.s:382    .text.__vector_2:00000026 .LVL18
+     /tmp/ccjfECZQ.s:295    .text._Z21int1InterruptCallbackv:00000000 .LFB141
+     /tmp/ccjfECZQ.s:307    .text._Z21int1InterruptCallbackv:00000002 .LFE141
+     /tmp/ccjfECZQ.s:241    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000000 .LFB140
+     /tmp/ccjfECZQ.s:289    .text._ZN4Int112setSenseModeENS_9SenseModeE:0000001e .LFE140
+     /tmp/ccjfECZQ.s:2163   .debug_loc:000000cf .LLST4
+GAS LISTING /tmp/ccjfECZQ.s 			page 18
 
 
-     /tmp/cctmB0Ow.s:2158   .debug_loc:000000cb .LVUS4
-     /tmp/cctmB0Ow.s:2189   .debug_loc:000000fb .LLST5
-     /tmp/cctmB0Ow.s:2184   .debug_loc:000000f7 .LVUS5
-     /tmp/cctmB0Ow.s:163    .text._ZN4Int110setPinModeE7PinMode:00000000 .LFB138
-     /tmp/cctmB0Ow.s:234    .text._ZN4Int110setPinModeE7PinMode:00000038 .LFE138
-     /tmp/cctmB0Ow.s:2207   .debug_loc:0000011f .LLST3
-     /tmp/cctmB0Ow.s:2200   .debug_loc:00000119 .LVUS3
-     /tmp/cctmB0Ow.s:101    .text._ZN4Int14initENS_9SenseModeE:00000000 .LFB137
-     /tmp/cctmB0Ow.s:156    .text._ZN4Int14initENS_9SenseModeE:00000024 .LFE137
-     /tmp/cctmB0Ow.s:2242   .debug_loc:0000015b .LLST1
-     /tmp/cctmB0Ow.s:2237   .debug_loc:00000157 .LVUS1
-     /tmp/cctmB0Ow.s:2270   .debug_loc:00000189 .LLST2
-     /tmp/cctmB0Ow.s:2263   .debug_loc:00000183 .LVUS2
-     /tmp/cctmB0Ow.s:76     .text._ZN4Int1D2Ev:00000000 .LFB135
-     /tmp/cctmB0Ow.s:92     .text._ZN4Int1D2Ev:00000002 .LFE135
-     /tmp/cctmB0Ow.s:16     .text._ZN4Int1C2Ev:00000000 .LFB132
-     /tmp/cctmB0Ow.s:46     .text._ZN4Int1C2Ev:00000010 .LFE132
-     /tmp/cctmB0Ow.s:2297   .debug_loc:000001bd .LLST0
-     /tmp/cctmB0Ow.s:2292   .debug_loc:000001b9 .LVUS0
-     /tmp/cctmB0Ow.s:317    .text.__vector_2:00000002 .LCFI0
-     /tmp/cctmB0Ow.s:321    .text.__vector_2:00000004 .LCFI1
-     /tmp/cctmB0Ow.s:328    .text.__vector_2:0000000c .LCFI2
-     /tmp/cctmB0Ow.s:332    .text.__vector_2:0000000e .LCFI3
-     /tmp/cctmB0Ow.s:336    .text.__vector_2:00000010 .LCFI4
-     /tmp/cctmB0Ow.s:340    .text.__vector_2:00000012 .LCFI5
-     /tmp/cctmB0Ow.s:344    .text.__vector_2:00000014 .LCFI6
-     /tmp/cctmB0Ow.s:348    .text.__vector_2:00000016 .LCFI7
-     /tmp/cctmB0Ow.s:352    .text.__vector_2:00000018 .LCFI8
-     /tmp/cctmB0Ow.s:356    .text.__vector_2:0000001a .LCFI9
-     /tmp/cctmB0Ow.s:360    .text.__vector_2:0000001c .LCFI10
-     /tmp/cctmB0Ow.s:364    .text.__vector_2:0000001e .LCFI11
-     /tmp/cctmB0Ow.s:368    .text.__vector_2:00000020 .LCFI12
-     /tmp/cctmB0Ow.s:372    .text.__vector_2:00000022 .LCFI13
-     /tmp/cctmB0Ow.s:240    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000000 .LVL13
-     /tmp/cctmB0Ow.s:284    .text._ZN4Int112setSenseModeENS_9SenseModeE:0000001c .LVL17
-     /tmp/cctmB0Ow.s:256    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000008 .LVL14
-     /tmp/cctmB0Ow.s:268    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000012 .LVL16
-     /tmp/cctmB0Ow.s:162    .text._ZN4Int110setPinModeE7PinMode:00000000 .LVL10
-     /tmp/cctmB0Ow.s:202    .text._ZN4Int110setPinModeE7PinMode:00000020 .LVL11
-     /tmp/cctmB0Ow.s:206    .text._ZN4Int110setPinModeE7PinMode:00000022 .LVL12
-     /tmp/cctmB0Ow.s:100    .text._ZN4Int14initENS_9SenseModeE:00000000 .LVL4
-     /tmp/cctmB0Ow.s:125    .text._ZN4Int14initENS_9SenseModeE:0000000c .LVL7
-     /tmp/cctmB0Ow.s:116    .text._ZN4Int14initENS_9SenseModeE:00000008 .LVL5
-     /tmp/cctmB0Ow.s:130    .text._ZN4Int14initENS_9SenseModeE:00000012 .LVL8
-     /tmp/cctmB0Ow.s:141    .text._ZN4Int14initENS_9SenseModeE:00000018 .LVL9
-     /tmp/cctmB0Ow.s:15     .text._ZN4Int1C2Ev:00000000 .LVL0
-     /tmp/cctmB0Ow.s:28     .text._ZN4Int1C2Ev:00000004 .LVL1
-     /tmp/cctmB0Ow.s:440    .debug_info:00000000 .Ldebug_info0
+     /tmp/ccjfECZQ.s:2158   .debug_loc:000000cb .LVUS4
+     /tmp/ccjfECZQ.s:2189   .debug_loc:000000fb .LLST5
+     /tmp/ccjfECZQ.s:2184   .debug_loc:000000f7 .LVUS5
+     /tmp/ccjfECZQ.s:163    .text._ZN4Int110setPinModeE7PinMode:00000000 .LFB139
+     /tmp/ccjfECZQ.s:234    .text._ZN4Int110setPinModeE7PinMode:00000038 .LFE139
+     /tmp/ccjfECZQ.s:2207   .debug_loc:0000011f .LLST3
+     /tmp/ccjfECZQ.s:2200   .debug_loc:00000119 .LVUS3
+     /tmp/ccjfECZQ.s:101    .text._ZN4Int14initENS_9SenseModeE:00000000 .LFB138
+     /tmp/ccjfECZQ.s:156    .text._ZN4Int14initENS_9SenseModeE:00000024 .LFE138
+     /tmp/ccjfECZQ.s:2242   .debug_loc:0000015b .LLST1
+     /tmp/ccjfECZQ.s:2237   .debug_loc:00000157 .LVUS1
+     /tmp/ccjfECZQ.s:2270   .debug_loc:00000189 .LLST2
+     /tmp/ccjfECZQ.s:2263   .debug_loc:00000183 .LVUS2
+     /tmp/ccjfECZQ.s:76     .text._ZN4Int1D2Ev:00000000 .LFB136
+     /tmp/ccjfECZQ.s:92     .text._ZN4Int1D2Ev:00000002 .LFE136
+     /tmp/ccjfECZQ.s:16     .text._ZN4Int1C2Ev:00000000 .LFB133
+     /tmp/ccjfECZQ.s:46     .text._ZN4Int1C2Ev:00000010 .LFE133
+     /tmp/ccjfECZQ.s:2297   .debug_loc:000001bd .LLST0
+     /tmp/ccjfECZQ.s:2292   .debug_loc:000001b9 .LVUS0
+     /tmp/ccjfECZQ.s:317    .text.__vector_2:00000002 .LCFI0
+     /tmp/ccjfECZQ.s:321    .text.__vector_2:00000004 .LCFI1
+     /tmp/ccjfECZQ.s:328    .text.__vector_2:0000000c .LCFI2
+     /tmp/ccjfECZQ.s:332    .text.__vector_2:0000000e .LCFI3
+     /tmp/ccjfECZQ.s:336    .text.__vector_2:00000010 .LCFI4
+     /tmp/ccjfECZQ.s:340    .text.__vector_2:00000012 .LCFI5
+     /tmp/ccjfECZQ.s:344    .text.__vector_2:00000014 .LCFI6
+     /tmp/ccjfECZQ.s:348    .text.__vector_2:00000016 .LCFI7
+     /tmp/ccjfECZQ.s:352    .text.__vector_2:00000018 .LCFI8
+     /tmp/ccjfECZQ.s:356    .text.__vector_2:0000001a .LCFI9
+     /tmp/ccjfECZQ.s:360    .text.__vector_2:0000001c .LCFI10
+     /tmp/ccjfECZQ.s:364    .text.__vector_2:0000001e .LCFI11
+     /tmp/ccjfECZQ.s:368    .text.__vector_2:00000020 .LCFI12
+     /tmp/ccjfECZQ.s:372    .text.__vector_2:00000022 .LCFI13
+     /tmp/ccjfECZQ.s:240    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000000 .LVL13
+     /tmp/ccjfECZQ.s:284    .text._ZN4Int112setSenseModeENS_9SenseModeE:0000001c .LVL17
+     /tmp/ccjfECZQ.s:256    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000008 .LVL14
+     /tmp/ccjfECZQ.s:268    .text._ZN4Int112setSenseModeENS_9SenseModeE:00000012 .LVL16
+     /tmp/ccjfECZQ.s:162    .text._ZN4Int110setPinModeE7PinMode:00000000 .LVL10
+     /tmp/ccjfECZQ.s:202    .text._ZN4Int110setPinModeE7PinMode:00000020 .LVL11
+     /tmp/ccjfECZQ.s:206    .text._ZN4Int110setPinModeE7PinMode:00000022 .LVL12
+     /tmp/ccjfECZQ.s:100    .text._ZN4Int14initENS_9SenseModeE:00000000 .LVL4
+     /tmp/ccjfECZQ.s:125    .text._ZN4Int14initENS_9SenseModeE:0000000c .LVL7
+     /tmp/ccjfECZQ.s:116    .text._ZN4Int14initENS_9SenseModeE:00000008 .LVL5
+     /tmp/ccjfECZQ.s:130    .text._ZN4Int14initENS_9SenseModeE:00000012 .LVL8
+     /tmp/ccjfECZQ.s:141    .text._ZN4Int14initENS_9SenseModeE:00000018 .LVL9
+     /tmp/ccjfECZQ.s:15     .text._ZN4Int1C2Ev:00000000 .LVL0
+     /tmp/ccjfECZQ.s:28     .text._ZN4Int1C2Ev:00000004 .LVL1
+     /tmp/ccjfECZQ.s:440    .debug_info:00000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 __do_global_ctors

@@ -1,0 +1,2706 @@
+GAS LISTING /tmp/cch7C0sd.s 			page 1
+
+
+   1               		.file	"example.cpp"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.text
+   8               	.Ltext0:
+   9               		.cfi_sections	.debug_frame
+  10               		.file 1 "example.cpp"
+  11               		.section	.text._Z41__static_initialization_and_destruction_0v,"ax",@progbits
+  13               	_Z41__static_initialization_and_destruction_0v:
+  14               	.LFB150:
+   1:example.cpp   **** //!
+   2:example.cpp   **** //! \file           example.cpp_
+   3:example.cpp   **** //! \brief          Exemplo minimo: mostrar texto no OLED SSD1306 (I2C) com a FunSAPE
+   4:example.cpp   **** //! \details        Mostra um texto por alguns segundos e depois troca o texto,
+   5:example.cpp   **** //!                     repetindo indefinidamente.
+   6:example.cpp   **** //!
+   7:example.cpp   **** //!                 Ligacao no ATmega328p: SDA = A4/PC4, SCL = A5/PC5 (com pull-ups
+   8:example.cpp   **** //!                     no barramento). Endereco I2C padrao do modulo: 0x3C.
+   9:example.cpp   **** //!
+  10:example.cpp   **** //!                 Obs.: o nome termina em ".cpp_" de proposito para NAO entrar no
+  11:example.cpp   **** //!                     build (o Makefile compila todo "*.cpp"). Para usar, renomeie
+  12:example.cpp   **** //!                     para "example.cpp" e garanta que exista apenas um main() no
+  13:example.cpp   **** //!                     projeto (ex.: mova/renomeie o main.cpp atual).
+  14:example.cpp   **** //!
+  15:example.cpp   **** 
+  16:example.cpp   **** #define F_CPU 16000000UL
+  17:example.cpp   **** 
+  18:example.cpp   **** #include "funsape/globalDefines.hpp"
+  19:example.cpp   **** #include "funsape/peripheral/twi.hpp"
+  20:example.cpp   **** #include "funsape/device/ssd1306.hpp"
+  21:example.cpp   **** 
+  22:example.cpp   **** // Objeto global do display
+  23:example.cpp   **** Ssd1306 display;
+  24:example.cpp   **** 
+  25:example.cpp   **** int main(void)
+  26:example.cpp   **** {
+  27:example.cpp   ****     // Configura o barramento I2C (TWI) a 400 kHz com buffer de 64 bytes
+  28:example.cpp   ****     twi.init(400000, 64);
+  29:example.cpp   **** 
+  30:example.cpp   ****     // O TWI e' orientado a interrupcao -> habilita interrupcoes globais
+  31:example.cpp   ****     sei();
+  32:example.cpp   **** 
+  33:example.cpp   ****     // Inicializa o OLED 128x64 no endereco 0x3C (padrao)
+  34:example.cpp   ****     display.init(&twi);
+  35:example.cpp   **** 
+  36:example.cpp   ****     while(true) {
+  37:example.cpp   ****         // --- Primeiro texto ---
+  38:example.cpp   ****         display.clearScreen();
+  39:example.cpp   ****         display.setTextSize(1);
+  40:example.cpp   ****         display.setCursor(0, 0);
+  41:example.cpp   ****         display.print("Ola, mundo!");
+  42:example.cpp   ****         display.setTextSize(2);
+  43:example.cpp   ****         display.setCursor(0, 2);
+  44:example.cpp   ****         display.print("FunSAPE");
+GAS LISTING /tmp/cch7C0sd.s 			page 2
+
+
+  45:example.cpp   **** 
+  46:example.cpp   ****         delayMs(2000);              // mantem na tela por 2 segundos
+  47:example.cpp   **** 
+  48:example.cpp   ****         // --- Segundo texto ---
+  49:example.cpp   ****         display.clearScreen();
+  50:example.cpp   ****         display.setTextSize(1);
+  51:example.cpp   ****         display.setCursor(0, 0);
+  52:example.cpp   ****         display.print("Texto mudou :)");
+  53:example.cpp   ****         display.setTextSize(2);
+  54:example.cpp   ****         display.setCursor(0, 3);
+  55:example.cpp   ****         display.print("SSD1306");
+  56:example.cpp   **** 
+  57:example.cpp   ****         delayMs(2000);              // mantem na tela por 2 segundos
+  58:example.cpp   ****     }
+  59:example.cpp   **** 
+  60:example.cpp   ****     return 0;
+  61:example.cpp   **** }
+  15               		.loc 1 61 1 view -0
+  16               		.cfi_startproc
+  17               	/* prologue: function */
+  18               	/* frame size = 0 */
+  19               	/* stack size = 0 */
+  20               	.L__stack_usage = 0
+  23:example.cpp   **** 
+  21               		.loc 1 23 9 is_stmt 0 view .LVU1
+  22 0000 80E0      		ldi r24,lo8(display)
+  23 0002 90E0      		ldi r25,hi8(display)
+  24 0004 0E94 0000 		call _ZN7Ssd1306C1Ev
+  25               	.LVL0:
+  26               	/* epilogue start */
+  27               		.loc 1 61 1 view .LVU2
+  28 0008 0895      		ret
+  29               		.cfi_endproc
+  30               	.LFE150:
+  32               		.section	.text._Z41__static_initialization_and_destruction_1v,"ax",@progbits
+  34               	_Z41__static_initialization_and_destruction_1v:
+  35               	.LFB151:
+  36               		.loc 1 61 1 is_stmt 1 view -0
+  37               		.cfi_startproc
+  38               	/* prologue: function */
+  39               	/* frame size = 0 */
+  40               	/* stack size = 0 */
+  41               	.L__stack_usage = 0
+  23:example.cpp   **** 
+  42               		.loc 1 23 9 is_stmt 0 view .LVU4
+  43 0000 80E0      		ldi r24,lo8(display)
+  44 0002 90E0      		ldi r25,hi8(display)
+  45 0004 0E94 0000 		call _ZN7Ssd1306D1Ev
+  46               	.LVL1:
+  47               	/* epilogue start */
+  48               		.loc 1 61 1 view .LVU5
+  49 0008 0895      		ret
+  50               		.cfi_endproc
+  51               	.LFE151:
+  53               		.section	.rodata.main.str1.1,"aMS",@progbits,1
+  54               	.LC0:
+  55 0000 4F6C 612C 		.string	"Ola, mundo!"
+GAS LISTING /tmp/cch7C0sd.s 			page 3
+
+
+  55      206D 756E 
+  55      646F 2100 
+  56               	.LC1:
+  57 000c 4675 6E53 		.string	"FunSAPE"
+  57      4150 4500 
+  58               	.LC2:
+  59 0014 5465 7874 		.string	"Texto mudou :)"
+  59      6F20 6D75 
+  59      646F 7520 
+  59      3A29 00
+  60               	.LC3:
+  61 0023 5353 4431 		.string	"SSD1306"
+  61      3330 3600 
+  62               		.section	.text.main,"ax",@progbits
+  63               	.global	main
+  65               	main:
+  66               	.LFB149:
+  26:example.cpp   ****     // Configura o barramento I2C (TWI) a 400 kHz com buffer de 64 bytes
+  67               		.loc 1 26 1 is_stmt 1 view -0
+  68               		.cfi_startproc
+  69               	/* prologue: function */
+  70               	/* frame size = 0 */
+  71               	/* stack size = 0 */
+  72               	.L__stack_usage = 0
+  28:example.cpp   **** 
+  73               		.loc 1 28 5 view .LVU7
+  28:example.cpp   **** 
+  74               		.loc 1 28 13 is_stmt 0 view .LVU8
+  75 0000 20E4      		ldi r18,lo8(64)
+  76 0002 40E8      		ldi r20,lo8(-128)
+  77 0004 5AE1      		ldi r21,lo8(26)
+  78 0006 66E0      		ldi r22,lo8(6)
+  79 0008 70E0      		ldi r23,0
+  80 000a 80E0      		ldi r24,lo8(twi)
+  81 000c 90E0      		ldi r25,hi8(twi)
+  82 000e 0E94 0000 		call _ZN3Twi4initEmh
+  83               	.LVL2:
+  31:example.cpp   **** 
+  84               		.loc 1 31 5 is_stmt 1 view .LVU9
+  85               	/* #APP */
+  86               	 ;  31 "example.cpp" 1
+  87 0012 7894      		sei ; [[len=1]]
+  88               	 ;  0 "" 2
+  34:example.cpp   **** 
+  89               		.loc 1 34 5 view .LVU10
+  34:example.cpp   **** 
+  90               		.loc 1 34 17 is_stmt 0 view .LVU11
+  91               	/* #NOAPP */
+  92 0014 2CE3      		ldi r18,lo8(60)
+  93 0016 40E0      		ldi r20,0
+  94 0018 60E0      		ldi r22,lo8(twi)
+  95 001a 70E0      		ldi r23,hi8(twi)
+  96 001c 80E0      		ldi r24,lo8(display)
+  97 001e 90E0      		ldi r25,hi8(display)
+  98 0020 0E94 0000 		call _ZN7Ssd13064initEP3BusNS_4SizeEh
+  99               	.LVL3:
+ 100               	.L4:
+GAS LISTING /tmp/cch7C0sd.s 			page 4
+
+
+  36:example.cpp   ****         // --- Primeiro texto ---
+ 101               		.loc 1 36 5 is_stmt 1 view .LVU12
+  38:example.cpp   ****         display.setTextSize(1);
+ 102               		.loc 1 38 9 view .LVU13
+  38:example.cpp   ****         display.setTextSize(1);
+ 103               		.loc 1 38 28 is_stmt 0 view .LVU14
+ 104 0024 80E0      		ldi r24,lo8(display)
+ 105 0026 90E0      		ldi r25,hi8(display)
+ 106 0028 0E94 0000 		call _ZN7Ssd130611clearScreenEv
+ 107               	.LVL4:
+  39:example.cpp   ****         display.setCursor(0, 0);
+ 108               		.loc 1 39 9 is_stmt 1 view .LVU15
+  39:example.cpp   ****         display.setCursor(0, 0);
+ 109               		.loc 1 39 28 is_stmt 0 view .LVU16
+ 110 002c 61E0      		ldi r22,lo8(1)
+ 111 002e 80E0      		ldi r24,lo8(display)
+ 112 0030 90E0      		ldi r25,hi8(display)
+ 113 0032 0E94 0000 		call _ZN7Ssd130611setTextSizeEh
+ 114               	.LVL5:
+  40:example.cpp   ****         display.print("Ola, mundo!");
+ 115               		.loc 1 40 9 is_stmt 1 view .LVU17
+  40:example.cpp   ****         display.print("Ola, mundo!");
+ 116               		.loc 1 40 26 is_stmt 0 view .LVU18
+ 117 0036 40E0      		ldi r20,0
+ 118 0038 60E0      		ldi r22,0
+ 119 003a 80E0      		ldi r24,lo8(display)
+ 120 003c 90E0      		ldi r25,hi8(display)
+ 121 003e 0E94 0000 		call _ZN7Ssd13069setCursorEhh
+ 122               	.LVL6:
+  41:example.cpp   ****         display.setTextSize(2);
+ 123               		.loc 1 41 9 is_stmt 1 view .LVU19
+  41:example.cpp   ****         display.setTextSize(2);
+ 124               		.loc 1 41 22 is_stmt 0 view .LVU20
+ 125 0042 60E0      		ldi r22,lo8(.LC0)
+ 126 0044 70E0      		ldi r23,hi8(.LC0)
+ 127 0046 80E0      		ldi r24,lo8(display)
+ 128 0048 90E0      		ldi r25,hi8(display)
+ 129 004a 0E94 0000 		call _ZN7Ssd13065printEPKc
+ 130               	.LVL7:
+  42:example.cpp   ****         display.setCursor(0, 2);
+ 131               		.loc 1 42 9 is_stmt 1 view .LVU21
+  42:example.cpp   ****         display.setCursor(0, 2);
+ 132               		.loc 1 42 28 is_stmt 0 view .LVU22
+ 133 004e 62E0      		ldi r22,lo8(2)
+ 134 0050 80E0      		ldi r24,lo8(display)
+ 135 0052 90E0      		ldi r25,hi8(display)
+ 136 0054 0E94 0000 		call _ZN7Ssd130611setTextSizeEh
+ 137               	.LVL8:
+  43:example.cpp   ****         display.print("FunSAPE");
+ 138               		.loc 1 43 9 is_stmt 1 view .LVU23
+  43:example.cpp   ****         display.print("FunSAPE");
+ 139               		.loc 1 43 26 is_stmt 0 view .LVU24
+ 140 0058 42E0      		ldi r20,lo8(2)
+ 141 005a 60E0      		ldi r22,0
+ 142 005c 80E0      		ldi r24,lo8(display)
+ 143 005e 90E0      		ldi r25,hi8(display)
+ 144 0060 0E94 0000 		call _ZN7Ssd13069setCursorEhh
+GAS LISTING /tmp/cch7C0sd.s 			page 5
+
+
+ 145               	.LVL9:
+  44:example.cpp   **** 
+ 146               		.loc 1 44 9 is_stmt 1 view .LVU25
+  44:example.cpp   **** 
+ 147               		.loc 1 44 22 is_stmt 0 view .LVU26
+ 148 0064 60E0      		ldi r22,lo8(.LC1)
+ 149 0066 70E0      		ldi r23,hi8(.LC1)
+ 150 0068 80E0      		ldi r24,lo8(display)
+ 151 006a 90E0      		ldi r25,hi8(display)
+ 152 006c 0E94 0000 		call _ZN7Ssd13065printEPKc
+ 153               	.LVL10:
+  46:example.cpp   **** 
+ 154               		.loc 1 46 9 is_stmt 1 view .LVU27
+ 155               	.LBB12:
+ 156               	.LBI12:
+ 157               		.file 2 "funsape/globalDefines.hpp"
+   1:funsape/globalDefines.hpp **** //!
+   2:funsape/globalDefines.hpp **** //! ****************************************************************************
+   3:funsape/globalDefines.hpp **** //! @file           globalDefines.hpp
+   4:funsape/globalDefines.hpp **** //! @author         Leandro Schwarz (bladabuska+funsapeavr8lib@gmail.com)
+   5:funsape/globalDefines.hpp **** //! @brief          Global definitions file.
+   6:funsape/globalDefines.hpp **** //! @details        This file provides new data types, constants and other basic
+   7:funsape/globalDefines.hpp **** //!                     elements that are useful throughout all other modules
+   8:funsape/globalDefines.hpp **** //!                     of the FunSAPE++ AVR8 Library.
+   9:funsape/globalDefines.hpp **** //! @date           2026-04-01
+  10:funsape/globalDefines.hpp **** //! @version        26.04
+  11:funsape/globalDefines.hpp **** //! @copyright      MIT License
+  12:funsape/globalDefines.hpp **** //! @note           No notes at this time.
+  13:funsape/globalDefines.hpp **** //! @todo           No items in todo list yet.
+  14:funsape/globalDefines.hpp **** //! @bug            No bugs detected yet.
+  15:funsape/globalDefines.hpp **** //! ****************************************************************************
+  16:funsape/globalDefines.hpp **** //! @attention
+  17:funsape/globalDefines.hpp **** //!
+  18:funsape/globalDefines.hpp **** //! MIT License
+  19:funsape/globalDefines.hpp **** //!
+  20:funsape/globalDefines.hpp **** //! Copyright (c) 2026 Leandro Schwarz
+  21:funsape/globalDefines.hpp **** //!
+  22:funsape/globalDefines.hpp **** //! Permission is hereby granted, free of charge, to any person obtaining a copy
+  23:funsape/globalDefines.hpp **** //!     of this software and associated documentation files (the "Software"), to
+  24:funsape/globalDefines.hpp **** //!     deal in the Software without restriction, including without limitation
+  25:funsape/globalDefines.hpp **** //!     the rights to use, copy, modify, merge, publish, distribute, sublicense,
+  26:funsape/globalDefines.hpp **** //!     and/or sell copies of the Software, and to permit persons to whom the
+  27:funsape/globalDefines.hpp **** //!     Software is furnished to do so, subject to the following conditions:
+  28:funsape/globalDefines.hpp **** //!
+  29:funsape/globalDefines.hpp **** //! The above copyright notice and this permission notice shall be included in
+  30:funsape/globalDefines.hpp **** //!     all copies or substantial portions of the Software.
+  31:funsape/globalDefines.hpp **** //!
+  32:funsape/globalDefines.hpp **** //! THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  33:funsape/globalDefines.hpp **** //!     IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  34:funsape/globalDefines.hpp **** //!     FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+  35:funsape/globalDefines.hpp **** //!     THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+  36:funsape/globalDefines.hpp **** //!     OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+  37:funsape/globalDefines.hpp **** //!     ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+  38:funsape/globalDefines.hpp **** //!     OTHER DEALINGS IN THE SOFTWARE.
+  39:funsape/globalDefines.hpp **** //!
+  40:funsape/globalDefines.hpp **** //! ****************************************************************************
+  41:funsape/globalDefines.hpp **** //!
+GAS LISTING /tmp/cch7C0sd.s 			page 6
+
+
+  42:funsape/globalDefines.hpp **** 
+  43:funsape/globalDefines.hpp **** // =============================================================================
+  44:funsape/globalDefines.hpp **** // Include guard (START)
+  45:funsape/globalDefines.hpp **** // =============================================================================
+  46:funsape/globalDefines.hpp **** 
+  47:funsape/globalDefines.hpp **** #ifndef __GLOBAL_DEFINES_HPP
+  48:funsape/globalDefines.hpp **** #define __GLOBAL_DEFINES_HPP            2604
+  49:funsape/globalDefines.hpp **** 
+  50:funsape/globalDefines.hpp **** // =============================================================================
+  51:funsape/globalDefines.hpp **** // Basic definitions
+  52:funsape/globalDefines.hpp **** // =============================================================================
+  53:funsape/globalDefines.hpp **** 
+  54:funsape/globalDefines.hpp **** #ifndef F_CPU
+  55:funsape/globalDefines.hpp **** #   define F_CPU    16000000UL
+  56:funsape/globalDefines.hpp **** #endif
+  57:funsape/globalDefines.hpp **** 
+  58:funsape/globalDefines.hpp **** // =============================================================================
+  59:funsape/globalDefines.hpp **** // Dependencies
+  60:funsape/globalDefines.hpp **** // =============================================================================
+  61:funsape/globalDefines.hpp **** 
+  62:funsape/globalDefines.hpp **** //     //////////////////     LIBRARY DEPENDENCIES     //////////////////     //
+  63:funsape/globalDefines.hpp **** 
+  64:funsape/globalDefines.hpp **** // *INDENT-OFF*
+  65:funsape/globalDefines.hpp **** #include "config/mcuDevice.hpp"
+  66:funsape/globalDefines.hpp **** #ifndef __MCU_DEVICE_HPP
+  67:funsape/globalDefines.hpp **** #   error [globalDefines.hpp] Error 1 - Header file (mcuDevice.hpp) is missing \
+  68:funsape/globalDefines.hpp ****         or corrupted!
+  69:funsape/globalDefines.hpp **** #elif __MCU_DEVICE_HPP != __GLOBAL_DEFINES_HPP
+  70:funsape/globalDefines.hpp **** #   error [globalDefines.hpp] Error 2 - Build mismatch between file \
+  71:funsape/globalDefines.hpp ****         (mcuDevice.hpp) and global definitions file (globalDefines.hpp)!
+  72:funsape/globalDefines.hpp **** #endif
+  73:funsape/globalDefines.hpp **** // *INDENT-ON*
+  74:funsape/globalDefines.hpp **** 
+  75:funsape/globalDefines.hpp **** //     //////////////////     AVR STANDARD LIBRARY     //////////////////     //
+  76:funsape/globalDefines.hpp **** 
+  77:funsape/globalDefines.hpp **** #include <avr/interrupt.h>
+  78:funsape/globalDefines.hpp **** #include <avr/io.h>
+  79:funsape/globalDefines.hpp **** #include <avr/pgmspace.h>
+  80:funsape/globalDefines.hpp **** #include <util/atomic.h>
+  81:funsape/globalDefines.hpp **** #include <util/delay.h>
+  82:funsape/globalDefines.hpp **** 
+  83:funsape/globalDefines.hpp **** //     ///////////////////     STANDARD C LIBRARY     ///////////////////     //
+  84:funsape/globalDefines.hpp **** 
+  85:funsape/globalDefines.hpp **** #include <stddef.h>
+  86:funsape/globalDefines.hpp **** #include <stdint.h>
+  87:funsape/globalDefines.hpp **** #include <stdio.h>
+  88:funsape/globalDefines.hpp **** #include <string.h>
+  89:funsape/globalDefines.hpp **** 
+  90:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  91:funsape/globalDefines.hpp **** // Doxygen: Start main group "Global_Definitions"
+  92:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  93:funsape/globalDefines.hpp **** 
+  94:funsape/globalDefines.hpp **** //!
+  95:funsape/globalDefines.hpp **** //! @addtogroup     Global_Definitions
+  96:funsape/globalDefines.hpp **** //! @brief          System global definitions.
+  97:funsape/globalDefines.hpp **** //! @{
+  98:funsape/globalDefines.hpp **** //!
+GAS LISTING /tmp/cch7C0sd.s 			page 7
+
+
+  99:funsape/globalDefines.hpp **** 
+ 100:funsape/globalDefines.hpp **** // =============================================================================
+ 101:funsape/globalDefines.hpp **** // Undefining previous definitions
+ 102:funsape/globalDefines.hpp **** // =============================================================================
+ 103:funsape/globalDefines.hpp **** 
+ 104:funsape/globalDefines.hpp **** // NONE
+ 105:funsape/globalDefines.hpp **** 
+ 106:funsape/globalDefines.hpp **** // =============================================================================
+ 107:funsape/globalDefines.hpp **** // Constant definitions
+ 108:funsape/globalDefines.hpp **** // =============================================================================
+ 109:funsape/globalDefines.hpp **** 
+ 110:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 111:funsape/globalDefines.hpp **** // Doxygen: Start subgroup "Alias" in "Global_Definitions"
+ 112:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 113:funsape/globalDefines.hpp **** 
+ 114:funsape/globalDefines.hpp **** //!
+ 115:funsape/globalDefines.hpp **** //! @addtogroup     Alias
+ 116:funsape/globalDefines.hpp **** //! @brief          Alias definitions.
+ 117:funsape/globalDefines.hpp **** //! @{
+ 118:funsape/globalDefines.hpp **** //!
+ 119:funsape/globalDefines.hpp **** 
+ 120:funsape/globalDefines.hpp **** //!
+ 121:funsape/globalDefines.hpp **** //! @details        Alias to shorten unused attribute.
+ 122:funsape/globalDefines.hpp **** //!
+ 123:funsape/globalDefines.hpp **** #define ignored     __attribute__((unused))
+ 124:funsape/globalDefines.hpp **** 
+ 125:funsape/globalDefines.hpp **** //!
+ 126:funsape/globalDefines.hpp **** //! @details        Alias to shorten inline attribute.
+ 127:funsape/globalDefines.hpp **** //!
+ 128:funsape/globalDefines.hpp **** #define inlined     inline __attribute__((always_inline))
+ 129:funsape/globalDefines.hpp **** 
+ 130:funsape/globalDefines.hpp **** //!
+ 131:funsape/globalDefines.hpp **** //! @details        Alias to shorten weak attribute.
+ 132:funsape/globalDefines.hpp **** //!
+ 133:funsape/globalDefines.hpp **** #define weakened    __attribute__((weak))
+ 134:funsape/globalDefines.hpp **** 
+ 135:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 136:funsape/globalDefines.hpp **** // Doxygen: End subgroup "Alias" in "Global_Definitions"
+ 137:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 138:funsape/globalDefines.hpp **** 
+ 139:funsape/globalDefines.hpp **** //!
+ 140:funsape/globalDefines.hpp **** //! @}
+ 141:funsape/globalDefines.hpp **** //!
+ 142:funsape/globalDefines.hpp **** 
+ 143:funsape/globalDefines.hpp **** // =============================================================================
+ 144:funsape/globalDefines.hpp **** // Macro functions
+ 145:funsape/globalDefines.hpp **** // =============================================================================
+ 146:funsape/globalDefines.hpp **** 
+ 147:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 148:funsape/globalDefines.hpp **** // Doxygen: Start subgroup "Data_Validity" in "Global_Definitions"
+ 149:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 150:funsape/globalDefines.hpp **** 
+ 151:funsape/globalDefines.hpp **** //!
+ 152:funsape/globalDefines.hpp **** //! @addtogroup     Data_Validity
+ 153:funsape/globalDefines.hpp **** //! @brief          Data validation macro-functions.
+ 154:funsape/globalDefines.hpp **** //! @{
+ 155:funsape/globalDefines.hpp **** //!
+GAS LISTING /tmp/cch7C0sd.s 			page 8
+
+
+ 156:funsape/globalDefines.hpp **** 
+ 157:funsape/globalDefines.hpp **** //     //////////////////////     DATA VALIDITY    //////////////////////     //
+ 158:funsape/globalDefines.hpp **** 
+ 159:funsape/globalDefines.hpp **** //!
+ 160:funsape/globalDefines.hpp **** //! @def            isGpioAddressValid(gpioPort)
+ 161:funsape/globalDefines.hpp **** //! @details        Checks if the given parameter @a gpioPort is a valid GPIO
+ 162:funsape/globalDefines.hpp **** //!                     port address. Valid GPIO addresses are @c DDRx, @c PORTx
+ 163:funsape/globalDefines.hpp **** //!                     and @c PINx register addresses.
+ 164:funsape/globalDefines.hpp **** //! @param[in]      gpioPort            GPIO port address
+ 165:funsape/globalDefines.hpp **** //! @retval         true                if GPIO address is valid
+ 166:funsape/globalDefines.hpp **** //! @retval         false               if GPIO address is not valid
+ 167:funsape/globalDefines.hpp **** //!
+ 168:funsape/globalDefines.hpp **** #define isGpioAddressValid(gpioPort)    (bool_t)(       \
+ 169:funsape/globalDefines.hpp ****         (IS_GPIO_ALL_INSTANCE(gpioPort))                \
+ 170:funsape/globalDefines.hpp ****         ? true                                          \
+ 171:funsape/globalDefines.hpp ****         : false                                         \
+ 172:funsape/globalDefines.hpp **** )
+ 173:funsape/globalDefines.hpp **** 
+ 174:funsape/globalDefines.hpp **** //!
+ 175:funsape/globalDefines.hpp **** //! @def            isGpioPinIndexValid(gpioPort, gpioPin)
+ 176:funsape/globalDefines.hpp **** //! @details        Checks if the given parameter @a gpioPin of the given
+ 177:funsape/globalDefines.hpp **** //!                     @a gpioPort is a valid GPIO pin index.
+ 178:funsape/globalDefines.hpp **** //! @param[in]      gpioPort            GPIO port address
+ 179:funsape/globalDefines.hpp **** //! @param[in]      gpioPin             GPIO pin index
+ 180:funsape/globalDefines.hpp **** //! @retval         true                if GPIO pin index is valid
+ 181:funsape/globalDefines.hpp **** //! @retval         false               if GPIO pin index is not valid
+ 182:funsape/globalDefines.hpp **** //!
+ 183:funsape/globalDefines.hpp **** #define isGpioPinIndexValid(gpioPort, gpioPin)    (bool_t)(     \
+ 184:funsape/globalDefines.hpp ****         (IS_GPIO_ALL_PIN_NUMBER(gpioPort, gpioPin))             \
+ 185:funsape/globalDefines.hpp ****         ? true                                                  \
+ 186:funsape/globalDefines.hpp ****         : false                                                 \
+ 187:funsape/globalDefines.hpp **** )
+ 188:funsape/globalDefines.hpp **** 
+ 189:funsape/globalDefines.hpp **** //!
+ 190:funsape/globalDefines.hpp **** //! @def            isPointerValid(ptr)
+ 191:funsape/globalDefines.hpp **** //! @details        Checks if the given parameter @a ptr is a valid pointer
+ 192:funsape/globalDefines.hpp **** //!                     address.
+ 193:funsape/globalDefines.hpp **** //! @param[in]      ptr                 pointer address
+ 194:funsape/globalDefines.hpp **** //! @retval         true                if pointer address is valid
+ 195:funsape/globalDefines.hpp **** //! @retval         false               if pointer address is not valid
+ 196:funsape/globalDefines.hpp **** //!
+ 197:funsape/globalDefines.hpp **** #define isPointerValid(ptr)             (bool_t)(       \
+ 198:funsape/globalDefines.hpp ****         ((void *)(ptr))                                 \
+ 199:funsape/globalDefines.hpp ****         ? true                                          \
+ 200:funsape/globalDefines.hpp ****         : false                                         \
+ 201:funsape/globalDefines.hpp **** )
+ 202:funsape/globalDefines.hpp **** 
+ 203:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 204:funsape/globalDefines.hpp **** // Doxygen: End subgroup "Data_Validity" in "Global_Definitions"
+ 205:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 206:funsape/globalDefines.hpp **** 
+ 207:funsape/globalDefines.hpp **** //!
+ 208:funsape/globalDefines.hpp **** //! @}
+ 209:funsape/globalDefines.hpp **** //!
+ 210:funsape/globalDefines.hpp **** 
+ 211:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 212:funsape/globalDefines.hpp **** // Doxygen: Start subgroup "Bit_Handling" in "Global_Definitions"
+GAS LISTING /tmp/cch7C0sd.s 			page 9
+
+
+ 213:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 214:funsape/globalDefines.hpp **** 
+ 215:funsape/globalDefines.hpp **** //!
+ 216:funsape/globalDefines.hpp **** //! @addtogroup     Bit_Handling
+ 217:funsape/globalDefines.hpp **** //! @details        Performs bitwise operations in one bit of a variable or
+ 218:funsape/globalDefines.hpp **** //!                     register.
+ 219:funsape/globalDefines.hpp **** //! @{
+ 220:funsape/globalDefines.hpp **** //!
+ 221:funsape/globalDefines.hpp **** 
+ 222:funsape/globalDefines.hpp **** //     //////////////////////     BIT HANDLING     //////////////////////     //
+ 223:funsape/globalDefines.hpp **** 
+ 224:funsape/globalDefines.hpp **** #ifndef clrBit
+ 225:funsape/globalDefines.hpp **** //!
+ 226:funsape/globalDefines.hpp **** //! @def            clrBit(reg, pos)
+ 227:funsape/globalDefines.hpp **** //! @details        Clears the bit at position @a pos of the register or
+ 228:funsape/globalDefines.hpp **** //!                     variable @a reg.
+ 229:funsape/globalDefines.hpp **** //! @param[in,out]  reg                 register or variable
+ 230:funsape/globalDefines.hpp **** //! @param[in]      pos                 position of the bit to be cleared
+ 231:funsape/globalDefines.hpp **** //!
+ 232:funsape/globalDefines.hpp **** #   define clrBit(reg, pos)             do{     \
+ 233:funsape/globalDefines.hpp ****         (reg) &= ~(1 << (pos));                 \
+ 234:funsape/globalDefines.hpp ****     }while(0)
+ 235:funsape/globalDefines.hpp **** #endif
+ 236:funsape/globalDefines.hpp **** 
+ 237:funsape/globalDefines.hpp **** #ifndef cplBit
+ 238:funsape/globalDefines.hpp **** //!
+ 239:funsape/globalDefines.hpp **** //! @def            cplBit(reg, pos)
+ 240:funsape/globalDefines.hpp **** //! @details        Complements (invert) the bit at position @a pos of the
+ 241:funsape/globalDefines.hpp **** //!                     register or variable @a reg.
+ 242:funsape/globalDefines.hpp **** //! @param[in,out]  reg                 register or variable
+ 243:funsape/globalDefines.hpp **** //! @param[in]      pos                 position of the bit to be complemented
+ 244:funsape/globalDefines.hpp **** //!
+ 245:funsape/globalDefines.hpp **** #   define cplBit(reg, pos)             do{     \
+ 246:funsape/globalDefines.hpp ****         (reg) ^= (1 << (pos));                  \
+ 247:funsape/globalDefines.hpp ****     }while(0)
+ 248:funsape/globalDefines.hpp **** #endif
+ 249:funsape/globalDefines.hpp **** 
+ 250:funsape/globalDefines.hpp **** #ifndef setBit
+ 251:funsape/globalDefines.hpp **** //!
+ 252:funsape/globalDefines.hpp **** //! @def            setBit(reg, pos)
+ 253:funsape/globalDefines.hpp **** //! @details        Sets the bit at position @a pos of the register or variable
+ 254:funsape/globalDefines.hpp **** //!                     @a reg.
+ 255:funsape/globalDefines.hpp **** //! @param[in,out]  reg                 register or variable
+ 256:funsape/globalDefines.hpp **** //! @param[in]      pos                 position of the bit to be set
+ 257:funsape/globalDefines.hpp **** //!
+ 258:funsape/globalDefines.hpp **** #   define setBit(reg, pos)             do{     \
+ 259:funsape/globalDefines.hpp ****         (reg) |= (1 << (pos));                  \
+ 260:funsape/globalDefines.hpp ****     }while(0)
+ 261:funsape/globalDefines.hpp **** #endif
+ 262:funsape/globalDefines.hpp **** 
+ 263:funsape/globalDefines.hpp **** //     ///////////////////////     BIT TESTING    ///////////////////////     //
+ 264:funsape/globalDefines.hpp **** 
+ 265:funsape/globalDefines.hpp **** #ifndef isBitClr
+ 266:funsape/globalDefines.hpp **** //!
+ 267:funsape/globalDefines.hpp **** //! @def            isBitClr(reg, pos)
+ 268:funsape/globalDefines.hpp **** //! @details        Verifies if the bit at position @a pos at the register or
+ 269:funsape/globalDefines.hpp **** //!                     variable @a reg is cleared.
+GAS LISTING /tmp/cch7C0sd.s 			page 10
+
+
+ 270:funsape/globalDefines.hpp **** //! @param[in]      reg                 register or variable
+ 271:funsape/globalDefines.hpp **** //! @param[in]      pos                 position of the bit to be evaluated
+ 272:funsape/globalDefines.hpp **** //! @retval         true                if the bit is cleared
+ 273:funsape/globalDefines.hpp **** //! @retval         false               if the bit is set
+ 274:funsape/globalDefines.hpp **** //!
+ 275:funsape/globalDefines.hpp **** #   define isBitClr(reg, pos)           (bool_t)(!isBitSet(reg,pos))
+ 276:funsape/globalDefines.hpp **** #endif
+ 277:funsape/globalDefines.hpp **** 
+ 278:funsape/globalDefines.hpp **** #ifndef isBitSet
+ 279:funsape/globalDefines.hpp **** //!
+ 280:funsape/globalDefines.hpp **** //! @def            isBitSet(reg, pos)
+ 281:funsape/globalDefines.hpp **** //! @details        Verifies if the bit at position @a pos at the register or
+ 282:funsape/globalDefines.hpp **** //!                     variable @a reg is set.
+ 283:funsape/globalDefines.hpp **** //! @param[in]      reg                 register or variable
+ 284:funsape/globalDefines.hpp **** //! @param[in]      pos                 position of the bit to be evaluated
+ 285:funsape/globalDefines.hpp **** //! @retval         true                if the bit is set
+ 286:funsape/globalDefines.hpp **** //! @retval         false               if the bit is cleared
+ 287:funsape/globalDefines.hpp **** //!
+ 288:funsape/globalDefines.hpp **** #   define isBitSet(reg, pos)           (bool_t)(((reg) >> (pos)) & 1)
+ 289:funsape/globalDefines.hpp **** #endif
+ 290:funsape/globalDefines.hpp **** 
+ 291:funsape/globalDefines.hpp **** //     ///////////////////////     BIT LOOPING    ///////////////////////     //
+ 292:funsape/globalDefines.hpp **** 
+ 293:funsape/globalDefines.hpp **** #ifndef waitUntilBitIsClear
+ 294:funsape/globalDefines.hpp **** //!
+ 295:funsape/globalDefines.hpp **** //! @def            waitUntilBitIsClear(reg, pos)
+ 296:funsape/globalDefines.hpp **** //! @details        Blocks the code execution while the bit in position @a pos
+ 297:funsape/globalDefines.hpp **** //!                     in register or variable @a reg is set.
+ 298:funsape/globalDefines.hpp **** //! @param[in]      reg                 register or variable
+ 299:funsape/globalDefines.hpp **** //! @param[in]      pos                 position of the bit to be evaluated
+ 300:funsape/globalDefines.hpp **** //!
+ 301:funsape/globalDefines.hpp **** #   define waitUntilBitIsClear(reg, pos)        do{     \
+ 302:funsape/globalDefines.hpp ****         doNothing();                                    \
+ 303:funsape/globalDefines.hpp ****     }while(isBitSet((reg), (pos)))
+ 304:funsape/globalDefines.hpp **** #endif
+ 305:funsape/globalDefines.hpp **** 
+ 306:funsape/globalDefines.hpp **** #ifndef waitUntilBitIsSet
+ 307:funsape/globalDefines.hpp **** //!
+ 308:funsape/globalDefines.hpp **** //! @def            waitUntilBitIsSet(reg, pos)
+ 309:funsape/globalDefines.hpp **** //! @details        Blocks the code execution while the bit in position @a pos
+ 310:funsape/globalDefines.hpp **** //!                     in register or variable @a reg is cleared.
+ 311:funsape/globalDefines.hpp **** //! @param[in]      reg                 register or variable
+ 312:funsape/globalDefines.hpp **** //! @param[in]      pos                 position of the bit to be evaluated
+ 313:funsape/globalDefines.hpp **** //!
+ 314:funsape/globalDefines.hpp **** #   define waitUntilBitIsSet(reg, pos)  do{     \
+ 315:funsape/globalDefines.hpp ****         doNothing();                            \
+ 316:funsape/globalDefines.hpp ****     } while (isBitClr((reg), (pos)))
+ 317:funsape/globalDefines.hpp **** #endif
+ 318:funsape/globalDefines.hpp **** 
+ 319:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 320:funsape/globalDefines.hpp **** // Doxygen: End subgroup "Bit_Handling" in "Global_Definitions"
+ 321:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 322:funsape/globalDefines.hpp **** 
+ 323:funsape/globalDefines.hpp **** //!
+ 324:funsape/globalDefines.hpp **** //! @}
+ 325:funsape/globalDefines.hpp **** //!
+ 326:funsape/globalDefines.hpp **** 
+GAS LISTING /tmp/cch7C0sd.s 			page 11
+
+
+ 327:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 328:funsape/globalDefines.hpp **** // Doxygen: Start subgroup "Mask_Handling" in "Global_Definitions"
+ 329:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 330:funsape/globalDefines.hpp **** 
+ 331:funsape/globalDefines.hpp **** //!
+ 332:funsape/globalDefines.hpp **** //! @addtogroup     Mask_Handling
+ 333:funsape/globalDefines.hpp **** //! @details        Performs bitwise operations in a set of one bits of a
+ 334:funsape/globalDefines.hpp **** //!                     variable or register.
+ 335:funsape/globalDefines.hpp **** //! @attention      The desired bits of the mask must be always marked as '1',
+ 336:funsape/globalDefines.hpp **** //!                     even when the mask is used in a clear operation.
+ 337:funsape/globalDefines.hpp **** //! @{
+ 338:funsape/globalDefines.hpp **** //!
+ 339:funsape/globalDefines.hpp **** 
+ 340:funsape/globalDefines.hpp **** //     ////////////////////     BIT MASK HANDLING    ////////////////////     //
+ 341:funsape/globalDefines.hpp **** 
+ 342:funsape/globalDefines.hpp **** #ifndef clrMask
+ 343:funsape/globalDefines.hpp **** //!
+ 344:funsape/globalDefines.hpp **** //! @def            clrMask(reg, mask)
+ 345:funsape/globalDefines.hpp **** //! @details        Clears the bits of the register or variable @a reg that are
+ 346:funsape/globalDefines.hpp **** //!                     set on the supplied mask @a mask.
+ 347:funsape/globalDefines.hpp **** //! @param[in,out]  reg                 register or variable
+ 348:funsape/globalDefines.hpp **** //! @param[in]      mask                one-mask of the bits to be cleared
+ 349:funsape/globalDefines.hpp **** //!
+ 350:funsape/globalDefines.hpp **** #   define clrMask(reg, mask)           do{     \
+ 351:funsape/globalDefines.hpp ****         (reg) &= ~(mask);                       \
+ 352:funsape/globalDefines.hpp ****     }while(0)
+ 353:funsape/globalDefines.hpp **** #endif
+ 354:funsape/globalDefines.hpp **** 
+ 355:funsape/globalDefines.hpp **** #ifndef cplMask
+ 356:funsape/globalDefines.hpp **** //!
+ 357:funsape/globalDefines.hpp **** //! @def            cplMask(reg, mask)
+ 358:funsape/globalDefines.hpp **** //! @details        Complements (inverts) the bits of the register or variable
+ 359:funsape/globalDefines.hpp **** //!                     @a reg that are set on the supplied mask @a mask.
+ 360:funsape/globalDefines.hpp **** //! @param[in,out]  reg                 register or variable
+ 361:funsape/globalDefines.hpp **** //! @param[in]      mask                one-mask of the bits to be complemented
+ 362:funsape/globalDefines.hpp **** //!
+ 363:funsape/globalDefines.hpp **** #   define cplMask(reg, mask)           do{     \
+ 364:funsape/globalDefines.hpp ****         (reg) ^= (mask);                        \
+ 365:funsape/globalDefines.hpp ****     }while(0)
+ 366:funsape/globalDefines.hpp **** #endif
+ 367:funsape/globalDefines.hpp **** 
+ 368:funsape/globalDefines.hpp **** #ifndef setMask
+ 369:funsape/globalDefines.hpp **** //!
+ 370:funsape/globalDefines.hpp **** //! @def            setMask(reg, mask)
+ 371:funsape/globalDefines.hpp **** //! @details        Sets the bits of the register or variable @a reg that are
+ 372:funsape/globalDefines.hpp **** //!                     set on the supplied mask @a mask.
+ 373:funsape/globalDefines.hpp **** //! @param[in,out]  reg                 register or variable
+ 374:funsape/globalDefines.hpp **** //! @param[in]      mask                one-mask of the bits to be set
+ 375:funsape/globalDefines.hpp **** //!
+ 376:funsape/globalDefines.hpp **** #   define setMask(reg, mask)           do{     \
+ 377:funsape/globalDefines.hpp ****         (reg) |= (mask);                        \
+ 378:funsape/globalDefines.hpp ****     }while(0)
+ 379:funsape/globalDefines.hpp **** #endif
+ 380:funsape/globalDefines.hpp **** 
+ 381:funsape/globalDefines.hpp **** //     ////////////////     BIT MASK OFFSET HANDLING     ////////////////     //
+ 382:funsape/globalDefines.hpp **** 
+ 383:funsape/globalDefines.hpp **** #ifndef clrMaskOffset
+GAS LISTING /tmp/cch7C0sd.s 			page 12
+
+
+ 384:funsape/globalDefines.hpp **** //!
+ 385:funsape/globalDefines.hpp **** //! @def            clrMaskOffset(reg, mask, offset)
+ 386:funsape/globalDefines.hpp **** //! @details        Clears the bits of the register or variable @a reg that are
+ 387:funsape/globalDefines.hpp **** //!                     set on the supplied mask @a mask. The mask is first
+ 388:funsape/globalDefines.hpp **** //!                     left-shifted by the value given in @a offset.
+ 389:funsape/globalDefines.hpp **** //! @param[in,out]  reg                 register or variable
+ 390:funsape/globalDefines.hpp **** //! @param[in]      mask                one-mask of the bits to be cleared
+ 391:funsape/globalDefines.hpp **** //! @param[in]      offset              left-shift offset value
+ 392:funsape/globalDefines.hpp **** //!
+ 393:funsape/globalDefines.hpp **** #   define clrMaskOffset(reg, mask, offset)     do{     \
+ 394:funsape/globalDefines.hpp ****         (reg) &= ~((mask) << (offset));                 \
+ 395:funsape/globalDefines.hpp ****     }while(0)
+ 396:funsape/globalDefines.hpp **** #endif
+ 397:funsape/globalDefines.hpp **** 
+ 398:funsape/globalDefines.hpp **** #ifndef cplMaskOffset
+ 399:funsape/globalDefines.hpp **** //!
+ 400:funsape/globalDefines.hpp **** //! @def            cplMaskOffset(reg, mask, offset)
+ 401:funsape/globalDefines.hpp **** //! @details        Complements (inverts) the bits of the register or variable
+ 402:funsape/globalDefines.hpp **** //!                     @a reg that are set on the supplied mask @a mask. The
+ 403:funsape/globalDefines.hpp **** //!                     mask is first left-shifted by the value given in
+ 404:funsape/globalDefines.hpp **** //!                     @a offset.
+ 405:funsape/globalDefines.hpp **** //! @param[in,out]  reg                 register or variable
+ 406:funsape/globalDefines.hpp **** //! @param[in]      mask                one-mask of the bits to be complemented
+ 407:funsape/globalDefines.hpp **** //! @param[in]      offset              left-shift offset value
+ 408:funsape/globalDefines.hpp **** //!
+ 409:funsape/globalDefines.hpp **** #   define cplMaskOffset(reg, mask, offset)     do{     \
+ 410:funsape/globalDefines.hpp ****         (reg) ^= ((mask) << (offset));                  \
+ 411:funsape/globalDefines.hpp ****     }while(0)
+ 412:funsape/globalDefines.hpp **** #endif
+ 413:funsape/globalDefines.hpp **** 
+ 414:funsape/globalDefines.hpp **** #ifndef setMaskOffset
+ 415:funsape/globalDefines.hpp **** //!
+ 416:funsape/globalDefines.hpp **** //! @def            setMaskOffset(reg, mask, offset)
+ 417:funsape/globalDefines.hpp **** //! @details        Sets the bits of the register or variable @a reg that are
+ 418:funsape/globalDefines.hpp **** //!                     set on the supplied mask @a mask. The mask is first
+ 419:funsape/globalDefines.hpp **** //!                     left-shifted by the value given in @a offset.
+ 420:funsape/globalDefines.hpp **** //! @param[in,out]  reg                 register or variable
+ 421:funsape/globalDefines.hpp **** //! @param[in]      mask                one-mask of the bits to be set
+ 422:funsape/globalDefines.hpp **** //! @param[in]      offset              left-shift offset value
+ 423:funsape/globalDefines.hpp **** //!
+ 424:funsape/globalDefines.hpp **** #   define setMaskOffset(reg, mask, offset)     do{     \
+ 425:funsape/globalDefines.hpp ****         (reg) |= ((mask) << (offset));                  \
+ 426:funsape/globalDefines.hpp ****     }while(0)
+ 427:funsape/globalDefines.hpp **** #endif
+ 428:funsape/globalDefines.hpp **** 
+ 429:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 430:funsape/globalDefines.hpp **** // Doxygen: End subgroup "Mask_Handling" in "Global_Definitions"
+ 431:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 432:funsape/globalDefines.hpp **** 
+ 433:funsape/globalDefines.hpp **** //!
+ 434:funsape/globalDefines.hpp **** //! @}
+ 435:funsape/globalDefines.hpp **** //!
+ 436:funsape/globalDefines.hpp **** 
+ 437:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 438:funsape/globalDefines.hpp **** // Doxygen: Start subgroup "Pin_Handling" in "Global_Definitions"
+ 439:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 440:funsape/globalDefines.hpp **** 
+GAS LISTING /tmp/cch7C0sd.s 			page 13
+
+
+ 441:funsape/globalDefines.hpp **** //!
+ 442:funsape/globalDefines.hpp **** //! @addtogroup     Pin_Handling
+ 443:funsape/globalDefines.hpp **** //! @details        Performs basic bitwise operations in an I/O pin.
+ 444:funsape/globalDefines.hpp **** //! @{
+ 445:funsape/globalDefines.hpp **** //!
+ 446:funsape/globalDefines.hpp **** 
+ 447:funsape/globalDefines.hpp **** //     ////////////////////     I/O PIN HANDLING     ////////////////////     //
+ 448:funsape/globalDefines.hpp **** 
+ 449:funsape/globalDefines.hpp **** //!
+ 450:funsape/globalDefines.hpp **** //! @def            clrIoPin(portAddress, portPin)
+ 451:funsape/globalDefines.hpp **** //! @brief          Clears a GPIO pin.
+ 452:funsape/globalDefines.hpp **** //! @details        Clears the bit corresponding to @a portPin in the port
+ 453:funsape/globalDefines.hpp **** //!                     register pointed to by @a portAddress.
+ 454:funsape/globalDefines.hpp **** //! @param[in,out]  portAddress         address of the GPIO port (e.g., &PORTB)
+ 455:funsape/globalDefines.hpp **** //! @param[in]      portPin             index of the pin (0-7)
+ 456:funsape/globalDefines.hpp **** //!
+ 457:funsape/globalDefines.hpp **** #define clrIoPin(portAddress, portPin)          do{             \
+ 458:funsape/globalDefines.hpp ****         clrBit(*(getGpioPortAddress(portAddress)), portPin);    \
+ 459:funsape/globalDefines.hpp ****     } while(0)
+ 460:funsape/globalDefines.hpp **** 
+ 461:funsape/globalDefines.hpp **** //!
+ 462:funsape/globalDefines.hpp **** //! @def            cplIoPin(portAddress, portPin)
+ 463:funsape/globalDefines.hpp **** //! @brief          Toggles a GPIO pin.
+ 464:funsape/globalDefines.hpp **** //! @details        Complements the bit corresponding to @a portPin in the port
+ 465:funsape/globalDefines.hpp **** //!                     register pointed to by @a portAddress.
+ 466:funsape/globalDefines.hpp **** //! @param[in,out]  portAddress         address of the GPIO port (e.g., &PORTB)
+ 467:funsape/globalDefines.hpp **** //! @param[in]      portPin             index of the pin (0-7)
+ 468:funsape/globalDefines.hpp **** //!
+ 469:funsape/globalDefines.hpp **** #define cplIoPin(portAddress, portPin)          do{             \
+ 470:funsape/globalDefines.hpp ****         cplBit(*(getGpioPortAddress(portAddress)), portPin);    \
+ 471:funsape/globalDefines.hpp ****     } while(0)
+ 472:funsape/globalDefines.hpp **** 
+ 473:funsape/globalDefines.hpp **** //!
+ 474:funsape/globalDefines.hpp **** //! @def            setIoPin(portAddress, portPin)
+ 475:funsape/globalDefines.hpp **** //! @brief          Sets a GPIO pin.
+ 476:funsape/globalDefines.hpp **** //! @details        Sets the bit corresponding to @a portPin in the port
+ 477:funsape/globalDefines.hpp **** //!                     register pointed to by @a portAddress.
+ 478:funsape/globalDefines.hpp **** //! @param[in,out]  portAddress         address of the GPIO port (e.g., &PORTB)
+ 479:funsape/globalDefines.hpp **** //! @param[in]      portPin             index of the pin (0-7)
+ 480:funsape/globalDefines.hpp **** //!
+ 481:funsape/globalDefines.hpp **** #define setIoPin(portAddress, portPin)          do{             \
+ 482:funsape/globalDefines.hpp ****         setBit(*(getGpioPortAddress(portAddress)), portPin);    \
+ 483:funsape/globalDefines.hpp ****     } while(0)
+ 484:funsape/globalDefines.hpp **** 
+ 485:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 486:funsape/globalDefines.hpp **** // Doxygen: End subgroup "Pin_Handling" in "Global_Definitions"
+ 487:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 488:funsape/globalDefines.hpp **** 
+ 489:funsape/globalDefines.hpp **** //!
+ 490:funsape/globalDefines.hpp **** //! @}
+ 491:funsape/globalDefines.hpp **** //!
+ 492:funsape/globalDefines.hpp **** 
+ 493:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 494:funsape/globalDefines.hpp **** // Doxygen: Start subgroup "Data_Handling" in "Global_Definitions"
+ 495:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 496:funsape/globalDefines.hpp **** 
+ 497:funsape/globalDefines.hpp **** //!
+GAS LISTING /tmp/cch7C0sd.s 			page 14
+
+
+ 498:funsape/globalDefines.hpp **** //! @addtogroup     Data_Handling
+ 499:funsape/globalDefines.hpp **** //! @details        Performs general data handling, shifting and swapping a
+ 500:funsape/globalDefines.hpp **** //!                      variable data.
+ 501:funsape/globalDefines.hpp **** //! @{
+ 502:funsape/globalDefines.hpp **** //!
+ 503:funsape/globalDefines.hpp **** 
+ 504:funsape/globalDefines.hpp **** //     /////////////     DATA MANIPULATION (8-BITS WIDE)    /////////////     //
+ 505:funsape/globalDefines.hpp **** 
+ 506:funsape/globalDefines.hpp **** //!
+ 507:funsape/globalDefines.hpp **** //! @def            byteGetNibble1(dataByte)
+ 508:funsape/globalDefines.hpp **** //! @details        Returns the nibble 1 of the given @a dataByte byte.
+ 509:funsape/globalDefines.hpp **** //! @param[in]      dataByte            variable
+ 510:funsape/globalDefines.hpp **** //! @return         @a dataByte nibble 1, shifted to bit position 0
+ 511:funsape/globalDefines.hpp **** //!
+ 512:funsape/globalDefines.hpp **** #define byteGetNibble1(dataByte)        (       \
+ 513:funsape/globalDefines.hpp ****         ((dataByte) >> 4) & 0x0F                \
+ 514:funsape/globalDefines.hpp **** )
+ 515:funsape/globalDefines.hpp **** 
+ 516:funsape/globalDefines.hpp **** //!
+ 517:funsape/globalDefines.hpp **** //! @def            byteGetNibble0(dataByte)
+ 518:funsape/globalDefines.hpp **** //! @details        Returns the nibble 0 of the given @a dataByte byte.
+ 519:funsape/globalDefines.hpp **** //! @param[in]      dataByte            variable
+ 520:funsape/globalDefines.hpp **** //! @return         @a dataByte nibble 0
+ 521:funsape/globalDefines.hpp **** //!
+ 522:funsape/globalDefines.hpp **** #define byteGetNibble0(dataByte)        (       \
+ 523:funsape/globalDefines.hpp ****         (dataByte) & 0x0F                       \
+ 524:funsape/globalDefines.hpp **** )
+ 525:funsape/globalDefines.hpp **** 
+ 526:funsape/globalDefines.hpp **** //!
+ 527:funsape/globalDefines.hpp **** //! @def            byteSwitchNibbles(dataByte)
+ 528:funsape/globalDefines.hpp **** //! @details        Switches the nibbles of the given @a dataByte byte.
+ 529:funsape/globalDefines.hpp **** //! @param[in]      dataByte            variable
+ 530:funsape/globalDefines.hpp **** //! @return         @a dataByte with nibbles switched
+ 531:funsape/globalDefines.hpp **** //!
+ 532:funsape/globalDefines.hpp **** #define byteSwitchNibbles(dataByte)     (       \
+ 533:funsape/globalDefines.hpp ****         (byteGetNibble0(dataByte) << 4) |       \
+ 534:funsape/globalDefines.hpp ****         (byteGetNibble1(dataByte))              \
+ 535:funsape/globalDefines.hpp **** )
+ 536:funsape/globalDefines.hpp **** 
+ 537:funsape/globalDefines.hpp **** //     ////////////     DATA MANIPULATION (16-BITS WIDE)     ////////////     //
+ 538:funsape/globalDefines.hpp **** 
+ 539:funsape/globalDefines.hpp **** //!
+ 540:funsape/globalDefines.hpp **** //! @def            hwordGetByte1(dataHword)
+ 541:funsape/globalDefines.hpp **** //! @details        Returns the byte 1 of the given @a dataHword half-word.
+ 542:funsape/globalDefines.hpp **** //! @param[in]      dataHword           variable
+ 543:funsape/globalDefines.hpp **** //! @return         @a dataHword byte 1, shifted to bit position 0
+ 544:funsape/globalDefines.hpp **** //!
+ 545:funsape/globalDefines.hpp **** #define hwordGetByte1(dataHword)        (       \
+ 546:funsape/globalDefines.hpp ****         ((dataHword) >> 8) & 0x00FF             \
+ 547:funsape/globalDefines.hpp **** )
+ 548:funsape/globalDefines.hpp **** 
+ 549:funsape/globalDefines.hpp **** //!
+ 550:funsape/globalDefines.hpp **** //! @def            hwordGetByte0(dataHword)
+ 551:funsape/globalDefines.hpp **** //! @details        Returns the byte 0 of the given @a dataHword half-word.
+ 552:funsape/globalDefines.hpp **** //! @param[in]      dataHword           variable
+ 553:funsape/globalDefines.hpp **** //! @return         @a dataHword byte 0
+ 554:funsape/globalDefines.hpp **** //!
+GAS LISTING /tmp/cch7C0sd.s 			page 15
+
+
+ 555:funsape/globalDefines.hpp **** #define hwordGetByte0(dataHword)        (       \
+ 556:funsape/globalDefines.hpp ****         (dataHword) & 0x00FF                    \
+ 557:funsape/globalDefines.hpp **** )
+ 558:funsape/globalDefines.hpp **** 
+ 559:funsape/globalDefines.hpp **** //!
+ 560:funsape/globalDefines.hpp **** //! @def            hwordSwitchBytes(dataHword)
+ 561:funsape/globalDefines.hpp **** //! @details        Switches the bytes of the given @a dataHword half-word.
+ 562:funsape/globalDefines.hpp **** //! @param[in]      dataHword           variable
+ 563:funsape/globalDefines.hpp **** //! @return         @a dataHword with bytes switched
+ 564:funsape/globalDefines.hpp **** //!
+ 565:funsape/globalDefines.hpp **** #define hwordSwitchBytes(dataHword)     (       \
+ 566:funsape/globalDefines.hpp ****         (hwordGetByte0(dataHword) << 8) |       \
+ 567:funsape/globalDefines.hpp ****         (hwordGetByte1(dataHword))              \
+ 568:funsape/globalDefines.hpp **** )
+ 569:funsape/globalDefines.hpp **** 
+ 570:funsape/globalDefines.hpp **** //     ////////////     DATA MANIPULATION (32-BITS WIDE)     ////////////     //
+ 571:funsape/globalDefines.hpp **** 
+ 572:funsape/globalDefines.hpp **** //!
+ 573:funsape/globalDefines.hpp **** //! @def            wordGetByte3(dataWord)
+ 574:funsape/globalDefines.hpp **** //! @details        Returns the byte 3 of the given @a dataWord word.
+ 575:funsape/globalDefines.hpp **** //! @param[in]      dataWord            variable
+ 576:funsape/globalDefines.hpp **** //! @return         @a dataWord byte 3, shifted to bit position 0
+ 577:funsape/globalDefines.hpp **** //!
+ 578:funsape/globalDefines.hpp **** #define wordGetByte3(dataWord)          (       \
+ 579:funsape/globalDefines.hpp ****         ((dataWord) >> 24) & 0x000000FF         \
+ 580:funsape/globalDefines.hpp **** )
+ 581:funsape/globalDefines.hpp **** 
+ 582:funsape/globalDefines.hpp **** //!
+ 583:funsape/globalDefines.hpp **** //! @def            wordGetByte2(dataWord)
+ 584:funsape/globalDefines.hpp **** //! @details        Returns the byte 2 of the given @a dataWord word.
+ 585:funsape/globalDefines.hpp **** //! @param[in]      dataWord            variable
+ 586:funsape/globalDefines.hpp **** //! @return         @a dataWord byte 2, shifted to bit position 0
+ 587:funsape/globalDefines.hpp **** //!
+ 588:funsape/globalDefines.hpp **** #define wordGetByte2(dataWord)          (       \
+ 589:funsape/globalDefines.hpp ****         ((dataWord) >> 16) & 0x000000FF         \
+ 590:funsape/globalDefines.hpp **** )
+ 591:funsape/globalDefines.hpp **** 
+ 592:funsape/globalDefines.hpp **** //!
+ 593:funsape/globalDefines.hpp **** //! @def            wordGetByte1(dataWord)
+ 594:funsape/globalDefines.hpp **** //! @details        Returns the byte 1 of the given @a dataWord word.
+ 595:funsape/globalDefines.hpp **** //! @param[in]      dataWord            variable
+ 596:funsape/globalDefines.hpp **** //! @return         @a dataWord byte 1, shifted to bit position 0
+ 597:funsape/globalDefines.hpp **** //!
+ 598:funsape/globalDefines.hpp **** #define wordGetByte1(dataWord)          (       \
+ 599:funsape/globalDefines.hpp ****         ((dataWord) >> 8) & 0x000000FF          \
+ 600:funsape/globalDefines.hpp **** )
+ 601:funsape/globalDefines.hpp **** 
+ 602:funsape/globalDefines.hpp **** //!
+ 603:funsape/globalDefines.hpp **** //! @def            wordGetByte0(dataWord)
+ 604:funsape/globalDefines.hpp **** //! @details        Returns the byte 0 of the given @a dataWord word.
+ 605:funsape/globalDefines.hpp **** //! @param[in]      dataWord            variable
+ 606:funsape/globalDefines.hpp **** //! @return         @a dataWord byte 0
+ 607:funsape/globalDefines.hpp **** //!
+ 608:funsape/globalDefines.hpp **** #define wordGetByte0(dataWord)          (       \
+ 609:funsape/globalDefines.hpp ****         (dataWord) & 0x000000FF                 \
+ 610:funsape/globalDefines.hpp **** )
+ 611:funsape/globalDefines.hpp **** 
+GAS LISTING /tmp/cch7C0sd.s 			page 16
+
+
+ 612:funsape/globalDefines.hpp **** //!
+ 613:funsape/globalDefines.hpp **** //! @def            wordSwitchBytes(dataWord)
+ 614:funsape/globalDefines.hpp **** //! @details        Switches the bytes of the given @a dataWord word.
+ 615:funsape/globalDefines.hpp **** //! @param[in]      dataWord            variable
+ 616:funsape/globalDefines.hpp **** //! @return         @a dataWord with bytes switched
+ 617:funsape/globalDefines.hpp **** //!
+ 618:funsape/globalDefines.hpp **** #define wordSwitchBytes(dataWord)       (       \
+ 619:funsape/globalDefines.hpp ****         (wordGetByte0(dataWord) << 24) |        \
+ 620:funsape/globalDefines.hpp ****         (wordGetByte1(dataWord) << 16) |        \
+ 621:funsape/globalDefines.hpp ****         (wordGetByte2(dataWord) << 8)  |        \
+ 622:funsape/globalDefines.hpp ****         (wordGetByte3(dataWord))                \
+ 623:funsape/globalDefines.hpp **** )
+ 624:funsape/globalDefines.hpp **** 
+ 625:funsape/globalDefines.hpp **** //!
+ 626:funsape/globalDefines.hpp **** //! @def            wordGetHword1(dataWord)
+ 627:funsape/globalDefines.hpp **** //! @details        Returns the half word 1 of the given @a dataWord word.
+ 628:funsape/globalDefines.hpp **** //! @param[in]      dataWord            variable
+ 629:funsape/globalDefines.hpp **** //! @return         @a dataWord half word 1, shifted to bit position 0
+ 630:funsape/globalDefines.hpp **** //!
+ 631:funsape/globalDefines.hpp **** #define wordGetHword1(dataWord)         (       \
+ 632:funsape/globalDefines.hpp ****         ((dataWord) >> 16) & 0x0000FFFF         \
+ 633:funsape/globalDefines.hpp **** )
+ 634:funsape/globalDefines.hpp **** 
+ 635:funsape/globalDefines.hpp **** //!
+ 636:funsape/globalDefines.hpp **** //! @def            wordGetHword0(dataWord)
+ 637:funsape/globalDefines.hpp **** //! @details        Returns the half word 0 of the given @a dataWord word.
+ 638:funsape/globalDefines.hpp **** //! @param[in]      dataWord            variable
+ 639:funsape/globalDefines.hpp **** //! @return         @a dataWord half word 0
+ 640:funsape/globalDefines.hpp **** //!
+ 641:funsape/globalDefines.hpp **** #define wordGetHword0(dataWord)         (       \
+ 642:funsape/globalDefines.hpp ****         (dataWord) & 0x0000FFFF                 \
+ 643:funsape/globalDefines.hpp **** )
+ 644:funsape/globalDefines.hpp **** 
+ 645:funsape/globalDefines.hpp **** //!
+ 646:funsape/globalDefines.hpp **** //! @def            wordSwitchHwords(dataWord)
+ 647:funsape/globalDefines.hpp **** //! @details        Switches the half words of the given @a dataWord word.
+ 648:funsape/globalDefines.hpp **** //! @param[in]      dataWord            variable
+ 649:funsape/globalDefines.hpp **** //! @return         @a dataWord with half words switched
+ 650:funsape/globalDefines.hpp **** //!
+ 651:funsape/globalDefines.hpp **** #define wordSwitchHwords(dataWord)      (       \
+ 652:funsape/globalDefines.hpp ****         (wordGetHword0(dataWord) << 16) |       \
+ 653:funsape/globalDefines.hpp ****         (wordGetHword1(dataWord))               \
+ 654:funsape/globalDefines.hpp **** )
+ 655:funsape/globalDefines.hpp **** 
+ 656:funsape/globalDefines.hpp **** //     ////////////     DATA MANIPULATION (64-BITS WIDE)     ////////////     //
+ 657:funsape/globalDefines.hpp **** 
+ 658:funsape/globalDefines.hpp **** //!
+ 659:funsape/globalDefines.hpp **** //! @def            dwordGetByte7(dataDword)
+ 660:funsape/globalDefines.hpp **** //! @details        Returns the byte 7 of the given @a dataDword double word.
+ 661:funsape/globalDefines.hpp **** //! @param[in]      dataDword           variable
+ 662:funsape/globalDefines.hpp **** //! @return         @a dataDword byte 7, shifted to bit position 0
+ 663:funsape/globalDefines.hpp **** //!
+ 664:funsape/globalDefines.hpp **** #define dwordGetByte7(dataDword)        (               \
+ 665:funsape/globalDefines.hpp ****         ((dataDword) >> 56) & 0x00000000000000FF        \
+ 666:funsape/globalDefines.hpp **** )
+ 667:funsape/globalDefines.hpp **** 
+ 668:funsape/globalDefines.hpp **** //!
+GAS LISTING /tmp/cch7C0sd.s 			page 17
+
+
+ 669:funsape/globalDefines.hpp **** //! @def            dwordGetByte6(dataDword)
+ 670:funsape/globalDefines.hpp **** //! @details        Returns the byte 6 of the given @a dataDword double word.
+ 671:funsape/globalDefines.hpp **** //! @param[in]      dataDword           variable
+ 672:funsape/globalDefines.hpp **** //! @return         @a dataDword byte 6, shifted to bit position 0
+ 673:funsape/globalDefines.hpp **** //!
+ 674:funsape/globalDefines.hpp **** #define dwordGetByte6(dataDword)        (               \
+ 675:funsape/globalDefines.hpp ****         ((dataDword) >> 48) & 0x00000000000000FF        \
+ 676:funsape/globalDefines.hpp **** )
+ 677:funsape/globalDefines.hpp **** 
+ 678:funsape/globalDefines.hpp **** //!
+ 679:funsape/globalDefines.hpp **** //! @def            dwordGetByte5(dataDword)
+ 680:funsape/globalDefines.hpp **** //! @details        Returns the byte 5 of the given @a dataDword double word.
+ 681:funsape/globalDefines.hpp **** //! @param[in]      dataDword           variable
+ 682:funsape/globalDefines.hpp **** //! @return         @a dataDword byte 5, shifted to bit position 0
+ 683:funsape/globalDefines.hpp **** //!
+ 684:funsape/globalDefines.hpp **** #define dwordGetByte5(dataDword)        (               \
+ 685:funsape/globalDefines.hpp ****         ((dataDword) >> 40) & 0x00000000000000FF        \
+ 686:funsape/globalDefines.hpp **** )
+ 687:funsape/globalDefines.hpp **** 
+ 688:funsape/globalDefines.hpp **** //!
+ 689:funsape/globalDefines.hpp **** //! @def            dwordGetByte4(dataDword)
+ 690:funsape/globalDefines.hpp **** //! @details        Returns the byte 4 of the given @a dataDword double word.
+ 691:funsape/globalDefines.hpp **** //! @param[in]      dataDword           variable
+ 692:funsape/globalDefines.hpp **** //! @return         @a dataDword byte 4, shifted to bit position 0
+ 693:funsape/globalDefines.hpp **** //!
+ 694:funsape/globalDefines.hpp **** #define dwordGetByte4(dataDword)        (               \
+ 695:funsape/globalDefines.hpp ****         ((dataDword) >> 32) & 0x00000000000000FF        \
+ 696:funsape/globalDefines.hpp **** )
+ 697:funsape/globalDefines.hpp **** 
+ 698:funsape/globalDefines.hpp **** //!
+ 699:funsape/globalDefines.hpp **** //! @def            dwordGetByte3(dataDword)
+ 700:funsape/globalDefines.hpp **** //! @details        Returns the byte 3 of the given @a dataDword double word.
+ 701:funsape/globalDefines.hpp **** //! @param[in]      dataDword           variable
+ 702:funsape/globalDefines.hpp **** //! @return         @a dataDword byte 3, shifted to bit position 0
+ 703:funsape/globalDefines.hpp **** //!
+ 704:funsape/globalDefines.hpp **** #define dwordGetByte3(dataDword)        (               \
+ 705:funsape/globalDefines.hpp ****         ((dataDword) >> 24) & 0x00000000000000FF        \
+ 706:funsape/globalDefines.hpp **** )
+ 707:funsape/globalDefines.hpp **** 
+ 708:funsape/globalDefines.hpp **** //!
+ 709:funsape/globalDefines.hpp **** //! @def            dwordGetByte2(dataDword)
+ 710:funsape/globalDefines.hpp **** //! @details        Returns the byte 2 of the given @a dataDword double word.
+ 711:funsape/globalDefines.hpp **** //! @param[in]      dataDword           variable
+ 712:funsape/globalDefines.hpp **** //! @return         @a dataDword byte 2, shifted to bit position 0
+ 713:funsape/globalDefines.hpp **** //!
+ 714:funsape/globalDefines.hpp **** #define dwordGetByte2(dataDword)        (               \
+ 715:funsape/globalDefines.hpp ****         ((dataDword) >> 16) & 0x00000000000000FF        \
+ 716:funsape/globalDefines.hpp **** )
+ 717:funsape/globalDefines.hpp **** 
+ 718:funsape/globalDefines.hpp **** //!
+ 719:funsape/globalDefines.hpp **** //! @def            dwordGetByte1(dataDword)
+ 720:funsape/globalDefines.hpp **** //! @details        Returns the byte 1 of the given @a dataDword double word.
+ 721:funsape/globalDefines.hpp **** //! @param[in]      dataDword           variable
+ 722:funsape/globalDefines.hpp **** //! @return         @a dataDword byte 1, shifted to bit position 0
+ 723:funsape/globalDefines.hpp **** //!
+ 724:funsape/globalDefines.hpp **** #define dwordGetByte1(dataDword)        (               \
+ 725:funsape/globalDefines.hpp ****         ((dataDword) >> 8) & 0x00000000000000FF     \
+GAS LISTING /tmp/cch7C0sd.s 			page 18
+
+
+ 726:funsape/globalDefines.hpp **** )
+ 727:funsape/globalDefines.hpp **** 
+ 728:funsape/globalDefines.hpp **** //!
+ 729:funsape/globalDefines.hpp **** //! @def            dwordGetByte0(dataDword)
+ 730:funsape/globalDefines.hpp **** //! @details        Returns the byte 0 of the given @a dataDword double word.
+ 731:funsape/globalDefines.hpp **** //! @param[in]      dataDword           variable
+ 732:funsape/globalDefines.hpp **** //! @return         @a dataDword byte 0
+ 733:funsape/globalDefines.hpp **** //!
+ 734:funsape/globalDefines.hpp **** #define dwordGetByte0(dataDword)        (               \
+ 735:funsape/globalDefines.hpp ****         (dataDword) & 0x00000000000000FF        \
+ 736:funsape/globalDefines.hpp **** )
+ 737:funsape/globalDefines.hpp **** 
+ 738:funsape/globalDefines.hpp **** //!
+ 739:funsape/globalDefines.hpp **** //! @def            dwordSwitchBytes(dataDword)
+ 740:funsape/globalDefines.hpp **** //! @details        Switches the bytes of the given @a dataDWord double word.
+ 741:funsape/globalDefines.hpp **** //! @param[in]      dataDword           variable
+ 742:funsape/globalDefines.hpp **** //! @return         @a dataDword with bytes switched
+ 743:funsape/globalDefines.hpp **** //!
+ 744:funsape/globalDefines.hpp **** #define dwordSwitchBytes(dataDword)     (       \
+ 745:funsape/globalDefines.hpp ****         (dwordGetByte0(dataDword) << 56) |      \
+ 746:funsape/globalDefines.hpp ****         (dwordGetByte1(dataDword) << 48) |      \
+ 747:funsape/globalDefines.hpp ****         (dwordGetByte2(dataDword) << 40) |      \
+ 748:funsape/globalDefines.hpp ****         (dwordGetByte3(dataDword) << 32) |      \
+ 749:funsape/globalDefines.hpp ****         (dwordGetByte4(dataDword) << 24) |      \
+ 750:funsape/globalDefines.hpp ****         (dwordGetByte5(dataDword) << 16) |      \
+ 751:funsape/globalDefines.hpp ****         (dwordGetByte6(dataDword) << 8)  |      \
+ 752:funsape/globalDefines.hpp ****         (dwordGetByte7(dataDword))              \
+ 753:funsape/globalDefines.hpp **** )
+ 754:funsape/globalDefines.hpp **** 
+ 755:funsape/globalDefines.hpp **** //!
+ 756:funsape/globalDefines.hpp **** //! @def            dwordGetHword3(dataDword)
+ 757:funsape/globalDefines.hpp **** //! @details        Returns the half word 3 of the given @a dataDword double
+ 758:funsape/globalDefines.hpp **** //!                     word.
+ 759:funsape/globalDefines.hpp **** //! @param[in]      dataDword           variable
+ 760:funsape/globalDefines.hpp **** //! @return         @a dataDword half word 3, shifted to bit position 0
+ 761:funsape/globalDefines.hpp **** //!
+ 762:funsape/globalDefines.hpp **** #define dwordGetHword3(dataDword)       (               \
+ 763:funsape/globalDefines.hpp ****         ((dataDword) >> 48) & 0x000000000000FFFF        \
+ 764:funsape/globalDefines.hpp **** )
+ 765:funsape/globalDefines.hpp **** 
+ 766:funsape/globalDefines.hpp **** //!
+ 767:funsape/globalDefines.hpp **** //! @def            dwordGetHword2(dataDword)
+ 768:funsape/globalDefines.hpp **** //! @details        Returns the half word 2 of the given @a dataDword double
+ 769:funsape/globalDefines.hpp **** //!                     word.
+ 770:funsape/globalDefines.hpp **** //! @param[in]      dataDword           variable
+ 771:funsape/globalDefines.hpp **** //! @return         @a dataDword half word 2, shifted to bit position 0
+ 772:funsape/globalDefines.hpp **** //!
+ 773:funsape/globalDefines.hpp **** #define dwordGetHword2(dataDword)       (               \
+ 774:funsape/globalDefines.hpp ****         ((dataDword) >> 32) & 0x000000000000FFFF        \
+ 775:funsape/globalDefines.hpp **** )
+ 776:funsape/globalDefines.hpp **** 
+ 777:funsape/globalDefines.hpp **** //!
+ 778:funsape/globalDefines.hpp **** //! @def            dwordGetHword1(dataDword)
+ 779:funsape/globalDefines.hpp **** //! @details        Returns the half word 1 of the given @a dataDword double
+ 780:funsape/globalDefines.hpp **** //!                     word.
+ 781:funsape/globalDefines.hpp **** //! @param[in]      dataDword           variable
+ 782:funsape/globalDefines.hpp **** //! @return         @a dataDword half word 1, shifted to bit position 0
+GAS LISTING /tmp/cch7C0sd.s 			page 19
+
+
+ 783:funsape/globalDefines.hpp **** //!
+ 784:funsape/globalDefines.hpp **** #define dwordGetHword1(dataDword)       (               \
+ 785:funsape/globalDefines.hpp ****         ((dataDword) >> 16) & 0x000000000000FFFF        \
+ 786:funsape/globalDefines.hpp **** )
+ 787:funsape/globalDefines.hpp **** 
+ 788:funsape/globalDefines.hpp **** //!
+ 789:funsape/globalDefines.hpp **** //! @def            dwordGetHword0(dataDword)
+ 790:funsape/globalDefines.hpp **** //! @details        Returns the half word 0 of the given @a dataDword double
+ 791:funsape/globalDefines.hpp **** //!                     word.
+ 792:funsape/globalDefines.hpp **** //! @param[in]      dataDword           variable
+ 793:funsape/globalDefines.hpp **** //! @return         @a dataDword half word 0
+ 794:funsape/globalDefines.hpp **** //!
+ 795:funsape/globalDefines.hpp **** #define dwordGetHword0(dataDword)       (               \
+ 796:funsape/globalDefines.hpp ****         ((dataDword) >> 0) & 0x000000000000FFFF         \
+ 797:funsape/globalDefines.hpp **** )
+ 798:funsape/globalDefines.hpp **** 
+ 799:funsape/globalDefines.hpp **** //!
+ 800:funsape/globalDefines.hpp **** //! @def            dwordSwitchHwords(dataDword)
+ 801:funsape/globalDefines.hpp **** //! @details        Switches the half words of the given @a dataDWord double
+ 802:funsape/globalDefines.hpp **** //!                     word.
+ 803:funsape/globalDefines.hpp **** //! @param[in]      dataDword           variable
+ 804:funsape/globalDefines.hpp **** //! @return         @a dataDword with half words switched
+ 805:funsape/globalDefines.hpp **** //!
+ 806:funsape/globalDefines.hpp **** #define dwordSwitchHwords(dataDword)    (       \
+ 807:funsape/globalDefines.hpp ****         (dwordGetHword0(dataDword) << 48) |     \
+ 808:funsape/globalDefines.hpp ****         (dwordGetHword1(dataDword) << 32) |     \
+ 809:funsape/globalDefines.hpp ****         (dwordGetHword2(dataDword) << 16) |     \
+ 810:funsape/globalDefines.hpp ****         (dwordGetHword3(dataDword))             \
+ 811:funsape/globalDefines.hpp **** )
+ 812:funsape/globalDefines.hpp **** 
+ 813:funsape/globalDefines.hpp **** //!
+ 814:funsape/globalDefines.hpp **** //! @def            dwordGetWord1(dataDword)
+ 815:funsape/globalDefines.hpp **** //! @details        Returns the word 1 of the given @a dataDword double word.
+ 816:funsape/globalDefines.hpp **** //! @param[in]      dataDword           variable
+ 817:funsape/globalDefines.hpp **** //! @return         @a dataDword word 1, shifted to bit position 0
+ 818:funsape/globalDefines.hpp **** //!
+ 819:funsape/globalDefines.hpp **** #define dwordGetWord1(dataDword)         (              \
+ 820:funsape/globalDefines.hpp ****         ((dataDword) >> 32) & 0x00000000FFFFFFFF        \
+ 821:funsape/globalDefines.hpp **** )
+ 822:funsape/globalDefines.hpp **** 
+ 823:funsape/globalDefines.hpp **** //!
+ 824:funsape/globalDefines.hpp **** //! @def            dwordGetWord0(dataDword)
+ 825:funsape/globalDefines.hpp **** //! @details        Returns the word 0 of the given @a dataDword double word.
+ 826:funsape/globalDefines.hpp **** //! @param[in]      dataDword           variable
+ 827:funsape/globalDefines.hpp **** //! @return         @a dataDword word 1
+ 828:funsape/globalDefines.hpp **** //!
+ 829:funsape/globalDefines.hpp **** #define dwordGetWord0(dataDword)         (      \
+ 830:funsape/globalDefines.hpp ****         (dataDword) & 0x00000000FFFFFFFF        \
+ 831:funsape/globalDefines.hpp **** )
+ 832:funsape/globalDefines.hpp **** 
+ 833:funsape/globalDefines.hpp **** //!
+ 834:funsape/globalDefines.hpp **** //! @def            dwordSwitchWords(dataDword)
+ 835:funsape/globalDefines.hpp **** //! @details        Switches the words of the given @a dataDWord double word.
+ 836:funsape/globalDefines.hpp **** //! @param[in]      dataDword           variable
+ 837:funsape/globalDefines.hpp **** //! @return         @a dataDword with words switched
+ 838:funsape/globalDefines.hpp **** //!
+ 839:funsape/globalDefines.hpp **** #define dwordSwitchWords(dataDword)     (       \
+GAS LISTING /tmp/cch7C0sd.s 			page 20
+
+
+ 840:funsape/globalDefines.hpp ****         (dwordGetWord0(dataDword) << 32) |      \
+ 841:funsape/globalDefines.hpp ****         (dwordGetWord1(dataDword))              \
+ 842:funsape/globalDefines.hpp **** )
+ 843:funsape/globalDefines.hpp **** 
+ 844:funsape/globalDefines.hpp **** //     /////////////////////     TRUNCATE VALUES    /////////////////////     //
+ 845:funsape/globalDefines.hpp **** 
+ 846:funsape/globalDefines.hpp **** //!
+ 847:funsape/globalDefines.hpp **** //! @def            getMaximumOf(var1, var2)
+ 848:funsape/globalDefines.hpp **** //! @details        Returns the greater value between @a var1 and @a var2.
+ 849:funsape/globalDefines.hpp **** //! @param[in]      var1                first value
+ 850:funsape/globalDefines.hpp **** //! @param[in]      var2                second value
+ 851:funsape/globalDefines.hpp **** //! @return         the greater value between @a var1 and @a var2
+ 852:funsape/globalDefines.hpp **** //!
+ 853:funsape/globalDefines.hpp **** #define getMaximumOf(var1, var2)        (       \
+ 854:funsape/globalDefines.hpp ****         ((var1) > (var2))                       \
+ 855:funsape/globalDefines.hpp ****         ? (var1)                                \
+ 856:funsape/globalDefines.hpp ****         : (var2)                                \
+ 857:funsape/globalDefines.hpp **** )
+ 858:funsape/globalDefines.hpp **** 
+ 859:funsape/globalDefines.hpp **** //!
+ 860:funsape/globalDefines.hpp **** //! @def            getMinimumOf(var1, var2)
+ 861:funsape/globalDefines.hpp **** //! @details        Returns the lower value between @a var1 and @a var2.
+ 862:funsape/globalDefines.hpp **** //! @param[in]      var1                first value
+ 863:funsape/globalDefines.hpp **** //! @param[in]      var2                second value
+ 864:funsape/globalDefines.hpp **** //! @return         the lower value between @a var1 and @a var2
+ 865:funsape/globalDefines.hpp **** //!
+ 866:funsape/globalDefines.hpp **** #define getMinimumOf(var1, var2)        (       \
+ 867:funsape/globalDefines.hpp ****         ((var1) < (var2))                       \
+ 868:funsape/globalDefines.hpp ****         ? (var1)                                \
+ 869:funsape/globalDefines.hpp ****         : (var2)                                \
+ 870:funsape/globalDefines.hpp **** )
+ 871:funsape/globalDefines.hpp **** 
+ 872:funsape/globalDefines.hpp **** //!
+ 873:funsape/globalDefines.hpp **** //! @def            truncateBetween(var, min, max)
+ 874:funsape/globalDefines.hpp **** //! @details        Truncates (trims) the value between maximum and minimum
+ 875:funsape/globalDefines.hpp **** //!                     values.
+ 876:funsape/globalDefines.hpp **** //! @warning        The macro-function will not work correctly if @a min is
+ 877:funsape/globalDefines.hpp **** //!                     greater than @a max.
+ 878:funsape/globalDefines.hpp **** //! @param[in]      var                 value to be truncated
+ 879:funsape/globalDefines.hpp **** //! @param[in]      max                 maximum allowed value
+ 880:funsape/globalDefines.hpp **** //! @param[in]      min                 minimum allowed value
+ 881:funsape/globalDefines.hpp **** //! @return         @a min              if the value is lower than @a min
+ 882:funsape/globalDefines.hpp **** //! @return         @a max              if the value is greater than @a max
+ 883:funsape/globalDefines.hpp **** //! @return         @a var              if the value is placed between @a min
+ 884:funsape/globalDefines.hpp **** //!                                          and @a max
+ 885:funsape/globalDefines.hpp **** //!
+ 886:funsape/globalDefines.hpp **** #define truncateBetween(var, min, max)  (       \
+ 887:funsape/globalDefines.hpp ****         ((var) < (min))                         \
+ 888:funsape/globalDefines.hpp ****         ? (min)                                 \
+ 889:funsape/globalDefines.hpp ****         : (((var) > (max))                      \
+ 890:funsape/globalDefines.hpp ****                 ? (max)                         \
+ 891:funsape/globalDefines.hpp ****                 : (var)                         \
+ 892:funsape/globalDefines.hpp ****         )                                       \
+ 893:funsape/globalDefines.hpp **** )
+ 894:funsape/globalDefines.hpp **** 
+ 895:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 896:funsape/globalDefines.hpp **** // Doxygen: End subgroup "Data_Handling" in "Global_Definitions"
+GAS LISTING /tmp/cch7C0sd.s 			page 21
+
+
+ 897:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 898:funsape/globalDefines.hpp **** 
+ 899:funsape/globalDefines.hpp **** //!
+ 900:funsape/globalDefines.hpp **** //! @}
+ 901:funsape/globalDefines.hpp **** //!
+ 902:funsape/globalDefines.hpp **** 
+ 903:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 904:funsape/globalDefines.hpp **** // Doxygen: Start subgroup "String_Handling" in "Global_Definitions"
+ 905:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 906:funsape/globalDefines.hpp **** 
+ 907:funsape/globalDefines.hpp **** //!
+ 908:funsape/globalDefines.hpp **** //! @addtogroup     String_Handling
+ 909:funsape/globalDefines.hpp **** //! @details        Performs general handling on @c characters and @c strings.
+ 910:funsape/globalDefines.hpp **** //! @{
+ 911:funsape/globalDefines.hpp **** //!
+ 912:funsape/globalDefines.hpp **** 
+ 913:funsape/globalDefines.hpp **** //     //////////////////////     STRINGIFYING    ///////////////////////     //
+ 914:funsape/globalDefines.hpp **** 
+ 915:funsape/globalDefines.hpp **** //!
+ 916:funsape/globalDefines.hpp **** //! @def            stringifyName(constant)
+ 917:funsape/globalDefines.hpp **** //! @brief          Converts a constant name to a string literal.
+ 918:funsape/globalDefines.hpp **** //! @param[in]      constant            The constant name to stringify.
+ 919:funsape/globalDefines.hpp **** //!
+ 920:funsape/globalDefines.hpp **** #define stringifyName(constant)         #constant
+ 921:funsape/globalDefines.hpp **** 
+ 922:funsape/globalDefines.hpp **** //!
+ 923:funsape/globalDefines.hpp **** //! @def            stringifyValue(constant)
+ 924:funsape/globalDefines.hpp **** //! @brief          Converts a constant value to a string literal.
+ 925:funsape/globalDefines.hpp **** //! @details        Uses a two-step expansion to stringify the value of the
+ 926:funsape/globalDefines.hpp **** //!                     macro instead of its name.
+ 927:funsape/globalDefines.hpp **** //! @param[in]      constant            The constant to stringify.
+ 928:funsape/globalDefines.hpp **** //!
+ 929:funsape/globalDefines.hpp **** #define stringifyValue(constant)        stringifyName(constant)
+ 930:funsape/globalDefines.hpp **** 
+ 931:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 932:funsape/globalDefines.hpp **** // Doxygen: End subgroup "String_Handling" in "Global_Definitions"
+ 933:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 934:funsape/globalDefines.hpp **** 
+ 935:funsape/globalDefines.hpp **** //!
+ 936:funsape/globalDefines.hpp **** //! @}
+ 937:funsape/globalDefines.hpp **** //!
+ 938:funsape/globalDefines.hpp **** 
+ 939:funsape/globalDefines.hpp **** // =============================================================================
+ 940:funsape/globalDefines.hpp **** // New data types
+ 941:funsape/globalDefines.hpp **** // =============================================================================
+ 942:funsape/globalDefines.hpp **** 
+ 943:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 944:funsape/globalDefines.hpp **** // Doxygen: Start subgroup "Data_Types" in "Global_Definitions"
+ 945:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 946:funsape/globalDefines.hpp **** 
+ 947:funsape/globalDefines.hpp **** //!
+ 948:funsape/globalDefines.hpp **** //! @addtogroup     Data_Types
+ 949:funsape/globalDefines.hpp **** //! @brief          Definition of new data types.
+ 950:funsape/globalDefines.hpp **** //! @{
+ 951:funsape/globalDefines.hpp **** //!
+ 952:funsape/globalDefines.hpp **** 
+ 953:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+GAS LISTING /tmp/cch7C0sd.s 			page 22
+
+
+ 954:funsape/globalDefines.hpp **** // Doxygen: Start subgroup "Single_Types" in "Global_Definitions/Data_Types"
+ 955:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 956:funsape/globalDefines.hpp **** 
+ 957:funsape/globalDefines.hpp **** //!
+ 958:funsape/globalDefines.hpp **** //! @addtogroup     Single_Types
+ 959:funsape/globalDefines.hpp **** //! @details        Single variables renaming or shortening names.
+ 960:funsape/globalDefines.hpp **** //! @{
+ 961:funsape/globalDefines.hpp **** //!
+ 962:funsape/globalDefines.hpp **** 
+ 963:funsape/globalDefines.hpp **** //     ////////////////////     BASIC VARIABLES     /////////////////////     //
+ 964:funsape/globalDefines.hpp **** 
+ 965:funsape/globalDefines.hpp **** //!
+ 966:funsape/globalDefines.hpp **** //! @typedef        bool_t
+ 967:funsape/globalDefines.hpp **** //! @details        Renamed to ensure code standardization.
+ 968:funsape/globalDefines.hpp **** //!
+ 969:funsape/globalDefines.hpp **** typedef bool                            bool_t;
+ 970:funsape/globalDefines.hpp **** 
+ 971:funsape/globalDefines.hpp **** //!
+ 972:funsape/globalDefines.hpp **** //! @typedef        char_t
+ 973:funsape/globalDefines.hpp **** //! @details        Renamed to ensure code standardization.
+ 974:funsape/globalDefines.hpp **** //!
+ 975:funsape/globalDefines.hpp **** typedef char                            char_t;
+ 976:funsape/globalDefines.hpp **** 
+ 977:funsape/globalDefines.hpp **** //     ///////////////////     CONSTANT VARIABLES    ////////////////////     //
+ 978:funsape/globalDefines.hpp **** 
+ 979:funsape/globalDefines.hpp **** //!
+ 980:funsape/globalDefines.hpp **** //! @typedef        cbool_t
+ 981:funsape/globalDefines.hpp **** //! @details        Alias for <b><tt>const bool</tt></b>.
+ 982:funsape/globalDefines.hpp **** //!
+ 983:funsape/globalDefines.hpp **** typedef const bool_t                    cbool_t;
+ 984:funsape/globalDefines.hpp **** 
+ 985:funsape/globalDefines.hpp **** //!
+ 986:funsape/globalDefines.hpp **** //! @typedef        cchar_t
+ 987:funsape/globalDefines.hpp **** //! @details        Alias for <b><tt>const char</tt></b>.
+ 988:funsape/globalDefines.hpp **** //!
+ 989:funsape/globalDefines.hpp **** typedef const char_t                    cchar_t;
+ 990:funsape/globalDefines.hpp **** 
+ 991:funsape/globalDefines.hpp **** //!
+ 992:funsape/globalDefines.hpp **** //! @typedef        cint8_t
+ 993:funsape/globalDefines.hpp **** //! @details        Alias for <b><tt>const int8_t</tt></b>.
+ 994:funsape/globalDefines.hpp **** //!
+ 995:funsape/globalDefines.hpp **** typedef const int8_t                    cint8_t;
+ 996:funsape/globalDefines.hpp **** 
+ 997:funsape/globalDefines.hpp **** //!
+ 998:funsape/globalDefines.hpp **** //! @typedef        cint16_t
+ 999:funsape/globalDefines.hpp **** //! @details        Alias for <b><tt>const int16_t</tt></b>.
+1000:funsape/globalDefines.hpp **** //!
+1001:funsape/globalDefines.hpp **** typedef const int16_t                   cint16_t;
+1002:funsape/globalDefines.hpp **** 
+1003:funsape/globalDefines.hpp **** //!
+1004:funsape/globalDefines.hpp **** //! @typedef        cint32_t
+1005:funsape/globalDefines.hpp **** //! @details        Alias for <b><tt>const int32_t</tt></b>.
+1006:funsape/globalDefines.hpp **** //!
+1007:funsape/globalDefines.hpp **** typedef const int32_t                   cint32_t;
+1008:funsape/globalDefines.hpp **** 
+1009:funsape/globalDefines.hpp **** //!
+1010:funsape/globalDefines.hpp **** //! @typedef        cint64_t
+GAS LISTING /tmp/cch7C0sd.s 			page 23
+
+
+1011:funsape/globalDefines.hpp **** //! @details        Alias for <b><tt>const int64_t</tt></b>.
+1012:funsape/globalDefines.hpp **** //!
+1013:funsape/globalDefines.hpp **** typedef const int64_t                   cint64_t;
+1014:funsape/globalDefines.hpp **** 
+1015:funsape/globalDefines.hpp **** //!
+1016:funsape/globalDefines.hpp **** //! @typedef        cuint8_t
+1017:funsape/globalDefines.hpp **** //! @details        Alias for <b><tt>const uint8_t</tt></b>.
+1018:funsape/globalDefines.hpp **** //!
+1019:funsape/globalDefines.hpp **** typedef const uint8_t                   cuint8_t;
+1020:funsape/globalDefines.hpp **** 
+1021:funsape/globalDefines.hpp **** //!
+1022:funsape/globalDefines.hpp **** //! @typedef        cuint16_t
+1023:funsape/globalDefines.hpp **** //! @details        Alias for <b><tt>const uint16_t</tt></b>.
+1024:funsape/globalDefines.hpp **** //!
+1025:funsape/globalDefines.hpp **** typedef const uint16_t                  cuint16_t;
+1026:funsape/globalDefines.hpp **** 
+1027:funsape/globalDefines.hpp **** //!
+1028:funsape/globalDefines.hpp **** //! @typedef        cuint32_t
+1029:funsape/globalDefines.hpp **** //! @details        Alias for <b><tt>const uint32_t</tt></b>.
+1030:funsape/globalDefines.hpp **** //!
+1031:funsape/globalDefines.hpp **** typedef const uint32_t                  cuint32_t;
+1032:funsape/globalDefines.hpp **** 
+1033:funsape/globalDefines.hpp **** //!
+1034:funsape/globalDefines.hpp **** //! @typedef        cuint64_t
+1035:funsape/globalDefines.hpp **** //! @details        Alias for <b><tt>const uint64_t</tt></b>.
+1036:funsape/globalDefines.hpp **** //!
+1037:funsape/globalDefines.hpp **** typedef const uint64_t                  cuint64_t;
+1038:funsape/globalDefines.hpp **** 
+1039:funsape/globalDefines.hpp **** //     ///////////////////     VOLATILE VARIABLES    ////////////////////     //
+1040:funsape/globalDefines.hpp **** 
+1041:funsape/globalDefines.hpp **** //!
+1042:funsape/globalDefines.hpp **** //! @typedef        vbool_t
+1043:funsape/globalDefines.hpp **** //! @details        Alias for <b><tt>volatile bool</tt></b>.
+1044:funsape/globalDefines.hpp **** //!
+1045:funsape/globalDefines.hpp **** typedef volatile bool_t                 vbool_t;
+1046:funsape/globalDefines.hpp **** 
+1047:funsape/globalDefines.hpp **** //!
+1048:funsape/globalDefines.hpp **** //! @typedef        vchar_t
+1049:funsape/globalDefines.hpp **** //! @details        Alias for <b><tt>volatile char</tt></b>.
+1050:funsape/globalDefines.hpp **** //!
+1051:funsape/globalDefines.hpp **** typedef volatile char_t                 vchar_t;
+1052:funsape/globalDefines.hpp **** 
+1053:funsape/globalDefines.hpp **** //!
+1054:funsape/globalDefines.hpp **** //! @typedef        vint8_t
+1055:funsape/globalDefines.hpp **** //! @details        Alias for <b><tt>volatile int8_t</tt></b>.
+1056:funsape/globalDefines.hpp **** //!
+1057:funsape/globalDefines.hpp **** typedef volatile int8_t                 vint8_t;
+1058:funsape/globalDefines.hpp **** 
+1059:funsape/globalDefines.hpp **** //!
+1060:funsape/globalDefines.hpp **** //! @typedef        vint16_t
+1061:funsape/globalDefines.hpp **** //! @details        Alias for <b><tt>volatile int16_t</tt></b>.
+1062:funsape/globalDefines.hpp **** //!
+1063:funsape/globalDefines.hpp **** typedef volatile int16_t                vint16_t;
+1064:funsape/globalDefines.hpp **** 
+1065:funsape/globalDefines.hpp **** //!
+1066:funsape/globalDefines.hpp **** //! @typedef        vint32_t
+1067:funsape/globalDefines.hpp **** //! @details        Alias for <b><tt>volatile int32_t</tt></b>.
+GAS LISTING /tmp/cch7C0sd.s 			page 24
+
+
+1068:funsape/globalDefines.hpp **** //!
+1069:funsape/globalDefines.hpp **** typedef volatile int32_t                vint32_t;
+1070:funsape/globalDefines.hpp **** 
+1071:funsape/globalDefines.hpp **** //!
+1072:funsape/globalDefines.hpp **** //! @typedef        vint64_t
+1073:funsape/globalDefines.hpp **** //! @details        Alias for <b><tt>volatile int64_t</tt></b>.
+1074:funsape/globalDefines.hpp **** //!
+1075:funsape/globalDefines.hpp **** typedef volatile int64_t                vint64_t;
+1076:funsape/globalDefines.hpp **** 
+1077:funsape/globalDefines.hpp **** //!
+1078:funsape/globalDefines.hpp **** //! @typedef        vuint8_t
+1079:funsape/globalDefines.hpp **** //! @details        Alias for <b><tt>volatile uint8_t</tt></b>.
+1080:funsape/globalDefines.hpp **** //!
+1081:funsape/globalDefines.hpp **** typedef volatile uint8_t                vuint8_t;
+1082:funsape/globalDefines.hpp **** 
+1083:funsape/globalDefines.hpp **** //!
+1084:funsape/globalDefines.hpp **** //! @typedef        vuint16_t
+1085:funsape/globalDefines.hpp **** //! @details        Alias for <b><tt>volatile uint16_t</tt></b>.
+1086:funsape/globalDefines.hpp **** //!
+1087:funsape/globalDefines.hpp **** typedef volatile uint16_t               vuint16_t;
+1088:funsape/globalDefines.hpp **** 
+1089:funsape/globalDefines.hpp **** //!
+1090:funsape/globalDefines.hpp **** //! @typedef        vuint32_t
+1091:funsape/globalDefines.hpp **** //! @details        Alias for <b><tt>volatile uint32_t</tt></b>.
+1092:funsape/globalDefines.hpp **** //!
+1093:funsape/globalDefines.hpp **** typedef volatile uint32_t               vuint32_t;
+1094:funsape/globalDefines.hpp **** 
+1095:funsape/globalDefines.hpp **** //!
+1096:funsape/globalDefines.hpp **** //! @typedef        vuint64_t
+1097:funsape/globalDefines.hpp **** //! @details        Alias for <b><tt>volatile uint64_t</tt></b>.
+1098:funsape/globalDefines.hpp **** //!
+1099:funsape/globalDefines.hpp **** typedef volatile uint64_t               vuint64_t;
+1100:funsape/globalDefines.hpp **** 
+1101:funsape/globalDefines.hpp **** //     ////////////     AVR PLATFORM SPECIFIC VARIABLES     /////////////     //
+1102:funsape/globalDefines.hpp **** 
+1103:funsape/globalDefines.hpp **** //!
+1104:funsape/globalDefines.hpp **** //! @typedef        int_t
+1105:funsape/globalDefines.hpp **** //! @details        Standard <b><tt>int</tt></b> type (16-bit in AVR
+1106:funsape/globalDefines.hpp **** //!                     processors).
+1107:funsape/globalDefines.hpp **** //!
+1108:funsape/globalDefines.hpp **** typedef int16_t                         int_t;
+1109:funsape/globalDefines.hpp **** 
+1110:funsape/globalDefines.hpp **** //!
+1111:funsape/globalDefines.hpp **** //! @typedef        uint_t
+1112:funsape/globalDefines.hpp **** //! @details        Standard <b><tt>unsigned int</tt></b> type (16-bit in AVR
+1113:funsape/globalDefines.hpp **** //!                     processors).
+1114:funsape/globalDefines.hpp **** //!
+1115:funsape/globalDefines.hpp **** typedef uint16_t                        uint_t;
+1116:funsape/globalDefines.hpp **** 
+1117:funsape/globalDefines.hpp **** //!
+1118:funsape/globalDefines.hpp **** //! @typedef        cint_t
+1119:funsape/globalDefines.hpp **** //! @details        Standard <b><tt>const int</tt></b> type (16-bit in AVR
+1120:funsape/globalDefines.hpp **** //!                     processors).
+1121:funsape/globalDefines.hpp **** //!
+1122:funsape/globalDefines.hpp **** typedef cint16_t                        cint_t;
+1123:funsape/globalDefines.hpp **** 
+1124:funsape/globalDefines.hpp **** //!
+GAS LISTING /tmp/cch7C0sd.s 			page 25
+
+
+1125:funsape/globalDefines.hpp **** //! @typedef        cuint_t
+1126:funsape/globalDefines.hpp **** //! @details        Standard <b><tt>const unsigned int</tt></b> type (16-bit in
+1127:funsape/globalDefines.hpp **** //!                     AVR processors).
+1128:funsape/globalDefines.hpp **** //!
+1129:funsape/globalDefines.hpp **** typedef cuint16_t                       cuint_t;
+1130:funsape/globalDefines.hpp **** 
+1131:funsape/globalDefines.hpp **** //!
+1132:funsape/globalDefines.hpp **** //! @typedef        vint_t
+1133:funsape/globalDefines.hpp **** //! @details        Standard <b><tt>volatile int</tt></b> type (16-bit in AVR
+1134:funsape/globalDefines.hpp **** //!                     processors).
+1135:funsape/globalDefines.hpp **** //!
+1136:funsape/globalDefines.hpp **** typedef vint16_t                        vint_t;
+1137:funsape/globalDefines.hpp **** 
+1138:funsape/globalDefines.hpp **** //!
+1139:funsape/globalDefines.hpp **** //! @typedef        vuint_t
+1140:funsape/globalDefines.hpp **** //! @details        Standard <b><tt>volatile unsigned int</tt></b> type (16-bit
+1141:funsape/globalDefines.hpp **** //!                     in AVR processors).
+1142:funsape/globalDefines.hpp **** //!
+1143:funsape/globalDefines.hpp **** typedef vuint16_t                       vuint_t;
+1144:funsape/globalDefines.hpp **** 
+1145:funsape/globalDefines.hpp **** //!
+1146:funsape/globalDefines.hpp **** //! @typedef        ioPinIndex_t
+1147:funsape/globalDefines.hpp **** //! @details        Alias to handle a GPIO pin index.
+1148:funsape/globalDefines.hpp **** //!
+1149:funsape/globalDefines.hpp **** typedef uint8_t                         ioPinIndex_t;
+1150:funsape/globalDefines.hpp **** 
+1151:funsape/globalDefines.hpp **** //!
+1152:funsape/globalDefines.hpp **** //! @typedef        ioPinMask_t
+1153:funsape/globalDefines.hpp **** //! @details        Alias to handle a GPIO pin mask.
+1154:funsape/globalDefines.hpp **** //!
+1155:funsape/globalDefines.hpp **** typedef uint8_t                         ioPinMask_t;
+1156:funsape/globalDefines.hpp **** 
+1157:funsape/globalDefines.hpp **** //!
+1158:funsape/globalDefines.hpp **** //! @typedef        ioRegAddress_t
+1159:funsape/globalDefines.hpp **** //! @details        Alias to handle a GPIO register address.
+1160:funsape/globalDefines.hpp **** //!
+1161:funsape/globalDefines.hpp **** typedef vuint8_t                       *ioRegAddress_t;
+1162:funsape/globalDefines.hpp **** 
+1163:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1164:funsape/globalDefines.hpp **** // Doxygen: End subgroup "Single_Types" in "Global_Definitions/Data_Types"
+1165:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1166:funsape/globalDefines.hpp **** 
+1167:funsape/globalDefines.hpp **** //!
+1168:funsape/globalDefines.hpp **** //! @}
+1169:funsape/globalDefines.hpp **** //!
+1170:funsape/globalDefines.hpp **** 
+1171:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1172:funsape/globalDefines.hpp **** // Doxygen: Start subgroup "Binary_Enumerations" in "Global_Definitions/Data_Types"
+1173:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1174:funsape/globalDefines.hpp **** 
+1175:funsape/globalDefines.hpp **** //!
+1176:funsape/globalDefines.hpp **** //! @addtogroup     Binary_Enumerations
+1177:funsape/globalDefines.hpp **** //! @details        Enumerations with only two possible values.
+1178:funsape/globalDefines.hpp **** //! @{
+1179:funsape/globalDefines.hpp **** //!
+1180:funsape/globalDefines.hpp **** 
+1181:funsape/globalDefines.hpp **** //     //////////////////     BINARY ENUMERATIONS     ///////////////////     //
+GAS LISTING /tmp/cch7C0sd.s 			page 26
+
+
+1182:funsape/globalDefines.hpp **** 
+1183:funsape/globalDefines.hpp **** //!
+1184:funsape/globalDefines.hpp **** //! @enum           Activation
+1185:funsape/globalDefines.hpp **** //! @details        Used to refer to the activation state of a peripheral.
+1186:funsape/globalDefines.hpp **** //!
+1187:funsape/globalDefines.hpp **** enum class Activation : cbool_t {
+1188:funsape/globalDefines.hpp ****     OFF             = false,            //!< Deactivated
+1189:funsape/globalDefines.hpp ****     ON              = true              //!< Activated
+1190:funsape/globalDefines.hpp **** };
+1191:funsape/globalDefines.hpp **** 
+1192:funsape/globalDefines.hpp **** //!
+1193:funsape/globalDefines.hpp **** //! @enum           DisplayOrientation
+1194:funsape/globalDefines.hpp **** //! @details        Used to refer to the orientation of a display screen.
+1195:funsape/globalDefines.hpp **** //!
+1196:funsape/globalDefines.hpp **** enum class DisplayOrientation : cbool_t {
+1197:funsape/globalDefines.hpp ****     LANDSCAPE       = false,            //!< Display is in landscape orientation
+1198:funsape/globalDefines.hpp ****     PORTRAIT        = true              //!< Display is in portrait orientation
+1199:funsape/globalDefines.hpp **** };
+1200:funsape/globalDefines.hpp **** 
+1201:funsape/globalDefines.hpp **** //!
+1202:funsape/globalDefines.hpp **** //! @enum           DriverMode
+1203:funsape/globalDefines.hpp **** //! @details        Used to refer to the GPIO pin output driver mode.
+1204:funsape/globalDefines.hpp **** //!
+1205:funsape/globalDefines.hpp **** enum class DriverMode : cbool_t {
+1206:funsape/globalDefines.hpp ****     PUSH_PULL       = false,            //!< Push-pull driver
+1207:funsape/globalDefines.hpp ****     OPEN_DRAIN      = true,             //!< Open-drain driver
+1208:funsape/globalDefines.hpp **** };
+1209:funsape/globalDefines.hpp **** 
+1210:funsape/globalDefines.hpp **** //!
+1211:funsape/globalDefines.hpp **** //! @enum           Edge
+1212:funsape/globalDefines.hpp **** //! @details        Used to specify the edge of a signal.
+1213:funsape/globalDefines.hpp **** //!
+1214:funsape/globalDefines.hpp **** enum class Edge : cbool_t {
+1215:funsape/globalDefines.hpp ****     FALLING         = false,            //!< Falling edge of the signal
+1216:funsape/globalDefines.hpp ****     RISING          = true              //!< Rising edge of the signal
+1217:funsape/globalDefines.hpp **** };
+1218:funsape/globalDefines.hpp **** 
+1219:funsape/globalDefines.hpp **** //!
+1220:funsape/globalDefines.hpp **** //! @enum           IoOperation
+1221:funsape/globalDefines.hpp **** //! @details        Used to specify the GPIO or communications operation.
+1222:funsape/globalDefines.hpp **** //!
+1223:funsape/globalDefines.hpp **** enum class IoOperation : cbool_t {
+1224:funsape/globalDefines.hpp ****     WRITE           = false,            //!< Write operation
+1225:funsape/globalDefines.hpp ****     READ            = true              //!< Read operation
+1226:funsape/globalDefines.hpp **** };
+1227:funsape/globalDefines.hpp **** 
+1228:funsape/globalDefines.hpp **** //!
+1229:funsape/globalDefines.hpp **** //! @enum           LogicLevel
+1230:funsape/globalDefines.hpp **** //! @details        Used to specify the logic level of a signal.
+1231:funsape/globalDefines.hpp **** //!
+1232:funsape/globalDefines.hpp **** enum class LogicLevel : cbool_t {
+1233:funsape/globalDefines.hpp ****     LOW             = false,            //!< Low level
+1234:funsape/globalDefines.hpp ****     HIGH            = true              //!< High level
+1235:funsape/globalDefines.hpp **** };
+1236:funsape/globalDefines.hpp **** 
+1237:funsape/globalDefines.hpp **** //!
+1238:funsape/globalDefines.hpp **** //! @enum           PinDirection
+GAS LISTING /tmp/cch7C0sd.s 			page 27
+
+
+1239:funsape/globalDefines.hpp **** //! @details        Used to specify the direction of a GPIO pin.
+1240:funsape/globalDefines.hpp **** //!
+1241:funsape/globalDefines.hpp **** enum class PinDirection : cbool_t {
+1242:funsape/globalDefines.hpp ****     INPUT           = false,            //!< Pin is an input
+1243:funsape/globalDefines.hpp ****     OUTPUT          = true,             //!< Pin is an output
+1244:funsape/globalDefines.hpp **** };
+1245:funsape/globalDefines.hpp **** 
+1246:funsape/globalDefines.hpp **** //!
+1247:funsape/globalDefines.hpp **** //! @enum           Rotation
+1248:funsape/globalDefines.hpp **** //! @details        Used to specify a rotation direction.
+1249:funsape/globalDefines.hpp **** //!
+1250:funsape/globalDefines.hpp **** enum class Rotation : cbool_t {
+1251:funsape/globalDefines.hpp ****     CLOCKWISE           = false,        //!< Clockwise direction
+1252:funsape/globalDefines.hpp ****     COUNTERCLOCKWISE    = true          //!< Counter-clockwise direction
+1253:funsape/globalDefines.hpp **** };
+1254:funsape/globalDefines.hpp **** 
+1255:funsape/globalDefines.hpp **** //!
+1256:funsape/globalDefines.hpp **** //! @enum           State
+1257:funsape/globalDefines.hpp **** //! @details        Used to generically refer to a state or status. For example,
+1258:funsape/globalDefines.hpp **** //!                     the state of a LED.
+1259:funsape/globalDefines.hpp **** //!
+1260:funsape/globalDefines.hpp **** enum class State : cbool_t {
+1261:funsape/globalDefines.hpp ****     OFF             = false,            //!< State is OFF
+1262:funsape/globalDefines.hpp ****     ON              = true              //!< State is ON
+1263:funsape/globalDefines.hpp **** };
+1264:funsape/globalDefines.hpp **** 
+1265:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1266:funsape/globalDefines.hpp **** // Doxygen: End subgroup "Binary_Enumerations" in "Global_Definitions/Data_Types"
+1267:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1268:funsape/globalDefines.hpp **** 
+1269:funsape/globalDefines.hpp **** //!
+1270:funsape/globalDefines.hpp **** //! @}
+1271:funsape/globalDefines.hpp **** //!
+1272:funsape/globalDefines.hpp **** 
+1273:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1274:funsape/globalDefines.hpp **** // Doxygen: Start subgroup "Plain_Enumerations" in "Global_Definitions/Data_Types"
+1275:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1276:funsape/globalDefines.hpp **** 
+1277:funsape/globalDefines.hpp **** //!
+1278:funsape/globalDefines.hpp **** //! @addtogroup     Plain_Enumerations
+1279:funsape/globalDefines.hpp **** //! @details        Enumerations with multiple possible values.
+1280:funsape/globalDefines.hpp **** //! @{
+1281:funsape/globalDefines.hpp **** //!
+1282:funsape/globalDefines.hpp **** 
+1283:funsape/globalDefines.hpp **** //     ///////////////////     PLAIN ENUMERATIONS    ////////////////////     //
+1284:funsape/globalDefines.hpp **** 
+1285:funsape/globalDefines.hpp **** //!
+1286:funsape/globalDefines.hpp **** //! @enum           Axis
+1287:funsape/globalDefines.hpp **** //! @details        Used to specify the 3D Cartesian axes.
+1288:funsape/globalDefines.hpp **** //!
+1289:funsape/globalDefines.hpp **** enum class Axis : cuint8_t {
+1290:funsape/globalDefines.hpp ****     //                 Z-AXIS     Y-AXIS     X-AXIS
+1291:funsape/globalDefines.hpp ****     NONE            = (0 << 2) | (0 << 1) | (0 << 0),   //!< No axis selected
+1292:funsape/globalDefines.hpp ****     X               = (0 << 2) | (0 << 1) | (1 << 0),   //!< X axis selected
+1293:funsape/globalDefines.hpp ****     Y               = (0 << 2) | (1 << 1) | (0 << 0),   //!< Y axis selected
+1294:funsape/globalDefines.hpp ****     XY              = (0 << 2) | (1 << 1) | (1 << 0),   //!< X and Y axes selected
+1295:funsape/globalDefines.hpp ****     Z               = (1 << 2) | (0 << 1) | (0 << 0),   //!< Z axis selected
+GAS LISTING /tmp/cch7C0sd.s 			page 28
+
+
+1296:funsape/globalDefines.hpp ****     XZ              = (1 << 2) | (0 << 1) | (1 << 0),   //!< X and Z axes selected
+1297:funsape/globalDefines.hpp ****     YZ              = (1 << 2) | (1 << 1) | (0 << 0),   //!< Y and Z axes selected
+1298:funsape/globalDefines.hpp ****     ALL             = (1 << 2) | (1 << 1) | (1 << 0)    //!< X, Y and Z axes selected
+1299:funsape/globalDefines.hpp **** };
+1300:funsape/globalDefines.hpp **** 
+1301:funsape/globalDefines.hpp **** //!
+1302:funsape/globalDefines.hpp **** //! @cond
+1303:funsape/globalDefines.hpp **** //!
+1304:funsape/globalDefines.hpp **** 
+1305:funsape/globalDefines.hpp **** // Implementation of bitwise operators for Axis enum class to allow mask
+1306:funsape/globalDefines.hpp **** //      combinations.
+1307:funsape/globalDefines.hpp **** 
+1308:funsape/globalDefines.hpp **** Axis inlined operator|(Axis a, Axis b)
+1309:funsape/globalDefines.hpp **** {
+1310:funsape/globalDefines.hpp ****     return static_cast<Axis>(static_cast<uint8_t>(a) | static_cast<uint8_t>(b));
+1311:funsape/globalDefines.hpp **** }
+1312:funsape/globalDefines.hpp **** 
+1313:funsape/globalDefines.hpp **** Axis inlined &operator|=(Axis &a, Axis b)
+1314:funsape/globalDefines.hpp **** {
+1315:funsape/globalDefines.hpp ****     return a = static_cast<Axis>(static_cast<uint8_t>(a) | static_cast<uint8_t>(b));
+1316:funsape/globalDefines.hpp **** }
+1317:funsape/globalDefines.hpp **** 
+1318:funsape/globalDefines.hpp **** Axis inlined operator&(Axis a, Axis b)
+1319:funsape/globalDefines.hpp **** {
+1320:funsape/globalDefines.hpp ****     return static_cast<Axis>(static_cast<uint8_t>(a) & static_cast<uint8_t>(b));
+1321:funsape/globalDefines.hpp **** }
+1322:funsape/globalDefines.hpp **** 
+1323:funsape/globalDefines.hpp **** Axis inlined &operator&=(Axis &a, Axis b)
+1324:funsape/globalDefines.hpp **** {
+1325:funsape/globalDefines.hpp ****     return a = static_cast<Axis>(static_cast<uint8_t>(a) & static_cast<uint8_t>(b));
+1326:funsape/globalDefines.hpp **** }
+1327:funsape/globalDefines.hpp **** 
+1328:funsape/globalDefines.hpp **** //!
+1329:funsape/globalDefines.hpp **** //! @endcond
+1330:funsape/globalDefines.hpp **** //!
+1331:funsape/globalDefines.hpp **** 
+1332:funsape/globalDefines.hpp **** //!
+1333:funsape/globalDefines.hpp **** //! @enum           Direction
+1334:funsape/globalDefines.hpp **** //! @details        Used to specify 2D plain directions.
+1335:funsape/globalDefines.hpp **** //!
+1336:funsape/globalDefines.hpp **** enum class Direction : cuint8_t {
+1337:funsape/globalDefines.hpp ****     LEFT            = 0,                //!< Left planar direction
+1338:funsape/globalDefines.hpp ****     RIGHT           = 1,                //!< Right planar direction
+1339:funsape/globalDefines.hpp ****     UP              = 2,                //!< Up planar direction
+1340:funsape/globalDefines.hpp ****     DOWN            = 3                 //!< Down planar direction
+1341:funsape/globalDefines.hpp **** };
+1342:funsape/globalDefines.hpp **** 
+1343:funsape/globalDefines.hpp **** //!
+1344:funsape/globalDefines.hpp **** //! @enum           InterfaceMode
+1345:funsape/globalDefines.hpp **** //! @details        Used to specify the access mode to the peripheral.
+1346:funsape/globalDefines.hpp **** //!
+1347:funsape/globalDefines.hpp **** enum class InterfaceMode : cuint8_t {
+1348:funsape/globalDefines.hpp ****     BLOCKING_MODE   = 0,                //!< Do not use interrupt or DMA
+1349:funsape/globalDefines.hpp ****     INTERRUPT_MODE  = 1,                //!< Use the peripheral interrupt
+1350:funsape/globalDefines.hpp ****     DMA_MODE        = 2                 //!< Use the DMA interrupt
+1351:funsape/globalDefines.hpp **** };
+1352:funsape/globalDefines.hpp **** 
+GAS LISTING /tmp/cch7C0sd.s 			page 29
+
+
+1353:funsape/globalDefines.hpp **** //!
+1354:funsape/globalDefines.hpp **** //! @enum       PinIndex
+1355:funsape/globalDefines.hpp **** //! @brief      Pin number enumeration.
+1356:funsape/globalDefines.hpp **** //! @details    Pin number enumeration.
+1357:funsape/globalDefines.hpp **** //!
+1358:funsape/globalDefines.hpp **** enum class PinIndex : uint8_t {
+1359:funsape/globalDefines.hpp ****     P0          = 0,    //!< Pin located at position 0 of the port
+1360:funsape/globalDefines.hpp ****     P1          = 1,    //!< Pin located at position 1 of the port
+1361:funsape/globalDefines.hpp ****     P2          = 2,    //!< Pin located at position 2 of the port
+1362:funsape/globalDefines.hpp ****     P3          = 3,    //!< Pin located at position 3 of the port
+1363:funsape/globalDefines.hpp ****     P4          = 4,    //!< Pin located at position 4 of the port
+1364:funsape/globalDefines.hpp ****     P5          = 5,    //!< Pin located at position 5 of the port
+1365:funsape/globalDefines.hpp ****     P6          = 6,    //!< Pin located at position 6 of the port
+1366:funsape/globalDefines.hpp ****     P7          = 7     //!< Pin located at position 7 of the port
+1367:funsape/globalDefines.hpp **** };
+1368:funsape/globalDefines.hpp **** 
+1369:funsape/globalDefines.hpp **** //!
+1370:funsape/globalDefines.hpp **** //! @enum           PinMode
+1371:funsape/globalDefines.hpp **** //! @details        Used to specify the Gpio pin mode to the peripheral.
+1372:funsape/globalDefines.hpp **** //!
+1373:funsape/globalDefines.hpp **** enum class PinMode : uint8_t {
+1374:funsape/globalDefines.hpp ****     INPUT_FLOATING      = 0,    //!< INPUT without PULL resistors (DDR=0, PORT=0)
+1375:funsape/globalDefines.hpp ****     INPUT_PULLED_UP     = 1,    //!< INPUT with PULL-UP resistors (DDR=0, PORT=1)
+1376:funsape/globalDefines.hpp ****     OUTPUT_PUSH_PULL    = 2,    //!< OUTPUT in PUSH PULL driver   (DDR=1)
+1377:funsape/globalDefines.hpp **** };
+1378:funsape/globalDefines.hpp **** 
+1379:funsape/globalDefines.hpp **** //!
+1380:funsape/globalDefines.hpp **** //! @enum           ThermometricScale
+1381:funsape/globalDefines.hpp **** //! @details        Used to specify a Thermometric scale.
+1382:funsape/globalDefines.hpp **** //!
+1383:funsape/globalDefines.hpp **** enum class ThermometricScale : cuint8_t {
+1384:funsape/globalDefines.hpp ****     CELSIUS         = 0,                //!< Celsius thermometric scale
+1385:funsape/globalDefines.hpp ****     DELISLE         = 1,                //!< Delisle thermometric scale
+1386:funsape/globalDefines.hpp ****     FAHRENHEIT      = 2,                //!< Fahrenheit thermometric scale
+1387:funsape/globalDefines.hpp ****     KELVIN          = 3,                //!< Kelvin absolute temperature
+1388:funsape/globalDefines.hpp ****     NEWTON          = 4,                //!< Newton thermometric scale
+1389:funsape/globalDefines.hpp ****     RANKINE         = 5,                //!< Rankine thermometric scale
+1390:funsape/globalDefines.hpp ****     REAUMUR         = 6,                //!< Reaumur thermometric scale
+1391:funsape/globalDefines.hpp ****     ROMER           = 7                 //!< Romer thermometric scale
+1392:funsape/globalDefines.hpp **** };
+1393:funsape/globalDefines.hpp **** 
+1394:funsape/globalDefines.hpp **** //!
+1395:funsape/globalDefines.hpp **** //! @enum           Error
+1396:funsape/globalDefines.hpp **** //! @details        Funsape error codes.
+1397:funsape/globalDefines.hpp **** //!
+1398:funsape/globalDefines.hpp **** enum class Error : cuint16_t {
+1399:funsape/globalDefines.hpp ****     // General error codes (0x0000 - 0x003F)
+1400:funsape/globalDefines.hpp ****     NONE                                = 0x0000,   //!< Success - No errors occurred.
+1401:funsape/globalDefines.hpp ****     // AXIS_INVALID                        = 0x0001,   //!< The Axis is invalid.
+1402:funsape/globalDefines.hpp ****     // INSTANCE_INVALID                    = 0x0002,   //!< Invalid instance.
+1403:funsape/globalDefines.hpp ****     // LOCKED                              = 0x0003,   //!< Accessed a locked device
+1404:funsape/globalDefines.hpp ****     MEMORY_ALLOCATION                   = 0x0004,   //!< Memory allocation failed.
+1405:funsape/globalDefines.hpp ****     NOT_IMPLEMENTED                     = 0x0005,   //!< Feature is not implemented yet, but is mar
+1406:funsape/globalDefines.hpp ****     NOT_INITIALIZED                     = 0x0006,   //!< The module was not initialized.
+1407:funsape/globalDefines.hpp ****     NOT_READY                           = 0x0007,   //!< The module is currently busy.
+1408:funsape/globalDefines.hpp ****     // READ_PROTECTED                      = 0x0008,   //!< Tried to read a read protected device.
+1409:funsape/globalDefines.hpp ****     TIMED_OUT                           = 0x0009,   //!< The operation timed out.
+GAS LISTING /tmp/cch7C0sd.s 			page 30
+
+
+1410:funsape/globalDefines.hpp ****     // UNDER_DEVELOPMENT                   = 0x000A,   //!< This part of the code is still under de
+1411:funsape/globalDefines.hpp ****     // WRITE_PROTECTED                     = 0x000B,   //!< Tried to write a write protected device
+1412:funsape/globalDefines.hpp ****     DEVICE_DISABLED                     = 0x000C,
+1413:funsape/globalDefines.hpp **** 
+1414:funsape/globalDefines.hpp ****     // General support related error codes (0x0040 - 0x004F)
+1415:funsape/globalDefines.hpp ****     // DEVICE_NOT_SUPPORTED                = 0x0040,   //!< Device is not currently supported.
+1416:funsape/globalDefines.hpp ****     // DMA_NOT_SUPPORTED                   = 0x0041,   //!< DMA interface mode is not supported for
+1417:funsape/globalDefines.hpp ****     FEATURE_NOT_SUPPORTED               = 0x0042,   //!< Unsupported feature or configuration.
+1418:funsape/globalDefines.hpp ****     MODE_NOT_SUPPORTED                  = 0x0043,   //!< This operation mode is not supported by th
+1419:funsape/globalDefines.hpp **** 
+1420:funsape/globalDefines.hpp ****     // Function arguments related error codes (0x0050 - 0x005F)
+1421:funsape/globalDefines.hpp ****     ARGUMENT_CANNOT_BE_ZERO             = 0x0050,   //!< The argument value must not be zero (0).
+1422:funsape/globalDefines.hpp ****     ARGUMENT_POINTER_NULL               = 0x0051,   //!< NULL pointer was passed as an argument to 
+1423:funsape/globalDefines.hpp ****     ARGUMENT_VALUE_INVALID              = 0x0052,   //!< The argument value is not valid.
+1424:funsape/globalDefines.hpp ****     // ARGUMENT_VALUES_MISMATCH            = 0x0053,   //!< A function was called with dubious argu
+1425:funsape/globalDefines.hpp ****     // ARGUMENT_WRONG_NUMBER               = 0x0054,   //!< A function was called with the wrong nu
+1426:funsape/globalDefines.hpp **** 
+1427:funsape/globalDefines.hpp ****     // Buffer related error codes (0x0060 - 0x006F)
+1428:funsape/globalDefines.hpp ****     // BUFFER_EMPTY                        = 0x0060,   //!< Buffer is empty.
+1429:funsape/globalDefines.hpp ****     // BUFFER_FULL                         = 0x0061,   //!< Buffer is full.
+1430:funsape/globalDefines.hpp ****     // BUFFER_NOT_ENOUGH_ELEMENTS          = 0x0062,   //!< Not enough elements in buffer to perfor
+1431:funsape/globalDefines.hpp ****     // BUFFER_NOT_ENOUGH_SPACE             = 0x0063,   //!< Not enough space in buffer to perform o
+1432:funsape/globalDefines.hpp ****     // BUFFER_POINTER_NULL                 = 0x0064,   //!< Buffer pointer cannot be a null pointer
+1433:funsape/globalDefines.hpp ****     BUFFER_SIZE_TOO_LARGE               = 0x0065,   //!< Buffer size was set to a value too large.
+1434:funsape/globalDefines.hpp ****     BUFFER_SIZE_TOO_SMALL               = 0x0066,   //!< Buffer size was set to a value too small.
+1435:funsape/globalDefines.hpp ****     // BUFFER_SIZE_ZERO                    = 0x0067,   //!< Buffer size was set to zero.
+1436:funsape/globalDefines.hpp **** 
+1437:funsape/globalDefines.hpp ****     // Clock configuration related error codes (0x0070 - 0x007F)
+1438:funsape/globalDefines.hpp ****     CLOCK_PRESCALER_CHANGE_FAILED       = 0x0070,   //!< Clock prescaler change failed.
+1439:funsape/globalDefines.hpp ****     CLOCK_SPEED_TOO_HIGH                = 0x0071,   //!< The clock speed is too high.
+1440:funsape/globalDefines.hpp ****     CLOCK_SPEED_TOO_LOW                 = 0x0072,   //!< The clock speed is too low.
+1441:funsape/globalDefines.hpp ****     CLOCK_PRESCALER_NOT_SUPPORTED       = 0x0073,
+1442:funsape/globalDefines.hpp **** 
+1443:funsape/globalDefines.hpp ****     // GPIO related error codes (0x0080 - 0x008F)
+1444:funsape/globalDefines.hpp ****     // GPIO_ADDRESS_INVALID                = 0x0080,   //!< Invalid Gpio register address.
+1445:funsape/globalDefines.hpp ****     GPIO_BUS_SIZE_INVALID               = 0x0081,   //!< The size of the bus is invalid.
+1446:funsape/globalDefines.hpp ****     GPIO_NOT_INITIALIZED                = 0x0082,   //!< The Gpio pin or bus was not initialized.
+1447:funsape/globalDefines.hpp ****     GPIO_PIN_OUT_OF_BOUNDARIES          = 0x0083,   //!< The Gpio pin index was out of bounds after
+1448:funsape/globalDefines.hpp ****     GPIO_PORT_INVALID                   = 0x0084,   //!< The Gpio port is invalid.
+1449:funsape/globalDefines.hpp ****     GPIO_PORT_NOT_SET                   = 0x0085,   //!< The Gpio port was not set before use.
+1450:funsape/globalDefines.hpp **** 
+1451:funsape/globalDefines.hpp ****     // DateTime class related error codes (0x0090 - 0x009F)
+1452:funsape/globalDefines.hpp ****     DATE_INVALID                        = 0x0090,   //!< The date value is invalid.
+1453:funsape/globalDefines.hpp ****     DATE_NOT_INITIALIZED                = 0x0091,   //!< The date was not initialized.
+1454:funsape/globalDefines.hpp ****     // HOUR_INVALID                        = 0x0092,   //!< Hour value is invalid.
+1455:funsape/globalDefines.hpp ****     // MILLISECOND_INVALID                 = 0x0093,   //!< Millisecond value is invalid.
+1456:funsape/globalDefines.hpp ****     // MINUTE_INVALID                      = 0x0094,   //!< Minute value is invalid.
+1457:funsape/globalDefines.hpp ****     // MONTH_DAY_INVALID                   = 0x0095,   //!< Day of the Month value is invalid.
+1458:funsape/globalDefines.hpp ****     // MONTH_INVALID                       = 0x0096,   //!< Month value is invalid.
+1459:funsape/globalDefines.hpp ****     // SECOND_INVALID                      = 0x0097,   //!< Second value is invalid.
+1460:funsape/globalDefines.hpp ****     TIME_INVALID                        = 0x0098,   //!< The time value is invalid.
+1461:funsape/globalDefines.hpp ****     TIME_NOT_INITIALIZED                = 0x0099,   //!< The time was not initialized.
+1462:funsape/globalDefines.hpp ****     // TIMEZONE_INVALID                    = 0x009A,   //!< Timezone value is invalid.
+1463:funsape/globalDefines.hpp ****     // YEAR_INVALID                        = 0x009B,   //!< Year value is invalid.
+1464:funsape/globalDefines.hpp **** 
+1465:funsape/globalDefines.hpp ****     // Communication related error codes (0x00A0 - 0x00AF)
+1466:funsape/globalDefines.hpp ****     BAUD_RATE_NOT_SUPPORTED             = 0x00A0,   //!< The baud rate value is not supported.
+GAS LISTING /tmp/cch7C0sd.s 			page 31
+
+
+1467:funsape/globalDefines.hpp ****     BUS_HANDLER_NOT_SUPPORTED           = 0x00A1,   //!< The specified bus handler type is not supp
+1468:funsape/globalDefines.hpp ****     BUS_HANDLER_POINTER_NULL            = 0x00A2,   //!< The bus handler pointer cannot be null.
+1469:funsape/globalDefines.hpp ****     // CHECKSUM_ERROR                      = 0x00A3,   //!< Checksum does not match.
+1470:funsape/globalDefines.hpp ****     COMMUNICATION_FAILED                = 0x00A4,   //!< The communication has failed.
+1471:funsape/globalDefines.hpp ****     DATA_SIZE_NOT_SUPPORTED             = 0x00A5,   //!< The number of data bits is invalid.
+1472:funsape/globalDefines.hpp ****     DEVICE_ID_MATCH_FAILED              = 0x00A6,   //!< Device ID does not match.
+1473:funsape/globalDefines.hpp ****     DEVICE_NOT_SELECTED                 = 0x00A7,   //!< No communication device was selected.
+1474:funsape/globalDefines.hpp ****     // FRAME_ERROR                         = 0x00A8,   //!< The frame is badly formatted or invalid
+1475:funsape/globalDefines.hpp ****     FRAME_FORMAT_NOT_SUPPORTED          = 0x00A9,   //!< The format of the frame is not supported.
+1476:funsape/globalDefines.hpp ****     // MESSAGE_TOO_LONG                    = 0x00AA,   //!< Message is too long to be stored inside
+1477:funsape/globalDefines.hpp ****     PARITY_ERROR                        = 0x00AB,   //!< A parity check error occurred.
+1478:funsape/globalDefines.hpp ****     PARITY_MODE_NOT_SUPPORTED           = 0x00AC,   //!< Parity mode not supported.
+1479:funsape/globalDefines.hpp ****     STOP_BIT_CONFIG_NOT_SUPPORTED       = 0x00AD,   //!< Invalid number of stop bits.
+1480:funsape/globalDefines.hpp **** 
+1481:funsape/globalDefines.hpp ****     LCD_CONTROL_PORT_NOT_SET            = 0xFF00,
+1482:funsape/globalDefines.hpp ****     LCD_DATA_PORT_NOT_SET               = 0xFF01,
+1483:funsape/globalDefines.hpp ****     KEY_VALUES_NOT_SET                  = 0xFF02,
+1484:funsape/globalDefines.hpp ****     KEYPAD_TYPE_UNSUPPORTED             = 0xFF03,
+1485:funsape/globalDefines.hpp ****     PROCESS_NOT_STARTED                 = 0xFF04,
+1486:funsape/globalDefines.hpp **** 
+1487:funsape/globalDefines.hpp ****     // "I don't have the slightest idea" error code
+1488:funsape/globalDefines.hpp ****     UNKNOWN                             = 0xFFFF,   // Unknown error - Ops!!!!
+1489:funsape/globalDefines.hpp **** };
+1490:funsape/globalDefines.hpp **** 
+1491:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1492:funsape/globalDefines.hpp **** // Doxygen: End subgroup "Plain_Enumerations" in "Global_Definitions/Data_Types"
+1493:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1494:funsape/globalDefines.hpp **** 
+1495:funsape/globalDefines.hpp **** //!
+1496:funsape/globalDefines.hpp **** //! @}
+1497:funsape/globalDefines.hpp **** //!
+1498:funsape/globalDefines.hpp **** 
+1499:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1500:funsape/globalDefines.hpp **** // Doxygen: End subgroup "Data_Types" in "Global_Definitions"
+1501:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1502:funsape/globalDefines.hpp **** 
+1503:funsape/globalDefines.hpp **** //!
+1504:funsape/globalDefines.hpp **** //! @}
+1505:funsape/globalDefines.hpp **** //!
+1506:funsape/globalDefines.hpp **** 
+1507:funsape/globalDefines.hpp **** // =============================================================================
+1508:funsape/globalDefines.hpp **** // Extern global variables
+1509:funsape/globalDefines.hpp **** // =============================================================================
+1510:funsape/globalDefines.hpp **** 
+1511:funsape/globalDefines.hpp **** // NONE
+1512:funsape/globalDefines.hpp **** 
+1513:funsape/globalDefines.hpp **** // =============================================================================
+1514:funsape/globalDefines.hpp **** // Inline functions declaration
+1515:funsape/globalDefines.hpp **** // =============================================================================
+1516:funsape/globalDefines.hpp **** 
+1517:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1518:funsape/globalDefines.hpp **** // Doxygen: Start subgroup "String_Handling" in "Global_Definitions"
+1519:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1520:funsape/globalDefines.hpp **** 
+1521:funsape/globalDefines.hpp **** //!
+1522:funsape/globalDefines.hpp **** //! @addtogroup     String_Handling
+1523:funsape/globalDefines.hpp **** //! @details        Performs general handling on @c characters and @c strings.
+GAS LISTING /tmp/cch7C0sd.s 			page 32
+
+
+1524:funsape/globalDefines.hpp **** //! @{
+1525:funsape/globalDefines.hpp **** //!
+1526:funsape/globalDefines.hpp **** 
+1527:funsape/globalDefines.hpp **** //     /////////////     CHARACTER AND STRING HANDLING     //////////////     //
+1528:funsape/globalDefines.hpp **** 
+1529:funsape/globalDefines.hpp **** //!
+1530:funsape/globalDefines.hpp **** //! @brief          Returns the lowercase version of a character.
+1531:funsape/globalDefines.hpp **** //! @details        This function returns the lowercase version of the given
+1532:funsape/globalDefines.hpp **** //!                     character @a character_p. If @a character_p is not an
+1533:funsape/globalDefines.hpp **** //!                     uppercase letter, the function will return
+1534:funsape/globalDefines.hpp **** //!                     @a character_p without change.
+1535:funsape/globalDefines.hpp **** //! @param[in]      character_p         character to be lowercased
+1536:funsape/globalDefines.hpp **** //! @return         the lowercase version of @a character_p
+1537:funsape/globalDefines.hpp **** //!
+1538:funsape/globalDefines.hpp **** char_t inlined toLowerCase(cchar_t character_p);
+1539:funsape/globalDefines.hpp **** 
+1540:funsape/globalDefines.hpp **** //!
+1541:funsape/globalDefines.hpp **** //! @brief          Returns the uppercase version of a character.
+1542:funsape/globalDefines.hpp **** //! @details        This function returns the uppercase version of the given
+1543:funsape/globalDefines.hpp **** //!                     character @a character_p. If @a character_p is not a
+1544:funsape/globalDefines.hpp **** //!                     lowercase letter, the function will return
+1545:funsape/globalDefines.hpp **** //!                     @a character_p without change.
+1546:funsape/globalDefines.hpp **** //! @param[in]      character_p         character to be uppercased
+1547:funsape/globalDefines.hpp **** //! @return         the uppercase version of @a character_p
+1548:funsape/globalDefines.hpp **** //!
+1549:funsape/globalDefines.hpp **** char_t inlined toUpperCase(cchar_t character_p);
+1550:funsape/globalDefines.hpp **** 
+1551:funsape/globalDefines.hpp **** //     /////////////////////     DATA VALIDITY     //////////////////////     //
+1552:funsape/globalDefines.hpp **** 
+1553:funsape/globalDefines.hpp **** //!
+1554:funsape/globalDefines.hpp **** //! @brief          Verifies if a character is an ASCII lowercase letter.
+1555:funsape/globalDefines.hpp **** //! @details        This function verifies if the given character @a character_p
+1556:funsape/globalDefines.hpp **** //!                     is an ASCII lowercase letter.
+1557:funsape/globalDefines.hpp **** //! @param[in]      character_p         character to be evaluated
+1558:funsape/globalDefines.hpp **** //! @retval         true                if @a character_p is an ASCII lowercase
+1559:funsape/globalDefines.hpp **** //!                                         letter
+1560:funsape/globalDefines.hpp **** //! @retval         false               if @a character_p is not an ASCII
+1561:funsape/globalDefines.hpp **** //!                                         lowercase letter
+1562:funsape/globalDefines.hpp **** //!
+1563:funsape/globalDefines.hpp **** bool_t inlined isAsciiLowerCaseLetter(cchar_t character_p);
+1564:funsape/globalDefines.hpp **** 
+1565:funsape/globalDefines.hpp **** //!
+1566:funsape/globalDefines.hpp **** //! @brief          Verifies if a character is an ASCII uppercase letter.
+1567:funsape/globalDefines.hpp **** //! @details        This function verifies if the given character @a character_p
+1568:funsape/globalDefines.hpp **** //!                     is an ASCII uppercase letter.
+1569:funsape/globalDefines.hpp **** //! @param[in]      character_p         character to be evaluated
+1570:funsape/globalDefines.hpp **** //! @retval         true                if @a character_p is an ASCII uppercase
+1571:funsape/globalDefines.hpp **** //!                                         letter
+1572:funsape/globalDefines.hpp **** //! @retval         false               if @a character_p is not an ASCII
+1573:funsape/globalDefines.hpp **** //!                                         uppercase letter
+1574:funsape/globalDefines.hpp **** //!
+1575:funsape/globalDefines.hpp **** bool_t inlined isAsciiUpperCaseLetter(cchar_t character_p);
+1576:funsape/globalDefines.hpp **** 
+1577:funsape/globalDefines.hpp **** //!
+1578:funsape/globalDefines.hpp **** //! @brief          Verifies if a character is an ASCII command character.
+1579:funsape/globalDefines.hpp **** //! @details        This function verifies if the given character @a character_p
+1580:funsape/globalDefines.hpp **** //!                     is an ASCII command character.
+GAS LISTING /tmp/cch7C0sd.s 			page 33
+
+
+1581:funsape/globalDefines.hpp **** //! @param[in]      character_p         character to be evaluated
+1582:funsape/globalDefines.hpp **** //! @retval         true                if @a character_p is an ASCII command
+1583:funsape/globalDefines.hpp **** //!                                         character
+1584:funsape/globalDefines.hpp **** //! @retval         false               if @a character_p is not an ASCII
+1585:funsape/globalDefines.hpp **** //!                                         command character
+1586:funsape/globalDefines.hpp **** //!
+1587:funsape/globalDefines.hpp **** bool_t inlined isAsciiCommand(cchar_t character_p);
+1588:funsape/globalDefines.hpp **** 
+1589:funsape/globalDefines.hpp **** //!
+1590:funsape/globalDefines.hpp **** //! @brief          Verifies if a character is an ASCII letter character.
+1591:funsape/globalDefines.hpp **** //! @details        This function verifies if the given character @a character_p
+1592:funsape/globalDefines.hpp **** //!                     is an ASCII letter character.
+1593:funsape/globalDefines.hpp **** //! @param[in]      character_p         character to be evaluated
+1594:funsape/globalDefines.hpp **** //! @retval         true                if @a character_p is an ASCII letter
+1595:funsape/globalDefines.hpp **** //!                                         character
+1596:funsape/globalDefines.hpp **** //! @retval         false               if @a character_p is not an ASCII
+1597:funsape/globalDefines.hpp **** //!                                         letter character
+1598:funsape/globalDefines.hpp **** //!
+1599:funsape/globalDefines.hpp **** bool_t inlined isAsciiLetter(cchar_t character_p);
+1600:funsape/globalDefines.hpp **** 
+1601:funsape/globalDefines.hpp **** //!
+1602:funsape/globalDefines.hpp **** //! @brief          Verifies if a character is an ASCII number character.
+1603:funsape/globalDefines.hpp **** //! @details        This function verifies if the given character @a character_p
+1604:funsape/globalDefines.hpp **** //!                     is an ASCII number character.
+1605:funsape/globalDefines.hpp **** //! @param[in]      character_p         character to be evaluated
+1606:funsape/globalDefines.hpp **** //! @retval         true                if @a character_p is an ASCII number
+1607:funsape/globalDefines.hpp **** //!                                         character
+1608:funsape/globalDefines.hpp **** //! @retval         false               if @a character_p is not an ASCII
+1609:funsape/globalDefines.hpp **** //!                                         number character
+1610:funsape/globalDefines.hpp **** //!
+1611:funsape/globalDefines.hpp **** bool_t inlined isAsciiNumber(cchar_t character_p);
+1612:funsape/globalDefines.hpp **** 
+1613:funsape/globalDefines.hpp **** //!
+1614:funsape/globalDefines.hpp **** //! @brief          Verifies if a character is an ASCII symbol character.
+1615:funsape/globalDefines.hpp **** //! @details        This function verifies if the given character @a character_p
+1616:funsape/globalDefines.hpp **** //!                     is an ASCII symbol character.
+1617:funsape/globalDefines.hpp **** //! @param[in]      character_p         character to be evaluated
+1618:funsape/globalDefines.hpp **** //! @retval         true                if @a character_p is an ASCII symbol
+1619:funsape/globalDefines.hpp **** //!                                         character
+1620:funsape/globalDefines.hpp **** //! @retval         false               if @a character_p is not an ASCII
+1621:funsape/globalDefines.hpp **** //!                                         symbol character
+1622:funsape/globalDefines.hpp **** //!
+1623:funsape/globalDefines.hpp **** bool_t inlined isAsciiSymbol(cchar_t character_p);
+1624:funsape/globalDefines.hpp **** 
+1625:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1626:funsape/globalDefines.hpp **** // Doxygen: End subgroup "String_Handling" in "Global_Definitions"
+1627:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1628:funsape/globalDefines.hpp **** 
+1629:funsape/globalDefines.hpp **** //!
+1630:funsape/globalDefines.hpp **** //! @}
+1631:funsape/globalDefines.hpp **** //!
+1632:funsape/globalDefines.hpp **** 
+1633:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1634:funsape/globalDefines.hpp **** // Doxygen: Start subgroup "System_Functions" in "Global_Definitions"
+1635:funsape/globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1636:funsape/globalDefines.hpp **** 
+1637:funsape/globalDefines.hpp **** //!
+GAS LISTING /tmp/cch7C0sd.s 			page 34
+
+
+1638:funsape/globalDefines.hpp **** //! @addtogroup     System_Functions
+1639:funsape/globalDefines.hpp **** //! @details        General system functions.
+1640:funsape/globalDefines.hpp **** //! @{
+1641:funsape/globalDefines.hpp **** //!
+1642:funsape/globalDefines.hpp **** 
+1643:funsape/globalDefines.hpp **** //     /////////////////////     SOFTWARE DELAY    //////////////////////     //
+1644:funsape/globalDefines.hpp **** 
+1645:funsape/globalDefines.hpp **** void inlined delayMs(uint32_t time_p);
+1646:funsape/globalDefines.hpp **** 
+1647:funsape/globalDefines.hpp **** void inlined delayUs(uint32_t time_p);
+1648:funsape/globalDefines.hpp **** 
+1649:funsape/globalDefines.hpp **** //     /////////////////////     SYSTEM ACTIONS    //////////////////////     //
+1650:funsape/globalDefines.hpp **** 
+1651:funsape/globalDefines.hpp **** //!
+1652:funsape/globalDefines.hpp **** //! @brief          Executes a @c NOP assembly instruction.
+1653:funsape/globalDefines.hpp **** //! @details        This function executes a @c NOP assembly instruction.
+1654:funsape/globalDefines.hpp **** //! @attention      This function takes one clock cycle of program execution. Do
+1655:funsape/globalDefines.hpp **** //!                     not mistake with @ref doNothing() function, that is not
+1656:funsape/globalDefines.hpp **** //!                     physically implemented after compilation.
+1657:funsape/globalDefines.hpp **** //!
+1658:funsape/globalDefines.hpp **** void inlined doNop(void);
+1659:funsape/globalDefines.hpp **** 
+1660:funsape/globalDefines.hpp **** //!
+1661:funsape/globalDefines.hpp **** //! @brief          Do nothing placeholder.
+1662:funsape/globalDefines.hpp **** //! @details        This function does nothing and do not generate any code.
+1663:funsape/globalDefines.hpp **** //!                     Must be used as a placeholder (code standardization).
+1664:funsape/globalDefines.hpp **** //! @attention      This function is not physically implemented after
+1665:funsape/globalDefines.hpp **** //!                     compilation. Do not mistake with @ref doNop() function,
+1666:funsape/globalDefines.hpp **** //!                     that takes one clock cycle of program execution.
+1667:funsape/globalDefines.hpp **** //!
+1668:funsape/globalDefines.hpp **** void inlined doNothing(void);
+1669:funsape/globalDefines.hpp **** 
+1670:funsape/globalDefines.hpp **** //!
+1671:funsape/globalDefines.hpp **** //! @brief          Halts system execution calling a function.
+1672:funsape/globalDefines.hpp **** //! @details        This function halts system execution and calls the given
+1673:funsape/globalDefines.hpp **** //!                     @a callBack_p function. The function also disables the
+1674:funsape/globalDefines.hpp **** //!                     global interrupt handling.
+1675:funsape/globalDefines.hpp **** //! @param[in]      callBack_p          function to be called
+1676:funsape/globalDefines.hpp **** //!
+1677:funsape/globalDefines.hpp **** void inlined systemHalt(void (*callBack_p)(void) = nullptr);
+1678:funsape/globalDefines.hpp **** 
+1679:funsape/globalDefines.hpp **** // =============================================================================
+1680:funsape/globalDefines.hpp **** // Inline functions definitions
+1681:funsape/globalDefines.hpp **** // =============================================================================
+1682:funsape/globalDefines.hpp **** 
+1683:funsape/globalDefines.hpp **** //!
+1684:funsape/globalDefines.hpp **** //! @cond
+1685:funsape/globalDefines.hpp **** //!
+1686:funsape/globalDefines.hpp **** 
+1687:funsape/globalDefines.hpp **** //     /////////////     CHARACTER AND STRING HANDLING     //////////////     //
+1688:funsape/globalDefines.hpp **** 
+1689:funsape/globalDefines.hpp **** char_t inlined toLowerCase(cchar_t character_p)
+1690:funsape/globalDefines.hpp **** {
+1691:funsape/globalDefines.hpp ****     return ((isAsciiUpperCaseLetter(character_p))
+1692:funsape/globalDefines.hpp ****                     ? (character_p + 0x20)
+1693:funsape/globalDefines.hpp ****                     : character_p
+1694:funsape/globalDefines.hpp ****             );
+GAS LISTING /tmp/cch7C0sd.s 			page 35
+
+
+1695:funsape/globalDefines.hpp **** }
+1696:funsape/globalDefines.hpp **** 
+1697:funsape/globalDefines.hpp **** char_t inlined toUpperCase(cchar_t character_p)
+1698:funsape/globalDefines.hpp **** {
+1699:funsape/globalDefines.hpp ****     return ((isAsciiLowerCaseLetter(character_p))
+1700:funsape/globalDefines.hpp ****                     ? (character_p - 0x20)
+1701:funsape/globalDefines.hpp ****                     : character_p
+1702:funsape/globalDefines.hpp ****             );
+1703:funsape/globalDefines.hpp **** }
+1704:funsape/globalDefines.hpp **** 
+1705:funsape/globalDefines.hpp **** //     /////////////////////     DATA VALIDITY     //////////////////////     //
+1706:funsape/globalDefines.hpp **** 
+1707:funsape/globalDefines.hpp **** bool_t inlined isAsciiLowerCaseLetter(cchar_t character_p)
+1708:funsape/globalDefines.hpp **** {
+1709:funsape/globalDefines.hpp ****     return (bool_t)(((character_p >= 'a') && (character_p <= 'z'))
+1710:funsape/globalDefines.hpp ****                     ? true
+1711:funsape/globalDefines.hpp ****                     : false
+1712:funsape/globalDefines.hpp ****             );
+1713:funsape/globalDefines.hpp **** }
+1714:funsape/globalDefines.hpp **** 
+1715:funsape/globalDefines.hpp **** bool_t inlined isAsciiUpperCaseLetter(cchar_t character_p)
+1716:funsape/globalDefines.hpp **** {
+1717:funsape/globalDefines.hpp ****     return (bool_t)(((character_p >= 'A') && (character_p <= 'Z'))
+1718:funsape/globalDefines.hpp ****                     ? true
+1719:funsape/globalDefines.hpp ****                     : false
+1720:funsape/globalDefines.hpp ****             );
+1721:funsape/globalDefines.hpp **** }
+1722:funsape/globalDefines.hpp **** 
+1723:funsape/globalDefines.hpp **** bool_t inlined isAsciiCommand(cchar_t character_p)
+1724:funsape/globalDefines.hpp **** {
+1725:funsape/globalDefines.hpp ****     return (bool_t)((character_p < ' ')
+1726:funsape/globalDefines.hpp ****                     ? true
+1727:funsape/globalDefines.hpp ****                     : false
+1728:funsape/globalDefines.hpp ****             );
+1729:funsape/globalDefines.hpp **** }
+1730:funsape/globalDefines.hpp **** 
+1731:funsape/globalDefines.hpp **** bool_t inlined isAsciiLetter(cchar_t character_p)
+1732:funsape/globalDefines.hpp **** {
+1733:funsape/globalDefines.hpp ****     return (bool_t)((isAsciiLowerCaseLetter(character_p) || isAsciiUpperCaseLetter(character_p))
+1734:funsape/globalDefines.hpp ****                     ? true
+1735:funsape/globalDefines.hpp ****                     : false
+1736:funsape/globalDefines.hpp ****             );
+1737:funsape/globalDefines.hpp **** }
+1738:funsape/globalDefines.hpp **** 
+1739:funsape/globalDefines.hpp **** bool_t inlined isAsciiNumber(cchar_t character_p)
+1740:funsape/globalDefines.hpp **** {
+1741:funsape/globalDefines.hpp ****     return (bool_t)(((character_p >= '0') && (character_p <= '9'))
+1742:funsape/globalDefines.hpp ****                     ? true
+1743:funsape/globalDefines.hpp ****                     : false
+1744:funsape/globalDefines.hpp ****             );
+1745:funsape/globalDefines.hpp **** }
+1746:funsape/globalDefines.hpp **** 
+1747:funsape/globalDefines.hpp **** bool_t inlined isAsciiSymbol(cchar_t character_p)
+1748:funsape/globalDefines.hpp **** {
+1749:funsape/globalDefines.hpp ****     return (bool_t)(((!isAsciiNumber(character_p)) && (!isAsciiCommand(character_p)) && (!isAsciiLe
+1750:funsape/globalDefines.hpp ****                     ? true
+1751:funsape/globalDefines.hpp ****                     : false
+GAS LISTING /tmp/cch7C0sd.s 			page 36
+
+
+1752:funsape/globalDefines.hpp ****             );
+1753:funsape/globalDefines.hpp **** }
+1754:funsape/globalDefines.hpp **** 
+1755:funsape/globalDefines.hpp **** //     /////////////////////     SOFTWARE DELAY    //////////////////////     //
+1756:funsape/globalDefines.hpp **** 
+1757:funsape/globalDefines.hpp **** void inlined delayMs(uint32_t time_p)
+ 158               		.loc 2 1757 14 view .LVU28
+1758:funsape/globalDefines.hpp **** {
+1759:funsape/globalDefines.hpp ****     _delay_ms(time_p);
+ 159               		.loc 2 1759 5 view .LVU29
+ 160               	.LBB13:
+ 161               	.LBI13:
+ 162               		.file 3 "/usr/avr/include/util/delay.h"
+   1:/usr/avr/include/util/delay.h **** /* Copyright (c) 2002, Marek Michalkiewicz
+   2:/usr/avr/include/util/delay.h ****    Copyright (c) 2004,2005,2007 Joerg Wunsch
+   3:/usr/avr/include/util/delay.h ****    Copyright (c) 2007  Florin-Viorel Petrov
+   4:/usr/avr/include/util/delay.h ****    All rights reserved.
+   5:/usr/avr/include/util/delay.h **** 
+   6:/usr/avr/include/util/delay.h ****    Redistribution and use in source and binary forms, with or without
+   7:/usr/avr/include/util/delay.h ****    modification, are permitted provided that the following conditions are met:
+   8:/usr/avr/include/util/delay.h **** 
+   9:/usr/avr/include/util/delay.h ****    * Redistributions of source code must retain the above copyright
+  10:/usr/avr/include/util/delay.h ****      notice, this list of conditions and the following disclaimer.
+  11:/usr/avr/include/util/delay.h **** 
+  12:/usr/avr/include/util/delay.h ****    * Redistributions in binary form must reproduce the above copyright
+  13:/usr/avr/include/util/delay.h ****      notice, this list of conditions and the following disclaimer in
+  14:/usr/avr/include/util/delay.h ****      the documentation and/or other materials provided with the
+  15:/usr/avr/include/util/delay.h ****      distribution.
+  16:/usr/avr/include/util/delay.h **** 
+  17:/usr/avr/include/util/delay.h ****    * Neither the name of the copyright holders nor the names of
+  18:/usr/avr/include/util/delay.h ****      contributors may be used to endorse or promote products derived
+  19:/usr/avr/include/util/delay.h ****      from this software without specific prior written permission.
+  20:/usr/avr/include/util/delay.h **** 
+  21:/usr/avr/include/util/delay.h ****   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  22:/usr/avr/include/util/delay.h ****   AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  23:/usr/avr/include/util/delay.h ****   IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  24:/usr/avr/include/util/delay.h ****   ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+  25:/usr/avr/include/util/delay.h ****   LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  26:/usr/avr/include/util/delay.h ****   CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  27:/usr/avr/include/util/delay.h ****   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  28:/usr/avr/include/util/delay.h ****   INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  29:/usr/avr/include/util/delay.h ****   CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  30:/usr/avr/include/util/delay.h ****   ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  31:/usr/avr/include/util/delay.h ****   POSSIBILITY OF SUCH DAMAGE. */
+  32:/usr/avr/include/util/delay.h **** 
+  33:/usr/avr/include/util/delay.h **** /* include/util/delay.h.  Generated from delay.h.in by configure. */
+  34:/usr/avr/include/util/delay.h **** 
+  35:/usr/avr/include/util/delay.h **** #ifndef _UTIL_DELAY_H_
+  36:/usr/avr/include/util/delay.h **** #define _UTIL_DELAY_H_ 1
+  37:/usr/avr/include/util/delay.h **** 
+  38:/usr/avr/include/util/delay.h **** #ifndef __DOXYGEN__
+  39:/usr/avr/include/util/delay.h **** #  ifndef __HAS_DELAY_CYCLES
+  40:/usr/avr/include/util/delay.h **** #    define __HAS_DELAY_CYCLES 1
+  41:/usr/avr/include/util/delay.h **** #  endif
+  42:/usr/avr/include/util/delay.h **** 
+  43:/usr/avr/include/util/delay.h **** #endif  /* __DOXYGEN__ */
+  44:/usr/avr/include/util/delay.h **** 
+GAS LISTING /tmp/cch7C0sd.s 			page 37
+
+
+  45:/usr/avr/include/util/delay.h **** #include <stdint.h>
+  46:/usr/avr/include/util/delay.h **** #include <util/delay_basic.h>
+  47:/usr/avr/include/util/delay.h **** #include <bits/attribs.h>
+  48:/usr/avr/include/util/delay.h **** 
+  49:/usr/avr/include/util/delay.h **** /** \file */
+  50:/usr/avr/include/util/delay.h **** /** \defgroup util_delay <util/delay.h>: Convenience functions for busy-wait delay loops
+  51:/usr/avr/include/util/delay.h ****     \code
+  52:/usr/avr/include/util/delay.h ****     #define F_CPU 1000000UL  // 1 MHz
+  53:/usr/avr/include/util/delay.h ****     //#define F_CPU 14.7456e6
+  54:/usr/avr/include/util/delay.h ****     #include <util/delay.h>
+  55:/usr/avr/include/util/delay.h ****     \endcode
+  56:/usr/avr/include/util/delay.h **** 
+  57:/usr/avr/include/util/delay.h ****     The functions in this header are meant as convenience functions where
+  58:/usr/avr/include/util/delay.h ****     actual time values can be specified as a delay time,
+  59:/usr/avr/include/util/delay.h ****     rather than a number of cycles to wait for.
+  60:/usr/avr/include/util/delay.h **** 
+  61:/usr/avr/include/util/delay.h ****     This requires that the clock frequency of the device is provided
+  62:/usr/avr/include/util/delay.h ****     in the \c #F_CPU macro in units of Hertz.  The macro must be defined
+  63:/usr/avr/include/util/delay.h ****     before including the <util/delay.h> header.  It can be defined
+  64:/usr/avr/include/util/delay.h ****     in the source code like indicated above, or it can be defined on the
+  65:/usr/avr/include/util/delay.h ****     command line / in a Makefile by means of <tt>-D F_CPU=...</tt>
+  66:/usr/avr/include/util/delay.h **** 
+  67:/usr/avr/include/util/delay.h ****     The functions in this header file are wrappers around the basic
+  68:/usr/avr/include/util/delay.h ****     busy-wait functions from <tt>\<util/delay_basic.h\></tt>, or, when
+  69:/usr/avr/include/util/delay.h ****     supported by the compiler, then
+  70:/usr/avr/include/util/delay.h ****     <a href="https://gcc.gnu.org/onlinedocs/gcc/AVR-Built-in-Functions.html#index-_005f_005fbuiltin
+  71:/usr/avr/include/util/delay.h ****     >__builtin_avr_delay_cycles()</a> is used instead.
+  72:/usr/avr/include/util/delay.h **** 
+  73:/usr/avr/include/util/delay.h ****     In any case, the delay functions provided by this header will not disable
+  74:/usr/avr/include/util/delay.h ****     interrupts, which means hat the delay time will be longer than
+  75:/usr/avr/include/util/delay.h ****     specified when interrupts occur while a delay function is running.
+  76:/usr/avr/include/util/delay.h **** 
+  77:/usr/avr/include/util/delay.h ****     In order for these functions to work as intended, compiler
+  78:/usr/avr/include/util/delay.h ****     optimizations <em>must</em> be enabled, and the delay time
+  79:/usr/avr/include/util/delay.h ****     <em>must</em> be an expression that is a known constant at
+  80:/usr/avr/include/util/delay.h ****     compile-time.  If these requirements are not met, the resulting
+  81:/usr/avr/include/util/delay.h ****     delay will be much longer (and basically unpredictable), and
+  82:/usr/avr/include/util/delay.h ****     applications that otherwise do not use floating-point calculations
+  83:/usr/avr/include/util/delay.h ****     will experience severe code bloat by the floating-point library
+  84:/usr/avr/include/util/delay.h ****     routines linked into the application.
+  85:/usr/avr/include/util/delay.h ****     The idea is
+  86:/usr/avr/include/util/delay.h ****     that compile-time constant expressions will be eliminated by
+  87:/usr/avr/include/util/delay.h ****     compiler optimization so floating-point expressions can be used
+  88:/usr/avr/include/util/delay.h ****     to calculate the number of delay cycles needed based on the CPU
+  89:/usr/avr/include/util/delay.h ****     frequency passed by the macro F_CPU.
+  90:/usr/avr/include/util/delay.h **** 
+  91:/usr/avr/include/util/delay.h ****     The functions available allow the specification of microsecond, and
+  92:/usr/avr/include/util/delay.h ****     millisecond delays directly, using the application-supplied macro
+  93:/usr/avr/include/util/delay.h ****     F_CPU as the CPU clock frequency in Hertz.
+  94:/usr/avr/include/util/delay.h **** */
+  95:/usr/avr/include/util/delay.h **** 
+  96:/usr/avr/include/util/delay.h **** 
+  97:/usr/avr/include/util/delay.h **** #ifndef F_CPU
+  98:/usr/avr/include/util/delay.h **** /* prevent compiler error by supplying a default */
+  99:/usr/avr/include/util/delay.h **** # warning "F_CPU not defined for <util/delay.h>"
+ 100:/usr/avr/include/util/delay.h **** /** \ingroup util_delay
+ 101:/usr/avr/include/util/delay.h ****     \def F_CPU
+GAS LISTING /tmp/cch7C0sd.s 			page 38
+
+
+ 102:/usr/avr/include/util/delay.h ****     \brief CPU frequency in Hz
+ 103:/usr/avr/include/util/delay.h **** 
+ 104:/usr/avr/include/util/delay.h ****     The macro F_CPU specifies the CPU frequency in Hertz to be considered by
+ 105:/usr/avr/include/util/delay.h ****     the delay functions.  This macro is normally supplied by the
+ 106:/usr/avr/include/util/delay.h ****     environment (e.g. from within a project header, or the project's
+ 107:/usr/avr/include/util/delay.h ****     Makefile).  The value 1 MHz here is only provided as a
+ 108:/usr/avr/include/util/delay.h ****     fallback default if no such user-provided definition could be found.
+ 109:/usr/avr/include/util/delay.h **** 
+ 110:/usr/avr/include/util/delay.h ****     In terms of the delay functions, the CPU frequency can be given as
+ 111:/usr/avr/include/util/delay.h ****     a floating-point constant (e.g. 3.6864e6 for 3.6864 MHz).
+ 112:/usr/avr/include/util/delay.h ****     However, the macros in <util/setbaud.h> require it to be an
+ 113:/usr/avr/include/util/delay.h ****     integer value.
+ 114:/usr/avr/include/util/delay.h ****  */
+ 115:/usr/avr/include/util/delay.h **** # define F_CPU 1000000UL
+ 116:/usr/avr/include/util/delay.h **** #endif
+ 117:/usr/avr/include/util/delay.h **** 
+ 118:/usr/avr/include/util/delay.h **** #ifndef __OPTIMIZE__
+ 119:/usr/avr/include/util/delay.h **** # warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+ 120:/usr/avr/include/util/delay.h **** #endif
+ 121:/usr/avr/include/util/delay.h **** 
+ 122:/usr/avr/include/util/delay.h **** /**
+ 123:/usr/avr/include/util/delay.h ****    \ingroup util_delay
+ 124:/usr/avr/include/util/delay.h **** 
+ 125:/usr/avr/include/util/delay.h ****    Perform a delay of \c __ms milliseconds.
+ 126:/usr/avr/include/util/delay.h **** 
+ 127:/usr/avr/include/util/delay.h ****    The macro #F_CPU is supposed to be defined to a
+ 128:/usr/avr/include/util/delay.h ****    constant defining the CPU clock frequency in Hertz.
+ 129:/usr/avr/include/util/delay.h **** 
+ 130:/usr/avr/include/util/delay.h **** -  If \c __builtin_avr_delay_cycles() is
+ 131:/usr/avr/include/util/delay.h **** \if GIT_BRANCH_IS_ONLINEDOCS
+ 132:/usr/avr/include/util/delay.h ****    supported
+ 133:/usr/avr/include/util/delay.h **** \else
+ 134:/usr/avr/include/util/delay.h ****    \ref faq_toolchain_support "supported"
+ 135:/usr/avr/include/util/delay.h **** \endif
+ 136:/usr/avr/include/util/delay.h ****    by the compiler, then
+ 137:/usr/avr/include/util/delay.h ****    the maximal possible delay is 4294967.04 / f<sub>CPU</sub> milliseconds
+ 138:/usr/avr/include/util/delay.h ****    where f<sub>CPU</sub> denotes the CPU frequency in units of 1 MHz.
+ 139:/usr/avr/include/util/delay.h ****    This is around 71 minutes / f<sub>CPU</sub>.
+ 140:/usr/avr/include/util/delay.h ****    Values greater than that are saturated to this value.
+ 141:/usr/avr/include/util/delay.h **** 
+ 142:/usr/avr/include/util/delay.h **** -  Otherwise, _delay_loop_2() is used as a fallback, and the maximal
+ 143:/usr/avr/include/util/delay.h ****    possible delay is 262.14 / f<sub>CPU</sub> milliseconds.
+ 144:/usr/avr/include/util/delay.h ****    When the user requests a delay which exceeds the maximum possible one,
+ 145:/usr/avr/include/util/delay.h ****    _delay_ms() provides a decreased resolution functionality. In this
+ 146:/usr/avr/include/util/delay.h ****    mode _delay_ms() will work with a resolution of 1/10&nbsp;ms, providing
+ 147:/usr/avr/include/util/delay.h ****    delays up to 6.5535 seconds (independent from CPU frequency).  The
+ 148:/usr/avr/include/util/delay.h ****    user will not be informed about decreased resolution.
+ 149:/usr/avr/include/util/delay.h **** .
+ 150:/usr/avr/include/util/delay.h **** 
+ 151:/usr/avr/include/util/delay.h ****    Conversion of \c __ms into clock cycles may not always result in
+ 152:/usr/avr/include/util/delay.h ****    an integral value.  By default, the clock cycles are rounded up to the next
+ 153:/usr/avr/include/util/delay.h ****    integer. This ensures that the user gets at least \c __ms
+ 154:/usr/avr/include/util/delay.h ****    microseconds of delay.
+ 155:/usr/avr/include/util/delay.h ****    Alternatively, by defining the macro \c __DELAY_ROUND_DOWN__, or
+ 156:/usr/avr/include/util/delay.h ****    \c __DELAY_ROUND_CLOSEST__, before including this header file, the
+ 157:/usr/avr/include/util/delay.h ****    algorithm can be made to round down, or round to closest integer,
+ 158:/usr/avr/include/util/delay.h ****    respectively.
+GAS LISTING /tmp/cch7C0sd.s 			page 39
+
+
+ 159:/usr/avr/include/util/delay.h **** 
+ 160:/usr/avr/include/util/delay.h ****    \note The implementation of _delay_ms() based on
+ 161:/usr/avr/include/util/delay.h ****    \c __builtin_avr_delay_cycles() is not backward compatible with older
+ 162:/usr/avr/include/util/delay.h ****    implementations.  In order to get a functionality backward compatible
+ 163:/usr/avr/include/util/delay.h ****    with previous versions, the macro \c __DELAY_BACKWARD_COMPATIBLE__
+ 164:/usr/avr/include/util/delay.h ****    must be defined before including this header file.
+ 165:/usr/avr/include/util/delay.h ****  */
+ 166:/usr/avr/include/util/delay.h **** static __ATTR_ALWAYS_INLINE__ void
+ 167:/usr/avr/include/util/delay.h **** _delay_ms(double __ms)
+ 163               		.loc 3 167 1 view .LVU30
+ 164               	.LBB14:
+ 168:/usr/avr/include/util/delay.h **** {
+ 169:/usr/avr/include/util/delay.h **** #if (__HAS_DELAY_CYCLES \
+ 170:/usr/avr/include/util/delay.h ****      && defined(__OPTIMIZE__) \
+ 171:/usr/avr/include/util/delay.h ****      && !defined(__DELAY_BACKWARD_COMPATIBLE__))
+ 172:/usr/avr/include/util/delay.h ****     uint32_t __ticks_dc;
+ 165               		.loc 3 172 5 view .LVU31
+ 173:/usr/avr/include/util/delay.h ****     double __tmp = ((F_CPU) / 1e3) * __ms;
+ 166               		.loc 3 173 5 view .LVU32
+ 174:/usr/avr/include/util/delay.h **** 
+ 175:/usr/avr/include/util/delay.h ****     #if defined(__DELAY_ROUND_DOWN__)
+ 176:/usr/avr/include/util/delay.h ****         __tmp = __builtin_fabs (__tmp);
+ 177:/usr/avr/include/util/delay.h ****     #elif defined(__DELAY_ROUND_CLOSEST__)
+ 178:/usr/avr/include/util/delay.h ****         __tmp = __builtin_fabs (__tmp) + 0.5;
+ 179:/usr/avr/include/util/delay.h ****     #else
+ 180:/usr/avr/include/util/delay.h ****         /* Round up by default */
+ 181:/usr/avr/include/util/delay.h ****         __tmp = __builtin_ceil (__builtin_fabs (__tmp));
+ 167               		.loc 3 181 9 view .LVU33
+ 182:/usr/avr/include/util/delay.h ****     #endif
+ 183:/usr/avr/include/util/delay.h **** 
+ 184:/usr/avr/include/util/delay.h ****     /* Saturate.  Notice that the largest representable float
+ 185:/usr/avr/include/util/delay.h ****        in this context is 0xffffff00.   */
+ 186:/usr/avr/include/util/delay.h ****     __ticks_dc = __tmp >= 4294967040.0 ? 0xffffff00 : (uint32_t) __tmp;
+ 168               		.loc 3 186 5 view .LVU34
+ 187:/usr/avr/include/util/delay.h ****     __builtin_avr_delay_cycles(__ticks_dc);
+ 169               		.loc 3 187 5 view .LVU35
+ 170               		.loc 3 187 31 is_stmt 0 view .LVU36
+ 171 0070 8FEF      		ldi r24,lo8(6399999)
+ 172 0072 97EA      		ldi r25,hi8(6399999)
+ 173 0074 21E6      		ldi r18,hlo8(6399999)
+ 174 0076 8150      	1:	subi r24,1
+ 175 0078 9040      		sbci r25,0
+ 176 007a 2040      		sbci r18,0
+ 177 007c 01F4      		brne 1b
+ 178 007e 00C0      		rjmp .
+ 179 0080 0000      		nop
+ 180               	.LVL11:
+ 181               		.loc 3 187 31 view .LVU37
+ 182               	.LBE14:
+ 183               	.LBE13:
+1760:funsape/globalDefines.hpp **** 
+1761:funsape/globalDefines.hpp ****     return;
+ 184               		.loc 2 1761 5 is_stmt 1 view .LVU38
+ 185               		.loc 2 1761 5 is_stmt 0 view .LVU39
+ 186               	.LBE12:
+  49:example.cpp   ****         display.setTextSize(1);
+ 187               		.loc 1 49 9 is_stmt 1 view .LVU40
+GAS LISTING /tmp/cch7C0sd.s 			page 40
+
+
+  49:example.cpp   ****         display.setTextSize(1);
+ 188               		.loc 1 49 28 is_stmt 0 view .LVU41
+ 189 0082 80E0      		ldi r24,lo8(display)
+ 190 0084 90E0      		ldi r25,hi8(display)
+ 191 0086 0E94 0000 		call _ZN7Ssd130611clearScreenEv
+ 192               	.LVL12:
+  50:example.cpp   ****         display.setCursor(0, 0);
+ 193               		.loc 1 50 9 is_stmt 1 view .LVU42
+  50:example.cpp   ****         display.setCursor(0, 0);
+ 194               		.loc 1 50 28 is_stmt 0 view .LVU43
+ 195 008a 61E0      		ldi r22,lo8(1)
+ 196 008c 80E0      		ldi r24,lo8(display)
+ 197 008e 90E0      		ldi r25,hi8(display)
+ 198 0090 0E94 0000 		call _ZN7Ssd130611setTextSizeEh
+ 199               	.LVL13:
+  51:example.cpp   ****         display.print("Texto mudou :)");
+ 200               		.loc 1 51 9 is_stmt 1 view .LVU44
+  51:example.cpp   ****         display.print("Texto mudou :)");
+ 201               		.loc 1 51 26 is_stmt 0 view .LVU45
+ 202 0094 40E0      		ldi r20,0
+ 203 0096 60E0      		ldi r22,0
+ 204 0098 80E0      		ldi r24,lo8(display)
+ 205 009a 90E0      		ldi r25,hi8(display)
+ 206 009c 0E94 0000 		call _ZN7Ssd13069setCursorEhh
+ 207               	.LVL14:
+  52:example.cpp   ****         display.setTextSize(2);
+ 208               		.loc 1 52 9 is_stmt 1 view .LVU46
+  52:example.cpp   ****         display.setTextSize(2);
+ 209               		.loc 1 52 22 is_stmt 0 view .LVU47
+ 210 00a0 60E0      		ldi r22,lo8(.LC2)
+ 211 00a2 70E0      		ldi r23,hi8(.LC2)
+ 212 00a4 80E0      		ldi r24,lo8(display)
+ 213 00a6 90E0      		ldi r25,hi8(display)
+ 214 00a8 0E94 0000 		call _ZN7Ssd13065printEPKc
+ 215               	.LVL15:
+  53:example.cpp   ****         display.setCursor(0, 3);
+ 216               		.loc 1 53 9 is_stmt 1 view .LVU48
+  53:example.cpp   ****         display.setCursor(0, 3);
+ 217               		.loc 1 53 28 is_stmt 0 view .LVU49
+ 218 00ac 62E0      		ldi r22,lo8(2)
+ 219 00ae 80E0      		ldi r24,lo8(display)
+ 220 00b0 90E0      		ldi r25,hi8(display)
+ 221 00b2 0E94 0000 		call _ZN7Ssd130611setTextSizeEh
+ 222               	.LVL16:
+  54:example.cpp   ****         display.print("SSD1306");
+ 223               		.loc 1 54 9 is_stmt 1 view .LVU50
+  54:example.cpp   ****         display.print("SSD1306");
+ 224               		.loc 1 54 26 is_stmt 0 view .LVU51
+ 225 00b6 43E0      		ldi r20,lo8(3)
+ 226 00b8 60E0      		ldi r22,0
+ 227 00ba 80E0      		ldi r24,lo8(display)
+ 228 00bc 90E0      		ldi r25,hi8(display)
+ 229 00be 0E94 0000 		call _ZN7Ssd13069setCursorEhh
+ 230               	.LVL17:
+  55:example.cpp   **** 
+ 231               		.loc 1 55 9 is_stmt 1 view .LVU52
+  55:example.cpp   **** 
+GAS LISTING /tmp/cch7C0sd.s 			page 41
+
+
+ 232               		.loc 1 55 22 is_stmt 0 view .LVU53
+ 233 00c2 60E0      		ldi r22,lo8(.LC3)
+ 234 00c4 70E0      		ldi r23,hi8(.LC3)
+ 235 00c6 80E0      		ldi r24,lo8(display)
+ 236 00c8 90E0      		ldi r25,hi8(display)
+ 237 00ca 0E94 0000 		call _ZN7Ssd13065printEPKc
+ 238               	.LVL18:
+  57:example.cpp   ****     }
+ 239               		.loc 1 57 9 is_stmt 1 view .LVU54
+ 240               	.LBB15:
+ 241               	.LBI15:
+1757:funsape/globalDefines.hpp **** {
+ 242               		.loc 2 1757 14 view .LVU55
+1759:funsape/globalDefines.hpp **** 
+ 243               		.loc 2 1759 5 view .LVU56
+ 244               	.LBB16:
+ 245               	.LBI16:
+ 167:/usr/avr/include/util/delay.h **** {
+ 246               		.loc 3 167 1 view .LVU57
+ 247               	.LBB17:
+ 172:/usr/avr/include/util/delay.h ****     double __tmp = ((F_CPU) / 1e3) * __ms;
+ 248               		.loc 3 172 5 view .LVU58
+ 173:/usr/avr/include/util/delay.h **** 
+ 249               		.loc 3 173 5 view .LVU59
+ 181:/usr/avr/include/util/delay.h ****     #endif
+ 250               		.loc 3 181 9 view .LVU60
+ 186:/usr/avr/include/util/delay.h ****     __builtin_avr_delay_cycles(__ticks_dc);
+ 251               		.loc 3 186 5 view .LVU61
+ 252               		.loc 3 187 5 view .LVU62
+ 253               		.loc 3 187 31 is_stmt 0 view .LVU63
+ 254 00ce 8FEF      		ldi r24,lo8(6399999)
+ 255 00d0 97EA      		ldi r25,hi8(6399999)
+ 256 00d2 21E6      		ldi r18,hlo8(6399999)
+ 257 00d4 8150      	1:	subi r24,1
+ 258 00d6 9040      		sbci r25,0
+ 259 00d8 2040      		sbci r18,0
+ 260 00da 01F4      		brne 1b
+ 261 00dc 00C0      		rjmp .
+ 262 00de 0000      		nop
+ 263               	.LVL19:
+ 264               		.loc 3 187 31 view .LVU64
+ 265               	.LBE17:
+ 266               	.LBE16:
+ 267               		.loc 2 1761 5 is_stmt 1 view .LVU65
+ 268               		.loc 2 1761 5 is_stmt 0 view .LVU66
+ 269               	.LBE15:
+  36:example.cpp   ****         // --- Primeiro texto ---
+ 270               		.loc 1 36 5 is_stmt 1 discriminator 1 view .LVU67
+ 271 00e0 00C0      		rjmp .L4
+ 272               		.cfi_endproc
+ 273               	.LFE149:
+ 275               		.section	.text._GLOBAL__sub_I_display,"ax",@progbits
+ 277               	_GLOBAL__sub_I_display:
+ 278               	.LFB152:
+ 279               		.loc 1 61 1 view -0
+ 280               		.cfi_startproc
+ 281               	/* prologue: function */
+GAS LISTING /tmp/cch7C0sd.s 			page 42
+
+
+ 282               	/* frame size = 0 */
+ 283               	/* stack size = 0 */
+ 284               	.L__stack_usage = 0
+ 285               		.loc 1 61 1 is_stmt 0 view .LVU69
+ 286 0000 0E94 0000 		call _Z41__static_initialization_and_destruction_0v
+ 287               	.LVL20:
+ 288               	/* epilogue start */
+ 289 0004 0895      		ret
+ 290               		.cfi_endproc
+ 291               	.LFE152:
+ 293               		.global __do_global_ctors
+ 294               		.section .ctors,"a",@progbits
+ 295               		.p2align	1
+ 296 0000 0000      		.word	gs(_GLOBAL__sub_I_display)
+ 297               		.section	.text._GLOBAL__sub_D_display,"ax",@progbits
+ 299               	_GLOBAL__sub_D_display:
+ 300               	.LFB153:
+ 301               		.loc 1 61 1 is_stmt 1 view -0
+ 302               		.cfi_startproc
+ 303               	/* prologue: function */
+ 304               	/* frame size = 0 */
+ 305               	/* stack size = 0 */
+ 306               	.L__stack_usage = 0
+ 307               		.loc 1 61 1 is_stmt 0 view .LVU71
+ 308 0000 0E94 0000 		call _Z41__static_initialization_and_destruction_1v
+ 309               	.LVL21:
+ 310               	/* epilogue start */
+ 311 0004 0895      		ret
+ 312               		.cfi_endproc
+ 313               	.LFE153:
+ 315               		.global __do_global_dtors
+ 316               		.section .dtors,"a",@progbits
+ 317               		.p2align	1
+ 318 0000 0000      		.word	gs(_GLOBAL__sub_D_display)
+ 319               	.global	display
+ 320               		.section	.bss.display,"aw",@nobits
+ 323               	display:
+ 324 0000 0000 0000 		.zero	10
+ 324      0000 0000 
+ 324      0000 
+ 325               		.text
+ 326               	.Letext0:
+ 327               		.file 4 "/usr/avr/include/stdint.h"
+ 328               		.file 5 "funsape/config/atmega328p.hpp"
+ 329               		.file 6 "funsape/device/ssd1306.hpp"
+ 330               		.file 7 "funsape/peripheral/twi.hpp"
+GAS LISTING /tmp/cch7C0sd.s 			page 43
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 example.cpp
+     /tmp/cch7C0sd.s:2      *ABS*:0000003e __SP_H__
+     /tmp/cch7C0sd.s:3      *ABS*:0000003d __SP_L__
+     /tmp/cch7C0sd.s:4      *ABS*:0000003f __SREG__
+     /tmp/cch7C0sd.s:5      *ABS*:00000000 __tmp_reg__
+     /tmp/cch7C0sd.s:6      *ABS*:00000001 __zero_reg__
+     /tmp/cch7C0sd.s:13     .text._Z41__static_initialization_and_destruction_0v:00000000 _Z41__static_initialization_and_destruction_0v
+     /tmp/cch7C0sd.s:15     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.0
+     /tmp/cch7C0sd.s:16     .text._Z41__static_initialization_and_destruction_0v:00000000 L0
+     /tmp/cch7C0sd.s:21     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.1
+     /tmp/cch7C0sd.s:323    .bss.display:00000000 display
+     /tmp/cch7C0sd.s:27     .text._Z41__static_initialization_and_destruction_0v:00000008 .Loc.2
+     /tmp/cch7C0sd.s:29     .text._Z41__static_initialization_and_destruction_0v:0000000a L0
+     /tmp/cch7C0sd.s:34     .text._Z41__static_initialization_and_destruction_1v:00000000 _Z41__static_initialization_and_destruction_1v
+     /tmp/cch7C0sd.s:36     .text._Z41__static_initialization_and_destruction_1v:00000000 .Loc.3
+     /tmp/cch7C0sd.s:37     .text._Z41__static_initialization_and_destruction_1v:00000000 L0
+     /tmp/cch7C0sd.s:42     .text._Z41__static_initialization_and_destruction_1v:00000000 .Loc.4
+     /tmp/cch7C0sd.s:48     .text._Z41__static_initialization_and_destruction_1v:00000008 .Loc.5
+     /tmp/cch7C0sd.s:50     .text._Z41__static_initialization_and_destruction_1v:0000000a L0
+     /tmp/cch7C0sd.s:65     .text.main:00000000 main
+     /tmp/cch7C0sd.s:67     .text.main:00000000 .Loc.6
+     /tmp/cch7C0sd.s:68     .text.main:00000000 L0
+     /tmp/cch7C0sd.s:73     .text.main:00000000 .Loc.7
+     /tmp/cch7C0sd.s:74     .text.main:00000000 .Loc.8
+     /tmp/cch7C0sd.s:84     .text.main:00000012 .Loc.9
+     /tmp/cch7C0sd.s:89     .text.main:00000014 .Loc.10
+     /tmp/cch7C0sd.s:90     .text.main:00000014 .Loc.11
+     /tmp/cch7C0sd.s:101    .text.main:00000024 .Loc.12
+     /tmp/cch7C0sd.s:102    .text.main:00000024 .Loc.13
+     /tmp/cch7C0sd.s:103    .text.main:00000024 .Loc.14
+     /tmp/cch7C0sd.s:108    .text.main:0000002c .Loc.15
+     /tmp/cch7C0sd.s:109    .text.main:0000002c .Loc.16
+     /tmp/cch7C0sd.s:115    .text.main:00000036 .Loc.17
+     /tmp/cch7C0sd.s:116    .text.main:00000036 .Loc.18
+     /tmp/cch7C0sd.s:123    .text.main:00000042 .Loc.19
+     /tmp/cch7C0sd.s:124    .text.main:00000042 .Loc.20
+     /tmp/cch7C0sd.s:131    .text.main:0000004e .Loc.21
+     /tmp/cch7C0sd.s:132    .text.main:0000004e .Loc.22
+     /tmp/cch7C0sd.s:138    .text.main:00000058 .Loc.23
+     /tmp/cch7C0sd.s:139    .text.main:00000058 .Loc.24
+     /tmp/cch7C0sd.s:146    .text.main:00000064 .Loc.25
+     /tmp/cch7C0sd.s:147    .text.main:00000064 .Loc.26
+     /tmp/cch7C0sd.s:154    .text.main:00000070 .Loc.27
+     /tmp/cch7C0sd.s:158    .text.main:00000070 .Loc.28
+     /tmp/cch7C0sd.s:159    .text.main:00000070 .Loc.29
+     /tmp/cch7C0sd.s:163    .text.main:00000070 .Loc.30
+     /tmp/cch7C0sd.s:165    .text.main:00000070 .Loc.31
+     /tmp/cch7C0sd.s:166    .text.main:00000070 .Loc.32
+     /tmp/cch7C0sd.s:167    .text.main:00000070 .Loc.33
+     /tmp/cch7C0sd.s:168    .text.main:00000070 .Loc.34
+     /tmp/cch7C0sd.s:169    .text.main:00000070 .Loc.35
+     /tmp/cch7C0sd.s:170    .text.main:00000070 .Loc.36
+     /tmp/cch7C0sd.s:178    .text.main:00000080 L0
+     /tmp/cch7C0sd.s:181    .text.main:00000082 .Loc.37
+     /tmp/cch7C0sd.s:184    .text.main:00000082 .Loc.38
+     /tmp/cch7C0sd.s:185    .text.main:00000082 .Loc.39
+GAS LISTING /tmp/cch7C0sd.s 			page 44
+
+
+     /tmp/cch7C0sd.s:187    .text.main:00000082 .Loc.40
+     /tmp/cch7C0sd.s:188    .text.main:00000082 .Loc.41
+     /tmp/cch7C0sd.s:193    .text.main:0000008a .Loc.42
+     /tmp/cch7C0sd.s:194    .text.main:0000008a .Loc.43
+     /tmp/cch7C0sd.s:200    .text.main:00000094 .Loc.44
+     /tmp/cch7C0sd.s:201    .text.main:00000094 .Loc.45
+     /tmp/cch7C0sd.s:208    .text.main:000000a0 .Loc.46
+     /tmp/cch7C0sd.s:209    .text.main:000000a0 .Loc.47
+     /tmp/cch7C0sd.s:216    .text.main:000000ac .Loc.48
+     /tmp/cch7C0sd.s:217    .text.main:000000ac .Loc.49
+     /tmp/cch7C0sd.s:223    .text.main:000000b6 .Loc.50
+     /tmp/cch7C0sd.s:224    .text.main:000000b6 .Loc.51
+     /tmp/cch7C0sd.s:231    .text.main:000000c2 .Loc.52
+     /tmp/cch7C0sd.s:232    .text.main:000000c2 .Loc.53
+     /tmp/cch7C0sd.s:239    .text.main:000000ce .Loc.54
+     /tmp/cch7C0sd.s:242    .text.main:000000ce .Loc.55
+     /tmp/cch7C0sd.s:243    .text.main:000000ce .Loc.56
+     /tmp/cch7C0sd.s:246    .text.main:000000ce .Loc.57
+     /tmp/cch7C0sd.s:248    .text.main:000000ce .Loc.58
+     /tmp/cch7C0sd.s:249    .text.main:000000ce .Loc.59
+     /tmp/cch7C0sd.s:250    .text.main:000000ce .Loc.60
+     /tmp/cch7C0sd.s:251    .text.main:000000ce .Loc.61
+     /tmp/cch7C0sd.s:252    .text.main:000000ce .Loc.62
+     /tmp/cch7C0sd.s:253    .text.main:000000ce .Loc.63
+     /tmp/cch7C0sd.s:261    .text.main:000000de L0
+     /tmp/cch7C0sd.s:264    .text.main:000000e0 .Loc.64
+     /tmp/cch7C0sd.s:267    .text.main:000000e0 .Loc.65
+     /tmp/cch7C0sd.s:268    .text.main:000000e0 .Loc.66
+     /tmp/cch7C0sd.s:270    .text.main:000000e0 .Loc.67
+     /tmp/cch7C0sd.s:272    .text.main:000000e2 L0
+     /tmp/cch7C0sd.s:277    .text._GLOBAL__sub_I_display:00000000 _GLOBAL__sub_I_display
+     /tmp/cch7C0sd.s:279    .text._GLOBAL__sub_I_display:00000000 .Loc.68
+     /tmp/cch7C0sd.s:280    .text._GLOBAL__sub_I_display:00000000 L0
+     /tmp/cch7C0sd.s:285    .text._GLOBAL__sub_I_display:00000000 .Loc.69
+     /tmp/cch7C0sd.s:290    .text._GLOBAL__sub_I_display:00000006 L0
+     /tmp/cch7C0sd.s:299    .text._GLOBAL__sub_D_display:00000000 _GLOBAL__sub_D_display
+     /tmp/cch7C0sd.s:301    .text._GLOBAL__sub_D_display:00000000 .Loc.70
+     /tmp/cch7C0sd.s:302    .text._GLOBAL__sub_D_display:00000000 L0
+     /tmp/cch7C0sd.s:307    .text._GLOBAL__sub_D_display:00000000 .Loc.71
+     /tmp/cch7C0sd.s:312    .text._GLOBAL__sub_D_display:00000006 L0
+     /tmp/cch7C0sd.s:32     .text._Z41__static_initialization_and_destruction_0v:0000000a L0
+     /tmp/cch7C0sd.s:53     .text._Z41__static_initialization_and_destruction_1v:0000000a L0
+     /tmp/cch7C0sd.s:275    .text.main:000000e2 L0
+     /tmp/cch7C0sd.s:294    .text._GLOBAL__sub_I_display:00000006 L0
+     /tmp/cch7C0sd.s:316    .text._GLOBAL__sub_D_display:00000006 L0
+                     .debug_frame:00000000 L0
+     /tmp/cch7C0sd.s:174    .text.main:00000076 .L11
+     /tmp/cch7C0sd.s:257    .text.main:000000d4 .L12
+     /tmp/cch7C0sd.s:100    .text.main:00000024 .L4
+     /tmp/cch7C0sd.s:1912   .debug_abbrev:00000000 .Ldebug_abbrev0
+     /tmp/cch7C0sd.s:2748   .debug_ranges:00000000 .Ldebug_ranges0
+     /tmp/cch7C0sd.s:2762   .debug_line:00000000 .Ldebug_line0
+     /tmp/cch7C0sd.s:300    .text._GLOBAL__sub_D_display:00000000 .LFB153
+     /tmp/cch7C0sd.s:313    .text._GLOBAL__sub_D_display:00000006 .LFE153
+     /tmp/cch7C0sd.s:309    .text._GLOBAL__sub_D_display:00000004 .LVL21
+     /tmp/cch7C0sd.s:278    .text._GLOBAL__sub_I_display:00000000 .LFB152
+     /tmp/cch7C0sd.s:291    .text._GLOBAL__sub_I_display:00000006 .LFE152
+GAS LISTING /tmp/cch7C0sd.s 			page 45
+
+
+     /tmp/cch7C0sd.s:287    .text._GLOBAL__sub_I_display:00000004 .LVL20
+     /tmp/cch7C0sd.s:35     .text._Z41__static_initialization_and_destruction_1v:00000000 .LFB151
+     /tmp/cch7C0sd.s:51     .text._Z41__static_initialization_and_destruction_1v:0000000a .LFE151
+     /tmp/cch7C0sd.s:46     .text._Z41__static_initialization_and_destruction_1v:00000008 .LVL1
+     /tmp/cch7C0sd.s:14     .text._Z41__static_initialization_and_destruction_0v:00000000 .LFB150
+     /tmp/cch7C0sd.s:30     .text._Z41__static_initialization_and_destruction_0v:0000000a .LFE150
+     /tmp/cch7C0sd.s:25     .text._Z41__static_initialization_and_destruction_0v:00000008 .LVL0
+     /tmp/cch7C0sd.s:66     .text.main:00000000 .LFB149
+     /tmp/cch7C0sd.s:273    .text.main:000000e2 .LFE149
+     /tmp/cch7C0sd.s:156    .text.main:00000070 .LBI12
+     /tmp/cch7C0sd.s:155    .text.main:00000070 .LBB12
+     /tmp/cch7C0sd.s:186    .text.main:00000082 .LBE12
+     /tmp/cch7C0sd.s:2634   .debug_loc:00000002 .LLST0
+     /tmp/cch7C0sd.s:2631   .debug_loc:00000000 .LVUS0
+     /tmp/cch7C0sd.s:161    .text.main:00000070 .LBI13
+     /tmp/cch7C0sd.s:160    .text.main:00000070 .LBB13
+     /tmp/cch7C0sd.s:183    .text.main:00000082 .LBE13
+     /tmp/cch7C0sd.s:2646   .debug_loc:0000001a .LLST1
+     /tmp/cch7C0sd.s:2643   .debug_loc:00000018 .LVUS1
+     /tmp/cch7C0sd.s:2658   .debug_loc:00000034 .LLST2
+     /tmp/cch7C0sd.s:2655   .debug_loc:00000032 .LVUS2
+     /tmp/cch7C0sd.s:2670   .debug_loc:0000004e .LLST3
+     /tmp/cch7C0sd.s:2667   .debug_loc:0000004c .LVUS3
+     /tmp/cch7C0sd.s:241    .text.main:000000ce .LBI15
+     /tmp/cch7C0sd.s:240    .text.main:000000ce .LBB15
+     /tmp/cch7C0sd.s:269    .text.main:000000e0 .LBE15
+     /tmp/cch7C0sd.s:2682   .debug_loc:00000068 .LLST4
+     /tmp/cch7C0sd.s:2679   .debug_loc:00000066 .LVUS4
+     /tmp/cch7C0sd.s:245    .text.main:000000ce .LBI16
+     /tmp/cch7C0sd.s:244    .text.main:000000ce .LBB16
+     /tmp/cch7C0sd.s:266    .text.main:000000e0 .LBE16
+     /tmp/cch7C0sd.s:2694   .debug_loc:00000080 .LLST5
+     /tmp/cch7C0sd.s:2691   .debug_loc:0000007e .LVUS5
+     /tmp/cch7C0sd.s:2706   .debug_loc:0000009a .LLST6
+     /tmp/cch7C0sd.s:2703   .debug_loc:00000098 .LVUS6
+     /tmp/cch7C0sd.s:2718   .debug_loc:000000b4 .LLST7
+     /tmp/cch7C0sd.s:2715   .debug_loc:000000b2 .LVUS7
+     /tmp/cch7C0sd.s:83     .text.main:00000012 .LVL2
+     /tmp/cch7C0sd.s:99     .text.main:00000024 .LVL3
+     /tmp/cch7C0sd.s:107    .text.main:0000002c .LVL4
+     /tmp/cch7C0sd.s:114    .text.main:00000036 .LVL5
+     /tmp/cch7C0sd.s:122    .text.main:00000042 .LVL6
+     /tmp/cch7C0sd.s:130    .text.main:0000004e .LVL7
+     /tmp/cch7C0sd.s:137    .text.main:00000058 .LVL8
+     /tmp/cch7C0sd.s:145    .text.main:00000064 .LVL9
+     /tmp/cch7C0sd.s:153    .text.main:00000070 .LVL10
+     /tmp/cch7C0sd.s:192    .text.main:0000008a .LVL12
+     /tmp/cch7C0sd.s:199    .text.main:00000094 .LVL13
+     /tmp/cch7C0sd.s:207    .text.main:000000a0 .LVL14
+     /tmp/cch7C0sd.s:215    .text.main:000000ac .LVL15
+     /tmp/cch7C0sd.s:222    .text.main:000000b6 .LVL16
+     /tmp/cch7C0sd.s:230    .text.main:000000c2 .LVL17
+     /tmp/cch7C0sd.s:238    .text.main:000000ce .LVL18
+     /tmp/cch7C0sd.s:180    .text.main:00000082 .LVL11
+     /tmp/cch7C0sd.s:263    .text.main:000000e0 .LVL19
+     /tmp/cch7C0sd.s:332    .debug_info:00000000 .Ldebug_info0
+
+GAS LISTING /tmp/cch7C0sd.s 			page 46
+
+
+UNDEFINED SYMBOLS
+_ZN7Ssd1306C1Ev
+_ZN7Ssd1306D1Ev
+twi
+_ZN3Twi4initEmh
+_ZN7Ssd13064initEP3BusNS_4SizeEh
+_ZN7Ssd130611clearScreenEv
+_ZN7Ssd130611setTextSizeEh
+_ZN7Ssd13069setCursorEhh
+_ZN7Ssd13065printEPKc
+__do_global_ctors
+__do_global_dtors
+__do_copy_data
+__do_clear_bss

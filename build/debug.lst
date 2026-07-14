@@ -1,4 +1,4 @@
-GAS LISTING /tmp/cceHfhhS.s 			page 1
+GAS LISTING /tmp/ccXXjp5k.s 			page 1
 
 
    1               		.file	"debug.cpp"
@@ -15,7 +15,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
   12               	.global	_ZN5DebugC2Ev
   14               	_ZN5DebugC2Ev:
   15               	.LVL0:
-  16               	.LFB127:
+  16               	.LFB128:
    1:funsape/util/debug.cpp **** //!
    2:funsape/util/debug.cpp **** //! ****************************************************************************
    3:funsape/util/debug.cpp **** //! @file           debug.cpp
@@ -58,7 +58,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
   40:funsape/util/debug.cpp **** //!
   41:funsape/util/debug.cpp **** 
   42:funsape/util/debug.cpp **** // =============================================================================
-GAS LISTING /tmp/cceHfhhS.s 			page 2
+GAS LISTING /tmp/ccXXjp5k.s 			page 2
 
 
   43:funsape/util/debug.cpp **** // System file dependencies
@@ -118,7 +118,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
   20               	/* frame size = 0 */
   21               	/* stack size = 0 */
   22               	.L__stack_usage = 0
-GAS LISTING /tmp/cceHfhhS.s 			page 3
+GAS LISTING /tmp/ccXXjp5k.s 			page 3
 
 
   23               		.loc 1 93 1 is_stmt 0 view .LVU1
@@ -140,7 +140,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
   36               	.LVL3:
   97:funsape/util/debug.cpp ****     _showMarks(false),
   37               		.loc 1 97 5 view .LVU5
-  38 000c 5E96      		adiw r26,30
+  38 000c 5F96      		adiw r26,31
   39               	.LVL4:
   40               		.loc 1 97 5 view .LVU6
   41 000e 8C91      		ld r24,X
@@ -163,7 +163,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
   55 0022 9D93      		st X+,r25
   56               	.LVL6:
   57               		.loc 1 100 5 view .LVU10
-  58 0024 9497      		sbiw r26,36
+  58 0024 9597      		sbiw r26,37
   59               	.LVL7:
  101:funsape/util/debug.cpp **** {
  102:funsape/util/debug.cpp ****     // Resets data members
@@ -178,7 +178,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
   67               	.L3:
  104:funsape/util/debug.cpp ****         this->_list[i] = false;
   68               		.loc 1 104 9 is_stmt 1 view .LVU14
-GAS LISTING /tmp/cceHfhhS.s 			page 4
+GAS LISTING /tmp/ccXXjp5k.s 			page 4
 
 
   69               		.loc 1 104 24 is_stmt 0 view .LVU15
@@ -193,7 +193,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
   77               	.L2:
  103:funsape/util/debug.cpp ****         this->_list[i] = false;
   78               		.loc 1 103 26 discriminator 2 view .LVU17
-  79 0034 9E31      		cpi r25,lo8(30)
+  79 0034 9F31      		cpi r25,lo8(31)
   80 0036 00F0      		brlo .L3
   81               	/* epilogue start */
   82               	.LBE11:
@@ -206,12 +206,12 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
   84               		.loc 1 109 1 is_stmt 0 view .LVU18
   85 0038 0895      		ret
   86               		.cfi_endproc
-  87               	.LFE127:
+  87               	.LFE128:
   89               	.global	_ZN5DebugC1Ev
   90               		.set	_ZN5DebugC1Ev,_ZN5DebugC2Ev
   91               		.section	.text._Z41__static_initialization_and_destruction_0v,"ax",@progbits
   93               	_Z41__static_initialization_and_destruction_0v:
-  94               	.LFB137:
+  94               	.LFB138:
  110:funsape/util/debug.cpp **** 
  111:funsape/util/debug.cpp **** Debug::~Debug(void)
  112:funsape/util/debug.cpp **** {
@@ -238,7 +238,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  133:funsape/util/debug.cpp ****     // this->_busHandler                   = busHandler_p;
  134:funsape/util/debug.cpp ****     this->_isInitialized                = true;
  135:funsape/util/debug.cpp ****     this->_stopOnError                  = stopOnError_p;
-GAS LISTING /tmp/cceHfhhS.s 			page 5
+GAS LISTING /tmp/ccXXjp5k.s 			page 5
 
 
  136:funsape/util/debug.cpp **** 
@@ -298,7 +298,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  190:funsape/util/debug.cpp ****     // Returns
  191:funsape/util/debug.cpp ****     return;
  192:funsape/util/debug.cpp **** }
-GAS LISTING /tmp/cceHfhhS.s 			page 6
+GAS LISTING /tmp/ccXXjp5k.s 			page 6
 
 
  193:funsape/util/debug.cpp **** 
@@ -356,15 +356,15 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  107               		.loc 1 231 1 view .LVU21
  108 0008 0895      		ret
  109               		.cfi_endproc
- 110               	.LFE137:
+ 110               	.LFE138:
  112               		.section	.text._ZN5DebugD2Ev,"ax",@progbits
-GAS LISTING /tmp/cceHfhhS.s 			page 7
+GAS LISTING /tmp/ccXXjp5k.s 			page 7
 
 
  113               	.global	_ZN5DebugD2Ev
  115               	_ZN5DebugD2Ev:
  116               	.LVL11:
- 117               	.LFB130:
+ 117               	.LFB131:
  111:funsape/util/debug.cpp **** {
  118               		.loc 1 111 1 is_stmt 1 view -0
  119               		.cfi_startproc
@@ -381,14 +381,14 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  128               		.loc 1 115 1 is_stmt 0 view .LVU24
  129 0000 0895      		ret
  130               		.cfi_endproc
- 131               	.LFE130:
+ 131               	.LFE131:
  133               	.global	_ZN5DebugD1Ev
  134               		.set	_ZN5DebugD1Ev,_ZN5DebugD2Ev
  135               		.section	.text._ZN5Debug4initEb,"ax",@progbits
  136               	.global	_ZN5Debug4initEb
  138               	_ZN5Debug4initEb:
  139               	.LVL12:
- 140               	.LFB132:
+ 140               	.LFB133:
  125:funsape/util/debug.cpp ****     // Checks for errors
  141               		.loc 1 125 1 is_stmt 1 view -0
  142               		.cfi_startproc
@@ -413,12 +413,12 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  156               		.loc 1 135 5 is_stmt 1 view .LVU30
  135:funsape/util/debug.cpp **** 
  157               		.loc 1 135 41 is_stmt 0 view .LVU31
- 158 0008 81A1      		ldd r24,Z+33
+ 158 0008 82A1      		ldd r24,Z+34
  159 000a 60FB      		bst r22,0
  160 000c 82F9      		bld r24,2
- 161 000e 81A3      		std Z+33,r24
+ 161 000e 82A3      		std Z+34,r24
  141:funsape/util/debug.cpp ****     return true;
-GAS LISTING /tmp/cceHfhhS.s 			page 8
+GAS LISTING /tmp/ccXXjp5k.s 			page 8
 
 
  162               		.loc 1 141 5 is_stmt 1 view .LVU32
@@ -434,12 +434,12 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  169               	/* epilogue start */
  170 0016 0895      		ret
  171               		.cfi_endproc
- 172               	.LFE132:
+ 172               	.LFE133:
  174               		.section	.text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE,"ax",@progbits
  175               	.global	_ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE
  177               	_ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:
  178               	.LVL14:
- 179               	.LFB133:
+ 179               	.LFB134:
  148:funsape/util/debug.cpp ****     // Local variables
  180               		.loc 1 148 1 is_stmt 1 view -0
  181               		.cfi_startproc
@@ -478,7 +478,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  213               	/* frame size = 100 */
  214               	/* stack size = 104 */
  215               	.L__stack_usage = 104
-GAS LISTING /tmp/cceHfhhS.s 			page 9
+GAS LISTING /tmp/ccXXjp5k.s 			page 9
 
 
  150:funsape/util/debug.cpp **** 
@@ -488,7 +488,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  153:funsape/util/debug.cpp ****         return;
  218               		.loc 1 153 15 is_stmt 0 view .LVU40
  219 001a FC01      		movw r30,r24
- 220 001c E1A1      		ldd r30,Z+33
+ 220 001c E2A1      		ldd r30,Z+34
  153:funsape/util/debug.cpp ****         return;
  221               		.loc 1 153 5 view .LVU41
  222 001e E0FF      		sbrs r30,0
@@ -538,7 +538,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  163:funsape/util/debug.cpp ****     printf(auxMessage);
  258               		.loc 1 163 14 is_stmt 0 view .LVU50
  259 0046 3F93      		push r19
-GAS LISTING /tmp/cceHfhhS.s 			page 10
+GAS LISTING /tmp/ccXXjp5k.s 			page 10
 
 
  260 0048 2F93      		push r18
@@ -577,12 +577,12 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  289 0078 CDBF      		out __SP_L__,r28
  290 007a 00C0      		rjmp .L7
  291               		.cfi_endproc
- 292               	.LFE133:
+ 292               	.LFE134:
  294               		.section	.text._ZN5Debug10logMessageE5ErrorPKhj,"ax",@progbits
  295               	.global	_ZN5Debug10logMessageE5ErrorPKhj
  297               	_ZN5Debug10logMessageE5ErrorPKhj:
  298               	.LVL21:
- 299               	.LFB134:
+ 299               	.LFB135:
  172:funsape/util/debug.cpp ****     char auxMessage[100];
  300               		.loc 1 172 1 view -0
  301               		.cfi_startproc
@@ -598,7 +598,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  310               		.cfi_offset 13, -3
  311 0004 EF92      		push r14
  312               	.LCFI8:
-GAS LISTING /tmp/cceHfhhS.s 			page 11
+GAS LISTING /tmp/ccXXjp5k.s 			page 11
 
 
  313               		.cfi_def_cfa_offset 5
@@ -649,7 +649,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  176:funsape/util/debug.cpp ****         return;
  356               		.loc 1 176 16 is_stmt 0 view .LVU59
  357 0026 FC01      		movw r30,r24
- 358 0028 81A1      		ldd r24,Z+33
+ 358 0028 82A1      		ldd r24,Z+34
  359               	.LVL22:
  176:funsape/util/debug.cpp ****         return;
  360               		.loc 1 176 5 view .LVU60
@@ -658,7 +658,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  176:funsape/util/debug.cpp ****         return;
  363               		.loc 1 176 30 discriminator 1 view .LVU61
  364 002e 672B      		or r22,r23
-GAS LISTING /tmp/cceHfhhS.s 			page 12
+GAS LISTING /tmp/ccXXjp5k.s 			page 12
 
 
  365 0030 01F0      		breq .L10
@@ -704,7 +704,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  186:funsape/util/debug.cpp ****         systemHalt();
  398               		.loc 1 186 15 is_stmt 0 view .LVU69
  399 005e F601      		movw r30,r12
- 400 0060 81A1      		ldd r24,Z+33
+ 400 0060 82A1      		ldd r24,Z+34
  186:funsape/util/debug.cpp ****         systemHalt();
  401               		.loc 1 186 5 view .LVU70
  402 0062 0FB6      		in __tmp_reg__,__SREG__
@@ -718,7 +718,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  409               		.loc 1 186 29 discriminator 1 view .LVU71
  410 0070 012B      		or r16,r17
  411 0072 01F0      		breq .L10
-GAS LISTING /tmp/cceHfhhS.s 			page 13
+GAS LISTING /tmp/ccXXjp5k.s 			page 13
 
 
  187:funsape/util/debug.cpp ****     }
@@ -778,7 +778,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
   49:funsape/util/../globalDefines.hpp **** 
   50:funsape/util/../globalDefines.hpp **** // =============================================================================
   51:funsape/util/../globalDefines.hpp **** // Basic definitions
-GAS LISTING /tmp/cceHfhhS.s 			page 14
+GAS LISTING /tmp/ccXXjp5k.s 			page 14
 
 
   52:funsape/util/../globalDefines.hpp **** // =============================================================================
@@ -838,7 +838,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  106:funsape/util/../globalDefines.hpp **** // =============================================================================
  107:funsape/util/../globalDefines.hpp **** // Constant definitions
  108:funsape/util/../globalDefines.hpp **** // =============================================================================
-GAS LISTING /tmp/cceHfhhS.s 			page 15
+GAS LISTING /tmp/ccXXjp5k.s 			page 15
 
 
  109:funsape/util/../globalDefines.hpp **** 
@@ -898,7 +898,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  163:funsape/util/../globalDefines.hpp **** //!                     and @c PINx register addresses.
  164:funsape/util/../globalDefines.hpp **** //! @param[in]      gpioPort            GPIO port address
  165:funsape/util/../globalDefines.hpp **** //! @retval         true                if GPIO address is valid
-GAS LISTING /tmp/cceHfhhS.s 			page 16
+GAS LISTING /tmp/ccXXjp5k.s 			page 16
 
 
  166:funsape/util/../globalDefines.hpp **** //! @retval         false               if GPIO address is not valid
@@ -958,7 +958,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  220:funsape/util/../globalDefines.hpp **** //!
  221:funsape/util/../globalDefines.hpp **** 
  222:funsape/util/../globalDefines.hpp **** //     //////////////////////     BIT HANDLING     //////////////////////     //
-GAS LISTING /tmp/cceHfhhS.s 			page 17
+GAS LISTING /tmp/ccXXjp5k.s 			page 17
 
 
  223:funsape/util/../globalDefines.hpp **** 
@@ -1018,7 +1018,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  277:funsape/util/../globalDefines.hpp **** 
  278:funsape/util/../globalDefines.hpp **** #ifndef isBitSet
  279:funsape/util/../globalDefines.hpp **** //!
-GAS LISTING /tmp/cceHfhhS.s 			page 18
+GAS LISTING /tmp/ccXXjp5k.s 			page 18
 
 
  280:funsape/util/../globalDefines.hpp **** //! @def            isBitSet(reg, pos)
@@ -1078,7 +1078,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  334:funsape/util/../globalDefines.hpp **** //!                     variable or register.
  335:funsape/util/../globalDefines.hpp **** //! @attention      The desired bits of the mask must be always marked as '1',
  336:funsape/util/../globalDefines.hpp **** //!                     even when the mask is used in a clear operation.
-GAS LISTING /tmp/cceHfhhS.s 			page 19
+GAS LISTING /tmp/ccXXjp5k.s 			page 19
 
 
  337:funsape/util/../globalDefines.hpp **** //! @{
@@ -1138,7 +1138,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  391:funsape/util/../globalDefines.hpp **** //! @param[in]      offset              left-shift offset value
  392:funsape/util/../globalDefines.hpp **** //!
  393:funsape/util/../globalDefines.hpp **** #   define clrMaskOffset(reg, mask, offset)     do{     \
-GAS LISTING /tmp/cceHfhhS.s 			page 20
+GAS LISTING /tmp/ccXXjp5k.s 			page 20
 
 
  394:funsape/util/../globalDefines.hpp ****         (reg) &= ~((mask) << (offset));                 \
@@ -1198,7 +1198,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  448:funsape/util/../globalDefines.hpp **** 
  449:funsape/util/../globalDefines.hpp **** //!
  450:funsape/util/../globalDefines.hpp **** //! @def            clrIoPin(portAddress, portPin)
-GAS LISTING /tmp/cceHfhhS.s 			page 21
+GAS LISTING /tmp/ccXXjp5k.s 			page 21
 
 
  451:funsape/util/../globalDefines.hpp **** //! @brief          Clears a GPIO pin.
@@ -1258,7 +1258,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  505:funsape/util/../globalDefines.hpp **** 
  506:funsape/util/../globalDefines.hpp **** //!
  507:funsape/util/../globalDefines.hpp **** //! @def            byteGetNibble1(dataByte)
-GAS LISTING /tmp/cceHfhhS.s 			page 22
+GAS LISTING /tmp/ccXXjp5k.s 			page 22
 
 
  508:funsape/util/../globalDefines.hpp **** //! @details        Returns the nibble 1 of the given @a dataByte byte.
@@ -1318,7 +1318,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  562:funsape/util/../globalDefines.hpp **** //! @param[in]      dataHword           variable
  563:funsape/util/../globalDefines.hpp **** //! @return         @a dataHword with bytes switched
  564:funsape/util/../globalDefines.hpp **** //!
-GAS LISTING /tmp/cceHfhhS.s 			page 23
+GAS LISTING /tmp/ccXXjp5k.s 			page 23
 
 
  565:funsape/util/../globalDefines.hpp **** #define hwordSwitchBytes(dataHword)     (       \
@@ -1378,7 +1378,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  619:funsape/util/../globalDefines.hpp ****         (wordGetByte0(dataWord) << 24) |        \
  620:funsape/util/../globalDefines.hpp ****         (wordGetByte1(dataWord) << 16) |        \
  621:funsape/util/../globalDefines.hpp ****         (wordGetByte2(dataWord) << 8)  |        \
-GAS LISTING /tmp/cceHfhhS.s 			page 24
+GAS LISTING /tmp/ccXXjp5k.s 			page 24
 
 
  622:funsape/util/../globalDefines.hpp ****         (wordGetByte3(dataWord))                \
@@ -1438,7 +1438,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  676:funsape/util/../globalDefines.hpp **** )
  677:funsape/util/../globalDefines.hpp **** 
  678:funsape/util/../globalDefines.hpp **** //!
-GAS LISTING /tmp/cceHfhhS.s 			page 25
+GAS LISTING /tmp/ccXXjp5k.s 			page 25
 
 
  679:funsape/util/../globalDefines.hpp **** //! @def            dwordGetByte5(dataDword)
@@ -1498,7 +1498,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  733:funsape/util/../globalDefines.hpp **** //!
  734:funsape/util/../globalDefines.hpp **** #define dwordGetByte0(dataDword)        (               \
  735:funsape/util/../globalDefines.hpp ****         (dataDword) & 0x00000000000000FF        \
-GAS LISTING /tmp/cceHfhhS.s 			page 26
+GAS LISTING /tmp/ccXXjp5k.s 			page 26
 
 
  736:funsape/util/../globalDefines.hpp **** )
@@ -1558,7 +1558,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  790:funsape/util/../globalDefines.hpp **** //! @details        Returns the half word 0 of the given @a dataDword double
  791:funsape/util/../globalDefines.hpp **** //!                     word.
  792:funsape/util/../globalDefines.hpp **** //! @param[in]      dataDword           variable
-GAS LISTING /tmp/cceHfhhS.s 			page 27
+GAS LISTING /tmp/ccXXjp5k.s 			page 27
 
 
  793:funsape/util/../globalDefines.hpp **** //! @return         @a dataDword half word 0
@@ -1618,7 +1618,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  847:funsape/util/../globalDefines.hpp **** //! @def            getMaximumOf(var1, var2)
  848:funsape/util/../globalDefines.hpp **** //! @details        Returns the greater value between @a var1 and @a var2.
  849:funsape/util/../globalDefines.hpp **** //! @param[in]      var1                first value
-GAS LISTING /tmp/cceHfhhS.s 			page 28
+GAS LISTING /tmp/ccXXjp5k.s 			page 28
 
 
  850:funsape/util/../globalDefines.hpp **** //! @param[in]      var2                second value
@@ -1678,7 +1678,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  904:funsape/util/../globalDefines.hpp **** // Doxygen: Start subgroup "String_Handling" in "Global_Definitions"
  905:funsape/util/../globalDefines.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  906:funsape/util/../globalDefines.hpp **** 
-GAS LISTING /tmp/cceHfhhS.s 			page 29
+GAS LISTING /tmp/ccXXjp5k.s 			page 29
 
 
  907:funsape/util/../globalDefines.hpp **** //!
@@ -1738,7 +1738,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  961:funsape/util/../globalDefines.hpp **** //!
  962:funsape/util/../globalDefines.hpp **** 
  963:funsape/util/../globalDefines.hpp **** //     ////////////////////     BASIC VARIABLES     /////////////////////     //
-GAS LISTING /tmp/cceHfhhS.s 			page 30
+GAS LISTING /tmp/ccXXjp5k.s 			page 30
 
 
  964:funsape/util/../globalDefines.hpp **** 
@@ -1798,7 +1798,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
 1018:funsape/util/../globalDefines.hpp **** //!
 1019:funsape/util/../globalDefines.hpp **** typedef const uint8_t                   cuint8_t;
 1020:funsape/util/../globalDefines.hpp **** 
-GAS LISTING /tmp/cceHfhhS.s 			page 31
+GAS LISTING /tmp/ccXXjp5k.s 			page 31
 
 
 1021:funsape/util/../globalDefines.hpp **** //!
@@ -1858,7 +1858,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
 1075:funsape/util/../globalDefines.hpp **** typedef volatile int64_t                vint64_t;
 1076:funsape/util/../globalDefines.hpp **** 
 1077:funsape/util/../globalDefines.hpp **** //!
-GAS LISTING /tmp/cceHfhhS.s 			page 32
+GAS LISTING /tmp/ccXXjp5k.s 			page 32
 
 
 1078:funsape/util/../globalDefines.hpp **** //! @typedef        vuint8_t
@@ -1918,7 +1918,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
 1132:funsape/util/../globalDefines.hpp **** //! @typedef        vint_t
 1133:funsape/util/../globalDefines.hpp **** //! @details        Standard <b><tt>volatile int</tt></b> type (16-bit in AVR
 1134:funsape/util/../globalDefines.hpp **** //!                     processors).
-GAS LISTING /tmp/cceHfhhS.s 			page 33
+GAS LISTING /tmp/ccXXjp5k.s 			page 33
 
 
 1135:funsape/util/../globalDefines.hpp **** //!
@@ -1978,7 +1978,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
 1189:funsape/util/../globalDefines.hpp ****     ON              = true              //!< Activated
 1190:funsape/util/../globalDefines.hpp **** };
 1191:funsape/util/../globalDefines.hpp **** 
-GAS LISTING /tmp/cceHfhhS.s 			page 34
+GAS LISTING /tmp/ccXXjp5k.s 			page 34
 
 
 1192:funsape/util/../globalDefines.hpp **** //!
@@ -2038,7 +2038,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
 1246:funsape/util/../globalDefines.hpp **** //!
 1247:funsape/util/../globalDefines.hpp **** //! @enum           Rotation
 1248:funsape/util/../globalDefines.hpp **** //! @details        Used to specify a rotation direction.
-GAS LISTING /tmp/cceHfhhS.s 			page 35
+GAS LISTING /tmp/ccXXjp5k.s 			page 35
 
 
 1249:funsape/util/../globalDefines.hpp **** //!
@@ -2098,7 +2098,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
 1303:funsape/util/../globalDefines.hpp **** //!
 1304:funsape/util/../globalDefines.hpp **** 
 1305:funsape/util/../globalDefines.hpp **** // Implementation of bitwise operators for Axis enum class to allow mask
-GAS LISTING /tmp/cceHfhhS.s 			page 36
+GAS LISTING /tmp/ccXXjp5k.s 			page 36
 
 
 1306:funsape/util/../globalDefines.hpp **** //      combinations.
@@ -2158,7 +2158,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
 1360:funsape/util/../globalDefines.hpp ****     P1          = 1,    //!< Pin located at position 1 of the port
 1361:funsape/util/../globalDefines.hpp ****     P2          = 2,    //!< Pin located at position 2 of the port
 1362:funsape/util/../globalDefines.hpp ****     P3          = 3,    //!< Pin located at position 3 of the port
-GAS LISTING /tmp/cceHfhhS.s 			page 37
+GAS LISTING /tmp/ccXXjp5k.s 			page 37
 
 
 1363:funsape/util/../globalDefines.hpp ****     P4          = 4,    //!< Pin located at position 4 of the port
@@ -2218,7 +2218,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
 1417:funsape/util/../globalDefines.hpp ****     FEATURE_NOT_SUPPORTED               = 0x0042,   //!< Unsupported feature or configuration.
 1418:funsape/util/../globalDefines.hpp ****     MODE_NOT_SUPPORTED                  = 0x0043,   //!< This operation mode is not supported by th
 1419:funsape/util/../globalDefines.hpp **** 
-GAS LISTING /tmp/cceHfhhS.s 			page 38
+GAS LISTING /tmp/ccXXjp5k.s 			page 38
 
 
 1420:funsape/util/../globalDefines.hpp ****     // Function arguments related error codes (0x0050 - 0x005F)
@@ -2278,7 +2278,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
 1474:funsape/util/../globalDefines.hpp ****     // FRAME_ERROR                         = 0x00A8,   //!< The frame is badly formatted or invalid
 1475:funsape/util/../globalDefines.hpp ****     FRAME_FORMAT_NOT_SUPPORTED          = 0x00A9,   //!< The format of the frame is not supported.
 1476:funsape/util/../globalDefines.hpp ****     // MESSAGE_TOO_LONG                    = 0x00AA,   //!< Message is too long to be stored inside
-GAS LISTING /tmp/cceHfhhS.s 			page 39
+GAS LISTING /tmp/ccXXjp5k.s 			page 39
 
 
 1477:funsape/util/../globalDefines.hpp ****     PARITY_ERROR                        = 0x00AB,   //!< A parity check error occurred.
@@ -2338,7 +2338,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
 1531:funsape/util/../globalDefines.hpp **** //! @details        This function returns the lowercase version of the given
 1532:funsape/util/../globalDefines.hpp **** //!                     character @a character_p. If @a character_p is not an
 1533:funsape/util/../globalDefines.hpp **** //!                     uppercase letter, the function will return
-GAS LISTING /tmp/cceHfhhS.s 			page 40
+GAS LISTING /tmp/ccXXjp5k.s 			page 40
 
 
 1534:funsape/util/../globalDefines.hpp **** //!                     @a character_p without change.
@@ -2398,7 +2398,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
 1588:funsape/util/../globalDefines.hpp **** 
 1589:funsape/util/../globalDefines.hpp **** //!
 1590:funsape/util/../globalDefines.hpp **** //! @brief          Verifies if a character is an ASCII letter character.
-GAS LISTING /tmp/cceHfhhS.s 			page 41
+GAS LISTING /tmp/ccXXjp5k.s 			page 41
 
 
 1591:funsape/util/../globalDefines.hpp **** //! @details        This function verifies if the given character @a character_p
@@ -2458,7 +2458,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
 1645:funsape/util/../globalDefines.hpp **** void inlined delayMs(uint32_t time_p);
 1646:funsape/util/../globalDefines.hpp **** 
 1647:funsape/util/../globalDefines.hpp **** void inlined delayUs(uint32_t time_p);
-GAS LISTING /tmp/cceHfhhS.s 			page 42
+GAS LISTING /tmp/ccXXjp5k.s 			page 42
 
 
 1648:funsape/util/../globalDefines.hpp **** 
@@ -2518,7 +2518,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
 1702:funsape/util/../globalDefines.hpp ****             );
 1703:funsape/util/../globalDefines.hpp **** }
 1704:funsape/util/../globalDefines.hpp **** 
-GAS LISTING /tmp/cceHfhhS.s 			page 43
+GAS LISTING /tmp/ccXXjp5k.s 			page 43
 
 
 1705:funsape/util/../globalDefines.hpp **** //     /////////////////////     DATA VALIDITY     //////////////////////     //
@@ -2578,7 +2578,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
 1759:funsape/util/../globalDefines.hpp ****     _delay_ms(time_p);
 1760:funsape/util/../globalDefines.hpp **** 
 1761:funsape/util/../globalDefines.hpp ****     return;
-GAS LISTING /tmp/cceHfhhS.s 			page 44
+GAS LISTING /tmp/ccXXjp5k.s 			page 44
 
 
 1762:funsape/util/../globalDefines.hpp **** }
@@ -2638,7 +2638,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  437               		.loc 1 192 1 view .LVU80
  438 0078 CC59      		subi r28,-100
  439 007a DF4F      		sbci r29,-1
-GAS LISTING /tmp/cceHfhhS.s 			page 45
+GAS LISTING /tmp/ccXXjp5k.s 			page 45
 
 
  440 007c 0FB6      		in __tmp_reg__,__SREG__
@@ -2662,12 +2662,12 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  456               		.loc 1 192 1 view .LVU82
  457 0096 0895      		ret
  458               		.cfi_endproc
- 459               	.LFE134:
+ 459               	.LFE135:
  461               		.section	.text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE,"ax",@progbits
  462               	.global	_ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE
  464               	_ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:
  465               	.LVL29:
- 466               	.LFB135:
+ 466               	.LFB136:
  195:funsape/util/debug.cpp ****     char auxMessage[100];
  467               		.loc 1 195 1 is_stmt 1 view -0
  468               		.cfi_startproc
@@ -2698,7 +2698,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  492               		.cfi_def_cfa_offset 8
  493               		.cfi_offset 17, -7
  494 000c CF93      		push r28
-GAS LISTING /tmp/cceHfhhS.s 			page 46
+GAS LISTING /tmp/ccXXjp5k.s 			page 46
 
 
  495               	.LCFI22:
@@ -2733,7 +2733,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  199:funsape/util/debug.cpp ****         return;
  522               		.loc 1 199 16 is_stmt 0 view .LVU87
  523 0024 FC01      		movw r30,r24
- 524 0026 81A1      		ldd r24,Z+33
+ 524 0026 82A1      		ldd r24,Z+34
  525               	.LVL30:
  199:funsape/util/debug.cpp ****         return;
  526               		.loc 1 199 5 view .LVU88
@@ -2758,7 +2758,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  541 003a 8111      		cpse r24,__zero_reg__
  542 003c 00C0      		rjmp .L22
  543               	.LVL31:
-GAS LISTING /tmp/cceHfhhS.s 			page 47
+GAS LISTING /tmp/ccXXjp5k.s 			page 47
 
 
  544               	.L16:
@@ -2818,7 +2818,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  591 007e 0E94 0000 		call sprintf_P
  592               	.LVL35:
  210:funsape/util/debug.cpp ****     // this->_busHandler->sendData((uint8_t *)auxMessage, strlen(auxMessage));
-GAS LISTING /tmp/cceHfhhS.s 			page 48
+GAS LISTING /tmp/ccXXjp5k.s 			page 48
 
 
  593               		.loc 1 210 5 is_stmt 1 view .LVU100
@@ -2833,7 +2833,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  214:funsape/util/debug.cpp ****         systemHalt();
  600               		.loc 1 214 15 is_stmt 0 view .LVU103
  601 008a F701      		movw r30,r14
- 602 008c 81A1      		ldd r24,Z+33
+ 602 008c 82A1      		ldd r24,Z+34
  214:funsape/util/debug.cpp ****         systemHalt();
  603               		.loc 1 214 5 view .LVU104
  604 008e 0FB6      		in __tmp_reg__,__SREG__
@@ -2874,15 +2874,15 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  632               	.LBE19:
  633               	.LBE18:
  634               		.cfi_endproc
- 635               	.LFE135:
+ 635               	.LFE136:
  637               		.section	.text._ZN5Debug12printMessageEPKc,"ax",@progbits
  638               	.global	_ZN5Debug12printMessageEPKc
  640               	_ZN5Debug12printMessageEPKc:
-GAS LISTING /tmp/cceHfhhS.s 			page 49
+GAS LISTING /tmp/ccXXjp5k.s 			page 49
 
 
  641               	.LVL38:
- 642               	.LFB136:
+ 642               	.LFB137:
  223:funsape/util/debug.cpp ****     // Sends message
  643               		.loc 1 223 1 view -0
  644               		.cfi_startproc
@@ -2936,13 +2936,13 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  685               		.loc 1 231 1 view .LVU122
  686 001c 0895      		ret
  687               		.cfi_endproc
- 688               	.LFE136:
+ 688               	.LFE137:
  690               		.section	.text._GLOBAL__sub_I_debug,"ax",@progbits
-GAS LISTING /tmp/cceHfhhS.s 			page 50
+GAS LISTING /tmp/ccXXjp5k.s 			page 50
 
 
  692               	_GLOBAL__sub_I_debug:
- 693               	.LFB139:
+ 693               	.LFB140:
  694               		.loc 1 231 1 is_stmt 1 view -0
  695               		.cfi_startproc
  696               	/* prologue: function */
@@ -2955,7 +2955,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  703               	/* epilogue start */
  704 0004 0895      		ret
  705               		.cfi_endproc
- 706               	.LFE139:
+ 706               	.LFE140:
  708               		.global __do_global_ctors
  709               		.section .ctors,"a",@progbits
  710               		.p2align	1
@@ -2982,7 +2982,7 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  727               	.global	debug
  728               		.section	.bss.debug,"aw",@nobits
  731               	debug:
- 732 0000 0000 0000 		.zero	36
+ 732 0000 0000 0000 		.zero	37
  732      0000 0000 
  732      0000 0000 
  732      0000 0000 
@@ -2993,366 +2993,366 @@ GAS LISTING /tmp/cceHfhhS.s 			page 1
  736               		.file 4 "funsape/util/../config/atmega328p.hpp"
  737               		.file 5 "funsape/util/debug.hpp"
  738               		.file 6 "/usr/avr/include/stdio.h"
-GAS LISTING /tmp/cceHfhhS.s 			page 51
+GAS LISTING /tmp/ccXXjp5k.s 			page 51
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 debug.cpp
-     /tmp/cceHfhhS.s:2      *ABS*:0000003e __SP_H__
-     /tmp/cceHfhhS.s:3      *ABS*:0000003d __SP_L__
-     /tmp/cceHfhhS.s:4      *ABS*:0000003f __SREG__
-     /tmp/cceHfhhS.s:5      *ABS*:00000000 __tmp_reg__
-     /tmp/cceHfhhS.s:6      *ABS*:00000001 __zero_reg__
-     /tmp/cceHfhhS.s:14     .text._ZN5DebugC2Ev:00000000 _ZN5DebugC2Ev
-     /tmp/cceHfhhS.s:17     .text._ZN5DebugC2Ev:00000000 .Loc.0
-     /tmp/cceHfhhS.s:18     .text._ZN5DebugC2Ev:00000000 L0
-     /tmp/cceHfhhS.s:23     .text._ZN5DebugC2Ev:00000000 .Loc.1
-     /tmp/cceHfhhS.s:26     .text._ZN5DebugC2Ev:00000002 .Loc.2
-     /tmp/cceHfhhS.s:29     .text._ZN5DebugC2Ev:00000004 .Loc.3
-     /tmp/cceHfhhS.s:33     .text._ZN5DebugC2Ev:00000008 .Loc.4
-     /tmp/cceHfhhS.s:37     .text._ZN5DebugC2Ev:0000000c .Loc.5
-     /tmp/cceHfhhS.s:40     .text._ZN5DebugC2Ev:0000000e .Loc.6
-     /tmp/cceHfhhS.s:44     .text._ZN5DebugC2Ev:00000014 .Loc.7
-     /tmp/cceHfhhS.s:47     .text._ZN5DebugC2Ev:00000018 .Loc.8
-     /tmp/cceHfhhS.s:51     .text._ZN5DebugC2Ev:0000001c .Loc.9
-     /tmp/cceHfhhS.s:57     .text._ZN5DebugC2Ev:00000024 .Loc.10
-     /tmp/cceHfhhS.s:60     .text._ZN5DebugC2Ev:00000026 .Loc.11
-     /tmp/cceHfhhS.s:62     .text._ZN5DebugC2Ev:00000026 .Loc.12
-     /tmp/cceHfhhS.s:64     .text._ZN5DebugC2Ev:00000028 .Loc.13
-     /tmp/cceHfhhS.s:68     .text._ZN5DebugC2Ev:0000002a .Loc.14
-     /tmp/cceHfhhS.s:69     .text._ZN5DebugC2Ev:0000002a .Loc.15
-     /tmp/cceHfhhS.s:74     .text._ZN5DebugC2Ev:00000032 .Loc.16
-     /tmp/cceHfhhS.s:78     .text._ZN5DebugC2Ev:00000034 .Loc.17
-     /tmp/cceHfhhS.s:84     .text._ZN5DebugC2Ev:00000038 .Loc.18
-     /tmp/cceHfhhS.s:86     .text._ZN5DebugC2Ev:0000003a L0
-     /tmp/cceHfhhS.s:14     .text._ZN5DebugC2Ev:00000000 _ZN5DebugC1Ev
-     /tmp/cceHfhhS.s:93     .text._Z41__static_initialization_and_destruction_0v:00000000 _Z41__static_initialization_and_destruction_0v
-     /tmp/cceHfhhS.s:95     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.19
-     /tmp/cceHfhhS.s:96     .text._Z41__static_initialization_and_destruction_0v:00000000 L0
-     /tmp/cceHfhhS.s:101    .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.20
-     /tmp/cceHfhhS.s:731    .bss.debug:00000000 debug
-     /tmp/cceHfhhS.s:107    .text._Z41__static_initialization_and_destruction_0v:00000008 .Loc.21
-     /tmp/cceHfhhS.s:109    .text._Z41__static_initialization_and_destruction_0v:0000000a L0
-     /tmp/cceHfhhS.s:115    .text._ZN5DebugD2Ev:00000000 _ZN5DebugD2Ev
-     /tmp/cceHfhhS.s:118    .text._ZN5DebugD2Ev:00000000 .Loc.22
-     /tmp/cceHfhhS.s:119    .text._ZN5DebugD2Ev:00000000 L0
-     /tmp/cceHfhhS.s:125    .text._ZN5DebugD2Ev:00000000 .Loc.23
-     /tmp/cceHfhhS.s:128    .text._ZN5DebugD2Ev:00000000 .Loc.24
-     /tmp/cceHfhhS.s:130    .text._ZN5DebugD2Ev:00000002 L0
-     /tmp/cceHfhhS.s:115    .text._ZN5DebugD2Ev:00000000 _ZN5DebugD1Ev
-     /tmp/cceHfhhS.s:138    .text._ZN5Debug4initEb:00000000 _ZN5Debug4initEb
-     /tmp/cceHfhhS.s:141    .text._ZN5Debug4initEb:00000000 .Loc.25
-     /tmp/cceHfhhS.s:142    .text._ZN5Debug4initEb:00000000 L0
-     /tmp/cceHfhhS.s:147    .text._ZN5Debug4initEb:00000000 .Loc.26
-     /tmp/cceHfhhS.s:149    .text._ZN5Debug4initEb:00000002 .Loc.27
-     /tmp/cceHfhhS.s:150    .text._ZN5Debug4initEb:00000002 .Loc.28
-     /tmp/cceHfhhS.s:153    .text._ZN5Debug4initEb:00000004 .Loc.29
-     /tmp/cceHfhhS.s:156    .text._ZN5Debug4initEb:00000008 .Loc.30
-     /tmp/cceHfhhS.s:157    .text._ZN5Debug4initEb:00000008 .Loc.31
-     /tmp/cceHfhhS.s:162    .text._ZN5Debug4initEb:00000010 .Loc.32
-     /tmp/cceHfhhS.s:163    .text._ZN5Debug4initEb:00000010 .Loc.33
-     /tmp/cceHfhhS.s:166    .text._ZN5Debug4initEb:00000014 .Loc.34
-     /tmp/cceHfhhS.s:167    .text._ZN5Debug4initEb:00000014 .Loc.35
-GAS LISTING /tmp/cceHfhhS.s 			page 52
+     /tmp/ccXXjp5k.s:2      *ABS*:0000003e __SP_H__
+     /tmp/ccXXjp5k.s:3      *ABS*:0000003d __SP_L__
+     /tmp/ccXXjp5k.s:4      *ABS*:0000003f __SREG__
+     /tmp/ccXXjp5k.s:5      *ABS*:00000000 __tmp_reg__
+     /tmp/ccXXjp5k.s:6      *ABS*:00000001 __zero_reg__
+     /tmp/ccXXjp5k.s:14     .text._ZN5DebugC2Ev:00000000 _ZN5DebugC2Ev
+     /tmp/ccXXjp5k.s:17     .text._ZN5DebugC2Ev:00000000 .Loc.0
+     /tmp/ccXXjp5k.s:18     .text._ZN5DebugC2Ev:00000000 L0
+     /tmp/ccXXjp5k.s:23     .text._ZN5DebugC2Ev:00000000 .Loc.1
+     /tmp/ccXXjp5k.s:26     .text._ZN5DebugC2Ev:00000002 .Loc.2
+     /tmp/ccXXjp5k.s:29     .text._ZN5DebugC2Ev:00000004 .Loc.3
+     /tmp/ccXXjp5k.s:33     .text._ZN5DebugC2Ev:00000008 .Loc.4
+     /tmp/ccXXjp5k.s:37     .text._ZN5DebugC2Ev:0000000c .Loc.5
+     /tmp/ccXXjp5k.s:40     .text._ZN5DebugC2Ev:0000000e .Loc.6
+     /tmp/ccXXjp5k.s:44     .text._ZN5DebugC2Ev:00000014 .Loc.7
+     /tmp/ccXXjp5k.s:47     .text._ZN5DebugC2Ev:00000018 .Loc.8
+     /tmp/ccXXjp5k.s:51     .text._ZN5DebugC2Ev:0000001c .Loc.9
+     /tmp/ccXXjp5k.s:57     .text._ZN5DebugC2Ev:00000024 .Loc.10
+     /tmp/ccXXjp5k.s:60     .text._ZN5DebugC2Ev:00000026 .Loc.11
+     /tmp/ccXXjp5k.s:62     .text._ZN5DebugC2Ev:00000026 .Loc.12
+     /tmp/ccXXjp5k.s:64     .text._ZN5DebugC2Ev:00000028 .Loc.13
+     /tmp/ccXXjp5k.s:68     .text._ZN5DebugC2Ev:0000002a .Loc.14
+     /tmp/ccXXjp5k.s:69     .text._ZN5DebugC2Ev:0000002a .Loc.15
+     /tmp/ccXXjp5k.s:74     .text._ZN5DebugC2Ev:00000032 .Loc.16
+     /tmp/ccXXjp5k.s:78     .text._ZN5DebugC2Ev:00000034 .Loc.17
+     /tmp/ccXXjp5k.s:84     .text._ZN5DebugC2Ev:00000038 .Loc.18
+     /tmp/ccXXjp5k.s:86     .text._ZN5DebugC2Ev:0000003a L0
+     /tmp/ccXXjp5k.s:14     .text._ZN5DebugC2Ev:00000000 _ZN5DebugC1Ev
+     /tmp/ccXXjp5k.s:93     .text._Z41__static_initialization_and_destruction_0v:00000000 _Z41__static_initialization_and_destruction_0v
+     /tmp/ccXXjp5k.s:95     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.19
+     /tmp/ccXXjp5k.s:96     .text._Z41__static_initialization_and_destruction_0v:00000000 L0
+     /tmp/ccXXjp5k.s:101    .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.20
+     /tmp/ccXXjp5k.s:731    .bss.debug:00000000 debug
+     /tmp/ccXXjp5k.s:107    .text._Z41__static_initialization_and_destruction_0v:00000008 .Loc.21
+     /tmp/ccXXjp5k.s:109    .text._Z41__static_initialization_and_destruction_0v:0000000a L0
+     /tmp/ccXXjp5k.s:115    .text._ZN5DebugD2Ev:00000000 _ZN5DebugD2Ev
+     /tmp/ccXXjp5k.s:118    .text._ZN5DebugD2Ev:00000000 .Loc.22
+     /tmp/ccXXjp5k.s:119    .text._ZN5DebugD2Ev:00000000 L0
+     /tmp/ccXXjp5k.s:125    .text._ZN5DebugD2Ev:00000000 .Loc.23
+     /tmp/ccXXjp5k.s:128    .text._ZN5DebugD2Ev:00000000 .Loc.24
+     /tmp/ccXXjp5k.s:130    .text._ZN5DebugD2Ev:00000002 L0
+     /tmp/ccXXjp5k.s:115    .text._ZN5DebugD2Ev:00000000 _ZN5DebugD1Ev
+     /tmp/ccXXjp5k.s:138    .text._ZN5Debug4initEb:00000000 _ZN5Debug4initEb
+     /tmp/ccXXjp5k.s:141    .text._ZN5Debug4initEb:00000000 .Loc.25
+     /tmp/ccXXjp5k.s:142    .text._ZN5Debug4initEb:00000000 L0
+     /tmp/ccXXjp5k.s:147    .text._ZN5Debug4initEb:00000000 .Loc.26
+     /tmp/ccXXjp5k.s:149    .text._ZN5Debug4initEb:00000002 .Loc.27
+     /tmp/ccXXjp5k.s:150    .text._ZN5Debug4initEb:00000002 .Loc.28
+     /tmp/ccXXjp5k.s:153    .text._ZN5Debug4initEb:00000004 .Loc.29
+     /tmp/ccXXjp5k.s:156    .text._ZN5Debug4initEb:00000008 .Loc.30
+     /tmp/ccXXjp5k.s:157    .text._ZN5Debug4initEb:00000008 .Loc.31
+     /tmp/ccXXjp5k.s:162    .text._ZN5Debug4initEb:00000010 .Loc.32
+     /tmp/ccXXjp5k.s:163    .text._ZN5Debug4initEb:00000010 .Loc.33
+     /tmp/ccXXjp5k.s:166    .text._ZN5Debug4initEb:00000014 .Loc.34
+     /tmp/ccXXjp5k.s:167    .text._ZN5Debug4initEb:00000014 .Loc.35
+GAS LISTING /tmp/ccXXjp5k.s 			page 52
 
 
-     /tmp/cceHfhhS.s:171    .text._ZN5Debug4initEb:00000018 L0
-     /tmp/cceHfhhS.s:177    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000000 _ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE
-     /tmp/cceHfhhS.s:180    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000000 .Loc.36
-     /tmp/cceHfhhS.s:181    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000000 L0
-     /tmp/cceHfhhS.s:182    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000000 .Loc.37
-     /tmp/cceHfhhS.s:216    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000001a .Loc.38
-     /tmp/cceHfhhS.s:217    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000001a .Loc.39
-     /tmp/cceHfhhS.s:218    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000001a .Loc.40
-     /tmp/cceHfhhS.s:221    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000001e .Loc.41
-     /tmp/cceHfhhS.s:224    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000022 .Loc.42
-     /tmp/cceHfhhS.s:225    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000022 .Loc.43
-     /tmp/cceHfhhS.s:229    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000026 .Loc.44
-     /tmp/cceHfhhS.s:232    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000002a .Loc.45
-     /tmp/cceHfhhS.s:238    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000002e .Loc.46
-     /tmp/cceHfhhS.s:253    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000046 .Loc.47
-     /tmp/cceHfhhS.s:255    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000046 .Loc.48
-     /tmp/cceHfhhS.s:256    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000046 .Loc.49
-     /tmp/cceHfhhS.s:258    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000046 .Loc.50
-     /tmp/cceHfhhS.s:725    .progmem.data._ZZN5Debug7logMarkEPKhjS1_NS_9CodeIndexEE3__c:00000000 _ZZN5Debug7logMarkEPKhjS1_NS_9CodeIndexEE3__c
-     /tmp/cceHfhhS.s:271    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000005c .Loc.51
-     /tmp/cceHfhhS.s:278    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000068 .Loc.52
-     /tmp/cceHfhhS.s:279    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000068 .Loc.53
-     /tmp/cceHfhhS.s:284    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000070 .Loc.54
-     /tmp/cceHfhhS.s:291    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000007c L0
-     /tmp/cceHfhhS.s:297    .text._ZN5Debug10logMessageE5ErrorPKhj:00000000 _ZN5Debug10logMessageE5ErrorPKhj
-     /tmp/cceHfhhS.s:300    .text._ZN5Debug10logMessageE5ErrorPKhj:00000000 .Loc.55
-     /tmp/cceHfhhS.s:301    .text._ZN5Debug10logMessageE5ErrorPKhj:00000000 L0
-     /tmp/cceHfhhS.s:302    .text._ZN5Debug10logMessageE5ErrorPKhj:00000000 .Loc.56
-     /tmp/cceHfhhS.s:354    .text._ZN5Debug10logMessageE5ErrorPKhj:00000026 .Loc.57
-     /tmp/cceHfhhS.s:355    .text._ZN5Debug10logMessageE5ErrorPKhj:00000026 .Loc.58
-     /tmp/cceHfhhS.s:356    .text._ZN5Debug10logMessageE5ErrorPKhj:00000026 .Loc.59
-     /tmp/cceHfhhS.s:360    .text._ZN5Debug10logMessageE5ErrorPKhj:0000002a .Loc.60
-     /tmp/cceHfhhS.s:363    .text._ZN5Debug10logMessageE5ErrorPKhj:0000002e .Loc.61
-     /tmp/cceHfhhS.s:367    .text._ZN5Debug10logMessageE5ErrorPKhj:00000032 .Loc.62
-     /tmp/cceHfhhS.s:369    .text._ZN5Debug10logMessageE5ErrorPKhj:00000032 .Loc.63
-     /tmp/cceHfhhS.s:370    .text._ZN5Debug10logMessageE5ErrorPKhj:00000032 .Loc.64
-     /tmp/cceHfhhS.s:372    .text._ZN5Debug10logMessageE5ErrorPKhj:00000032 .Loc.65
-     /tmp/cceHfhhS.s:720    .progmem.data._ZZN5Debug10logMessageE5ErrorPKhjE3__c:00000000 _ZZN5Debug10logMessageE5ErrorPKhjE3__c
-     /tmp/cceHfhhS.s:391    .text._ZN5Debug10logMessageE5ErrorPKhj:00000056 .Loc.66
-     /tmp/cceHfhhS.s:392    .text._ZN5Debug10logMessageE5ErrorPKhj:00000056 .Loc.67
-     /tmp/cceHfhhS.s:397    .text._ZN5Debug10logMessageE5ErrorPKhj:0000005e .Loc.68
-     /tmp/cceHfhhS.s:398    .text._ZN5Debug10logMessageE5ErrorPKhj:0000005e .Loc.69
-     /tmp/cceHfhhS.s:401    .text._ZN5Debug10logMessageE5ErrorPKhj:00000062 .Loc.70
-     /tmp/cceHfhhS.s:409    .text._ZN5Debug10logMessageE5ErrorPKhj:00000070 .Loc.71
-     /tmp/cceHfhhS.s:412    .text._ZN5Debug10logMessageE5ErrorPKhj:00000074 .Loc.72
-     /tmp/cceHfhhS.s:417    .text._ZN5Debug10logMessageE5ErrorPKhj:00000074 .Loc.73
-     /tmp/cceHfhhS.s:419    .text._ZN5Debug10logMessageE5ErrorPKhj:00000074 .Loc.74
-     /tmp/cceHfhhS.s:420    .text._ZN5Debug10logMessageE5ErrorPKhj:00000074 .Loc.75
-     /tmp/cceHfhhS.s:427    .text._ZN5Debug10logMessageE5ErrorPKhj:00000076 .Loc.76
-     /tmp/cceHfhhS.s:428    .text._ZN5Debug10logMessageE5ErrorPKhj:00000076 .Loc.77
-     /tmp/cceHfhhS.s:429    .text._ZN5Debug10logMessageE5ErrorPKhj:00000076 .Loc.78
-     /tmp/cceHfhhS.s:434    .text._ZN5Debug10logMessageE5ErrorPKhj:00000078 .Loc.79
-     /tmp/cceHfhhS.s:437    .text._ZN5Debug10logMessageE5ErrorPKhj:00000078 .Loc.80
-     /tmp/cceHfhhS.s:450    .text._ZN5Debug10logMessageE5ErrorPKhj:0000008e .Loc.81
-     /tmp/cceHfhhS.s:456    .text._ZN5Debug10logMessageE5ErrorPKhj:00000096 .Loc.82
-     /tmp/cceHfhhS.s:458    .text._ZN5Debug10logMessageE5ErrorPKhj:00000098 L0
-     /tmp/cceHfhhS.s:464    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000000 _ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE
-GAS LISTING /tmp/cceHfhhS.s 			page 53
+     /tmp/ccXXjp5k.s:171    .text._ZN5Debug4initEb:00000018 L0
+     /tmp/ccXXjp5k.s:177    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000000 _ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE
+     /tmp/ccXXjp5k.s:180    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000000 .Loc.36
+     /tmp/ccXXjp5k.s:181    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000000 L0
+     /tmp/ccXXjp5k.s:182    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000000 .Loc.37
+     /tmp/ccXXjp5k.s:216    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000001a .Loc.38
+     /tmp/ccXXjp5k.s:217    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000001a .Loc.39
+     /tmp/ccXXjp5k.s:218    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000001a .Loc.40
+     /tmp/ccXXjp5k.s:221    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000001e .Loc.41
+     /tmp/ccXXjp5k.s:224    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000022 .Loc.42
+     /tmp/ccXXjp5k.s:225    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000022 .Loc.43
+     /tmp/ccXXjp5k.s:229    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000026 .Loc.44
+     /tmp/ccXXjp5k.s:232    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000002a .Loc.45
+     /tmp/ccXXjp5k.s:238    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000002e .Loc.46
+     /tmp/ccXXjp5k.s:253    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000046 .Loc.47
+     /tmp/ccXXjp5k.s:255    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000046 .Loc.48
+     /tmp/ccXXjp5k.s:256    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000046 .Loc.49
+     /tmp/ccXXjp5k.s:258    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000046 .Loc.50
+     /tmp/ccXXjp5k.s:725    .progmem.data._ZZN5Debug7logMarkEPKhjS1_NS_9CodeIndexEE3__c:00000000 _ZZN5Debug7logMarkEPKhjS1_NS_9CodeIndexEE3__c
+     /tmp/ccXXjp5k.s:271    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000005c .Loc.51
+     /tmp/ccXXjp5k.s:278    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000068 .Loc.52
+     /tmp/ccXXjp5k.s:279    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000068 .Loc.53
+     /tmp/ccXXjp5k.s:284    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000070 .Loc.54
+     /tmp/ccXXjp5k.s:291    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000007c L0
+     /tmp/ccXXjp5k.s:297    .text._ZN5Debug10logMessageE5ErrorPKhj:00000000 _ZN5Debug10logMessageE5ErrorPKhj
+     /tmp/ccXXjp5k.s:300    .text._ZN5Debug10logMessageE5ErrorPKhj:00000000 .Loc.55
+     /tmp/ccXXjp5k.s:301    .text._ZN5Debug10logMessageE5ErrorPKhj:00000000 L0
+     /tmp/ccXXjp5k.s:302    .text._ZN5Debug10logMessageE5ErrorPKhj:00000000 .Loc.56
+     /tmp/ccXXjp5k.s:354    .text._ZN5Debug10logMessageE5ErrorPKhj:00000026 .Loc.57
+     /tmp/ccXXjp5k.s:355    .text._ZN5Debug10logMessageE5ErrorPKhj:00000026 .Loc.58
+     /tmp/ccXXjp5k.s:356    .text._ZN5Debug10logMessageE5ErrorPKhj:00000026 .Loc.59
+     /tmp/ccXXjp5k.s:360    .text._ZN5Debug10logMessageE5ErrorPKhj:0000002a .Loc.60
+     /tmp/ccXXjp5k.s:363    .text._ZN5Debug10logMessageE5ErrorPKhj:0000002e .Loc.61
+     /tmp/ccXXjp5k.s:367    .text._ZN5Debug10logMessageE5ErrorPKhj:00000032 .Loc.62
+     /tmp/ccXXjp5k.s:369    .text._ZN5Debug10logMessageE5ErrorPKhj:00000032 .Loc.63
+     /tmp/ccXXjp5k.s:370    .text._ZN5Debug10logMessageE5ErrorPKhj:00000032 .Loc.64
+     /tmp/ccXXjp5k.s:372    .text._ZN5Debug10logMessageE5ErrorPKhj:00000032 .Loc.65
+     /tmp/ccXXjp5k.s:720    .progmem.data._ZZN5Debug10logMessageE5ErrorPKhjE3__c:00000000 _ZZN5Debug10logMessageE5ErrorPKhjE3__c
+     /tmp/ccXXjp5k.s:391    .text._ZN5Debug10logMessageE5ErrorPKhj:00000056 .Loc.66
+     /tmp/ccXXjp5k.s:392    .text._ZN5Debug10logMessageE5ErrorPKhj:00000056 .Loc.67
+     /tmp/ccXXjp5k.s:397    .text._ZN5Debug10logMessageE5ErrorPKhj:0000005e .Loc.68
+     /tmp/ccXXjp5k.s:398    .text._ZN5Debug10logMessageE5ErrorPKhj:0000005e .Loc.69
+     /tmp/ccXXjp5k.s:401    .text._ZN5Debug10logMessageE5ErrorPKhj:00000062 .Loc.70
+     /tmp/ccXXjp5k.s:409    .text._ZN5Debug10logMessageE5ErrorPKhj:00000070 .Loc.71
+     /tmp/ccXXjp5k.s:412    .text._ZN5Debug10logMessageE5ErrorPKhj:00000074 .Loc.72
+     /tmp/ccXXjp5k.s:417    .text._ZN5Debug10logMessageE5ErrorPKhj:00000074 .Loc.73
+     /tmp/ccXXjp5k.s:419    .text._ZN5Debug10logMessageE5ErrorPKhj:00000074 .Loc.74
+     /tmp/ccXXjp5k.s:420    .text._ZN5Debug10logMessageE5ErrorPKhj:00000074 .Loc.75
+     /tmp/ccXXjp5k.s:427    .text._ZN5Debug10logMessageE5ErrorPKhj:00000076 .Loc.76
+     /tmp/ccXXjp5k.s:428    .text._ZN5Debug10logMessageE5ErrorPKhj:00000076 .Loc.77
+     /tmp/ccXXjp5k.s:429    .text._ZN5Debug10logMessageE5ErrorPKhj:00000076 .Loc.78
+     /tmp/ccXXjp5k.s:434    .text._ZN5Debug10logMessageE5ErrorPKhj:00000078 .Loc.79
+     /tmp/ccXXjp5k.s:437    .text._ZN5Debug10logMessageE5ErrorPKhj:00000078 .Loc.80
+     /tmp/ccXXjp5k.s:450    .text._ZN5Debug10logMessageE5ErrorPKhj:0000008e .Loc.81
+     /tmp/ccXXjp5k.s:456    .text._ZN5Debug10logMessageE5ErrorPKhj:00000096 .Loc.82
+     /tmp/ccXXjp5k.s:458    .text._ZN5Debug10logMessageE5ErrorPKhj:00000098 L0
+     /tmp/ccXXjp5k.s:464    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000000 _ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE
+GAS LISTING /tmp/ccXXjp5k.s 			page 53
 
 
-     /tmp/cceHfhhS.s:467    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000000 .Loc.83
-     /tmp/cceHfhhS.s:468    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000000 L0
-     /tmp/cceHfhhS.s:469    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000000 .Loc.84
-     /tmp/cceHfhhS.s:520    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000024 .Loc.85
-     /tmp/cceHfhhS.s:521    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000024 .Loc.86
-     /tmp/cceHfhhS.s:522    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000024 .Loc.87
-     /tmp/cceHfhhS.s:526    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000028 .Loc.88
-     /tmp/cceHfhhS.s:529    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000002c .Loc.89
-     /tmp/cceHfhhS.s:534    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000032 .Loc.90
-     /tmp/cceHfhhS.s:535    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000032 .Loc.91
-     /tmp/cceHfhhS.s:540    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000003a .Loc.92
-     /tmp/cceHfhhS.s:546    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000003e .Loc.93
-     /tmp/cceHfhhS.s:561    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000058 .Loc.94
-     /tmp/cceHfhhS.s:567    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000005e .Loc.95
-     /tmp/cceHfhhS.s:569    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000005e .Loc.96
-     /tmp/cceHfhhS.s:570    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000005e .Loc.97
-     /tmp/cceHfhhS.s:572    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000005e .Loc.98
-     /tmp/cceHfhhS.s:715    .progmem.data._ZZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexEE3__c:00000000 _ZZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexEE3__c
-     /tmp/cceHfhhS.s:586    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000076 .Loc.99
-     /tmp/cceHfhhS.s:593    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000082 .Loc.100
-     /tmp/cceHfhhS.s:594    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000082 .Loc.101
-     /tmp/cceHfhhS.s:599    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000008a .Loc.102
-     /tmp/cceHfhhS.s:600    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000008a .Loc.103
-     /tmp/cceHfhhS.s:603    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000008e .Loc.104
-     /tmp/cceHfhhS.s:611    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000009c .Loc.105
-     /tmp/cceHfhhS.s:614    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a0 .Loc.106
-     /tmp/cceHfhhS.s:618    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a0 .Loc.107
-     /tmp/cceHfhhS.s:620    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a0 .Loc.108
-     /tmp/cceHfhhS.s:621    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a0 .Loc.109
-     /tmp/cceHfhhS.s:628    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a2 .Loc.110
-     /tmp/cceHfhhS.s:629    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a2 .Loc.111
-     /tmp/cceHfhhS.s:630    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a2 .Loc.112
-     /tmp/cceHfhhS.s:634    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a4 L0
-     /tmp/cceHfhhS.s:640    .text._ZN5Debug12printMessageEPKc:00000000 _ZN5Debug12printMessageEPKc
-     /tmp/cceHfhhS.s:643    .text._ZN5Debug12printMessageEPKc:00000000 .Loc.113
-     /tmp/cceHfhhS.s:644    .text._ZN5Debug12printMessageEPKc:00000000 L0
-     /tmp/cceHfhhS.s:645    .text._ZN5Debug12printMessageEPKc:00000000 .Loc.114
-     /tmp/cceHfhhS.s:659    .text._ZN5Debug12printMessageEPKc:00000006 .Loc.115
-     /tmp/cceHfhhS.s:660    .text._ZN5Debug12printMessageEPKc:00000006 .Loc.116
-     /tmp/cceHfhhS.s:669    .text._ZN5Debug12printMessageEPKc:0000000e .Loc.117
-     /tmp/cceHfhhS.s:670    .text._ZN5Debug12printMessageEPKc:0000000e .Loc.118
-     /tmp/cceHfhhS.s:673    .text._ZN5Debug12printMessageEPKc:00000012 .Loc.119
-     /tmp/cceHfhhS.s:674    .text._ZN5Debug12printMessageEPKc:00000012 .Loc.120
-     /tmp/cceHfhhS.s:679    .text._ZN5Debug12printMessageEPKc:00000016 .Loc.121
-     /tmp/cceHfhhS.s:685    .text._ZN5Debug12printMessageEPKc:0000001c .Loc.122
-     /tmp/cceHfhhS.s:687    .text._ZN5Debug12printMessageEPKc:0000001e L0
-     /tmp/cceHfhhS.s:692    .text._GLOBAL__sub_I_debug:00000000 _GLOBAL__sub_I_debug
-     /tmp/cceHfhhS.s:694    .text._GLOBAL__sub_I_debug:00000000 .Loc.123
-     /tmp/cceHfhhS.s:695    .text._GLOBAL__sub_I_debug:00000000 L0
-     /tmp/cceHfhhS.s:700    .text._GLOBAL__sub_I_debug:00000000 .Loc.124
-     /tmp/cceHfhhS.s:705    .text._GLOBAL__sub_I_debug:00000006 L0
-     /tmp/cceHfhhS.s:91     .text._ZN5DebugC2Ev:0000003a L0
-     /tmp/cceHfhhS.s:112    .text._Z41__static_initialization_and_destruction_0v:0000000a L0
-     /tmp/cceHfhhS.s:135    .text._ZN5DebugD2Ev:00000002 L0
-     /tmp/cceHfhhS.s:174    .text._ZN5Debug4initEb:00000018 L0
-     /tmp/cceHfhhS.s:294    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000007c L0
-     /tmp/cceHfhhS.s:461    .text._ZN5Debug10logMessageE5ErrorPKhj:00000098 L0
-GAS LISTING /tmp/cceHfhhS.s 			page 54
+     /tmp/ccXXjp5k.s:467    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000000 .Loc.83
+     /tmp/ccXXjp5k.s:468    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000000 L0
+     /tmp/ccXXjp5k.s:469    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000000 .Loc.84
+     /tmp/ccXXjp5k.s:520    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000024 .Loc.85
+     /tmp/ccXXjp5k.s:521    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000024 .Loc.86
+     /tmp/ccXXjp5k.s:522    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000024 .Loc.87
+     /tmp/ccXXjp5k.s:526    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000028 .Loc.88
+     /tmp/ccXXjp5k.s:529    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000002c .Loc.89
+     /tmp/ccXXjp5k.s:534    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000032 .Loc.90
+     /tmp/ccXXjp5k.s:535    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000032 .Loc.91
+     /tmp/ccXXjp5k.s:540    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000003a .Loc.92
+     /tmp/ccXXjp5k.s:546    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000003e .Loc.93
+     /tmp/ccXXjp5k.s:561    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000058 .Loc.94
+     /tmp/ccXXjp5k.s:567    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000005e .Loc.95
+     /tmp/ccXXjp5k.s:569    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000005e .Loc.96
+     /tmp/ccXXjp5k.s:570    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000005e .Loc.97
+     /tmp/ccXXjp5k.s:572    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000005e .Loc.98
+     /tmp/ccXXjp5k.s:715    .progmem.data._ZZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexEE3__c:00000000 _ZZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexEE3__c
+     /tmp/ccXXjp5k.s:586    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000076 .Loc.99
+     /tmp/ccXXjp5k.s:593    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000082 .Loc.100
+     /tmp/ccXXjp5k.s:594    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000082 .Loc.101
+     /tmp/ccXXjp5k.s:599    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000008a .Loc.102
+     /tmp/ccXXjp5k.s:600    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000008a .Loc.103
+     /tmp/ccXXjp5k.s:603    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000008e .Loc.104
+     /tmp/ccXXjp5k.s:611    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000009c .Loc.105
+     /tmp/ccXXjp5k.s:614    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a0 .Loc.106
+     /tmp/ccXXjp5k.s:618    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a0 .Loc.107
+     /tmp/ccXXjp5k.s:620    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a0 .Loc.108
+     /tmp/ccXXjp5k.s:621    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a0 .Loc.109
+     /tmp/ccXXjp5k.s:628    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a2 .Loc.110
+     /tmp/ccXXjp5k.s:629    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a2 .Loc.111
+     /tmp/ccXXjp5k.s:630    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a2 .Loc.112
+     /tmp/ccXXjp5k.s:634    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a4 L0
+     /tmp/ccXXjp5k.s:640    .text._ZN5Debug12printMessageEPKc:00000000 _ZN5Debug12printMessageEPKc
+     /tmp/ccXXjp5k.s:643    .text._ZN5Debug12printMessageEPKc:00000000 .Loc.113
+     /tmp/ccXXjp5k.s:644    .text._ZN5Debug12printMessageEPKc:00000000 L0
+     /tmp/ccXXjp5k.s:645    .text._ZN5Debug12printMessageEPKc:00000000 .Loc.114
+     /tmp/ccXXjp5k.s:659    .text._ZN5Debug12printMessageEPKc:00000006 .Loc.115
+     /tmp/ccXXjp5k.s:660    .text._ZN5Debug12printMessageEPKc:00000006 .Loc.116
+     /tmp/ccXXjp5k.s:669    .text._ZN5Debug12printMessageEPKc:0000000e .Loc.117
+     /tmp/ccXXjp5k.s:670    .text._ZN5Debug12printMessageEPKc:0000000e .Loc.118
+     /tmp/ccXXjp5k.s:673    .text._ZN5Debug12printMessageEPKc:00000012 .Loc.119
+     /tmp/ccXXjp5k.s:674    .text._ZN5Debug12printMessageEPKc:00000012 .Loc.120
+     /tmp/ccXXjp5k.s:679    .text._ZN5Debug12printMessageEPKc:00000016 .Loc.121
+     /tmp/ccXXjp5k.s:685    .text._ZN5Debug12printMessageEPKc:0000001c .Loc.122
+     /tmp/ccXXjp5k.s:687    .text._ZN5Debug12printMessageEPKc:0000001e L0
+     /tmp/ccXXjp5k.s:692    .text._GLOBAL__sub_I_debug:00000000 _GLOBAL__sub_I_debug
+     /tmp/ccXXjp5k.s:694    .text._GLOBAL__sub_I_debug:00000000 .Loc.123
+     /tmp/ccXXjp5k.s:695    .text._GLOBAL__sub_I_debug:00000000 L0
+     /tmp/ccXXjp5k.s:700    .text._GLOBAL__sub_I_debug:00000000 .Loc.124
+     /tmp/ccXXjp5k.s:705    .text._GLOBAL__sub_I_debug:00000006 L0
+     /tmp/ccXXjp5k.s:91     .text._ZN5DebugC2Ev:0000003a L0
+     /tmp/ccXXjp5k.s:112    .text._Z41__static_initialization_and_destruction_0v:0000000a L0
+     /tmp/ccXXjp5k.s:135    .text._ZN5DebugD2Ev:00000002 L0
+     /tmp/ccXXjp5k.s:174    .text._ZN5Debug4initEb:00000018 L0
+     /tmp/ccXXjp5k.s:294    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000007c L0
+     /tmp/ccXXjp5k.s:461    .text._ZN5Debug10logMessageE5ErrorPKhj:00000098 L0
+GAS LISTING /tmp/ccXXjp5k.s 			page 54
 
 
-     /tmp/cceHfhhS.s:637    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a4 L0
-     /tmp/cceHfhhS.s:690    .text._ZN5Debug12printMessageEPKc:0000001e L0
-     /tmp/cceHfhhS.s:709    .text._GLOBAL__sub_I_debug:00000006 L0
+     /tmp/ccXXjp5k.s:637    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a4 L0
+     /tmp/ccXXjp5k.s:690    .text._ZN5Debug12printMessageEPKc:0000001e L0
+     /tmp/ccXXjp5k.s:709    .text._GLOBAL__sub_I_debug:00000006 L0
                      .debug_frame:00000000 L0
-     /tmp/cceHfhhS.s:77     .text._ZN5DebugC2Ev:00000034 .L2
-     /tmp/cceHfhhS.s:67     .text._ZN5DebugC2Ev:0000002a .L3
-     /tmp/cceHfhhS.s:236    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000002e .L7
-     /tmp/cceHfhhS.s:252    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000046 .L9
-     /tmp/cceHfhhS.s:366    .text._ZN5Debug10logMessageE5ErrorPKhj:00000032 .L11
-     /tmp/cceHfhhS.s:432    .text._ZN5Debug10logMessageE5ErrorPKhj:00000078 .L10
-     /tmp/cceHfhhS.s:426    .text._ZN5Debug10logMessageE5ErrorPKhj:00000076 .L13
-     /tmp/cceHfhhS.s:533    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000032 .L17
-     /tmp/cceHfhhS.s:544    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000003e .L16
-     /tmp/cceHfhhS.s:566    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000005e .L22
-     /tmp/cceHfhhS.s:627    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a2 .L19
-     /tmp/cceHfhhS.s:2559   .debug_abbrev:00000000 .Ldebug_abbrev0
-     /tmp/cceHfhhS.s:4537   .debug_ranges:00000000 .Ldebug_ranges0
-     /tmp/cceHfhhS.s:4559   .debug_line:00000000 .Ldebug_line0
-     /tmp/cceHfhhS.s:693    .text._GLOBAL__sub_I_debug:00000000 .LFB139
-     /tmp/cceHfhhS.s:706    .text._GLOBAL__sub_I_debug:00000006 .LFE139
-     /tmp/cceHfhhS.s:702    .text._GLOBAL__sub_I_debug:00000004 .LVL41
-     /tmp/cceHfhhS.s:94     .text._Z41__static_initialization_and_destruction_0v:00000000 .LFB137
-     /tmp/cceHfhhS.s:110    .text._Z41__static_initialization_and_destruction_0v:0000000a .LFE137
-     /tmp/cceHfhhS.s:105    .text._Z41__static_initialization_and_destruction_0v:00000008 .LVL10
-     /tmp/cceHfhhS.s:642    .text._ZN5Debug12printMessageEPKc:00000000 .LFB136
-     /tmp/cceHfhhS.s:688    .text._ZN5Debug12printMessageEPKc:0000001e .LFE136
-     /tmp/cceHfhhS.s:3446   .debug_loc:00000000 .LLST21
-     /tmp/cceHfhhS.s:3492   .debug_loc:0000005c .LLST22
-     /tmp/cceHfhhS.s:3485   .debug_loc:00000056 .LVUS22
-     /tmp/cceHfhhS.s:3531   .debug_loc:0000009c .LLST23
-     /tmp/cceHfhhS.s:3526   .debug_loc:00000098 .LVUS23
-     /tmp/cceHfhhS.s:668    .text._ZN5Debug12printMessageEPKc:0000000e .LVL39
-     /tmp/cceHfhhS.s:466    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000000 .LFB135
-     /tmp/cceHfhhS.s:635    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a4 .LFE135
-     /tmp/cceHfhhS.s:3556   .debug_loc:000000c8 .LLST15
-     /tmp/cceHfhhS.s:3632   .debug_loc:00000166 .LLST16
-     /tmp/cceHfhhS.s:3623   .debug_loc:0000015e .LVUS16
-     /tmp/cceHfhhS.s:3684   .debug_loc:000001ba .LLST17
-     /tmp/cceHfhhS.s:3675   .debug_loc:000001b2 .LVUS17
-     /tmp/cceHfhhS.s:3736   .debug_loc:0000020e .LLST18
-     /tmp/cceHfhhS.s:3727   .debug_loc:00000206 .LVUS18
-     /tmp/cceHfhhS.s:3792   .debug_loc:00000266 .LLST19
-     /tmp/cceHfhhS.s:3783   .debug_loc:0000025e .LVUS19
-     /tmp/cceHfhhS.s:3848   .debug_loc:000002be .LLST20
-     /tmp/cceHfhhS.s:3839   .debug_loc:000002b6 .LVUS20
-     /tmp/cceHfhhS.s:568    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000005e .LBB17
-     /tmp/cceHfhhS.s:571    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000005e .LBE17
-     /tmp/cceHfhhS.s:617    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a0 .LBI18
-     /tmp/cceHfhhS.s:616    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a0 .LBB18
-     /tmp/cceHfhhS.s:633    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a4 .LBE18
-     /tmp/cceHfhhS.s:592    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000082 .LVL35
-     /tmp/cceHfhhS.s:598    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000008a .LVL36
-     /tmp/cceHfhhS.s:299    .text._ZN5Debug10logMessageE5ErrorPKhj:00000000 .LFB134
-     /tmp/cceHfhhS.s:459    .text._ZN5Debug10logMessageE5ErrorPKhj:00000098 .LFE134
-     /tmp/cceHfhhS.s:3885   .debug_loc:00000304 .LLST9
-     /tmp/cceHfhhS.s:3959   .debug_loc:000003a0 .LLST10
-     /tmp/cceHfhhS.s:3952   .debug_loc:0000039a .LVUS10
-GAS LISTING /tmp/cceHfhhS.s 			page 55
+     /tmp/ccXXjp5k.s:77     .text._ZN5DebugC2Ev:00000034 .L2
+     /tmp/ccXXjp5k.s:67     .text._ZN5DebugC2Ev:0000002a .L3
+     /tmp/ccXXjp5k.s:236    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000002e .L7
+     /tmp/ccXXjp5k.s:252    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000046 .L9
+     /tmp/ccXXjp5k.s:366    .text._ZN5Debug10logMessageE5ErrorPKhj:00000032 .L11
+     /tmp/ccXXjp5k.s:432    .text._ZN5Debug10logMessageE5ErrorPKhj:00000078 .L10
+     /tmp/ccXXjp5k.s:426    .text._ZN5Debug10logMessageE5ErrorPKhj:00000076 .L13
+     /tmp/ccXXjp5k.s:533    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000032 .L17
+     /tmp/ccXXjp5k.s:544    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000003e .L16
+     /tmp/ccXXjp5k.s:566    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000005e .L22
+     /tmp/ccXXjp5k.s:627    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a2 .L19
+     /tmp/ccXXjp5k.s:2578   .debug_abbrev:00000000 .Ldebug_abbrev0
+     /tmp/ccXXjp5k.s:4531   .debug_ranges:00000000 .Ldebug_ranges0
+     /tmp/ccXXjp5k.s:4553   .debug_line:00000000 .Ldebug_line0
+     /tmp/ccXXjp5k.s:693    .text._GLOBAL__sub_I_debug:00000000 .LFB140
+     /tmp/ccXXjp5k.s:706    .text._GLOBAL__sub_I_debug:00000006 .LFE140
+     /tmp/ccXXjp5k.s:702    .text._GLOBAL__sub_I_debug:00000004 .LVL41
+     /tmp/ccXXjp5k.s:94     .text._Z41__static_initialization_and_destruction_0v:00000000 .LFB138
+     /tmp/ccXXjp5k.s:110    .text._Z41__static_initialization_and_destruction_0v:0000000a .LFE138
+     /tmp/ccXXjp5k.s:105    .text._Z41__static_initialization_and_destruction_0v:00000008 .LVL10
+     /tmp/ccXXjp5k.s:642    .text._ZN5Debug12printMessageEPKc:00000000 .LFB137
+     /tmp/ccXXjp5k.s:688    .text._ZN5Debug12printMessageEPKc:0000001e .LFE137
+     /tmp/ccXXjp5k.s:3440   .debug_loc:00000000 .LLST21
+     /tmp/ccXXjp5k.s:3486   .debug_loc:0000005c .LLST22
+     /tmp/ccXXjp5k.s:3479   .debug_loc:00000056 .LVUS22
+     /tmp/ccXXjp5k.s:3525   .debug_loc:0000009c .LLST23
+     /tmp/ccXXjp5k.s:3520   .debug_loc:00000098 .LVUS23
+     /tmp/ccXXjp5k.s:668    .text._ZN5Debug12printMessageEPKc:0000000e .LVL39
+     /tmp/ccXXjp5k.s:466    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000000 .LFB136
+     /tmp/ccXXjp5k.s:635    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a4 .LFE136
+     /tmp/ccXXjp5k.s:3550   .debug_loc:000000c8 .LLST15
+     /tmp/ccXXjp5k.s:3626   .debug_loc:00000166 .LLST16
+     /tmp/ccXXjp5k.s:3617   .debug_loc:0000015e .LVUS16
+     /tmp/ccXXjp5k.s:3678   .debug_loc:000001ba .LLST17
+     /tmp/ccXXjp5k.s:3669   .debug_loc:000001b2 .LVUS17
+     /tmp/ccXXjp5k.s:3730   .debug_loc:0000020e .LLST18
+     /tmp/ccXXjp5k.s:3721   .debug_loc:00000206 .LVUS18
+     /tmp/ccXXjp5k.s:3786   .debug_loc:00000266 .LLST19
+     /tmp/ccXXjp5k.s:3777   .debug_loc:0000025e .LVUS19
+     /tmp/ccXXjp5k.s:3842   .debug_loc:000002be .LLST20
+     /tmp/ccXXjp5k.s:3833   .debug_loc:000002b6 .LVUS20
+     /tmp/ccXXjp5k.s:568    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000005e .LBB17
+     /tmp/ccXXjp5k.s:571    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000005e .LBE17
+     /tmp/ccXXjp5k.s:617    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a0 .LBI18
+     /tmp/ccXXjp5k.s:616    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a0 .LBB18
+     /tmp/ccXXjp5k.s:633    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:000000a4 .LBE18
+     /tmp/ccXXjp5k.s:592    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000082 .LVL35
+     /tmp/ccXXjp5k.s:598    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000008a .LVL36
+     /tmp/ccXXjp5k.s:299    .text._ZN5Debug10logMessageE5ErrorPKhj:00000000 .LFB135
+     /tmp/ccXXjp5k.s:459    .text._ZN5Debug10logMessageE5ErrorPKhj:00000098 .LFE135
+     /tmp/ccXXjp5k.s:3879   .debug_loc:00000304 .LLST9
+     /tmp/ccXXjp5k.s:3953   .debug_loc:000003a0 .LLST10
+     /tmp/ccXXjp5k.s:3946   .debug_loc:0000039a .LVUS10
+GAS LISTING /tmp/ccXXjp5k.s 			page 55
 
 
-     /tmp/cceHfhhS.s:3996   .debug_loc:000003de .LLST11
-     /tmp/cceHfhhS.s:3989   .debug_loc:000003d8 .LVUS11
-     /tmp/cceHfhhS.s:4035   .debug_loc:0000041e .LLST12
-     /tmp/cceHfhhS.s:4030   .debug_loc:0000041a .LVUS12
-     /tmp/cceHfhhS.s:4065   .debug_loc:0000044e .LLST13
-     /tmp/cceHfhhS.s:4060   .debug_loc:0000044a .LVUS13
-     /tmp/cceHfhhS.s:368    .text._ZN5Debug10logMessageE5ErrorPKhj:00000032 .LBB14
-     /tmp/cceHfhhS.s:371    .text._ZN5Debug10logMessageE5ErrorPKhj:00000032 .LBE14
-     /tmp/cceHfhhS.s:415    .text._ZN5Debug10logMessageE5ErrorPKhj:00000074 .LBI15
-     /tmp/cceHfhhS.s:414    .text._ZN5Debug10logMessageE5ErrorPKhj:00000074 .LBB15
-     /tmp/cceHfhhS.s:436    .text._ZN5Debug10logMessageE5ErrorPKhj:00000078 .LBE15
-     /tmp/cceHfhhS.s:4093   .debug_loc:0000047c .LLST14
-     /tmp/cceHfhhS.s:4090   .debug_loc:0000047a .LVUS14
-     /tmp/cceHfhhS.s:390    .text._ZN5Debug10logMessageE5ErrorPKhj:00000056 .LVL23
-     /tmp/cceHfhhS.s:396    .text._ZN5Debug10logMessageE5ErrorPKhj:0000005e .LVL24
-     /tmp/cceHfhhS.s:179    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000000 .LFB133
-     /tmp/cceHfhhS.s:292    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000007c .LFE133
-     /tmp/cceHfhhS.s:4101   .debug_loc:00000490 .LLST3
-     /tmp/cceHfhhS.s:4149   .debug_loc:000004f6 .LLST4
-     /tmp/cceHfhhS.s:4144   .debug_loc:000004f2 .LVUS4
-     /tmp/cceHfhhS.s:4183   .debug_loc:0000052a .LLST5
-     /tmp/cceHfhhS.s:4174   .debug_loc:00000522 .LVUS5
-     /tmp/cceHfhhS.s:4239   .debug_loc:00000582 .LLST6
-     /tmp/cceHfhhS.s:4230   .debug_loc:0000057a .LVUS6
-     /tmp/cceHfhhS.s:4295   .debug_loc:000005da .LLST7
-     /tmp/cceHfhhS.s:4286   .debug_loc:000005d2 .LVUS7
-     /tmp/cceHfhhS.s:4351   .debug_loc:00000632 .LLST8
-     /tmp/cceHfhhS.s:4342   .debug_loc:0000062a .LVUS8
-     /tmp/cceHfhhS.s:254    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000046 .LBB13
-     /tmp/cceHfhhS.s:257    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000046 .LBE13
-     /tmp/cceHfhhS.s:277    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000068 .LVL19
-     /tmp/cceHfhhS.s:283    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000070 .LVL20
-     /tmp/cceHfhhS.s:140    .text._ZN5Debug4initEb:00000000 .LFB132
-     /tmp/cceHfhhS.s:172    .text._ZN5Debug4initEb:00000018 .LFE132
-     /tmp/cceHfhhS.s:4393   .debug_loc:0000067c .LLST2
-     /tmp/cceHfhhS.s:4388   .debug_loc:00000678 .LVUS2
-     /tmp/cceHfhhS.s:117    .text._ZN5DebugD2Ev:00000000 .LFB130
-     /tmp/cceHfhhS.s:131    .text._ZN5DebugD2Ev:00000002 .LFE130
-     /tmp/cceHfhhS.s:16     .text._ZN5DebugC2Ev:00000000 .LFB127
-     /tmp/cceHfhhS.s:87     .text._ZN5DebugC2Ev:0000003a .LFE127
-     /tmp/cceHfhhS.s:4431   .debug_loc:000006b4 .LLST0
-     /tmp/cceHfhhS.s:4414   .debug_loc:000006a4 .LVUS0
-     /tmp/cceHfhhS.s:61     .text._ZN5DebugC2Ev:00000026 .LBB11
-     /tmp/cceHfhhS.s:82     .text._ZN5DebugC2Ev:00000038 .LBE11
-     /tmp/cceHfhhS.s:4496   .debug_loc:00000731 .LLST1
-     /tmp/cceHfhhS.s:4491   .debug_loc:0000072d .LVUS1
-     /tmp/cceHfhhS.s:647    .text._ZN5Debug12printMessageEPKc:00000002 .LCFI26
-     /tmp/cceHfhhS.s:651    .text._ZN5Debug12printMessageEPKc:00000004 .LCFI27
-     /tmp/cceHfhhS.s:662    .text._ZN5Debug12printMessageEPKc:00000008 .LCFI28
-     /tmp/cceHfhhS.s:665    .text._ZN5Debug12printMessageEPKc:0000000a .LCFI29
-     /tmp/cceHfhhS.s:677    .text._ZN5Debug12printMessageEPKc:00000016 .LCFI30
-     /tmp/cceHfhhS.s:641    .text._ZN5Debug12printMessageEPKc:00000000 .LVL38
-     /tmp/cceHfhhS.s:684    .text._ZN5Debug12printMessageEPKc:0000001c .LVL40
-     /tmp/cceHfhhS.s:471    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000002 .LCFI16
-     /tmp/cceHfhhS.s:475    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000004 .LCFI17
-     /tmp/cceHfhhS.s:479    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000006 .LCFI18
-     /tmp/cceHfhhS.s:483    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000008 .LCFI19
-GAS LISTING /tmp/cceHfhhS.s 			page 56
+     /tmp/ccXXjp5k.s:3990   .debug_loc:000003de .LLST11
+     /tmp/ccXXjp5k.s:3983   .debug_loc:000003d8 .LVUS11
+     /tmp/ccXXjp5k.s:4029   .debug_loc:0000041e .LLST12
+     /tmp/ccXXjp5k.s:4024   .debug_loc:0000041a .LVUS12
+     /tmp/ccXXjp5k.s:4059   .debug_loc:0000044e .LLST13
+     /tmp/ccXXjp5k.s:4054   .debug_loc:0000044a .LVUS13
+     /tmp/ccXXjp5k.s:368    .text._ZN5Debug10logMessageE5ErrorPKhj:00000032 .LBB14
+     /tmp/ccXXjp5k.s:371    .text._ZN5Debug10logMessageE5ErrorPKhj:00000032 .LBE14
+     /tmp/ccXXjp5k.s:415    .text._ZN5Debug10logMessageE5ErrorPKhj:00000074 .LBI15
+     /tmp/ccXXjp5k.s:414    .text._ZN5Debug10logMessageE5ErrorPKhj:00000074 .LBB15
+     /tmp/ccXXjp5k.s:436    .text._ZN5Debug10logMessageE5ErrorPKhj:00000078 .LBE15
+     /tmp/ccXXjp5k.s:4087   .debug_loc:0000047c .LLST14
+     /tmp/ccXXjp5k.s:4084   .debug_loc:0000047a .LVUS14
+     /tmp/ccXXjp5k.s:390    .text._ZN5Debug10logMessageE5ErrorPKhj:00000056 .LVL23
+     /tmp/ccXXjp5k.s:396    .text._ZN5Debug10logMessageE5ErrorPKhj:0000005e .LVL24
+     /tmp/ccXXjp5k.s:179    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000000 .LFB134
+     /tmp/ccXXjp5k.s:292    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000007c .LFE134
+     /tmp/ccXXjp5k.s:4095   .debug_loc:00000490 .LLST3
+     /tmp/ccXXjp5k.s:4143   .debug_loc:000004f6 .LLST4
+     /tmp/ccXXjp5k.s:4138   .debug_loc:000004f2 .LVUS4
+     /tmp/ccXXjp5k.s:4177   .debug_loc:0000052a .LLST5
+     /tmp/ccXXjp5k.s:4168   .debug_loc:00000522 .LVUS5
+     /tmp/ccXXjp5k.s:4233   .debug_loc:00000582 .LLST6
+     /tmp/ccXXjp5k.s:4224   .debug_loc:0000057a .LVUS6
+     /tmp/ccXXjp5k.s:4289   .debug_loc:000005da .LLST7
+     /tmp/ccXXjp5k.s:4280   .debug_loc:000005d2 .LVUS7
+     /tmp/ccXXjp5k.s:4345   .debug_loc:00000632 .LLST8
+     /tmp/ccXXjp5k.s:4336   .debug_loc:0000062a .LVUS8
+     /tmp/ccXXjp5k.s:254    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000046 .LBB13
+     /tmp/ccXXjp5k.s:257    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000046 .LBE13
+     /tmp/ccXXjp5k.s:277    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000068 .LVL19
+     /tmp/ccXXjp5k.s:283    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000070 .LVL20
+     /tmp/ccXXjp5k.s:140    .text._ZN5Debug4initEb:00000000 .LFB133
+     /tmp/ccXXjp5k.s:172    .text._ZN5Debug4initEb:00000018 .LFE133
+     /tmp/ccXXjp5k.s:4387   .debug_loc:0000067c .LLST2
+     /tmp/ccXXjp5k.s:4382   .debug_loc:00000678 .LVUS2
+     /tmp/ccXXjp5k.s:117    .text._ZN5DebugD2Ev:00000000 .LFB131
+     /tmp/ccXXjp5k.s:131    .text._ZN5DebugD2Ev:00000002 .LFE131
+     /tmp/ccXXjp5k.s:16     .text._ZN5DebugC2Ev:00000000 .LFB128
+     /tmp/ccXXjp5k.s:87     .text._ZN5DebugC2Ev:0000003a .LFE128
+     /tmp/ccXXjp5k.s:4425   .debug_loc:000006b4 .LLST0
+     /tmp/ccXXjp5k.s:4408   .debug_loc:000006a4 .LVUS0
+     /tmp/ccXXjp5k.s:61     .text._ZN5DebugC2Ev:00000026 .LBB11
+     /tmp/ccXXjp5k.s:82     .text._ZN5DebugC2Ev:00000038 .LBE11
+     /tmp/ccXXjp5k.s:4490   .debug_loc:00000731 .LLST1
+     /tmp/ccXXjp5k.s:4485   .debug_loc:0000072d .LVUS1
+     /tmp/ccXXjp5k.s:647    .text._ZN5Debug12printMessageEPKc:00000002 .LCFI26
+     /tmp/ccXXjp5k.s:651    .text._ZN5Debug12printMessageEPKc:00000004 .LCFI27
+     /tmp/ccXXjp5k.s:662    .text._ZN5Debug12printMessageEPKc:00000008 .LCFI28
+     /tmp/ccXXjp5k.s:665    .text._ZN5Debug12printMessageEPKc:0000000a .LCFI29
+     /tmp/ccXXjp5k.s:677    .text._ZN5Debug12printMessageEPKc:00000016 .LCFI30
+     /tmp/ccXXjp5k.s:641    .text._ZN5Debug12printMessageEPKc:00000000 .LVL38
+     /tmp/ccXXjp5k.s:684    .text._ZN5Debug12printMessageEPKc:0000001c .LVL40
+     /tmp/ccXXjp5k.s:471    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000002 .LCFI16
+     /tmp/ccXXjp5k.s:475    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000004 .LCFI17
+     /tmp/ccXXjp5k.s:479    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000006 .LCFI18
+     /tmp/ccXXjp5k.s:483    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000008 .LCFI19
+GAS LISTING /tmp/ccXXjp5k.s 			page 56
 
 
-     /tmp/cceHfhhS.s:487    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000000a .LCFI20
-     /tmp/cceHfhhS.s:491    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000000c .LCFI21
-     /tmp/cceHfhhS.s:495    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000000e .LCFI22
-     /tmp/cceHfhhS.s:499    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000010 .LCFI23
-     /tmp/cceHfhhS.s:504    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000014 .LCFI24
-     /tmp/cceHfhhS.s:508    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000018 .LCFI25
-     /tmp/cceHfhhS.s:465    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000000 .LVL29
-     /tmp/cceHfhhS.s:525    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000028 .LVL30
-     /tmp/cceHfhhS.s:560    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000058 .LVL32
-     /tmp/cceHfhhS.s:565    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000005e .LVL33
-     /tmp/cceHfhhS.s:543    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000003e .LVL31
-     /tmp/cceHfhhS.s:585    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000076 .LVL34
-     /tmp/cceHfhhS.s:304    .text._ZN5Debug10logMessageE5ErrorPKhj:00000002 .LCFI6
-     /tmp/cceHfhhS.s:308    .text._ZN5Debug10logMessageE5ErrorPKhj:00000004 .LCFI7
-     /tmp/cceHfhhS.s:312    .text._ZN5Debug10logMessageE5ErrorPKhj:00000006 .LCFI8
-     /tmp/cceHfhhS.s:316    .text._ZN5Debug10logMessageE5ErrorPKhj:00000008 .LCFI9
-     /tmp/cceHfhhS.s:320    .text._ZN5Debug10logMessageE5ErrorPKhj:0000000a .LCFI10
-     /tmp/cceHfhhS.s:324    .text._ZN5Debug10logMessageE5ErrorPKhj:0000000c .LCFI11
-     /tmp/cceHfhhS.s:328    .text._ZN5Debug10logMessageE5ErrorPKhj:0000000e .LCFI12
-     /tmp/cceHfhhS.s:332    .text._ZN5Debug10logMessageE5ErrorPKhj:00000010 .LCFI13
-     /tmp/cceHfhhS.s:337    .text._ZN5Debug10logMessageE5ErrorPKhj:00000014 .LCFI14
-     /tmp/cceHfhhS.s:341    .text._ZN5Debug10logMessageE5ErrorPKhj:00000018 .LCFI15
-     /tmp/cceHfhhS.s:298    .text._ZN5Debug10logMessageE5ErrorPKhj:00000000 .LVL21
-     /tmp/cceHfhhS.s:359    .text._ZN5Debug10logMessageE5ErrorPKhj:0000002a .LVL22
-     /tmp/cceHfhhS.s:455    .text._ZN5Debug10logMessageE5ErrorPKhj:00000096 .LVL28
-     /tmp/cceHfhhS.s:449    .text._ZN5Debug10logMessageE5ErrorPKhj:0000008e .LVL27
-     /tmp/cceHfhhS.s:413    .text._ZN5Debug10logMessageE5ErrorPKhj:00000074 .LVL25
-     /tmp/cceHfhhS.s:431    .text._ZN5Debug10logMessageE5ErrorPKhj:00000078 .LVL26
-     /tmp/cceHfhhS.s:184    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000002 .LCFI0
-     /tmp/cceHfhhS.s:188    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000004 .LCFI1
-     /tmp/cceHfhhS.s:192    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000006 .LCFI2
-     /tmp/cceHfhhS.s:196    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000008 .LCFI3
-     /tmp/cceHfhhS.s:201    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000000c .LCFI4
-     /tmp/cceHfhhS.s:205    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000010 .LCFI5
-     /tmp/cceHfhhS.s:178    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000000 .LVL14
-     /tmp/cceHfhhS.s:228    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000026 .LVL15
-     /tmp/cceHfhhS.s:235    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000002e .LVL16
-     /tmp/cceHfhhS.s:251    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000046 .LVL17
-     /tmp/cceHfhhS.s:270    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000005c .LVL18
-     /tmp/cceHfhhS.s:139    .text._ZN5Debug4initEb:00000000 .LVL12
-     /tmp/cceHfhhS.s:152    .text._ZN5Debug4initEb:00000004 .LVL13
-     /tmp/cceHfhhS.s:15     .text._ZN5DebugC2Ev:00000000 .LVL0
-     /tmp/cceHfhhS.s:28     .text._ZN5DebugC2Ev:00000004 .LVL1
-     /tmp/cceHfhhS.s:32     .text._ZN5DebugC2Ev:00000008 .LVL2
-     /tmp/cceHfhhS.s:36     .text._ZN5DebugC2Ev:0000000c .LVL3
-     /tmp/cceHfhhS.s:39     .text._ZN5DebugC2Ev:0000000e .LVL4
-     /tmp/cceHfhhS.s:50     .text._ZN5DebugC2Ev:0000001c .LVL5
-     /tmp/cceHfhhS.s:56     .text._ZN5DebugC2Ev:00000024 .LVL6
-     /tmp/cceHfhhS.s:59     .text._ZN5DebugC2Ev:00000026 .LVL7
-     /tmp/cceHfhhS.s:66     .text._ZN5DebugC2Ev:0000002a .LVL8
-     /tmp/cceHfhhS.s:740    .debug_info:00000000 .Ldebug_info0
+     /tmp/ccXXjp5k.s:487    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000000a .LCFI20
+     /tmp/ccXXjp5k.s:491    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000000c .LCFI21
+     /tmp/ccXXjp5k.s:495    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000000e .LCFI22
+     /tmp/ccXXjp5k.s:499    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000010 .LCFI23
+     /tmp/ccXXjp5k.s:504    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000014 .LCFI24
+     /tmp/ccXXjp5k.s:508    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000018 .LCFI25
+     /tmp/ccXXjp5k.s:465    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000000 .LVL29
+     /tmp/ccXXjp5k.s:525    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000028 .LVL30
+     /tmp/ccXXjp5k.s:560    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000058 .LVL32
+     /tmp/ccXXjp5k.s:565    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000005e .LVL33
+     /tmp/ccXXjp5k.s:543    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:0000003e .LVL31
+     /tmp/ccXXjp5k.s:585    .text._ZN5Debug10logMessageE5ErrorPKhjNS_9CodeIndexE:00000076 .LVL34
+     /tmp/ccXXjp5k.s:304    .text._ZN5Debug10logMessageE5ErrorPKhj:00000002 .LCFI6
+     /tmp/ccXXjp5k.s:308    .text._ZN5Debug10logMessageE5ErrorPKhj:00000004 .LCFI7
+     /tmp/ccXXjp5k.s:312    .text._ZN5Debug10logMessageE5ErrorPKhj:00000006 .LCFI8
+     /tmp/ccXXjp5k.s:316    .text._ZN5Debug10logMessageE5ErrorPKhj:00000008 .LCFI9
+     /tmp/ccXXjp5k.s:320    .text._ZN5Debug10logMessageE5ErrorPKhj:0000000a .LCFI10
+     /tmp/ccXXjp5k.s:324    .text._ZN5Debug10logMessageE5ErrorPKhj:0000000c .LCFI11
+     /tmp/ccXXjp5k.s:328    .text._ZN5Debug10logMessageE5ErrorPKhj:0000000e .LCFI12
+     /tmp/ccXXjp5k.s:332    .text._ZN5Debug10logMessageE5ErrorPKhj:00000010 .LCFI13
+     /tmp/ccXXjp5k.s:337    .text._ZN5Debug10logMessageE5ErrorPKhj:00000014 .LCFI14
+     /tmp/ccXXjp5k.s:341    .text._ZN5Debug10logMessageE5ErrorPKhj:00000018 .LCFI15
+     /tmp/ccXXjp5k.s:298    .text._ZN5Debug10logMessageE5ErrorPKhj:00000000 .LVL21
+     /tmp/ccXXjp5k.s:359    .text._ZN5Debug10logMessageE5ErrorPKhj:0000002a .LVL22
+     /tmp/ccXXjp5k.s:455    .text._ZN5Debug10logMessageE5ErrorPKhj:00000096 .LVL28
+     /tmp/ccXXjp5k.s:449    .text._ZN5Debug10logMessageE5ErrorPKhj:0000008e .LVL27
+     /tmp/ccXXjp5k.s:413    .text._ZN5Debug10logMessageE5ErrorPKhj:00000074 .LVL25
+     /tmp/ccXXjp5k.s:431    .text._ZN5Debug10logMessageE5ErrorPKhj:00000078 .LVL26
+     /tmp/ccXXjp5k.s:184    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000002 .LCFI0
+     /tmp/ccXXjp5k.s:188    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000004 .LCFI1
+     /tmp/ccXXjp5k.s:192    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000006 .LCFI2
+     /tmp/ccXXjp5k.s:196    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000008 .LCFI3
+     /tmp/ccXXjp5k.s:201    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000000c .LCFI4
+     /tmp/ccXXjp5k.s:205    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000010 .LCFI5
+     /tmp/ccXXjp5k.s:178    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000000 .LVL14
+     /tmp/ccXXjp5k.s:228    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000026 .LVL15
+     /tmp/ccXXjp5k.s:235    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000002e .LVL16
+     /tmp/ccXXjp5k.s:251    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:00000046 .LVL17
+     /tmp/ccXXjp5k.s:270    .text._ZN5Debug7logMarkEPKhjS1_NS_9CodeIndexE:0000005c .LVL18
+     /tmp/ccXXjp5k.s:139    .text._ZN5Debug4initEb:00000000 .LVL12
+     /tmp/ccXXjp5k.s:152    .text._ZN5Debug4initEb:00000004 .LVL13
+     /tmp/ccXXjp5k.s:15     .text._ZN5DebugC2Ev:00000000 .LVL0
+     /tmp/ccXXjp5k.s:28     .text._ZN5DebugC2Ev:00000004 .LVL1
+     /tmp/ccXXjp5k.s:32     .text._ZN5DebugC2Ev:00000008 .LVL2
+     /tmp/ccXXjp5k.s:36     .text._ZN5DebugC2Ev:0000000c .LVL3
+     /tmp/ccXXjp5k.s:39     .text._ZN5DebugC2Ev:0000000e .LVL4
+     /tmp/ccXXjp5k.s:50     .text._ZN5DebugC2Ev:0000001c .LVL5
+     /tmp/ccXXjp5k.s:56     .text._ZN5DebugC2Ev:00000024 .LVL6
+     /tmp/ccXXjp5k.s:59     .text._ZN5DebugC2Ev:00000026 .LVL7
+     /tmp/ccXXjp5k.s:66     .text._ZN5DebugC2Ev:0000002a .LVL8
+     /tmp/ccXXjp5k.s:740    .debug_info:00000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 sprintf_P
 printf
 __do_global_ctors
 __do_clear_bss
-GAS LISTING /tmp/cceHfhhS.s 			page 57
+GAS LISTING /tmp/ccXXjp5k.s 			page 57
 
 
