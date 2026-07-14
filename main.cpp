@@ -174,8 +174,6 @@ int main(){
     display.setUpsideDown(true);
     display.clearScreen();
     
-    // display.drawRect(0, 5, 128, 3);     // contorno cobrindo 3 paginas
-    // display.fillRect(4, 6, 40, 1, true);// barra solida
     }
 
 
@@ -195,6 +193,8 @@ int main(){
     uint32_t last_mouse_button_pressed {0};
 
     printf("Inicializando Atmega\n");
+
+    int32_t idle_pitch {0};
 
     while (true){
         uint8_t button_data = buttons.read();
@@ -260,16 +260,19 @@ int main(){
 
         switch (current_state){
             case IDLE_MODE:
-                if(spi_flag){
-                    spi_flag=false;
-                    idle_count++;
-                    if(idle_count >= 5){
-                        
-                        idle_count = 0;
-                        format_packet(x, y, 0, 0, current_state, packet);
-                        transcieve_packets(packet, recv_packet, PACKET_SIZE);
-                        convert_recieved(&roll, &pitch, &yaw, &accel_x, &ble_state, recv_packet);
-                        spi_flag = false;
+            
+            if(spi_flag){
+                spi_flag=false;
+                idle_count++;
+                if(idle_count >= 3){
+                    
+                    idle_count = 0;
+                    format_packet(x, y, 0, 0, current_state, packet);
+                    transcieve_packets(packet, recv_packet, PACKET_SIZE);
+                    convert_recieved(&roll, &pitch, &yaw, &accel_x, &ble_state, recv_packet);
+                    
+                    idle_pitch = pitch;
+                    spi_flag = false;
             
                         // printf("State: %u  Pitch: %i.%u  Roll: %i.%u  Yaw: %i.%u SENDING: SCROLL: %i\r\n", state, pitch/10, ABS(pitch%10), roll/10, ABS(roll%10), yaw/10, ABS(yaw%10), scroll);
                         // printf("Buttons: %u %u %u\r\n", (bool_t)(debounced_buttons&(1<<0)), (bool_t)(debounced_buttons&(1<<1)), (bool_t)(debounced_buttons&(1<<2)));
@@ -288,7 +291,7 @@ int main(){
                         // yaw no eixo X: 0 -> centro, -45 -> esquerda, +45 -> direita
                         int32_t raw_x = projectTan(yaw,   0,     45000, sense_x);
                         // pitch no eixo Y: 0..50 -> tela toda (centro em 25)
-                        int32_t raw_y = projectTan(pitch, 25000, 25000, sense_y);
+                        int32_t raw_y = projectTan(pitch, idle_pitch, 25000, sense_y);
                         
                         x = (int16_t)truncateBetween(raw_x, 0, 32767);
                         y = 32767 - (int16_t)truncateBetween(raw_y, 0, 32767);
@@ -307,7 +310,7 @@ int main(){
                 }        
                 break;
             case SCROLL_MODE:
-                if (pitch < 50000){current_state = CURSOR_MODE; break;}
+                if (pitch < 40000){current_state = CURSOR_MODE; break;}
 
                 if(spi_flag){
                     int8_t scroll_packet = (int8_t)(ABS(yaw) > 15000) ? (int8_t)(yaw/15000) : 0;
@@ -316,7 +319,7 @@ int main(){
                     transcieve_packets(packet, recv_packet, PACKET_SIZE);
                     convert_recieved(&roll, &pitch, &yaw, &accel_x, &ble_state, recv_packet);
                     
-                    printf("State: %u  Pitch:  %li  Roll: %li  Yaw: %li Accel_x: %d.%u SENDING: SCROLL: %d\r\n", ble_state, pitch, roll, yaw, accel_x/10, ABS(accel_x%10), scroll_packet);
+                    // printf("State: %u  Pitch:  %li  Roll: %li  Yaw: %li Accel_x: %d.%u SENDING: SCROLL: %d\r\n", ble_state, pitch, roll, yaw, accel_x/10, ABS(accel_x%10), scroll_packet);
 
                     spi_flag=false;
                 }
