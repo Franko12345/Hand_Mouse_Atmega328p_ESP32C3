@@ -224,13 +224,16 @@ Ssd1306::Ssd1306(void)
 
     // Reset data members
     this->_busHandler                   = nullptr;
+    this->_frameBuffer                  = nullptr;
+    this->_dirtyPageMask                = 0;
     this->_busHandlerSet                = false;
+    this->_buffered                     = false;
     this->_initialized                  = false;
     this->_deviceAddress                = 0x3C;
     this->_size                         = Size::SSD1306_128X64;
     this->_pages                        = 8;
     this->_cursorX                      = 0;
-    this->_cursorPage                   = 0;
+    this->_cursorY                      = 0;
     this->_textSize                     = 1;
 
     // Returns successfully
@@ -252,10 +255,10 @@ Ssd1306::~Ssd1306(void)
 
 //     ///////////////////     CONTROL AND STATUS     ///////////////////     //
 
-bool_t Ssd1306::init(Bus *busHandler_p, const Size size_p, cuint8_t address_p)
+bool_t Ssd1306::init(Bus *busHandler_p, const Size size_p, cuint8_t address_p, uint8_t *frameBuffer_p)
 {
     // Mark passage for debugging purpose
-    debugMark(PSTR("Ssd1306::init(Bus *, const Size, cuint8_t)"), Debug::CodeIndex::SSD1306_MODULE);
+    debugMark(PSTR("Ssd1306::init(Bus *, const Size, cuint8_t, uint8_t *)"), Debug::CodeIndex::SSD1306_MODULE);
 
     // Updates data members
     this->_busHandlerSet                = false;
@@ -280,8 +283,11 @@ bool_t Ssd1306::init(Bus *busHandler_p, const Size size_p, cuint8_t address_p)
     this->_deviceAddress                = address_p;
     this->_size                         = size_p;
     this->_pages                        = (size_p == Size::SSD1306_128X64) ? 8 : 4;
+    this->_frameBuffer                  = frameBuffer_p;
+    this->_buffered                     = isPointerValid(frameBuffer_p);
+    this->_dirtyPageMask                = 0;
     this->_cursorX                      = 0;
-    this->_cursorPage                   = 0;
+    this->_cursorY                      = 0;
     this->_textSize                     = 1;
 
     // Local variables
@@ -322,6 +328,14 @@ bool_t Ssd1306::init(Bus *busHandler_p, const Size size_p, cuint8_t address_p)
         debugMessage(this->_lastError, Debug::CodeIndex::SSD1306_MODULE);
         return false;
     }
+    if(this->_buffered) {
+        // Blanks the panel once so it does not show framebuffer garbage
+        if(!this->display()) {
+            // Returns error
+            debugMessage(this->_lastError, Debug::CodeIndex::SSD1306_MODULE);
+            return false;
+        }
+    }
 
     // Returns successfully
     this->_lastError = Error::NONE;
@@ -339,6 +353,21 @@ bool_t Ssd1306::clearScreen(void)
         // Returns error
         debugMessage(this->_lastError, Debug::CodeIndex::SSD1306_MODULE);
         return false;
+    }
+
+    // Buffered mode: clears the RAM buffer and marks every page dirty
+    // (the panel is only updated on the next display() call)
+    if(this->_buffered) {
+        uint16_t auxSize = (uint16_t)this->_pages * constSsd1306Width;
+        for(uint16_t i = 0; i < auxSize; i++) {
+            this->_frameBuffer[i] = 0x00;
+        }
+        this->_dirtyPageMask            = (uint8_t)((1 << this->_pages) - 1);
+        this->_cursorX                  = 0;
+        this->_cursorY                  = 0;
+        this->_lastError = Error::NONE;
+        debugMessage(Error::NONE, Debug::CodeIndex::SSD1306_MODULE);
+        return true;
     }
 
     // Local variables
@@ -370,7 +399,49 @@ bool_t Ssd1306::clearScreen(void)
 
     // Homes the text cursor
     this->_cursorX                      = 0;
-    this->_cursorPage                   = 0;
+    this->_cursorY                      = 0;
+
+    // Returns successfully
+    this->_lastError = Error::NONE;
+    debugMessage(Error::NONE, Debug::CodeIndex::SSD1306_MODULE);
+    return true;
+}
+
+bool_t Ssd1306::display(void)
+{
+    // Mark passage for debugging purpose
+    debugMark(PSTR("Ssd1306::display(void)"), Debug::CodeIndex::SSD1306_MODULE);
+
+    // Check for errors
+    if(!this->_isInitialized()) {
+        // Returns error
+        debugMessage(this->_lastError, Debug::CodeIndex::SSD1306_MODULE);
+        return false;
+    }
+
+    // Direct mode: nothing to flush (no-op success)
+    if(!this->_buffered) {
+        this->_lastError = Error::NONE;
+        debugMessage(Error::NONE, Debug::CodeIndex::SSD1306_MODULE);
+        return true;
+    }
+
+    // Buffered mode: flushes only the pages changed since the last call
+    for(uint8_t page = 0; page < this->_pages; page++) {
+        if(this->_dirtyPageMask & (1 << page)) {
+            if(!this->_setAddress(page, 0)) {
+                // Returns error
+                debugMessage(this->_lastError, Debug::CodeIndex::SSD1306_MODULE);
+                return false;
+            }
+            if(!this->_writeData(&this->_frameBuffer[(uint16_t)page * constSsd1306Width], constSsd1306Width)) {
+                // Returns error
+                debugMessage(this->_lastError, Debug::CodeIndex::SSD1306_MODULE);
+                return false;
+            }
+        }
+    }
+    this->_dirtyPageMask                = 0;
 
     // Returns successfully
     this->_lastError = Error::NONE;
@@ -505,9 +576,43 @@ bool_t Ssd1306::setCursor(cuint8_t x_p, cuint8_t page_p)
         return false;
     }
 
+    // Updates data members (Y stored in pixels: page * 8)
+    this->_cursorX                      = x_p;
+    this->_cursorY                      = (uint8_t)(page_p * 8);
+
+    // Returns successfully
+    this->_lastError = Error::NONE;
+    debugMessage(Error::NONE, Debug::CodeIndex::SSD1306_MODULE);
+    return true;
+}
+
+bool_t Ssd1306::setCursorPixel(cuint8_t x_p, cuint8_t y_p)
+{
+    // Mark passage for debugging purpose
+    debugMark(PSTR("Ssd1306::setCursorPixel(cuint8_t, cuint8_t)"), Debug::CodeIndex::SSD1306_MODULE);
+
+    // Check for errors
+    if(!this->_isInitialized()) {
+        // Returns error
+        debugMessage(this->_lastError, Debug::CodeIndex::SSD1306_MODULE);
+        return false;
+    }
+    if(!this->_buffered) {
+        // Returns error (arbitrary-Y text needs the framebuffer)
+        this->_lastError = Error::FEATURE_NOT_SUPPORTED;
+        debugMessage(Error::FEATURE_NOT_SUPPORTED, Debug::CodeIndex::SSD1306_MODULE);
+        return false;
+    }
+    if((x_p >= constSsd1306Width) || (y_p >= (uint8_t)(this->_pages * 8))) {
+        // Returns error
+        this->_lastError = Error::ARGUMENT_VALUE_INVALID;
+        debugMessage(Error::ARGUMENT_VALUE_INVALID, Debug::CodeIndex::SSD1306_MODULE);
+        return false;
+    }
+
     // Updates data members
     this->_cursorX                      = x_p;
-    this->_cursorPage                   = page_p;
+    this->_cursorY                      = y_p;
 
     // Returns successfully
     this->_lastError = Error::NONE;
@@ -543,9 +648,9 @@ bool_t Ssd1306::print(cchar_t character_p)
 
     if(character_p == '\n') {
         this->_cursorX                  = 0;
-        this->_cursorPage               += this->_textSize;
-        if((this->_cursorPage + this->_textSize) > this->_pages) {
-            this->_cursorPage           = 0;
+        this->_cursorY                  += (uint8_t)(this->_textSize * 8);
+        if((this->_cursorY + (this->_textSize * 8)) > (this->_pages * 8)) {
+            this->_cursorY              = 0;
         }
     } else {
         if(!this->_writeChar(character_p)) {
@@ -599,6 +704,90 @@ bool_t Ssd1306::print(cchar_t *string_p)
 
 //     ////////////////////////     GRAPHICS     ///////////////////////     //
 
+bool_t Ssd1306::drawPixel(cuint8_t x_p, cuint8_t y_p, cbool_t on_p)
+{
+    // Mark passage for debugging purpose
+    debugMark(PSTR("Ssd1306::drawPixel(cuint8_t, cuint8_t, cbool_t)"), Debug::CodeIndex::SSD1306_MODULE);
+
+    // Check for errors
+    if(!this->_isInitialized()) {
+        // Returns error
+        debugMessage(this->_lastError, Debug::CodeIndex::SSD1306_MODULE);
+        return false;
+    }
+    if(!this->_buffered) {
+        // Returns error (arbitrary pixel plotting needs the framebuffer)
+        this->_lastError = Error::FEATURE_NOT_SUPPORTED;
+        debugMessage(Error::FEATURE_NOT_SUPPORTED, Debug::CodeIndex::SSD1306_MODULE);
+        return false;
+    }
+    if((x_p >= constSsd1306Width) || (y_p >= (uint8_t)(this->_pages * 8))) {
+        // Returns error
+        this->_lastError = Error::ARGUMENT_VALUE_INVALID;
+        debugMessage(Error::ARGUMENT_VALUE_INVALID, Debug::CodeIndex::SSD1306_MODULE);
+        return false;
+    }
+
+    // Sets the pixel in the framebuffer
+    this->_setPixel(x_p, y_p, on_p);
+
+    // Returns successfully
+    this->_lastError = Error::NONE;
+    debugMessage(Error::NONE, Debug::CodeIndex::SSD1306_MODULE);
+    return true;
+}
+
+bool_t Ssd1306::drawLine(cuint8_t x0_p, cuint8_t y0_p, cuint8_t x1_p, cuint8_t y1_p, cbool_t on_p)
+{
+    // Mark passage for debugging purpose
+    debugMark(PSTR("Ssd1306::drawLine(cuint8_t, cuint8_t, cuint8_t, cuint8_t, cbool_t)"),
+            Debug::CodeIndex::SSD1306_MODULE);
+
+    // Check for errors
+    if(!this->_isInitialized()) {
+        // Returns error
+        debugMessage(this->_lastError, Debug::CodeIndex::SSD1306_MODULE);
+        return false;
+    }
+    if(!this->_buffered) {
+        // Returns error (line drawing needs the framebuffer)
+        this->_lastError = Error::FEATURE_NOT_SUPPORTED;
+        debugMessage(Error::FEATURE_NOT_SUPPORTED, Debug::CodeIndex::SSD1306_MODULE);
+        return false;
+    }
+
+    // Local variables (Bresenham line algorithm)
+    int16_t auxX0                       = x0_p;
+    int16_t auxY0                       = y0_p;
+    int16_t auxDx                       = (x1_p >= x0_p) ? (x1_p - x0_p) : (x0_p - x1_p);
+    int16_t auxDy                       = (y1_p >= y0_p) ? -(y1_p - y0_p) : -(y0_p - y1_p);
+    int16_t auxSx                       = (x0_p < x1_p) ? 1 : -1;
+    int16_t auxSy                       = (y0_p < y1_p) ? 1 : -1;
+    int16_t auxErr                      = auxDx + auxDy;
+
+    // Walks the line, one pixel at a time
+    while(true) {
+        this->_setPixel((uint8_t)auxX0, (uint8_t)auxY0, on_p);
+        if((auxX0 == (int16_t)x1_p) && (auxY0 == (int16_t)y1_p)) {
+            break;
+        }
+        int16_t auxErr2 = (int16_t)(2 * auxErr);
+        if(auxErr2 >= auxDy) {
+            auxErr                      += auxDy;
+            auxX0                       += auxSx;
+        }
+        if(auxErr2 <= auxDx) {
+            auxErr                      += auxDx;
+            auxY0                       += auxSy;
+        }
+    }
+
+    // Returns successfully
+    this->_lastError = Error::NONE;
+    debugMessage(Error::NONE, Debug::CodeIndex::SSD1306_MODULE);
+    return true;
+}
+
 bool_t Ssd1306::fillRect(cuint8_t x_p, cuint8_t page_p, cuint8_t width_p, cuint8_t heightPages_p, cbool_t on_p)
 {
     // Mark passage for debugging purpose
@@ -616,6 +805,19 @@ bool_t Ssd1306::fillRect(cuint8_t x_p, cuint8_t page_p, cuint8_t width_p, cuint8
         this->_lastError = Error::ARGUMENT_VALUE_INVALID;
         debugMessage(Error::ARGUMENT_VALUE_INVALID, Debug::CodeIndex::SSD1306_MODULE);
         return false;
+    }
+
+    // Buffered mode: fills the block pixel by pixel (out-of-bounds is ignored)
+    if(this->_buffered) {
+        uint16_t auxBottom = (uint16_t)(page_p + heightPages_p) * 8;         // exclusive
+        for(uint16_t y = (uint16_t)(page_p * 8); y < auxBottom; y++) {
+            for(uint16_t x = x_p; x < (uint16_t)(x_p + width_p); x++) {
+                this->_setPixel((uint8_t)x, (uint8_t)y, on_p);
+            }
+        }
+        this->_lastError = Error::NONE;
+        debugMessage(Error::NONE, Debug::CodeIndex::SSD1306_MODULE);
+        return true;
     }
 
     // Local variables (clamps region to the display bounds)
@@ -676,6 +878,33 @@ bool_t Ssd1306::drawRect(cuint8_t x_p, cuint8_t page_p, cuint8_t width_p, cuint8
         this->_lastError = Error::ARGUMENT_VALUE_INVALID;
         debugMessage(Error::ARGUMENT_VALUE_INVALID, Debug::CodeIndex::SSD1306_MODULE);
         return false;
+    }
+
+    // Buffered mode: draws the 4 edges pixel by pixel (clamped to the panel)
+    if(this->_buffered) {
+        uint16_t auxBottom16 = (uint16_t)(page_p + heightPages_p) * 8;
+        uint16_t auxRight16  = (uint16_t)x_p + width_p;
+        if(auxBottom16 > (uint16_t)(this->_pages * 8)) {
+            auxBottom16 = (uint16_t)(this->_pages * 8);
+        }
+        if(auxRight16 > constSsd1306Width) {
+            auxRight16 = constSsd1306Width;
+        }
+        uint8_t auxTop      = (uint8_t)(page_p * 8);
+        uint8_t auxBottom   = (uint8_t)(auxBottom16 - 1);
+        uint8_t auxRight    = (uint8_t)(auxRight16 - 1);
+
+        for(uint16_t x = x_p; x <= auxRight; x++) {
+            this->_setPixel((uint8_t)x, auxTop, true);
+            this->_setPixel((uint8_t)x, auxBottom, true);
+        }
+        for(uint16_t y = auxTop; y <= auxBottom; y++) {
+            this->_setPixel(x_p, (uint8_t)y, true);
+            this->_setPixel(auxRight, (uint8_t)y, true);
+        }
+        this->_lastError = Error::NONE;
+        debugMessage(Error::NONE, Debug::CodeIndex::SSD1306_MODULE);
+        return true;
     }
 
     // Local variables (clamps region to the display bounds)
@@ -756,6 +985,16 @@ bool_t Ssd1306::drawHLine(cuint8_t x_p, cuint8_t y_p, cuint8_t width_p)
         return false;
     }
 
+    // Buffered mode: sets the line pixel by pixel (out-of-bounds is ignored)
+    if(this->_buffered) {
+        for(uint16_t x = x_p; x < (uint16_t)(x_p + width_p); x++) {
+            this->_setPixel((uint8_t)x, y_p, true);
+        }
+        this->_lastError = Error::NONE;
+        debugMessage(Error::NONE, Debug::CodeIndex::SSD1306_MODULE);
+        return true;
+    }
+
     // Local variables
     uint8_t auxBuffer[constSsd1306DataChunk];
     uint8_t auxMask                     = (1 << (y_p % 8));
@@ -807,6 +1046,16 @@ bool_t Ssd1306::drawVLine(cuint8_t x_p, cuint8_t y_p, cuint8_t height_p)
         this->_lastError = Error::ARGUMENT_VALUE_INVALID;
         debugMessage(Error::ARGUMENT_VALUE_INVALID, Debug::CodeIndex::SSD1306_MODULE);
         return false;
+    }
+
+    // Buffered mode: sets the line pixel by pixel (out-of-bounds is ignored)
+    if(this->_buffered) {
+        for(uint16_t y = y_p; y < (uint16_t)(y_p + height_p); y++) {
+            this->_setPixel(x_p, (uint8_t)y, true);
+        }
+        this->_lastError = Error::NONE;
+        debugMessage(Error::NONE, Debug::CodeIndex::SSD1306_MODULE);
+        return true;
     }
 
     // Local variables (clamps to the display bottom)
@@ -933,10 +1182,31 @@ bool_t Ssd1306::_setAddress(uint8_t page_p, uint8_t x_p)
     return true;
 }
 
+void Ssd1306::_setPixel(uint8_t x_p, uint8_t y_p, bool_t on_p)
+{
+    // Ignores out-of-bounds pixels
+    if((x_p >= constSsd1306Width) || (y_p >= (uint8_t)(this->_pages * 8))) {
+        return;
+    }
+
+    // Local variables
+    uint16_t auxIndex                   = ((uint16_t)(y_p >> 3) * constSsd1306Width) + x_p;
+    uint8_t auxBit                      = (1 << (y_p & 0x07));
+
+    // Updates the framebuffer and marks the page dirty
+    if(on_p) {
+        this->_frameBuffer[auxIndex]    |= auxBit;
+    } else {
+        this->_frameBuffer[auxIndex]    &= (uint8_t)(~auxBit);
+    }
+    this->_dirtyPageMask                |= (uint8_t)(1 << (y_p >> 3));
+
+    return;
+}
+
 bool_t Ssd1306::_writeChar(char_t character_p)
 {
     // Local variables
-    uint8_t auxBuffer[constSsd1306CellWidth * constSsd1306TextSizeMax];   // up to 6*4
     uint8_t auxScale                    = this->_textSize;
     uint8_t auxCode                     = (uint8_t)character_p;
     uint8_t auxIndex                    = 0;
@@ -950,17 +1220,46 @@ bool_t Ssd1306::_writeChar(char_t character_p)
     // Wraps to the next line when the glyph does not fit horizontally
     if((this->_cursorX + (constSsd1306CellWidth * auxScale)) > constSsd1306Width) {
         this->_cursorX                  = 0;
-        this->_cursorPage               += auxScale;
+        this->_cursorY                  += (uint8_t)(auxScale * 8);
     }
-    if((this->_cursorPage + auxScale) > this->_pages) {
-        this->_cursorPage               = 0;
+    if((this->_cursorY + (auxScale * 8)) > (this->_pages * 8)) {
+        this->_cursorY                  = 0;
     }
 
-    // Renders the glyph, one page-row at a time
+    // Buffered mode: composes the whole cell (on AND off pixels) into RAM,
+    // at any Y. Each source pixel becomes an auxScale x auxScale block.
+    if(this->_buffered) {
+        for(uint8_t col = 0; col < constSsd1306CellWidth; col++) {
+            uint8_t auxSourceCol        = 0x00;
+
+            if(col < 5) {
+                auxSourceCol = pgm_read_byte(&constSsd1306Font[auxIndex][col]);
+            }
+            for(uint8_t row = 0; row < 8; row++) {
+                bool_t auxOn = (auxSourceCol >> row) & 0x01;
+                for(uint8_t dx = 0; dx < auxScale; dx++) {
+                    for(uint8_t dy = 0; dy < auxScale; dy++) {
+                        this->_setPixel(
+                                this->_cursorX + (col * auxScale) + dx,
+                                this->_cursorY + (row * auxScale) + dy,
+                                auxOn);
+                    }
+                }
+            }
+        }
+        this->_cursorX                  += (constSsd1306CellWidth * auxScale);
+        this->_lastError = Error::NONE;
+        return true;
+    }
+
+    // Direct mode: renders the glyph one page-row at a time (Y is page-aligned)
+    uint8_t auxBuffer[constSsd1306CellWidth * constSsd1306TextSizeMax];   // up to 6*4
+    uint8_t auxPage                     = (this->_cursorY >> 3);
+
     for(uint8_t pg = 0; pg < auxScale; pg++) {
         uint8_t auxBufferSize           = 0;
 
-        if(!this->_setAddress(this->_cursorPage + pg, this->_cursorX)) {
+        if(!this->_setAddress(auxPage + pg, this->_cursorX)) {
             return false;
         }
         for(uint8_t col = 0; col < constSsd1306CellWidth; col++) {

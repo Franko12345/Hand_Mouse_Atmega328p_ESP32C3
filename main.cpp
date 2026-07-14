@@ -12,7 +12,7 @@
 
 #include "funsape/peripheral/twi.hpp"
 #include "funsape/device/ssd1306.hpp"
-
+#include "funsape/util/intTrig.hpp"
 //Macro definitions ------------------------------------------------------------
 
 #define defineBit(var, pos, value) ((uint8_t)((var & (1 << pos)) ? (var & (~((!((bool_t)value)) << pos)) ) : (var | (bool_t)value << pos)))
@@ -34,7 +34,8 @@
 enum OP_MODE{
   IDLE_MODE,
   CURSOR_MODE,
-  SCROLL_MODE
+  SCROLL_MODE,
+  CALIBRATION_MODE
 };
 
 enum BT_STATE{
@@ -56,6 +57,9 @@ void format_packet(uint16_t x, uint16_t y, uint8_t buttons, \
 void convert_recieved(int32_t *roll, int32_t *pitch, \
     int32_t *yaw, int16_t *accel_x, BT_STATE *state, uint8_t *packet);
 
+uint16_t projectTan(int32_t angle_mdeg, int32_t center_mdeg,
+                    int32_t halfRange_mdeg, uint16_t sens_q8);
+
 // GLOBAL VARIABLE DECLARATIONS ================================================
 
 //GPIO Declarations ------------------------------------------------------------
@@ -65,6 +69,7 @@ GpioPin slave_select_esp;
 
 //OLED Display -----------------------------------------------------------------
 Ssd1306 display;
+uint8_t oledBuffer[1024];
 volatile bool update_display_flag = false;
 volatile bool clear_display_flag = false;
 
@@ -149,13 +154,13 @@ int main(){
     // Config Uart --- Debug ---------------------------------------------------
     {
     usart0.init();
-    usart0.setBaudRate(Usart0::BaudRate::BAUD_RATE_9600);
+    usart0.setBaudRate(Usart0::BaudRate::BAUD_RATE_115200);
     usart0.setFrameFormat(Usart0::FrameFormat::FRAME_FORMAT_8_E_1);
     usart0.enableTransmitter();
     usart0.enableReceiver();
     usart0.stdio();
     }
-    
+
     // Set enable interrupts ---------------------------------------------------
     sei();
 
@@ -163,7 +168,8 @@ int main(){
     // (TWI a 400kHz, buffer de 64 bytes; interrupcoes ja habilitadas com sei())
     {
     twi.init(400000, 64);
-    display.init(&twi);                 // 128x64, endereco 0x3C por padrao
+
+    display.init(&twi, Ssd1306::Size::SSD1306_128X64, 0x3C, oledBuffer);
 
     display.setUpsideDown(true);
     display.clearScreen();
@@ -179,15 +185,12 @@ int main(){
     uint8_t packet[PACKET_SIZE], recv_packet[PACKET_SIZE];
     int32_t pitch {0}, roll {0}, yaw {0};
     int16_t accel_x {0};
-    float scroll_accumulator {0};
+    uint8_t sense_x {20}, sense_y{20}; 
 
-
-    BT_STATE state = BT_DISCONNECTED;
+    BT_STATE ble_state = BT_DISCONNECTED;
     uint8_t last_debounced_buttons = 0;
 
     uint8_t idle_count = 0;
-
-    uint32_t last_timestamp = {0};
 
     uint32_t last_mouse_button_pressed {0};
 
@@ -207,10 +210,16 @@ int main(){
                 }
         }
 
-        if(((debounced_buttons ^ last_debounced_buttons) & ENABLE_BUTTON) && (debounced_buttons & ENABLE_BUTTON)){
+        uint8_t pressed_buttons = (debounced_buttons ^ last_debounced_buttons) & debounced_buttons;
+
+        if((debounced_buttons & ENABLE_BUTTON) && (get_millis()-button_last_changed[ENABLE_BUTTON] > 2000 )){
+            current_state = CALIBRATION_MODE;
+        }
+
+        if((pressed_buttons & ENABLE_BUTTON) && (debounced_buttons & ENABLE_BUTTON)){
             current_state = (current_state == IDLE_MODE) ? CURSOR_MODE : IDLE_MODE;
         }
-        if(((debounced_buttons ^ last_debounced_buttons) & (RIGHT_BUTTON | LEFT_BUTTON)) && (debounced_buttons & (RIGHT_BUTTON | LEFT_BUTTON))){
+        if((pressed_buttons & (RIGHT_BUTTON | LEFT_BUTTON)) && (debounced_buttons & (RIGHT_BUTTON | LEFT_BUTTON))){
             last_mouse_button_pressed = get_millis();
         }
 
@@ -222,13 +231,13 @@ int main(){
             char formatted_state[22];
             sprintf_P(formatted_state, PSTR("State: %S|BLE: %S"), 
                 (current_state == IDLE_MODE) ? PSTR("IDLE") : 
-                (current_state == CURSOR_MODE) ? PSTR("CURSOR") : PSTR("SCROLL"),
-                (state == BT_CONNECTED) ? PSTR("OK") : PSTR("NO"));
+                (current_state == CURSOR_MODE) ? PSTR("CURSOR") : 
+                (current_state == SCROLL_MODE) ? PSTR("SCROLL") : PSTR("ADJUST"),
+                (ble_state == BT_CONNECTED) ? PSTR("OK") : PSTR("NO"));
             display.print(formatted_state);
             
             int8_t bar_roll = MIN(MAX((roll/1410), -63), 63);
             display.fillRect(63+MIN(0, bar_roll), 0, (cuint8_t)ABS(bar_roll), 1, true);                    
-            display.setCursor(0, 7);
             
             int8_t bar_pitch = MIN(MAX((pitch/1410), -63), 63);
             display.fillRect(63+MIN(0, bar_pitch), 1, (cuint8_t)ABS(bar_pitch), 1, true);                    
@@ -236,6 +245,16 @@ int main(){
             int8_t bar_yaw = MIN(MAX((yaw/1410), -63), 63);
             display.fillRect(63+MIN(0, bar_yaw), 2, (cuint8_t)ABS(bar_yaw), 1, true);                    
 
+            display.drawPixel(x>>8, y>>9);
+            
+            display.setCursor(10,5);
+
+            char formatted_sense[21];
+            sprintf_P(formatted_sense, PSTR("SENSE X: %u.%ux Y: %u.%ux"), sense_x/10, sense_x%10, sense_y/10, sense_y%10);
+            display.setCursor(0,5);            
+            display.print(formatted_sense);
+
+            display.display();
             update_display_flag = false;
         }
 
@@ -249,7 +268,7 @@ int main(){
                         idle_count = 0;
                         format_packet(x, y, 0, 0, current_state, packet);
                         transcieve_packets(packet, recv_packet, PACKET_SIZE);
-                        convert_recieved(&roll, &pitch, &yaw, &accel_x, &state, recv_packet);
+                        convert_recieved(&roll, &pitch, &yaw, &accel_x, &ble_state, recv_packet);
                         spi_flag = false;
             
                         // printf("State: %u  Pitch: %i.%u  Roll: %i.%u  Yaw: %i.%u SENDING: SCROLL: %i\r\n", state, pitch/10, ABS(pitch%10), roll/10, ABS(roll%10), yaw/10, ABS(yaw%10), scroll);
@@ -262,53 +281,62 @@ int main(){
 
                 {
 
-                    if(get_millis() - last_mouse_button_pressed > 50){
-                        int32_t raw_x = ((int32_t)roll*4096)/10000;
-                        int32_t raw_y = ((int32_t)pitch*6553)/10000;
+                    if(get_millis() - last_mouse_button_pressed > 100){
+                        // int32_t raw_x = ((int32_t)(yaw+45000)*410*sense_x)/10000;
+                        // int32_t raw_y = ((int32_t)pitch*655*sense_y)/10000;
+
+                        // yaw no eixo X: 0 -> centro, -45 -> esquerda, +45 -> direita
+                        int32_t raw_x = projectTan(yaw,   0,     45000, sense_x);
+                        // pitch no eixo Y: 0..50 -> tela toda (centro em 25)
+                        int32_t raw_y = projectTan(pitch, 25000, 25000, sense_y);
                         
-                        x = (int16_t)MAX(MIN(raw_x, 32767), 0);
-                        y = 32767 - (int16_t)MAX(MIN(raw_y, 32767), 0);
+                        x = (int16_t)truncateBetween(raw_x, 0, 32767);
+                        y = 32767 - (int16_t)truncateBetween(raw_y, 0, 32767);
 
                     }
 
                     if(spi_flag){
                             format_packet(x, y, debounced_buttons, 0, current_state, packet);
                             transcieve_packets(packet, recv_packet, PACKET_SIZE);
-                            convert_recieved(&roll, &pitch, &yaw, &accel_x, &state, recv_packet);
+                            convert_recieved(&roll, &pitch, &yaw, &accel_x, &ble_state, recv_packet);
                             spi_flag = false;
                 
-                            // printf("State: %u  Pitch: %li  Roll: %li  Yaw: %li SENDING: X: %u  Y: %u\r\n", state, pitch, roll, yaw, x, y);
+                            // printf("State: %u  Pitch: %li  Roll: %li  Yaw: %li SENDING: X: %u  Y: %u\r\n", ble_state, pitch, roll, yaw, x, y);
                             // printf("Buttons: %u %u %u\r\n", (bool_t)(debounced_buttons&(1<<0)), (bool_t)(debounced_buttons&(1<<1)), (bool_t)(debounced_buttons&(1<<2)));
                     }
                 }        
                 break;
             case SCROLL_MODE:
-                if (pitch < 60000){current_state = CURSOR_MODE; break;}
+                if (pitch < 50000){current_state = CURSOR_MODE; break;}
 
-                {
-                    uint16_t dt = (micros() - last_timestamp);
-                    int16_t delta = (1000 - accel_x);
-                    if(ABS(delta) < 20) delta = 0;
+                if(spi_flag){
+                    int8_t scroll_packet = (int8_t)(ABS(yaw) > 15000) ? (int8_t)(yaw/15000) : 0;
 
+                    format_packet(x, y, debounced_buttons, scroll_packet, current_state, packet);
+                    transcieve_packets(packet, recv_packet, PACKET_SIZE);
+                    convert_recieved(&roll, &pitch, &yaw, &accel_x, &ble_state, recv_packet);
                     
-                    scroll_accumulator += (((float)(delta*(int16_t)dt))/1000000.0f);
-                    
-                    last_timestamp = micros();
-                    
-                    if(spi_flag){
-                        int8_t scroll_packet = SIGN(delta)*MIN(ABS(scroll_accumulator), 1);
-                        format_packet(x, y, debounced_buttons, scroll_packet, current_state, packet);
+                    printf("State: %u  Pitch:  %li  Roll: %li  Yaw: %li Accel_x: %d.%u SENDING: SCROLL: %d\r\n", ble_state, pitch, roll, yaw, accel_x/10, ABS(accel_x%10), scroll_packet);
+
+                    spi_flag=false;
+                }
+
+                break;
+            case CALIBRATION_MODE:
+                if(pressed_buttons & LEFT_BUTTON){
+                    sense_x = (sense_x+5)%45;
+                }
+                if(pressed_buttons & RIGHT_BUTTON){
+                    sense_y = (sense_y+5)%45;
+                }
+
+                if(spi_flag){
+                        format_packet(x, y, 0, 0, current_state, packet);
                         transcieve_packets(packet, recv_packet, PACKET_SIZE);
-                        convert_recieved(&roll, &pitch, &yaw, &accel_x, &state, recv_packet);
+                        convert_recieved(&roll, &pitch, &yaw, &accel_x, &ble_state, recv_packet);
                         
-                        printf("State: %u  Pitch: %li  Roll: %li  Yaw: %li Accel_x: %d.%u Delta: %d SENDING: SCROLL: %d\r\n", state, pitch, roll, yaw, accel_x/10, ABS(accel_x%10), delta, scroll_packet);
-                        // printf("Buttons: %u %u %u\r\n", (bool_t)(debounced_buttons&(1<<0)), (bool_t)(debounced_buttons&(1<<1)), (bool_t)(debounced_buttons&(1<<2)));
-
-                        scroll_accumulator -= scroll_accumulator/10;
-
                         spi_flag=false;
                     }
-                }
                 break;
             default:
                 ;
@@ -318,6 +346,24 @@ int main(){
             last_debounced_buttons = debounced_buttons;
     }
 }
+
+//! Projeta um angulo (em milesimos de grau) numa coordenada de tela 0..32767,
+//! por TANGENTE (projecao "tela plana"). 'center' cai no meio (16384); em
+//! (center +- halfRange) chega nas bordas (0 e 32767). 'sens' e' ganho Q8
+//! (256 = 1.0x; 512 = 2.0x; 128 = 0.5x). Resultado sempre limitado a [0,32767].
+uint16_t projectTan(int32_t angle_mdeg, int32_t center_mdeg,
+                    int32_t halfRange_mdeg, uint16_t sens_q8)
+{
+
+    int32_t rel = angle_mdeg - center_mdeg;
+    rel = truncateBetween(rel, -60000L, 60000L);              // evita div0/estouro do tan
+    int32_t tanRel  = ((int32_t)sini(rel) << 12) / cosi(rel);          // tan em Q12
+    int32_t tanHalf = ((int32_t)sini(halfRange_mdeg) << 12) / cosi(halfRange_mdeg);
+    int32_t offset  = ((int32_t)tanRel * sens_q8 * 1536) / tanHalf;      // 16384 na borda (sens=256)
+    int32_t coord   = 16384L + offset;
+    return (uint16_t)truncateBetween(coord, 0L, 32767L);
+}
+
 
 uint8_t spi_writeRead(uint8_t data){
     SPDR = data;
@@ -434,8 +480,7 @@ void timer0CompareACallback(void){
     static uint8_t counter_display = 0;
     static uint8_t counter_clear_display = 0;
 
-    counter_spi++;
-    if(counter_spi == 1){
+    if(counter_spi++ == 1){
         spi_flag = true;    
         counter_spi = 0;
     }

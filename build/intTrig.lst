@@ -1,0 +1,734 @@
+GAS LISTING /tmp/ccaNWYUL.s 			page 1
+
+
+   1               		.file	"intTrig.cpp"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.text
+   8               	.Ltext0:
+   9               		.cfi_sections	.debug_frame
+  10               		.file 1 "funsape/util/intTrig.cpp"
+  11               		.section	.text._Z4sinil,"ax",@progbits
+  12               	.global	_Z4sinil
+  14               	_Z4sinil:
+  15               	.LVL0:
+  16               	.LFB91:
+   1:funsape/util/intTrig.cpp **** //!
+   2:funsape/util/intTrig.cpp **** //! \file           intTrig.cpp
+   3:funsape/util/intTrig.cpp **** //! \brief          Integer (Q15) sine/cosine for the FunSAPE AVR8 Library
+   4:funsape/util/intTrig.cpp **** //! \author         Franko
+   5:funsape/util/intTrig.cpp **** //! \date           2026-07-14
+   6:funsape/util/intTrig.cpp **** //! \version        24.07
+   7:funsape/util/intTrig.cpp **** //! \copyright      license
+   8:funsape/util/intTrig.cpp **** //! \details        See intTrig.hpp. Quarter-wave sine table (Q15) in PROGMEM plus
+   9:funsape/util/intTrig.cpp **** //!                     linear interpolation; input in millidegrees, output Q15.
+  10:funsape/util/intTrig.cpp **** //! \todo           Todo list
+  11:funsape/util/intTrig.cpp **** //!
+  12:funsape/util/intTrig.cpp **** 
+  13:funsape/util/intTrig.cpp **** // =============================================================================
+  14:funsape/util/intTrig.cpp **** // System file dependencies
+  15:funsape/util/intTrig.cpp **** // =============================================================================
+  16:funsape/util/intTrig.cpp **** 
+  17:funsape/util/intTrig.cpp **** #include "intTrig.hpp"
+  18:funsape/util/intTrig.cpp **** #if !defined(__INT_TRIG_HPP)
+  19:funsape/util/intTrig.cpp **** #   error "Header file is corrupted!"
+  20:funsape/util/intTrig.cpp **** #elif __INT_TRIG_HPP != 2604
+  21:funsape/util/intTrig.cpp **** #   error "Version mismatch between source and header files!"
+  22:funsape/util/intTrig.cpp **** #endif
+  23:funsape/util/intTrig.cpp **** 
+  24:funsape/util/intTrig.cpp **** #include <avr/pgmspace.h>
+  25:funsape/util/intTrig.cpp **** 
+  26:funsape/util/intTrig.cpp **** // =============================================================================
+  27:funsape/util/intTrig.cpp **** // File exclusive - Constants
+  28:funsape/util/intTrig.cpp **** // =============================================================================
+  29:funsape/util/intTrig.cpp **** 
+  30:funsape/util/intTrig.cpp **** //     Converts a first-quadrant angle in millidegrees [0..90000] into a table
+  31:funsape/util/intTrig.cpp **** //     position in Q8 over 128 intervals:  pos = (angle * SCALE) >> 16, with
+  32:funsape/util/intTrig.cpp **** //     SCALE = round(32768 / 90000 * 65536) = 23860. This avoids any division.
+  33:funsape/util/intTrig.cpp **** cuint16_t constIntTrigScale             = 23860;
+  34:funsape/util/intTrig.cpp **** 
+  35:funsape/util/intTrig.cpp **** cint32_t constIntTrigQuarterTurn        = 90000L;   //  90 degrees, in millidegrees
+  36:funsape/util/intTrig.cpp **** cint32_t constIntTrigHalfTurn           = 180000L;  // 180 degrees, in millidegrees
+  37:funsape/util/intTrig.cpp **** cint32_t constIntTrigFullTurn           = 360000L;  // 360 degrees, in millidegrees
+  38:funsape/util/intTrig.cpp **** 
+  39:funsape/util/intTrig.cpp **** //     Quarter-wave sine table, Q15 (value = sin(k * 90/128 degrees) * 32768).
+  40:funsape/util/intTrig.cpp **** //     129 entries (k = 0..128), 258 bytes in flash, 0 bytes in RAM.
+  41:funsape/util/intTrig.cpp **** static const int16_t constSinTable[129] PROGMEM = {
+  42:funsape/util/intTrig.cpp ****          0,    402,    804,   1206,   1608,   2009,   2410,   2811,
+GAS LISTING /tmp/ccaNWYUL.s 			page 2
+
+
+  43:funsape/util/intTrig.cpp ****       3212,   3612,   4011,   4410,   4808,   5205,   5602,   5998,
+  44:funsape/util/intTrig.cpp ****       6393,   6786,   7179,   7571,   7962,   8351,   8739,   9126,
+  45:funsape/util/intTrig.cpp ****       9512,   9896,  10278,  10659,  11039,  11417,  11793,  12167,
+  46:funsape/util/intTrig.cpp ****      12539,  12910,  13279,  13645,  14010,  14372,  14732,  15090,
+  47:funsape/util/intTrig.cpp ****      15446,  15800,  16151,  16499,  16846,  17189,  17530,  17869,
+  48:funsape/util/intTrig.cpp ****      18204,  18537,  18868,  19195,  19519,  19841,  20159,  20475,
+  49:funsape/util/intTrig.cpp ****      20787,  21096,  21403,  21705,  22005,  22301,  22594,  22884,
+  50:funsape/util/intTrig.cpp ****      23170,  23452,  23731,  24007,  24279,  24547,  24811,  25072,
+  51:funsape/util/intTrig.cpp ****      25329,  25582,  25832,  26077,  26319,  26556,  26790,  27019,
+  52:funsape/util/intTrig.cpp ****      27245,  27466,  27683,  27896,  28105,  28310,  28510,  28706,
+  53:funsape/util/intTrig.cpp ****      28898,  29085,  29268,  29447,  29621,  29791,  29956,  30117,
+  54:funsape/util/intTrig.cpp ****      30273,  30424,  30571,  30714,  30852,  30985,  31113,  31237,
+  55:funsape/util/intTrig.cpp ****      31356,  31470,  31580,  31685,  31785,  31880,  31971,  32057,
+  56:funsape/util/intTrig.cpp ****      32137,  32213,  32285,  32351,  32412,  32469,  32521,  32567,
+  57:funsape/util/intTrig.cpp ****      32609,  32646,  32678,  32705,  32728,  32745,  32757,  32765,
+  58:funsape/util/intTrig.cpp ****      32767,
+  59:funsape/util/intTrig.cpp **** };
+  60:funsape/util/intTrig.cpp **** 
+  61:funsape/util/intTrig.cpp **** // =============================================================================
+  62:funsape/util/intTrig.cpp **** // Public functions definitions
+  63:funsape/util/intTrig.cpp **** // =============================================================================
+  64:funsape/util/intTrig.cpp **** 
+  65:funsape/util/intTrig.cpp **** int16_t sini(int32_t angle_p)
+  66:funsape/util/intTrig.cpp **** {
+  17               		.loc 1 66 1 view -0
+  18               		.cfi_startproc
+  19               		.loc 1 66 1 is_stmt 0 view .LVU1
+  20 0000 1F93      		push r17
+  21               	.LCFI0:
+  22               		.cfi_def_cfa_offset 3
+  23               		.cfi_offset 17, -2
+  24 0002 CF93      		push r28
+  25               	.LCFI1:
+  26               		.cfi_def_cfa_offset 4
+  27               		.cfi_offset 28, -3
+  28 0004 DF93      		push r29
+  29               	.LCFI2:
+  30               		.cfi_def_cfa_offset 5
+  31               		.cfi_offset 29, -4
+  32               	/* prologue: function */
+  33               	/* frame size = 0 */
+  34               	/* stack size = 3 */
+  35               	.L__stack_usage = 3
+  67:funsape/util/intTrig.cpp ****     // Local variables
+  68:funsape/util/intTrig.cpp ****     int32_t aux                         = angle_p % constIntTrigFullTurn;
+  36               		.loc 1 68 5 is_stmt 1 view .LVU2
+  37               		.loc 1 68 13 is_stmt 0 view .LVU3
+  38 0006 20E4      		ldi r18,lo8(64)
+  39 0008 3EE7      		ldi r19,lo8(126)
+  40 000a 45E0      		ldi r20,lo8(5)
+  41 000c 50E0      		ldi r21,0
+  42 000e 0E94 0000 		call __divmodsi4
+  43               	.LVL1:
+  44               		.loc 1 68 13 view .LVU4
+  45 0012 DC01      		movw r26,r24
+  46 0014 CB01      		movw r24,r22
+  47 0016 AC01      		movw r20,r24
+GAS LISTING /tmp/ccaNWYUL.s 			page 3
+
+
+  48 0018 BD01      		movw r22,r26
+  49               	.LVL2:
+  69:funsape/util/intTrig.cpp ****     int8_t auxSign                      = 1;
+  50               		.loc 1 69 5 is_stmt 1 view .LVU5
+  70:funsape/util/intTrig.cpp **** 
+  71:funsape/util/intTrig.cpp ****     // Range reduction to [0, 360000)
+  72:funsape/util/intTrig.cpp ****     if(aux < 0) {
+  51               		.loc 1 72 5 view .LVU6
+  52 001a BB23      		tst r27
+  53 001c 04F4      		brge .+2
+  54 001e 00C0      		rjmp .L11
+  55               	.LVL3:
+  56               	.L2:
+  73:funsape/util/intTrig.cpp ****         aux += constIntTrigFullTurn;
+  74:funsape/util/intTrig.cpp ****     }
+  75:funsape/util/intTrig.cpp ****     // Sign from the half-circle (sin is negative in [180, 360) degrees)
+  76:funsape/util/intTrig.cpp ****     if(aux >= constIntTrigHalfTurn) {
+  57               		.loc 1 76 5 view .LVU7
+  58 0020 4032      		cpi r20,32
+  59 0022 8FEB      		ldi r24,-65
+  60 0024 5807      		cpc r21,r24
+  61 0026 82E0      		ldi r24,2
+  62 0028 6807      		cpc r22,r24
+  63 002a 7105      		cpc r23,__zero_reg__
+  64 002c 04F4      		brge .+2
+  65 002e 00C0      		rjmp .L7
+  77:funsape/util/intTrig.cpp ****         aux -= constIntTrigHalfTurn;
+  66               		.loc 1 77 9 view .LVU8
+  67               		.loc 1 77 13 is_stmt 0 view .LVU9
+  68 0030 4052      		subi r20,32
+  69 0032 5F4B      		sbci r21,-65
+  70 0034 6240      		sbci r22,2
+  71 0036 7040      		sbci r23,0
+  72               	.LVL4:
+  78:funsape/util/intTrig.cpp ****         auxSign = -1;
+  73               		.loc 1 78 9 is_stmt 1 view .LVU10
+  74               		.loc 1 78 17 is_stmt 0 view .LVU11
+  75 0038 1FEF      		ldi r17,lo8(-1)
+  76               	.LVL5:
+  77               	.L3:
+  79:funsape/util/intTrig.cpp ****     }
+  80:funsape/util/intTrig.cpp ****     // Reflect into the first quadrant [0, 90000]  (sin(180 - x) = sin(x))
+  81:funsape/util/intTrig.cpp ****     if(aux > constIntTrigQuarterTurn) {
+  78               		.loc 1 81 5 is_stmt 1 view .LVU12
+  79 003a 4139      		cpi r20,-111
+  80 003c 8FE5      		ldi r24,95
+  81 003e 5807      		cpc r21,r24
+  82 0040 81E0      		ldi r24,1
+  83 0042 6807      		cpc r22,r24
+  84 0044 7105      		cpc r23,__zero_reg__
+  85 0046 04F0      		brlt .L4
+  82:funsape/util/intTrig.cpp ****         aux = constIntTrigHalfTurn - aux;
+  86               		.loc 1 82 9 view .LVU13
+  87               		.loc 1 82 13 is_stmt 0 view .LVU14
+  88 0048 80E2      		ldi r24,lo8(32)
+  89 004a 9FEB      		ldi r25,lo8(-65)
+  90 004c A2E0      		ldi r26,lo8(2)
+GAS LISTING /tmp/ccaNWYUL.s 			page 4
+
+
+  91 004e B0E0      		ldi r27,0
+  92 0050 841B      		sub r24,r20
+  93 0052 950B      		sbc r25,r21
+  94 0054 A60B      		sbc r26,r22
+  95 0056 B70B      		sbc r27,r23
+  96 0058 AC01      		movw r20,r24
+  97 005a BD01      		movw r22,r26
+  98               	.LVL6:
+  99               	.L4:
+  83:funsape/util/intTrig.cpp ****     }
+  84:funsape/util/intTrig.cpp **** 
+  85:funsape/util/intTrig.cpp ****     // Table position in Q8 over 128 intervals (no division); auxPos <= 32766,
+  86:funsape/util/intTrig.cpp ****     // so auxIndex <= 127 and constSinTable[auxIndex + 1] never reads past the end
+  87:funsape/util/intTrig.cpp ****     uint16_t auxPos                     = (uint16_t)(((uint32_t)aux * constIntTrigScale) >> 16);
+ 100               		.loc 1 87 5 is_stmt 1 view .LVU15
+ 101               		.loc 1 87 69 is_stmt 0 view .LVU16
+ 102 005c A4E3      		ldi r26,lo8(52)
+ 103 005e BDE5      		ldi r27,lo8(93)
+ 104 0060 9A01      		movw r18,r20
+ 105 0062 AB01      		movw r20,r22
+ 106 0064 0E94 0000 		call __muluhisi3
+ 107               		.loc 1 87 90 view .LVU17
+ 108 0068 AA27      		clr r26
+ 109 006a BB27      		clr r27
+ 110               	.LVL7:
+  88:funsape/util/intTrig.cpp ****     uint8_t auxIndex                    = (uint8_t)(auxPos >> 8);
+ 111               		.loc 1 88 5 is_stmt 1 view .LVU18
+  89:funsape/util/intTrig.cpp ****     int16_t auxValue;
+ 112               		.loc 1 89 5 view .LVU19
+  90:funsape/util/intTrig.cpp **** 
+  91:funsape/util/intTrig.cpp ****     if(auxIndex >= 128) {
+ 113               		.loc 1 91 5 view .LVU20
+ 114               	.LBB2:
+ 115 006c 9030      		cpi r25,lo8(0)
+ 116 006e 04F0      		brlt .L8
+ 117               	.LBB3:
+  92:funsape/util/intTrig.cpp ****         // Defensive edge guard (not reached with the constants above)
+  93:funsape/util/intTrig.cpp ****         auxValue = 32767;
+  94:funsape/util/intTrig.cpp ****     } else {
+  95:funsape/util/intTrig.cpp ****         uint8_t auxFrac                 = (uint8_t)(auxPos & 0x00FF);
+ 118               		.loc 1 95 9 view .LVU21
+ 119               	.LVL8:
+  96:funsape/util/intTrig.cpp ****         int16_t auxBase                 = (int16_t)pgm_read_word(&constSinTable[auxIndex]);
+ 120               		.loc 1 96 9 view .LVU22
+ 121               	.LBB4:
+ 122               		.loc 1 96 52 view .LVU23
+ 123 0070 492F      		mov r20,r25
+ 124               	.LVL9:
+ 125               		.loc 1 96 52 is_stmt 0 view .LVU24
+ 126 0072 50E0      		ldi r21,0
+ 127 0074 FA01      		movw r30,r20
+ 128 0076 EE0F      		lsl r30
+ 129 0078 FF1F      		rol r31
+ 130 007a E050      		subi r30,lo8(-(_ZL13constSinTable))
+ 131 007c F040      		sbci r31,hi8(-(_ZL13constSinTable))
+ 132               	.LVL10:
+ 133               		.loc 1 96 52 is_stmt 1 view .LVU25
+GAS LISTING /tmp/ccaNWYUL.s 			page 5
+
+
+ 134               		.loc 1 96 52 view .LVU26
+ 135               	/* #APP */
+ 136               	 ;  96 "funsape/util/intTrig.cpp" 1
+ 137 007e C591      		lpm r28,Z+
+ 138 0080 D591      		lpm r29,Z+ ; [[len=nl]]
+ 139               	 ;  0 "" 2
+ 140               	.LVL11:
+ 141               		.loc 1 96 52 view .LVU27
+ 142               		.loc 1 96 52 is_stmt 0 view .LVU28
+ 143               	/* #NOAPP */
+ 144               	.LBE4:
+  97:funsape/util/intTrig.cpp ****         int16_t auxNext                 = (int16_t)pgm_read_word(&constSinTable[auxIndex + 1]);
+ 145               		.loc 1 97 9 is_stmt 1 view .LVU29
+ 146               	.LBB5:
+ 147               		.loc 1 97 52 view .LVU30
+ 148 0082 4F5F      		subi r20,-1
+ 149 0084 5F4F      		sbci r21,-1
+ 150 0086 FA01      		movw r30,r20
+ 151 0088 EE0F      		lsl r30
+ 152 008a FF1F      		rol r31
+ 153 008c E050      		subi r30,lo8(-(_ZL13constSinTable))
+ 154 008e F040      		sbci r31,hi8(-(_ZL13constSinTable))
+ 155               	.LVL12:
+ 156               		.loc 1 97 52 view .LVU31
+ 157               		.loc 1 97 52 view .LVU32
+ 158               	/* #APP */
+ 159               	 ;  97 "funsape/util/intTrig.cpp" 1
+ 160 0090 4591      		lpm r20,Z+
+ 161 0092 5591      		lpm r21,Z+ ; [[len=nl]]
+ 162               	 ;  0 "" 2
+ 163               	.LVL13:
+ 164               		.loc 1 97 52 view .LVU33
+ 165               		.loc 1 97 52 is_stmt 0 view .LVU34
+ 166               	/* #NOAPP */
+ 167               	.LBE5:
+  98:funsape/util/intTrig.cpp ****         auxValue = auxBase + (int16_t)(((int32_t)(auxNext - auxBase) * auxFrac) >> 8);
+ 168               		.loc 1 98 9 is_stmt 1 view .LVU35
+ 169               		.loc 1 98 59 is_stmt 0 view .LVU36
+ 170 0094 4C1B      		sub r20,r28
+ 171 0096 5D0B      		sbc r21,r29
+ 172               	.LVL14:
+ 173               		.loc 1 98 70 view .LVU37
+ 174 0098 282F      		mov r18,r24
+ 175               	.LVL15:
+ 176               		.loc 1 98 70 view .LVU38
+ 177 009a 30E0      		ldi r19,0
+ 178 009c DA01      		movw r26,r20
+ 179 009e 0E94 0000 		call __usmulhisi3
+ 180               		.loc 1 98 81 view .LVU39
+ 181 00a2 BB27      		clr r27
+ 182 00a4 97FD      		sbrc r25,7
+ 183 00a6 BA95      		dec r27
+ 184 00a8 A92F      		mov r26,r25
+ 185 00aa 982F      		mov r25,r24
+ 186 00ac 872F      		mov r24,r23
+ 187               	.LVL16:
+ 188               		.loc 1 98 18 view .LVU40
+GAS LISTING /tmp/ccaNWYUL.s 			page 6
+
+
+ 189 00ae 8C0F      		add r24,r28
+ 190 00b0 9D1F      		adc r25,r29
+ 191               	.LVL17:
+ 192               	.L5:
+ 193               		.loc 1 98 18 view .LVU41
+ 194               	.LBE3:
+ 195               	.LBE2:
+  99:funsape/util/intTrig.cpp ****     }
+ 100:funsape/util/intTrig.cpp **** 
+ 101:funsape/util/intTrig.cpp ****     return (auxSign > 0) ? auxValue : (int16_t)(-auxValue);
+ 196               		.loc 1 101 5 is_stmt 1 view .LVU42
+ 197               		.loc 1 101 26 is_stmt 0 view .LVU43
+ 198 00b2 1030      		cpi r17,lo8(0)
+ 199 00b4 01F0      		breq .L12
+ 200 00b6 04F0      		brlt .L12
+ 201               	.LVL18:
+ 202               	.L1:
+ 203               	/* epilogue start */
+ 102:funsape/util/intTrig.cpp **** }
+ 204               		.loc 1 102 1 view .LVU44
+ 205 00b8 DF91      		pop r29
+ 206 00ba CF91      		pop r28
+ 207 00bc 1F91      		pop r17
+ 208               	.LVL19:
+ 209               		.loc 1 102 1 view .LVU45
+ 210 00be 0895      		ret
+ 211               	.LVL20:
+ 212               	.L11:
+  73:funsape/util/intTrig.cpp ****     }
+ 213               		.loc 1 73 9 is_stmt 1 view .LVU46
+  73:funsape/util/intTrig.cpp ****     }
+ 214               		.loc 1 73 13 is_stmt 0 view .LVU47
+ 215 00c0 805C      		subi r24,-64
+ 216 00c2 9148      		sbci r25,-127
+ 217 00c4 AA4F      		sbci r26,-6
+ 218 00c6 BF4F      		sbci r27,-1
+ 219 00c8 AC01      		movw r20,r24
+ 220 00ca BD01      		movw r22,r26
+ 221               	.LVL21:
+  73:funsape/util/intTrig.cpp ****     }
+ 222               		.loc 1 73 13 view .LVU48
+ 223 00cc 00C0      		rjmp .L2
+ 224               	.LVL22:
+ 225               	.L7:
+  69:funsape/util/intTrig.cpp **** 
+ 226               		.loc 1 69 12 view .LVU49
+ 227 00ce 11E0      		ldi r17,lo8(1)
+ 228 00d0 00C0      		rjmp .L3
+ 229               	.LVL23:
+ 230               	.L8:
+ 231               	.LBB6:
+  93:funsape/util/intTrig.cpp ****     } else {
+ 232               		.loc 1 93 18 view .LVU50
+ 233 00d2 8FEF      		ldi r24,lo8(-1)
+ 234 00d4 9FE7      		ldi r25,lo8(127)
+ 235               	.LVL24:
+  93:funsape/util/intTrig.cpp ****     } else {
+GAS LISTING /tmp/ccaNWYUL.s 			page 7
+
+
+ 236               		.loc 1 93 18 view .LVU51
+ 237 00d6 00C0      		rjmp .L5
+ 238               	.LVL25:
+ 239               	.L12:
+  93:funsape/util/intTrig.cpp ****     } else {
+ 240               		.loc 1 93 18 view .LVU52
+ 241               	.LBE6:
+ 101:funsape/util/intTrig.cpp **** }
+ 242               		.loc 1 101 58 discriminator 1 view .LVU53
+ 243 00d8 9195      		neg r25
+ 244 00da 8195      		neg r24
+ 245 00dc 9109      		sbc r25,__zero_reg__
+ 246               	.LVL26:
+ 101:funsape/util/intTrig.cpp **** }
+ 247               		.loc 1 101 58 discriminator 4 view .LVU54
+ 248 00de 00C0      		rjmp .L1
+ 249               		.cfi_endproc
+ 250               	.LFE91:
+ 252               		.section	.text._Z4cosil,"ax",@progbits
+ 253               	.global	_Z4cosil
+ 255               	_Z4cosil:
+ 256               	.LVL27:
+ 257               	.LFB92:
+ 103:funsape/util/intTrig.cpp **** 
+ 104:funsape/util/intTrig.cpp **** int16_t cosi(int32_t angle_p)
+ 105:funsape/util/intTrig.cpp **** {
+ 258               		.loc 1 105 1 is_stmt 1 view -0
+ 259               		.cfi_startproc
+ 260               	/* prologue: function */
+ 261               	/* frame size = 0 */
+ 262               	/* stack size = 0 */
+ 263               	.L__stack_usage = 0
+ 106:funsape/util/intTrig.cpp ****     // cos(x) = sin(x + 90 degrees)
+ 107:funsape/util/intTrig.cpp ****     return sini(angle_p + constIntTrigQuarterTurn);
+ 264               		.loc 1 107 5 view .LVU56
+ 265               		.loc 1 107 16 is_stmt 0 view .LVU57
+ 266 0000 6057      		subi r22,112
+ 267 0002 704A      		sbci r23,-96
+ 268 0004 8E4F      		sbci r24,-2
+ 269 0006 9F4F      		sbci r25,-1
+ 270               	.LVL28:
+ 271               		.loc 1 107 16 view .LVU58
+ 272 0008 0E94 0000 		call _Z4sinil
+ 273               	.LVL29:
+ 274               	/* epilogue start */
+ 108:funsape/util/intTrig.cpp **** }
+ 275               		.loc 1 108 1 view .LVU59
+ 276 000c 0895      		ret
+ 277               		.cfi_endproc
+ 278               	.LFE92:
+ 280               		.section	.progmem.data._ZL13constSinTable,"a",@progbits
+ 283               	_ZL13constSinTable:
+ 284 0000 0000      		.word	0
+ 285 0002 9201      		.word	402
+ 286 0004 2403      		.word	804
+ 287 0006 B604      		.word	1206
+ 288 0008 4806      		.word	1608
+GAS LISTING /tmp/ccaNWYUL.s 			page 8
+
+
+ 289 000a D907      		.word	2009
+ 290 000c 6A09      		.word	2410
+ 291 000e FB0A      		.word	2811
+ 292 0010 8C0C      		.word	3212
+ 293 0012 1C0E      		.word	3612
+ 294 0014 AB0F      		.word	4011
+ 295 0016 3A11      		.word	4410
+ 296 0018 C812      		.word	4808
+ 297 001a 5514      		.word	5205
+ 298 001c E215      		.word	5602
+ 299 001e 6E17      		.word	5998
+ 300 0020 F918      		.word	6393
+ 301 0022 821A      		.word	6786
+ 302 0024 0B1C      		.word	7179
+ 303 0026 931D      		.word	7571
+ 304 0028 1A1F      		.word	7962
+ 305 002a 9F20      		.word	8351
+ 306 002c 2322      		.word	8739
+ 307 002e A623      		.word	9126
+ 308 0030 2825      		.word	9512
+ 309 0032 A826      		.word	9896
+ 310 0034 2628      		.word	10278
+ 311 0036 A329      		.word	10659
+ 312 0038 1F2B      		.word	11039
+ 313 003a 992C      		.word	11417
+ 314 003c 112E      		.word	11793
+ 315 003e 872F      		.word	12167
+ 316 0040 FB30      		.word	12539
+ 317 0042 6E32      		.word	12910
+ 318 0044 DF33      		.word	13279
+ 319 0046 4D35      		.word	13645
+ 320 0048 BA36      		.word	14010
+ 321 004a 2438      		.word	14372
+ 322 004c 8C39      		.word	14732
+ 323 004e F23A      		.word	15090
+ 324 0050 563C      		.word	15446
+ 325 0052 B83D      		.word	15800
+ 326 0054 173F      		.word	16151
+ 327 0056 7340      		.word	16499
+ 328 0058 CE41      		.word	16846
+ 329 005a 2543      		.word	17189
+ 330 005c 7A44      		.word	17530
+ 331 005e CD45      		.word	17869
+ 332 0060 1C47      		.word	18204
+ 333 0062 6948      		.word	18537
+ 334 0064 B449      		.word	18868
+ 335 0066 FB4A      		.word	19195
+ 336 0068 3F4C      		.word	19519
+ 337 006a 814D      		.word	19841
+ 338 006c BF4E      		.word	20159
+ 339 006e FB4F      		.word	20475
+ 340 0070 3351      		.word	20787
+ 341 0072 6852      		.word	21096
+ 342 0074 9B53      		.word	21403
+ 343 0076 C954      		.word	21705
+ 344 0078 F555      		.word	22005
+ 345 007a 1D57      		.word	22301
+GAS LISTING /tmp/ccaNWYUL.s 			page 9
+
+
+ 346 007c 4258      		.word	22594
+ 347 007e 6459      		.word	22884
+ 348 0080 825A      		.word	23170
+ 349 0082 9C5B      		.word	23452
+ 350 0084 B35C      		.word	23731
+ 351 0086 C75D      		.word	24007
+ 352 0088 D75E      		.word	24279
+ 353 008a E35F      		.word	24547
+ 354 008c EB60      		.word	24811
+ 355 008e F061      		.word	25072
+ 356 0090 F162      		.word	25329
+ 357 0092 EE63      		.word	25582
+ 358 0094 E864      		.word	25832
+ 359 0096 DD65      		.word	26077
+ 360 0098 CF66      		.word	26319
+ 361 009a BC67      		.word	26556
+ 362 009c A668      		.word	26790
+ 363 009e 8B69      		.word	27019
+ 364 00a0 6D6A      		.word	27245
+ 365 00a2 4A6B      		.word	27466
+ 366 00a4 236C      		.word	27683
+ 367 00a6 F86C      		.word	27896
+ 368 00a8 C96D      		.word	28105
+ 369 00aa 966E      		.word	28310
+ 370 00ac 5E6F      		.word	28510
+ 371 00ae 2270      		.word	28706
+ 372 00b0 E270      		.word	28898
+ 373 00b2 9D71      		.word	29085
+ 374 00b4 5472      		.word	29268
+ 375 00b6 0773      		.word	29447
+ 376 00b8 B573      		.word	29621
+ 377 00ba 5F74      		.word	29791
+ 378 00bc 0475      		.word	29956
+ 379 00be A575      		.word	30117
+ 380 00c0 4176      		.word	30273
+ 381 00c2 D876      		.word	30424
+ 382 00c4 6B77      		.word	30571
+ 383 00c6 FA77      		.word	30714
+ 384 00c8 8478      		.word	30852
+ 385 00ca 0979      		.word	30985
+ 386 00cc 8979      		.word	31113
+ 387 00ce 057A      		.word	31237
+ 388 00d0 7C7A      		.word	31356
+ 389 00d2 EE7A      		.word	31470
+ 390 00d4 5C7B      		.word	31580
+ 391 00d6 C57B      		.word	31685
+ 392 00d8 297C      		.word	31785
+ 393 00da 887C      		.word	31880
+ 394 00dc E37C      		.word	31971
+ 395 00de 397D      		.word	32057
+ 396 00e0 897D      		.word	32137
+ 397 00e2 D57D      		.word	32213
+ 398 00e4 1D7E      		.word	32285
+ 399 00e6 5F7E      		.word	32351
+ 400 00e8 9C7E      		.word	32412
+ 401 00ea D57E      		.word	32469
+ 402 00ec 097F      		.word	32521
+GAS LISTING /tmp/ccaNWYUL.s 			page 10
+
+
+ 403 00ee 377F      		.word	32567
+ 404 00f0 617F      		.word	32609
+ 405 00f2 867F      		.word	32646
+ 406 00f4 A67F      		.word	32678
+ 407 00f6 C17F      		.word	32705
+ 408 00f8 D87F      		.word	32728
+ 409 00fa E97F      		.word	32745
+ 410 00fc F57F      		.word	32757
+ 411 00fe FD7F      		.word	32765
+ 412 0100 FF7F      		.word	32767
+ 413               		.text
+ 414               	.Letext0:
+ 415               		.file 2 "/usr/avr/include/stdint.h"
+ 416               		.file 3 "funsape/util/../config/atmega328p.hpp"
+ 417               		.file 4 "funsape/util/../globalDefines.hpp"
+GAS LISTING /tmp/ccaNWYUL.s 			page 11
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 intTrig.cpp
+     /tmp/ccaNWYUL.s:2      *ABS*:0000003e __SP_H__
+     /tmp/ccaNWYUL.s:3      *ABS*:0000003d __SP_L__
+     /tmp/ccaNWYUL.s:4      *ABS*:0000003f __SREG__
+     /tmp/ccaNWYUL.s:5      *ABS*:00000000 __tmp_reg__
+     /tmp/ccaNWYUL.s:6      *ABS*:00000001 __zero_reg__
+     /tmp/ccaNWYUL.s:14     .text._Z4sinil:00000000 _Z4sinil
+     /tmp/ccaNWYUL.s:17     .text._Z4sinil:00000000 .Loc.0
+     /tmp/ccaNWYUL.s:18     .text._Z4sinil:00000000 L0
+     /tmp/ccaNWYUL.s:19     .text._Z4sinil:00000000 .Loc.1
+     /tmp/ccaNWYUL.s:36     .text._Z4sinil:00000006 .Loc.2
+     /tmp/ccaNWYUL.s:37     .text._Z4sinil:00000006 .Loc.3
+     /tmp/ccaNWYUL.s:44     .text._Z4sinil:00000012 .Loc.4
+     /tmp/ccaNWYUL.s:50     .text._Z4sinil:0000001a .Loc.5
+     /tmp/ccaNWYUL.s:51     .text._Z4sinil:0000001a .Loc.6
+     /tmp/ccaNWYUL.s:53     .text._Z4sinil:0000001e L0
+     /tmp/ccaNWYUL.s:57     .text._Z4sinil:00000020 .Loc.7
+     /tmp/ccaNWYUL.s:64     .text._Z4sinil:0000002e L0
+     /tmp/ccaNWYUL.s:66     .text._Z4sinil:00000030 .Loc.8
+     /tmp/ccaNWYUL.s:67     .text._Z4sinil:00000030 .Loc.9
+     /tmp/ccaNWYUL.s:73     .text._Z4sinil:00000038 .Loc.10
+     /tmp/ccaNWYUL.s:74     .text._Z4sinil:00000038 .Loc.11
+     /tmp/ccaNWYUL.s:78     .text._Z4sinil:0000003a .Loc.12
+     /tmp/ccaNWYUL.s:86     .text._Z4sinil:00000048 .Loc.13
+     /tmp/ccaNWYUL.s:87     .text._Z4sinil:00000048 .Loc.14
+     /tmp/ccaNWYUL.s:100    .text._Z4sinil:0000005c .Loc.15
+     /tmp/ccaNWYUL.s:101    .text._Z4sinil:0000005c .Loc.16
+     /tmp/ccaNWYUL.s:107    .text._Z4sinil:00000068 .Loc.17
+     /tmp/ccaNWYUL.s:111    .text._Z4sinil:0000006c .Loc.18
+     /tmp/ccaNWYUL.s:112    .text._Z4sinil:0000006c .Loc.19
+     /tmp/ccaNWYUL.s:113    .text._Z4sinil:0000006c .Loc.20
+     /tmp/ccaNWYUL.s:118    .text._Z4sinil:00000070 .Loc.21
+     /tmp/ccaNWYUL.s:120    .text._Z4sinil:00000070 .Loc.22
+     /tmp/ccaNWYUL.s:122    .text._Z4sinil:00000070 .Loc.23
+     /tmp/ccaNWYUL.s:125    .text._Z4sinil:00000072 .Loc.24
+     /tmp/ccaNWYUL.s:283    .progmem.data._ZL13constSinTable:00000000 _ZL13constSinTable
+     /tmp/ccaNWYUL.s:133    .text._Z4sinil:0000007e .Loc.25
+     /tmp/ccaNWYUL.s:134    .text._Z4sinil:0000007e .Loc.26
+     /tmp/ccaNWYUL.s:141    .text._Z4sinil:00000082 .Loc.27
+     /tmp/ccaNWYUL.s:142    .text._Z4sinil:00000082 .Loc.28
+     /tmp/ccaNWYUL.s:145    .text._Z4sinil:00000082 .Loc.29
+     /tmp/ccaNWYUL.s:147    .text._Z4sinil:00000082 .Loc.30
+     /tmp/ccaNWYUL.s:156    .text._Z4sinil:00000090 .Loc.31
+     /tmp/ccaNWYUL.s:157    .text._Z4sinil:00000090 .Loc.32
+     /tmp/ccaNWYUL.s:164    .text._Z4sinil:00000094 .Loc.33
+     /tmp/ccaNWYUL.s:165    .text._Z4sinil:00000094 .Loc.34
+     /tmp/ccaNWYUL.s:168    .text._Z4sinil:00000094 .Loc.35
+     /tmp/ccaNWYUL.s:169    .text._Z4sinil:00000094 .Loc.36
+     /tmp/ccaNWYUL.s:173    .text._Z4sinil:00000098 .Loc.37
+     /tmp/ccaNWYUL.s:176    .text._Z4sinil:0000009a .Loc.38
+     /tmp/ccaNWYUL.s:180    .text._Z4sinil:000000a2 .Loc.39
+     /tmp/ccaNWYUL.s:188    .text._Z4sinil:000000ae .Loc.40
+     /tmp/ccaNWYUL.s:193    .text._Z4sinil:000000b2 .Loc.41
+     /tmp/ccaNWYUL.s:196    .text._Z4sinil:000000b2 .Loc.42
+     /tmp/ccaNWYUL.s:197    .text._Z4sinil:000000b2 .Loc.43
+     /tmp/ccaNWYUL.s:204    .text._Z4sinil:000000b8 .Loc.44
+GAS LISTING /tmp/ccaNWYUL.s 			page 12
+
+
+     /tmp/ccaNWYUL.s:209    .text._Z4sinil:000000be .Loc.45
+     /tmp/ccaNWYUL.s:213    .text._Z4sinil:000000c0 .Loc.46
+     /tmp/ccaNWYUL.s:214    .text._Z4sinil:000000c0 .Loc.47
+     /tmp/ccaNWYUL.s:222    .text._Z4sinil:000000cc .Loc.48
+     /tmp/ccaNWYUL.s:226    .text._Z4sinil:000000ce .Loc.49
+     /tmp/ccaNWYUL.s:232    .text._Z4sinil:000000d2 .Loc.50
+     /tmp/ccaNWYUL.s:236    .text._Z4sinil:000000d6 .Loc.51
+     /tmp/ccaNWYUL.s:240    .text._Z4sinil:000000d8 .Loc.52
+     /tmp/ccaNWYUL.s:242    .text._Z4sinil:000000d8 .Loc.53
+     /tmp/ccaNWYUL.s:247    .text._Z4sinil:000000de .Loc.54
+     /tmp/ccaNWYUL.s:249    .text._Z4sinil:000000e0 L0
+     /tmp/ccaNWYUL.s:255    .text._Z4cosil:00000000 _Z4cosil
+     /tmp/ccaNWYUL.s:258    .text._Z4cosil:00000000 .Loc.55
+     /tmp/ccaNWYUL.s:259    .text._Z4cosil:00000000 L0
+     /tmp/ccaNWYUL.s:264    .text._Z4cosil:00000000 .Loc.56
+     /tmp/ccaNWYUL.s:265    .text._Z4cosil:00000000 .Loc.57
+     /tmp/ccaNWYUL.s:271    .text._Z4cosil:00000008 .Loc.58
+     /tmp/ccaNWYUL.s:275    .text._Z4cosil:0000000c .Loc.59
+     /tmp/ccaNWYUL.s:277    .text._Z4cosil:0000000e L0
+     /tmp/ccaNWYUL.s:252    .text._Z4sinil:000000e0 L0
+     /tmp/ccaNWYUL.s:280    .text._Z4cosil:0000000e L0
+                     .debug_frame:00000000 L0
+     /tmp/ccaNWYUL.s:212    .text._Z4sinil:000000c0 .L11
+     /tmp/ccaNWYUL.s:225    .text._Z4sinil:000000ce .L7
+     /tmp/ccaNWYUL.s:99     .text._Z4sinil:0000005c .L4
+     /tmp/ccaNWYUL.s:230    .text._Z4sinil:000000d2 .L8
+     /tmp/ccaNWYUL.s:239    .text._Z4sinil:000000d8 .L12
+     /tmp/ccaNWYUL.s:56     .text._Z4sinil:00000020 .L2
+     /tmp/ccaNWYUL.s:77     .text._Z4sinil:0000003a .L3
+     /tmp/ccaNWYUL.s:192    .text._Z4sinil:000000b2 .L5
+     /tmp/ccaNWYUL.s:202    .text._Z4sinil:000000b8 .L1
+     /tmp/ccaNWYUL.s:852    .debug_abbrev:00000000 .Ldebug_abbrev0
+     /tmp/ccaNWYUL.s:1652   .debug_ranges:00000000 .Ldebug_ranges0
+     /tmp/ccaNWYUL.s:1660   .debug_line:00000000 .Ldebug_line0
+     /tmp/ccaNWYUL.s:257    .text._Z4cosil:00000000 .LFB92
+     /tmp/ccaNWYUL.s:278    .text._Z4cosil:0000000e .LFE92
+     /tmp/ccaNWYUL.s:1199   .debug_loc:00000006 .LLST14
+     /tmp/ccaNWYUL.s:1192   .debug_loc:00000000 .LVUS14
+     /tmp/ccaNWYUL.s:273    .text._Z4cosil:0000000c .LVL29
+     /tmp/ccaNWYUL.s:16     .text._Z4sinil:00000000 .LFB91
+     /tmp/ccaNWYUL.s:250    .text._Z4sinil:000000e0 .LFE91
+     /tmp/ccaNWYUL.s:1236   .debug_loc:00000047 .LLST0
+     /tmp/ccaNWYUL.s:1268   .debug_loc:00000087 .LLST1
+     /tmp/ccaNWYUL.s:1263   .debug_loc:00000083 .LVUS1
+     /tmp/ccaNWYUL.s:1312   .debug_loc:000000c5 .LLST2
+     /tmp/ccaNWYUL.s:1299   .debug_loc:000000b9 .LVUS2
+     /tmp/ccaNWYUL.s:1416   .debug_loc:0000015b .LLST3
+     /tmp/ccaNWYUL.s:1405   .debug_loc:00000151 .LVUS3
+     /tmp/ccaNWYUL.s:1450   .debug_loc:000001a4 .LLST4
+     /tmp/ccaNWYUL.s:1443   .debug_loc:0000019e .LVUS4
+     /tmp/ccaNWYUL.s:1485   .debug_loc:000001e0 .LLST5
+     /tmp/ccaNWYUL.s:1480   .debug_loc:000001dc .LVUS5
+     /tmp/ccaNWYUL.s:1503   .debug_loc:00000204 .LLST6
+     /tmp/ccaNWYUL.s:1496   .debug_loc:000001fe .LVUS6
+     /tmp/ccaNWYUL.s:117    .text._Z4sinil:00000070 .LBB3
+     /tmp/ccaNWYUL.s:194    .text._Z4sinil:000000b2 .LBE3
+     /tmp/ccaNWYUL.s:1536   .debug_loc:0000023e .LLST7
+GAS LISTING /tmp/ccaNWYUL.s 			page 13
+
+
+     /tmp/ccaNWYUL.s:1531   .debug_loc:0000023a .LVUS7
+     /tmp/ccaNWYUL.s:1550   .debug_loc:0000025e .LLST8
+     /tmp/ccaNWYUL.s:1547   .debug_loc:0000025c .LVUS8
+     /tmp/ccaNWYUL.s:1565   .debug_loc:00000278 .LLST9
+     /tmp/ccaNWYUL.s:1562   .debug_loc:00000276 .LVUS9
+     /tmp/ccaNWYUL.s:121    .text._Z4sinil:00000070 .LBB4
+     /tmp/ccaNWYUL.s:144    .text._Z4sinil:00000082 .LBE4
+     /tmp/ccaNWYUL.s:1580   .debug_loc:00000292 .LLST10
+     /tmp/ccaNWYUL.s:1577   .debug_loc:00000290 .LVUS10
+     /tmp/ccaNWYUL.s:1595   .debug_loc:000002ac .LLST11
+     /tmp/ccaNWYUL.s:1592   .debug_loc:000002aa .LVUS11
+     /tmp/ccaNWYUL.s:146    .text._Z4sinil:00000082 .LBB5
+     /tmp/ccaNWYUL.s:167    .text._Z4sinil:00000094 .LBE5
+     /tmp/ccaNWYUL.s:1610   .debug_loc:000002c6 .LLST12
+     /tmp/ccaNWYUL.s:1607   .debug_loc:000002c4 .LVUS12
+     /tmp/ccaNWYUL.s:1625   .debug_loc:000002e0 .LLST13
+     /tmp/ccaNWYUL.s:1622   .debug_loc:000002de .LVUS13
+     /tmp/ccaNWYUL.s:256    .text._Z4cosil:00000000 .LVL27
+     /tmp/ccaNWYUL.s:270    .text._Z4cosil:00000008 .LVL28
+     /tmp/ccaNWYUL.s:21     .text._Z4sinil:00000002 .LCFI0
+     /tmp/ccaNWYUL.s:25     .text._Z4sinil:00000004 .LCFI1
+     /tmp/ccaNWYUL.s:29     .text._Z4sinil:00000006 .LCFI2
+     /tmp/ccaNWYUL.s:15     .text._Z4sinil:00000000 .LVL0
+     /tmp/ccaNWYUL.s:43     .text._Z4sinil:00000012 .LVL1
+     /tmp/ccaNWYUL.s:49     .text._Z4sinil:0000001a .LVL2
+     /tmp/ccaNWYUL.s:124    .text._Z4sinil:00000072 .LVL9
+     /tmp/ccaNWYUL.s:175    .text._Z4sinil:0000009a .LVL15
+     /tmp/ccaNWYUL.s:211    .text._Z4sinil:000000c0 .LVL20
+     /tmp/ccaNWYUL.s:221    .text._Z4sinil:000000cc .LVL21
+     /tmp/ccaNWYUL.s:224    .text._Z4sinil:000000ce .LVL22
+     /tmp/ccaNWYUL.s:229    .text._Z4sinil:000000d2 .LVL23
+     /tmp/ccaNWYUL.s:238    .text._Z4sinil:000000d8 .LVL25
+     /tmp/ccaNWYUL.s:72     .text._Z4sinil:00000038 .LVL4
+     /tmp/ccaNWYUL.s:76     .text._Z4sinil:0000003a .LVL5
+     /tmp/ccaNWYUL.s:208    .text._Z4sinil:000000be .LVL19
+     /tmp/ccaNWYUL.s:110    .text._Z4sinil:0000006c .LVL7
+     /tmp/ccaNWYUL.s:187    .text._Z4sinil:000000ae .LVL16
+     /tmp/ccaNWYUL.s:191    .text._Z4sinil:000000b2 .LVL17
+     /tmp/ccaNWYUL.s:235    .text._Z4sinil:000000d6 .LVL24
+     /tmp/ccaNWYUL.s:201    .text._Z4sinil:000000b8 .LVL18
+     /tmp/ccaNWYUL.s:246    .text._Z4sinil:000000de .LVL26
+     /tmp/ccaNWYUL.s:119    .text._Z4sinil:00000070 .LVL8
+     /tmp/ccaNWYUL.s:140    .text._Z4sinil:00000082 .LVL11
+     /tmp/ccaNWYUL.s:163    .text._Z4sinil:00000094 .LVL13
+     /tmp/ccaNWYUL.s:172    .text._Z4sinil:00000098 .LVL14
+     /tmp/ccaNWYUL.s:132    .text._Z4sinil:0000007e .LVL10
+     /tmp/ccaNWYUL.s:155    .text._Z4sinil:00000090 .LVL12
+     /tmp/ccaNWYUL.s:419    .debug_info:00000000 .Ldebug_info0
+
+UNDEFINED SYMBOLS
+__divmodsi4
+__muluhisi3
+__usmulhisi3

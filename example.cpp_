@@ -1,8 +1,10 @@
 //!
 //! \file           example.cpp_
-//! \brief          Exemplo minimo: mostrar texto no OLED SSD1306 (I2C) com a FunSAPE
+//! \brief          Exemplo: texto no OLED SSD1306 (I2C) com a FunSAPE, usando
+//!                     FRAMEBUFFER (sem flicker).
 //! \details        Mostra um texto por alguns segundos e depois troca o texto,
-//!                     repetindo indefinidamente.
+//!                     repetindo. Com o framebuffer, tudo e' composto na RAM e
+//!                     enviado de uma vez com display() -> nao pisca.
 //!
 //!                 Ligacao no ATmega328p: SDA = A4/PC4, SCL = A5/PC5 (com pull-ups
 //!                     no barramento). Endereco I2C padrao do modulo: 0x3C.
@@ -22,6 +24,9 @@
 // Objeto global do display
 Ssd1306 display;
 
+// Framebuffer: 128x64 = 128 colunas * 8 paginas = 1024 bytes (use 512 p/ 128x32)
+uint8_t oledBuffer[1024];
+
 int main(void)
 {
     // Configura o barramento I2C (TWI) a 400 kHz com buffer de 64 bytes
@@ -30,22 +35,25 @@ int main(void)
     // O TWI e' orientado a interrupcao -> habilita interrupcoes globais
     sei();
 
-    // Inicializa o OLED 128x64 no endereco 0x3C (padrao)
-    display.init(&twi);
+    // Inicializa o OLED 128x64 no endereco 0x3C, EM MODO BUFFERED
+    // (passar o framebuffer ativa o modo sem flicker; sem ele -> modo direto)
+    display.init(&twi, Ssd1306::Size::SSD1306_128X64, 0x3C, oledBuffer);
 
     while(true) {
-        // --- Primeiro texto ---
-        display.clearScreen();
+        // --- Primeiro quadro ---
+        display.clearScreen();              // limpa a RAM (nao toca no painel)
         display.setTextSize(1);
         display.setCursor(0, 0);
         display.print("Ola, mundo!");
         display.setTextSize(2);
         display.setCursor(0, 2);
         display.print("FunSAPE");
+        display.drawLine(0, 40, 127, 63);   // diagonal (so no modo buffered)
+        display.display();                  // 1 flush -> aparece sem flicker
 
-        delayMs(2000);              // mantem na tela por 2 segundos
+        delayMs(2000);
 
-        // --- Segundo texto ---
+        // --- Segundo quadro ---
         display.clearScreen();
         display.setTextSize(1);
         display.setCursor(0, 0);
@@ -53,8 +61,10 @@ int main(void)
         display.setTextSize(2);
         display.setCursor(0, 3);
         display.print("SSD1306");
+        display.drawRect(0, 6, 128, 2);     // contorno em qualquer posicao
+        display.display();                  // troca de texto sem piscar
 
-        delayMs(2000);              // mantem na tela por 2 segundos
+        delayMs(2000);
     }
 
     return 0;

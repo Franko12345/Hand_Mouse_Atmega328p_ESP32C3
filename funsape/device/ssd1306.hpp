@@ -190,25 +190,46 @@ public:
     //!                 power-on command sequence. The TWI peripheral must be
     //!                 initialized (e.g. twi.init(400'000, 64)) and global
     //!                 interrupts enabled (sei()) before calling this.
+    //!
+    //!                 If frameBuffer_p is provided, the driver runs in buffered
+    //!                 mode; the array MUST hold at least (pages * 128) bytes
+    //!                 (1024 for 128x64, 512 for 128x32). If it is nullptr, the
+    //!                 driver runs in direct mode (no extra RAM).
     //! \param[in]  busHandler_p        pointer to the \ref Bus handler object
     //! \param[in]  size_p              display resolution
     //! \param[in]  address_p          I2C slave address (0x3C or 0x3D)
+    //! \param[in]  frameBuffer_p      optional framebuffer (nullptr = direct mode)
     //! \return true
     //! \return false
     //!
     bool_t init(
             Bus *busHandler_p,
             const Size size_p           = Size::SSD1306_128X64,
-            cuint8_t address_p          = 0x3C
+            cuint8_t address_p          = 0x3C,
+            uint8_t *frameBuffer_p      = nullptr
     );
 
     //!
     //! \brief      Clears the whole display and homes the text cursor.
-    //! \details    Writes zeros to every page and resets the cursor to (0, 0).
+    //! \details    Direct mode: writes zeros to every page immediately. Buffered
+    //!                 mode: clears the RAM buffer (the panel is only updated on
+    //!                 the next display() call). Resets the cursor to (0, 0).
     //! \return true
     //! \return false
     //!
     bool_t clearScreen(
+            void
+    );
+
+    //!
+    //! \brief      Flushes the framebuffer to the panel (buffered mode).
+    //! \details    Sends only the pages changed since the last flush. In direct
+    //!                 mode it is a no-op that returns true, so application code
+    //!                 can call it regardless of the active mode.
+    //! \return true
+    //! \return false
+    //!
+    bool_t display(
             void
     );
 
@@ -286,6 +307,21 @@ public:
     );
 
     //!
+    //! \brief      Positions the text cursor with Y in pixels (buffered mode).
+    //! \details    Allows text at any vertical position. Returns
+    //!                 Error::FEATURE_NOT_SUPPORTED in direct mode (which needs
+    //!                 page-aligned text).
+    //! \param[in]  x_p                horizontal position in pixels (0-127)
+    //! \param[in]  y_p                vertical position in pixels
+    //! \return true
+    //! \return false
+    //!
+    bool_t setCursorPixel(
+            cuint8_t x_p,
+            cuint8_t y_p
+    );
+
+    //!
     //! \brief      Redirects stdio (printf) to this display.
     //! \details    After this call, printf() output is written to the OLED.
     //!                 Only one stdio device can own stdout at a time.
@@ -320,9 +356,46 @@ public:
     );
 
     //     //////////////////////     GRAPHICS     //////////////////////     //
-    //     NOTE: no framebuffer -> these write whole 8-pixel vertical bytes.
-    //     Draw over a freshly cleared background; they do NOT compose with
-    //     existing content, and diagonals / arbitrary pixels are unsupported.
+    //     BUFFERED MODE: everything below composes into the framebuffer at any
+    //     position (call display() to show it).
+    //     DIRECT MODE: these write whole 8-pixel vertical bytes, so draw over a
+    //     freshly cleared background; they do NOT compose with existing content,
+    //     and drawPixel / drawLine are unsupported.
+
+    //!
+    //! \brief      Sets/clears a single pixel (buffered mode).
+    //! \details    Returns Error::FEATURE_NOT_SUPPORTED in direct mode.
+    //! \param[in]  x_p                column in pixels (0-127)
+    //! \param[in]  y_p                row in pixels
+    //! \param[in]  on_p               true = lit, false = clear
+    //! \return true
+    //! \return false
+    //!
+    bool_t drawPixel(
+            cuint8_t x_p,
+            cuint8_t y_p,
+            cbool_t on_p                = true
+    );
+
+    //!
+    //! \brief      Draws a line between two points (buffered mode).
+    //! \details    Bresenham algorithm; supports diagonals. Returns
+    //!                 Error::FEATURE_NOT_SUPPORTED in direct mode.
+    //! \param[in]  x0_p               start column in pixels
+    //! \param[in]  y0_p               start row in pixels
+    //! \param[in]  x1_p               end column in pixels
+    //! \param[in]  y1_p               end row in pixels
+    //! \param[in]  on_p               true = lit, false = clear
+    //! \return true
+    //! \return false
+    //!
+    bool_t drawLine(
+            cuint8_t x0_p,
+            cuint8_t y0_p,
+            cuint8_t x1_p,
+            cuint8_t y1_p,
+            cbool_t on_p                = true
+    );
 
     //!
     //! \brief      Fills a solid rectangular block (page-aligned vertically).
@@ -447,6 +520,19 @@ private:
     );
 
     //!
+    //! \brief      Sets/clears a pixel in the framebuffer and marks it dirty.
+    //! \details    Buffered mode only; silently ignores out-of-bounds pixels.
+    //! \param[in]  x_p                column in pixels
+    //! \param[in]  y_p                row in pixels
+    //! \param[in]  on_p               true = lit, false = clear
+    //!
+    void _setPixel(
+            uint8_t x_p,
+            uint8_t y_p,
+            bool_t on_p
+    );
+
+    //!
     //! \brief      Renders one glyph at the current cursor using _textSize.
     //! \details    Long description
     //! \param[in]  character_p        character to render
@@ -483,9 +569,15 @@ private:
 
     Bus             *_busHandler;
 
+    //     ///////////////     FRAME BUFFER (OPTIONAL)     //////////////     //
+
+    uint8_t         *_frameBuffer;                      // nullptr = direct mode
+    uint8_t         _dirtyPageMask;                     // 1 bit per changed page
+
     //     /////////////////     CONTROL AND STATUS     /////////////////     //
 
     bool_t          _busHandlerSet              : 1;
+    bool_t          _buffered                   : 1;
     bool_t          _initialized                : 1;
     Error           _lastError;
 
@@ -498,7 +590,7 @@ private:
     //     //////////////////     TEXT CURSOR STATE     /////////////////     //
 
     uint8_t         _cursorX;                           // 0 to 127 (pixels)
-    uint8_t         _cursorPage                 : 3;    // 0 to 7
+    uint8_t         _cursorY;                           // 0 to 63 (pixels)
     uint8_t         _textSize                   : 3;    // 1 to 4
 
 protected:
