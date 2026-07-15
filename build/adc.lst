@@ -1,4 +1,4 @@
-GAS LISTING /tmp/ccWXvzd6.s 			page 1
+GAS LISTING /tmp/ccz3ecib.s 			page 1
 
 
    1               		.file	"adc.cpp"
@@ -58,7 +58,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
   40:funsape/peripheral/adc.cpp **** //!
   41:funsape/peripheral/adc.cpp **** 
   42:funsape/peripheral/adc.cpp **** // =============================================================================
-GAS LISTING /tmp/ccWXvzd6.s 			page 2
+GAS LISTING /tmp/ccz3ecib.s 			page 2
 
 
   43:funsape/peripheral/adc.cpp **** // System file dependencies
@@ -118,7 +118,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
   20               	/* frame size = 0 */
   21               	/* stack size = 0 */
   22               	.L__stack_usage = 0
-GAS LISTING /tmp/ccWXvzd6.s 			page 3
+GAS LISTING /tmp/ccz3ecib.s 			page 3
 
 
   23               		.loc 1 93 1 is_stmt 0 view .LVU1
@@ -178,7 +178,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
   61               		.cfi_endproc
   62               	.LFE141:
   64               	.global	_ZN3AdcC1Ev
-GAS LISTING /tmp/ccWXvzd6.s 			page 4
+GAS LISTING /tmp/ccz3ecib.s 			page 4
 
 
   65               		.set	_ZN3AdcC1Ev,_ZN3AdcC2Ev
@@ -238,7 +238,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  160:funsape/peripheral/adc.cpp ****     case Adc::Reference::POWER_SUPPLY:   setMaskOffset(auxAdmux, 0x01, MCU_ADC_REFERENCE_BIT_POS); 
  161:funsape/peripheral/adc.cpp ****     case Adc::Reference::INTERNAL:       setMaskOffset(auxAdmux, 0x03, MCU_ADC_REFERENCE_BIT_POS); 
  162:funsape/peripheral/adc.cpp ****     }
-GAS LISTING /tmp/ccWXvzd6.s 			page 5
+GAS LISTING /tmp/ccz3ecib.s 			page 5
 
 
  163:funsape/peripheral/adc.cpp **** 
@@ -298,7 +298,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  217:funsape/peripheral/adc.cpp ****     // Mark passage for debugging purpose
  218:funsape/peripheral/adc.cpp ****     debugMark(PSTR("Adc::setMode(const Adc::Mode)"), Debug::CodeIndex::ADC_MODULE);
  219:funsape/peripheral/adc.cpp **** 
-GAS LISTING /tmp/ccWXvzd6.s 			page 6
+GAS LISTING /tmp/ccz3ecib.s 			page 6
 
 
  220:funsape/peripheral/adc.cpp ****     // Local variables
@@ -358,7 +358,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  274:funsape/peripheral/adc.cpp ****     case Adc::Prescaler::PRESCALER_128:  setMaskOffset(auxAdcsrA, 0x07, MCU_ADC_PRESCALER_BIT_POS);
  275:funsape/peripheral/adc.cpp ****     }
  276:funsape/peripheral/adc.cpp **** 
-GAS LISTING /tmp/ccWXvzd6.s 			page 7
+GAS LISTING /tmp/ccz3ecib.s 			page 7
 
 
  277:funsape/peripheral/adc.cpp ****     // Update registers
@@ -418,7 +418,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  331:funsape/peripheral/adc.cpp ****         this->_lastError = Error::NOT_INITIALIZED;
  332:funsape/peripheral/adc.cpp ****         debugMessage(Error::NOT_INITIALIZED, Debug::CodeIndex::ADC_MODULE);
  333:funsape/peripheral/adc.cpp ****         return false;
-GAS LISTING /tmp/ccWXvzd6.s 			page 8
+GAS LISTING /tmp/ccz3ecib.s 			page 8
 
 
  334:funsape/peripheral/adc.cpp ****     }
@@ -478,7 +478,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  388:funsape/peripheral/adc.cpp ****     case Adc::Channel::CHANNEL_2:    setMaskOffset(auxAdmux, 0x02, MCU_ADC_MUX_BIT_POS);    break;
  389:funsape/peripheral/adc.cpp ****     case Adc::Channel::CHANNEL_3:    setMaskOffset(auxAdmux, 0x03, MCU_ADC_MUX_BIT_POS);    break;
  390:funsape/peripheral/adc.cpp ****     case Adc::Channel::CHANNEL_4:    setMaskOffset(auxAdmux, 0x04, MCU_ADC_MUX_BIT_POS);    break;
-GAS LISTING /tmp/ccWXvzd6.s 			page 9
+GAS LISTING /tmp/ccz3ecib.s 			page 9
 
 
  391:funsape/peripheral/adc.cpp ****     case Adc::Channel::CHANNEL_5:    setMaskOffset(auxAdmux, 0x05, MCU_ADC_MUX_BIT_POS);    break;
@@ -538,7 +538,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  445:funsape/peripheral/adc.cpp **** 
  446:funsape/peripheral/adc.cpp **** ISR(ADC_vect)
  447:funsape/peripheral/adc.cpp **** {
-GAS LISTING /tmp/ccWXvzd6.s 			page 10
+GAS LISTING /tmp/ccz3ecib.s 			page 10
 
 
  448:funsape/peripheral/adc.cpp ****     adcConversionCompleteCallback();
@@ -598,7 +598,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  119               		.cfi_startproc
  120               	/* prologue: function */
  121               	/* frame size = 0 */
-GAS LISTING /tmp/ccWXvzd6.s 			page 11
+GAS LISTING /tmp/ccz3ecib.s 			page 11
 
 
  122               	/* stack size = 0 */
@@ -658,7 +658,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  160 0024 E050      		subi r30,lo8(-(gs(.L8)))
  161 0026 F040      		sbci r31,hi8(-(gs(.L8)))
  162 0028 0C94 0000 		jmp __tablejump2__
-GAS LISTING /tmp/ccWXvzd6.s 			page 12
+GAS LISTING /tmp/ccz3ecib.s 			page 12
 
 
  163               		.section	.jumptables.gcc._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE,"a",@progbits
@@ -718,7 +718,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  146:funsape/peripheral/adc.cpp ****         case Adc::Mode::AUTO_INT0:               setMaskOffset(auxAdcsrB, 0x02, MCU_ADC_TRIGGER_SOU
  205               		.loc 1 146 9 view .LVU53
  146:funsape/peripheral/adc.cpp ****         case Adc::Mode::AUTO_INT0:               setMaskOffset(auxAdcsrB, 0x02, MCU_ADC_TRIGGER_SOU
-GAS LISTING /tmp/ccWXvzd6.s 			page 13
+GAS LISTING /tmp/ccz3ecib.s 			page 13
 
 
  206               		.loc 1 146 50 view .LVU54
@@ -778,7 +778,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  241               		.loc 1 150 9 view .LVU73
  150:funsape/peripheral/adc.cpp ****         case Adc::Mode::AUTO_TIMER1_OVERFLOW:    setMaskOffset(auxAdcsrB, 0x06, MCU_ADC_TRIGGER_SOU
  242               		.loc 1 150 50 view .LVU74
-GAS LISTING /tmp/ccWXvzd6.s 			page 14
+GAS LISTING /tmp/ccz3ecib.s 			page 14
 
 
  150:funsape/peripheral/adc.cpp ****         case Adc::Mode::AUTO_TIMER1_OVERFLOW:    setMaskOffset(auxAdcsrB, 0x06, MCU_ADC_TRIGGER_SOU
@@ -838,7 +838,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  278               		.loc 1 160 106 view .LVU93
  279               	.L17:
  165:funsape/peripheral/adc.cpp ****     switch(prescaler_p) {
-GAS LISTING /tmp/ccWXvzd6.s 			page 15
+GAS LISTING /tmp/ccz3ecib.s 			page 15
 
 
  280               		.loc 1 165 5 view .LVU94
@@ -898,7 +898,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  322 007c 9093 7A00 		sts 122,r25
  180:funsape/peripheral/adc.cpp **** 
  323               		.loc 1 180 5 is_stmt 1 view .LVU108
-GAS LISTING /tmp/ccWXvzd6.s 			page 16
+GAS LISTING /tmp/ccz3ecib.s 			page 16
 
 
  180:funsape/peripheral/adc.cpp **** 
@@ -958,7 +958,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  361 009c 81E0      		ldi r24,lo8(1)
  362               	/* epilogue start */
  363 009e 0895      		ret
-GAS LISTING /tmp/ccWXvzd6.s 			page 17
+GAS LISTING /tmp/ccz3ecib.s 			page 17
 
 
  364               	.LVL33:
@@ -1018,7 +1018,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  172:funsape/peripheral/adc.cpp ****     case Adc::Prescaler::PRESCALER_64:   setMaskOffset(auxAdcsrA, 0x06, MCU_ADC_PRESCALER_BIT_POS);
  399               		.loc 1 172 106 view .LVU145
  400 00ae 00C0      		rjmp .L18
-GAS LISTING /tmp/ccWXvzd6.s 			page 18
+GAS LISTING /tmp/ccz3ecib.s 			page 18
 
 
  401               	.L21:
@@ -1078,7 +1078,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  201:funsape/peripheral/adc.cpp ****     } else {
  442               		.loc 1 201 9 view .LVU161
  443 0006 ACE7      		ldi r26,lo8(124)
-GAS LISTING /tmp/ccWXvzd6.s 			page 19
+GAS LISTING /tmp/ccz3ecib.s 			page 19
 
 
  444 0008 B0E0      		ldi r27,0
@@ -1138,7 +1138,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  487               	_ZN3Adc7setModeENS_4ModeE:
  488               	.LVL44:
  489               	.LFB148:
-GAS LISTING /tmp/ccWXvzd6.s 			page 20
+GAS LISTING /tmp/ccz3ecib.s 			page 20
 
 
  216:funsape/peripheral/adc.cpp ****     // Mark passage for debugging purpose
@@ -1198,7 +1198,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  529 0022 F040      		sbci r31,hi8(-(gs(.L36)))
  530 0024 0C94 0000 		jmp __tablejump2__
  531               		.section	.jumptables.gcc._ZN3Adc7setModeENS_4ModeE,"a",@progbits
-GAS LISTING /tmp/ccWXvzd6.s 			page 21
+GAS LISTING /tmp/ccz3ecib.s 			page 21
 
 
  532               		.p2align	1
@@ -1258,7 +1258,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  253:funsape/peripheral/adc.cpp **** }
  573               		.loc 1 253 5 view .LVU204
  254:funsape/peripheral/adc.cpp **** 
-GAS LISTING /tmp/ccWXvzd6.s 			page 22
+GAS LISTING /tmp/ccz3ecib.s 			page 22
 
 
  574               		.loc 1 254 1 is_stmt 0 view .LVU205
@@ -1318,7 +1318,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  610 004e 2460      		ori r18,lo8(4)
  611               	.LVL58:
  236:funsape/peripheral/adc.cpp ****         case Adc::Mode::AUTO_TIMER1_COMPB:       setMaskOffset(auxAdcsrB, 0x05, MCU_ADC_TRIGGER_SOU
-GAS LISTING /tmp/ccWXvzd6.s 			page 23
+GAS LISTING /tmp/ccz3ecib.s 			page 23
 
 
  612               		.loc 1 236 50 view .LVU224
@@ -1378,7 +1378,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  257:funsape/peripheral/adc.cpp ****     // Mark passage for debugging purpose
  652               		.loc 1 257 1 view -0
  653               		.cfi_startproc
-GAS LISTING /tmp/ccWXvzd6.s 			page 24
+GAS LISTING /tmp/ccz3ecib.s 			page 24
 
 
  654               	/* prologue: function */
@@ -1438,7 +1438,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  268:funsape/peripheral/adc.cpp ****     case Adc::Prescaler::PRESCALER_4:    setMaskOffset(auxAdcsrA, 0x02, MCU_ADC_PRESCALER_BIT_POS);
  698               		.loc 1 268 42 view .LVU253
  268:funsape/peripheral/adc.cpp ****     case Adc::Prescaler::PRESCALER_4:    setMaskOffset(auxAdcsrA, 0x02, MCU_ADC_PRESCALER_BIT_POS);
-GAS LISTING /tmp/ccWXvzd6.s 			page 25
+GAS LISTING /tmp/ccz3ecib.s 			page 25
 
 
  699               		.loc 1 268 106 view .LVU254
@@ -1498,7 +1498,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  270:funsape/peripheral/adc.cpp ****     case Adc::Prescaler::PRESCALER_16:   setMaskOffset(auxAdcsrA, 0x04, MCU_ADC_PRESCALER_BIT_POS);
  736               		.loc 1 270 42 view .LVU272
  270:funsape/peripheral/adc.cpp ****     case Adc::Prescaler::PRESCALER_16:   setMaskOffset(auxAdcsrA, 0x04, MCU_ADC_PRESCALER_BIT_POS);
-GAS LISTING /tmp/ccWXvzd6.s 			page 26
+GAS LISTING /tmp/ccz3ecib.s 			page 26
 
 
  737               		.loc 1 270 42 view .LVU273
@@ -1558,7 +1558,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  772               		.loc 1 274 42 view .LVU292
  274:funsape/peripheral/adc.cpp ****     }
  773               		.loc 1 274 42 view .LVU293
-GAS LISTING /tmp/ccWXvzd6.s 			page 27
+GAS LISTING /tmp/ccz3ecib.s 			page 27
 
 
  774 0044 8760      		ori r24,lo8(7)
@@ -1618,7 +1618,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  816               		.loc 1 302 42 is_stmt 0 view .LVU307
  817 0012 206C      		ori r18,lo8(-64)
  818               	.LVL80:
-GAS LISTING /tmp/ccWXvzd6.s 			page 28
+GAS LISTING /tmp/ccz3ecib.s 			page 28
 
 
  302:funsape/peripheral/adc.cpp ****     }
@@ -1678,7 +1678,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  858               	.LFB151:
  318:funsape/peripheral/adc.cpp ****     // Mark passage for debugging purpose
  859               		.loc 1 318 1 is_stmt 1 view -0
-GAS LISTING /tmp/ccWXvzd6.s 			page 29
+GAS LISTING /tmp/ccz3ecib.s 			page 29
 
 
  860               		.cfi_startproc
@@ -1738,7 +1738,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  899               	/* epilogue start */
  343:funsape/peripheral/adc.cpp **** 
  900               		.loc 1 343 1 is_stmt 0 view .LVU341
-GAS LISTING /tmp/ccWXvzd6.s 			page 30
+GAS LISTING /tmp/ccz3ecib.s 			page 30
 
 
  901 0024 0895      		ret
@@ -1798,7 +1798,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  351:funsape/peripheral/adc.cpp ****         // Returns error
  943               		.loc 1 351 15 is_stmt 0 view .LVU356
  944 0002 9381      		ldd r25,Z+3
-GAS LISTING /tmp/ccWXvzd6.s 			page 31
+GAS LISTING /tmp/ccz3ecib.s 			page 31
 
 
  945 0004 892F      		mov r24,r25
@@ -1858,7 +1858,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  983               		.loc 1 355 9 view .LVU372
  355:funsape/peripheral/adc.cpp ****     }
  984               		.loc 1 355 16 is_stmt 0 view .LVU373
-GAS LISTING /tmp/ccWXvzd6.s 			page 32
+GAS LISTING /tmp/ccz3ecib.s 			page 32
 
 
  985 002c 0895      		ret
@@ -1918,7 +1918,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  1027 000c E150      		subi r30,lo8(-(-1))
  1028 000e EA30      		cpi r30,lo8(10)
  1029 0010 00F4      		brsh .L74
-GAS LISTING /tmp/ccWXvzd6.s 			page 33
+GAS LISTING /tmp/ccz3ecib.s 			page 33
 
 
  1030 0012 F0E0      		ldi r31,0
@@ -1978,7 +1978,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  1072 0028 1D92      		st X+,__zero_reg__
  1073 002a 1D92      		st X+,__zero_reg__
  1074               	.LVL93:
-GAS LISTING /tmp/ccWXvzd6.s 			page 34
+GAS LISTING /tmp/ccz3ecib.s 			page 34
 
 
  407:funsape/peripheral/adc.cpp ****     return true;
@@ -2038,7 +2038,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  1110               		.loc 1 391 5 view .LVU419
  391:funsape/peripheral/adc.cpp ****     case Adc::Channel::CHANNEL_6:    setMaskOffset(auxAdmux, 0x06, MCU_ADC_MUX_BIT_POS);    break;
  1111               		.loc 1 391 38 view .LVU420
-GAS LISTING /tmp/ccWXvzd6.s 			page 35
+GAS LISTING /tmp/ccz3ecib.s 			page 35
 
 
  391:funsape/peripheral/adc.cpp ****     case Adc::Channel::CHANNEL_6:    setMaskOffset(auxAdmux, 0x06, MCU_ADC_MUX_BIT_POS);    break;
@@ -2098,7 +2098,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  395:funsape/peripheral/adc.cpp ****     case Adc::Channel::GND:          setMaskOffset(auxAdmux, 0x0F, MCU_ADC_MUX_BIT_POS);    break;
  1147               		.loc 1 395 38 view .LVU440
  395:funsape/peripheral/adc.cpp ****     case Adc::Channel::GND:          setMaskOffset(auxAdmux, 0x0F, MCU_ADC_MUX_BIT_POS);    break;
-GAS LISTING /tmp/ccWXvzd6.s 			page 36
+GAS LISTING /tmp/ccz3ecib.s 			page 36
 
 
  1148               		.loc 1 395 38 view .LVU441
@@ -2158,7 +2158,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  1195               		.cfi_offset 1, -2
  1196 0002 0F92      		push r0
  1197               	.LCFI1:
-GAS LISTING /tmp/ccWXvzd6.s 			page 37
+GAS LISTING /tmp/ccz3ecib.s 			page 37
 
 
  1198               		.cfi_def_cfa_offset 4
@@ -2218,7 +2218,7 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  1252               	/* frame size = 0 */
  1253               	/* stack size = 15 */
  1254               	.L__stack_usage = 15
-GAS LISTING /tmp/ccWXvzd6.s 			page 38
+GAS LISTING /tmp/ccz3ecib.s 			page 38
 
 
  448:funsape/peripheral/adc.cpp **** }
@@ -2278,781 +2278,781 @@ GAS LISTING /tmp/ccWXvzd6.s 			page 1
  1310               	.Letext0:
  1311               		.file 2 "/usr/avr/include/stdint.h"
  1312               		.file 3 "funsape/peripheral/../config/atmega328p.hpp"
-GAS LISTING /tmp/ccWXvzd6.s 			page 39
+GAS LISTING /tmp/ccz3ecib.s 			page 39
 
 
  1313               		.file 4 "funsape/peripheral/../globalDefines.hpp"
  1314               		.file 5 "funsape/peripheral/adc.hpp"
-GAS LISTING /tmp/ccWXvzd6.s 			page 40
+GAS LISTING /tmp/ccz3ecib.s 			page 40
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 adc.cpp
-     /tmp/ccWXvzd6.s:2      *ABS*:0000003e __SP_H__
-     /tmp/ccWXvzd6.s:3      *ABS*:0000003d __SP_L__
-     /tmp/ccWXvzd6.s:4      *ABS*:0000003f __SREG__
-     /tmp/ccWXvzd6.s:5      *ABS*:00000000 __tmp_reg__
-     /tmp/ccWXvzd6.s:6      *ABS*:00000001 __zero_reg__
-     /tmp/ccWXvzd6.s:14     .text._ZN3AdcC2Ev:00000000 _ZN3AdcC2Ev
-     /tmp/ccWXvzd6.s:17     .text._ZN3AdcC2Ev:00000000 .Loc.0
-     /tmp/ccWXvzd6.s:18     .text._ZN3AdcC2Ev:00000000 L0
-     /tmp/ccWXvzd6.s:23     .text._ZN3AdcC2Ev:00000000 .Loc.1
-     /tmp/ccWXvzd6.s:26     .text._ZN3AdcC2Ev:00000002 .Loc.2
-     /tmp/ccWXvzd6.s:29     .text._ZN3AdcC2Ev:00000004 .Loc.3
-     /tmp/ccWXvzd6.s:32     .text._ZN3AdcC2Ev:00000008 .Loc.4
-     /tmp/ccWXvzd6.s:35     .text._ZN3AdcC2Ev:0000000c .Loc.5
-     /tmp/ccWXvzd6.s:39     .text._ZN3AdcC2Ev:00000012 .Loc.6
-     /tmp/ccWXvzd6.s:41     .text._ZN3AdcC2Ev:00000014 .Loc.7
-     /tmp/ccWXvzd6.s:43     .text._ZN3AdcC2Ev:00000016 .Loc.8
-     /tmp/ccWXvzd6.s:45     .text._ZN3AdcC2Ev:00000018 .Loc.9
-     /tmp/ccWXvzd6.s:50     .text._ZN3AdcC2Ev:00000020 .Loc.10
-     /tmp/ccWXvzd6.s:54     .text._ZN3AdcC2Ev:00000026 .Loc.11
-     /tmp/ccWXvzd6.s:55     .text._ZN3AdcC2Ev:00000026 .Loc.12
-     /tmp/ccWXvzd6.s:56     .text._ZN3AdcC2Ev:00000026 .Loc.13
-     /tmp/ccWXvzd6.s:59     .text._ZN3AdcC2Ev:00000026 .Loc.14
-     /tmp/ccWXvzd6.s:61     .text._ZN3AdcC2Ev:00000028 L0
-     /tmp/ccWXvzd6.s:14     .text._ZN3AdcC2Ev:00000000 _ZN3AdcC1Ev
-     /tmp/ccWXvzd6.s:68     .text._Z41__static_initialization_and_destruction_0v:00000000 _Z41__static_initialization_and_destruction_0v
-     /tmp/ccWXvzd6.s:70     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.15
-     /tmp/ccWXvzd6.s:71     .text._Z41__static_initialization_and_destruction_0v:00000000 L0
-     /tmp/ccWXvzd6.s:76     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.16
-     /tmp/ccWXvzd6.s:1307   .bss._ZN3Adc9_instanceE:00000000 _ZN3Adc9_instanceE
-     /tmp/ccWXvzd6.s:82     .text._Z41__static_initialization_and_destruction_0v:00000008 .Loc.17
-     /tmp/ccWXvzd6.s:84     .text._Z41__static_initialization_and_destruction_0v:0000000a L0
-     /tmp/ccWXvzd6.s:90     .text._ZN3AdcD2Ev:00000000 _ZN3AdcD2Ev
-     /tmp/ccWXvzd6.s:93     .text._ZN3AdcD2Ev:00000000 .Loc.18
-     /tmp/ccWXvzd6.s:94     .text._ZN3AdcD2Ev:00000000 L0
-     /tmp/ccWXvzd6.s:100    .text._ZN3AdcD2Ev:00000000 .Loc.19
-     /tmp/ccWXvzd6.s:101    .text._ZN3AdcD2Ev:00000000 .Loc.20
-     /tmp/ccWXvzd6.s:102    .text._ZN3AdcD2Ev:00000000 .Loc.21
-     /tmp/ccWXvzd6.s:105    .text._ZN3AdcD2Ev:00000000 .Loc.22
-     /tmp/ccWXvzd6.s:107    .text._ZN3AdcD2Ev:00000002 L0
-     /tmp/ccWXvzd6.s:90     .text._ZN3AdcD2Ev:00000000 _ZN3AdcD1Ev
-     /tmp/ccWXvzd6.s:115    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000000 _ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE
-     /tmp/ccWXvzd6.s:118    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000000 .Loc.23
-     /tmp/ccWXvzd6.s:119    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000000 L0
-     /tmp/ccWXvzd6.s:124    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000000 .Loc.24
-     /tmp/ccWXvzd6.s:126    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000002 .Loc.25
-     /tmp/ccWXvzd6.s:127    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000002 .Loc.26
-     /tmp/ccWXvzd6.s:128    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000002 .Loc.27
-     /tmp/ccWXvzd6.s:131    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000006 .Loc.28
-     /tmp/ccWXvzd6.s:132    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000006 .Loc.29
-     /tmp/ccWXvzd6.s:135    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000000a .Loc.30
-     /tmp/ccWXvzd6.s:136    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000000a .Loc.31
-     /tmp/ccWXvzd6.s:139    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000000e .Loc.32
-     /tmp/ccWXvzd6.s:140    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000000e .Loc.33
-     /tmp/ccWXvzd6.s:144    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000012 .Loc.34
-     /tmp/ccWXvzd6.s:145    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000012 .Loc.35
-GAS LISTING /tmp/ccWXvzd6.s 			page 41
+     /tmp/ccz3ecib.s:2      *ABS*:0000003e __SP_H__
+     /tmp/ccz3ecib.s:3      *ABS*:0000003d __SP_L__
+     /tmp/ccz3ecib.s:4      *ABS*:0000003f __SREG__
+     /tmp/ccz3ecib.s:5      *ABS*:00000000 __tmp_reg__
+     /tmp/ccz3ecib.s:6      *ABS*:00000001 __zero_reg__
+     /tmp/ccz3ecib.s:14     .text._ZN3AdcC2Ev:00000000 _ZN3AdcC2Ev
+     /tmp/ccz3ecib.s:17     .text._ZN3AdcC2Ev:00000000 .Loc.0
+     /tmp/ccz3ecib.s:18     .text._ZN3AdcC2Ev:00000000 L0
+     /tmp/ccz3ecib.s:23     .text._ZN3AdcC2Ev:00000000 .Loc.1
+     /tmp/ccz3ecib.s:26     .text._ZN3AdcC2Ev:00000002 .Loc.2
+     /tmp/ccz3ecib.s:29     .text._ZN3AdcC2Ev:00000004 .Loc.3
+     /tmp/ccz3ecib.s:32     .text._ZN3AdcC2Ev:00000008 .Loc.4
+     /tmp/ccz3ecib.s:35     .text._ZN3AdcC2Ev:0000000c .Loc.5
+     /tmp/ccz3ecib.s:39     .text._ZN3AdcC2Ev:00000012 .Loc.6
+     /tmp/ccz3ecib.s:41     .text._ZN3AdcC2Ev:00000014 .Loc.7
+     /tmp/ccz3ecib.s:43     .text._ZN3AdcC2Ev:00000016 .Loc.8
+     /tmp/ccz3ecib.s:45     .text._ZN3AdcC2Ev:00000018 .Loc.9
+     /tmp/ccz3ecib.s:50     .text._ZN3AdcC2Ev:00000020 .Loc.10
+     /tmp/ccz3ecib.s:54     .text._ZN3AdcC2Ev:00000026 .Loc.11
+     /tmp/ccz3ecib.s:55     .text._ZN3AdcC2Ev:00000026 .Loc.12
+     /tmp/ccz3ecib.s:56     .text._ZN3AdcC2Ev:00000026 .Loc.13
+     /tmp/ccz3ecib.s:59     .text._ZN3AdcC2Ev:00000026 .Loc.14
+     /tmp/ccz3ecib.s:61     .text._ZN3AdcC2Ev:00000028 L0
+     /tmp/ccz3ecib.s:14     .text._ZN3AdcC2Ev:00000000 _ZN3AdcC1Ev
+     /tmp/ccz3ecib.s:68     .text._Z41__static_initialization_and_destruction_0v:00000000 _Z41__static_initialization_and_destruction_0v
+     /tmp/ccz3ecib.s:70     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.15
+     /tmp/ccz3ecib.s:71     .text._Z41__static_initialization_and_destruction_0v:00000000 L0
+     /tmp/ccz3ecib.s:76     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.16
+     /tmp/ccz3ecib.s:1307   .bss._ZN3Adc9_instanceE:00000000 _ZN3Adc9_instanceE
+     /tmp/ccz3ecib.s:82     .text._Z41__static_initialization_and_destruction_0v:00000008 .Loc.17
+     /tmp/ccz3ecib.s:84     .text._Z41__static_initialization_and_destruction_0v:0000000a L0
+     /tmp/ccz3ecib.s:90     .text._ZN3AdcD2Ev:00000000 _ZN3AdcD2Ev
+     /tmp/ccz3ecib.s:93     .text._ZN3AdcD2Ev:00000000 .Loc.18
+     /tmp/ccz3ecib.s:94     .text._ZN3AdcD2Ev:00000000 L0
+     /tmp/ccz3ecib.s:100    .text._ZN3AdcD2Ev:00000000 .Loc.19
+     /tmp/ccz3ecib.s:101    .text._ZN3AdcD2Ev:00000000 .Loc.20
+     /tmp/ccz3ecib.s:102    .text._ZN3AdcD2Ev:00000000 .Loc.21
+     /tmp/ccz3ecib.s:105    .text._ZN3AdcD2Ev:00000000 .Loc.22
+     /tmp/ccz3ecib.s:107    .text._ZN3AdcD2Ev:00000002 L0
+     /tmp/ccz3ecib.s:90     .text._ZN3AdcD2Ev:00000000 _ZN3AdcD1Ev
+     /tmp/ccz3ecib.s:115    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000000 _ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE
+     /tmp/ccz3ecib.s:118    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000000 .Loc.23
+     /tmp/ccz3ecib.s:119    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000000 L0
+     /tmp/ccz3ecib.s:124    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000000 .Loc.24
+     /tmp/ccz3ecib.s:126    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000002 .Loc.25
+     /tmp/ccz3ecib.s:127    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000002 .Loc.26
+     /tmp/ccz3ecib.s:128    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000002 .Loc.27
+     /tmp/ccz3ecib.s:131    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000006 .Loc.28
+     /tmp/ccz3ecib.s:132    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000006 .Loc.29
+     /tmp/ccz3ecib.s:135    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000000a .Loc.30
+     /tmp/ccz3ecib.s:136    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000000a .Loc.31
+     /tmp/ccz3ecib.s:139    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000000e .Loc.32
+     /tmp/ccz3ecib.s:140    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000000e .Loc.33
+     /tmp/ccz3ecib.s:144    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000012 .Loc.34
+     /tmp/ccz3ecib.s:145    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000012 .Loc.35
+GAS LISTING /tmp/ccz3ecib.s 			page 41
 
 
-     /tmp/ccWXvzd6.s:149    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000018 .Loc.36
-     /tmp/ccWXvzd6.s:150    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000018 .Loc.37
-     /tmp/ccWXvzd6.s:153    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000001a .Loc.38
-     /tmp/ccWXvzd6.s:154    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000001a .Loc.39
-     /tmp/ccWXvzd6.s:166    .jumptables.gcc._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000000 .L8
-     /tmp/ccWXvzd6.s:176    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000002c .Loc.40
-     /tmp/ccWXvzd6.s:177    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000002c .Loc.41
-     /tmp/ccWXvzd6.s:180    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000002e .Loc.42
-     /tmp/ccWXvzd6.s:182    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000002e .Loc.43
-     /tmp/ccWXvzd6.s:183    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000002e .Loc.44
-     /tmp/ccWXvzd6.s:187    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000032 .Loc.45
-     /tmp/ccWXvzd6.s:188    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000032 .Loc.46
-     /tmp/ccWXvzd6.s:191    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000036 .Loc.47
-     /tmp/ccWXvzd6.s:194    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000003a .Loc.48
-     /tmp/ccWXvzd6.s:195    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000003a .Loc.49
-     /tmp/ccWXvzd6.s:196    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000003a .Loc.50
-     /tmp/ccWXvzd6.s:200    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000003e .Loc.51
-     /tmp/ccWXvzd6.s:201    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000003e .Loc.52
-     /tmp/ccWXvzd6.s:205    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000040 .Loc.53
-     /tmp/ccWXvzd6.s:206    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000040 .Loc.54
-     /tmp/ccWXvzd6.s:207    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000040 .Loc.55
-     /tmp/ccWXvzd6.s:210    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000042 .Loc.56
-     /tmp/ccWXvzd6.s:211    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000042 .Loc.57
-     /tmp/ccWXvzd6.s:214    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000044 .Loc.58
-     /tmp/ccWXvzd6.s:215    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000044 .Loc.59
-     /tmp/ccWXvzd6.s:216    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000044 .Loc.60
-     /tmp/ccWXvzd6.s:219    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000046 .Loc.61
-     /tmp/ccWXvzd6.s:220    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000046 .Loc.62
-     /tmp/ccWXvzd6.s:223    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000048 .Loc.63
-     /tmp/ccWXvzd6.s:224    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000048 .Loc.64
-     /tmp/ccWXvzd6.s:225    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000048 .Loc.65
-     /tmp/ccWXvzd6.s:228    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000004a .Loc.66
-     /tmp/ccWXvzd6.s:229    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000004a .Loc.67
-     /tmp/ccWXvzd6.s:232    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000004c .Loc.68
-     /tmp/ccWXvzd6.s:233    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000004c .Loc.69
-     /tmp/ccWXvzd6.s:234    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000004c .Loc.70
-     /tmp/ccWXvzd6.s:237    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000004e .Loc.71
-     /tmp/ccWXvzd6.s:238    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000004e .Loc.72
-     /tmp/ccWXvzd6.s:241    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000050 .Loc.73
-     /tmp/ccWXvzd6.s:242    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000050 .Loc.74
-     /tmp/ccWXvzd6.s:243    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000050 .Loc.75
-     /tmp/ccWXvzd6.s:246    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000052 .Loc.76
-     /tmp/ccWXvzd6.s:247    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000052 .Loc.77
-     /tmp/ccWXvzd6.s:250    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000054 .Loc.78
-     /tmp/ccWXvzd6.s:251    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000054 .Loc.79
-     /tmp/ccWXvzd6.s:252    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000054 .Loc.80
-     /tmp/ccWXvzd6.s:255    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000056 .Loc.81
-     /tmp/ccWXvzd6.s:256    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000056 .Loc.82
-     /tmp/ccWXvzd6.s:259    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000058 .Loc.83
-     /tmp/ccWXvzd6.s:260    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000058 .Loc.84
-     /tmp/ccWXvzd6.s:261    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000058 .Loc.85
-     /tmp/ccWXvzd6.s:264    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000005a .Loc.86
-     /tmp/ccWXvzd6.s:267    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000005c .Loc.87
-     /tmp/ccWXvzd6.s:268    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000005c .Loc.88
-     /tmp/ccWXvzd6.s:272    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000005e .Loc.89
-     /tmp/ccWXvzd6.s:273    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000005e .Loc.90
-     /tmp/ccWXvzd6.s:274    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000005e .Loc.91
-GAS LISTING /tmp/ccWXvzd6.s 			page 42
+     /tmp/ccz3ecib.s:149    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000018 .Loc.36
+     /tmp/ccz3ecib.s:150    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000018 .Loc.37
+     /tmp/ccz3ecib.s:153    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000001a .Loc.38
+     /tmp/ccz3ecib.s:154    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000001a .Loc.39
+     /tmp/ccz3ecib.s:166    .jumptables.gcc._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000000 .L8
+     /tmp/ccz3ecib.s:176    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000002c .Loc.40
+     /tmp/ccz3ecib.s:177    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000002c .Loc.41
+     /tmp/ccz3ecib.s:180    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000002e .Loc.42
+     /tmp/ccz3ecib.s:182    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000002e .Loc.43
+     /tmp/ccz3ecib.s:183    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000002e .Loc.44
+     /tmp/ccz3ecib.s:187    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000032 .Loc.45
+     /tmp/ccz3ecib.s:188    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000032 .Loc.46
+     /tmp/ccz3ecib.s:191    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000036 .Loc.47
+     /tmp/ccz3ecib.s:194    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000003a .Loc.48
+     /tmp/ccz3ecib.s:195    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000003a .Loc.49
+     /tmp/ccz3ecib.s:196    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000003a .Loc.50
+     /tmp/ccz3ecib.s:200    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000003e .Loc.51
+     /tmp/ccz3ecib.s:201    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000003e .Loc.52
+     /tmp/ccz3ecib.s:205    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000040 .Loc.53
+     /tmp/ccz3ecib.s:206    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000040 .Loc.54
+     /tmp/ccz3ecib.s:207    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000040 .Loc.55
+     /tmp/ccz3ecib.s:210    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000042 .Loc.56
+     /tmp/ccz3ecib.s:211    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000042 .Loc.57
+     /tmp/ccz3ecib.s:214    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000044 .Loc.58
+     /tmp/ccz3ecib.s:215    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000044 .Loc.59
+     /tmp/ccz3ecib.s:216    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000044 .Loc.60
+     /tmp/ccz3ecib.s:219    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000046 .Loc.61
+     /tmp/ccz3ecib.s:220    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000046 .Loc.62
+     /tmp/ccz3ecib.s:223    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000048 .Loc.63
+     /tmp/ccz3ecib.s:224    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000048 .Loc.64
+     /tmp/ccz3ecib.s:225    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000048 .Loc.65
+     /tmp/ccz3ecib.s:228    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000004a .Loc.66
+     /tmp/ccz3ecib.s:229    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000004a .Loc.67
+     /tmp/ccz3ecib.s:232    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000004c .Loc.68
+     /tmp/ccz3ecib.s:233    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000004c .Loc.69
+     /tmp/ccz3ecib.s:234    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000004c .Loc.70
+     /tmp/ccz3ecib.s:237    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000004e .Loc.71
+     /tmp/ccz3ecib.s:238    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000004e .Loc.72
+     /tmp/ccz3ecib.s:241    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000050 .Loc.73
+     /tmp/ccz3ecib.s:242    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000050 .Loc.74
+     /tmp/ccz3ecib.s:243    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000050 .Loc.75
+     /tmp/ccz3ecib.s:246    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000052 .Loc.76
+     /tmp/ccz3ecib.s:247    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000052 .Loc.77
+     /tmp/ccz3ecib.s:250    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000054 .Loc.78
+     /tmp/ccz3ecib.s:251    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000054 .Loc.79
+     /tmp/ccz3ecib.s:252    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000054 .Loc.80
+     /tmp/ccz3ecib.s:255    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000056 .Loc.81
+     /tmp/ccz3ecib.s:256    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000056 .Loc.82
+     /tmp/ccz3ecib.s:259    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000058 .Loc.83
+     /tmp/ccz3ecib.s:260    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000058 .Loc.84
+     /tmp/ccz3ecib.s:261    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000058 .Loc.85
+     /tmp/ccz3ecib.s:264    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000005a .Loc.86
+     /tmp/ccz3ecib.s:267    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000005c .Loc.87
+     /tmp/ccz3ecib.s:268    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000005c .Loc.88
+     /tmp/ccz3ecib.s:272    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000005e .Loc.89
+     /tmp/ccz3ecib.s:273    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000005e .Loc.90
+     /tmp/ccz3ecib.s:274    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000005e .Loc.91
+GAS LISTING /tmp/ccz3ecib.s 			page 42
 
 
-     /tmp/ccWXvzd6.s:277    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000060 .Loc.92
-     /tmp/ccWXvzd6.s:278    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000060 .Loc.93
-     /tmp/ccWXvzd6.s:280    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000060 .Loc.94
-     /tmp/ccWXvzd6.s:281    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000060 .Loc.95
-     /tmp/ccWXvzd6.s:285    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000064 .Loc.96
-     /tmp/ccWXvzd6.s:286    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000064 .Loc.97
-     /tmp/ccWXvzd6.s:291    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000006c .Loc.98
-     /tmp/ccWXvzd6.s:299    .jumptables.gcc._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000000e .L20
-     /tmp/ccWXvzd6.s:309    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000076 .Loc.99
-     /tmp/ccWXvzd6.s:310    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000076 .Loc.100
-     /tmp/ccWXvzd6.s:311    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000076 .Loc.101
-     /tmp/ccWXvzd6.s:314    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000078 .Loc.102
-     /tmp/ccWXvzd6.s:315    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000078 .Loc.103
-     /tmp/ccWXvzd6.s:317    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000078 .Loc.104
-     /tmp/ccWXvzd6.s:318    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000078 .Loc.105
-     /tmp/ccWXvzd6.s:320    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000007c .Loc.106
-     /tmp/ccWXvzd6.s:321    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000007c .Loc.107
-     /tmp/ccWXvzd6.s:323    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000080 .Loc.108
-     /tmp/ccWXvzd6.s:324    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000080 .Loc.109
-     /tmp/ccWXvzd6.s:326    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000084 .Loc.110
-     /tmp/ccWXvzd6.s:327    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000084 .Loc.111
-     /tmp/ccWXvzd6.s:330    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000086 .Loc.112
-     /tmp/ccWXvzd6.s:334    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000008a .Loc.113
-     /tmp/ccWXvzd6.s:335    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000008a .Loc.114
-     /tmp/ccWXvzd6.s:338    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000008c .Loc.115
-     /tmp/ccWXvzd6.s:340    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000008e .Loc.116
-     /tmp/ccWXvzd6.s:341    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000008e .Loc.117
-     /tmp/ccWXvzd6.s:344    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000090 .Loc.118
-     /tmp/ccWXvzd6.s:347    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000092 .Loc.119
-     /tmp/ccWXvzd6.s:348    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000092 .Loc.120
-     /tmp/ccWXvzd6.s:353    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000098 .Loc.121
-     /tmp/ccWXvzd6.s:354    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000098 .Loc.122
-     /tmp/ccWXvzd6.s:358    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000009c .Loc.123
-     /tmp/ccWXvzd6.s:359    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000009c .Loc.124
-     /tmp/ccWXvzd6.s:360    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000009c .Loc.125
-     /tmp/ccWXvzd6.s:366    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a0 .Loc.126
-     /tmp/ccWXvzd6.s:367    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a0 .Loc.127
-     /tmp/ccWXvzd6.s:368    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a0 .Loc.128
-     /tmp/ccWXvzd6.s:371    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a2 .Loc.129
-     /tmp/ccWXvzd6.s:372    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a2 .Loc.130
-     /tmp/ccWXvzd6.s:375    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a4 .Loc.131
-     /tmp/ccWXvzd6.s:376    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a4 .Loc.132
-     /tmp/ccWXvzd6.s:377    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a4 .Loc.133
-     /tmp/ccWXvzd6.s:380    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a6 .Loc.134
-     /tmp/ccWXvzd6.s:381    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a6 .Loc.135
-     /tmp/ccWXvzd6.s:384    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a8 .Loc.136
-     /tmp/ccWXvzd6.s:385    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a8 .Loc.137
-     /tmp/ccWXvzd6.s:386    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a8 .Loc.138
-     /tmp/ccWXvzd6.s:389    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000aa .Loc.139
-     /tmp/ccWXvzd6.s:390    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000aa .Loc.140
-     /tmp/ccWXvzd6.s:393    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000ac .Loc.141
-     /tmp/ccWXvzd6.s:394    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000ac .Loc.142
-     /tmp/ccWXvzd6.s:395    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000ac .Loc.143
-     /tmp/ccWXvzd6.s:398    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000ae .Loc.144
-     /tmp/ccWXvzd6.s:399    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000ae .Loc.145
-     /tmp/ccWXvzd6.s:402    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b0 .Loc.146
-     /tmp/ccWXvzd6.s:403    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b0 .Loc.147
-GAS LISTING /tmp/ccWXvzd6.s 			page 43
+     /tmp/ccz3ecib.s:277    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000060 .Loc.92
+     /tmp/ccz3ecib.s:278    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000060 .Loc.93
+     /tmp/ccz3ecib.s:280    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000060 .Loc.94
+     /tmp/ccz3ecib.s:281    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000060 .Loc.95
+     /tmp/ccz3ecib.s:285    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000064 .Loc.96
+     /tmp/ccz3ecib.s:286    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000064 .Loc.97
+     /tmp/ccz3ecib.s:291    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000006c .Loc.98
+     /tmp/ccz3ecib.s:299    .jumptables.gcc._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000000e .L20
+     /tmp/ccz3ecib.s:309    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000076 .Loc.99
+     /tmp/ccz3ecib.s:310    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000076 .Loc.100
+     /tmp/ccz3ecib.s:311    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000076 .Loc.101
+     /tmp/ccz3ecib.s:314    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000078 .Loc.102
+     /tmp/ccz3ecib.s:315    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000078 .Loc.103
+     /tmp/ccz3ecib.s:317    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000078 .Loc.104
+     /tmp/ccz3ecib.s:318    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000078 .Loc.105
+     /tmp/ccz3ecib.s:320    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000007c .Loc.106
+     /tmp/ccz3ecib.s:321    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000007c .Loc.107
+     /tmp/ccz3ecib.s:323    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000080 .Loc.108
+     /tmp/ccz3ecib.s:324    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000080 .Loc.109
+     /tmp/ccz3ecib.s:326    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000084 .Loc.110
+     /tmp/ccz3ecib.s:327    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000084 .Loc.111
+     /tmp/ccz3ecib.s:330    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000086 .Loc.112
+     /tmp/ccz3ecib.s:334    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000008a .Loc.113
+     /tmp/ccz3ecib.s:335    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000008a .Loc.114
+     /tmp/ccz3ecib.s:338    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000008c .Loc.115
+     /tmp/ccz3ecib.s:340    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000008e .Loc.116
+     /tmp/ccz3ecib.s:341    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000008e .Loc.117
+     /tmp/ccz3ecib.s:344    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000090 .Loc.118
+     /tmp/ccz3ecib.s:347    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000092 .Loc.119
+     /tmp/ccz3ecib.s:348    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000092 .Loc.120
+     /tmp/ccz3ecib.s:353    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000098 .Loc.121
+     /tmp/ccz3ecib.s:354    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000098 .Loc.122
+     /tmp/ccz3ecib.s:358    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000009c .Loc.123
+     /tmp/ccz3ecib.s:359    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000009c .Loc.124
+     /tmp/ccz3ecib.s:360    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000009c .Loc.125
+     /tmp/ccz3ecib.s:366    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a0 .Loc.126
+     /tmp/ccz3ecib.s:367    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a0 .Loc.127
+     /tmp/ccz3ecib.s:368    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a0 .Loc.128
+     /tmp/ccz3ecib.s:371    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a2 .Loc.129
+     /tmp/ccz3ecib.s:372    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a2 .Loc.130
+     /tmp/ccz3ecib.s:375    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a4 .Loc.131
+     /tmp/ccz3ecib.s:376    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a4 .Loc.132
+     /tmp/ccz3ecib.s:377    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a4 .Loc.133
+     /tmp/ccz3ecib.s:380    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a6 .Loc.134
+     /tmp/ccz3ecib.s:381    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a6 .Loc.135
+     /tmp/ccz3ecib.s:384    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a8 .Loc.136
+     /tmp/ccz3ecib.s:385    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a8 .Loc.137
+     /tmp/ccz3ecib.s:386    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a8 .Loc.138
+     /tmp/ccz3ecib.s:389    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000aa .Loc.139
+     /tmp/ccz3ecib.s:390    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000aa .Loc.140
+     /tmp/ccz3ecib.s:393    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000ac .Loc.141
+     /tmp/ccz3ecib.s:394    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000ac .Loc.142
+     /tmp/ccz3ecib.s:395    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000ac .Loc.143
+     /tmp/ccz3ecib.s:398    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000ae .Loc.144
+     /tmp/ccz3ecib.s:399    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000ae .Loc.145
+     /tmp/ccz3ecib.s:402    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b0 .Loc.146
+     /tmp/ccz3ecib.s:403    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b0 .Loc.147
+GAS LISTING /tmp/ccz3ecib.s 			page 43
 
 
-     /tmp/ccWXvzd6.s:404    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b0 .Loc.148
-     /tmp/ccWXvzd6.s:407    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b2 .Loc.149
-     /tmp/ccWXvzd6.s:408    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b2 .Loc.150
-     /tmp/ccWXvzd6.s:411    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b4 .Loc.151
-     /tmp/ccWXvzd6.s:412    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b4 .Loc.152
-     /tmp/ccWXvzd6.s:413    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b4 .Loc.153
-     /tmp/ccWXvzd6.s:417    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b8 .Loc.154
-     /tmp/ccWXvzd6.s:418    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b8 .Loc.155
-     /tmp/ccWXvzd6.s:420    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000ba L0
-     /tmp/ccWXvzd6.s:426    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000000 _ZN3Adc18setDataPresetationENS_15DataPresetationE
-     /tmp/ccWXvzd6.s:429    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000000 .Loc.156
-     /tmp/ccWXvzd6.s:430    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000000 L0
-     /tmp/ccWXvzd6.s:435    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000000 .Loc.157
-     /tmp/ccWXvzd6.s:437    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000002 .Loc.158
-     /tmp/ccWXvzd6.s:438    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000002 .Loc.159
-     /tmp/ccWXvzd6.s:441    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000006 .Loc.160
-     /tmp/ccWXvzd6.s:442    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000006 .Loc.161
-     /tmp/ccWXvzd6.s:447    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:0000000c .Loc.162
-     /tmp/ccWXvzd6.s:450    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000010 .Loc.163
-     /tmp/ccWXvzd6.s:452    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000010 .Loc.164
-     /tmp/ccWXvzd6.s:453    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000010 .Loc.165
-     /tmp/ccWXvzd6.s:454    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000010 .Loc.166
-     /tmp/ccWXvzd6.s:459    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000018 .Loc.167
-     /tmp/ccWXvzd6.s:460    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000018 .Loc.168
-     /tmp/ccWXvzd6.s:463    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:0000001c .Loc.169
-     /tmp/ccWXvzd6.s:464    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:0000001c .Loc.170
-     /tmp/ccWXvzd6.s:465    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:0000001c .Loc.171
-     /tmp/ccWXvzd6.s:471    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000020 .Loc.172
-     /tmp/ccWXvzd6.s:472    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000020 .Loc.173
-     /tmp/ccWXvzd6.s:477    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000026 .Loc.174
-     /tmp/ccWXvzd6.s:481    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:0000002c L0
-     /tmp/ccWXvzd6.s:487    .text._ZN3Adc7setModeENS_4ModeE:00000000 _ZN3Adc7setModeENS_4ModeE
-     /tmp/ccWXvzd6.s:490    .text._ZN3Adc7setModeENS_4ModeE:00000000 .Loc.175
-     /tmp/ccWXvzd6.s:491    .text._ZN3Adc7setModeENS_4ModeE:00000000 L0
-     /tmp/ccWXvzd6.s:496    .text._ZN3Adc7setModeENS_4ModeE:00000000 .Loc.176
-     /tmp/ccWXvzd6.s:498    .text._ZN3Adc7setModeENS_4ModeE:00000002 .Loc.177
-     /tmp/ccWXvzd6.s:499    .text._ZN3Adc7setModeENS_4ModeE:00000002 .Loc.178
-     /tmp/ccWXvzd6.s:500    .text._ZN3Adc7setModeENS_4ModeE:00000002 .Loc.179
-     /tmp/ccWXvzd6.s:503    .text._ZN3Adc7setModeENS_4ModeE:00000006 .Loc.180
-     /tmp/ccWXvzd6.s:504    .text._ZN3Adc7setModeENS_4ModeE:00000006 .Loc.181
-     /tmp/ccWXvzd6.s:507    .text._ZN3Adc7setModeENS_4ModeE:0000000a .Loc.182
-     /tmp/ccWXvzd6.s:508    .text._ZN3Adc7setModeENS_4ModeE:0000000a .Loc.183
-     /tmp/ccWXvzd6.s:512    .text._ZN3Adc7setModeENS_4ModeE:0000000e .Loc.184
-     /tmp/ccWXvzd6.s:513    .text._ZN3Adc7setModeENS_4ModeE:0000000e .Loc.185
-     /tmp/ccWXvzd6.s:517    .text._ZN3Adc7setModeENS_4ModeE:00000014 .Loc.186
-     /tmp/ccWXvzd6.s:518    .text._ZN3Adc7setModeENS_4ModeE:00000014 .Loc.187
-     /tmp/ccWXvzd6.s:521    .text._ZN3Adc7setModeENS_4ModeE:00000016 .Loc.188
-     /tmp/ccWXvzd6.s:522    .text._ZN3Adc7setModeENS_4ModeE:00000016 .Loc.189
-     /tmp/ccWXvzd6.s:534    .jumptables.gcc._ZN3Adc7setModeENS_4ModeE:00000000 .L36
-     /tmp/ccWXvzd6.s:544    .text._ZN3Adc7setModeENS_4ModeE:00000028 .Loc.190
-     /tmp/ccWXvzd6.s:545    .text._ZN3Adc7setModeENS_4ModeE:00000028 .Loc.191
-     /tmp/ccWXvzd6.s:548    .text._ZN3Adc7setModeENS_4ModeE:0000002a .Loc.192
-     /tmp/ccWXvzd6.s:550    .text._ZN3Adc7setModeENS_4ModeE:0000002a .Loc.193
-     /tmp/ccWXvzd6.s:551    .text._ZN3Adc7setModeENS_4ModeE:0000002a .Loc.194
-     /tmp/ccWXvzd6.s:553    .text._ZN3Adc7setModeENS_4ModeE:0000002e .Loc.195
-     /tmp/ccWXvzd6.s:554    .text._ZN3Adc7setModeENS_4ModeE:0000002e .Loc.196
-     /tmp/ccWXvzd6.s:556    .text._ZN3Adc7setModeENS_4ModeE:00000032 .Loc.197
-GAS LISTING /tmp/ccWXvzd6.s 			page 44
+     /tmp/ccz3ecib.s:404    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b0 .Loc.148
+     /tmp/ccz3ecib.s:407    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b2 .Loc.149
+     /tmp/ccz3ecib.s:408    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b2 .Loc.150
+     /tmp/ccz3ecib.s:411    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b4 .Loc.151
+     /tmp/ccz3ecib.s:412    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b4 .Loc.152
+     /tmp/ccz3ecib.s:413    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b4 .Loc.153
+     /tmp/ccz3ecib.s:417    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b8 .Loc.154
+     /tmp/ccz3ecib.s:418    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b8 .Loc.155
+     /tmp/ccz3ecib.s:420    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000ba L0
+     /tmp/ccz3ecib.s:426    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000000 _ZN3Adc18setDataPresetationENS_15DataPresetationE
+     /tmp/ccz3ecib.s:429    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000000 .Loc.156
+     /tmp/ccz3ecib.s:430    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000000 L0
+     /tmp/ccz3ecib.s:435    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000000 .Loc.157
+     /tmp/ccz3ecib.s:437    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000002 .Loc.158
+     /tmp/ccz3ecib.s:438    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000002 .Loc.159
+     /tmp/ccz3ecib.s:441    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000006 .Loc.160
+     /tmp/ccz3ecib.s:442    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000006 .Loc.161
+     /tmp/ccz3ecib.s:447    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:0000000c .Loc.162
+     /tmp/ccz3ecib.s:450    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000010 .Loc.163
+     /tmp/ccz3ecib.s:452    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000010 .Loc.164
+     /tmp/ccz3ecib.s:453    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000010 .Loc.165
+     /tmp/ccz3ecib.s:454    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000010 .Loc.166
+     /tmp/ccz3ecib.s:459    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000018 .Loc.167
+     /tmp/ccz3ecib.s:460    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000018 .Loc.168
+     /tmp/ccz3ecib.s:463    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:0000001c .Loc.169
+     /tmp/ccz3ecib.s:464    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:0000001c .Loc.170
+     /tmp/ccz3ecib.s:465    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:0000001c .Loc.171
+     /tmp/ccz3ecib.s:471    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000020 .Loc.172
+     /tmp/ccz3ecib.s:472    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000020 .Loc.173
+     /tmp/ccz3ecib.s:477    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000026 .Loc.174
+     /tmp/ccz3ecib.s:481    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:0000002c L0
+     /tmp/ccz3ecib.s:487    .text._ZN3Adc7setModeENS_4ModeE:00000000 _ZN3Adc7setModeENS_4ModeE
+     /tmp/ccz3ecib.s:490    .text._ZN3Adc7setModeENS_4ModeE:00000000 .Loc.175
+     /tmp/ccz3ecib.s:491    .text._ZN3Adc7setModeENS_4ModeE:00000000 L0
+     /tmp/ccz3ecib.s:496    .text._ZN3Adc7setModeENS_4ModeE:00000000 .Loc.176
+     /tmp/ccz3ecib.s:498    .text._ZN3Adc7setModeENS_4ModeE:00000002 .Loc.177
+     /tmp/ccz3ecib.s:499    .text._ZN3Adc7setModeENS_4ModeE:00000002 .Loc.178
+     /tmp/ccz3ecib.s:500    .text._ZN3Adc7setModeENS_4ModeE:00000002 .Loc.179
+     /tmp/ccz3ecib.s:503    .text._ZN3Adc7setModeENS_4ModeE:00000006 .Loc.180
+     /tmp/ccz3ecib.s:504    .text._ZN3Adc7setModeENS_4ModeE:00000006 .Loc.181
+     /tmp/ccz3ecib.s:507    .text._ZN3Adc7setModeENS_4ModeE:0000000a .Loc.182
+     /tmp/ccz3ecib.s:508    .text._ZN3Adc7setModeENS_4ModeE:0000000a .Loc.183
+     /tmp/ccz3ecib.s:512    .text._ZN3Adc7setModeENS_4ModeE:0000000e .Loc.184
+     /tmp/ccz3ecib.s:513    .text._ZN3Adc7setModeENS_4ModeE:0000000e .Loc.185
+     /tmp/ccz3ecib.s:517    .text._ZN3Adc7setModeENS_4ModeE:00000014 .Loc.186
+     /tmp/ccz3ecib.s:518    .text._ZN3Adc7setModeENS_4ModeE:00000014 .Loc.187
+     /tmp/ccz3ecib.s:521    .text._ZN3Adc7setModeENS_4ModeE:00000016 .Loc.188
+     /tmp/ccz3ecib.s:522    .text._ZN3Adc7setModeENS_4ModeE:00000016 .Loc.189
+     /tmp/ccz3ecib.s:534    .jumptables.gcc._ZN3Adc7setModeENS_4ModeE:00000000 .L36
+     /tmp/ccz3ecib.s:544    .text._ZN3Adc7setModeENS_4ModeE:00000028 .Loc.190
+     /tmp/ccz3ecib.s:545    .text._ZN3Adc7setModeENS_4ModeE:00000028 .Loc.191
+     /tmp/ccz3ecib.s:548    .text._ZN3Adc7setModeENS_4ModeE:0000002a .Loc.192
+     /tmp/ccz3ecib.s:550    .text._ZN3Adc7setModeENS_4ModeE:0000002a .Loc.193
+     /tmp/ccz3ecib.s:551    .text._ZN3Adc7setModeENS_4ModeE:0000002a .Loc.194
+     /tmp/ccz3ecib.s:553    .text._ZN3Adc7setModeENS_4ModeE:0000002e .Loc.195
+     /tmp/ccz3ecib.s:554    .text._ZN3Adc7setModeENS_4ModeE:0000002e .Loc.196
+     /tmp/ccz3ecib.s:556    .text._ZN3Adc7setModeENS_4ModeE:00000032 .Loc.197
+GAS LISTING /tmp/ccz3ecib.s 			page 44
 
 
-     /tmp/ccWXvzd6.s:557    .text._ZN3Adc7setModeENS_4ModeE:00000032 .Loc.198
-     /tmp/ccWXvzd6.s:560    .text._ZN3Adc7setModeENS_4ModeE:00000034 .Loc.199
-     /tmp/ccWXvzd6.s:564    .text._ZN3Adc7setModeENS_4ModeE:00000038 .Loc.200
-     /tmp/ccWXvzd6.s:565    .text._ZN3Adc7setModeENS_4ModeE:00000038 .Loc.201
-     /tmp/ccWXvzd6.s:568    .text._ZN3Adc7setModeENS_4ModeE:0000003a .Loc.202
-     /tmp/ccWXvzd6.s:572    .text._ZN3Adc7setModeENS_4ModeE:0000003e .Loc.203
-     /tmp/ccWXvzd6.s:573    .text._ZN3Adc7setModeENS_4ModeE:0000003e .Loc.204
-     /tmp/ccWXvzd6.s:574    .text._ZN3Adc7setModeENS_4ModeE:0000003e .Loc.205
-     /tmp/ccWXvzd6.s:580    .text._ZN3Adc7setModeENS_4ModeE:00000042 .Loc.206
-     /tmp/ccWXvzd6.s:581    .text._ZN3Adc7setModeENS_4ModeE:00000042 .Loc.207
-     /tmp/ccWXvzd6.s:582    .text._ZN3Adc7setModeENS_4ModeE:00000042 .Loc.208
-     /tmp/ccWXvzd6.s:585    .text._ZN3Adc7setModeENS_4ModeE:00000044 .Loc.209
-     /tmp/ccWXvzd6.s:586    .text._ZN3Adc7setModeENS_4ModeE:00000044 .Loc.210
-     /tmp/ccWXvzd6.s:589    .text._ZN3Adc7setModeENS_4ModeE:00000046 .Loc.211
-     /tmp/ccWXvzd6.s:590    .text._ZN3Adc7setModeENS_4ModeE:00000046 .Loc.212
-     /tmp/ccWXvzd6.s:591    .text._ZN3Adc7setModeENS_4ModeE:00000046 .Loc.213
-     /tmp/ccWXvzd6.s:594    .text._ZN3Adc7setModeENS_4ModeE:00000048 .Loc.214
-     /tmp/ccWXvzd6.s:595    .text._ZN3Adc7setModeENS_4ModeE:00000048 .Loc.215
-     /tmp/ccWXvzd6.s:598    .text._ZN3Adc7setModeENS_4ModeE:0000004a .Loc.216
-     /tmp/ccWXvzd6.s:599    .text._ZN3Adc7setModeENS_4ModeE:0000004a .Loc.217
-     /tmp/ccWXvzd6.s:600    .text._ZN3Adc7setModeENS_4ModeE:0000004a .Loc.218
-     /tmp/ccWXvzd6.s:603    .text._ZN3Adc7setModeENS_4ModeE:0000004c .Loc.219
-     /tmp/ccWXvzd6.s:604    .text._ZN3Adc7setModeENS_4ModeE:0000004c .Loc.220
-     /tmp/ccWXvzd6.s:607    .text._ZN3Adc7setModeENS_4ModeE:0000004e .Loc.221
-     /tmp/ccWXvzd6.s:608    .text._ZN3Adc7setModeENS_4ModeE:0000004e .Loc.222
-     /tmp/ccWXvzd6.s:609    .text._ZN3Adc7setModeENS_4ModeE:0000004e .Loc.223
-     /tmp/ccWXvzd6.s:612    .text._ZN3Adc7setModeENS_4ModeE:00000050 .Loc.224
-     /tmp/ccWXvzd6.s:613    .text._ZN3Adc7setModeENS_4ModeE:00000050 .Loc.225
-     /tmp/ccWXvzd6.s:616    .text._ZN3Adc7setModeENS_4ModeE:00000052 .Loc.226
-     /tmp/ccWXvzd6.s:617    .text._ZN3Adc7setModeENS_4ModeE:00000052 .Loc.227
-     /tmp/ccWXvzd6.s:618    .text._ZN3Adc7setModeENS_4ModeE:00000052 .Loc.228
-     /tmp/ccWXvzd6.s:621    .text._ZN3Adc7setModeENS_4ModeE:00000054 .Loc.229
-     /tmp/ccWXvzd6.s:622    .text._ZN3Adc7setModeENS_4ModeE:00000054 .Loc.230
-     /tmp/ccWXvzd6.s:625    .text._ZN3Adc7setModeENS_4ModeE:00000056 .Loc.231
-     /tmp/ccWXvzd6.s:626    .text._ZN3Adc7setModeENS_4ModeE:00000056 .Loc.232
-     /tmp/ccWXvzd6.s:627    .text._ZN3Adc7setModeENS_4ModeE:00000056 .Loc.233
-     /tmp/ccWXvzd6.s:630    .text._ZN3Adc7setModeENS_4ModeE:00000058 .Loc.234
-     /tmp/ccWXvzd6.s:631    .text._ZN3Adc7setModeENS_4ModeE:00000058 .Loc.235
-     /tmp/ccWXvzd6.s:634    .text._ZN3Adc7setModeENS_4ModeE:0000005a .Loc.236
-     /tmp/ccWXvzd6.s:635    .text._ZN3Adc7setModeENS_4ModeE:0000005a .Loc.237
-     /tmp/ccWXvzd6.s:636    .text._ZN3Adc7setModeENS_4ModeE:0000005a .Loc.238
-     /tmp/ccWXvzd6.s:640    .text._ZN3Adc7setModeENS_4ModeE:0000005e .Loc.239
-     /tmp/ccWXvzd6.s:641    .text._ZN3Adc7setModeENS_4ModeE:0000005e .Loc.240
-     /tmp/ccWXvzd6.s:643    .text._ZN3Adc7setModeENS_4ModeE:00000060 L0
-     /tmp/ccWXvzd6.s:649    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000000 _ZN3Adc12setPrescalerENS_9PrescalerE
-     /tmp/ccWXvzd6.s:652    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000000 .Loc.241
-     /tmp/ccWXvzd6.s:653    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000000 L0
-     /tmp/ccWXvzd6.s:658    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000000 .Loc.242
-     /tmp/ccWXvzd6.s:660    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000002 .Loc.243
-     /tmp/ccWXvzd6.s:661    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000002 .Loc.244
-     /tmp/ccWXvzd6.s:662    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000002 .Loc.245
-     /tmp/ccWXvzd6.s:665    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000006 .Loc.246
-     /tmp/ccWXvzd6.s:666    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000006 .Loc.247
-     /tmp/ccWXvzd6.s:670    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000000a .Loc.248
-     /tmp/ccWXvzd6.s:671    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000000a .Loc.249
-     /tmp/ccWXvzd6.s:683    .jumptables.gcc._ZN3Adc12setPrescalerENS_9PrescalerE:00000000 .L48
-     /tmp/ccWXvzd6.s:693    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000001c .Loc.250
-GAS LISTING /tmp/ccWXvzd6.s 			page 45
+     /tmp/ccz3ecib.s:557    .text._ZN3Adc7setModeENS_4ModeE:00000032 .Loc.198
+     /tmp/ccz3ecib.s:560    .text._ZN3Adc7setModeENS_4ModeE:00000034 .Loc.199
+     /tmp/ccz3ecib.s:564    .text._ZN3Adc7setModeENS_4ModeE:00000038 .Loc.200
+     /tmp/ccz3ecib.s:565    .text._ZN3Adc7setModeENS_4ModeE:00000038 .Loc.201
+     /tmp/ccz3ecib.s:568    .text._ZN3Adc7setModeENS_4ModeE:0000003a .Loc.202
+     /tmp/ccz3ecib.s:572    .text._ZN3Adc7setModeENS_4ModeE:0000003e .Loc.203
+     /tmp/ccz3ecib.s:573    .text._ZN3Adc7setModeENS_4ModeE:0000003e .Loc.204
+     /tmp/ccz3ecib.s:574    .text._ZN3Adc7setModeENS_4ModeE:0000003e .Loc.205
+     /tmp/ccz3ecib.s:580    .text._ZN3Adc7setModeENS_4ModeE:00000042 .Loc.206
+     /tmp/ccz3ecib.s:581    .text._ZN3Adc7setModeENS_4ModeE:00000042 .Loc.207
+     /tmp/ccz3ecib.s:582    .text._ZN3Adc7setModeENS_4ModeE:00000042 .Loc.208
+     /tmp/ccz3ecib.s:585    .text._ZN3Adc7setModeENS_4ModeE:00000044 .Loc.209
+     /tmp/ccz3ecib.s:586    .text._ZN3Adc7setModeENS_4ModeE:00000044 .Loc.210
+     /tmp/ccz3ecib.s:589    .text._ZN3Adc7setModeENS_4ModeE:00000046 .Loc.211
+     /tmp/ccz3ecib.s:590    .text._ZN3Adc7setModeENS_4ModeE:00000046 .Loc.212
+     /tmp/ccz3ecib.s:591    .text._ZN3Adc7setModeENS_4ModeE:00000046 .Loc.213
+     /tmp/ccz3ecib.s:594    .text._ZN3Adc7setModeENS_4ModeE:00000048 .Loc.214
+     /tmp/ccz3ecib.s:595    .text._ZN3Adc7setModeENS_4ModeE:00000048 .Loc.215
+     /tmp/ccz3ecib.s:598    .text._ZN3Adc7setModeENS_4ModeE:0000004a .Loc.216
+     /tmp/ccz3ecib.s:599    .text._ZN3Adc7setModeENS_4ModeE:0000004a .Loc.217
+     /tmp/ccz3ecib.s:600    .text._ZN3Adc7setModeENS_4ModeE:0000004a .Loc.218
+     /tmp/ccz3ecib.s:603    .text._ZN3Adc7setModeENS_4ModeE:0000004c .Loc.219
+     /tmp/ccz3ecib.s:604    .text._ZN3Adc7setModeENS_4ModeE:0000004c .Loc.220
+     /tmp/ccz3ecib.s:607    .text._ZN3Adc7setModeENS_4ModeE:0000004e .Loc.221
+     /tmp/ccz3ecib.s:608    .text._ZN3Adc7setModeENS_4ModeE:0000004e .Loc.222
+     /tmp/ccz3ecib.s:609    .text._ZN3Adc7setModeENS_4ModeE:0000004e .Loc.223
+     /tmp/ccz3ecib.s:612    .text._ZN3Adc7setModeENS_4ModeE:00000050 .Loc.224
+     /tmp/ccz3ecib.s:613    .text._ZN3Adc7setModeENS_4ModeE:00000050 .Loc.225
+     /tmp/ccz3ecib.s:616    .text._ZN3Adc7setModeENS_4ModeE:00000052 .Loc.226
+     /tmp/ccz3ecib.s:617    .text._ZN3Adc7setModeENS_4ModeE:00000052 .Loc.227
+     /tmp/ccz3ecib.s:618    .text._ZN3Adc7setModeENS_4ModeE:00000052 .Loc.228
+     /tmp/ccz3ecib.s:621    .text._ZN3Adc7setModeENS_4ModeE:00000054 .Loc.229
+     /tmp/ccz3ecib.s:622    .text._ZN3Adc7setModeENS_4ModeE:00000054 .Loc.230
+     /tmp/ccz3ecib.s:625    .text._ZN3Adc7setModeENS_4ModeE:00000056 .Loc.231
+     /tmp/ccz3ecib.s:626    .text._ZN3Adc7setModeENS_4ModeE:00000056 .Loc.232
+     /tmp/ccz3ecib.s:627    .text._ZN3Adc7setModeENS_4ModeE:00000056 .Loc.233
+     /tmp/ccz3ecib.s:630    .text._ZN3Adc7setModeENS_4ModeE:00000058 .Loc.234
+     /tmp/ccz3ecib.s:631    .text._ZN3Adc7setModeENS_4ModeE:00000058 .Loc.235
+     /tmp/ccz3ecib.s:634    .text._ZN3Adc7setModeENS_4ModeE:0000005a .Loc.236
+     /tmp/ccz3ecib.s:635    .text._ZN3Adc7setModeENS_4ModeE:0000005a .Loc.237
+     /tmp/ccz3ecib.s:636    .text._ZN3Adc7setModeENS_4ModeE:0000005a .Loc.238
+     /tmp/ccz3ecib.s:640    .text._ZN3Adc7setModeENS_4ModeE:0000005e .Loc.239
+     /tmp/ccz3ecib.s:641    .text._ZN3Adc7setModeENS_4ModeE:0000005e .Loc.240
+     /tmp/ccz3ecib.s:643    .text._ZN3Adc7setModeENS_4ModeE:00000060 L0
+     /tmp/ccz3ecib.s:649    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000000 _ZN3Adc12setPrescalerENS_9PrescalerE
+     /tmp/ccz3ecib.s:652    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000000 .Loc.241
+     /tmp/ccz3ecib.s:653    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000000 L0
+     /tmp/ccz3ecib.s:658    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000000 .Loc.242
+     /tmp/ccz3ecib.s:660    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000002 .Loc.243
+     /tmp/ccz3ecib.s:661    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000002 .Loc.244
+     /tmp/ccz3ecib.s:662    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000002 .Loc.245
+     /tmp/ccz3ecib.s:665    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000006 .Loc.246
+     /tmp/ccz3ecib.s:666    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000006 .Loc.247
+     /tmp/ccz3ecib.s:670    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000000a .Loc.248
+     /tmp/ccz3ecib.s:671    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000000a .Loc.249
+     /tmp/ccz3ecib.s:683    .jumptables.gcc._ZN3Adc12setPrescalerENS_9PrescalerE:00000000 .L48
+     /tmp/ccz3ecib.s:693    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000001c .Loc.250
+GAS LISTING /tmp/ccz3ecib.s 			page 45
 
 
-     /tmp/ccWXvzd6.s:694    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000001c .Loc.251
-     /tmp/ccWXvzd6.s:695    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000001c .Loc.252
-     /tmp/ccWXvzd6.s:698    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000001e .Loc.253
-     /tmp/ccWXvzd6.s:699    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000001e .Loc.254
-     /tmp/ccWXvzd6.s:701    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000001e .Loc.255
-     /tmp/ccWXvzd6.s:702    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000001e .Loc.256
-     /tmp/ccWXvzd6.s:704    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000022 .Loc.257
-     /tmp/ccWXvzd6.s:705    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000022 .Loc.258
-     /tmp/ccWXvzd6.s:708    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000024 .Loc.259
-     /tmp/ccWXvzd6.s:710    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000026 .Loc.260
-     /tmp/ccWXvzd6.s:711    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000026 .Loc.261
-     /tmp/ccWXvzd6.s:714    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000028 .Loc.262
-     /tmp/ccWXvzd6.s:718    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000002c .Loc.263
-     /tmp/ccWXvzd6.s:719    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000002c .Loc.264
-     /tmp/ccWXvzd6.s:720    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000002c .Loc.265
-     /tmp/ccWXvzd6.s:726    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000030 .Loc.266
-     /tmp/ccWXvzd6.s:727    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000030 .Loc.267
-     /tmp/ccWXvzd6.s:728    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000030 .Loc.268
-     /tmp/ccWXvzd6.s:731    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000032 .Loc.269
-     /tmp/ccWXvzd6.s:732    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000032 .Loc.270
-     /tmp/ccWXvzd6.s:735    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000034 .Loc.271
-     /tmp/ccWXvzd6.s:736    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000034 .Loc.272
-     /tmp/ccWXvzd6.s:737    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000034 .Loc.273
-     /tmp/ccWXvzd6.s:740    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000036 .Loc.274
-     /tmp/ccWXvzd6.s:741    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000036 .Loc.275
-     /tmp/ccWXvzd6.s:744    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000038 .Loc.276
-     /tmp/ccWXvzd6.s:745    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000038 .Loc.277
-     /tmp/ccWXvzd6.s:746    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000038 .Loc.278
-     /tmp/ccWXvzd6.s:749    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000003a .Loc.279
-     /tmp/ccWXvzd6.s:750    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000003a .Loc.280
-     /tmp/ccWXvzd6.s:753    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000003c .Loc.281
-     /tmp/ccWXvzd6.s:754    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000003c .Loc.282
-     /tmp/ccWXvzd6.s:755    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000003c .Loc.283
-     /tmp/ccWXvzd6.s:758    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000003e .Loc.284
-     /tmp/ccWXvzd6.s:759    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000003e .Loc.285
-     /tmp/ccWXvzd6.s:762    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000040 .Loc.286
-     /tmp/ccWXvzd6.s:763    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000040 .Loc.287
-     /tmp/ccWXvzd6.s:764    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000040 .Loc.288
-     /tmp/ccWXvzd6.s:767    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000042 .Loc.289
-     /tmp/ccWXvzd6.s:768    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000042 .Loc.290
-     /tmp/ccWXvzd6.s:771    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000044 .Loc.291
-     /tmp/ccWXvzd6.s:772    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000044 .Loc.292
-     /tmp/ccWXvzd6.s:773    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000044 .Loc.293
-     /tmp/ccWXvzd6.s:777    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000048 .Loc.294
-     /tmp/ccWXvzd6.s:778    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000048 .Loc.295
-     /tmp/ccWXvzd6.s:780    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000004a L0
-     /tmp/ccWXvzd6.s:786    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000000 _ZN3Adc12setReferenceENS_9ReferenceE
-     /tmp/ccWXvzd6.s:789    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000000 .Loc.296
-     /tmp/ccWXvzd6.s:790    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000000 L0
-     /tmp/ccWXvzd6.s:795    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000000 .Loc.297
-     /tmp/ccWXvzd6.s:796    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000000 .Loc.298
-     /tmp/ccWXvzd6.s:797    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000000 .Loc.299
-     /tmp/ccWXvzd6.s:800    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000004 .Loc.300
-     /tmp/ccWXvzd6.s:801    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000004 .Loc.301
-     /tmp/ccWXvzd6.s:805    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000008 .Loc.302
-     /tmp/ccWXvzd6.s:806    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000008 .Loc.303
-     /tmp/ccWXvzd6.s:811    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000010 .Loc.304
-GAS LISTING /tmp/ccWXvzd6.s 			page 46
+     /tmp/ccz3ecib.s:694    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000001c .Loc.251
+     /tmp/ccz3ecib.s:695    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000001c .Loc.252
+     /tmp/ccz3ecib.s:698    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000001e .Loc.253
+     /tmp/ccz3ecib.s:699    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000001e .Loc.254
+     /tmp/ccz3ecib.s:701    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000001e .Loc.255
+     /tmp/ccz3ecib.s:702    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000001e .Loc.256
+     /tmp/ccz3ecib.s:704    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000022 .Loc.257
+     /tmp/ccz3ecib.s:705    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000022 .Loc.258
+     /tmp/ccz3ecib.s:708    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000024 .Loc.259
+     /tmp/ccz3ecib.s:710    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000026 .Loc.260
+     /tmp/ccz3ecib.s:711    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000026 .Loc.261
+     /tmp/ccz3ecib.s:714    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000028 .Loc.262
+     /tmp/ccz3ecib.s:718    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000002c .Loc.263
+     /tmp/ccz3ecib.s:719    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000002c .Loc.264
+     /tmp/ccz3ecib.s:720    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000002c .Loc.265
+     /tmp/ccz3ecib.s:726    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000030 .Loc.266
+     /tmp/ccz3ecib.s:727    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000030 .Loc.267
+     /tmp/ccz3ecib.s:728    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000030 .Loc.268
+     /tmp/ccz3ecib.s:731    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000032 .Loc.269
+     /tmp/ccz3ecib.s:732    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000032 .Loc.270
+     /tmp/ccz3ecib.s:735    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000034 .Loc.271
+     /tmp/ccz3ecib.s:736    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000034 .Loc.272
+     /tmp/ccz3ecib.s:737    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000034 .Loc.273
+     /tmp/ccz3ecib.s:740    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000036 .Loc.274
+     /tmp/ccz3ecib.s:741    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000036 .Loc.275
+     /tmp/ccz3ecib.s:744    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000038 .Loc.276
+     /tmp/ccz3ecib.s:745    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000038 .Loc.277
+     /tmp/ccz3ecib.s:746    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000038 .Loc.278
+     /tmp/ccz3ecib.s:749    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000003a .Loc.279
+     /tmp/ccz3ecib.s:750    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000003a .Loc.280
+     /tmp/ccz3ecib.s:753    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000003c .Loc.281
+     /tmp/ccz3ecib.s:754    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000003c .Loc.282
+     /tmp/ccz3ecib.s:755    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000003c .Loc.283
+     /tmp/ccz3ecib.s:758    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000003e .Loc.284
+     /tmp/ccz3ecib.s:759    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000003e .Loc.285
+     /tmp/ccz3ecib.s:762    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000040 .Loc.286
+     /tmp/ccz3ecib.s:763    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000040 .Loc.287
+     /tmp/ccz3ecib.s:764    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000040 .Loc.288
+     /tmp/ccz3ecib.s:767    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000042 .Loc.289
+     /tmp/ccz3ecib.s:768    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000042 .Loc.290
+     /tmp/ccz3ecib.s:771    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000044 .Loc.291
+     /tmp/ccz3ecib.s:772    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000044 .Loc.292
+     /tmp/ccz3ecib.s:773    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000044 .Loc.293
+     /tmp/ccz3ecib.s:777    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000048 .Loc.294
+     /tmp/ccz3ecib.s:778    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000048 .Loc.295
+     /tmp/ccz3ecib.s:780    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000004a L0
+     /tmp/ccz3ecib.s:786    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000000 _ZN3Adc12setReferenceENS_9ReferenceE
+     /tmp/ccz3ecib.s:789    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000000 .Loc.296
+     /tmp/ccz3ecib.s:790    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000000 L0
+     /tmp/ccz3ecib.s:795    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000000 .Loc.297
+     /tmp/ccz3ecib.s:796    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000000 .Loc.298
+     /tmp/ccz3ecib.s:797    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000000 .Loc.299
+     /tmp/ccz3ecib.s:800    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000004 .Loc.300
+     /tmp/ccz3ecib.s:801    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000004 .Loc.301
+     /tmp/ccz3ecib.s:805    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000008 .Loc.302
+     /tmp/ccz3ecib.s:806    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000008 .Loc.303
+     /tmp/ccz3ecib.s:811    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000010 .Loc.304
+GAS LISTING /tmp/ccz3ecib.s 			page 46
 
 
-     /tmp/ccWXvzd6.s:812    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000010 .Loc.305
-     /tmp/ccWXvzd6.s:813    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000010 .Loc.306
-     /tmp/ccWXvzd6.s:816    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000012 .Loc.307
-     /tmp/ccWXvzd6.s:819    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000014 .Loc.308
-     /tmp/ccWXvzd6.s:820    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000014 .Loc.309
-     /tmp/ccWXvzd6.s:823    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000016 .Loc.310
-     /tmp/ccWXvzd6.s:824    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000016 .Loc.311
-     /tmp/ccWXvzd6.s:825    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000016 .Loc.312
-     /tmp/ccWXvzd6.s:828    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000018 .Loc.313
-     /tmp/ccWXvzd6.s:829    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000018 .Loc.314
-     /tmp/ccWXvzd6.s:831    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000018 .Loc.315
-     /tmp/ccWXvzd6.s:832    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000018 .Loc.316
-     /tmp/ccWXvzd6.s:834    .text._ZN3Adc12setReferenceENS_9ReferenceE:0000001c .Loc.317
-     /tmp/ccWXvzd6.s:835    .text._ZN3Adc12setReferenceENS_9ReferenceE:0000001c .Loc.318
-     /tmp/ccWXvzd6.s:838    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000020 .Loc.319
-     /tmp/ccWXvzd6.s:839    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000020 .Loc.320
-     /tmp/ccWXvzd6.s:842    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000024 .Loc.321
-     /tmp/ccWXvzd6.s:843    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000024 .Loc.322
-     /tmp/ccWXvzd6.s:844    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000024 .Loc.323
-     /tmp/ccWXvzd6.s:848    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000026 .Loc.324
-     /tmp/ccWXvzd6.s:850    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000028 L0
-     /tmp/ccWXvzd6.s:856    .text._ZN3Adc15startConversionEv:00000000 _ZN3Adc15startConversionEv
-     /tmp/ccWXvzd6.s:859    .text._ZN3Adc15startConversionEv:00000000 .Loc.325
-     /tmp/ccWXvzd6.s:860    .text._ZN3Adc15startConversionEv:00000000 L0
-     /tmp/ccWXvzd6.s:865    .text._ZN3Adc15startConversionEv:00000000 .Loc.326
-     /tmp/ccWXvzd6.s:867    .text._ZN3Adc15startConversionEv:00000002 .Loc.327
-     /tmp/ccWXvzd6.s:868    .text._ZN3Adc15startConversionEv:00000002 .Loc.328
-     /tmp/ccWXvzd6.s:869    .text._ZN3Adc15startConversionEv:00000002 .Loc.329
-     /tmp/ccWXvzd6.s:874    .text._ZN3Adc15startConversionEv:00000008 .Loc.330
-     /tmp/ccWXvzd6.s:877    .text._ZN3Adc15startConversionEv:0000000c .Loc.331
-     /tmp/ccWXvzd6.s:878    .text._ZN3Adc15startConversionEv:0000000c .Loc.332
-     /tmp/ccWXvzd6.s:882    .text._ZN3Adc15startConversionEv:00000012 .Loc.333
-     /tmp/ccWXvzd6.s:885    .text._ZN3Adc15startConversionEv:00000016 .Loc.334
-     /tmp/ccWXvzd6.s:886    .text._ZN3Adc15startConversionEv:00000016 .Loc.335
-     /tmp/ccWXvzd6.s:892    .text._ZN3Adc15startConversionEv:00000020 .Loc.336
-     /tmp/ccWXvzd6.s:893    .text._ZN3Adc15startConversionEv:00000020 .Loc.337
-     /tmp/ccWXvzd6.s:894    .text._ZN3Adc15startConversionEv:00000020 .Loc.338
-     /tmp/ccWXvzd6.s:897    .text._ZN3Adc15startConversionEv:00000024 .Loc.339
-     /tmp/ccWXvzd6.s:898    .text._ZN3Adc15startConversionEv:00000024 .Loc.340
-     /tmp/ccWXvzd6.s:900    .text._ZN3Adc15startConversionEv:00000024 .Loc.341
-     /tmp/ccWXvzd6.s:903    .text._ZN3Adc15startConversionEv:00000026 .Loc.342
-     /tmp/ccWXvzd6.s:904    .text._ZN3Adc15startConversionEv:00000026 .Loc.343
-     /tmp/ccWXvzd6.s:909    .text._ZN3Adc15startConversionEv:0000002e .Loc.344
-     /tmp/ccWXvzd6.s:910    .text._ZN3Adc15startConversionEv:0000002e .Loc.345
-     /tmp/ccWXvzd6.s:911    .text._ZN3Adc15startConversionEv:0000002e .Loc.346
-     /tmp/ccWXvzd6.s:914    .text._ZN3Adc15startConversionEv:00000030 .Loc.347
-     /tmp/ccWXvzd6.s:915    .text._ZN3Adc15startConversionEv:00000030 .Loc.348
-     /tmp/ccWXvzd6.s:920    .text._ZN3Adc15startConversionEv:00000038 .Loc.349
-     /tmp/ccWXvzd6.s:921    .text._ZN3Adc15startConversionEv:00000038 .Loc.350
-     /tmp/ccWXvzd6.s:922    .text._ZN3Adc15startConversionEv:00000038 .Loc.351
-     /tmp/ccWXvzd6.s:924    .text._ZN3Adc15startConversionEv:0000003a L0
-     /tmp/ccWXvzd6.s:930    .text._ZN3Adc25waitUntilConversionFinishEv:00000000 _ZN3Adc25waitUntilConversionFinishEv
-     /tmp/ccWXvzd6.s:933    .text._ZN3Adc25waitUntilConversionFinishEv:00000000 .Loc.352
-     /tmp/ccWXvzd6.s:934    .text._ZN3Adc25waitUntilConversionFinishEv:00000000 L0
-     /tmp/ccWXvzd6.s:939    .text._ZN3Adc25waitUntilConversionFinishEv:00000000 .Loc.353
-     /tmp/ccWXvzd6.s:941    .text._ZN3Adc25waitUntilConversionFinishEv:00000002 .Loc.354
-     /tmp/ccWXvzd6.s:942    .text._ZN3Adc25waitUntilConversionFinishEv:00000002 .Loc.355
-GAS LISTING /tmp/ccWXvzd6.s 			page 47
+     /tmp/ccz3ecib.s:812    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000010 .Loc.305
+     /tmp/ccz3ecib.s:813    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000010 .Loc.306
+     /tmp/ccz3ecib.s:816    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000012 .Loc.307
+     /tmp/ccz3ecib.s:819    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000014 .Loc.308
+     /tmp/ccz3ecib.s:820    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000014 .Loc.309
+     /tmp/ccz3ecib.s:823    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000016 .Loc.310
+     /tmp/ccz3ecib.s:824    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000016 .Loc.311
+     /tmp/ccz3ecib.s:825    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000016 .Loc.312
+     /tmp/ccz3ecib.s:828    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000018 .Loc.313
+     /tmp/ccz3ecib.s:829    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000018 .Loc.314
+     /tmp/ccz3ecib.s:831    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000018 .Loc.315
+     /tmp/ccz3ecib.s:832    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000018 .Loc.316
+     /tmp/ccz3ecib.s:834    .text._ZN3Adc12setReferenceENS_9ReferenceE:0000001c .Loc.317
+     /tmp/ccz3ecib.s:835    .text._ZN3Adc12setReferenceENS_9ReferenceE:0000001c .Loc.318
+     /tmp/ccz3ecib.s:838    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000020 .Loc.319
+     /tmp/ccz3ecib.s:839    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000020 .Loc.320
+     /tmp/ccz3ecib.s:842    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000024 .Loc.321
+     /tmp/ccz3ecib.s:843    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000024 .Loc.322
+     /tmp/ccz3ecib.s:844    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000024 .Loc.323
+     /tmp/ccz3ecib.s:848    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000026 .Loc.324
+     /tmp/ccz3ecib.s:850    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000028 L0
+     /tmp/ccz3ecib.s:856    .text._ZN3Adc15startConversionEv:00000000 _ZN3Adc15startConversionEv
+     /tmp/ccz3ecib.s:859    .text._ZN3Adc15startConversionEv:00000000 .Loc.325
+     /tmp/ccz3ecib.s:860    .text._ZN3Adc15startConversionEv:00000000 L0
+     /tmp/ccz3ecib.s:865    .text._ZN3Adc15startConversionEv:00000000 .Loc.326
+     /tmp/ccz3ecib.s:867    .text._ZN3Adc15startConversionEv:00000002 .Loc.327
+     /tmp/ccz3ecib.s:868    .text._ZN3Adc15startConversionEv:00000002 .Loc.328
+     /tmp/ccz3ecib.s:869    .text._ZN3Adc15startConversionEv:00000002 .Loc.329
+     /tmp/ccz3ecib.s:874    .text._ZN3Adc15startConversionEv:00000008 .Loc.330
+     /tmp/ccz3ecib.s:877    .text._ZN3Adc15startConversionEv:0000000c .Loc.331
+     /tmp/ccz3ecib.s:878    .text._ZN3Adc15startConversionEv:0000000c .Loc.332
+     /tmp/ccz3ecib.s:882    .text._ZN3Adc15startConversionEv:00000012 .Loc.333
+     /tmp/ccz3ecib.s:885    .text._ZN3Adc15startConversionEv:00000016 .Loc.334
+     /tmp/ccz3ecib.s:886    .text._ZN3Adc15startConversionEv:00000016 .Loc.335
+     /tmp/ccz3ecib.s:892    .text._ZN3Adc15startConversionEv:00000020 .Loc.336
+     /tmp/ccz3ecib.s:893    .text._ZN3Adc15startConversionEv:00000020 .Loc.337
+     /tmp/ccz3ecib.s:894    .text._ZN3Adc15startConversionEv:00000020 .Loc.338
+     /tmp/ccz3ecib.s:897    .text._ZN3Adc15startConversionEv:00000024 .Loc.339
+     /tmp/ccz3ecib.s:898    .text._ZN3Adc15startConversionEv:00000024 .Loc.340
+     /tmp/ccz3ecib.s:900    .text._ZN3Adc15startConversionEv:00000024 .Loc.341
+     /tmp/ccz3ecib.s:903    .text._ZN3Adc15startConversionEv:00000026 .Loc.342
+     /tmp/ccz3ecib.s:904    .text._ZN3Adc15startConversionEv:00000026 .Loc.343
+     /tmp/ccz3ecib.s:909    .text._ZN3Adc15startConversionEv:0000002e .Loc.344
+     /tmp/ccz3ecib.s:910    .text._ZN3Adc15startConversionEv:0000002e .Loc.345
+     /tmp/ccz3ecib.s:911    .text._ZN3Adc15startConversionEv:0000002e .Loc.346
+     /tmp/ccz3ecib.s:914    .text._ZN3Adc15startConversionEv:00000030 .Loc.347
+     /tmp/ccz3ecib.s:915    .text._ZN3Adc15startConversionEv:00000030 .Loc.348
+     /tmp/ccz3ecib.s:920    .text._ZN3Adc15startConversionEv:00000038 .Loc.349
+     /tmp/ccz3ecib.s:921    .text._ZN3Adc15startConversionEv:00000038 .Loc.350
+     /tmp/ccz3ecib.s:922    .text._ZN3Adc15startConversionEv:00000038 .Loc.351
+     /tmp/ccz3ecib.s:924    .text._ZN3Adc15startConversionEv:0000003a L0
+     /tmp/ccz3ecib.s:930    .text._ZN3Adc25waitUntilConversionFinishEv:00000000 _ZN3Adc25waitUntilConversionFinishEv
+     /tmp/ccz3ecib.s:933    .text._ZN3Adc25waitUntilConversionFinishEv:00000000 .Loc.352
+     /tmp/ccz3ecib.s:934    .text._ZN3Adc25waitUntilConversionFinishEv:00000000 L0
+     /tmp/ccz3ecib.s:939    .text._ZN3Adc25waitUntilConversionFinishEv:00000000 .Loc.353
+     /tmp/ccz3ecib.s:941    .text._ZN3Adc25waitUntilConversionFinishEv:00000002 .Loc.354
+     /tmp/ccz3ecib.s:942    .text._ZN3Adc25waitUntilConversionFinishEv:00000002 .Loc.355
+GAS LISTING /tmp/ccz3ecib.s 			page 47
 
 
-     /tmp/ccWXvzd6.s:943    .text._ZN3Adc25waitUntilConversionFinishEv:00000002 .Loc.356
-     /tmp/ccWXvzd6.s:948    .text._ZN3Adc25waitUntilConversionFinishEv:00000008 .Loc.357
-     /tmp/ccWXvzd6.s:951    .text._ZN3Adc25waitUntilConversionFinishEv:0000000c .Loc.358
-     /tmp/ccWXvzd6.s:952    .text._ZN3Adc25waitUntilConversionFinishEv:0000000c .Loc.359
-     /tmp/ccWXvzd6.s:956    .text._ZN3Adc25waitUntilConversionFinishEv:00000012 .Loc.360
-     /tmp/ccWXvzd6.s:960    .text._ZN3Adc25waitUntilConversionFinishEv:00000016 .Loc.361
-     /tmp/ccWXvzd6.s:961    .text._ZN3Adc25waitUntilConversionFinishEv:00000016 .Loc.362
-     /tmp/ccWXvzd6.s:962    .text._ZN3Adc25waitUntilConversionFinishEv:00000016 .Loc.363
-     /tmp/ccWXvzd6.s:966    .text._ZN3Adc25waitUntilConversionFinishEv:0000001e .Loc.364
-     /tmp/ccWXvzd6.s:967    .text._ZN3Adc25waitUntilConversionFinishEv:0000001e .Loc.365
-     /tmp/ccWXvzd6.s:970    .text._ZN3Adc25waitUntilConversionFinishEv:00000022 .Loc.366
-     /tmp/ccWXvzd6.s:971    .text._ZN3Adc25waitUntilConversionFinishEv:00000022 .Loc.367
-     /tmp/ccWXvzd6.s:973    .text._ZN3Adc25waitUntilConversionFinishEv:00000022 .Loc.368
-     /tmp/ccWXvzd6.s:976    .text._ZN3Adc25waitUntilConversionFinishEv:00000024 .Loc.369
-     /tmp/ccWXvzd6.s:977    .text._ZN3Adc25waitUntilConversionFinishEv:00000024 .Loc.370
-     /tmp/ccWXvzd6.s:982    .text._ZN3Adc25waitUntilConversionFinishEv:0000002c .Loc.371
-     /tmp/ccWXvzd6.s:983    .text._ZN3Adc25waitUntilConversionFinishEv:0000002c .Loc.372
-     /tmp/ccWXvzd6.s:984    .text._ZN3Adc25waitUntilConversionFinishEv:0000002c .Loc.373
-     /tmp/ccWXvzd6.s:987    .text._ZN3Adc25waitUntilConversionFinishEv:0000002e .Loc.374
-     /tmp/ccWXvzd6.s:988    .text._ZN3Adc25waitUntilConversionFinishEv:0000002e .Loc.375
-     /tmp/ccWXvzd6.s:993    .text._ZN3Adc25waitUntilConversionFinishEv:00000036 .Loc.376
-     /tmp/ccWXvzd6.s:994    .text._ZN3Adc25waitUntilConversionFinishEv:00000036 .Loc.377
-     /tmp/ccWXvzd6.s:995    .text._ZN3Adc25waitUntilConversionFinishEv:00000036 .Loc.378
-     /tmp/ccWXvzd6.s:997    .text._ZN3Adc25waitUntilConversionFinishEv:00000038 L0
-     /tmp/ccWXvzd6.s:1003   .text._ZN3Adc10setChannelENS_7ChannelE:00000000 _ZN3Adc10setChannelENS_7ChannelE
-     /tmp/ccWXvzd6.s:1006   .text._ZN3Adc10setChannelENS_7ChannelE:00000000 .Loc.379
-     /tmp/ccWXvzd6.s:1007   .text._ZN3Adc10setChannelENS_7ChannelE:00000000 L0
-     /tmp/ccWXvzd6.s:1012   .text._ZN3Adc10setChannelENS_7ChannelE:00000000 .Loc.380
-     /tmp/ccWXvzd6.s:1014   .text._ZN3Adc10setChannelENS_7ChannelE:00000002 .Loc.381
-     /tmp/ccWXvzd6.s:1015   .text._ZN3Adc10setChannelENS_7ChannelE:00000002 .Loc.382
-     /tmp/ccWXvzd6.s:1016   .text._ZN3Adc10setChannelENS_7ChannelE:00000002 .Loc.383
-     /tmp/ccWXvzd6.s:1019   .text._ZN3Adc10setChannelENS_7ChannelE:00000006 .Loc.384
-     /tmp/ccWXvzd6.s:1020   .text._ZN3Adc10setChannelENS_7ChannelE:00000006 .Loc.385
-     /tmp/ccWXvzd6.s:1024   .text._ZN3Adc10setChannelENS_7ChannelE:0000000a .Loc.386
-     /tmp/ccWXvzd6.s:1025   .text._ZN3Adc10setChannelENS_7ChannelE:0000000a .Loc.387
-     /tmp/ccWXvzd6.s:1037   .jumptables.gcc._ZN3Adc10setChannelENS_7ChannelE:00000000 .L76
-     /tmp/ccWXvzd6.s:1050   .text._ZN3Adc10setChannelENS_7ChannelE:0000001c .Loc.388
-     /tmp/ccWXvzd6.s:1051   .text._ZN3Adc10setChannelENS_7ChannelE:0000001c .Loc.389
-     /tmp/ccWXvzd6.s:1052   .text._ZN3Adc10setChannelENS_7ChannelE:0000001c .Loc.390
-     /tmp/ccWXvzd6.s:1055   .text._ZN3Adc10setChannelENS_7ChannelE:0000001e .Loc.391
-     /tmp/ccWXvzd6.s:1056   .text._ZN3Adc10setChannelENS_7ChannelE:0000001e .Loc.392
-     /tmp/ccWXvzd6.s:1058   .text._ZN3Adc10setChannelENS_7ChannelE:0000001e .Loc.393
-     /tmp/ccWXvzd6.s:1059   .text._ZN3Adc10setChannelENS_7ChannelE:0000001e .Loc.394
-     /tmp/ccWXvzd6.s:1061   .text._ZN3Adc10setChannelENS_7ChannelE:00000022 .Loc.395
-     /tmp/ccWXvzd6.s:1062   .text._ZN3Adc10setChannelENS_7ChannelE:00000022 .Loc.396
-     /tmp/ccWXvzd6.s:1065   .text._ZN3Adc10setChannelENS_7ChannelE:00000024 .Loc.397
-     /tmp/ccWXvzd6.s:1067   .text._ZN3Adc10setChannelENS_7ChannelE:00000026 .Loc.398
-     /tmp/ccWXvzd6.s:1068   .text._ZN3Adc10setChannelENS_7ChannelE:00000026 .Loc.399
-     /tmp/ccWXvzd6.s:1071   .text._ZN3Adc10setChannelENS_7ChannelE:00000028 .Loc.400
-     /tmp/ccWXvzd6.s:1075   .text._ZN3Adc10setChannelENS_7ChannelE:0000002c .Loc.401
-     /tmp/ccWXvzd6.s:1076   .text._ZN3Adc10setChannelENS_7ChannelE:0000002c .Loc.402
-     /tmp/ccWXvzd6.s:1077   .text._ZN3Adc10setChannelENS_7ChannelE:0000002c .Loc.403
-     /tmp/ccWXvzd6.s:1083   .text._ZN3Adc10setChannelENS_7ChannelE:00000030 .Loc.404
-     /tmp/ccWXvzd6.s:1084   .text._ZN3Adc10setChannelENS_7ChannelE:00000030 .Loc.405
-     /tmp/ccWXvzd6.s:1085   .text._ZN3Adc10setChannelENS_7ChannelE:00000030 .Loc.406
-     /tmp/ccWXvzd6.s:1088   .text._ZN3Adc10setChannelENS_7ChannelE:00000032 .Loc.407
-     /tmp/ccWXvzd6.s:1089   .text._ZN3Adc10setChannelENS_7ChannelE:00000032 .Loc.408
-GAS LISTING /tmp/ccWXvzd6.s 			page 48
+     /tmp/ccz3ecib.s:943    .text._ZN3Adc25waitUntilConversionFinishEv:00000002 .Loc.356
+     /tmp/ccz3ecib.s:948    .text._ZN3Adc25waitUntilConversionFinishEv:00000008 .Loc.357
+     /tmp/ccz3ecib.s:951    .text._ZN3Adc25waitUntilConversionFinishEv:0000000c .Loc.358
+     /tmp/ccz3ecib.s:952    .text._ZN3Adc25waitUntilConversionFinishEv:0000000c .Loc.359
+     /tmp/ccz3ecib.s:956    .text._ZN3Adc25waitUntilConversionFinishEv:00000012 .Loc.360
+     /tmp/ccz3ecib.s:960    .text._ZN3Adc25waitUntilConversionFinishEv:00000016 .Loc.361
+     /tmp/ccz3ecib.s:961    .text._ZN3Adc25waitUntilConversionFinishEv:00000016 .Loc.362
+     /tmp/ccz3ecib.s:962    .text._ZN3Adc25waitUntilConversionFinishEv:00000016 .Loc.363
+     /tmp/ccz3ecib.s:966    .text._ZN3Adc25waitUntilConversionFinishEv:0000001e .Loc.364
+     /tmp/ccz3ecib.s:967    .text._ZN3Adc25waitUntilConversionFinishEv:0000001e .Loc.365
+     /tmp/ccz3ecib.s:970    .text._ZN3Adc25waitUntilConversionFinishEv:00000022 .Loc.366
+     /tmp/ccz3ecib.s:971    .text._ZN3Adc25waitUntilConversionFinishEv:00000022 .Loc.367
+     /tmp/ccz3ecib.s:973    .text._ZN3Adc25waitUntilConversionFinishEv:00000022 .Loc.368
+     /tmp/ccz3ecib.s:976    .text._ZN3Adc25waitUntilConversionFinishEv:00000024 .Loc.369
+     /tmp/ccz3ecib.s:977    .text._ZN3Adc25waitUntilConversionFinishEv:00000024 .Loc.370
+     /tmp/ccz3ecib.s:982    .text._ZN3Adc25waitUntilConversionFinishEv:0000002c .Loc.371
+     /tmp/ccz3ecib.s:983    .text._ZN3Adc25waitUntilConversionFinishEv:0000002c .Loc.372
+     /tmp/ccz3ecib.s:984    .text._ZN3Adc25waitUntilConversionFinishEv:0000002c .Loc.373
+     /tmp/ccz3ecib.s:987    .text._ZN3Adc25waitUntilConversionFinishEv:0000002e .Loc.374
+     /tmp/ccz3ecib.s:988    .text._ZN3Adc25waitUntilConversionFinishEv:0000002e .Loc.375
+     /tmp/ccz3ecib.s:993    .text._ZN3Adc25waitUntilConversionFinishEv:00000036 .Loc.376
+     /tmp/ccz3ecib.s:994    .text._ZN3Adc25waitUntilConversionFinishEv:00000036 .Loc.377
+     /tmp/ccz3ecib.s:995    .text._ZN3Adc25waitUntilConversionFinishEv:00000036 .Loc.378
+     /tmp/ccz3ecib.s:997    .text._ZN3Adc25waitUntilConversionFinishEv:00000038 L0
+     /tmp/ccz3ecib.s:1003   .text._ZN3Adc10setChannelENS_7ChannelE:00000000 _ZN3Adc10setChannelENS_7ChannelE
+     /tmp/ccz3ecib.s:1006   .text._ZN3Adc10setChannelENS_7ChannelE:00000000 .Loc.379
+     /tmp/ccz3ecib.s:1007   .text._ZN3Adc10setChannelENS_7ChannelE:00000000 L0
+     /tmp/ccz3ecib.s:1012   .text._ZN3Adc10setChannelENS_7ChannelE:00000000 .Loc.380
+     /tmp/ccz3ecib.s:1014   .text._ZN3Adc10setChannelENS_7ChannelE:00000002 .Loc.381
+     /tmp/ccz3ecib.s:1015   .text._ZN3Adc10setChannelENS_7ChannelE:00000002 .Loc.382
+     /tmp/ccz3ecib.s:1016   .text._ZN3Adc10setChannelENS_7ChannelE:00000002 .Loc.383
+     /tmp/ccz3ecib.s:1019   .text._ZN3Adc10setChannelENS_7ChannelE:00000006 .Loc.384
+     /tmp/ccz3ecib.s:1020   .text._ZN3Adc10setChannelENS_7ChannelE:00000006 .Loc.385
+     /tmp/ccz3ecib.s:1024   .text._ZN3Adc10setChannelENS_7ChannelE:0000000a .Loc.386
+     /tmp/ccz3ecib.s:1025   .text._ZN3Adc10setChannelENS_7ChannelE:0000000a .Loc.387
+     /tmp/ccz3ecib.s:1037   .jumptables.gcc._ZN3Adc10setChannelENS_7ChannelE:00000000 .L76
+     /tmp/ccz3ecib.s:1050   .text._ZN3Adc10setChannelENS_7ChannelE:0000001c .Loc.388
+     /tmp/ccz3ecib.s:1051   .text._ZN3Adc10setChannelENS_7ChannelE:0000001c .Loc.389
+     /tmp/ccz3ecib.s:1052   .text._ZN3Adc10setChannelENS_7ChannelE:0000001c .Loc.390
+     /tmp/ccz3ecib.s:1055   .text._ZN3Adc10setChannelENS_7ChannelE:0000001e .Loc.391
+     /tmp/ccz3ecib.s:1056   .text._ZN3Adc10setChannelENS_7ChannelE:0000001e .Loc.392
+     /tmp/ccz3ecib.s:1058   .text._ZN3Adc10setChannelENS_7ChannelE:0000001e .Loc.393
+     /tmp/ccz3ecib.s:1059   .text._ZN3Adc10setChannelENS_7ChannelE:0000001e .Loc.394
+     /tmp/ccz3ecib.s:1061   .text._ZN3Adc10setChannelENS_7ChannelE:00000022 .Loc.395
+     /tmp/ccz3ecib.s:1062   .text._ZN3Adc10setChannelENS_7ChannelE:00000022 .Loc.396
+     /tmp/ccz3ecib.s:1065   .text._ZN3Adc10setChannelENS_7ChannelE:00000024 .Loc.397
+     /tmp/ccz3ecib.s:1067   .text._ZN3Adc10setChannelENS_7ChannelE:00000026 .Loc.398
+     /tmp/ccz3ecib.s:1068   .text._ZN3Adc10setChannelENS_7ChannelE:00000026 .Loc.399
+     /tmp/ccz3ecib.s:1071   .text._ZN3Adc10setChannelENS_7ChannelE:00000028 .Loc.400
+     /tmp/ccz3ecib.s:1075   .text._ZN3Adc10setChannelENS_7ChannelE:0000002c .Loc.401
+     /tmp/ccz3ecib.s:1076   .text._ZN3Adc10setChannelENS_7ChannelE:0000002c .Loc.402
+     /tmp/ccz3ecib.s:1077   .text._ZN3Adc10setChannelENS_7ChannelE:0000002c .Loc.403
+     /tmp/ccz3ecib.s:1083   .text._ZN3Adc10setChannelENS_7ChannelE:00000030 .Loc.404
+     /tmp/ccz3ecib.s:1084   .text._ZN3Adc10setChannelENS_7ChannelE:00000030 .Loc.405
+     /tmp/ccz3ecib.s:1085   .text._ZN3Adc10setChannelENS_7ChannelE:00000030 .Loc.406
+     /tmp/ccz3ecib.s:1088   .text._ZN3Adc10setChannelENS_7ChannelE:00000032 .Loc.407
+     /tmp/ccz3ecib.s:1089   .text._ZN3Adc10setChannelENS_7ChannelE:00000032 .Loc.408
+GAS LISTING /tmp/ccz3ecib.s 			page 48
 
 
-     /tmp/ccWXvzd6.s:1092   .text._ZN3Adc10setChannelENS_7ChannelE:00000034 .Loc.409
-     /tmp/ccWXvzd6.s:1093   .text._ZN3Adc10setChannelENS_7ChannelE:00000034 .Loc.410
-     /tmp/ccWXvzd6.s:1094   .text._ZN3Adc10setChannelENS_7ChannelE:00000034 .Loc.411
-     /tmp/ccWXvzd6.s:1097   .text._ZN3Adc10setChannelENS_7ChannelE:00000036 .Loc.412
-     /tmp/ccWXvzd6.s:1098   .text._ZN3Adc10setChannelENS_7ChannelE:00000036 .Loc.413
-     /tmp/ccWXvzd6.s:1101   .text._ZN3Adc10setChannelENS_7ChannelE:00000038 .Loc.414
-     /tmp/ccWXvzd6.s:1102   .text._ZN3Adc10setChannelENS_7ChannelE:00000038 .Loc.415
-     /tmp/ccWXvzd6.s:1103   .text._ZN3Adc10setChannelENS_7ChannelE:00000038 .Loc.416
-     /tmp/ccWXvzd6.s:1106   .text._ZN3Adc10setChannelENS_7ChannelE:0000003a .Loc.417
-     /tmp/ccWXvzd6.s:1107   .text._ZN3Adc10setChannelENS_7ChannelE:0000003a .Loc.418
-     /tmp/ccWXvzd6.s:1110   .text._ZN3Adc10setChannelENS_7ChannelE:0000003c .Loc.419
-     /tmp/ccWXvzd6.s:1111   .text._ZN3Adc10setChannelENS_7ChannelE:0000003c .Loc.420
-     /tmp/ccWXvzd6.s:1112   .text._ZN3Adc10setChannelENS_7ChannelE:0000003c .Loc.421
-     /tmp/ccWXvzd6.s:1115   .text._ZN3Adc10setChannelENS_7ChannelE:0000003e .Loc.422
-     /tmp/ccWXvzd6.s:1116   .text._ZN3Adc10setChannelENS_7ChannelE:0000003e .Loc.423
-     /tmp/ccWXvzd6.s:1119   .text._ZN3Adc10setChannelENS_7ChannelE:00000040 .Loc.424
-     /tmp/ccWXvzd6.s:1120   .text._ZN3Adc10setChannelENS_7ChannelE:00000040 .Loc.425
-     /tmp/ccWXvzd6.s:1121   .text._ZN3Adc10setChannelENS_7ChannelE:00000040 .Loc.426
-     /tmp/ccWXvzd6.s:1124   .text._ZN3Adc10setChannelENS_7ChannelE:00000042 .Loc.427
-     /tmp/ccWXvzd6.s:1125   .text._ZN3Adc10setChannelENS_7ChannelE:00000042 .Loc.428
-     /tmp/ccWXvzd6.s:1128   .text._ZN3Adc10setChannelENS_7ChannelE:00000044 .Loc.429
-     /tmp/ccWXvzd6.s:1129   .text._ZN3Adc10setChannelENS_7ChannelE:00000044 .Loc.430
-     /tmp/ccWXvzd6.s:1130   .text._ZN3Adc10setChannelENS_7ChannelE:00000044 .Loc.431
-     /tmp/ccWXvzd6.s:1133   .text._ZN3Adc10setChannelENS_7ChannelE:00000046 .Loc.432
-     /tmp/ccWXvzd6.s:1134   .text._ZN3Adc10setChannelENS_7ChannelE:00000046 .Loc.433
-     /tmp/ccWXvzd6.s:1137   .text._ZN3Adc10setChannelENS_7ChannelE:00000048 .Loc.434
-     /tmp/ccWXvzd6.s:1138   .text._ZN3Adc10setChannelENS_7ChannelE:00000048 .Loc.435
-     /tmp/ccWXvzd6.s:1139   .text._ZN3Adc10setChannelENS_7ChannelE:00000048 .Loc.436
-     /tmp/ccWXvzd6.s:1142   .text._ZN3Adc10setChannelENS_7ChannelE:0000004a .Loc.437
-     /tmp/ccWXvzd6.s:1143   .text._ZN3Adc10setChannelENS_7ChannelE:0000004a .Loc.438
-     /tmp/ccWXvzd6.s:1146   .text._ZN3Adc10setChannelENS_7ChannelE:0000004c .Loc.439
-     /tmp/ccWXvzd6.s:1147   .text._ZN3Adc10setChannelENS_7ChannelE:0000004c .Loc.440
-     /tmp/ccWXvzd6.s:1148   .text._ZN3Adc10setChannelENS_7ChannelE:0000004c .Loc.441
-     /tmp/ccWXvzd6.s:1151   .text._ZN3Adc10setChannelENS_7ChannelE:0000004e .Loc.442
-     /tmp/ccWXvzd6.s:1152   .text._ZN3Adc10setChannelENS_7ChannelE:0000004e .Loc.443
-     /tmp/ccWXvzd6.s:1155   .text._ZN3Adc10setChannelENS_7ChannelE:00000050 .Loc.444
-     /tmp/ccWXvzd6.s:1156   .text._ZN3Adc10setChannelENS_7ChannelE:00000050 .Loc.445
-     /tmp/ccWXvzd6.s:1157   .text._ZN3Adc10setChannelENS_7ChannelE:00000050 .Loc.446
-     /tmp/ccWXvzd6.s:1161   .text._ZN3Adc10setChannelENS_7ChannelE:00000054 .Loc.447
-     /tmp/ccWXvzd6.s:1162   .text._ZN3Adc10setChannelENS_7ChannelE:00000054 .Loc.448
-     /tmp/ccWXvzd6.s:1164   .text._ZN3Adc10setChannelENS_7ChannelE:00000056 L0
-     /tmp/ccWXvzd6.s:1170   .text._Z29adcConversionCompleteCallbackv:00000000 _Z29adcConversionCompleteCallbackv
-     /tmp/ccWXvzd6.s:1172   .text._Z29adcConversionCompleteCallbackv:00000000 .Loc.449
-     /tmp/ccWXvzd6.s:1173   .text._Z29adcConversionCompleteCallbackv:00000000 L0
-     /tmp/ccWXvzd6.s:1178   .text._Z29adcConversionCompleteCallbackv:00000000 .Loc.450
-     /tmp/ccWXvzd6.s:1180   .text._Z29adcConversionCompleteCallbackv:00000000 .Loc.451
-     /tmp/ccWXvzd6.s:1182   .text._Z29adcConversionCompleteCallbackv:00000002 L0
-     /tmp/ccWXvzd6.s:1188   .text.__vector_21:00000000 __vector_21
-     /tmp/ccWXvzd6.s:1190   .text.__vector_21:00000000 .Loc.452
-     /tmp/ccWXvzd6.s:1191   .text.__vector_21:00000000 L0
-     /tmp/ccWXvzd6.s:1255   .text.__vector_21:00000022 .Loc.453
-     /tmp/ccWXvzd6.s:1256   .text.__vector_21:00000022 .Loc.454
-     /tmp/ccWXvzd6.s:1260   .text.__vector_21:00000026 .Loc.455
-     /tmp/ccWXvzd6.s:1278   .text.__vector_21:00000048 L0
-     /tmp/ccWXvzd6.s:1283   .text._GLOBAL__sub_I__ZN3Adc9_instanceE:00000000 _GLOBAL__sub_I__ZN3Adc9_instanceE
-     /tmp/ccWXvzd6.s:1285   .text._GLOBAL__sub_I__ZN3Adc9_instanceE:00000000 .Loc.456
-     /tmp/ccWXvzd6.s:1286   .text._GLOBAL__sub_I__ZN3Adc9_instanceE:00000000 L0
-GAS LISTING /tmp/ccWXvzd6.s 			page 49
+     /tmp/ccz3ecib.s:1092   .text._ZN3Adc10setChannelENS_7ChannelE:00000034 .Loc.409
+     /tmp/ccz3ecib.s:1093   .text._ZN3Adc10setChannelENS_7ChannelE:00000034 .Loc.410
+     /tmp/ccz3ecib.s:1094   .text._ZN3Adc10setChannelENS_7ChannelE:00000034 .Loc.411
+     /tmp/ccz3ecib.s:1097   .text._ZN3Adc10setChannelENS_7ChannelE:00000036 .Loc.412
+     /tmp/ccz3ecib.s:1098   .text._ZN3Adc10setChannelENS_7ChannelE:00000036 .Loc.413
+     /tmp/ccz3ecib.s:1101   .text._ZN3Adc10setChannelENS_7ChannelE:00000038 .Loc.414
+     /tmp/ccz3ecib.s:1102   .text._ZN3Adc10setChannelENS_7ChannelE:00000038 .Loc.415
+     /tmp/ccz3ecib.s:1103   .text._ZN3Adc10setChannelENS_7ChannelE:00000038 .Loc.416
+     /tmp/ccz3ecib.s:1106   .text._ZN3Adc10setChannelENS_7ChannelE:0000003a .Loc.417
+     /tmp/ccz3ecib.s:1107   .text._ZN3Adc10setChannelENS_7ChannelE:0000003a .Loc.418
+     /tmp/ccz3ecib.s:1110   .text._ZN3Adc10setChannelENS_7ChannelE:0000003c .Loc.419
+     /tmp/ccz3ecib.s:1111   .text._ZN3Adc10setChannelENS_7ChannelE:0000003c .Loc.420
+     /tmp/ccz3ecib.s:1112   .text._ZN3Adc10setChannelENS_7ChannelE:0000003c .Loc.421
+     /tmp/ccz3ecib.s:1115   .text._ZN3Adc10setChannelENS_7ChannelE:0000003e .Loc.422
+     /tmp/ccz3ecib.s:1116   .text._ZN3Adc10setChannelENS_7ChannelE:0000003e .Loc.423
+     /tmp/ccz3ecib.s:1119   .text._ZN3Adc10setChannelENS_7ChannelE:00000040 .Loc.424
+     /tmp/ccz3ecib.s:1120   .text._ZN3Adc10setChannelENS_7ChannelE:00000040 .Loc.425
+     /tmp/ccz3ecib.s:1121   .text._ZN3Adc10setChannelENS_7ChannelE:00000040 .Loc.426
+     /tmp/ccz3ecib.s:1124   .text._ZN3Adc10setChannelENS_7ChannelE:00000042 .Loc.427
+     /tmp/ccz3ecib.s:1125   .text._ZN3Adc10setChannelENS_7ChannelE:00000042 .Loc.428
+     /tmp/ccz3ecib.s:1128   .text._ZN3Adc10setChannelENS_7ChannelE:00000044 .Loc.429
+     /tmp/ccz3ecib.s:1129   .text._ZN3Adc10setChannelENS_7ChannelE:00000044 .Loc.430
+     /tmp/ccz3ecib.s:1130   .text._ZN3Adc10setChannelENS_7ChannelE:00000044 .Loc.431
+     /tmp/ccz3ecib.s:1133   .text._ZN3Adc10setChannelENS_7ChannelE:00000046 .Loc.432
+     /tmp/ccz3ecib.s:1134   .text._ZN3Adc10setChannelENS_7ChannelE:00000046 .Loc.433
+     /tmp/ccz3ecib.s:1137   .text._ZN3Adc10setChannelENS_7ChannelE:00000048 .Loc.434
+     /tmp/ccz3ecib.s:1138   .text._ZN3Adc10setChannelENS_7ChannelE:00000048 .Loc.435
+     /tmp/ccz3ecib.s:1139   .text._ZN3Adc10setChannelENS_7ChannelE:00000048 .Loc.436
+     /tmp/ccz3ecib.s:1142   .text._ZN3Adc10setChannelENS_7ChannelE:0000004a .Loc.437
+     /tmp/ccz3ecib.s:1143   .text._ZN3Adc10setChannelENS_7ChannelE:0000004a .Loc.438
+     /tmp/ccz3ecib.s:1146   .text._ZN3Adc10setChannelENS_7ChannelE:0000004c .Loc.439
+     /tmp/ccz3ecib.s:1147   .text._ZN3Adc10setChannelENS_7ChannelE:0000004c .Loc.440
+     /tmp/ccz3ecib.s:1148   .text._ZN3Adc10setChannelENS_7ChannelE:0000004c .Loc.441
+     /tmp/ccz3ecib.s:1151   .text._ZN3Adc10setChannelENS_7ChannelE:0000004e .Loc.442
+     /tmp/ccz3ecib.s:1152   .text._ZN3Adc10setChannelENS_7ChannelE:0000004e .Loc.443
+     /tmp/ccz3ecib.s:1155   .text._ZN3Adc10setChannelENS_7ChannelE:00000050 .Loc.444
+     /tmp/ccz3ecib.s:1156   .text._ZN3Adc10setChannelENS_7ChannelE:00000050 .Loc.445
+     /tmp/ccz3ecib.s:1157   .text._ZN3Adc10setChannelENS_7ChannelE:00000050 .Loc.446
+     /tmp/ccz3ecib.s:1161   .text._ZN3Adc10setChannelENS_7ChannelE:00000054 .Loc.447
+     /tmp/ccz3ecib.s:1162   .text._ZN3Adc10setChannelENS_7ChannelE:00000054 .Loc.448
+     /tmp/ccz3ecib.s:1164   .text._ZN3Adc10setChannelENS_7ChannelE:00000056 L0
+     /tmp/ccz3ecib.s:1170   .text._Z29adcConversionCompleteCallbackv:00000000 _Z29adcConversionCompleteCallbackv
+     /tmp/ccz3ecib.s:1172   .text._Z29adcConversionCompleteCallbackv:00000000 .Loc.449
+     /tmp/ccz3ecib.s:1173   .text._Z29adcConversionCompleteCallbackv:00000000 L0
+     /tmp/ccz3ecib.s:1178   .text._Z29adcConversionCompleteCallbackv:00000000 .Loc.450
+     /tmp/ccz3ecib.s:1180   .text._Z29adcConversionCompleteCallbackv:00000000 .Loc.451
+     /tmp/ccz3ecib.s:1182   .text._Z29adcConversionCompleteCallbackv:00000002 L0
+     /tmp/ccz3ecib.s:1188   .text.__vector_21:00000000 __vector_21
+     /tmp/ccz3ecib.s:1190   .text.__vector_21:00000000 .Loc.452
+     /tmp/ccz3ecib.s:1191   .text.__vector_21:00000000 L0
+     /tmp/ccz3ecib.s:1255   .text.__vector_21:00000022 .Loc.453
+     /tmp/ccz3ecib.s:1256   .text.__vector_21:00000022 .Loc.454
+     /tmp/ccz3ecib.s:1260   .text.__vector_21:00000026 .Loc.455
+     /tmp/ccz3ecib.s:1278   .text.__vector_21:00000048 L0
+     /tmp/ccz3ecib.s:1283   .text._GLOBAL__sub_I__ZN3Adc9_instanceE:00000000 _GLOBAL__sub_I__ZN3Adc9_instanceE
+     /tmp/ccz3ecib.s:1285   .text._GLOBAL__sub_I__ZN3Adc9_instanceE:00000000 .Loc.456
+     /tmp/ccz3ecib.s:1286   .text._GLOBAL__sub_I__ZN3Adc9_instanceE:00000000 L0
+GAS LISTING /tmp/ccz3ecib.s 			page 49
 
 
-     /tmp/ccWXvzd6.s:1291   .text._GLOBAL__sub_I__ZN3Adc9_instanceE:00000000 .Loc.457
-     /tmp/ccWXvzd6.s:1296   .text._GLOBAL__sub_I__ZN3Adc9_instanceE:00000006 L0
-     /tmp/ccWXvzd6.s:66     .text._ZN3AdcC2Ev:00000028 L0
-     /tmp/ccWXvzd6.s:87     .text._Z41__static_initialization_and_destruction_0v:0000000a L0
-     /tmp/ccWXvzd6.s:112    .text._ZN3AdcD2Ev:00000002 L0
-     /tmp/ccWXvzd6.s:423    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000ba L0
-     /tmp/ccWXvzd6.s:484    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:0000002c L0
-     /tmp/ccWXvzd6.s:646    .text._ZN3Adc7setModeENS_4ModeE:00000060 L0
-     /tmp/ccWXvzd6.s:783    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000004a L0
-     /tmp/ccWXvzd6.s:853    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000028 L0
-     /tmp/ccWXvzd6.s:927    .text._ZN3Adc15startConversionEv:0000003a L0
-     /tmp/ccWXvzd6.s:1000   .text._ZN3Adc25waitUntilConversionFinishEv:00000038 L0
-     /tmp/ccWXvzd6.s:1167   .text._ZN3Adc10setChannelENS_7ChannelE:00000056 L0
-     /tmp/ccWXvzd6.s:1185   .text._Z29adcConversionCompleteCallbackv:00000002 L0
-     /tmp/ccWXvzd6.s:1281   .text.__vector_21:00000048 L0
-     /tmp/ccWXvzd6.s:1300   .text._GLOBAL__sub_I__ZN3Adc9_instanceE:00000006 L0
+     /tmp/ccz3ecib.s:1291   .text._GLOBAL__sub_I__ZN3Adc9_instanceE:00000000 .Loc.457
+     /tmp/ccz3ecib.s:1296   .text._GLOBAL__sub_I__ZN3Adc9_instanceE:00000006 L0
+     /tmp/ccz3ecib.s:66     .text._ZN3AdcC2Ev:00000028 L0
+     /tmp/ccz3ecib.s:87     .text._Z41__static_initialization_and_destruction_0v:0000000a L0
+     /tmp/ccz3ecib.s:112    .text._ZN3AdcD2Ev:00000002 L0
+     /tmp/ccz3ecib.s:423    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000ba L0
+     /tmp/ccz3ecib.s:484    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:0000002c L0
+     /tmp/ccz3ecib.s:646    .text._ZN3Adc7setModeENS_4ModeE:00000060 L0
+     /tmp/ccz3ecib.s:783    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000004a L0
+     /tmp/ccz3ecib.s:853    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000028 L0
+     /tmp/ccz3ecib.s:927    .text._ZN3Adc15startConversionEv:0000003a L0
+     /tmp/ccz3ecib.s:1000   .text._ZN3Adc25waitUntilConversionFinishEv:00000038 L0
+     /tmp/ccz3ecib.s:1167   .text._ZN3Adc10setChannelENS_7ChannelE:00000056 L0
+     /tmp/ccz3ecib.s:1185   .text._Z29adcConversionCompleteCallbackv:00000002 L0
+     /tmp/ccz3ecib.s:1281   .text.__vector_21:00000048 L0
+     /tmp/ccz3ecib.s:1300   .text._GLOBAL__sub_I__ZN3Adc9_instanceE:00000006 L0
                      .debug_frame:00000000 L0
-     /tmp/ccWXvzd6.s:175    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000002c .L28
-     /tmp/ccWXvzd6.s:181    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000002e .L6
-     /tmp/ccWXvzd6.s:271    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000005e .L15
-     /tmp/ccWXvzd6.s:279    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000060 .L17
-     /tmp/ccWXvzd6.s:316    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000078 .L18
-     /tmp/ccWXvzd6.s:204    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000040 .L14
-     /tmp/ccWXvzd6.s:213    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000044 .L13
-     /tmp/ccWXvzd6.s:222    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000048 .L12
-     /tmp/ccWXvzd6.s:231    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000004c .L11
-     /tmp/ccWXvzd6.s:240    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000050 .L10
-     /tmp/ccWXvzd6.s:249    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000054 .L9
-     /tmp/ccWXvzd6.s:258    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000058 .L7
-     /tmp/ccWXvzd6.s:308    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000076 .L26
-     /tmp/ccWXvzd6.s:365    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a0 .L25
-     /tmp/ccWXvzd6.s:374    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a4 .L24
-     /tmp/ccWXvzd6.s:383    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a8 .L23
-     /tmp/ccWXvzd6.s:392    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000ac .L22
-     /tmp/ccWXvzd6.s:401    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b0 .L21
-     /tmp/ccWXvzd6.s:410    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b4 .L19
-     /tmp/ccWXvzd6.s:470    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000020 .L30
-     /tmp/ccWXvzd6.s:451    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000010 .L31
-     /tmp/ccWXvzd6.s:543    .text._ZN3Adc7setModeENS_4ModeE:00000028 .L44
-     /tmp/ccWXvzd6.s:549    .text._ZN3Adc7setModeENS_4ModeE:0000002a .L34
-     /tmp/ccWXvzd6.s:579    .text._ZN3Adc7setModeENS_4ModeE:00000042 .L42
-     /tmp/ccWXvzd6.s:588    .text._ZN3Adc7setModeENS_4ModeE:00000046 .L41
-     /tmp/ccWXvzd6.s:597    .text._ZN3Adc7setModeENS_4ModeE:0000004a .L40
-     /tmp/ccWXvzd6.s:606    .text._ZN3Adc7setModeENS_4ModeE:0000004e .L39
-     /tmp/ccWXvzd6.s:615    .text._ZN3Adc7setModeENS_4ModeE:00000052 .L38
-     /tmp/ccWXvzd6.s:624    .text._ZN3Adc7setModeENS_4ModeE:00000056 .L37
-     /tmp/ccWXvzd6.s:633    .text._ZN3Adc7setModeENS_4ModeE:0000005a .L35
-     /tmp/ccWXvzd6.s:700    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000001e .L46
-     /tmp/ccWXvzd6.s:692    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000001c .L54
-     /tmp/ccWXvzd6.s:725    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000030 .L53
-     /tmp/ccWXvzd6.s:734    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000034 .L52
-     /tmp/ccWXvzd6.s:743    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000038 .L51
-     /tmp/ccWXvzd6.s:752    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000003c .L50
-     /tmp/ccWXvzd6.s:761    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000040 .L49
-     /tmp/ccWXvzd6.s:770    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000044 .L47
-     /tmp/ccWXvzd6.s:822    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000016 .L56
-     /tmp/ccWXvzd6.s:830    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000018 .L58
-GAS LISTING /tmp/ccWXvzd6.s 			page 50
+     /tmp/ccz3ecib.s:175    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000002c .L28
+     /tmp/ccz3ecib.s:181    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000002e .L6
+     /tmp/ccz3ecib.s:271    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000005e .L15
+     /tmp/ccz3ecib.s:279    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000060 .L17
+     /tmp/ccz3ecib.s:316    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000078 .L18
+     /tmp/ccz3ecib.s:204    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000040 .L14
+     /tmp/ccz3ecib.s:213    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000044 .L13
+     /tmp/ccz3ecib.s:222    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000048 .L12
+     /tmp/ccz3ecib.s:231    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000004c .L11
+     /tmp/ccz3ecib.s:240    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000050 .L10
+     /tmp/ccz3ecib.s:249    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000054 .L9
+     /tmp/ccz3ecib.s:258    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000058 .L7
+     /tmp/ccz3ecib.s:308    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000076 .L26
+     /tmp/ccz3ecib.s:365    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a0 .L25
+     /tmp/ccz3ecib.s:374    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a4 .L24
+     /tmp/ccz3ecib.s:383    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a8 .L23
+     /tmp/ccz3ecib.s:392    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000ac .L22
+     /tmp/ccz3ecib.s:401    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b0 .L21
+     /tmp/ccz3ecib.s:410    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b4 .L19
+     /tmp/ccz3ecib.s:470    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000020 .L30
+     /tmp/ccz3ecib.s:451    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000010 .L31
+     /tmp/ccz3ecib.s:543    .text._ZN3Adc7setModeENS_4ModeE:00000028 .L44
+     /tmp/ccz3ecib.s:549    .text._ZN3Adc7setModeENS_4ModeE:0000002a .L34
+     /tmp/ccz3ecib.s:579    .text._ZN3Adc7setModeENS_4ModeE:00000042 .L42
+     /tmp/ccz3ecib.s:588    .text._ZN3Adc7setModeENS_4ModeE:00000046 .L41
+     /tmp/ccz3ecib.s:597    .text._ZN3Adc7setModeENS_4ModeE:0000004a .L40
+     /tmp/ccz3ecib.s:606    .text._ZN3Adc7setModeENS_4ModeE:0000004e .L39
+     /tmp/ccz3ecib.s:615    .text._ZN3Adc7setModeENS_4ModeE:00000052 .L38
+     /tmp/ccz3ecib.s:624    .text._ZN3Adc7setModeENS_4ModeE:00000056 .L37
+     /tmp/ccz3ecib.s:633    .text._ZN3Adc7setModeENS_4ModeE:0000005a .L35
+     /tmp/ccz3ecib.s:700    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000001e .L46
+     /tmp/ccz3ecib.s:692    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000001c .L54
+     /tmp/ccz3ecib.s:725    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000030 .L53
+     /tmp/ccz3ecib.s:734    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000034 .L52
+     /tmp/ccz3ecib.s:743    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000038 .L51
+     /tmp/ccz3ecib.s:752    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000003c .L50
+     /tmp/ccz3ecib.s:761    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000040 .L49
+     /tmp/ccz3ecib.s:770    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000044 .L47
+     /tmp/ccz3ecib.s:822    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000016 .L56
+     /tmp/ccz3ecib.s:830    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000018 .L58
+GAS LISTING /tmp/ccz3ecib.s 			page 50
 
 
-     /tmp/ccWXvzd6.s:902    .text._ZN3Adc15startConversionEv:00000026 .L64
-     /tmp/ccWXvzd6.s:913    .text._ZN3Adc15startConversionEv:00000030 .L65
-     /tmp/ccWXvzd6.s:975    .text._ZN3Adc25waitUntilConversionFinishEv:00000024 .L71
-     /tmp/ccWXvzd6.s:986    .text._ZN3Adc25waitUntilConversionFinishEv:0000002e .L72
-     /tmp/ccWXvzd6.s:959    .text._ZN3Adc25waitUntilConversionFinishEv:00000016 .L69
-     /tmp/ccWXvzd6.s:1057   .text._ZN3Adc10setChannelENS_7ChannelE:0000001e .L74
-     /tmp/ccWXvzd6.s:1049   .text._ZN3Adc10setChannelENS_7ChannelE:0000001c .L85
-     /tmp/ccWXvzd6.s:1082   .text._ZN3Adc10setChannelENS_7ChannelE:00000030 .L84
-     /tmp/ccWXvzd6.s:1091   .text._ZN3Adc10setChannelENS_7ChannelE:00000034 .L83
-     /tmp/ccWXvzd6.s:1100   .text._ZN3Adc10setChannelENS_7ChannelE:00000038 .L82
-     /tmp/ccWXvzd6.s:1109   .text._ZN3Adc10setChannelENS_7ChannelE:0000003c .L81
-     /tmp/ccWXvzd6.s:1118   .text._ZN3Adc10setChannelENS_7ChannelE:00000040 .L80
-     /tmp/ccWXvzd6.s:1127   .text._ZN3Adc10setChannelENS_7ChannelE:00000044 .L79
-     /tmp/ccWXvzd6.s:1136   .text._ZN3Adc10setChannelENS_7ChannelE:00000048 .L78
-     /tmp/ccWXvzd6.s:1145   .text._ZN3Adc10setChannelENS_7ChannelE:0000004c .L77
-     /tmp/ccWXvzd6.s:1154   .text._ZN3Adc10setChannelENS_7ChannelE:00000050 .L75
-     /tmp/ccWXvzd6.s:2772   .debug_abbrev:00000000 .Ldebug_abbrev0
-     /tmp/ccWXvzd6.s:4342   .debug_ranges:00000000 .Ldebug_ranges0
-     /tmp/ccWXvzd6.s:4374   .debug_line:00000000 .Ldebug_line0
-     /tmp/ccWXvzd6.s:1284   .text._GLOBAL__sub_I__ZN3Adc9_instanceE:00000000 .LFB158
-     /tmp/ccWXvzd6.s:1297   .text._GLOBAL__sub_I__ZN3Adc9_instanceE:00000006 .LFE158
-     /tmp/ccWXvzd6.s:1293   .text._GLOBAL__sub_I__ZN3Adc9_instanceE:00000004 .LVL105
-     /tmp/ccWXvzd6.s:69     .text._Z41__static_initialization_and_destruction_0v:00000000 .LFB156
-     /tmp/ccWXvzd6.s:85     .text._Z41__static_initialization_and_destruction_0v:0000000a .LFE156
-     /tmp/ccWXvzd6.s:80     .text._Z41__static_initialization_and_destruction_0v:00000008 .LVL2
-     /tmp/ccWXvzd6.s:1189   .text.__vector_21:00000000 .LFB155
-     /tmp/ccWXvzd6.s:1279   .text.__vector_21:00000048 .LFE155
-     /tmp/ccWXvzd6.s:3585   .debug_loc:00000000 .LLST17
-     /tmp/ccWXvzd6.s:1258   .text.__vector_21:00000026 .LVL104
-     /tmp/ccWXvzd6.s:1171   .text._Z29adcConversionCompleteCallbackv:00000000 .LFB154
-     /tmp/ccWXvzd6.s:1183   .text._Z29adcConversionCompleteCallbackv:00000002 .LFE154
-     /tmp/ccWXvzd6.s:1005   .text._ZN3Adc10setChannelENS_7ChannelE:00000000 .LFB153
-     /tmp/ccWXvzd6.s:1165   .text._ZN3Adc10setChannelENS_7ChannelE:00000056 .LFE153
-     /tmp/ccWXvzd6.s:3691   .debug_loc:000000d7 .LLST15
-     /tmp/ccWXvzd6.s:3678   .debug_loc:000000cb .LVUS15
-     /tmp/ccWXvzd6.s:3746   .debug_loc:0000013c .LLST16
-     /tmp/ccWXvzd6.s:3739   .debug_loc:00000136 .LVUS16
-     /tmp/ccWXvzd6.s:932    .text._ZN3Adc25waitUntilConversionFinishEv:00000000 .LFB152
-     /tmp/ccWXvzd6.s:998    .text._ZN3Adc25waitUntilConversionFinishEv:00000038 .LFE152
-     /tmp/ccWXvzd6.s:3766   .debug_loc:00000169 .LLST14
-     /tmp/ccWXvzd6.s:3761   .debug_loc:00000165 .LVUS14
-     /tmp/ccWXvzd6.s:858    .text._ZN3Adc15startConversionEv:00000000 .LFB151
-     /tmp/ccWXvzd6.s:925    .text._ZN3Adc15startConversionEv:0000003a .LFE151
-     /tmp/ccWXvzd6.s:3792   .debug_loc:00000195 .LLST13
-     /tmp/ccWXvzd6.s:3787   .debug_loc:00000191 .LVUS13
-     /tmp/ccWXvzd6.s:788    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000000 .LFB150
-     /tmp/ccWXvzd6.s:851    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000028 .LFE150
-     /tmp/ccWXvzd6.s:3818   .debug_loc:000001c1 .LLST11
-     /tmp/ccWXvzd6.s:3813   .debug_loc:000001bd .LVUS11
-     /tmp/ccWXvzd6.s:3848   .debug_loc:000001f1 .LLST12
-     /tmp/ccWXvzd6.s:3839   .debug_loc:000001e9 .LVUS12
-     /tmp/ccWXvzd6.s:651    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000000 .LFB149
-     /tmp/ccWXvzd6.s:781    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000004a .LFE149
-     /tmp/ccWXvzd6.s:3885   .debug_loc:00000236 .LLST9
-     /tmp/ccWXvzd6.s:3872   .debug_loc:0000022a .LVUS9
-     /tmp/ccWXvzd6.s:3940   .debug_loc:0000029b .LLST10
-     /tmp/ccWXvzd6.s:3933   .debug_loc:00000295 .LVUS10
-GAS LISTING /tmp/ccWXvzd6.s 			page 51
+     /tmp/ccz3ecib.s:902    .text._ZN3Adc15startConversionEv:00000026 .L64
+     /tmp/ccz3ecib.s:913    .text._ZN3Adc15startConversionEv:00000030 .L65
+     /tmp/ccz3ecib.s:975    .text._ZN3Adc25waitUntilConversionFinishEv:00000024 .L71
+     /tmp/ccz3ecib.s:986    .text._ZN3Adc25waitUntilConversionFinishEv:0000002e .L72
+     /tmp/ccz3ecib.s:959    .text._ZN3Adc25waitUntilConversionFinishEv:00000016 .L69
+     /tmp/ccz3ecib.s:1057   .text._ZN3Adc10setChannelENS_7ChannelE:0000001e .L74
+     /tmp/ccz3ecib.s:1049   .text._ZN3Adc10setChannelENS_7ChannelE:0000001c .L85
+     /tmp/ccz3ecib.s:1082   .text._ZN3Adc10setChannelENS_7ChannelE:00000030 .L84
+     /tmp/ccz3ecib.s:1091   .text._ZN3Adc10setChannelENS_7ChannelE:00000034 .L83
+     /tmp/ccz3ecib.s:1100   .text._ZN3Adc10setChannelENS_7ChannelE:00000038 .L82
+     /tmp/ccz3ecib.s:1109   .text._ZN3Adc10setChannelENS_7ChannelE:0000003c .L81
+     /tmp/ccz3ecib.s:1118   .text._ZN3Adc10setChannelENS_7ChannelE:00000040 .L80
+     /tmp/ccz3ecib.s:1127   .text._ZN3Adc10setChannelENS_7ChannelE:00000044 .L79
+     /tmp/ccz3ecib.s:1136   .text._ZN3Adc10setChannelENS_7ChannelE:00000048 .L78
+     /tmp/ccz3ecib.s:1145   .text._ZN3Adc10setChannelENS_7ChannelE:0000004c .L77
+     /tmp/ccz3ecib.s:1154   .text._ZN3Adc10setChannelENS_7ChannelE:00000050 .L75
+     /tmp/ccz3ecib.s:2772   .debug_abbrev:00000000 .Ldebug_abbrev0
+     /tmp/ccz3ecib.s:4342   .debug_ranges:00000000 .Ldebug_ranges0
+     /tmp/ccz3ecib.s:4374   .debug_line:00000000 .Ldebug_line0
+     /tmp/ccz3ecib.s:1284   .text._GLOBAL__sub_I__ZN3Adc9_instanceE:00000000 .LFB158
+     /tmp/ccz3ecib.s:1297   .text._GLOBAL__sub_I__ZN3Adc9_instanceE:00000006 .LFE158
+     /tmp/ccz3ecib.s:1293   .text._GLOBAL__sub_I__ZN3Adc9_instanceE:00000004 .LVL105
+     /tmp/ccz3ecib.s:69     .text._Z41__static_initialization_and_destruction_0v:00000000 .LFB156
+     /tmp/ccz3ecib.s:85     .text._Z41__static_initialization_and_destruction_0v:0000000a .LFE156
+     /tmp/ccz3ecib.s:80     .text._Z41__static_initialization_and_destruction_0v:00000008 .LVL2
+     /tmp/ccz3ecib.s:1189   .text.__vector_21:00000000 .LFB155
+     /tmp/ccz3ecib.s:1279   .text.__vector_21:00000048 .LFE155
+     /tmp/ccz3ecib.s:3585   .debug_loc:00000000 .LLST17
+     /tmp/ccz3ecib.s:1258   .text.__vector_21:00000026 .LVL104
+     /tmp/ccz3ecib.s:1171   .text._Z29adcConversionCompleteCallbackv:00000000 .LFB154
+     /tmp/ccz3ecib.s:1183   .text._Z29adcConversionCompleteCallbackv:00000002 .LFE154
+     /tmp/ccz3ecib.s:1005   .text._ZN3Adc10setChannelENS_7ChannelE:00000000 .LFB153
+     /tmp/ccz3ecib.s:1165   .text._ZN3Adc10setChannelENS_7ChannelE:00000056 .LFE153
+     /tmp/ccz3ecib.s:3691   .debug_loc:000000d7 .LLST15
+     /tmp/ccz3ecib.s:3678   .debug_loc:000000cb .LVUS15
+     /tmp/ccz3ecib.s:3746   .debug_loc:0000013c .LLST16
+     /tmp/ccz3ecib.s:3739   .debug_loc:00000136 .LVUS16
+     /tmp/ccz3ecib.s:932    .text._ZN3Adc25waitUntilConversionFinishEv:00000000 .LFB152
+     /tmp/ccz3ecib.s:998    .text._ZN3Adc25waitUntilConversionFinishEv:00000038 .LFE152
+     /tmp/ccz3ecib.s:3766   .debug_loc:00000169 .LLST14
+     /tmp/ccz3ecib.s:3761   .debug_loc:00000165 .LVUS14
+     /tmp/ccz3ecib.s:858    .text._ZN3Adc15startConversionEv:00000000 .LFB151
+     /tmp/ccz3ecib.s:925    .text._ZN3Adc15startConversionEv:0000003a .LFE151
+     /tmp/ccz3ecib.s:3792   .debug_loc:00000195 .LLST13
+     /tmp/ccz3ecib.s:3787   .debug_loc:00000191 .LVUS13
+     /tmp/ccz3ecib.s:788    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000000 .LFB150
+     /tmp/ccz3ecib.s:851    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000028 .LFE150
+     /tmp/ccz3ecib.s:3818   .debug_loc:000001c1 .LLST11
+     /tmp/ccz3ecib.s:3813   .debug_loc:000001bd .LVUS11
+     /tmp/ccz3ecib.s:3848   .debug_loc:000001f1 .LLST12
+     /tmp/ccz3ecib.s:3839   .debug_loc:000001e9 .LVUS12
+     /tmp/ccz3ecib.s:651    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000000 .LFB149
+     /tmp/ccz3ecib.s:781    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000004a .LFE149
+     /tmp/ccz3ecib.s:3885   .debug_loc:00000236 .LLST9
+     /tmp/ccz3ecib.s:3872   .debug_loc:0000022a .LVUS9
+     /tmp/ccz3ecib.s:3940   .debug_loc:0000029b .LLST10
+     /tmp/ccz3ecib.s:3933   .debug_loc:00000295 .LVUS10
+GAS LISTING /tmp/ccz3ecib.s 			page 51
 
 
-     /tmp/ccWXvzd6.s:489    .text._ZN3Adc7setModeENS_4ModeE:00000000 .LFB148
-     /tmp/ccWXvzd6.s:644    .text._ZN3Adc7setModeENS_4ModeE:00000060 .LFE148
-     /tmp/ccWXvzd6.s:3970   .debug_loc:000002d2 .LLST6
-     /tmp/ccWXvzd6.s:3955   .debug_loc:000002c4 .LVUS6
-     /tmp/ccWXvzd6.s:4027   .debug_loc:00000340 .LLST7
-     /tmp/ccWXvzd6.s:4024   .debug_loc:0000033e .LVUS7
-     /tmp/ccWXvzd6.s:4039   .debug_loc:00000357 .LLST8
-     /tmp/ccWXvzd6.s:4034   .debug_loc:00000353 .LVUS8
-     /tmp/ccWXvzd6.s:428    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000000 .LFB147
-     /tmp/ccWXvzd6.s:482    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:0000002c .LFE147
-     /tmp/ccWXvzd6.s:4059   .debug_loc:0000037d .LLST5
-     /tmp/ccWXvzd6.s:4050   .debug_loc:00000375 .LVUS5
-     /tmp/ccWXvzd6.s:117    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000000 .LFB146
-     /tmp/ccWXvzd6.s:421    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000ba .LFE146
-     /tmp/ccWXvzd6.s:4119   .debug_loc:000003d9 .LLST1
-     /tmp/ccWXvzd6.s:4098   .debug_loc:000003c5 .LVUS1
-     /tmp/ccWXvzd6.s:4201   .debug_loc:00000475 .LLST2
-     /tmp/ccWXvzd6.s:4194   .debug_loc:0000046f .LVUS2
-     /tmp/ccWXvzd6.s:4225   .debug_loc:000004a6 .LLST3
-     /tmp/ccWXvzd6.s:4216   .debug_loc:0000049e .LVUS3
-     /tmp/ccWXvzd6.s:4258   .debug_loc:000004e7 .LLST4
-     /tmp/ccWXvzd6.s:4249   .debug_loc:000004df .LVUS4
-     /tmp/ccWXvzd6.s:92     .text._ZN3AdcD2Ev:00000000 .LFB144
-     /tmp/ccWXvzd6.s:108    .text._ZN3AdcD2Ev:00000002 .LFE144
-     /tmp/ccWXvzd6.s:16     .text._ZN3AdcC2Ev:00000000 .LFB141
-     /tmp/ccWXvzd6.s:62     .text._ZN3AdcC2Ev:00000028 .LFE141
-     /tmp/ccWXvzd6.s:4282   .debug_loc:0000051f .LLST0
-     /tmp/ccWXvzd6.s:4277   .debug_loc:0000051b .LVUS0
-     /tmp/ccWXvzd6.s:1193   .text.__vector_21:00000002 .LCFI0
-     /tmp/ccWXvzd6.s:1197   .text.__vector_21:00000004 .LCFI1
-     /tmp/ccWXvzd6.s:1204   .text.__vector_21:0000000c .LCFI2
-     /tmp/ccWXvzd6.s:1208   .text.__vector_21:0000000e .LCFI3
-     /tmp/ccWXvzd6.s:1212   .text.__vector_21:00000010 .LCFI4
-     /tmp/ccWXvzd6.s:1216   .text.__vector_21:00000012 .LCFI5
-     /tmp/ccWXvzd6.s:1220   .text.__vector_21:00000014 .LCFI6
-     /tmp/ccWXvzd6.s:1224   .text.__vector_21:00000016 .LCFI7
-     /tmp/ccWXvzd6.s:1228   .text.__vector_21:00000018 .LCFI8
-     /tmp/ccWXvzd6.s:1232   .text.__vector_21:0000001a .LCFI9
-     /tmp/ccWXvzd6.s:1236   .text.__vector_21:0000001c .LCFI10
-     /tmp/ccWXvzd6.s:1240   .text.__vector_21:0000001e .LCFI11
-     /tmp/ccWXvzd6.s:1244   .text.__vector_21:00000020 .LCFI12
-     /tmp/ccWXvzd6.s:1248   .text.__vector_21:00000022 .LCFI13
-     /tmp/ccWXvzd6.s:1004   .text._ZN3Adc10setChannelENS_7ChannelE:00000000 .LVL87
-     /tmp/ccWXvzd6.s:1018   .text._ZN3Adc10setChannelENS_7ChannelE:00000006 .LVL88
-     /tmp/ccWXvzd6.s:1064   .text._ZN3Adc10setChannelENS_7ChannelE:00000024 .LVL91
-     /tmp/ccWXvzd6.s:1070   .text._ZN3Adc10setChannelENS_7ChannelE:00000028 .LVL92
-     /tmp/ccWXvzd6.s:1074   .text._ZN3Adc10setChannelENS_7ChannelE:0000002c .LVL93
-     /tmp/ccWXvzd6.s:1081   .text._ZN3Adc10setChannelENS_7ChannelE:00000030 .LVL94
-     /tmp/ccWXvzd6.s:1023   .text._ZN3Adc10setChannelENS_7ChannelE:0000000a .LVL89
-     /tmp/ccWXvzd6.s:1160   .text._ZN3Adc10setChannelENS_7ChannelE:00000054 .LVL103
-     /tmp/ccWXvzd6.s:931    .text._ZN3Adc25waitUntilConversionFinishEv:00000000 .LVL85
-     /tmp/ccWXvzd6.s:947    .text._ZN3Adc25waitUntilConversionFinishEv:00000008 .LVL86
-     /tmp/ccWXvzd6.s:857    .text._ZN3Adc15startConversionEv:00000000 .LVL83
-     /tmp/ccWXvzd6.s:873    .text._ZN3Adc15startConversionEv:00000008 .LVL84
-     /tmp/ccWXvzd6.s:787    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000000 .LVL76
-     /tmp/ccWXvzd6.s:846    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000026 .LVL82
-     /tmp/ccWXvzd6.s:799    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000004 .LVL77
-GAS LISTING /tmp/ccWXvzd6.s 			page 52
+     /tmp/ccz3ecib.s:489    .text._ZN3Adc7setModeENS_4ModeE:00000000 .LFB148
+     /tmp/ccz3ecib.s:644    .text._ZN3Adc7setModeENS_4ModeE:00000060 .LFE148
+     /tmp/ccz3ecib.s:3970   .debug_loc:000002d2 .LLST6
+     /tmp/ccz3ecib.s:3955   .debug_loc:000002c4 .LVUS6
+     /tmp/ccz3ecib.s:4027   .debug_loc:00000340 .LLST7
+     /tmp/ccz3ecib.s:4024   .debug_loc:0000033e .LVUS7
+     /tmp/ccz3ecib.s:4039   .debug_loc:00000357 .LLST8
+     /tmp/ccz3ecib.s:4034   .debug_loc:00000353 .LVUS8
+     /tmp/ccz3ecib.s:428    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000000 .LFB147
+     /tmp/ccz3ecib.s:482    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:0000002c .LFE147
+     /tmp/ccz3ecib.s:4059   .debug_loc:0000037d .LLST5
+     /tmp/ccz3ecib.s:4050   .debug_loc:00000375 .LVUS5
+     /tmp/ccz3ecib.s:117    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000000 .LFB146
+     /tmp/ccz3ecib.s:421    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000ba .LFE146
+     /tmp/ccz3ecib.s:4119   .debug_loc:000003d9 .LLST1
+     /tmp/ccz3ecib.s:4098   .debug_loc:000003c5 .LVUS1
+     /tmp/ccz3ecib.s:4201   .debug_loc:00000475 .LLST2
+     /tmp/ccz3ecib.s:4194   .debug_loc:0000046f .LVUS2
+     /tmp/ccz3ecib.s:4225   .debug_loc:000004a6 .LLST3
+     /tmp/ccz3ecib.s:4216   .debug_loc:0000049e .LVUS3
+     /tmp/ccz3ecib.s:4258   .debug_loc:000004e7 .LLST4
+     /tmp/ccz3ecib.s:4249   .debug_loc:000004df .LVUS4
+     /tmp/ccz3ecib.s:92     .text._ZN3AdcD2Ev:00000000 .LFB144
+     /tmp/ccz3ecib.s:108    .text._ZN3AdcD2Ev:00000002 .LFE144
+     /tmp/ccz3ecib.s:16     .text._ZN3AdcC2Ev:00000000 .LFB141
+     /tmp/ccz3ecib.s:62     .text._ZN3AdcC2Ev:00000028 .LFE141
+     /tmp/ccz3ecib.s:4282   .debug_loc:0000051f .LLST0
+     /tmp/ccz3ecib.s:4277   .debug_loc:0000051b .LVUS0
+     /tmp/ccz3ecib.s:1193   .text.__vector_21:00000002 .LCFI0
+     /tmp/ccz3ecib.s:1197   .text.__vector_21:00000004 .LCFI1
+     /tmp/ccz3ecib.s:1204   .text.__vector_21:0000000c .LCFI2
+     /tmp/ccz3ecib.s:1208   .text.__vector_21:0000000e .LCFI3
+     /tmp/ccz3ecib.s:1212   .text.__vector_21:00000010 .LCFI4
+     /tmp/ccz3ecib.s:1216   .text.__vector_21:00000012 .LCFI5
+     /tmp/ccz3ecib.s:1220   .text.__vector_21:00000014 .LCFI6
+     /tmp/ccz3ecib.s:1224   .text.__vector_21:00000016 .LCFI7
+     /tmp/ccz3ecib.s:1228   .text.__vector_21:00000018 .LCFI8
+     /tmp/ccz3ecib.s:1232   .text.__vector_21:0000001a .LCFI9
+     /tmp/ccz3ecib.s:1236   .text.__vector_21:0000001c .LCFI10
+     /tmp/ccz3ecib.s:1240   .text.__vector_21:0000001e .LCFI11
+     /tmp/ccz3ecib.s:1244   .text.__vector_21:00000020 .LCFI12
+     /tmp/ccz3ecib.s:1248   .text.__vector_21:00000022 .LCFI13
+     /tmp/ccz3ecib.s:1004   .text._ZN3Adc10setChannelENS_7ChannelE:00000000 .LVL87
+     /tmp/ccz3ecib.s:1018   .text._ZN3Adc10setChannelENS_7ChannelE:00000006 .LVL88
+     /tmp/ccz3ecib.s:1064   .text._ZN3Adc10setChannelENS_7ChannelE:00000024 .LVL91
+     /tmp/ccz3ecib.s:1070   .text._ZN3Adc10setChannelENS_7ChannelE:00000028 .LVL92
+     /tmp/ccz3ecib.s:1074   .text._ZN3Adc10setChannelENS_7ChannelE:0000002c .LVL93
+     /tmp/ccz3ecib.s:1081   .text._ZN3Adc10setChannelENS_7ChannelE:00000030 .LVL94
+     /tmp/ccz3ecib.s:1023   .text._ZN3Adc10setChannelENS_7ChannelE:0000000a .LVL89
+     /tmp/ccz3ecib.s:1160   .text._ZN3Adc10setChannelENS_7ChannelE:00000054 .LVL103
+     /tmp/ccz3ecib.s:931    .text._ZN3Adc25waitUntilConversionFinishEv:00000000 .LVL85
+     /tmp/ccz3ecib.s:947    .text._ZN3Adc25waitUntilConversionFinishEv:00000008 .LVL86
+     /tmp/ccz3ecib.s:857    .text._ZN3Adc15startConversionEv:00000000 .LVL83
+     /tmp/ccz3ecib.s:873    .text._ZN3Adc15startConversionEv:00000008 .LVL84
+     /tmp/ccz3ecib.s:787    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000000 .LVL76
+     /tmp/ccz3ecib.s:846    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000026 .LVL82
+     /tmp/ccz3ecib.s:799    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000004 .LVL77
+GAS LISTING /tmp/ccz3ecib.s 			page 52
 
 
-     /tmp/ccWXvzd6.s:804    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000008 .LVL78
-     /tmp/ccWXvzd6.s:815    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000012 .LVL79
-     /tmp/ccWXvzd6.s:818    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000014 .LVL80
-     /tmp/ccWXvzd6.s:650    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000000 .LVL62
-     /tmp/ccWXvzd6.s:664    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000006 .LVL63
-     /tmp/ccWXvzd6.s:707    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000024 .LVL66
-     /tmp/ccWXvzd6.s:713    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000028 .LVL67
-     /tmp/ccWXvzd6.s:717    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000002c .LVL68
-     /tmp/ccWXvzd6.s:724    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000030 .LVL69
-     /tmp/ccWXvzd6.s:669    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000000a .LVL64
-     /tmp/ccWXvzd6.s:776    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000048 .LVL75
-     /tmp/ccWXvzd6.s:488    .text._ZN3Adc7setModeENS_4ModeE:00000000 .LVL44
-     /tmp/ccWXvzd6.s:506    .text._ZN3Adc7setModeENS_4ModeE:0000000a .LVL46
-     /tmp/ccWXvzd6.s:559    .text._ZN3Adc7setModeENS_4ModeE:00000034 .LVL50
-     /tmp/ccWXvzd6.s:563    .text._ZN3Adc7setModeENS_4ModeE:00000038 .LVL51
-     /tmp/ccWXvzd6.s:567    .text._ZN3Adc7setModeENS_4ModeE:0000003a .LVL52
-     /tmp/ccWXvzd6.s:571    .text._ZN3Adc7setModeENS_4ModeE:0000003e .LVL53
-     /tmp/ccWXvzd6.s:578    .text._ZN3Adc7setModeENS_4ModeE:00000042 .LVL54
-     /tmp/ccWXvzd6.s:502    .text._ZN3Adc7setModeENS_4ModeE:00000006 .LVL45
-     /tmp/ccWXvzd6.s:511    .text._ZN3Adc7setModeENS_4ModeE:0000000e .LVL47
-     /tmp/ccWXvzd6.s:427    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000000 .LVL40
-     /tmp/ccWXvzd6.s:446    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:0000000c .LVL41
-     /tmp/ccWXvzd6.s:469    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000020 .LVL42
-     /tmp/ccWXvzd6.s:476    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000026 .LVL43
-     /tmp/ccWXvzd6.s:116    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000000 .LVL4
-     /tmp/ccWXvzd6.s:130    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000006 .LVL5
-     /tmp/ccWXvzd6.s:329    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000086 .LVL26
-     /tmp/ccWXvzd6.s:333    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000008a .LVL27
-     /tmp/ccWXvzd6.s:337    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000008c .LVL28
-     /tmp/ccWXvzd6.s:343    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000090 .LVL29
-     /tmp/ccWXvzd6.s:346    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000092 .LVL30
-     /tmp/ccWXvzd6.s:352    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000098 .LVL31
-     /tmp/ccWXvzd6.s:357    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000009c .LVL32
-     /tmp/ccWXvzd6.s:364    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a0 .LVL33
-     /tmp/ccWXvzd6.s:284    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000064 .LVL24
-     /tmp/ccWXvzd6.s:416    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b8 .LVL39
-     /tmp/ccWXvzd6.s:134    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000000a .LVL6
-     /tmp/ccWXvzd6.s:143    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000012 .LVL8
-     /tmp/ccWXvzd6.s:263    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000005a .LVL20
-     /tmp/ccWXvzd6.s:266    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000005c .LVL21
-     /tmp/ccWXvzd6.s:138    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000000e .LVL7
-     /tmp/ccWXvzd6.s:186    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000032 .LVL11
-     /tmp/ccWXvzd6.s:203    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000040 .LVL13
-     /tmp/ccWXvzd6.s:270    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000005e .LVL22
-     /tmp/ccWXvzd6.s:15     .text._ZN3AdcC2Ev:00000000 .LVL0
-     /tmp/ccWXvzd6.s:28     .text._ZN3AdcC2Ev:00000004 .LVL1
-     /tmp/ccWXvzd6.s:1316   .debug_info:00000000 .Ldebug_info0
+     /tmp/ccz3ecib.s:804    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000008 .LVL78
+     /tmp/ccz3ecib.s:815    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000012 .LVL79
+     /tmp/ccz3ecib.s:818    .text._ZN3Adc12setReferenceENS_9ReferenceE:00000014 .LVL80
+     /tmp/ccz3ecib.s:650    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000000 .LVL62
+     /tmp/ccz3ecib.s:664    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000006 .LVL63
+     /tmp/ccz3ecib.s:707    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000024 .LVL66
+     /tmp/ccz3ecib.s:713    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000028 .LVL67
+     /tmp/ccz3ecib.s:717    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000002c .LVL68
+     /tmp/ccz3ecib.s:724    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000030 .LVL69
+     /tmp/ccz3ecib.s:669    .text._ZN3Adc12setPrescalerENS_9PrescalerE:0000000a .LVL64
+     /tmp/ccz3ecib.s:776    .text._ZN3Adc12setPrescalerENS_9PrescalerE:00000048 .LVL75
+     /tmp/ccz3ecib.s:488    .text._ZN3Adc7setModeENS_4ModeE:00000000 .LVL44
+     /tmp/ccz3ecib.s:506    .text._ZN3Adc7setModeENS_4ModeE:0000000a .LVL46
+     /tmp/ccz3ecib.s:559    .text._ZN3Adc7setModeENS_4ModeE:00000034 .LVL50
+     /tmp/ccz3ecib.s:563    .text._ZN3Adc7setModeENS_4ModeE:00000038 .LVL51
+     /tmp/ccz3ecib.s:567    .text._ZN3Adc7setModeENS_4ModeE:0000003a .LVL52
+     /tmp/ccz3ecib.s:571    .text._ZN3Adc7setModeENS_4ModeE:0000003e .LVL53
+     /tmp/ccz3ecib.s:578    .text._ZN3Adc7setModeENS_4ModeE:00000042 .LVL54
+     /tmp/ccz3ecib.s:502    .text._ZN3Adc7setModeENS_4ModeE:00000006 .LVL45
+     /tmp/ccz3ecib.s:511    .text._ZN3Adc7setModeENS_4ModeE:0000000e .LVL47
+     /tmp/ccz3ecib.s:427    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000000 .LVL40
+     /tmp/ccz3ecib.s:446    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:0000000c .LVL41
+     /tmp/ccz3ecib.s:469    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000020 .LVL42
+     /tmp/ccz3ecib.s:476    .text._ZN3Adc18setDataPresetationENS_15DataPresetationE:00000026 .LVL43
+     /tmp/ccz3ecib.s:116    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000000 .LVL4
+     /tmp/ccz3ecib.s:130    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000006 .LVL5
+     /tmp/ccz3ecib.s:329    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000086 .LVL26
+     /tmp/ccz3ecib.s:333    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000008a .LVL27
+     /tmp/ccz3ecib.s:337    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000008c .LVL28
+     /tmp/ccz3ecib.s:343    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000090 .LVL29
+     /tmp/ccz3ecib.s:346    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000092 .LVL30
+     /tmp/ccz3ecib.s:352    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000098 .LVL31
+     /tmp/ccz3ecib.s:357    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000009c .LVL32
+     /tmp/ccz3ecib.s:364    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000a0 .LVL33
+     /tmp/ccz3ecib.s:284    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000064 .LVL24
+     /tmp/ccz3ecib.s:416    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:000000b8 .LVL39
+     /tmp/ccz3ecib.s:134    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000000a .LVL6
+     /tmp/ccz3ecib.s:143    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000012 .LVL8
+     /tmp/ccz3ecib.s:263    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000005a .LVL20
+     /tmp/ccz3ecib.s:266    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000005c .LVL21
+     /tmp/ccz3ecib.s:138    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000000e .LVL7
+     /tmp/ccz3ecib.s:186    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000032 .LVL11
+     /tmp/ccz3ecib.s:203    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:00000040 .LVL13
+     /tmp/ccz3ecib.s:270    .text._ZN3Adc4initENS_4ModeENS_9ReferenceENS_9PrescalerE:0000005e .LVL22
+     /tmp/ccz3ecib.s:15     .text._ZN3AdcC2Ev:00000000 .LVL0
+     /tmp/ccz3ecib.s:28     .text._ZN3AdcC2Ev:00000004 .LVL1
+     /tmp/ccz3ecib.s:1316   .debug_info:00000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 __tablejump2__

@@ -1,4 +1,4 @@
-GAS LISTING /tmp/cct3URlK.s 			page 1
+GAS LISTING /tmp/ccvREdri.s 			page 1
 
 
    1               		.file	"pcint0.cpp"
@@ -58,7 +58,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
   40:funsape/peripheral/pcint0.cpp **** //!
   41:funsape/peripheral/pcint0.cpp **** 
   42:funsape/peripheral/pcint0.cpp **** // =============================================================================
-GAS LISTING /tmp/cct3URlK.s 			page 2
+GAS LISTING /tmp/ccvREdri.s 			page 2
 
 
   43:funsape/peripheral/pcint0.cpp **** // System file dependencies
@@ -118,7 +118,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
   20               	/* frame size = 0 */
   21               	/* stack size = 0 */
   22               	.L__stack_usage = 0
-GAS LISTING /tmp/cct3URlK.s 			page 3
+GAS LISTING /tmp/ccvREdri.s 			page 3
 
 
   23               		.loc 1 93 1 is_stmt 0 view .LVU1
@@ -178,7 +178,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
  119:funsape/peripheral/pcint0.cpp **** // =============================================================================
  120:funsape/peripheral/pcint0.cpp **** 
  121:funsape/peripheral/pcint0.cpp **** //     ///////////////////     CONTROL AND STATUS     ///////////////////     //
-GAS LISTING /tmp/cct3URlK.s 			page 4
+GAS LISTING /tmp/ccvREdri.s 			page 4
 
 
  122:funsape/peripheral/pcint0.cpp **** 
@@ -238,7 +238,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
  176:funsape/peripheral/pcint0.cpp **** {
  177:funsape/peripheral/pcint0.cpp ****     // Mark passage for debugging purpose
  178:funsape/peripheral/pcint0.cpp ****     debugMark(PSTR("Pcint0::init(const Pcint0::Pin)"), Debug::CodeIndex::PCINT0_MODULE);
-GAS LISTING /tmp/cct3URlK.s 			page 5
+GAS LISTING /tmp/ccvREdri.s 			page 5
 
 
  179:funsape/peripheral/pcint0.cpp **** 
@@ -298,7 +298,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
  233:funsape/peripheral/pcint0.cpp **** #endif
  234:funsape/peripheral/pcint0.cpp **** #if defined(MCU_PCINT0_PIN_5_EXISTS)
  235:funsape/peripheral/pcint0.cpp ****     if((bool_t)(pinList_p & Pcint0::Pin::PIN_PCINT5)) {
-GAS LISTING /tmp/cct3URlK.s 			page 6
+GAS LISTING /tmp/ccvREdri.s 			page 6
 
 
  236:funsape/peripheral/pcint0.cpp ****         auxPinMask |= (1 << MCU_PCINT0_GPIO_PCINT5_BIT);
@@ -358,7 +358,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
  290:funsape/peripheral/pcint0.cpp **** 
  291:funsape/peripheral/pcint0.cpp **** // =============================================================================
  292:funsape/peripheral/pcint0.cpp **** // Interrupt callback functions
-GAS LISTING /tmp/cct3URlK.s 			page 7
+GAS LISTING /tmp/ccvREdri.s 			page 7
 
 
  293:funsape/peripheral/pcint0.cpp **** // =============================================================================
@@ -418,7 +418,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
   86               		.loc 1 114 5 view .LVU17
   87               	/* epilogue start */
   88               	.LBE19:
-GAS LISTING /tmp/cct3URlK.s 			page 8
+GAS LISTING /tmp/ccvREdri.s 			page 8
 
 
  115:funsape/peripheral/pcint0.cpp **** 
@@ -478,7 +478,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
  135:funsape/peripheral/pcint0.cpp **** 
  131               		.loc 1 135 5 view .LVU32
  135:funsape/peripheral/pcint0.cpp **** 
-GAS LISTING /tmp/cct3URlK.s 			page 9
+GAS LISTING /tmp/ccvREdri.s 			page 9
 
 
  132               		.loc 1 135 5 view .LVU33
@@ -538,7 +538,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
  173               		.loc 1 156 5 is_stmt 1 view .LVU48
  156:funsape/peripheral/pcint0.cpp **** 
  174               		.loc 1 156 42 is_stmt 0 view .LVU49
-GAS LISTING /tmp/cct3URlK.s 			page 10
+GAS LISTING /tmp/ccvREdri.s 			page 10
 
 
  175 0008 9381      		ldd r25,Z+3
@@ -598,7 +598,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
  214               	/* frame size = 0 */
  215               	/* stack size = 0 */
  216               	.L__stack_usage = 0
-GAS LISTING /tmp/cct3URlK.s 			page 11
+GAS LISTING /tmp/ccvREdri.s 			page 11
 
 
  176:funsape/peripheral/pcint0.cpp ****     // Mark passage for debugging purpose
@@ -658,7 +658,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
  252               	.LFE144:
  254               		.section	.text._ZN6Pcint010setPinModeENS_3PinE7PinMode,"ax",@progbits
  255               	.global	_ZN6Pcint010setPinModeENS_3PinE7PinMode
-GAS LISTING /tmp/cct3URlK.s 			page 12
+GAS LISTING /tmp/ccvREdri.s 			page 12
 
 
  257               	_ZN6Pcint010setPinModeENS_3PinE7PinMode:
@@ -718,7 +718,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
   32:funsape/peripheral/pcint0.hpp **** //!     IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
   33:funsape/peripheral/pcint0.hpp **** //!     FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
   34:funsape/peripheral/pcint0.hpp **** //!     THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
-GAS LISTING /tmp/cct3URlK.s 			page 13
+GAS LISTING /tmp/ccvREdri.s 			page 13
 
 
   35:funsape/peripheral/pcint0.hpp **** //!     OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
@@ -778,7 +778,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
   89:funsape/peripheral/pcint0.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   90:funsape/peripheral/pcint0.hpp **** 
   91:funsape/peripheral/pcint0.hpp **** //!
-GAS LISTING /tmp/cct3URlK.s 			page 14
+GAS LISTING /tmp/ccvREdri.s 			page 14
 
 
   92:funsape/peripheral/pcint0.hpp **** //! @addtogroup     Peripherals
@@ -838,7 +838,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
  146:funsape/peripheral/pcint0.hpp **** 
  147:funsape/peripheral/pcint0.hpp **** //!
  148:funsape/peripheral/pcint0.hpp **** //! @brief          Pcint0 class
-GAS LISTING /tmp/cct3URlK.s 			page 15
+GAS LISTING /tmp/ccvREdri.s 			page 15
 
 
  149:funsape/peripheral/pcint0.hpp **** //! @details        This class manages the Pin Change Interrupt 0 (PCINT0)
@@ -898,7 +898,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
  203:funsape/peripheral/pcint0.hpp ****     // -------------------------------------------------------------------------
  204:funsape/peripheral/pcint0.hpp ****     // Constructors ------------------------------------------------------------
  205:funsape/peripheral/pcint0.hpp **** 
-GAS LISTING /tmp/cct3URlK.s 			page 16
+GAS LISTING /tmp/ccvREdri.s 			page 16
 
 
  206:funsape/peripheral/pcint0.hpp **** public:
@@ -958,7 +958,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
  260:funsape/peripheral/pcint0.hpp ****     // -------------------------------------------------------------------------
  261:funsape/peripheral/pcint0.hpp ****     // Methods - class own methods ---------------------------------------------
  262:funsape/peripheral/pcint0.hpp **** 
-GAS LISTING /tmp/cct3URlK.s 			page 17
+GAS LISTING /tmp/ccvREdri.s 			page 17
 
 
  263:funsape/peripheral/pcint0.hpp **** public:
@@ -1018,7 +1018,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
  317:funsape/peripheral/pcint0.hpp ****     bool_t enablePins(
  318:funsape/peripheral/pcint0.hpp ****             const Pcint0::Pin enablePins_p
  319:funsape/peripheral/pcint0.hpp ****     );
-GAS LISTING /tmp/cct3URlK.s 			page 18
+GAS LISTING /tmp/ccvREdri.s 			page 18
 
 
  320:funsape/peripheral/pcint0.hpp **** 
@@ -1078,7 +1078,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
  374:funsape/peripheral/pcint0.hpp **** 
  375:funsape/peripheral/pcint0.hpp ****     //     //////////////////////    INTERRUPT     //////////////////////     //
  376:funsape/peripheral/pcint0.hpp **** 
-GAS LISTING /tmp/cct3URlK.s 			page 19
+GAS LISTING /tmp/ccvREdri.s 			page 19
 
 
  377:funsape/peripheral/pcint0.hpp ****     //!
@@ -1138,7 +1138,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
  431:funsape/peripheral/pcint0.hpp **** 
  432:funsape/peripheral/pcint0.hpp **** }; // class Pcint0
  433:funsape/peripheral/pcint0.hpp **** 
-GAS LISTING /tmp/cct3URlK.s 			page 20
+GAS LISTING /tmp/ccvREdri.s 			page 20
 
 
  434:funsape/peripheral/pcint0.hpp **** // =============================================================================
@@ -1198,7 +1198,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
  488:funsape/peripheral/pcint0.hpp **** 
  489:funsape/peripheral/pcint0.hpp **** Pcint0::Pin inlined operator&(Pcint0::Pin a, Pcint0::Pin b)
  275               		.loc 2 489 21 view .LVU91
-GAS LISTING /tmp/cct3URlK.s 			page 21
+GAS LISTING /tmp/ccvREdri.s 			page 21
 
 
  276               	.LBB21:
@@ -1258,7 +1258,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
  317               		.loc 1 225 5 is_stmt 1 view .LVU109
  318               	.LBB26:
  319               	.LBI26:
-GAS LISTING /tmp/cct3URlK.s 			page 22
+GAS LISTING /tmp/ccvREdri.s 			page 22
 
 
  489:funsape/peripheral/pcint0.hpp **** {
@@ -1318,7 +1318,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
  236:funsape/peripheral/pcint0.cpp ****     }
  361               		.loc 1 236 20 is_stmt 0 view .LVU129
  362 0018 9062      		ori r25,lo8(32)
-GAS LISTING /tmp/cct3URlK.s 			page 23
+GAS LISTING /tmp/ccvREdri.s 			page 23
 
 
  363               	.LVL22:
@@ -1378,7 +1378,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
  246:funsape/peripheral/pcint0.cpp ****     }
  403               		.loc 1 246 20 is_stmt 0 view .LVU146
  404 002e 9068      		ori r25,lo8(-128)
-GAS LISTING /tmp/cct3URlK.s 			page 24
+GAS LISTING /tmp/ccvREdri.s 			page 24
 
 
  405               	.LVL26:
@@ -1438,7 +1438,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
  443               		.loc 1 258 13 is_stmt 0 view .LVU162
  444 0050 8095      		com r24
  445 0052 8223      		and r24,r18
-GAS LISTING /tmp/cct3URlK.s 			page 25
+GAS LISTING /tmp/ccvREdri.s 			page 25
 
 
  446 0054 84B9      		out 0x4,r24
@@ -1498,7 +1498,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
  488               	.LFE146:
  490               		.section	.text.__vector_3,"ax",@progbits
  491               	.global	__vector_3
-GAS LISTING /tmp/cct3URlK.s 			page 26
+GAS LISTING /tmp/ccvREdri.s 			page 26
 
 
  493               	__vector_3:
@@ -1558,7 +1558,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
  546               		.cfi_def_cfa_offset 14
  547               		.cfi_offset 27, -13
  548 001e EF93      		push r30
-GAS LISTING /tmp/cct3URlK.s 			page 27
+GAS LISTING /tmp/ccvREdri.s 			page 27
 
 
  549               	.LCFI12:
@@ -1618,7 +1618,7 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
  604               		.global __do_global_ctors
  605               		.section .ctors,"a",@progbits
  606               		.p2align	1
-GAS LISTING /tmp/cct3URlK.s 			page 28
+GAS LISTING /tmp/ccvREdri.s 			page 28
 
 
  607 0000 0000      		.word	gs(_GLOBAL__sub_I__ZN6Pcint09_instanceE)
@@ -1631,412 +1631,412 @@ GAS LISTING /tmp/cct3URlK.s 			page 1
  616               		.file 3 "/usr/avr/include/stdint.h"
  617               		.file 4 "funsape/peripheral/../config/atmega328p.hpp"
  618               		.file 5 "funsape/peripheral/../globalDefines.hpp"
-GAS LISTING /tmp/cct3URlK.s 			page 29
+GAS LISTING /tmp/ccvREdri.s 			page 29
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 pcint0.cpp
-     /tmp/cct3URlK.s:2      *ABS*:0000003e __SP_H__
-     /tmp/cct3URlK.s:3      *ABS*:0000003d __SP_L__
-     /tmp/cct3URlK.s:4      *ABS*:0000003f __SREG__
-     /tmp/cct3URlK.s:5      *ABS*:00000000 __tmp_reg__
-     /tmp/cct3URlK.s:6      *ABS*:00000001 __zero_reg__
-     /tmp/cct3URlK.s:14     .text._ZN6Pcint0C2Ev:00000000 _ZN6Pcint0C2Ev
-     /tmp/cct3URlK.s:17     .text._ZN6Pcint0C2Ev:00000000 .Loc.0
-     /tmp/cct3URlK.s:18     .text._ZN6Pcint0C2Ev:00000000 L0
-     /tmp/cct3URlK.s:23     .text._ZN6Pcint0C2Ev:00000000 .Loc.1
-     /tmp/cct3URlK.s:26     .text._ZN6Pcint0C2Ev:00000002 .Loc.2
-     /tmp/cct3URlK.s:29     .text._ZN6Pcint0C2Ev:00000004 .Loc.3
-     /tmp/cct3URlK.s:32     .text._ZN6Pcint0C2Ev:00000008 .Loc.4
-     /tmp/cct3URlK.s:35     .text._ZN6Pcint0C2Ev:0000000c .Loc.5
-     /tmp/cct3URlK.s:37     .text._ZN6Pcint0C2Ev:0000000e .Loc.6
-     /tmp/cct3URlK.s:38     .text._ZN6Pcint0C2Ev:0000000e .Loc.7
-     /tmp/cct3URlK.s:39     .text._ZN6Pcint0C2Ev:0000000e .Loc.8
-     /tmp/cct3URlK.s:40     .text._ZN6Pcint0C2Ev:0000000e .Loc.9
-     /tmp/cct3URlK.s:43     .text._ZN6Pcint0C2Ev:0000000e .Loc.10
-     /tmp/cct3URlK.s:45     .text._ZN6Pcint0C2Ev:00000010 L0
-     /tmp/cct3URlK.s:14     .text._ZN6Pcint0C2Ev:00000000 _ZN6Pcint0C1Ev
-     /tmp/cct3URlK.s:52     .text._Z41__static_initialization_and_destruction_0v:00000000 _Z41__static_initialization_and_destruction_0v
-     /tmp/cct3URlK.s:54     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.11
-     /tmp/cct3URlK.s:55     .text._Z41__static_initialization_and_destruction_0v:00000000 L0
-     /tmp/cct3URlK.s:60     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.12
-     /tmp/cct3URlK.s:612    .bss._ZN6Pcint09_instanceE:00000000 _ZN6Pcint09_instanceE
-     /tmp/cct3URlK.s:66     .text._Z41__static_initialization_and_destruction_0v:00000008 .Loc.13
-     /tmp/cct3URlK.s:68     .text._Z41__static_initialization_and_destruction_0v:0000000a L0
-     /tmp/cct3URlK.s:74     .text._ZN6Pcint0D2Ev:00000000 _ZN6Pcint0D2Ev
-     /tmp/cct3URlK.s:77     .text._ZN6Pcint0D2Ev:00000000 .Loc.14
-     /tmp/cct3URlK.s:78     .text._ZN6Pcint0D2Ev:00000000 L0
-     /tmp/cct3URlK.s:84     .text._ZN6Pcint0D2Ev:00000000 .Loc.15
-     /tmp/cct3URlK.s:85     .text._ZN6Pcint0D2Ev:00000000 .Loc.16
-     /tmp/cct3URlK.s:86     .text._ZN6Pcint0D2Ev:00000000 .Loc.17
-     /tmp/cct3URlK.s:89     .text._ZN6Pcint0D2Ev:00000000 .Loc.18
-     /tmp/cct3URlK.s:91     .text._ZN6Pcint0D2Ev:00000002 L0
-     /tmp/cct3URlK.s:74     .text._ZN6Pcint0D2Ev:00000000 _ZN6Pcint0D1Ev
-     /tmp/cct3URlK.s:99     .text._ZN6Pcint011disablePinsENS_3PinE:00000000 _ZN6Pcint011disablePinsENS_3PinE
-     /tmp/cct3URlK.s:102    .text._ZN6Pcint011disablePinsENS_3PinE:00000000 .Loc.19
-     /tmp/cct3URlK.s:103    .text._ZN6Pcint011disablePinsENS_3PinE:00000000 L0
-     /tmp/cct3URlK.s:108    .text._ZN6Pcint011disablePinsENS_3PinE:00000000 .Loc.20
-     /tmp/cct3URlK.s:110    .text._ZN6Pcint011disablePinsENS_3PinE:00000002 .Loc.21
-     /tmp/cct3URlK.s:111    .text._ZN6Pcint011disablePinsENS_3PinE:00000002 .Loc.22
-     /tmp/cct3URlK.s:112    .text._ZN6Pcint011disablePinsENS_3PinE:00000002 .Loc.23
-     /tmp/cct3URlK.s:117    .text._ZN6Pcint011disablePinsENS_3PinE:00000008 .Loc.24
-     /tmp/cct3URlK.s:118    .text._ZN6Pcint011disablePinsENS_3PinE:00000008 .Loc.25
-     /tmp/cct3URlK.s:121    .text._ZN6Pcint011disablePinsENS_3PinE:0000000a .Loc.26
-     /tmp/cct3URlK.s:122    .text._ZN6Pcint011disablePinsENS_3PinE:0000000a .Loc.27
-     /tmp/cct3URlK.s:123    .text._ZN6Pcint011disablePinsENS_3PinE:0000000a .Loc.28
-     /tmp/cct3URlK.s:124    .text._ZN6Pcint011disablePinsENS_3PinE:0000000a .Loc.29
-     /tmp/cct3URlK.s:127    .text._ZN6Pcint011disablePinsENS_3PinE:0000000c .Loc.30
-     /tmp/cct3URlK.s:130    .text._ZN6Pcint011disablePinsENS_3PinE:0000000e .Loc.31
-     /tmp/cct3URlK.s:131    .text._ZN6Pcint011disablePinsENS_3PinE:0000000e .Loc.32
-     /tmp/cct3URlK.s:132    .text._ZN6Pcint011disablePinsENS_3PinE:0000000e .Loc.33
-     /tmp/cct3URlK.s:133    .text._ZN6Pcint011disablePinsENS_3PinE:0000000e .Loc.34
-     /tmp/cct3URlK.s:134    .text._ZN6Pcint011disablePinsENS_3PinE:0000000e .Loc.35
-GAS LISTING /tmp/cct3URlK.s 			page 30
+     /tmp/ccvREdri.s:2      *ABS*:0000003e __SP_H__
+     /tmp/ccvREdri.s:3      *ABS*:0000003d __SP_L__
+     /tmp/ccvREdri.s:4      *ABS*:0000003f __SREG__
+     /tmp/ccvREdri.s:5      *ABS*:00000000 __tmp_reg__
+     /tmp/ccvREdri.s:6      *ABS*:00000001 __zero_reg__
+     /tmp/ccvREdri.s:14     .text._ZN6Pcint0C2Ev:00000000 _ZN6Pcint0C2Ev
+     /tmp/ccvREdri.s:17     .text._ZN6Pcint0C2Ev:00000000 .Loc.0
+     /tmp/ccvREdri.s:18     .text._ZN6Pcint0C2Ev:00000000 L0
+     /tmp/ccvREdri.s:23     .text._ZN6Pcint0C2Ev:00000000 .Loc.1
+     /tmp/ccvREdri.s:26     .text._ZN6Pcint0C2Ev:00000002 .Loc.2
+     /tmp/ccvREdri.s:29     .text._ZN6Pcint0C2Ev:00000004 .Loc.3
+     /tmp/ccvREdri.s:32     .text._ZN6Pcint0C2Ev:00000008 .Loc.4
+     /tmp/ccvREdri.s:35     .text._ZN6Pcint0C2Ev:0000000c .Loc.5
+     /tmp/ccvREdri.s:37     .text._ZN6Pcint0C2Ev:0000000e .Loc.6
+     /tmp/ccvREdri.s:38     .text._ZN6Pcint0C2Ev:0000000e .Loc.7
+     /tmp/ccvREdri.s:39     .text._ZN6Pcint0C2Ev:0000000e .Loc.8
+     /tmp/ccvREdri.s:40     .text._ZN6Pcint0C2Ev:0000000e .Loc.9
+     /tmp/ccvREdri.s:43     .text._ZN6Pcint0C2Ev:0000000e .Loc.10
+     /tmp/ccvREdri.s:45     .text._ZN6Pcint0C2Ev:00000010 L0
+     /tmp/ccvREdri.s:14     .text._ZN6Pcint0C2Ev:00000000 _ZN6Pcint0C1Ev
+     /tmp/ccvREdri.s:52     .text._Z41__static_initialization_and_destruction_0v:00000000 _Z41__static_initialization_and_destruction_0v
+     /tmp/ccvREdri.s:54     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.11
+     /tmp/ccvREdri.s:55     .text._Z41__static_initialization_and_destruction_0v:00000000 L0
+     /tmp/ccvREdri.s:60     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.12
+     /tmp/ccvREdri.s:612    .bss._ZN6Pcint09_instanceE:00000000 _ZN6Pcint09_instanceE
+     /tmp/ccvREdri.s:66     .text._Z41__static_initialization_and_destruction_0v:00000008 .Loc.13
+     /tmp/ccvREdri.s:68     .text._Z41__static_initialization_and_destruction_0v:0000000a L0
+     /tmp/ccvREdri.s:74     .text._ZN6Pcint0D2Ev:00000000 _ZN6Pcint0D2Ev
+     /tmp/ccvREdri.s:77     .text._ZN6Pcint0D2Ev:00000000 .Loc.14
+     /tmp/ccvREdri.s:78     .text._ZN6Pcint0D2Ev:00000000 L0
+     /tmp/ccvREdri.s:84     .text._ZN6Pcint0D2Ev:00000000 .Loc.15
+     /tmp/ccvREdri.s:85     .text._ZN6Pcint0D2Ev:00000000 .Loc.16
+     /tmp/ccvREdri.s:86     .text._ZN6Pcint0D2Ev:00000000 .Loc.17
+     /tmp/ccvREdri.s:89     .text._ZN6Pcint0D2Ev:00000000 .Loc.18
+     /tmp/ccvREdri.s:91     .text._ZN6Pcint0D2Ev:00000002 L0
+     /tmp/ccvREdri.s:74     .text._ZN6Pcint0D2Ev:00000000 _ZN6Pcint0D1Ev
+     /tmp/ccvREdri.s:99     .text._ZN6Pcint011disablePinsENS_3PinE:00000000 _ZN6Pcint011disablePinsENS_3PinE
+     /tmp/ccvREdri.s:102    .text._ZN6Pcint011disablePinsENS_3PinE:00000000 .Loc.19
+     /tmp/ccvREdri.s:103    .text._ZN6Pcint011disablePinsENS_3PinE:00000000 L0
+     /tmp/ccvREdri.s:108    .text._ZN6Pcint011disablePinsENS_3PinE:00000000 .Loc.20
+     /tmp/ccvREdri.s:110    .text._ZN6Pcint011disablePinsENS_3PinE:00000002 .Loc.21
+     /tmp/ccvREdri.s:111    .text._ZN6Pcint011disablePinsENS_3PinE:00000002 .Loc.22
+     /tmp/ccvREdri.s:112    .text._ZN6Pcint011disablePinsENS_3PinE:00000002 .Loc.23
+     /tmp/ccvREdri.s:117    .text._ZN6Pcint011disablePinsENS_3PinE:00000008 .Loc.24
+     /tmp/ccvREdri.s:118    .text._ZN6Pcint011disablePinsENS_3PinE:00000008 .Loc.25
+     /tmp/ccvREdri.s:121    .text._ZN6Pcint011disablePinsENS_3PinE:0000000a .Loc.26
+     /tmp/ccvREdri.s:122    .text._ZN6Pcint011disablePinsENS_3PinE:0000000a .Loc.27
+     /tmp/ccvREdri.s:123    .text._ZN6Pcint011disablePinsENS_3PinE:0000000a .Loc.28
+     /tmp/ccvREdri.s:124    .text._ZN6Pcint011disablePinsENS_3PinE:0000000a .Loc.29
+     /tmp/ccvREdri.s:127    .text._ZN6Pcint011disablePinsENS_3PinE:0000000c .Loc.30
+     /tmp/ccvREdri.s:130    .text._ZN6Pcint011disablePinsENS_3PinE:0000000e .Loc.31
+     /tmp/ccvREdri.s:131    .text._ZN6Pcint011disablePinsENS_3PinE:0000000e .Loc.32
+     /tmp/ccvREdri.s:132    .text._ZN6Pcint011disablePinsENS_3PinE:0000000e .Loc.33
+     /tmp/ccvREdri.s:133    .text._ZN6Pcint011disablePinsENS_3PinE:0000000e .Loc.34
+     /tmp/ccvREdri.s:134    .text._ZN6Pcint011disablePinsENS_3PinE:0000000e .Loc.35
+GAS LISTING /tmp/ccvREdri.s 			page 30
 
 
-     /tmp/cct3URlK.s:136    .text._ZN6Pcint011disablePinsENS_3PinE:00000010 .Loc.36
-     /tmp/cct3URlK.s:137    .text._ZN6Pcint011disablePinsENS_3PinE:00000010 .Loc.37
-     /tmp/cct3URlK.s:139    .text._ZN6Pcint011disablePinsENS_3PinE:00000012 .Loc.38
-     /tmp/cct3URlK.s:140    .text._ZN6Pcint011disablePinsENS_3PinE:00000012 .Loc.39
-     /tmp/cct3URlK.s:143    .text._ZN6Pcint011disablePinsENS_3PinE:00000016 .Loc.40
-     /tmp/cct3URlK.s:144    .text._ZN6Pcint011disablePinsENS_3PinE:00000016 .Loc.41
-     /tmp/cct3URlK.s:145    .text._ZN6Pcint011disablePinsENS_3PinE:00000016 .Loc.42
-     /tmp/cct3URlK.s:149    .text._ZN6Pcint011disablePinsENS_3PinE:0000001a L0
-     /tmp/cct3URlK.s:155    .text._ZN6Pcint010enablePinsENS_3PinE:00000000 _ZN6Pcint010enablePinsENS_3PinE
-     /tmp/cct3URlK.s:158    .text._ZN6Pcint010enablePinsENS_3PinE:00000000 .Loc.43
-     /tmp/cct3URlK.s:159    .text._ZN6Pcint010enablePinsENS_3PinE:00000000 L0
-     /tmp/cct3URlK.s:164    .text._ZN6Pcint010enablePinsENS_3PinE:00000000 .Loc.44
-     /tmp/cct3URlK.s:166    .text._ZN6Pcint010enablePinsENS_3PinE:00000002 .Loc.45
-     /tmp/cct3URlK.s:167    .text._ZN6Pcint010enablePinsENS_3PinE:00000002 .Loc.46
-     /tmp/cct3URlK.s:168    .text._ZN6Pcint010enablePinsENS_3PinE:00000002 .Loc.47
-     /tmp/cct3URlK.s:173    .text._ZN6Pcint010enablePinsENS_3PinE:00000008 .Loc.48
-     /tmp/cct3URlK.s:174    .text._ZN6Pcint010enablePinsENS_3PinE:00000008 .Loc.49
-     /tmp/cct3URlK.s:177    .text._ZN6Pcint010enablePinsENS_3PinE:0000000a .Loc.50
-     /tmp/cct3URlK.s:178    .text._ZN6Pcint010enablePinsENS_3PinE:0000000a .Loc.51
-     /tmp/cct3URlK.s:179    .text._ZN6Pcint010enablePinsENS_3PinE:0000000a .Loc.52
-     /tmp/cct3URlK.s:180    .text._ZN6Pcint010enablePinsENS_3PinE:0000000a .Loc.53
-     /tmp/cct3URlK.s:183    .text._ZN6Pcint010enablePinsENS_3PinE:0000000c .Loc.54
-     /tmp/cct3URlK.s:184    .text._ZN6Pcint010enablePinsENS_3PinE:0000000c .Loc.55
-     /tmp/cct3URlK.s:185    .text._ZN6Pcint010enablePinsENS_3PinE:0000000c .Loc.56
-     /tmp/cct3URlK.s:186    .text._ZN6Pcint010enablePinsENS_3PinE:0000000c .Loc.57
-     /tmp/cct3URlK.s:187    .text._ZN6Pcint010enablePinsENS_3PinE:0000000c .Loc.58
-     /tmp/cct3URlK.s:189    .text._ZN6Pcint010enablePinsENS_3PinE:0000000e .Loc.59
-     /tmp/cct3URlK.s:190    .text._ZN6Pcint010enablePinsENS_3PinE:0000000e .Loc.60
-     /tmp/cct3URlK.s:192    .text._ZN6Pcint010enablePinsENS_3PinE:00000010 .Loc.61
-     /tmp/cct3URlK.s:193    .text._ZN6Pcint010enablePinsENS_3PinE:00000010 .Loc.62
-     /tmp/cct3URlK.s:196    .text._ZN6Pcint010enablePinsENS_3PinE:00000014 .Loc.63
-     /tmp/cct3URlK.s:197    .text._ZN6Pcint010enablePinsENS_3PinE:00000014 .Loc.64
-     /tmp/cct3URlK.s:198    .text._ZN6Pcint010enablePinsENS_3PinE:00000014 .Loc.65
-     /tmp/cct3URlK.s:202    .text._ZN6Pcint010enablePinsENS_3PinE:00000018 L0
-     /tmp/cct3URlK.s:208    .text._ZN6Pcint04initENS_3PinE:00000000 _ZN6Pcint04initENS_3PinE
-     /tmp/cct3URlK.s:211    .text._ZN6Pcint04initENS_3PinE:00000000 .Loc.66
-     /tmp/cct3URlK.s:212    .text._ZN6Pcint04initENS_3PinE:00000000 L0
-     /tmp/cct3URlK.s:217    .text._ZN6Pcint04initENS_3PinE:00000000 .Loc.67
-     /tmp/cct3URlK.s:219    .text._ZN6Pcint04initENS_3PinE:00000002 .Loc.68
-     /tmp/cct3URlK.s:220    .text._ZN6Pcint04initENS_3PinE:00000002 .Loc.69
-     /tmp/cct3URlK.s:221    .text._ZN6Pcint04initENS_3PinE:00000002 .Loc.70
-     /tmp/cct3URlK.s:226    .text._ZN6Pcint04initENS_3PinE:00000008 .Loc.71
-     /tmp/cct3URlK.s:227    .text._ZN6Pcint04initENS_3PinE:00000008 .Loc.72
-     /tmp/cct3URlK.s:228    .text._ZN6Pcint04initENS_3PinE:00000008 .Loc.73
-     /tmp/cct3URlK.s:229    .text._ZN6Pcint04initENS_3PinE:00000008 .Loc.74
-     /tmp/cct3URlK.s:230    .text._ZN6Pcint04initENS_3PinE:00000008 .Loc.75
-     /tmp/cct3URlK.s:231    .text._ZN6Pcint04initENS_3PinE:00000008 .Loc.76
-     /tmp/cct3URlK.s:233    .text._ZN6Pcint04initENS_3PinE:0000000a .Loc.77
-     /tmp/cct3URlK.s:234    .text._ZN6Pcint04initENS_3PinE:0000000a .Loc.78
-     /tmp/cct3URlK.s:236    .text._ZN6Pcint04initENS_3PinE:0000000c .Loc.79
-     /tmp/cct3URlK.s:237    .text._ZN6Pcint04initENS_3PinE:0000000c .Loc.80
-     /tmp/cct3URlK.s:241    .text._ZN6Pcint04initENS_3PinE:00000012 .Loc.81
-     /tmp/cct3URlK.s:242    .text._ZN6Pcint04initENS_3PinE:00000012 .Loc.82
-     /tmp/cct3URlK.s:245    .text._ZN6Pcint04initENS_3PinE:00000016 .Loc.83
-     /tmp/cct3URlK.s:246    .text._ZN6Pcint04initENS_3PinE:00000016 .Loc.84
-     /tmp/cct3URlK.s:247    .text._ZN6Pcint04initENS_3PinE:00000016 .Loc.85
-     /tmp/cct3URlK.s:251    .text._ZN6Pcint04initENS_3PinE:0000001a L0
-GAS LISTING /tmp/cct3URlK.s 			page 31
+     /tmp/ccvREdri.s:136    .text._ZN6Pcint011disablePinsENS_3PinE:00000010 .Loc.36
+     /tmp/ccvREdri.s:137    .text._ZN6Pcint011disablePinsENS_3PinE:00000010 .Loc.37
+     /tmp/ccvREdri.s:139    .text._ZN6Pcint011disablePinsENS_3PinE:00000012 .Loc.38
+     /tmp/ccvREdri.s:140    .text._ZN6Pcint011disablePinsENS_3PinE:00000012 .Loc.39
+     /tmp/ccvREdri.s:143    .text._ZN6Pcint011disablePinsENS_3PinE:00000016 .Loc.40
+     /tmp/ccvREdri.s:144    .text._ZN6Pcint011disablePinsENS_3PinE:00000016 .Loc.41
+     /tmp/ccvREdri.s:145    .text._ZN6Pcint011disablePinsENS_3PinE:00000016 .Loc.42
+     /tmp/ccvREdri.s:149    .text._ZN6Pcint011disablePinsENS_3PinE:0000001a L0
+     /tmp/ccvREdri.s:155    .text._ZN6Pcint010enablePinsENS_3PinE:00000000 _ZN6Pcint010enablePinsENS_3PinE
+     /tmp/ccvREdri.s:158    .text._ZN6Pcint010enablePinsENS_3PinE:00000000 .Loc.43
+     /tmp/ccvREdri.s:159    .text._ZN6Pcint010enablePinsENS_3PinE:00000000 L0
+     /tmp/ccvREdri.s:164    .text._ZN6Pcint010enablePinsENS_3PinE:00000000 .Loc.44
+     /tmp/ccvREdri.s:166    .text._ZN6Pcint010enablePinsENS_3PinE:00000002 .Loc.45
+     /tmp/ccvREdri.s:167    .text._ZN6Pcint010enablePinsENS_3PinE:00000002 .Loc.46
+     /tmp/ccvREdri.s:168    .text._ZN6Pcint010enablePinsENS_3PinE:00000002 .Loc.47
+     /tmp/ccvREdri.s:173    .text._ZN6Pcint010enablePinsENS_3PinE:00000008 .Loc.48
+     /tmp/ccvREdri.s:174    .text._ZN6Pcint010enablePinsENS_3PinE:00000008 .Loc.49
+     /tmp/ccvREdri.s:177    .text._ZN6Pcint010enablePinsENS_3PinE:0000000a .Loc.50
+     /tmp/ccvREdri.s:178    .text._ZN6Pcint010enablePinsENS_3PinE:0000000a .Loc.51
+     /tmp/ccvREdri.s:179    .text._ZN6Pcint010enablePinsENS_3PinE:0000000a .Loc.52
+     /tmp/ccvREdri.s:180    .text._ZN6Pcint010enablePinsENS_3PinE:0000000a .Loc.53
+     /tmp/ccvREdri.s:183    .text._ZN6Pcint010enablePinsENS_3PinE:0000000c .Loc.54
+     /tmp/ccvREdri.s:184    .text._ZN6Pcint010enablePinsENS_3PinE:0000000c .Loc.55
+     /tmp/ccvREdri.s:185    .text._ZN6Pcint010enablePinsENS_3PinE:0000000c .Loc.56
+     /tmp/ccvREdri.s:186    .text._ZN6Pcint010enablePinsENS_3PinE:0000000c .Loc.57
+     /tmp/ccvREdri.s:187    .text._ZN6Pcint010enablePinsENS_3PinE:0000000c .Loc.58
+     /tmp/ccvREdri.s:189    .text._ZN6Pcint010enablePinsENS_3PinE:0000000e .Loc.59
+     /tmp/ccvREdri.s:190    .text._ZN6Pcint010enablePinsENS_3PinE:0000000e .Loc.60
+     /tmp/ccvREdri.s:192    .text._ZN6Pcint010enablePinsENS_3PinE:00000010 .Loc.61
+     /tmp/ccvREdri.s:193    .text._ZN6Pcint010enablePinsENS_3PinE:00000010 .Loc.62
+     /tmp/ccvREdri.s:196    .text._ZN6Pcint010enablePinsENS_3PinE:00000014 .Loc.63
+     /tmp/ccvREdri.s:197    .text._ZN6Pcint010enablePinsENS_3PinE:00000014 .Loc.64
+     /tmp/ccvREdri.s:198    .text._ZN6Pcint010enablePinsENS_3PinE:00000014 .Loc.65
+     /tmp/ccvREdri.s:202    .text._ZN6Pcint010enablePinsENS_3PinE:00000018 L0
+     /tmp/ccvREdri.s:208    .text._ZN6Pcint04initENS_3PinE:00000000 _ZN6Pcint04initENS_3PinE
+     /tmp/ccvREdri.s:211    .text._ZN6Pcint04initENS_3PinE:00000000 .Loc.66
+     /tmp/ccvREdri.s:212    .text._ZN6Pcint04initENS_3PinE:00000000 L0
+     /tmp/ccvREdri.s:217    .text._ZN6Pcint04initENS_3PinE:00000000 .Loc.67
+     /tmp/ccvREdri.s:219    .text._ZN6Pcint04initENS_3PinE:00000002 .Loc.68
+     /tmp/ccvREdri.s:220    .text._ZN6Pcint04initENS_3PinE:00000002 .Loc.69
+     /tmp/ccvREdri.s:221    .text._ZN6Pcint04initENS_3PinE:00000002 .Loc.70
+     /tmp/ccvREdri.s:226    .text._ZN6Pcint04initENS_3PinE:00000008 .Loc.71
+     /tmp/ccvREdri.s:227    .text._ZN6Pcint04initENS_3PinE:00000008 .Loc.72
+     /tmp/ccvREdri.s:228    .text._ZN6Pcint04initENS_3PinE:00000008 .Loc.73
+     /tmp/ccvREdri.s:229    .text._ZN6Pcint04initENS_3PinE:00000008 .Loc.74
+     /tmp/ccvREdri.s:230    .text._ZN6Pcint04initENS_3PinE:00000008 .Loc.75
+     /tmp/ccvREdri.s:231    .text._ZN6Pcint04initENS_3PinE:00000008 .Loc.76
+     /tmp/ccvREdri.s:233    .text._ZN6Pcint04initENS_3PinE:0000000a .Loc.77
+     /tmp/ccvREdri.s:234    .text._ZN6Pcint04initENS_3PinE:0000000a .Loc.78
+     /tmp/ccvREdri.s:236    .text._ZN6Pcint04initENS_3PinE:0000000c .Loc.79
+     /tmp/ccvREdri.s:237    .text._ZN6Pcint04initENS_3PinE:0000000c .Loc.80
+     /tmp/ccvREdri.s:241    .text._ZN6Pcint04initENS_3PinE:00000012 .Loc.81
+     /tmp/ccvREdri.s:242    .text._ZN6Pcint04initENS_3PinE:00000012 .Loc.82
+     /tmp/ccvREdri.s:245    .text._ZN6Pcint04initENS_3PinE:00000016 .Loc.83
+     /tmp/ccvREdri.s:246    .text._ZN6Pcint04initENS_3PinE:00000016 .Loc.84
+     /tmp/ccvREdri.s:247    .text._ZN6Pcint04initENS_3PinE:00000016 .Loc.85
+     /tmp/ccvREdri.s:251    .text._ZN6Pcint04initENS_3PinE:0000001a L0
+GAS LISTING /tmp/ccvREdri.s 			page 31
 
 
-     /tmp/cct3URlK.s:257    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000000 _ZN6Pcint010setPinModeENS_3PinE7PinMode
-     /tmp/cct3URlK.s:260    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000000 .Loc.86
-     /tmp/cct3URlK.s:261    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000000 L0
-     /tmp/cct3URlK.s:266    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000000 .Loc.87
-     /tmp/cct3URlK.s:268    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .Loc.88
-     /tmp/cct3URlK.s:269    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .Loc.89
-     /tmp/cct3URlK.s:271    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .Loc.90
-     /tmp/cct3URlK.s:275    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .Loc.91
-     /tmp/cct3URlK.s:277    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .Loc.92
-     /tmp/cct3URlK.s:278    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .Loc.93
-     /tmp/cct3URlK.s:282    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .Loc.94
-     /tmp/cct3URlK.s:285    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .Loc.95
-     /tmp/cct3URlK.s:288    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .Loc.96
-     /tmp/cct3URlK.s:290    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .Loc.97
-     /tmp/cct3URlK.s:291    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .Loc.98
-     /tmp/cct3URlK.s:294    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .Loc.99
-     /tmp/cct3URlK.s:296    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000008 .Loc.100
-     /tmp/cct3URlK.s:297    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000008 .Loc.101
-     /tmp/cct3URlK.s:301    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .Loc.102
-     /tmp/cct3URlK.s:304    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .Loc.103
-     /tmp/cct3URlK.s:306    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .Loc.104
-     /tmp/cct3URlK.s:307    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .Loc.105
-     /tmp/cct3URlK.s:310    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .Loc.106
-     /tmp/cct3URlK.s:312    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000c .Loc.107
-     /tmp/cct3URlK.s:313    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000c .Loc.108
-     /tmp/cct3URlK.s:317    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .Loc.109
-     /tmp/cct3URlK.s:320    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .Loc.110
-     /tmp/cct3URlK.s:322    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .Loc.111
-     /tmp/cct3URlK.s:323    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .Loc.112
-     /tmp/cct3URlK.s:326    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .Loc.113
-     /tmp/cct3URlK.s:328    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000010 .Loc.114
-     /tmp/cct3URlK.s:329    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000010 .Loc.115
-     /tmp/cct3URlK.s:333    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .Loc.116
-     /tmp/cct3URlK.s:336    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .Loc.117
-     /tmp/cct3URlK.s:338    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .Loc.118
-     /tmp/cct3URlK.s:339    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .Loc.119
-     /tmp/cct3URlK.s:342    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .Loc.120
-     /tmp/cct3URlK.s:344    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000014 .Loc.121
-     /tmp/cct3URlK.s:345    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000014 .Loc.122
-     /tmp/cct3URlK.s:349    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .Loc.123
-     /tmp/cct3URlK.s:352    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .Loc.124
-     /tmp/cct3URlK.s:354    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .Loc.125
-     /tmp/cct3URlK.s:355    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .Loc.126
-     /tmp/cct3URlK.s:358    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .Loc.127
-     /tmp/cct3URlK.s:360    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000018 .Loc.128
-     /tmp/cct3URlK.s:361    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000018 .Loc.129
-     /tmp/cct3URlK.s:365    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .Loc.130
-     /tmp/cct3URlK.s:368    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .Loc.131
-     /tmp/cct3URlK.s:370    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .Loc.132
-     /tmp/cct3URlK.s:371    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .Loc.133
-     /tmp/cct3URlK.s:374    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .Loc.134
-     /tmp/cct3URlK.s:376    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001c .Loc.135
-     /tmp/cct3URlK.s:377    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001c .Loc.136
-     /tmp/cct3URlK.s:381    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001e .Loc.137
-     /tmp/cct3URlK.s:382    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001e .Loc.138
-     /tmp/cct3URlK.s:385    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000022 .Loc.139
-     /tmp/cct3URlK.s:390    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000026 .Loc.140
-GAS LISTING /tmp/cct3URlK.s 			page 32
+     /tmp/ccvREdri.s:257    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000000 _ZN6Pcint010setPinModeENS_3PinE7PinMode
+     /tmp/ccvREdri.s:260    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000000 .Loc.86
+     /tmp/ccvREdri.s:261    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000000 L0
+     /tmp/ccvREdri.s:266    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000000 .Loc.87
+     /tmp/ccvREdri.s:268    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .Loc.88
+     /tmp/ccvREdri.s:269    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .Loc.89
+     /tmp/ccvREdri.s:271    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .Loc.90
+     /tmp/ccvREdri.s:275    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .Loc.91
+     /tmp/ccvREdri.s:277    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .Loc.92
+     /tmp/ccvREdri.s:278    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .Loc.93
+     /tmp/ccvREdri.s:282    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .Loc.94
+     /tmp/ccvREdri.s:285    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .Loc.95
+     /tmp/ccvREdri.s:288    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .Loc.96
+     /tmp/ccvREdri.s:290    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .Loc.97
+     /tmp/ccvREdri.s:291    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .Loc.98
+     /tmp/ccvREdri.s:294    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .Loc.99
+     /tmp/ccvREdri.s:296    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000008 .Loc.100
+     /tmp/ccvREdri.s:297    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000008 .Loc.101
+     /tmp/ccvREdri.s:301    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .Loc.102
+     /tmp/ccvREdri.s:304    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .Loc.103
+     /tmp/ccvREdri.s:306    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .Loc.104
+     /tmp/ccvREdri.s:307    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .Loc.105
+     /tmp/ccvREdri.s:310    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .Loc.106
+     /tmp/ccvREdri.s:312    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000c .Loc.107
+     /tmp/ccvREdri.s:313    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000c .Loc.108
+     /tmp/ccvREdri.s:317    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .Loc.109
+     /tmp/ccvREdri.s:320    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .Loc.110
+     /tmp/ccvREdri.s:322    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .Loc.111
+     /tmp/ccvREdri.s:323    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .Loc.112
+     /tmp/ccvREdri.s:326    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .Loc.113
+     /tmp/ccvREdri.s:328    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000010 .Loc.114
+     /tmp/ccvREdri.s:329    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000010 .Loc.115
+     /tmp/ccvREdri.s:333    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .Loc.116
+     /tmp/ccvREdri.s:336    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .Loc.117
+     /tmp/ccvREdri.s:338    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .Loc.118
+     /tmp/ccvREdri.s:339    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .Loc.119
+     /tmp/ccvREdri.s:342    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .Loc.120
+     /tmp/ccvREdri.s:344    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000014 .Loc.121
+     /tmp/ccvREdri.s:345    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000014 .Loc.122
+     /tmp/ccvREdri.s:349    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .Loc.123
+     /tmp/ccvREdri.s:352    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .Loc.124
+     /tmp/ccvREdri.s:354    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .Loc.125
+     /tmp/ccvREdri.s:355    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .Loc.126
+     /tmp/ccvREdri.s:358    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .Loc.127
+     /tmp/ccvREdri.s:360    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000018 .Loc.128
+     /tmp/ccvREdri.s:361    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000018 .Loc.129
+     /tmp/ccvREdri.s:365    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .Loc.130
+     /tmp/ccvREdri.s:368    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .Loc.131
+     /tmp/ccvREdri.s:370    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .Loc.132
+     /tmp/ccvREdri.s:371    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .Loc.133
+     /tmp/ccvREdri.s:374    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .Loc.134
+     /tmp/ccvREdri.s:376    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001c .Loc.135
+     /tmp/ccvREdri.s:377    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001c .Loc.136
+     /tmp/ccvREdri.s:381    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001e .Loc.137
+     /tmp/ccvREdri.s:382    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001e .Loc.138
+     /tmp/ccvREdri.s:385    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000022 .Loc.139
+     /tmp/ccvREdri.s:390    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000026 .Loc.140
+GAS LISTING /tmp/ccvREdri.s 			page 32
 
 
-     /tmp/cct3URlK.s:391    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000026 .Loc.141
-     /tmp/cct3URlK.s:394    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000002a .Loc.142
-     /tmp/cct3URlK.s:395    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000002a .Loc.143
-     /tmp/cct3URlK.s:396    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000002a .Loc.144
-     /tmp/cct3URlK.s:402    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000002e .Loc.145
-     /tmp/cct3URlK.s:403    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000002e .Loc.146
-     /tmp/cct3URlK.s:406    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000030 .Loc.147
-     /tmp/cct3URlK.s:408    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000030 .Loc.148
-     /tmp/cct3URlK.s:415    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000003c .Loc.149
-     /tmp/cct3URlK.s:416    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000003c .Loc.150
-     /tmp/cct3URlK.s:417    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000003c .Loc.151
-     /tmp/cct3URlK.s:420    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000003e .Loc.152
-     /tmp/cct3URlK.s:423    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000040 .Loc.153
-     /tmp/cct3URlK.s:426    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000044 .Loc.154
-     /tmp/cct3URlK.s:427    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000044 .Loc.155
-     /tmp/cct3URlK.s:428    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000044 .Loc.156
-     /tmp/cct3URlK.s:432    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000004a .Loc.157
-     /tmp/cct3URlK.s:433    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000004a .Loc.158
-     /tmp/cct3URlK.s:437    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000004c .Loc.159
-     /tmp/cct3URlK.s:438    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000004c .Loc.160
-     /tmp/cct3URlK.s:439    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000004c .Loc.161
-     /tmp/cct3URlK.s:443    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000050 .Loc.162
-     /tmp/cct3URlK.s:447    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000056 .Loc.163
-     /tmp/cct3URlK.s:448    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000056 .Loc.164
-     /tmp/cct3URlK.s:449    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000056 .Loc.165
-     /tmp/cct3URlK.s:453    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000005c .Loc.166
-     /tmp/cct3URlK.s:454    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000005c .Loc.167
-     /tmp/cct3URlK.s:458    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000005e .Loc.168
-     /tmp/cct3URlK.s:459    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000005e .Loc.169
-     /tmp/cct3URlK.s:460    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000005e .Loc.170
-     /tmp/cct3URlK.s:463    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000060 .Loc.171
-     /tmp/cct3URlK.s:466    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000064 .Loc.172
-     /tmp/cct3URlK.s:467    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000064 .Loc.173
-     /tmp/cct3URlK.s:469    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000066 L0
-     /tmp/cct3URlK.s:475    .text._Z23pcint0InterruptCallbackv:00000000 _Z23pcint0InterruptCallbackv
-     /tmp/cct3URlK.s:477    .text._Z23pcint0InterruptCallbackv:00000000 .Loc.174
-     /tmp/cct3URlK.s:478    .text._Z23pcint0InterruptCallbackv:00000000 L0
-     /tmp/cct3URlK.s:483    .text._Z23pcint0InterruptCallbackv:00000000 .Loc.175
-     /tmp/cct3URlK.s:485    .text._Z23pcint0InterruptCallbackv:00000000 .Loc.176
-     /tmp/cct3URlK.s:487    .text._Z23pcint0InterruptCallbackv:00000002 L0
-     /tmp/cct3URlK.s:493    .text.__vector_3:00000000 __vector_3
-     /tmp/cct3URlK.s:495    .text.__vector_3:00000000 .Loc.177
-     /tmp/cct3URlK.s:496    .text.__vector_3:00000000 L0
-     /tmp/cct3URlK.s:560    .text.__vector_3:00000022 .Loc.178
-     /tmp/cct3URlK.s:561    .text.__vector_3:00000022 .Loc.179
-     /tmp/cct3URlK.s:565    .text.__vector_3:00000026 .Loc.180
-     /tmp/cct3URlK.s:583    .text.__vector_3:00000048 L0
-     /tmp/cct3URlK.s:588    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000000 _GLOBAL__sub_I__ZN6Pcint09_instanceE
-     /tmp/cct3URlK.s:590    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000000 .Loc.181
-     /tmp/cct3URlK.s:591    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000000 L0
-     /tmp/cct3URlK.s:596    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000000 .Loc.182
-     /tmp/cct3URlK.s:601    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000006 L0
-     /tmp/cct3URlK.s:50     .text._ZN6Pcint0C2Ev:00000010 L0
-     /tmp/cct3URlK.s:71     .text._Z41__static_initialization_and_destruction_0v:0000000a L0
-     /tmp/cct3URlK.s:96     .text._ZN6Pcint0D2Ev:00000002 L0
-     /tmp/cct3URlK.s:152    .text._ZN6Pcint011disablePinsENS_3PinE:0000001a L0
-     /tmp/cct3URlK.s:205    .text._ZN6Pcint010enablePinsENS_3PinE:00000018 L0
-GAS LISTING /tmp/cct3URlK.s 			page 33
+     /tmp/ccvREdri.s:391    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000026 .Loc.141
+     /tmp/ccvREdri.s:394    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000002a .Loc.142
+     /tmp/ccvREdri.s:395    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000002a .Loc.143
+     /tmp/ccvREdri.s:396    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000002a .Loc.144
+     /tmp/ccvREdri.s:402    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000002e .Loc.145
+     /tmp/ccvREdri.s:403    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000002e .Loc.146
+     /tmp/ccvREdri.s:406    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000030 .Loc.147
+     /tmp/ccvREdri.s:408    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000030 .Loc.148
+     /tmp/ccvREdri.s:415    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000003c .Loc.149
+     /tmp/ccvREdri.s:416    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000003c .Loc.150
+     /tmp/ccvREdri.s:417    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000003c .Loc.151
+     /tmp/ccvREdri.s:420    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000003e .Loc.152
+     /tmp/ccvREdri.s:423    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000040 .Loc.153
+     /tmp/ccvREdri.s:426    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000044 .Loc.154
+     /tmp/ccvREdri.s:427    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000044 .Loc.155
+     /tmp/ccvREdri.s:428    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000044 .Loc.156
+     /tmp/ccvREdri.s:432    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000004a .Loc.157
+     /tmp/ccvREdri.s:433    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000004a .Loc.158
+     /tmp/ccvREdri.s:437    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000004c .Loc.159
+     /tmp/ccvREdri.s:438    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000004c .Loc.160
+     /tmp/ccvREdri.s:439    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000004c .Loc.161
+     /tmp/ccvREdri.s:443    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000050 .Loc.162
+     /tmp/ccvREdri.s:447    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000056 .Loc.163
+     /tmp/ccvREdri.s:448    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000056 .Loc.164
+     /tmp/ccvREdri.s:449    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000056 .Loc.165
+     /tmp/ccvREdri.s:453    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000005c .Loc.166
+     /tmp/ccvREdri.s:454    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000005c .Loc.167
+     /tmp/ccvREdri.s:458    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000005e .Loc.168
+     /tmp/ccvREdri.s:459    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000005e .Loc.169
+     /tmp/ccvREdri.s:460    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000005e .Loc.170
+     /tmp/ccvREdri.s:463    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000060 .Loc.171
+     /tmp/ccvREdri.s:466    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000064 .Loc.172
+     /tmp/ccvREdri.s:467    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000064 .Loc.173
+     /tmp/ccvREdri.s:469    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000066 L0
+     /tmp/ccvREdri.s:475    .text._Z23pcint0InterruptCallbackv:00000000 _Z23pcint0InterruptCallbackv
+     /tmp/ccvREdri.s:477    .text._Z23pcint0InterruptCallbackv:00000000 .Loc.174
+     /tmp/ccvREdri.s:478    .text._Z23pcint0InterruptCallbackv:00000000 L0
+     /tmp/ccvREdri.s:483    .text._Z23pcint0InterruptCallbackv:00000000 .Loc.175
+     /tmp/ccvREdri.s:485    .text._Z23pcint0InterruptCallbackv:00000000 .Loc.176
+     /tmp/ccvREdri.s:487    .text._Z23pcint0InterruptCallbackv:00000002 L0
+     /tmp/ccvREdri.s:493    .text.__vector_3:00000000 __vector_3
+     /tmp/ccvREdri.s:495    .text.__vector_3:00000000 .Loc.177
+     /tmp/ccvREdri.s:496    .text.__vector_3:00000000 L0
+     /tmp/ccvREdri.s:560    .text.__vector_3:00000022 .Loc.178
+     /tmp/ccvREdri.s:561    .text.__vector_3:00000022 .Loc.179
+     /tmp/ccvREdri.s:565    .text.__vector_3:00000026 .Loc.180
+     /tmp/ccvREdri.s:583    .text.__vector_3:00000048 L0
+     /tmp/ccvREdri.s:588    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000000 _GLOBAL__sub_I__ZN6Pcint09_instanceE
+     /tmp/ccvREdri.s:590    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000000 .Loc.181
+     /tmp/ccvREdri.s:591    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000000 L0
+     /tmp/ccvREdri.s:596    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000000 .Loc.182
+     /tmp/ccvREdri.s:601    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000006 L0
+     /tmp/ccvREdri.s:50     .text._ZN6Pcint0C2Ev:00000010 L0
+     /tmp/ccvREdri.s:71     .text._Z41__static_initialization_and_destruction_0v:0000000a L0
+     /tmp/ccvREdri.s:96     .text._ZN6Pcint0D2Ev:00000002 L0
+     /tmp/ccvREdri.s:152    .text._ZN6Pcint011disablePinsENS_3PinE:0000001a L0
+     /tmp/ccvREdri.s:205    .text._ZN6Pcint010enablePinsENS_3PinE:00000018 L0
+GAS LISTING /tmp/ccvREdri.s 			page 33
 
 
-     /tmp/cct3URlK.s:254    .text._ZN6Pcint04initENS_3PinE:0000001a L0
-     /tmp/cct3URlK.s:472    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000066 L0
-     /tmp/cct3URlK.s:490    .text._Z23pcint0InterruptCallbackv:00000002 L0
-     /tmp/cct3URlK.s:586    .text.__vector_3:00000048 L0
-     /tmp/cct3URlK.s:605    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000006 L0
+     /tmp/ccvREdri.s:254    .text._ZN6Pcint04initENS_3PinE:0000001a L0
+     /tmp/ccvREdri.s:472    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000066 L0
+     /tmp/ccvREdri.s:490    .text._Z23pcint0InterruptCallbackv:00000002 L0
+     /tmp/ccvREdri.s:586    .text.__vector_3:00000048 L0
+     /tmp/ccvREdri.s:605    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000006 L0
                      .debug_frame:00000000 L0
-     /tmp/cct3URlK.s:401    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000002e .L19
-     /tmp/cct3URlK.s:407    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000030 .L15
-     /tmp/cct3URlK.s:436    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000004c .L17
-     /tmp/cct3URlK.s:457    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000005e .L18
-     /tmp/cct3URlK.s:389    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000026 .L16
-     /tmp/cct3URlK.s:1734   .debug_abbrev:00000000 .Ldebug_abbrev0
-     /tmp/cct3URlK.s:3222   .debug_ranges:00000000 .Ldebug_ranges0
-     /tmp/cct3URlK.s:3246   .debug_line:00000000 .Ldebug_line0
-     /tmp/cct3URlK.s:589    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000000 .LFB150
-     /tmp/cct3URlK.s:602    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000006 .LFE150
-     /tmp/cct3URlK.s:598    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000004 .LVL34
-     /tmp/cct3URlK.s:53     .text._Z41__static_initialization_and_destruction_0v:00000000 .LFB148
-     /tmp/cct3URlK.s:69     .text._Z41__static_initialization_and_destruction_0v:0000000a .LFE148
-     /tmp/cct3URlK.s:64     .text._Z41__static_initialization_and_destruction_0v:00000008 .LVL2
-     /tmp/cct3URlK.s:494    .text.__vector_3:00000000 .LFB147
-     /tmp/cct3URlK.s:584    .text.__vector_3:00000048 .LFE147
-     /tmp/cct3URlK.s:2580   .debug_loc:00000000 .LLST27
-     /tmp/cct3URlK.s:563    .text.__vector_3:00000026 .LVL33
-     /tmp/cct3URlK.s:476    .text._Z23pcint0InterruptCallbackv:00000000 .LFB146
-     /tmp/cct3URlK.s:488    .text._Z23pcint0InterruptCallbackv:00000002 .LFE146
-     /tmp/cct3URlK.s:259    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000000 .LFB145
-     /tmp/cct3URlK.s:470    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000066 .LFE145
-     /tmp/cct3URlK.s:2690   .debug_loc:000000db .LLST11
-     /tmp/cct3URlK.s:2673   .debug_loc:000000cb .LVUS11
-     /tmp/cct3URlK.s:2776   .debug_loc:0000016d .LLST12
-     /tmp/cct3URlK.s:2765   .debug_loc:00000163 .LVUS12
-     /tmp/cct3URlK.s:273    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .LBI20
-     /tmp/cct3URlK.s:272    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .LBB20
-     /tmp/cct3URlK.s:284    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .LBE20
-     /tmp/cct3URlK.s:2806   .debug_loc:000001b2 .LLST13
-     /tmp/cct3URlK.s:2803   .debug_loc:000001b0 .LVUS13
-     /tmp/cct3URlK.s:2816   .debug_loc:000001c7 .LLST14
-     /tmp/cct3URlK.s:2813   .debug_loc:000001c5 .LVUS14
-     /tmp/cct3URlK.s:287    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .LBI22
-     /tmp/cct3URlK.s:286    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .LBB22
-     /tmp/cct3URlK.s:293    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .LBE22
-     /tmp/cct3URlK.s:2827   .debug_loc:000001dd .LLST15
-     /tmp/cct3URlK.s:2824   .debug_loc:000001db .LVUS15
-     /tmp/cct3URlK.s:2837   .debug_loc:000001f2 .LLST16
-     /tmp/cct3URlK.s:2834   .debug_loc:000001f0 .LVUS16
-     /tmp/cct3URlK.s:303    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .LBI24
-     /tmp/cct3URlK.s:302    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .LBB24
-     /tmp/cct3URlK.s:309    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .LBE24
-     /tmp/cct3URlK.s:2848   .debug_loc:00000208 .LLST17
-     /tmp/cct3URlK.s:2845   .debug_loc:00000206 .LVUS17
-     /tmp/cct3URlK.s:2858   .debug_loc:0000021d .LLST18
-     /tmp/cct3URlK.s:2855   .debug_loc:0000021b .LVUS18
-     /tmp/cct3URlK.s:319    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .LBI26
-     /tmp/cct3URlK.s:318    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .LBB26
-     /tmp/cct3URlK.s:325    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .LBE26
-     /tmp/cct3URlK.s:2869   .debug_loc:00000233 .LLST19
-GAS LISTING /tmp/cct3URlK.s 			page 34
+     /tmp/ccvREdri.s:401    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000002e .L19
+     /tmp/ccvREdri.s:407    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000030 .L15
+     /tmp/ccvREdri.s:436    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000004c .L17
+     /tmp/ccvREdri.s:457    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000005e .L18
+     /tmp/ccvREdri.s:389    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000026 .L16
+     /tmp/ccvREdri.s:1734   .debug_abbrev:00000000 .Ldebug_abbrev0
+     /tmp/ccvREdri.s:3222   .debug_ranges:00000000 .Ldebug_ranges0
+     /tmp/ccvREdri.s:3246   .debug_line:00000000 .Ldebug_line0
+     /tmp/ccvREdri.s:589    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000000 .LFB150
+     /tmp/ccvREdri.s:602    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000006 .LFE150
+     /tmp/ccvREdri.s:598    .text._GLOBAL__sub_I__ZN6Pcint09_instanceE:00000004 .LVL34
+     /tmp/ccvREdri.s:53     .text._Z41__static_initialization_and_destruction_0v:00000000 .LFB148
+     /tmp/ccvREdri.s:69     .text._Z41__static_initialization_and_destruction_0v:0000000a .LFE148
+     /tmp/ccvREdri.s:64     .text._Z41__static_initialization_and_destruction_0v:00000008 .LVL2
+     /tmp/ccvREdri.s:494    .text.__vector_3:00000000 .LFB147
+     /tmp/ccvREdri.s:584    .text.__vector_3:00000048 .LFE147
+     /tmp/ccvREdri.s:2580   .debug_loc:00000000 .LLST27
+     /tmp/ccvREdri.s:563    .text.__vector_3:00000026 .LVL33
+     /tmp/ccvREdri.s:476    .text._Z23pcint0InterruptCallbackv:00000000 .LFB146
+     /tmp/ccvREdri.s:488    .text._Z23pcint0InterruptCallbackv:00000002 .LFE146
+     /tmp/ccvREdri.s:259    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000000 .LFB145
+     /tmp/ccvREdri.s:470    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000066 .LFE145
+     /tmp/ccvREdri.s:2690   .debug_loc:000000db .LLST11
+     /tmp/ccvREdri.s:2673   .debug_loc:000000cb .LVUS11
+     /tmp/ccvREdri.s:2776   .debug_loc:0000016d .LLST12
+     /tmp/ccvREdri.s:2765   .debug_loc:00000163 .LVUS12
+     /tmp/ccvREdri.s:273    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .LBI20
+     /tmp/ccvREdri.s:272    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .LBB20
+     /tmp/ccvREdri.s:284    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .LBE20
+     /tmp/ccvREdri.s:2806   .debug_loc:000001b2 .LLST13
+     /tmp/ccvREdri.s:2803   .debug_loc:000001b0 .LVUS13
+     /tmp/ccvREdri.s:2816   .debug_loc:000001c7 .LLST14
+     /tmp/ccvREdri.s:2813   .debug_loc:000001c5 .LVUS14
+     /tmp/ccvREdri.s:287    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .LBI22
+     /tmp/ccvREdri.s:286    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .LBB22
+     /tmp/ccvREdri.s:293    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .LBE22
+     /tmp/ccvREdri.s:2827   .debug_loc:000001dd .LLST15
+     /tmp/ccvREdri.s:2824   .debug_loc:000001db .LVUS15
+     /tmp/ccvREdri.s:2837   .debug_loc:000001f2 .LLST16
+     /tmp/ccvREdri.s:2834   .debug_loc:000001f0 .LVUS16
+     /tmp/ccvREdri.s:303    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .LBI24
+     /tmp/ccvREdri.s:302    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .LBB24
+     /tmp/ccvREdri.s:309    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .LBE24
+     /tmp/ccvREdri.s:2848   .debug_loc:00000208 .LLST17
+     /tmp/ccvREdri.s:2845   .debug_loc:00000206 .LVUS17
+     /tmp/ccvREdri.s:2858   .debug_loc:0000021d .LLST18
+     /tmp/ccvREdri.s:2855   .debug_loc:0000021b .LVUS18
+     /tmp/ccvREdri.s:319    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .LBI26
+     /tmp/ccvREdri.s:318    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .LBB26
+     /tmp/ccvREdri.s:325    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .LBE26
+     /tmp/ccvREdri.s:2869   .debug_loc:00000233 .LLST19
+GAS LISTING /tmp/ccvREdri.s 			page 34
 
 
-     /tmp/cct3URlK.s:2866   .debug_loc:00000231 .LVUS19
-     /tmp/cct3URlK.s:2879   .debug_loc:00000248 .LLST20
-     /tmp/cct3URlK.s:2876   .debug_loc:00000246 .LVUS20
-     /tmp/cct3URlK.s:335    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .LBI28
-     /tmp/cct3URlK.s:334    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .LBB28
-     /tmp/cct3URlK.s:341    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .LBE28
-     /tmp/cct3URlK.s:2890   .debug_loc:0000025e .LLST21
-     /tmp/cct3URlK.s:2887   .debug_loc:0000025c .LVUS21
-     /tmp/cct3URlK.s:2900   .debug_loc:00000273 .LLST22
-     /tmp/cct3URlK.s:2897   .debug_loc:00000271 .LVUS22
-     /tmp/cct3URlK.s:351    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .LBI30
-     /tmp/cct3URlK.s:350    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .LBB30
-     /tmp/cct3URlK.s:357    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .LBE30
-     /tmp/cct3URlK.s:2911   .debug_loc:00000289 .LLST23
-     /tmp/cct3URlK.s:2908   .debug_loc:00000287 .LVUS23
-     /tmp/cct3URlK.s:2921   .debug_loc:0000029e .LLST24
-     /tmp/cct3URlK.s:2918   .debug_loc:0000029c .LVUS24
-     /tmp/cct3URlK.s:367    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .LBI32
-     /tmp/cct3URlK.s:366    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .LBB32
-     /tmp/cct3URlK.s:373    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .LBE32
-     /tmp/cct3URlK.s:2933   .debug_loc:000002b5 .LLST25
-     /tmp/cct3URlK.s:2930   .debug_loc:000002b3 .LVUS25
-     /tmp/cct3URlK.s:2943   .debug_loc:000002ca .LLST26
-     /tmp/cct3URlK.s:2940   .debug_loc:000002c8 .LVUS26
-     /tmp/cct3URlK.s:210    .text._ZN6Pcint04initENS_3PinE:00000000 .LFB144
-     /tmp/cct3URlK.s:252    .text._ZN6Pcint04initENS_3PinE:0000001a .LFE144
-     /tmp/cct3URlK.s:2957   .debug_loc:000002e3 .LLST9
-     /tmp/cct3URlK.s:2952   .debug_loc:000002df .LVUS9
-     /tmp/cct3URlK.s:2981   .debug_loc:0000030d .LLST10
-     /tmp/cct3URlK.s:2978   .debug_loc:0000030b .LVUS10
-     /tmp/cct3URlK.s:157    .text._ZN6Pcint010enablePinsENS_3PinE:00000000 .LFB143
-     /tmp/cct3URlK.s:203    .text._ZN6Pcint010enablePinsENS_3PinE:00000018 .LFE143
-     /tmp/cct3URlK.s:2993   .debug_loc:00000324 .LLST5
-     /tmp/cct3URlK.s:2988   .debug_loc:00000320 .LVUS5
-     /tmp/cct3URlK.s:3019   .debug_loc:00000350 .LLST6
-     /tmp/cct3URlK.s:3014   .debug_loc:0000034c .LVUS6
-     /tmp/cct3URlK.s:3044   .debug_loc:0000037b .LLST7
-     /tmp/cct3URlK.s:3039   .debug_loc:00000377 .LVUS7
-     /tmp/cct3URlK.s:3061   .debug_loc:0000039e .LLST8
-     /tmp/cct3URlK.s:3056   .debug_loc:0000039a .LVUS8
-     /tmp/cct3URlK.s:101    .text._ZN6Pcint011disablePinsENS_3PinE:00000000 .LFB142
-     /tmp/cct3URlK.s:150    .text._ZN6Pcint011disablePinsENS_3PinE:0000001a .LFE142
-     /tmp/cct3URlK.s:3077   .debug_loc:000003c0 .LLST1
-     /tmp/cct3URlK.s:3072   .debug_loc:000003bc .LVUS1
-     /tmp/cct3URlK.s:3105   .debug_loc:000003ee .LLST2
-     /tmp/cct3URlK.s:3098   .debug_loc:000003e8 .LVUS2
-     /tmp/cct3URlK.s:3137   .debug_loc:00000427 .LLST3
-     /tmp/cct3URlK.s:3132   .debug_loc:00000423 .LVUS3
-     /tmp/cct3URlK.s:3154   .debug_loc:0000044a .LLST4
-     /tmp/cct3URlK.s:3149   .debug_loc:00000446 .LVUS4
-     /tmp/cct3URlK.s:76     .text._ZN6Pcint0D2Ev:00000000 .LFB140
-     /tmp/cct3URlK.s:92     .text._ZN6Pcint0D2Ev:00000002 .LFE140
-     /tmp/cct3URlK.s:16     .text._ZN6Pcint0C2Ev:00000000 .LFB137
-     /tmp/cct3URlK.s:46     .text._ZN6Pcint0C2Ev:00000010 .LFE137
-     /tmp/cct3URlK.s:3170   .debug_loc:0000046c .LLST0
-     /tmp/cct3URlK.s:3165   .debug_loc:00000468 .LVUS0
-     /tmp/cct3URlK.s:498    .text.__vector_3:00000002 .LCFI0
-GAS LISTING /tmp/cct3URlK.s 			page 35
+     /tmp/ccvREdri.s:2866   .debug_loc:00000231 .LVUS19
+     /tmp/ccvREdri.s:2879   .debug_loc:00000248 .LLST20
+     /tmp/ccvREdri.s:2876   .debug_loc:00000246 .LVUS20
+     /tmp/ccvREdri.s:335    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .LBI28
+     /tmp/ccvREdri.s:334    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .LBB28
+     /tmp/ccvREdri.s:341    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .LBE28
+     /tmp/ccvREdri.s:2890   .debug_loc:0000025e .LLST21
+     /tmp/ccvREdri.s:2887   .debug_loc:0000025c .LVUS21
+     /tmp/ccvREdri.s:2900   .debug_loc:00000273 .LLST22
+     /tmp/ccvREdri.s:2897   .debug_loc:00000271 .LVUS22
+     /tmp/ccvREdri.s:351    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .LBI30
+     /tmp/ccvREdri.s:350    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .LBB30
+     /tmp/ccvREdri.s:357    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .LBE30
+     /tmp/ccvREdri.s:2911   .debug_loc:00000289 .LLST23
+     /tmp/ccvREdri.s:2908   .debug_loc:00000287 .LVUS23
+     /tmp/ccvREdri.s:2921   .debug_loc:0000029e .LLST24
+     /tmp/ccvREdri.s:2918   .debug_loc:0000029c .LVUS24
+     /tmp/ccvREdri.s:367    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .LBI32
+     /tmp/ccvREdri.s:366    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .LBB32
+     /tmp/ccvREdri.s:373    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .LBE32
+     /tmp/ccvREdri.s:2933   .debug_loc:000002b5 .LLST25
+     /tmp/ccvREdri.s:2930   .debug_loc:000002b3 .LVUS25
+     /tmp/ccvREdri.s:2943   .debug_loc:000002ca .LLST26
+     /tmp/ccvREdri.s:2940   .debug_loc:000002c8 .LVUS26
+     /tmp/ccvREdri.s:210    .text._ZN6Pcint04initENS_3PinE:00000000 .LFB144
+     /tmp/ccvREdri.s:252    .text._ZN6Pcint04initENS_3PinE:0000001a .LFE144
+     /tmp/ccvREdri.s:2957   .debug_loc:000002e3 .LLST9
+     /tmp/ccvREdri.s:2952   .debug_loc:000002df .LVUS9
+     /tmp/ccvREdri.s:2981   .debug_loc:0000030d .LLST10
+     /tmp/ccvREdri.s:2978   .debug_loc:0000030b .LVUS10
+     /tmp/ccvREdri.s:157    .text._ZN6Pcint010enablePinsENS_3PinE:00000000 .LFB143
+     /tmp/ccvREdri.s:203    .text._ZN6Pcint010enablePinsENS_3PinE:00000018 .LFE143
+     /tmp/ccvREdri.s:2993   .debug_loc:00000324 .LLST5
+     /tmp/ccvREdri.s:2988   .debug_loc:00000320 .LVUS5
+     /tmp/ccvREdri.s:3019   .debug_loc:00000350 .LLST6
+     /tmp/ccvREdri.s:3014   .debug_loc:0000034c .LVUS6
+     /tmp/ccvREdri.s:3044   .debug_loc:0000037b .LLST7
+     /tmp/ccvREdri.s:3039   .debug_loc:00000377 .LVUS7
+     /tmp/ccvREdri.s:3061   .debug_loc:0000039e .LLST8
+     /tmp/ccvREdri.s:3056   .debug_loc:0000039a .LVUS8
+     /tmp/ccvREdri.s:101    .text._ZN6Pcint011disablePinsENS_3PinE:00000000 .LFB142
+     /tmp/ccvREdri.s:150    .text._ZN6Pcint011disablePinsENS_3PinE:0000001a .LFE142
+     /tmp/ccvREdri.s:3077   .debug_loc:000003c0 .LLST1
+     /tmp/ccvREdri.s:3072   .debug_loc:000003bc .LVUS1
+     /tmp/ccvREdri.s:3105   .debug_loc:000003ee .LLST2
+     /tmp/ccvREdri.s:3098   .debug_loc:000003e8 .LVUS2
+     /tmp/ccvREdri.s:3137   .debug_loc:00000427 .LLST3
+     /tmp/ccvREdri.s:3132   .debug_loc:00000423 .LVUS3
+     /tmp/ccvREdri.s:3154   .debug_loc:0000044a .LLST4
+     /tmp/ccvREdri.s:3149   .debug_loc:00000446 .LVUS4
+     /tmp/ccvREdri.s:76     .text._ZN6Pcint0D2Ev:00000000 .LFB140
+     /tmp/ccvREdri.s:92     .text._ZN6Pcint0D2Ev:00000002 .LFE140
+     /tmp/ccvREdri.s:16     .text._ZN6Pcint0C2Ev:00000000 .LFB137
+     /tmp/ccvREdri.s:46     .text._ZN6Pcint0C2Ev:00000010 .LFE137
+     /tmp/ccvREdri.s:3170   .debug_loc:0000046c .LLST0
+     /tmp/ccvREdri.s:3165   .debug_loc:00000468 .LVUS0
+     /tmp/ccvREdri.s:498    .text.__vector_3:00000002 .LCFI0
+GAS LISTING /tmp/ccvREdri.s 			page 35
 
 
-     /tmp/cct3URlK.s:502    .text.__vector_3:00000004 .LCFI1
-     /tmp/cct3URlK.s:509    .text.__vector_3:0000000c .LCFI2
-     /tmp/cct3URlK.s:513    .text.__vector_3:0000000e .LCFI3
-     /tmp/cct3URlK.s:517    .text.__vector_3:00000010 .LCFI4
-     /tmp/cct3URlK.s:521    .text.__vector_3:00000012 .LCFI5
-     /tmp/cct3URlK.s:525    .text.__vector_3:00000014 .LCFI6
-     /tmp/cct3URlK.s:529    .text.__vector_3:00000016 .LCFI7
-     /tmp/cct3URlK.s:533    .text.__vector_3:00000018 .LCFI8
-     /tmp/cct3URlK.s:537    .text.__vector_3:0000001a .LCFI9
-     /tmp/cct3URlK.s:541    .text.__vector_3:0000001c .LCFI10
-     /tmp/cct3URlK.s:545    .text.__vector_3:0000001e .LCFI11
-     /tmp/cct3URlK.s:549    .text.__vector_3:00000020 .LCFI12
-     /tmp/cct3URlK.s:553    .text.__vector_3:00000022 .LCFI13
-     /tmp/cct3URlK.s:258    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000000 .LVL15
-     /tmp/cct3URlK.s:388    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000026 .LVL24
-     /tmp/cct3URlK.s:400    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000002e .LVL25
-     /tmp/cct3URlK.s:419    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000003e .LVL27
-     /tmp/cct3URlK.s:435    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000004c .LVL29
-     /tmp/cct3URlK.s:442    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000050 .LVL30
-     /tmp/cct3URlK.s:456    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000005e .LVL31
-     /tmp/cct3URlK.s:462    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000060 .LVL32
-     /tmp/cct3URlK.s:270    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .LVL16
-     /tmp/cct3URlK.s:281    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .LVL17
-     /tmp/cct3URlK.s:422    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000040 .LVL28
-     /tmp/cct3URlK.s:299    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .LVL18
-     /tmp/cct3URlK.s:315    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .LVL19
-     /tmp/cct3URlK.s:331    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .LVL20
-     /tmp/cct3URlK.s:347    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .LVL21
-     /tmp/cct3URlK.s:363    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .LVL22
-     /tmp/cct3URlK.s:209    .text._ZN6Pcint04initENS_3PinE:00000000 .LVL13
-     /tmp/cct3URlK.s:225    .text._ZN6Pcint04initENS_3PinE:00000008 .LVL14
-     /tmp/cct3URlK.s:156    .text._ZN6Pcint010enablePinsENS_3PinE:00000000 .LVL9
-     /tmp/cct3URlK.s:172    .text._ZN6Pcint010enablePinsENS_3PinE:00000008 .LVL10
-     /tmp/cct3URlK.s:182    .text._ZN6Pcint010enablePinsENS_3PinE:0000000c .LVL12
-     /tmp/cct3URlK.s:176    .text._ZN6Pcint010enablePinsENS_3PinE:0000000a .LVL11
-     /tmp/cct3URlK.s:100    .text._ZN6Pcint011disablePinsENS_3PinE:00000000 .LVL4
-     /tmp/cct3URlK.s:116    .text._ZN6Pcint011disablePinsENS_3PinE:00000008 .LVL5
-     /tmp/cct3URlK.s:126    .text._ZN6Pcint011disablePinsENS_3PinE:0000000c .LVL7
-     /tmp/cct3URlK.s:129    .text._ZN6Pcint011disablePinsENS_3PinE:0000000e .LVL8
-     /tmp/cct3URlK.s:120    .text._ZN6Pcint011disablePinsENS_3PinE:0000000a .LVL6
-     /tmp/cct3URlK.s:15     .text._ZN6Pcint0C2Ev:00000000 .LVL0
-     /tmp/cct3URlK.s:28     .text._ZN6Pcint0C2Ev:00000004 .LVL1
-     /tmp/cct3URlK.s:620    .debug_info:00000000 .Ldebug_info0
+     /tmp/ccvREdri.s:502    .text.__vector_3:00000004 .LCFI1
+     /tmp/ccvREdri.s:509    .text.__vector_3:0000000c .LCFI2
+     /tmp/ccvREdri.s:513    .text.__vector_3:0000000e .LCFI3
+     /tmp/ccvREdri.s:517    .text.__vector_3:00000010 .LCFI4
+     /tmp/ccvREdri.s:521    .text.__vector_3:00000012 .LCFI5
+     /tmp/ccvREdri.s:525    .text.__vector_3:00000014 .LCFI6
+     /tmp/ccvREdri.s:529    .text.__vector_3:00000016 .LCFI7
+     /tmp/ccvREdri.s:533    .text.__vector_3:00000018 .LCFI8
+     /tmp/ccvREdri.s:537    .text.__vector_3:0000001a .LCFI9
+     /tmp/ccvREdri.s:541    .text.__vector_3:0000001c .LCFI10
+     /tmp/ccvREdri.s:545    .text.__vector_3:0000001e .LCFI11
+     /tmp/ccvREdri.s:549    .text.__vector_3:00000020 .LCFI12
+     /tmp/ccvREdri.s:553    .text.__vector_3:00000022 .LCFI13
+     /tmp/ccvREdri.s:258    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000000 .LVL15
+     /tmp/ccvREdri.s:388    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000026 .LVL24
+     /tmp/ccvREdri.s:400    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000002e .LVL25
+     /tmp/ccvREdri.s:419    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000003e .LVL27
+     /tmp/ccvREdri.s:435    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000004c .LVL29
+     /tmp/ccvREdri.s:442    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000050 .LVL30
+     /tmp/ccvREdri.s:456    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000005e .LVL31
+     /tmp/ccvREdri.s:462    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000060 .LVL32
+     /tmp/ccvREdri.s:270    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000002 .LVL16
+     /tmp/ccvREdri.s:281    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000006 .LVL17
+     /tmp/ccvREdri.s:422    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000040 .LVL28
+     /tmp/ccvREdri.s:299    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000a .LVL18
+     /tmp/ccvREdri.s:315    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000000e .LVL19
+     /tmp/ccvREdri.s:331    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000012 .LVL20
+     /tmp/ccvREdri.s:347    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:00000016 .LVL21
+     /tmp/ccvREdri.s:363    .text._ZN6Pcint010setPinModeENS_3PinE7PinMode:0000001a .LVL22
+     /tmp/ccvREdri.s:209    .text._ZN6Pcint04initENS_3PinE:00000000 .LVL13
+     /tmp/ccvREdri.s:225    .text._ZN6Pcint04initENS_3PinE:00000008 .LVL14
+     /tmp/ccvREdri.s:156    .text._ZN6Pcint010enablePinsENS_3PinE:00000000 .LVL9
+     /tmp/ccvREdri.s:172    .text._ZN6Pcint010enablePinsENS_3PinE:00000008 .LVL10
+     /tmp/ccvREdri.s:182    .text._ZN6Pcint010enablePinsENS_3PinE:0000000c .LVL12
+     /tmp/ccvREdri.s:176    .text._ZN6Pcint010enablePinsENS_3PinE:0000000a .LVL11
+     /tmp/ccvREdri.s:100    .text._ZN6Pcint011disablePinsENS_3PinE:00000000 .LVL4
+     /tmp/ccvREdri.s:116    .text._ZN6Pcint011disablePinsENS_3PinE:00000008 .LVL5
+     /tmp/ccvREdri.s:126    .text._ZN6Pcint011disablePinsENS_3PinE:0000000c .LVL7
+     /tmp/ccvREdri.s:129    .text._ZN6Pcint011disablePinsENS_3PinE:0000000e .LVL8
+     /tmp/ccvREdri.s:120    .text._ZN6Pcint011disablePinsENS_3PinE:0000000a .LVL6
+     /tmp/ccvREdri.s:15     .text._ZN6Pcint0C2Ev:00000000 .LVL0
+     /tmp/ccvREdri.s:28     .text._ZN6Pcint0C2Ev:00000004 .LVL1
+     /tmp/ccvREdri.s:620    .debug_info:00000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 __do_global_ctors

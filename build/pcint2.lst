@@ -1,4 +1,4 @@
-GAS LISTING /tmp/ccihJwii.s 			page 1
+GAS LISTING /tmp/ccw5lnVr.s 			page 1
 
 
    1               		.file	"pcint2.cpp"
@@ -58,7 +58,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
   40:funsape/peripheral/pcint2.cpp **** //!
   41:funsape/peripheral/pcint2.cpp **** 
   42:funsape/peripheral/pcint2.cpp **** // =============================================================================
-GAS LISTING /tmp/ccihJwii.s 			page 2
+GAS LISTING /tmp/ccw5lnVr.s 			page 2
 
 
   43:funsape/peripheral/pcint2.cpp **** // System file dependencies
@@ -118,7 +118,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
   20               	/* frame size = 0 */
   21               	/* stack size = 0 */
   22               	.L__stack_usage = 0
-GAS LISTING /tmp/ccihJwii.s 			page 3
+GAS LISTING /tmp/ccw5lnVr.s 			page 3
 
 
   23               		.loc 1 93 1 is_stmt 0 view .LVU1
@@ -178,7 +178,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
  119:funsape/peripheral/pcint2.cpp **** // =============================================================================
  120:funsape/peripheral/pcint2.cpp **** 
  121:funsape/peripheral/pcint2.cpp **** //     ///////////////////     CONTROL AND STATUS     ///////////////////     //
-GAS LISTING /tmp/ccihJwii.s 			page 4
+GAS LISTING /tmp/ccw5lnVr.s 			page 4
 
 
  122:funsape/peripheral/pcint2.cpp **** 
@@ -238,7 +238,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
  176:funsape/peripheral/pcint2.cpp **** {
  177:funsape/peripheral/pcint2.cpp ****     // Mark passage for debugging purpose
  178:funsape/peripheral/pcint2.cpp ****     debugMark(PSTR("Pcint2::init(const Pcint2::Pin)"), Debug::CodeIndex::PCINT2_MODULE);
-GAS LISTING /tmp/ccihJwii.s 			page 5
+GAS LISTING /tmp/ccw5lnVr.s 			page 5
 
 
  179:funsape/peripheral/pcint2.cpp **** 
@@ -298,7 +298,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
  233:funsape/peripheral/pcint2.cpp **** #endif
  234:funsape/peripheral/pcint2.cpp **** #if defined(MCU_PCINT2_PIN_21_EXISTS)
  235:funsape/peripheral/pcint2.cpp ****     if((bool_t)(pinList_p & Pcint2::Pin::PIN_PCINT21)) {
-GAS LISTING /tmp/ccihJwii.s 			page 6
+GAS LISTING /tmp/ccw5lnVr.s 			page 6
 
 
  236:funsape/peripheral/pcint2.cpp ****         auxPinMask |= (1 << MCU_PCINT2_GPIO_PCINT21_BIT);
@@ -358,7 +358,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
  290:funsape/peripheral/pcint2.cpp **** 
  291:funsape/peripheral/pcint2.cpp **** // =============================================================================
  292:funsape/peripheral/pcint2.cpp **** // Interrupt callback functions
-GAS LISTING /tmp/ccihJwii.s 			page 7
+GAS LISTING /tmp/ccw5lnVr.s 			page 7
 
 
  293:funsape/peripheral/pcint2.cpp **** // =============================================================================
@@ -418,7 +418,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
   86               		.loc 1 114 5 view .LVU17
   87               	/* epilogue start */
   88               	.LBE19:
-GAS LISTING /tmp/ccihJwii.s 			page 8
+GAS LISTING /tmp/ccw5lnVr.s 			page 8
 
 
  115:funsape/peripheral/pcint2.cpp **** 
@@ -478,7 +478,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
  135:funsape/peripheral/pcint2.cpp **** 
  131               		.loc 1 135 5 view .LVU32
  135:funsape/peripheral/pcint2.cpp **** 
-GAS LISTING /tmp/ccihJwii.s 			page 9
+GAS LISTING /tmp/ccw5lnVr.s 			page 9
 
 
  132               		.loc 1 135 5 view .LVU33
@@ -538,7 +538,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
  173               		.loc 1 156 5 is_stmt 1 view .LVU48
  156:funsape/peripheral/pcint2.cpp **** 
  174               		.loc 1 156 42 is_stmt 0 view .LVU49
-GAS LISTING /tmp/ccihJwii.s 			page 10
+GAS LISTING /tmp/ccw5lnVr.s 			page 10
 
 
  175 0008 9381      		ldd r25,Z+3
@@ -598,7 +598,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
  214               	/* frame size = 0 */
  215               	/* stack size = 0 */
  216               	.L__stack_usage = 0
-GAS LISTING /tmp/ccihJwii.s 			page 11
+GAS LISTING /tmp/ccw5lnVr.s 			page 11
 
 
  176:funsape/peripheral/pcint2.cpp ****     // Mark passage for debugging purpose
@@ -658,7 +658,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
  252               	.LFE144:
  254               		.section	.text._ZN6Pcint210setPinModeENS_3PinE7PinMode,"ax",@progbits
  255               	.global	_ZN6Pcint210setPinModeENS_3PinE7PinMode
-GAS LISTING /tmp/ccihJwii.s 			page 12
+GAS LISTING /tmp/ccw5lnVr.s 			page 12
 
 
  257               	_ZN6Pcint210setPinModeENS_3PinE7PinMode:
@@ -718,7 +718,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
   32:funsape/peripheral/pcint2.hpp **** //!     IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
   33:funsape/peripheral/pcint2.hpp **** //!     FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
   34:funsape/peripheral/pcint2.hpp **** //!     THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
-GAS LISTING /tmp/ccihJwii.s 			page 13
+GAS LISTING /tmp/ccw5lnVr.s 			page 13
 
 
   35:funsape/peripheral/pcint2.hpp **** //!     OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
@@ -778,7 +778,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
   89:funsape/peripheral/pcint2.hpp **** // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   90:funsape/peripheral/pcint2.hpp **** 
   91:funsape/peripheral/pcint2.hpp **** //!
-GAS LISTING /tmp/ccihJwii.s 			page 14
+GAS LISTING /tmp/ccw5lnVr.s 			page 14
 
 
   92:funsape/peripheral/pcint2.hpp **** //! @addtogroup     Peripherals
@@ -838,7 +838,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
  146:funsape/peripheral/pcint2.hpp **** 
  147:funsape/peripheral/pcint2.hpp **** //!
  148:funsape/peripheral/pcint2.hpp **** //! @brief          Pcint2 class
-GAS LISTING /tmp/ccihJwii.s 			page 15
+GAS LISTING /tmp/ccw5lnVr.s 			page 15
 
 
  149:funsape/peripheral/pcint2.hpp **** //! @details        This class manages the Pin Change Interrupt 2 (PCINT2)
@@ -898,7 +898,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
  203:funsape/peripheral/pcint2.hpp ****     // -------------------------------------------------------------------------
  204:funsape/peripheral/pcint2.hpp ****     // Constructors ------------------------------------------------------------
  205:funsape/peripheral/pcint2.hpp **** 
-GAS LISTING /tmp/ccihJwii.s 			page 16
+GAS LISTING /tmp/ccw5lnVr.s 			page 16
 
 
  206:funsape/peripheral/pcint2.hpp **** public:
@@ -958,7 +958,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
  260:funsape/peripheral/pcint2.hpp ****     // -------------------------------------------------------------------------
  261:funsape/peripheral/pcint2.hpp ****     // Methods - class own methods ---------------------------------------------
  262:funsape/peripheral/pcint2.hpp **** 
-GAS LISTING /tmp/ccihJwii.s 			page 17
+GAS LISTING /tmp/ccw5lnVr.s 			page 17
 
 
  263:funsape/peripheral/pcint2.hpp **** public:
@@ -1018,7 +1018,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
  317:funsape/peripheral/pcint2.hpp ****     bool_t enablePins(
  318:funsape/peripheral/pcint2.hpp ****             const Pcint2::Pin enablePins_p
  319:funsape/peripheral/pcint2.hpp ****     );
-GAS LISTING /tmp/ccihJwii.s 			page 18
+GAS LISTING /tmp/ccw5lnVr.s 			page 18
 
 
  320:funsape/peripheral/pcint2.hpp **** 
@@ -1078,7 +1078,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
  374:funsape/peripheral/pcint2.hpp **** 
  375:funsape/peripheral/pcint2.hpp ****     //     //////////////////////    INTERRUPT     //////////////////////     //
  376:funsape/peripheral/pcint2.hpp **** 
-GAS LISTING /tmp/ccihJwii.s 			page 19
+GAS LISTING /tmp/ccw5lnVr.s 			page 19
 
 
  377:funsape/peripheral/pcint2.hpp ****     //!
@@ -1138,7 +1138,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
  431:funsape/peripheral/pcint2.hpp **** 
  432:funsape/peripheral/pcint2.hpp **** }; // class Pcint2
  433:funsape/peripheral/pcint2.hpp **** 
-GAS LISTING /tmp/ccihJwii.s 			page 20
+GAS LISTING /tmp/ccw5lnVr.s 			page 20
 
 
  434:funsape/peripheral/pcint2.hpp **** // =============================================================================
@@ -1198,7 +1198,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
  488:funsape/peripheral/pcint2.hpp **** 
  489:funsape/peripheral/pcint2.hpp **** Pcint2::Pin inlined operator&(Pcint2::Pin a, Pcint2::Pin b)
  275               		.loc 2 489 21 view .LVU91
-GAS LISTING /tmp/ccihJwii.s 			page 21
+GAS LISTING /tmp/ccw5lnVr.s 			page 21
 
 
  276               	.LBB21:
@@ -1258,7 +1258,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
  317               		.loc 1 225 5 is_stmt 1 view .LVU109
  318               	.LBB26:
  319               	.LBI26:
-GAS LISTING /tmp/ccihJwii.s 			page 22
+GAS LISTING /tmp/ccw5lnVr.s 			page 22
 
 
  489:funsape/peripheral/pcint2.hpp **** {
@@ -1318,7 +1318,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
  236:funsape/peripheral/pcint2.cpp ****     }
  361               		.loc 1 236 20 is_stmt 0 view .LVU129
  362 0018 9062      		ori r25,lo8(32)
-GAS LISTING /tmp/ccihJwii.s 			page 23
+GAS LISTING /tmp/ccw5lnVr.s 			page 23
 
 
  363               	.LVL22:
@@ -1378,7 +1378,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
  246:funsape/peripheral/pcint2.cpp ****     }
  403               		.loc 1 246 20 is_stmt 0 view .LVU146
  404 002e 9068      		ori r25,lo8(-128)
-GAS LISTING /tmp/ccihJwii.s 			page 24
+GAS LISTING /tmp/ccw5lnVr.s 			page 24
 
 
  405               	.LVL26:
@@ -1438,7 +1438,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
  443               		.loc 1 258 13 is_stmt 0 view .LVU162
  444 0050 8095      		com r24
  445 0052 8223      		and r24,r18
-GAS LISTING /tmp/ccihJwii.s 			page 25
+GAS LISTING /tmp/ccw5lnVr.s 			page 25
 
 
  446 0054 8AB9      		out 0xa,r24
@@ -1498,7 +1498,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
  488               	.LFE146:
  490               		.section	.text.__vector_5,"ax",@progbits
  491               	.global	__vector_5
-GAS LISTING /tmp/ccihJwii.s 			page 26
+GAS LISTING /tmp/ccw5lnVr.s 			page 26
 
 
  493               	__vector_5:
@@ -1558,7 +1558,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
  546               		.cfi_def_cfa_offset 14
  547               		.cfi_offset 27, -13
  548 001e EF93      		push r30
-GAS LISTING /tmp/ccihJwii.s 			page 27
+GAS LISTING /tmp/ccw5lnVr.s 			page 27
 
 
  549               	.LCFI12:
@@ -1618,7 +1618,7 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
  604               		.global __do_global_ctors
  605               		.section .ctors,"a",@progbits
  606               		.p2align	1
-GAS LISTING /tmp/ccihJwii.s 			page 28
+GAS LISTING /tmp/ccw5lnVr.s 			page 28
 
 
  607 0000 0000      		.word	gs(_GLOBAL__sub_I__ZN6Pcint29_instanceE)
@@ -1631,412 +1631,412 @@ GAS LISTING /tmp/ccihJwii.s 			page 1
  616               		.file 3 "/usr/avr/include/stdint.h"
  617               		.file 4 "funsape/peripheral/../config/atmega328p.hpp"
  618               		.file 5 "funsape/peripheral/../globalDefines.hpp"
-GAS LISTING /tmp/ccihJwii.s 			page 29
+GAS LISTING /tmp/ccw5lnVr.s 			page 29
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 pcint2.cpp
-     /tmp/ccihJwii.s:2      *ABS*:0000003e __SP_H__
-     /tmp/ccihJwii.s:3      *ABS*:0000003d __SP_L__
-     /tmp/ccihJwii.s:4      *ABS*:0000003f __SREG__
-     /tmp/ccihJwii.s:5      *ABS*:00000000 __tmp_reg__
-     /tmp/ccihJwii.s:6      *ABS*:00000001 __zero_reg__
-     /tmp/ccihJwii.s:14     .text._ZN6Pcint2C2Ev:00000000 _ZN6Pcint2C2Ev
-     /tmp/ccihJwii.s:17     .text._ZN6Pcint2C2Ev:00000000 .Loc.0
-     /tmp/ccihJwii.s:18     .text._ZN6Pcint2C2Ev:00000000 L0
-     /tmp/ccihJwii.s:23     .text._ZN6Pcint2C2Ev:00000000 .Loc.1
-     /tmp/ccihJwii.s:26     .text._ZN6Pcint2C2Ev:00000002 .Loc.2
-     /tmp/ccihJwii.s:29     .text._ZN6Pcint2C2Ev:00000004 .Loc.3
-     /tmp/ccihJwii.s:32     .text._ZN6Pcint2C2Ev:00000008 .Loc.4
-     /tmp/ccihJwii.s:35     .text._ZN6Pcint2C2Ev:0000000c .Loc.5
-     /tmp/ccihJwii.s:37     .text._ZN6Pcint2C2Ev:0000000e .Loc.6
-     /tmp/ccihJwii.s:38     .text._ZN6Pcint2C2Ev:0000000e .Loc.7
-     /tmp/ccihJwii.s:39     .text._ZN6Pcint2C2Ev:0000000e .Loc.8
-     /tmp/ccihJwii.s:40     .text._ZN6Pcint2C2Ev:0000000e .Loc.9
-     /tmp/ccihJwii.s:43     .text._ZN6Pcint2C2Ev:0000000e .Loc.10
-     /tmp/ccihJwii.s:45     .text._ZN6Pcint2C2Ev:00000010 L0
-     /tmp/ccihJwii.s:14     .text._ZN6Pcint2C2Ev:00000000 _ZN6Pcint2C1Ev
-     /tmp/ccihJwii.s:52     .text._Z41__static_initialization_and_destruction_0v:00000000 _Z41__static_initialization_and_destruction_0v
-     /tmp/ccihJwii.s:54     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.11
-     /tmp/ccihJwii.s:55     .text._Z41__static_initialization_and_destruction_0v:00000000 L0
-     /tmp/ccihJwii.s:60     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.12
-     /tmp/ccihJwii.s:612    .bss._ZN6Pcint29_instanceE:00000000 _ZN6Pcint29_instanceE
-     /tmp/ccihJwii.s:66     .text._Z41__static_initialization_and_destruction_0v:00000008 .Loc.13
-     /tmp/ccihJwii.s:68     .text._Z41__static_initialization_and_destruction_0v:0000000a L0
-     /tmp/ccihJwii.s:74     .text._ZN6Pcint2D2Ev:00000000 _ZN6Pcint2D2Ev
-     /tmp/ccihJwii.s:77     .text._ZN6Pcint2D2Ev:00000000 .Loc.14
-     /tmp/ccihJwii.s:78     .text._ZN6Pcint2D2Ev:00000000 L0
-     /tmp/ccihJwii.s:84     .text._ZN6Pcint2D2Ev:00000000 .Loc.15
-     /tmp/ccihJwii.s:85     .text._ZN6Pcint2D2Ev:00000000 .Loc.16
-     /tmp/ccihJwii.s:86     .text._ZN6Pcint2D2Ev:00000000 .Loc.17
-     /tmp/ccihJwii.s:89     .text._ZN6Pcint2D2Ev:00000000 .Loc.18
-     /tmp/ccihJwii.s:91     .text._ZN6Pcint2D2Ev:00000002 L0
-     /tmp/ccihJwii.s:74     .text._ZN6Pcint2D2Ev:00000000 _ZN6Pcint2D1Ev
-     /tmp/ccihJwii.s:99     .text._ZN6Pcint211disablePinsENS_3PinE:00000000 _ZN6Pcint211disablePinsENS_3PinE
-     /tmp/ccihJwii.s:102    .text._ZN6Pcint211disablePinsENS_3PinE:00000000 .Loc.19
-     /tmp/ccihJwii.s:103    .text._ZN6Pcint211disablePinsENS_3PinE:00000000 L0
-     /tmp/ccihJwii.s:108    .text._ZN6Pcint211disablePinsENS_3PinE:00000000 .Loc.20
-     /tmp/ccihJwii.s:110    .text._ZN6Pcint211disablePinsENS_3PinE:00000002 .Loc.21
-     /tmp/ccihJwii.s:111    .text._ZN6Pcint211disablePinsENS_3PinE:00000002 .Loc.22
-     /tmp/ccihJwii.s:112    .text._ZN6Pcint211disablePinsENS_3PinE:00000002 .Loc.23
-     /tmp/ccihJwii.s:117    .text._ZN6Pcint211disablePinsENS_3PinE:00000008 .Loc.24
-     /tmp/ccihJwii.s:118    .text._ZN6Pcint211disablePinsENS_3PinE:00000008 .Loc.25
-     /tmp/ccihJwii.s:121    .text._ZN6Pcint211disablePinsENS_3PinE:0000000a .Loc.26
-     /tmp/ccihJwii.s:122    .text._ZN6Pcint211disablePinsENS_3PinE:0000000a .Loc.27
-     /tmp/ccihJwii.s:123    .text._ZN6Pcint211disablePinsENS_3PinE:0000000a .Loc.28
-     /tmp/ccihJwii.s:124    .text._ZN6Pcint211disablePinsENS_3PinE:0000000a .Loc.29
-     /tmp/ccihJwii.s:127    .text._ZN6Pcint211disablePinsENS_3PinE:0000000c .Loc.30
-     /tmp/ccihJwii.s:130    .text._ZN6Pcint211disablePinsENS_3PinE:0000000e .Loc.31
-     /tmp/ccihJwii.s:131    .text._ZN6Pcint211disablePinsENS_3PinE:0000000e .Loc.32
-     /tmp/ccihJwii.s:132    .text._ZN6Pcint211disablePinsENS_3PinE:0000000e .Loc.33
-     /tmp/ccihJwii.s:133    .text._ZN6Pcint211disablePinsENS_3PinE:0000000e .Loc.34
-     /tmp/ccihJwii.s:134    .text._ZN6Pcint211disablePinsENS_3PinE:0000000e .Loc.35
-GAS LISTING /tmp/ccihJwii.s 			page 30
+     /tmp/ccw5lnVr.s:2      *ABS*:0000003e __SP_H__
+     /tmp/ccw5lnVr.s:3      *ABS*:0000003d __SP_L__
+     /tmp/ccw5lnVr.s:4      *ABS*:0000003f __SREG__
+     /tmp/ccw5lnVr.s:5      *ABS*:00000000 __tmp_reg__
+     /tmp/ccw5lnVr.s:6      *ABS*:00000001 __zero_reg__
+     /tmp/ccw5lnVr.s:14     .text._ZN6Pcint2C2Ev:00000000 _ZN6Pcint2C2Ev
+     /tmp/ccw5lnVr.s:17     .text._ZN6Pcint2C2Ev:00000000 .Loc.0
+     /tmp/ccw5lnVr.s:18     .text._ZN6Pcint2C2Ev:00000000 L0
+     /tmp/ccw5lnVr.s:23     .text._ZN6Pcint2C2Ev:00000000 .Loc.1
+     /tmp/ccw5lnVr.s:26     .text._ZN6Pcint2C2Ev:00000002 .Loc.2
+     /tmp/ccw5lnVr.s:29     .text._ZN6Pcint2C2Ev:00000004 .Loc.3
+     /tmp/ccw5lnVr.s:32     .text._ZN6Pcint2C2Ev:00000008 .Loc.4
+     /tmp/ccw5lnVr.s:35     .text._ZN6Pcint2C2Ev:0000000c .Loc.5
+     /tmp/ccw5lnVr.s:37     .text._ZN6Pcint2C2Ev:0000000e .Loc.6
+     /tmp/ccw5lnVr.s:38     .text._ZN6Pcint2C2Ev:0000000e .Loc.7
+     /tmp/ccw5lnVr.s:39     .text._ZN6Pcint2C2Ev:0000000e .Loc.8
+     /tmp/ccw5lnVr.s:40     .text._ZN6Pcint2C2Ev:0000000e .Loc.9
+     /tmp/ccw5lnVr.s:43     .text._ZN6Pcint2C2Ev:0000000e .Loc.10
+     /tmp/ccw5lnVr.s:45     .text._ZN6Pcint2C2Ev:00000010 L0
+     /tmp/ccw5lnVr.s:14     .text._ZN6Pcint2C2Ev:00000000 _ZN6Pcint2C1Ev
+     /tmp/ccw5lnVr.s:52     .text._Z41__static_initialization_and_destruction_0v:00000000 _Z41__static_initialization_and_destruction_0v
+     /tmp/ccw5lnVr.s:54     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.11
+     /tmp/ccw5lnVr.s:55     .text._Z41__static_initialization_and_destruction_0v:00000000 L0
+     /tmp/ccw5lnVr.s:60     .text._Z41__static_initialization_and_destruction_0v:00000000 .Loc.12
+     /tmp/ccw5lnVr.s:612    .bss._ZN6Pcint29_instanceE:00000000 _ZN6Pcint29_instanceE
+     /tmp/ccw5lnVr.s:66     .text._Z41__static_initialization_and_destruction_0v:00000008 .Loc.13
+     /tmp/ccw5lnVr.s:68     .text._Z41__static_initialization_and_destruction_0v:0000000a L0
+     /tmp/ccw5lnVr.s:74     .text._ZN6Pcint2D2Ev:00000000 _ZN6Pcint2D2Ev
+     /tmp/ccw5lnVr.s:77     .text._ZN6Pcint2D2Ev:00000000 .Loc.14
+     /tmp/ccw5lnVr.s:78     .text._ZN6Pcint2D2Ev:00000000 L0
+     /tmp/ccw5lnVr.s:84     .text._ZN6Pcint2D2Ev:00000000 .Loc.15
+     /tmp/ccw5lnVr.s:85     .text._ZN6Pcint2D2Ev:00000000 .Loc.16
+     /tmp/ccw5lnVr.s:86     .text._ZN6Pcint2D2Ev:00000000 .Loc.17
+     /tmp/ccw5lnVr.s:89     .text._ZN6Pcint2D2Ev:00000000 .Loc.18
+     /tmp/ccw5lnVr.s:91     .text._ZN6Pcint2D2Ev:00000002 L0
+     /tmp/ccw5lnVr.s:74     .text._ZN6Pcint2D2Ev:00000000 _ZN6Pcint2D1Ev
+     /tmp/ccw5lnVr.s:99     .text._ZN6Pcint211disablePinsENS_3PinE:00000000 _ZN6Pcint211disablePinsENS_3PinE
+     /tmp/ccw5lnVr.s:102    .text._ZN6Pcint211disablePinsENS_3PinE:00000000 .Loc.19
+     /tmp/ccw5lnVr.s:103    .text._ZN6Pcint211disablePinsENS_3PinE:00000000 L0
+     /tmp/ccw5lnVr.s:108    .text._ZN6Pcint211disablePinsENS_3PinE:00000000 .Loc.20
+     /tmp/ccw5lnVr.s:110    .text._ZN6Pcint211disablePinsENS_3PinE:00000002 .Loc.21
+     /tmp/ccw5lnVr.s:111    .text._ZN6Pcint211disablePinsENS_3PinE:00000002 .Loc.22
+     /tmp/ccw5lnVr.s:112    .text._ZN6Pcint211disablePinsENS_3PinE:00000002 .Loc.23
+     /tmp/ccw5lnVr.s:117    .text._ZN6Pcint211disablePinsENS_3PinE:00000008 .Loc.24
+     /tmp/ccw5lnVr.s:118    .text._ZN6Pcint211disablePinsENS_3PinE:00000008 .Loc.25
+     /tmp/ccw5lnVr.s:121    .text._ZN6Pcint211disablePinsENS_3PinE:0000000a .Loc.26
+     /tmp/ccw5lnVr.s:122    .text._ZN6Pcint211disablePinsENS_3PinE:0000000a .Loc.27
+     /tmp/ccw5lnVr.s:123    .text._ZN6Pcint211disablePinsENS_3PinE:0000000a .Loc.28
+     /tmp/ccw5lnVr.s:124    .text._ZN6Pcint211disablePinsENS_3PinE:0000000a .Loc.29
+     /tmp/ccw5lnVr.s:127    .text._ZN6Pcint211disablePinsENS_3PinE:0000000c .Loc.30
+     /tmp/ccw5lnVr.s:130    .text._ZN6Pcint211disablePinsENS_3PinE:0000000e .Loc.31
+     /tmp/ccw5lnVr.s:131    .text._ZN6Pcint211disablePinsENS_3PinE:0000000e .Loc.32
+     /tmp/ccw5lnVr.s:132    .text._ZN6Pcint211disablePinsENS_3PinE:0000000e .Loc.33
+     /tmp/ccw5lnVr.s:133    .text._ZN6Pcint211disablePinsENS_3PinE:0000000e .Loc.34
+     /tmp/ccw5lnVr.s:134    .text._ZN6Pcint211disablePinsENS_3PinE:0000000e .Loc.35
+GAS LISTING /tmp/ccw5lnVr.s 			page 30
 
 
-     /tmp/ccihJwii.s:136    .text._ZN6Pcint211disablePinsENS_3PinE:00000010 .Loc.36
-     /tmp/ccihJwii.s:137    .text._ZN6Pcint211disablePinsENS_3PinE:00000010 .Loc.37
-     /tmp/ccihJwii.s:139    .text._ZN6Pcint211disablePinsENS_3PinE:00000012 .Loc.38
-     /tmp/ccihJwii.s:140    .text._ZN6Pcint211disablePinsENS_3PinE:00000012 .Loc.39
-     /tmp/ccihJwii.s:143    .text._ZN6Pcint211disablePinsENS_3PinE:00000016 .Loc.40
-     /tmp/ccihJwii.s:144    .text._ZN6Pcint211disablePinsENS_3PinE:00000016 .Loc.41
-     /tmp/ccihJwii.s:145    .text._ZN6Pcint211disablePinsENS_3PinE:00000016 .Loc.42
-     /tmp/ccihJwii.s:149    .text._ZN6Pcint211disablePinsENS_3PinE:0000001a L0
-     /tmp/ccihJwii.s:155    .text._ZN6Pcint210enablePinsENS_3PinE:00000000 _ZN6Pcint210enablePinsENS_3PinE
-     /tmp/ccihJwii.s:158    .text._ZN6Pcint210enablePinsENS_3PinE:00000000 .Loc.43
-     /tmp/ccihJwii.s:159    .text._ZN6Pcint210enablePinsENS_3PinE:00000000 L0
-     /tmp/ccihJwii.s:164    .text._ZN6Pcint210enablePinsENS_3PinE:00000000 .Loc.44
-     /tmp/ccihJwii.s:166    .text._ZN6Pcint210enablePinsENS_3PinE:00000002 .Loc.45
-     /tmp/ccihJwii.s:167    .text._ZN6Pcint210enablePinsENS_3PinE:00000002 .Loc.46
-     /tmp/ccihJwii.s:168    .text._ZN6Pcint210enablePinsENS_3PinE:00000002 .Loc.47
-     /tmp/ccihJwii.s:173    .text._ZN6Pcint210enablePinsENS_3PinE:00000008 .Loc.48
-     /tmp/ccihJwii.s:174    .text._ZN6Pcint210enablePinsENS_3PinE:00000008 .Loc.49
-     /tmp/ccihJwii.s:177    .text._ZN6Pcint210enablePinsENS_3PinE:0000000a .Loc.50
-     /tmp/ccihJwii.s:178    .text._ZN6Pcint210enablePinsENS_3PinE:0000000a .Loc.51
-     /tmp/ccihJwii.s:179    .text._ZN6Pcint210enablePinsENS_3PinE:0000000a .Loc.52
-     /tmp/ccihJwii.s:180    .text._ZN6Pcint210enablePinsENS_3PinE:0000000a .Loc.53
-     /tmp/ccihJwii.s:183    .text._ZN6Pcint210enablePinsENS_3PinE:0000000c .Loc.54
-     /tmp/ccihJwii.s:184    .text._ZN6Pcint210enablePinsENS_3PinE:0000000c .Loc.55
-     /tmp/ccihJwii.s:185    .text._ZN6Pcint210enablePinsENS_3PinE:0000000c .Loc.56
-     /tmp/ccihJwii.s:186    .text._ZN6Pcint210enablePinsENS_3PinE:0000000c .Loc.57
-     /tmp/ccihJwii.s:187    .text._ZN6Pcint210enablePinsENS_3PinE:0000000c .Loc.58
-     /tmp/ccihJwii.s:189    .text._ZN6Pcint210enablePinsENS_3PinE:0000000e .Loc.59
-     /tmp/ccihJwii.s:190    .text._ZN6Pcint210enablePinsENS_3PinE:0000000e .Loc.60
-     /tmp/ccihJwii.s:192    .text._ZN6Pcint210enablePinsENS_3PinE:00000010 .Loc.61
-     /tmp/ccihJwii.s:193    .text._ZN6Pcint210enablePinsENS_3PinE:00000010 .Loc.62
-     /tmp/ccihJwii.s:196    .text._ZN6Pcint210enablePinsENS_3PinE:00000014 .Loc.63
-     /tmp/ccihJwii.s:197    .text._ZN6Pcint210enablePinsENS_3PinE:00000014 .Loc.64
-     /tmp/ccihJwii.s:198    .text._ZN6Pcint210enablePinsENS_3PinE:00000014 .Loc.65
-     /tmp/ccihJwii.s:202    .text._ZN6Pcint210enablePinsENS_3PinE:00000018 L0
-     /tmp/ccihJwii.s:208    .text._ZN6Pcint24initENS_3PinE:00000000 _ZN6Pcint24initENS_3PinE
-     /tmp/ccihJwii.s:211    .text._ZN6Pcint24initENS_3PinE:00000000 .Loc.66
-     /tmp/ccihJwii.s:212    .text._ZN6Pcint24initENS_3PinE:00000000 L0
-     /tmp/ccihJwii.s:217    .text._ZN6Pcint24initENS_3PinE:00000000 .Loc.67
-     /tmp/ccihJwii.s:219    .text._ZN6Pcint24initENS_3PinE:00000002 .Loc.68
-     /tmp/ccihJwii.s:220    .text._ZN6Pcint24initENS_3PinE:00000002 .Loc.69
-     /tmp/ccihJwii.s:221    .text._ZN6Pcint24initENS_3PinE:00000002 .Loc.70
-     /tmp/ccihJwii.s:226    .text._ZN6Pcint24initENS_3PinE:00000008 .Loc.71
-     /tmp/ccihJwii.s:227    .text._ZN6Pcint24initENS_3PinE:00000008 .Loc.72
-     /tmp/ccihJwii.s:228    .text._ZN6Pcint24initENS_3PinE:00000008 .Loc.73
-     /tmp/ccihJwii.s:229    .text._ZN6Pcint24initENS_3PinE:00000008 .Loc.74
-     /tmp/ccihJwii.s:230    .text._ZN6Pcint24initENS_3PinE:00000008 .Loc.75
-     /tmp/ccihJwii.s:231    .text._ZN6Pcint24initENS_3PinE:00000008 .Loc.76
-     /tmp/ccihJwii.s:233    .text._ZN6Pcint24initENS_3PinE:0000000a .Loc.77
-     /tmp/ccihJwii.s:234    .text._ZN6Pcint24initENS_3PinE:0000000a .Loc.78
-     /tmp/ccihJwii.s:236    .text._ZN6Pcint24initENS_3PinE:0000000c .Loc.79
-     /tmp/ccihJwii.s:237    .text._ZN6Pcint24initENS_3PinE:0000000c .Loc.80
-     /tmp/ccihJwii.s:241    .text._ZN6Pcint24initENS_3PinE:00000012 .Loc.81
-     /tmp/ccihJwii.s:242    .text._ZN6Pcint24initENS_3PinE:00000012 .Loc.82
-     /tmp/ccihJwii.s:245    .text._ZN6Pcint24initENS_3PinE:00000016 .Loc.83
-     /tmp/ccihJwii.s:246    .text._ZN6Pcint24initENS_3PinE:00000016 .Loc.84
-     /tmp/ccihJwii.s:247    .text._ZN6Pcint24initENS_3PinE:00000016 .Loc.85
-     /tmp/ccihJwii.s:251    .text._ZN6Pcint24initENS_3PinE:0000001a L0
-GAS LISTING /tmp/ccihJwii.s 			page 31
+     /tmp/ccw5lnVr.s:136    .text._ZN6Pcint211disablePinsENS_3PinE:00000010 .Loc.36
+     /tmp/ccw5lnVr.s:137    .text._ZN6Pcint211disablePinsENS_3PinE:00000010 .Loc.37
+     /tmp/ccw5lnVr.s:139    .text._ZN6Pcint211disablePinsENS_3PinE:00000012 .Loc.38
+     /tmp/ccw5lnVr.s:140    .text._ZN6Pcint211disablePinsENS_3PinE:00000012 .Loc.39
+     /tmp/ccw5lnVr.s:143    .text._ZN6Pcint211disablePinsENS_3PinE:00000016 .Loc.40
+     /tmp/ccw5lnVr.s:144    .text._ZN6Pcint211disablePinsENS_3PinE:00000016 .Loc.41
+     /tmp/ccw5lnVr.s:145    .text._ZN6Pcint211disablePinsENS_3PinE:00000016 .Loc.42
+     /tmp/ccw5lnVr.s:149    .text._ZN6Pcint211disablePinsENS_3PinE:0000001a L0
+     /tmp/ccw5lnVr.s:155    .text._ZN6Pcint210enablePinsENS_3PinE:00000000 _ZN6Pcint210enablePinsENS_3PinE
+     /tmp/ccw5lnVr.s:158    .text._ZN6Pcint210enablePinsENS_3PinE:00000000 .Loc.43
+     /tmp/ccw5lnVr.s:159    .text._ZN6Pcint210enablePinsENS_3PinE:00000000 L0
+     /tmp/ccw5lnVr.s:164    .text._ZN6Pcint210enablePinsENS_3PinE:00000000 .Loc.44
+     /tmp/ccw5lnVr.s:166    .text._ZN6Pcint210enablePinsENS_3PinE:00000002 .Loc.45
+     /tmp/ccw5lnVr.s:167    .text._ZN6Pcint210enablePinsENS_3PinE:00000002 .Loc.46
+     /tmp/ccw5lnVr.s:168    .text._ZN6Pcint210enablePinsENS_3PinE:00000002 .Loc.47
+     /tmp/ccw5lnVr.s:173    .text._ZN6Pcint210enablePinsENS_3PinE:00000008 .Loc.48
+     /tmp/ccw5lnVr.s:174    .text._ZN6Pcint210enablePinsENS_3PinE:00000008 .Loc.49
+     /tmp/ccw5lnVr.s:177    .text._ZN6Pcint210enablePinsENS_3PinE:0000000a .Loc.50
+     /tmp/ccw5lnVr.s:178    .text._ZN6Pcint210enablePinsENS_3PinE:0000000a .Loc.51
+     /tmp/ccw5lnVr.s:179    .text._ZN6Pcint210enablePinsENS_3PinE:0000000a .Loc.52
+     /tmp/ccw5lnVr.s:180    .text._ZN6Pcint210enablePinsENS_3PinE:0000000a .Loc.53
+     /tmp/ccw5lnVr.s:183    .text._ZN6Pcint210enablePinsENS_3PinE:0000000c .Loc.54
+     /tmp/ccw5lnVr.s:184    .text._ZN6Pcint210enablePinsENS_3PinE:0000000c .Loc.55
+     /tmp/ccw5lnVr.s:185    .text._ZN6Pcint210enablePinsENS_3PinE:0000000c .Loc.56
+     /tmp/ccw5lnVr.s:186    .text._ZN6Pcint210enablePinsENS_3PinE:0000000c .Loc.57
+     /tmp/ccw5lnVr.s:187    .text._ZN6Pcint210enablePinsENS_3PinE:0000000c .Loc.58
+     /tmp/ccw5lnVr.s:189    .text._ZN6Pcint210enablePinsENS_3PinE:0000000e .Loc.59
+     /tmp/ccw5lnVr.s:190    .text._ZN6Pcint210enablePinsENS_3PinE:0000000e .Loc.60
+     /tmp/ccw5lnVr.s:192    .text._ZN6Pcint210enablePinsENS_3PinE:00000010 .Loc.61
+     /tmp/ccw5lnVr.s:193    .text._ZN6Pcint210enablePinsENS_3PinE:00000010 .Loc.62
+     /tmp/ccw5lnVr.s:196    .text._ZN6Pcint210enablePinsENS_3PinE:00000014 .Loc.63
+     /tmp/ccw5lnVr.s:197    .text._ZN6Pcint210enablePinsENS_3PinE:00000014 .Loc.64
+     /tmp/ccw5lnVr.s:198    .text._ZN6Pcint210enablePinsENS_3PinE:00000014 .Loc.65
+     /tmp/ccw5lnVr.s:202    .text._ZN6Pcint210enablePinsENS_3PinE:00000018 L0
+     /tmp/ccw5lnVr.s:208    .text._ZN6Pcint24initENS_3PinE:00000000 _ZN6Pcint24initENS_3PinE
+     /tmp/ccw5lnVr.s:211    .text._ZN6Pcint24initENS_3PinE:00000000 .Loc.66
+     /tmp/ccw5lnVr.s:212    .text._ZN6Pcint24initENS_3PinE:00000000 L0
+     /tmp/ccw5lnVr.s:217    .text._ZN6Pcint24initENS_3PinE:00000000 .Loc.67
+     /tmp/ccw5lnVr.s:219    .text._ZN6Pcint24initENS_3PinE:00000002 .Loc.68
+     /tmp/ccw5lnVr.s:220    .text._ZN6Pcint24initENS_3PinE:00000002 .Loc.69
+     /tmp/ccw5lnVr.s:221    .text._ZN6Pcint24initENS_3PinE:00000002 .Loc.70
+     /tmp/ccw5lnVr.s:226    .text._ZN6Pcint24initENS_3PinE:00000008 .Loc.71
+     /tmp/ccw5lnVr.s:227    .text._ZN6Pcint24initENS_3PinE:00000008 .Loc.72
+     /tmp/ccw5lnVr.s:228    .text._ZN6Pcint24initENS_3PinE:00000008 .Loc.73
+     /tmp/ccw5lnVr.s:229    .text._ZN6Pcint24initENS_3PinE:00000008 .Loc.74
+     /tmp/ccw5lnVr.s:230    .text._ZN6Pcint24initENS_3PinE:00000008 .Loc.75
+     /tmp/ccw5lnVr.s:231    .text._ZN6Pcint24initENS_3PinE:00000008 .Loc.76
+     /tmp/ccw5lnVr.s:233    .text._ZN6Pcint24initENS_3PinE:0000000a .Loc.77
+     /tmp/ccw5lnVr.s:234    .text._ZN6Pcint24initENS_3PinE:0000000a .Loc.78
+     /tmp/ccw5lnVr.s:236    .text._ZN6Pcint24initENS_3PinE:0000000c .Loc.79
+     /tmp/ccw5lnVr.s:237    .text._ZN6Pcint24initENS_3PinE:0000000c .Loc.80
+     /tmp/ccw5lnVr.s:241    .text._ZN6Pcint24initENS_3PinE:00000012 .Loc.81
+     /tmp/ccw5lnVr.s:242    .text._ZN6Pcint24initENS_3PinE:00000012 .Loc.82
+     /tmp/ccw5lnVr.s:245    .text._ZN6Pcint24initENS_3PinE:00000016 .Loc.83
+     /tmp/ccw5lnVr.s:246    .text._ZN6Pcint24initENS_3PinE:00000016 .Loc.84
+     /tmp/ccw5lnVr.s:247    .text._ZN6Pcint24initENS_3PinE:00000016 .Loc.85
+     /tmp/ccw5lnVr.s:251    .text._ZN6Pcint24initENS_3PinE:0000001a L0
+GAS LISTING /tmp/ccw5lnVr.s 			page 31
 
 
-     /tmp/ccihJwii.s:257    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000000 _ZN6Pcint210setPinModeENS_3PinE7PinMode
-     /tmp/ccihJwii.s:260    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000000 .Loc.86
-     /tmp/ccihJwii.s:261    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000000 L0
-     /tmp/ccihJwii.s:266    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000000 .Loc.87
-     /tmp/ccihJwii.s:268    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000002 .Loc.88
-     /tmp/ccihJwii.s:269    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000002 .Loc.89
-     /tmp/ccihJwii.s:271    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000002 .Loc.90
-     /tmp/ccihJwii.s:275    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000002 .Loc.91
-     /tmp/ccihJwii.s:277    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000002 .Loc.92
-     /tmp/ccihJwii.s:278    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000002 .Loc.93
-     /tmp/ccihJwii.s:282    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000006 .Loc.94
-     /tmp/ccihJwii.s:285    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000006 .Loc.95
-     /tmp/ccihJwii.s:288    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000006 .Loc.96
-     /tmp/ccihJwii.s:290    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000006 .Loc.97
-     /tmp/ccihJwii.s:291    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000006 .Loc.98
-     /tmp/ccihJwii.s:294    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000006 .Loc.99
-     /tmp/ccihJwii.s:296    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000008 .Loc.100
-     /tmp/ccihJwii.s:297    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000008 .Loc.101
-     /tmp/ccihJwii.s:301    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000a .Loc.102
-     /tmp/ccihJwii.s:304    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000a .Loc.103
-     /tmp/ccihJwii.s:306    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000a .Loc.104
-     /tmp/ccihJwii.s:307    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000a .Loc.105
-     /tmp/ccihJwii.s:310    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000a .Loc.106
-     /tmp/ccihJwii.s:312    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000c .Loc.107
-     /tmp/ccihJwii.s:313    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000c .Loc.108
-     /tmp/ccihJwii.s:317    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000e .Loc.109
-     /tmp/ccihJwii.s:320    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000e .Loc.110
-     /tmp/ccihJwii.s:322    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000e .Loc.111
-     /tmp/ccihJwii.s:323    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000e .Loc.112
-     /tmp/ccihJwii.s:326    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000e .Loc.113
-     /tmp/ccihJwii.s:328    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000010 .Loc.114
-     /tmp/ccihJwii.s:329    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000010 .Loc.115
-     /tmp/ccihJwii.s:333    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000012 .Loc.116
-     /tmp/ccihJwii.s:336    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000012 .Loc.117
-     /tmp/ccihJwii.s:338    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000012 .Loc.118
-     /tmp/ccihJwii.s:339    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000012 .Loc.119
-     /tmp/ccihJwii.s:342    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000012 .Loc.120
-     /tmp/ccihJwii.s:344    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000014 .Loc.121
-     /tmp/ccihJwii.s:345    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000014 .Loc.122
-     /tmp/ccihJwii.s:349    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000016 .Loc.123
-     /tmp/ccihJwii.s:352    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000016 .Loc.124
-     /tmp/ccihJwii.s:354    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000016 .Loc.125
-     /tmp/ccihJwii.s:355    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000016 .Loc.126
-     /tmp/ccihJwii.s:358    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000016 .Loc.127
-     /tmp/ccihJwii.s:360    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000018 .Loc.128
-     /tmp/ccihJwii.s:361    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000018 .Loc.129
-     /tmp/ccihJwii.s:365    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001a .Loc.130
-     /tmp/ccihJwii.s:368    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001a .Loc.131
-     /tmp/ccihJwii.s:370    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001a .Loc.132
-     /tmp/ccihJwii.s:371    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001a .Loc.133
-     /tmp/ccihJwii.s:374    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001a .Loc.134
-     /tmp/ccihJwii.s:376    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001c .Loc.135
-     /tmp/ccihJwii.s:377    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001c .Loc.136
-     /tmp/ccihJwii.s:381    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001e .Loc.137
-     /tmp/ccihJwii.s:382    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001e .Loc.138
-     /tmp/ccihJwii.s:385    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000022 .Loc.139
-     /tmp/ccihJwii.s:390    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000026 .Loc.140
-GAS LISTING /tmp/ccihJwii.s 			page 32
+     /tmp/ccw5lnVr.s:257    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000000 _ZN6Pcint210setPinModeENS_3PinE7PinMode
+     /tmp/ccw5lnVr.s:260    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000000 .Loc.86
+     /tmp/ccw5lnVr.s:261    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000000 L0
+     /tmp/ccw5lnVr.s:266    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000000 .Loc.87
+     /tmp/ccw5lnVr.s:268    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000002 .Loc.88
+     /tmp/ccw5lnVr.s:269    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000002 .Loc.89
+     /tmp/ccw5lnVr.s:271    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000002 .Loc.90
+     /tmp/ccw5lnVr.s:275    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000002 .Loc.91
+     /tmp/ccw5lnVr.s:277    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000002 .Loc.92
+     /tmp/ccw5lnVr.s:278    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000002 .Loc.93
+     /tmp/ccw5lnVr.s:282    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000006 .Loc.94
+     /tmp/ccw5lnVr.s:285    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000006 .Loc.95
+     /tmp/ccw5lnVr.s:288    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000006 .Loc.96
+     /tmp/ccw5lnVr.s:290    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000006 .Loc.97
+     /tmp/ccw5lnVr.s:291    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000006 .Loc.98
+     /tmp/ccw5lnVr.s:294    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000006 .Loc.99
+     /tmp/ccw5lnVr.s:296    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000008 .Loc.100
+     /tmp/ccw5lnVr.s:297    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000008 .Loc.101
+     /tmp/ccw5lnVr.s:301    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000a .Loc.102
+     /tmp/ccw5lnVr.s:304    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000a .Loc.103
+     /tmp/ccw5lnVr.s:306    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000a .Loc.104
+     /tmp/ccw5lnVr.s:307    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000a .Loc.105
+     /tmp/ccw5lnVr.s:310    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000a .Loc.106
+     /tmp/ccw5lnVr.s:312    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000c .Loc.107
+     /tmp/ccw5lnVr.s:313    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000c .Loc.108
+     /tmp/ccw5lnVr.s:317    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000e .Loc.109
+     /tmp/ccw5lnVr.s:320    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000e .Loc.110
+     /tmp/ccw5lnVr.s:322    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000e .Loc.111
+     /tmp/ccw5lnVr.s:323    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000e .Loc.112
+     /tmp/ccw5lnVr.s:326    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000e .Loc.113
+     /tmp/ccw5lnVr.s:328    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000010 .Loc.114
+     /tmp/ccw5lnVr.s:329    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000010 .Loc.115
+     /tmp/ccw5lnVr.s:333    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000012 .Loc.116
+     /tmp/ccw5lnVr.s:336    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000012 .Loc.117
+     /tmp/ccw5lnVr.s:338    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000012 .Loc.118
+     /tmp/ccw5lnVr.s:339    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000012 .Loc.119
+     /tmp/ccw5lnVr.s:342    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000012 .Loc.120
+     /tmp/ccw5lnVr.s:344    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000014 .Loc.121
+     /tmp/ccw5lnVr.s:345    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000014 .Loc.122
+     /tmp/ccw5lnVr.s:349    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000016 .Loc.123
+     /tmp/ccw5lnVr.s:352    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000016 .Loc.124
+     /tmp/ccw5lnVr.s:354    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000016 .Loc.125
+     /tmp/ccw5lnVr.s:355    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000016 .Loc.126
+     /tmp/ccw5lnVr.s:358    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000016 .Loc.127
+     /tmp/ccw5lnVr.s:360    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000018 .Loc.128
+     /tmp/ccw5lnVr.s:361    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000018 .Loc.129
+     /tmp/ccw5lnVr.s:365    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001a .Loc.130
+     /tmp/ccw5lnVr.s:368    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001a .Loc.131
+     /tmp/ccw5lnVr.s:370    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001a .Loc.132
+     /tmp/ccw5lnVr.s:371    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001a .Loc.133
+     /tmp/ccw5lnVr.s:374    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001a .Loc.134
+     /tmp/ccw5lnVr.s:376    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001c .Loc.135
+     /tmp/ccw5lnVr.s:377    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001c .Loc.136
+     /tmp/ccw5lnVr.s:381    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001e .Loc.137
+     /tmp/ccw5lnVr.s:382    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001e .Loc.138
+     /tmp/ccw5lnVr.s:385    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000022 .Loc.139
+     /tmp/ccw5lnVr.s:390    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000026 .Loc.140
+GAS LISTING /tmp/ccw5lnVr.s 			page 32
 
 
-     /tmp/ccihJwii.s:391    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000026 .Loc.141
-     /tmp/ccihJwii.s:394    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000002a .Loc.142
-     /tmp/ccihJwii.s:395    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000002a .Loc.143
-     /tmp/ccihJwii.s:396    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000002a .Loc.144
-     /tmp/ccihJwii.s:402    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000002e .Loc.145
-     /tmp/ccihJwii.s:403    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000002e .Loc.146
-     /tmp/ccihJwii.s:406    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000030 .Loc.147
-     /tmp/ccihJwii.s:408    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000030 .Loc.148
-     /tmp/ccihJwii.s:415    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000003c .Loc.149
-     /tmp/ccihJwii.s:416    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000003c .Loc.150
-     /tmp/ccihJwii.s:417    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000003c .Loc.151
-     /tmp/ccihJwii.s:420    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000003e .Loc.152
-     /tmp/ccihJwii.s:423    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000040 .Loc.153
-     /tmp/ccihJwii.s:426    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000044 .Loc.154
-     /tmp/ccihJwii.s:427    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000044 .Loc.155
-     /tmp/ccihJwii.s:428    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000044 .Loc.156
-     /tmp/ccihJwii.s:432    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000004a .Loc.157
-     /tmp/ccihJwii.s:433    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000004a .Loc.158
-     /tmp/ccihJwii.s:437    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000004c .Loc.159
-     /tmp/ccihJwii.s:438    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000004c .Loc.160
-     /tmp/ccihJwii.s:439    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000004c .Loc.161
-     /tmp/ccihJwii.s:443    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000050 .Loc.162
-     /tmp/ccihJwii.s:447    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000056 .Loc.163
-     /tmp/ccihJwii.s:448    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000056 .Loc.164
-     /tmp/ccihJwii.s:449    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000056 .Loc.165
-     /tmp/ccihJwii.s:453    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000005c .Loc.166
-     /tmp/ccihJwii.s:454    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000005c .Loc.167
-     /tmp/ccihJwii.s:458    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000005e .Loc.168
-     /tmp/ccihJwii.s:459    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000005e .Loc.169
-     /tmp/ccihJwii.s:460    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000005e .Loc.170
-     /tmp/ccihJwii.s:463    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000060 .Loc.171
-     /tmp/ccihJwii.s:466    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000064 .Loc.172
-     /tmp/ccihJwii.s:467    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000064 .Loc.173
-     /tmp/ccihJwii.s:469    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000066 L0
-     /tmp/ccihJwii.s:475    .text._Z23pcint2InterruptCallbackv:00000000 _Z23pcint2InterruptCallbackv
-     /tmp/ccihJwii.s:477    .text._Z23pcint2InterruptCallbackv:00000000 .Loc.174
-     /tmp/ccihJwii.s:478    .text._Z23pcint2InterruptCallbackv:00000000 L0
-     /tmp/ccihJwii.s:483    .text._Z23pcint2InterruptCallbackv:00000000 .Loc.175
-     /tmp/ccihJwii.s:485    .text._Z23pcint2InterruptCallbackv:00000000 .Loc.176
-     /tmp/ccihJwii.s:487    .text._Z23pcint2InterruptCallbackv:00000002 L0
-     /tmp/ccihJwii.s:493    .text.__vector_5:00000000 __vector_5
-     /tmp/ccihJwii.s:495    .text.__vector_5:00000000 .Loc.177
-     /tmp/ccihJwii.s:496    .text.__vector_5:00000000 L0
-     /tmp/ccihJwii.s:560    .text.__vector_5:00000022 .Loc.178
-     /tmp/ccihJwii.s:561    .text.__vector_5:00000022 .Loc.179
-     /tmp/ccihJwii.s:565    .text.__vector_5:00000026 .Loc.180
-     /tmp/ccihJwii.s:583    .text.__vector_5:00000048 L0
-     /tmp/ccihJwii.s:588    .text._GLOBAL__sub_I__ZN6Pcint29_instanceE:00000000 _GLOBAL__sub_I__ZN6Pcint29_instanceE
-     /tmp/ccihJwii.s:590    .text._GLOBAL__sub_I__ZN6Pcint29_instanceE:00000000 .Loc.181
-     /tmp/ccihJwii.s:591    .text._GLOBAL__sub_I__ZN6Pcint29_instanceE:00000000 L0
-     /tmp/ccihJwii.s:596    .text._GLOBAL__sub_I__ZN6Pcint29_instanceE:00000000 .Loc.182
-     /tmp/ccihJwii.s:601    .text._GLOBAL__sub_I__ZN6Pcint29_instanceE:00000006 L0
-     /tmp/ccihJwii.s:50     .text._ZN6Pcint2C2Ev:00000010 L0
-     /tmp/ccihJwii.s:71     .text._Z41__static_initialization_and_destruction_0v:0000000a L0
-     /tmp/ccihJwii.s:96     .text._ZN6Pcint2D2Ev:00000002 L0
-     /tmp/ccihJwii.s:152    .text._ZN6Pcint211disablePinsENS_3PinE:0000001a L0
-     /tmp/ccihJwii.s:205    .text._ZN6Pcint210enablePinsENS_3PinE:00000018 L0
-GAS LISTING /tmp/ccihJwii.s 			page 33
+     /tmp/ccw5lnVr.s:391    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000026 .Loc.141
+     /tmp/ccw5lnVr.s:394    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000002a .Loc.142
+     /tmp/ccw5lnVr.s:395    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000002a .Loc.143
+     /tmp/ccw5lnVr.s:396    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000002a .Loc.144
+     /tmp/ccw5lnVr.s:402    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000002e .Loc.145
+     /tmp/ccw5lnVr.s:403    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000002e .Loc.146
+     /tmp/ccw5lnVr.s:406    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000030 .Loc.147
+     /tmp/ccw5lnVr.s:408    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000030 .Loc.148
+     /tmp/ccw5lnVr.s:415    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000003c .Loc.149
+     /tmp/ccw5lnVr.s:416    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000003c .Loc.150
+     /tmp/ccw5lnVr.s:417    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000003c .Loc.151
+     /tmp/ccw5lnVr.s:420    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000003e .Loc.152
+     /tmp/ccw5lnVr.s:423    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000040 .Loc.153
+     /tmp/ccw5lnVr.s:426    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000044 .Loc.154
+     /tmp/ccw5lnVr.s:427    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000044 .Loc.155
+     /tmp/ccw5lnVr.s:428    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000044 .Loc.156
+     /tmp/ccw5lnVr.s:432    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000004a .Loc.157
+     /tmp/ccw5lnVr.s:433    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000004a .Loc.158
+     /tmp/ccw5lnVr.s:437    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000004c .Loc.159
+     /tmp/ccw5lnVr.s:438    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000004c .Loc.160
+     /tmp/ccw5lnVr.s:439    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000004c .Loc.161
+     /tmp/ccw5lnVr.s:443    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000050 .Loc.162
+     /tmp/ccw5lnVr.s:447    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000056 .Loc.163
+     /tmp/ccw5lnVr.s:448    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000056 .Loc.164
+     /tmp/ccw5lnVr.s:449    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000056 .Loc.165
+     /tmp/ccw5lnVr.s:453    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000005c .Loc.166
+     /tmp/ccw5lnVr.s:454    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000005c .Loc.167
+     /tmp/ccw5lnVr.s:458    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000005e .Loc.168
+     /tmp/ccw5lnVr.s:459    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000005e .Loc.169
+     /tmp/ccw5lnVr.s:460    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000005e .Loc.170
+     /tmp/ccw5lnVr.s:463    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000060 .Loc.171
+     /tmp/ccw5lnVr.s:466    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000064 .Loc.172
+     /tmp/ccw5lnVr.s:467    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000064 .Loc.173
+     /tmp/ccw5lnVr.s:469    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000066 L0
+     /tmp/ccw5lnVr.s:475    .text._Z23pcint2InterruptCallbackv:00000000 _Z23pcint2InterruptCallbackv
+     /tmp/ccw5lnVr.s:477    .text._Z23pcint2InterruptCallbackv:00000000 .Loc.174
+     /tmp/ccw5lnVr.s:478    .text._Z23pcint2InterruptCallbackv:00000000 L0
+     /tmp/ccw5lnVr.s:483    .text._Z23pcint2InterruptCallbackv:00000000 .Loc.175
+     /tmp/ccw5lnVr.s:485    .text._Z23pcint2InterruptCallbackv:00000000 .Loc.176
+     /tmp/ccw5lnVr.s:487    .text._Z23pcint2InterruptCallbackv:00000002 L0
+     /tmp/ccw5lnVr.s:493    .text.__vector_5:00000000 __vector_5
+     /tmp/ccw5lnVr.s:495    .text.__vector_5:00000000 .Loc.177
+     /tmp/ccw5lnVr.s:496    .text.__vector_5:00000000 L0
+     /tmp/ccw5lnVr.s:560    .text.__vector_5:00000022 .Loc.178
+     /tmp/ccw5lnVr.s:561    .text.__vector_5:00000022 .Loc.179
+     /tmp/ccw5lnVr.s:565    .text.__vector_5:00000026 .Loc.180
+     /tmp/ccw5lnVr.s:583    .text.__vector_5:00000048 L0
+     /tmp/ccw5lnVr.s:588    .text._GLOBAL__sub_I__ZN6Pcint29_instanceE:00000000 _GLOBAL__sub_I__ZN6Pcint29_instanceE
+     /tmp/ccw5lnVr.s:590    .text._GLOBAL__sub_I__ZN6Pcint29_instanceE:00000000 .Loc.181
+     /tmp/ccw5lnVr.s:591    .text._GLOBAL__sub_I__ZN6Pcint29_instanceE:00000000 L0
+     /tmp/ccw5lnVr.s:596    .text._GLOBAL__sub_I__ZN6Pcint29_instanceE:00000000 .Loc.182
+     /tmp/ccw5lnVr.s:601    .text._GLOBAL__sub_I__ZN6Pcint29_instanceE:00000006 L0
+     /tmp/ccw5lnVr.s:50     .text._ZN6Pcint2C2Ev:00000010 L0
+     /tmp/ccw5lnVr.s:71     .text._Z41__static_initialization_and_destruction_0v:0000000a L0
+     /tmp/ccw5lnVr.s:96     .text._ZN6Pcint2D2Ev:00000002 L0
+     /tmp/ccw5lnVr.s:152    .text._ZN6Pcint211disablePinsENS_3PinE:0000001a L0
+     /tmp/ccw5lnVr.s:205    .text._ZN6Pcint210enablePinsENS_3PinE:00000018 L0
+GAS LISTING /tmp/ccw5lnVr.s 			page 33
 
 
-     /tmp/ccihJwii.s:254    .text._ZN6Pcint24initENS_3PinE:0000001a L0
-     /tmp/ccihJwii.s:472    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000066 L0
-     /tmp/ccihJwii.s:490    .text._Z23pcint2InterruptCallbackv:00000002 L0
-     /tmp/ccihJwii.s:586    .text.__vector_5:00000048 L0
-     /tmp/ccihJwii.s:605    .text._GLOBAL__sub_I__ZN6Pcint29_instanceE:00000006 L0
+     /tmp/ccw5lnVr.s:254    .text._ZN6Pcint24initENS_3PinE:0000001a L0
+     /tmp/ccw5lnVr.s:472    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000066 L0
+     /tmp/ccw5lnVr.s:490    .text._Z23pcint2InterruptCallbackv:00000002 L0
+     /tmp/ccw5lnVr.s:586    .text.__vector_5:00000048 L0
+     /tmp/ccw5lnVr.s:605    .text._GLOBAL__sub_I__ZN6Pcint29_instanceE:00000006 L0
                      .debug_frame:00000000 L0
-     /tmp/ccihJwii.s:401    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000002e .L19
-     /tmp/ccihJwii.s:407    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000030 .L15
-     /tmp/ccihJwii.s:436    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000004c .L17
-     /tmp/ccihJwii.s:457    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000005e .L18
-     /tmp/ccihJwii.s:389    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000026 .L16
-     /tmp/ccihJwii.s:1734   .debug_abbrev:00000000 .Ldebug_abbrev0
-     /tmp/ccihJwii.s:3222   .debug_ranges:00000000 .Ldebug_ranges0
-     /tmp/ccihJwii.s:3246   .debug_line:00000000 .Ldebug_line0
-     /tmp/ccihJwii.s:589    .text._GLOBAL__sub_I__ZN6Pcint29_instanceE:00000000 .LFB150
-     /tmp/ccihJwii.s:602    .text._GLOBAL__sub_I__ZN6Pcint29_instanceE:00000006 .LFE150
-     /tmp/ccihJwii.s:598    .text._GLOBAL__sub_I__ZN6Pcint29_instanceE:00000004 .LVL34
-     /tmp/ccihJwii.s:53     .text._Z41__static_initialization_and_destruction_0v:00000000 .LFB148
-     /tmp/ccihJwii.s:69     .text._Z41__static_initialization_and_destruction_0v:0000000a .LFE148
-     /tmp/ccihJwii.s:64     .text._Z41__static_initialization_and_destruction_0v:00000008 .LVL2
-     /tmp/ccihJwii.s:494    .text.__vector_5:00000000 .LFB147
-     /tmp/ccihJwii.s:584    .text.__vector_5:00000048 .LFE147
-     /tmp/ccihJwii.s:2580   .debug_loc:00000000 .LLST27
-     /tmp/ccihJwii.s:563    .text.__vector_5:00000026 .LVL33
-     /tmp/ccihJwii.s:476    .text._Z23pcint2InterruptCallbackv:00000000 .LFB146
-     /tmp/ccihJwii.s:488    .text._Z23pcint2InterruptCallbackv:00000002 .LFE146
-     /tmp/ccihJwii.s:259    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000000 .LFB145
-     /tmp/ccihJwii.s:470    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000066 .LFE145
-     /tmp/ccihJwii.s:2690   .debug_loc:000000db .LLST11
-     /tmp/ccihJwii.s:2673   .debug_loc:000000cb .LVUS11
-     /tmp/ccihJwii.s:2776   .debug_loc:0000016d .LLST12
-     /tmp/ccihJwii.s:2765   .debug_loc:00000163 .LVUS12
-     /tmp/ccihJwii.s:273    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000002 .LBI20
-     /tmp/ccihJwii.s:272    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000002 .LBB20
-     /tmp/ccihJwii.s:284    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000006 .LBE20
-     /tmp/ccihJwii.s:2806   .debug_loc:000001b2 .LLST13
-     /tmp/ccihJwii.s:2803   .debug_loc:000001b0 .LVUS13
-     /tmp/ccihJwii.s:2816   .debug_loc:000001c7 .LLST14
-     /tmp/ccihJwii.s:2813   .debug_loc:000001c5 .LVUS14
-     /tmp/ccihJwii.s:287    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000006 .LBI22
-     /tmp/ccihJwii.s:286    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000006 .LBB22
-     /tmp/ccihJwii.s:293    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000006 .LBE22
-     /tmp/ccihJwii.s:2827   .debug_loc:000001dd .LLST15
-     /tmp/ccihJwii.s:2824   .debug_loc:000001db .LVUS15
-     /tmp/ccihJwii.s:2837   .debug_loc:000001f2 .LLST16
-     /tmp/ccihJwii.s:2834   .debug_loc:000001f0 .LVUS16
-     /tmp/ccihJwii.s:303    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000a .LBI24
-     /tmp/ccihJwii.s:302    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000a .LBB24
-     /tmp/ccihJwii.s:309    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000a .LBE24
-     /tmp/ccihJwii.s:2848   .debug_loc:00000208 .LLST17
-     /tmp/ccihJwii.s:2845   .debug_loc:00000206 .LVUS17
-     /tmp/ccihJwii.s:2858   .debug_loc:0000021d .LLST18
-     /tmp/ccihJwii.s:2855   .debug_loc:0000021b .LVUS18
-     /tmp/ccihJwii.s:319    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000e .LBI26
-     /tmp/ccihJwii.s:318    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000e .LBB26
-     /tmp/ccihJwii.s:325    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000e .LBE26
-     /tmp/ccihJwii.s:2869   .debug_loc:00000233 .LLST19
-GAS LISTING /tmp/ccihJwii.s 			page 34
+     /tmp/ccw5lnVr.s:401    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000002e .L19
+     /tmp/ccw5lnVr.s:407    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000030 .L15
+     /tmp/ccw5lnVr.s:436    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000004c .L17
+     /tmp/ccw5lnVr.s:457    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000005e .L18
+     /tmp/ccw5lnVr.s:389    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000026 .L16
+     /tmp/ccw5lnVr.s:1734   .debug_abbrev:00000000 .Ldebug_abbrev0
+     /tmp/ccw5lnVr.s:3222   .debug_ranges:00000000 .Ldebug_ranges0
+     /tmp/ccw5lnVr.s:3246   .debug_line:00000000 .Ldebug_line0
+     /tmp/ccw5lnVr.s:589    .text._GLOBAL__sub_I__ZN6Pcint29_instanceE:00000000 .LFB150
+     /tmp/ccw5lnVr.s:602    .text._GLOBAL__sub_I__ZN6Pcint29_instanceE:00000006 .LFE150
+     /tmp/ccw5lnVr.s:598    .text._GLOBAL__sub_I__ZN6Pcint29_instanceE:00000004 .LVL34
+     /tmp/ccw5lnVr.s:53     .text._Z41__static_initialization_and_destruction_0v:00000000 .LFB148
+     /tmp/ccw5lnVr.s:69     .text._Z41__static_initialization_and_destruction_0v:0000000a .LFE148
+     /tmp/ccw5lnVr.s:64     .text._Z41__static_initialization_and_destruction_0v:00000008 .LVL2
+     /tmp/ccw5lnVr.s:494    .text.__vector_5:00000000 .LFB147
+     /tmp/ccw5lnVr.s:584    .text.__vector_5:00000048 .LFE147
+     /tmp/ccw5lnVr.s:2580   .debug_loc:00000000 .LLST27
+     /tmp/ccw5lnVr.s:563    .text.__vector_5:00000026 .LVL33
+     /tmp/ccw5lnVr.s:476    .text._Z23pcint2InterruptCallbackv:00000000 .LFB146
+     /tmp/ccw5lnVr.s:488    .text._Z23pcint2InterruptCallbackv:00000002 .LFE146
+     /tmp/ccw5lnVr.s:259    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000000 .LFB145
+     /tmp/ccw5lnVr.s:470    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000066 .LFE145
+     /tmp/ccw5lnVr.s:2690   .debug_loc:000000db .LLST11
+     /tmp/ccw5lnVr.s:2673   .debug_loc:000000cb .LVUS11
+     /tmp/ccw5lnVr.s:2776   .debug_loc:0000016d .LLST12
+     /tmp/ccw5lnVr.s:2765   .debug_loc:00000163 .LVUS12
+     /tmp/ccw5lnVr.s:273    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000002 .LBI20
+     /tmp/ccw5lnVr.s:272    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000002 .LBB20
+     /tmp/ccw5lnVr.s:284    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000006 .LBE20
+     /tmp/ccw5lnVr.s:2806   .debug_loc:000001b2 .LLST13
+     /tmp/ccw5lnVr.s:2803   .debug_loc:000001b0 .LVUS13
+     /tmp/ccw5lnVr.s:2816   .debug_loc:000001c7 .LLST14
+     /tmp/ccw5lnVr.s:2813   .debug_loc:000001c5 .LVUS14
+     /tmp/ccw5lnVr.s:287    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000006 .LBI22
+     /tmp/ccw5lnVr.s:286    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000006 .LBB22
+     /tmp/ccw5lnVr.s:293    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000006 .LBE22
+     /tmp/ccw5lnVr.s:2827   .debug_loc:000001dd .LLST15
+     /tmp/ccw5lnVr.s:2824   .debug_loc:000001db .LVUS15
+     /tmp/ccw5lnVr.s:2837   .debug_loc:000001f2 .LLST16
+     /tmp/ccw5lnVr.s:2834   .debug_loc:000001f0 .LVUS16
+     /tmp/ccw5lnVr.s:303    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000a .LBI24
+     /tmp/ccw5lnVr.s:302    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000a .LBB24
+     /tmp/ccw5lnVr.s:309    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000a .LBE24
+     /tmp/ccw5lnVr.s:2848   .debug_loc:00000208 .LLST17
+     /tmp/ccw5lnVr.s:2845   .debug_loc:00000206 .LVUS17
+     /tmp/ccw5lnVr.s:2858   .debug_loc:0000021d .LLST18
+     /tmp/ccw5lnVr.s:2855   .debug_loc:0000021b .LVUS18
+     /tmp/ccw5lnVr.s:319    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000e .LBI26
+     /tmp/ccw5lnVr.s:318    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000e .LBB26
+     /tmp/ccw5lnVr.s:325    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000e .LBE26
+     /tmp/ccw5lnVr.s:2869   .debug_loc:00000233 .LLST19
+GAS LISTING /tmp/ccw5lnVr.s 			page 34
 
 
-     /tmp/ccihJwii.s:2866   .debug_loc:00000231 .LVUS19
-     /tmp/ccihJwii.s:2879   .debug_loc:00000248 .LLST20
-     /tmp/ccihJwii.s:2876   .debug_loc:00000246 .LVUS20
-     /tmp/ccihJwii.s:335    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000012 .LBI28
-     /tmp/ccihJwii.s:334    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000012 .LBB28
-     /tmp/ccihJwii.s:341    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000012 .LBE28
-     /tmp/ccihJwii.s:2890   .debug_loc:0000025e .LLST21
-     /tmp/ccihJwii.s:2887   .debug_loc:0000025c .LVUS21
-     /tmp/ccihJwii.s:2900   .debug_loc:00000273 .LLST22
-     /tmp/ccihJwii.s:2897   .debug_loc:00000271 .LVUS22
-     /tmp/ccihJwii.s:351    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000016 .LBI30
-     /tmp/ccihJwii.s:350    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000016 .LBB30
-     /tmp/ccihJwii.s:357    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000016 .LBE30
-     /tmp/ccihJwii.s:2911   .debug_loc:00000289 .LLST23
-     /tmp/ccihJwii.s:2908   .debug_loc:00000287 .LVUS23
-     /tmp/ccihJwii.s:2921   .debug_loc:0000029e .LLST24
-     /tmp/ccihJwii.s:2918   .debug_loc:0000029c .LVUS24
-     /tmp/ccihJwii.s:367    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001a .LBI32
-     /tmp/ccihJwii.s:366    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001a .LBB32
-     /tmp/ccihJwii.s:373    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001a .LBE32
-     /tmp/ccihJwii.s:2933   .debug_loc:000002b5 .LLST25
-     /tmp/ccihJwii.s:2930   .debug_loc:000002b3 .LVUS25
-     /tmp/ccihJwii.s:2943   .debug_loc:000002ca .LLST26
-     /tmp/ccihJwii.s:2940   .debug_loc:000002c8 .LVUS26
-     /tmp/ccihJwii.s:210    .text._ZN6Pcint24initENS_3PinE:00000000 .LFB144
-     /tmp/ccihJwii.s:252    .text._ZN6Pcint24initENS_3PinE:0000001a .LFE144
-     /tmp/ccihJwii.s:2957   .debug_loc:000002e3 .LLST9
-     /tmp/ccihJwii.s:2952   .debug_loc:000002df .LVUS9
-     /tmp/ccihJwii.s:2981   .debug_loc:0000030d .LLST10
-     /tmp/ccihJwii.s:2978   .debug_loc:0000030b .LVUS10
-     /tmp/ccihJwii.s:157    .text._ZN6Pcint210enablePinsENS_3PinE:00000000 .LFB143
-     /tmp/ccihJwii.s:203    .text._ZN6Pcint210enablePinsENS_3PinE:00000018 .LFE143
-     /tmp/ccihJwii.s:2993   .debug_loc:00000324 .LLST5
-     /tmp/ccihJwii.s:2988   .debug_loc:00000320 .LVUS5
-     /tmp/ccihJwii.s:3019   .debug_loc:00000350 .LLST6
-     /tmp/ccihJwii.s:3014   .debug_loc:0000034c .LVUS6
-     /tmp/ccihJwii.s:3044   .debug_loc:0000037b .LLST7
-     /tmp/ccihJwii.s:3039   .debug_loc:00000377 .LVUS7
-     /tmp/ccihJwii.s:3061   .debug_loc:0000039e .LLST8
-     /tmp/ccihJwii.s:3056   .debug_loc:0000039a .LVUS8
-     /tmp/ccihJwii.s:101    .text._ZN6Pcint211disablePinsENS_3PinE:00000000 .LFB142
-     /tmp/ccihJwii.s:150    .text._ZN6Pcint211disablePinsENS_3PinE:0000001a .LFE142
-     /tmp/ccihJwii.s:3077   .debug_loc:000003c0 .LLST1
-     /tmp/ccihJwii.s:3072   .debug_loc:000003bc .LVUS1
-     /tmp/ccihJwii.s:3105   .debug_loc:000003ee .LLST2
-     /tmp/ccihJwii.s:3098   .debug_loc:000003e8 .LVUS2
-     /tmp/ccihJwii.s:3137   .debug_loc:00000427 .LLST3
-     /tmp/ccihJwii.s:3132   .debug_loc:00000423 .LVUS3
-     /tmp/ccihJwii.s:3154   .debug_loc:0000044a .LLST4
-     /tmp/ccihJwii.s:3149   .debug_loc:00000446 .LVUS4
-     /tmp/ccihJwii.s:76     .text._ZN6Pcint2D2Ev:00000000 .LFB140
-     /tmp/ccihJwii.s:92     .text._ZN6Pcint2D2Ev:00000002 .LFE140
-     /tmp/ccihJwii.s:16     .text._ZN6Pcint2C2Ev:00000000 .LFB137
-     /tmp/ccihJwii.s:46     .text._ZN6Pcint2C2Ev:00000010 .LFE137
-     /tmp/ccihJwii.s:3170   .debug_loc:0000046c .LLST0
-     /tmp/ccihJwii.s:3165   .debug_loc:00000468 .LVUS0
-     /tmp/ccihJwii.s:498    .text.__vector_5:00000002 .LCFI0
-GAS LISTING /tmp/ccihJwii.s 			page 35
+     /tmp/ccw5lnVr.s:2866   .debug_loc:00000231 .LVUS19
+     /tmp/ccw5lnVr.s:2879   .debug_loc:00000248 .LLST20
+     /tmp/ccw5lnVr.s:2876   .debug_loc:00000246 .LVUS20
+     /tmp/ccw5lnVr.s:335    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000012 .LBI28
+     /tmp/ccw5lnVr.s:334    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000012 .LBB28
+     /tmp/ccw5lnVr.s:341    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000012 .LBE28
+     /tmp/ccw5lnVr.s:2890   .debug_loc:0000025e .LLST21
+     /tmp/ccw5lnVr.s:2887   .debug_loc:0000025c .LVUS21
+     /tmp/ccw5lnVr.s:2900   .debug_loc:00000273 .LLST22
+     /tmp/ccw5lnVr.s:2897   .debug_loc:00000271 .LVUS22
+     /tmp/ccw5lnVr.s:351    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000016 .LBI30
+     /tmp/ccw5lnVr.s:350    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000016 .LBB30
+     /tmp/ccw5lnVr.s:357    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000016 .LBE30
+     /tmp/ccw5lnVr.s:2911   .debug_loc:00000289 .LLST23
+     /tmp/ccw5lnVr.s:2908   .debug_loc:00000287 .LVUS23
+     /tmp/ccw5lnVr.s:2921   .debug_loc:0000029e .LLST24
+     /tmp/ccw5lnVr.s:2918   .debug_loc:0000029c .LVUS24
+     /tmp/ccw5lnVr.s:367    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001a .LBI32
+     /tmp/ccw5lnVr.s:366    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001a .LBB32
+     /tmp/ccw5lnVr.s:373    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001a .LBE32
+     /tmp/ccw5lnVr.s:2933   .debug_loc:000002b5 .LLST25
+     /tmp/ccw5lnVr.s:2930   .debug_loc:000002b3 .LVUS25
+     /tmp/ccw5lnVr.s:2943   .debug_loc:000002ca .LLST26
+     /tmp/ccw5lnVr.s:2940   .debug_loc:000002c8 .LVUS26
+     /tmp/ccw5lnVr.s:210    .text._ZN6Pcint24initENS_3PinE:00000000 .LFB144
+     /tmp/ccw5lnVr.s:252    .text._ZN6Pcint24initENS_3PinE:0000001a .LFE144
+     /tmp/ccw5lnVr.s:2957   .debug_loc:000002e3 .LLST9
+     /tmp/ccw5lnVr.s:2952   .debug_loc:000002df .LVUS9
+     /tmp/ccw5lnVr.s:2981   .debug_loc:0000030d .LLST10
+     /tmp/ccw5lnVr.s:2978   .debug_loc:0000030b .LVUS10
+     /tmp/ccw5lnVr.s:157    .text._ZN6Pcint210enablePinsENS_3PinE:00000000 .LFB143
+     /tmp/ccw5lnVr.s:203    .text._ZN6Pcint210enablePinsENS_3PinE:00000018 .LFE143
+     /tmp/ccw5lnVr.s:2993   .debug_loc:00000324 .LLST5
+     /tmp/ccw5lnVr.s:2988   .debug_loc:00000320 .LVUS5
+     /tmp/ccw5lnVr.s:3019   .debug_loc:00000350 .LLST6
+     /tmp/ccw5lnVr.s:3014   .debug_loc:0000034c .LVUS6
+     /tmp/ccw5lnVr.s:3044   .debug_loc:0000037b .LLST7
+     /tmp/ccw5lnVr.s:3039   .debug_loc:00000377 .LVUS7
+     /tmp/ccw5lnVr.s:3061   .debug_loc:0000039e .LLST8
+     /tmp/ccw5lnVr.s:3056   .debug_loc:0000039a .LVUS8
+     /tmp/ccw5lnVr.s:101    .text._ZN6Pcint211disablePinsENS_3PinE:00000000 .LFB142
+     /tmp/ccw5lnVr.s:150    .text._ZN6Pcint211disablePinsENS_3PinE:0000001a .LFE142
+     /tmp/ccw5lnVr.s:3077   .debug_loc:000003c0 .LLST1
+     /tmp/ccw5lnVr.s:3072   .debug_loc:000003bc .LVUS1
+     /tmp/ccw5lnVr.s:3105   .debug_loc:000003ee .LLST2
+     /tmp/ccw5lnVr.s:3098   .debug_loc:000003e8 .LVUS2
+     /tmp/ccw5lnVr.s:3137   .debug_loc:00000427 .LLST3
+     /tmp/ccw5lnVr.s:3132   .debug_loc:00000423 .LVUS3
+     /tmp/ccw5lnVr.s:3154   .debug_loc:0000044a .LLST4
+     /tmp/ccw5lnVr.s:3149   .debug_loc:00000446 .LVUS4
+     /tmp/ccw5lnVr.s:76     .text._ZN6Pcint2D2Ev:00000000 .LFB140
+     /tmp/ccw5lnVr.s:92     .text._ZN6Pcint2D2Ev:00000002 .LFE140
+     /tmp/ccw5lnVr.s:16     .text._ZN6Pcint2C2Ev:00000000 .LFB137
+     /tmp/ccw5lnVr.s:46     .text._ZN6Pcint2C2Ev:00000010 .LFE137
+     /tmp/ccw5lnVr.s:3170   .debug_loc:0000046c .LLST0
+     /tmp/ccw5lnVr.s:3165   .debug_loc:00000468 .LVUS0
+     /tmp/ccw5lnVr.s:498    .text.__vector_5:00000002 .LCFI0
+GAS LISTING /tmp/ccw5lnVr.s 			page 35
 
 
-     /tmp/ccihJwii.s:502    .text.__vector_5:00000004 .LCFI1
-     /tmp/ccihJwii.s:509    .text.__vector_5:0000000c .LCFI2
-     /tmp/ccihJwii.s:513    .text.__vector_5:0000000e .LCFI3
-     /tmp/ccihJwii.s:517    .text.__vector_5:00000010 .LCFI4
-     /tmp/ccihJwii.s:521    .text.__vector_5:00000012 .LCFI5
-     /tmp/ccihJwii.s:525    .text.__vector_5:00000014 .LCFI6
-     /tmp/ccihJwii.s:529    .text.__vector_5:00000016 .LCFI7
-     /tmp/ccihJwii.s:533    .text.__vector_5:00000018 .LCFI8
-     /tmp/ccihJwii.s:537    .text.__vector_5:0000001a .LCFI9
-     /tmp/ccihJwii.s:541    .text.__vector_5:0000001c .LCFI10
-     /tmp/ccihJwii.s:545    .text.__vector_5:0000001e .LCFI11
-     /tmp/ccihJwii.s:549    .text.__vector_5:00000020 .LCFI12
-     /tmp/ccihJwii.s:553    .text.__vector_5:00000022 .LCFI13
-     /tmp/ccihJwii.s:258    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000000 .LVL15
-     /tmp/ccihJwii.s:388    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000026 .LVL24
-     /tmp/ccihJwii.s:400    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000002e .LVL25
-     /tmp/ccihJwii.s:419    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000003e .LVL27
-     /tmp/ccihJwii.s:435    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000004c .LVL29
-     /tmp/ccihJwii.s:442    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000050 .LVL30
-     /tmp/ccihJwii.s:456    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000005e .LVL31
-     /tmp/ccihJwii.s:462    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000060 .LVL32
-     /tmp/ccihJwii.s:270    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000002 .LVL16
-     /tmp/ccihJwii.s:281    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000006 .LVL17
-     /tmp/ccihJwii.s:422    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000040 .LVL28
-     /tmp/ccihJwii.s:299    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000a .LVL18
-     /tmp/ccihJwii.s:315    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000e .LVL19
-     /tmp/ccihJwii.s:331    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000012 .LVL20
-     /tmp/ccihJwii.s:347    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000016 .LVL21
-     /tmp/ccihJwii.s:363    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001a .LVL22
-     /tmp/ccihJwii.s:209    .text._ZN6Pcint24initENS_3PinE:00000000 .LVL13
-     /tmp/ccihJwii.s:225    .text._ZN6Pcint24initENS_3PinE:00000008 .LVL14
-     /tmp/ccihJwii.s:156    .text._ZN6Pcint210enablePinsENS_3PinE:00000000 .LVL9
-     /tmp/ccihJwii.s:172    .text._ZN6Pcint210enablePinsENS_3PinE:00000008 .LVL10
-     /tmp/ccihJwii.s:182    .text._ZN6Pcint210enablePinsENS_3PinE:0000000c .LVL12
-     /tmp/ccihJwii.s:176    .text._ZN6Pcint210enablePinsENS_3PinE:0000000a .LVL11
-     /tmp/ccihJwii.s:100    .text._ZN6Pcint211disablePinsENS_3PinE:00000000 .LVL4
-     /tmp/ccihJwii.s:116    .text._ZN6Pcint211disablePinsENS_3PinE:00000008 .LVL5
-     /tmp/ccihJwii.s:126    .text._ZN6Pcint211disablePinsENS_3PinE:0000000c .LVL7
-     /tmp/ccihJwii.s:129    .text._ZN6Pcint211disablePinsENS_3PinE:0000000e .LVL8
-     /tmp/ccihJwii.s:120    .text._ZN6Pcint211disablePinsENS_3PinE:0000000a .LVL6
-     /tmp/ccihJwii.s:15     .text._ZN6Pcint2C2Ev:00000000 .LVL0
-     /tmp/ccihJwii.s:28     .text._ZN6Pcint2C2Ev:00000004 .LVL1
-     /tmp/ccihJwii.s:620    .debug_info:00000000 .Ldebug_info0
+     /tmp/ccw5lnVr.s:502    .text.__vector_5:00000004 .LCFI1
+     /tmp/ccw5lnVr.s:509    .text.__vector_5:0000000c .LCFI2
+     /tmp/ccw5lnVr.s:513    .text.__vector_5:0000000e .LCFI3
+     /tmp/ccw5lnVr.s:517    .text.__vector_5:00000010 .LCFI4
+     /tmp/ccw5lnVr.s:521    .text.__vector_5:00000012 .LCFI5
+     /tmp/ccw5lnVr.s:525    .text.__vector_5:00000014 .LCFI6
+     /tmp/ccw5lnVr.s:529    .text.__vector_5:00000016 .LCFI7
+     /tmp/ccw5lnVr.s:533    .text.__vector_5:00000018 .LCFI8
+     /tmp/ccw5lnVr.s:537    .text.__vector_5:0000001a .LCFI9
+     /tmp/ccw5lnVr.s:541    .text.__vector_5:0000001c .LCFI10
+     /tmp/ccw5lnVr.s:545    .text.__vector_5:0000001e .LCFI11
+     /tmp/ccw5lnVr.s:549    .text.__vector_5:00000020 .LCFI12
+     /tmp/ccw5lnVr.s:553    .text.__vector_5:00000022 .LCFI13
+     /tmp/ccw5lnVr.s:258    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000000 .LVL15
+     /tmp/ccw5lnVr.s:388    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000026 .LVL24
+     /tmp/ccw5lnVr.s:400    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000002e .LVL25
+     /tmp/ccw5lnVr.s:419    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000003e .LVL27
+     /tmp/ccw5lnVr.s:435    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000004c .LVL29
+     /tmp/ccw5lnVr.s:442    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000050 .LVL30
+     /tmp/ccw5lnVr.s:456    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000005e .LVL31
+     /tmp/ccw5lnVr.s:462    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000060 .LVL32
+     /tmp/ccw5lnVr.s:270    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000002 .LVL16
+     /tmp/ccw5lnVr.s:281    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000006 .LVL17
+     /tmp/ccw5lnVr.s:422    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000040 .LVL28
+     /tmp/ccw5lnVr.s:299    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000a .LVL18
+     /tmp/ccw5lnVr.s:315    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000000e .LVL19
+     /tmp/ccw5lnVr.s:331    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000012 .LVL20
+     /tmp/ccw5lnVr.s:347    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:00000016 .LVL21
+     /tmp/ccw5lnVr.s:363    .text._ZN6Pcint210setPinModeENS_3PinE7PinMode:0000001a .LVL22
+     /tmp/ccw5lnVr.s:209    .text._ZN6Pcint24initENS_3PinE:00000000 .LVL13
+     /tmp/ccw5lnVr.s:225    .text._ZN6Pcint24initENS_3PinE:00000008 .LVL14
+     /tmp/ccw5lnVr.s:156    .text._ZN6Pcint210enablePinsENS_3PinE:00000000 .LVL9
+     /tmp/ccw5lnVr.s:172    .text._ZN6Pcint210enablePinsENS_3PinE:00000008 .LVL10
+     /tmp/ccw5lnVr.s:182    .text._ZN6Pcint210enablePinsENS_3PinE:0000000c .LVL12
+     /tmp/ccw5lnVr.s:176    .text._ZN6Pcint210enablePinsENS_3PinE:0000000a .LVL11
+     /tmp/ccw5lnVr.s:100    .text._ZN6Pcint211disablePinsENS_3PinE:00000000 .LVL4
+     /tmp/ccw5lnVr.s:116    .text._ZN6Pcint211disablePinsENS_3PinE:00000008 .LVL5
+     /tmp/ccw5lnVr.s:126    .text._ZN6Pcint211disablePinsENS_3PinE:0000000c .LVL7
+     /tmp/ccw5lnVr.s:129    .text._ZN6Pcint211disablePinsENS_3PinE:0000000e .LVL8
+     /tmp/ccw5lnVr.s:120    .text._ZN6Pcint211disablePinsENS_3PinE:0000000a .LVL6
+     /tmp/ccw5lnVr.s:15     .text._ZN6Pcint2C2Ev:00000000 .LVL0
+     /tmp/ccw5lnVr.s:28     .text._ZN6Pcint2C2Ev:00000004 .LVL1
+     /tmp/ccw5lnVr.s:620    .debug_info:00000000 .Ldebug_info0
 
 UNDEFINED SYMBOLS
 __do_global_ctors

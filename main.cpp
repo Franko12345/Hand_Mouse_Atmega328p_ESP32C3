@@ -23,10 +23,13 @@
 #define MIN(a,b) ((b>a) ? (a) : (b))
 #define SIGN(a) ((a>0) ? (1) : ((a<0) ? (-1) : (0)))
 
+// Button bit mask -------------------------------------------------------------
 #define ENABLE_BUTTON 1
 #define LEFT_BUTTON 4
 #define RIGHT_BUTTON 2
 
+
+// SPI packet size -------------------------------------------------------------
 #define PACKET_SIZE 16
 
 //Data structure declarations --------------------------------------------------
@@ -133,16 +136,16 @@ int main(){
     SPCR = 0b1010001;
     }
 
-    // Config Timer 0 --- 1ms --------------------------------------------------
+    // Config Timer 0 --- 10ms -------------------------------------------------
     {
     timer0.init(Timer0::Mode::NORMAL, //Colocamos quantos ciclos pra chegar na interrupção
             Timer0::ClockSource::PRESCALER_1024);//Velocidade que e dividida a cpu
-    timer0.setCompareAValue(155); //Fala quantos ticks precisam para chegar a 10ms
+    timer0.setCompareAValue(155); 
     timer0.clearCompareAInterruptRequest(); //Limpar o pre interrupt
     timer0.activateCompareAInterrupt();
     }
 
-    // Config Timer 1 --- 5ms -------------------------------------------------
+    // Config Timer 1 ----------------------------------------------------------
     {
     timer1.init(Timer1::Mode::NORMAL, //Colocamos quantos ciclos pra chegar na interrupção
             Timer1::ClockSource::PRESCALER_8);//Velocidade que e dividida a cpu
@@ -181,22 +184,21 @@ int main(){
     // Local variable declarations ---------------------------------------------
     uint16_t x {0}, y {0};
     uint8_t packet[PACKET_SIZE], recv_packet[PACKET_SIZE];
-    int32_t pitch {0}, roll {0}, yaw {0};
+    int32_t pitch {0}, roll {0}, yaw {0}, idle_pitch {0};
     int16_t accel_x {0};
     uint8_t sense_x {20}, sense_y{20}; 
 
     BT_STATE ble_state = BT_DISCONNECTED;
+    
     uint8_t last_debounced_buttons = 0;
+    uint32_t last_mouse_button_pressed {0};
 
     uint8_t idle_count = 0;
 
-    uint32_t last_mouse_button_pressed {0};
-
     printf("Inicializando Atmega\n");
 
-    int32_t idle_pitch {0};
-
     while (true){
+        // Logica do debounce --------------------------------------------------
         uint8_t button_data = buttons.read();
         if(button_pending_change){
             button_pending_change = false;
@@ -210,20 +212,24 @@ int main(){
                 }
         }
 
+        // Pega a mask de bits de botões pressionados nesse ciclo --------------
         uint8_t pressed_buttons = (debounced_buttons ^ last_debounced_buttons) & debounced_buttons;
 
+        // Logica de entrada e saida do idle e calibration ---------------------
         if((debounced_buttons & ENABLE_BUTTON) && (get_millis()-button_last_changed[ENABLE_BUTTON] > 2000 )){
             current_state = CALIBRATION_MODE;
         }
-
         if((pressed_buttons & ENABLE_BUTTON) && (debounced_buttons & ENABLE_BUTTON)){
             current_state = (current_state == IDLE_MODE) ? CURSOR_MODE : IDLE_MODE;
         }
+
+        // Lógica de ver a timestamp do ultimo click para facilitar o click ----
         if((pressed_buttons & (RIGHT_BUTTON | LEFT_BUTTON)) && (debounced_buttons & (RIGHT_BUTTON | LEFT_BUTTON))){
             last_mouse_button_pressed = get_millis();
         }
 
-        // printf("State: %s", (current_state == IDLE_MODE) ? "IDLE" : ((current_state == CURSOR_MODE) ? "CURSOR" : "SCROLL"));
+        // Lógica display ------------------------------------------------------
+        // Mostrar estado, bluetooth, sensibilidade, eixos e o cursor ----------
         if(update_display_flag){
             display.clearScreen();
             display.setCursor(0, 7);
@@ -236,13 +242,13 @@ int main(){
                 (ble_state == BT_CONNECTED) ? PSTR("OK") : PSTR("NO"));
             display.print(formatted_state);
             
-            int8_t bar_roll = MIN(MAX((roll/1410), -63), 63);
+            int8_t bar_roll = MIN(MAX(((roll*3)>>12), -63), 63);
             display.fillRect(63+MIN(0, bar_roll), 0, (cuint8_t)ABS(bar_roll), 1, true);                    
             
-            int8_t bar_pitch = MIN(MAX((pitch/1410), -63), 63);
+            int8_t bar_pitch = MIN(MAX(((pitch*3)>>12), -63), 63);
             display.fillRect(63+MIN(0, bar_pitch), 1, (cuint8_t)ABS(bar_pitch), 1, true);                    
             
-            int8_t bar_yaw = MIN(MAX((yaw/1410), -63), 63);
+            int8_t bar_yaw = MIN(MAX(((yaw*3)>>12), -63), 63);
             display.fillRect(63+MIN(0, bar_yaw), 2, (cuint8_t)ABS(bar_yaw), 1, true);                    
 
             display.drawPixel(x>>8, y>>9);
@@ -258,13 +264,13 @@ int main(){
             update_display_flag = false;
         }
 
+        // Máquina de estados --- IDLE - CURSOR - SCROLL - CALIBRATION ---------
         switch (current_state){
             case IDLE_MODE:
             
             if(spi_flag){
                 spi_flag=false;
-                idle_count++;
-                if(idle_count >= 3){
+                if(idle_count++ >= 3){
                     
                     idle_count = 0;
                     format_packet(x, y, 0, 0, current_state, packet);
@@ -285,12 +291,7 @@ int main(){
                 {
 
                     if(get_millis() - last_mouse_button_pressed > 100){
-                        // int32_t raw_x = ((int32_t)(yaw+45000)*410*sense_x)/10000;
-                        // int32_t raw_y = ((int32_t)pitch*655*sense_y)/10000;
-
-                        // yaw no eixo X: 0 -> centro, -45 -> esquerda, +45 -> direita
                         int32_t raw_x = projectTan(yaw,   0,     45000, sense_x);
-                        // pitch no eixo Y: 0..50 -> tela toda (centro em 25)
                         int32_t raw_y = projectTan(pitch, idle_pitch, 25000, sense_y);
                         
                         x = (int16_t)truncateBetween(raw_x, 0, 32767);
@@ -303,7 +304,7 @@ int main(){
                             transcieve_packets(packet, recv_packet, PACKET_SIZE);
                             convert_recieved(&roll, &pitch, &yaw, &accel_x, &ble_state, recv_packet);
                             spi_flag = false;
-                
+                        
                             // printf("State: %u  Pitch: %li  Roll: %li  Yaw: %li SENDING: X: %u  Y: %u\r\n", ble_state, pitch, roll, yaw, x, y);
                             // printf("Buttons: %u %u %u\r\n", (bool_t)(debounced_buttons&(1<<0)), (bool_t)(debounced_buttons&(1<<1)), (bool_t)(debounced_buttons&(1<<2)));
                     }
@@ -362,7 +363,7 @@ uint16_t projectTan(int32_t angle_mdeg, int32_t center_mdeg,
     rel = truncateBetween(rel, -60000L, 60000L);              // evita div0/estouro do tan
     int32_t tanRel  = ((int32_t)sini(rel) << 12) / cosi(rel);          // tan em Q12
     int32_t tanHalf = ((int32_t)sini(halfRange_mdeg) << 12) / cosi(halfRange_mdeg);
-    int32_t offset  = ((int32_t)tanRel * sens_q8 * 1536) / tanHalf;      // 16384 na borda (sens=256)
+    int32_t offset  = ((int32_t)tanRel * (sens_q8 * 1536U)) / tanHalf;      // 16384 na borda (sens=256)
     int32_t coord   = 16384L + offset;
     return (uint16_t)truncateBetween(coord, 0L, 32767L);
 }
@@ -375,18 +376,14 @@ uint8_t spi_writeRead(uint8_t data){
     return SPDR;
 }
 
+// Envia e recebe os pacotes SPI -----------------------------------------------
 void transcieve_packets(uint8_t *packet, uint8_t *recv_packet, size_t len) {
-  // take the SS pin low to select the chip:
   slave_select_esp.low();
-//   delayMs(1);
-  // send in the address and value via SPI:
-  
+
   for(uint8_t i = 0; i < len; i++){
     recv_packet[i] = spi_writeRead(packet[i]);
   }
 
-//   delayMs(1);
-  // take the SS pin high to de-select the chip:
   slave_select_esp.high();
 }
 
@@ -409,6 +406,7 @@ void format_packet(uint16_t x, uint16_t y, uint8_t buttons, int16_t scroll, OP_M
   packet[15] = 0;
 }
 
+// Reconstroi as variáveis recebidas pelo SPI de varias chunks diferentes ------
 void convert_recieved(int32_t *roll, int32_t *pitch, int32_t *yaw, int16_t *accel_x, BT_STATE *state, uint8_t *packet){
   if(packet[0] != 0x68) return;
 

@@ -202,6 +202,10 @@ public:
             cuint8_t bufferSize_p       = 20
     );
 
+    // Re-expose the base Bus::sendData overloads hidden by the TWI-specific
+    // sendData below (avoids -Woverloaded-virtual name hiding)
+    using Bus::sendData;
+
     bool_t sendData(
             uint8_t devAddress_p,
             Operation readWrite_p,
